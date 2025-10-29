@@ -13,7 +13,19 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        serif: ['Cormorant Garamond', 'serif'],
+        sans: ['Inter', 'sans-serif'],
+      },
       colors: {
+        sage: {
+          DEFAULT: 'hsl(var(--sage))',
+          light: 'hsl(var(--sage-light))',
+          dark: 'hsl(var(--sage-dark))',
+        },
+        earth: 'hsl(var(--earth))',
+        sand: 'hsl(var(--sand))',
+        charcoal: 'hsl(var(--charcoal))',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
