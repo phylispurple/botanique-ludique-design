@@ -23,13 +23,13 @@ const Index = () => {
             Botanique Ludique
           </h1>
           <p className="font-sans text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-up [animation-delay:200ms] leading-relaxed">
-            Workshops connecting humans and plants through creativity, ritual, and play
+            Des ateliers reliant l'humain et les plantes à travers la créativité, le rituel et le jeu
           </p>
           <Link
             to="/workshops"
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-sans text-sm uppercase tracking-wider hover:bg-primary/90 transition-colors rounded-full animate-fade-up [animation-delay:400ms]"
           >
-            Discover Workshops
+            Découvrir les ateliers
             <ArrowRight size={16} />
           </Link>
         </div>
@@ -46,15 +46,13 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-5xl font-light mb-8 text-foreground">
-              Where Science Meets Poetry
+              Là où la science rencontre la poésie
             </h2>
             <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-              Founded by ethnobotanist and photographer Vanessa Charlery, Botanique Ludique invites you to
-              reconnect with the plant world through hands-on creative experiences.
+              Fondé par l’ethnobotaniste et photographe Vanessa Charlery, Botanique Ludique vous invite à vous reconnecter au monde végétal à travers des expériences créatives et pratiques.
             </p>
             <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
-              Each workshop blends traditional botanical knowledge with contemporary artistry,
-              creating spaces for growth, ritual, and play.
+              Chaque atelier mêle savoirs botaniques traditionnels et créativité contemporaine, créant des espaces de croissance, de rituel et de jeu.
             </p>
           </div>
         </div>
@@ -65,10 +63,10 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl md:text-5xl font-light mb-4 text-foreground">
-              Our Workshops
+              Nos ateliers
             </h2>
             <p className="font-sans text-muted-foreground">
-              Immersive experiences for all levels
+              Des expériences immersives pour tous les niveaux
             </p>
           </div>
 
@@ -92,7 +90,7 @@ const Index = () => {
               to="/workshops"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-sans text-sm uppercase tracking-wider transition-colors"
             >
-              View All Workshops
+              Voir tous les ateliers
               <ArrowRight size={16} />
             </Link>
           </div>
