@@ -153,14 +153,21 @@ All colors MUST be HSL.
   
   .animate-fade-up {
     animation: fade-up 0.8s ease-out forwards;
+    opacity: 0;
   }
   
   @keyframes float {
     0%, 100% {
-      transform: translateY(0px);
+      transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-10px) rotate(2deg);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateY(-15px) rotate(0deg);
+    }
+    75% {
+      transform: translateY(-10px) rotate(-2deg);
     }
   }
   
@@ -173,5 +180,28 @@ All colors MUST be HSL.
       opacity: 1;
       transform: translateY(0);
     }
+  }
+  
+  /* Watercolor effect */
+  .watercolor-edge {
+    filter: url(#watercolor);
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--sage));
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--sage-dark));
   }
 }
