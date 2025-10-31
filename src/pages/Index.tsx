@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import heroImage from "@/assets/hero-botanical.jpg";
 import { 
   LeafBranch, 
   Butterfly, 
@@ -90,39 +89,48 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Right Side - Image with decorative elements */}
-            <div className="relative animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              <div className="relative z-10">
-                <img 
-                  src={heroImage} 
-                  alt="Ateliers botaniques créatifs" 
-                  className="rounded-3xl shadow-2xl w-full aspect-[3/4] object-cover"
-                />
-                
-                {/* Decorative accent bar */}
-                <div className="absolute -right-6 top-1/4 w-24 h-64 bg-accent rounded-full" style={{ zIndex: -1 }} />
-                
-                {/* Floating stat badge */}
-                <div className="absolute -bottom-6 -left-6 bg-off-white rounded-2xl p-6 shadow-2xl">
-                  <div className="text-4xl font-bold text-sage-dark">12+</div>
-                  <div className="text-sm text-charcoal font-medium">ateliers créatifs</div>
-                </div>
+            {/* Right Side - Botanical Illustrations */}
+            <div className="relative animate-fade-up h-[600px]" style={{ animationDelay: '0.2s' }}>
+              {/* Large decorative circle */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-gradient-to-br from-sage/20 to-earth/20 backdrop-blur-sm border border-off-white/10" />
+              
+              {/* Floating stat badge */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-sage/90 to-sage-dark/90 backdrop-blur-md rounded-2xl p-8 shadow-2xl hover:scale-110 transition-all duration-300 animate-pulse-slow border border-off-white/20 z-10">
+                <div className="text-5xl font-bold text-off-white">12+</div>
+                <div className="text-base text-sand font-medium">ateliers créatifs</div>
+                {/* Rotating ring */}
+                <div className="absolute inset-0 rounded-2xl border-2 border-accent/30 animate-spin" style={{ animationDuration: '8s' }} />
               </div>
               
-              {/* Botanical illustrations */}
+              {/* Botanical illustrations arranged in circle */}
               <LeafBranch 
-                className="absolute -top-10 -left-10 w-24 h-24 text-earth/60 animate-float cursor-pointer hover:scale-110 transition-transform" 
+                className="absolute top-10 left-1/2 -translate-x-1/2 w-28 h-28 text-earth/70 animate-float cursor-pointer hover:scale-125 transition-transform" 
                 onClick={() => navigate('/workshops')}
               />
               <Flower 
-                className="absolute top-10 -right-8 w-20 h-20 text-accent/70 animate-float cursor-pointer hover:scale-110 transition-transform" 
+                className="absolute top-1/2 right-10 -translate-y-1/2 w-24 h-24 text-accent/80 animate-float cursor-pointer hover:scale-125 transition-transform" 
                 onClick={() => navigate('/workshops')}
                 style={{ animationDelay: '0.5s' }}
               />
               <Butterfly 
-                className="absolute bottom-20 -right-12 w-16 h-16 text-sand/60 animate-float cursor-pointer hover:scale-110 transition-transform" 
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 w-20 h-20 text-sand/70 animate-float cursor-pointer hover:scale-125 transition-transform" 
                 onClick={() => navigate('/workshops')}
                 style={{ animationDelay: '1s' }}
+              />
+              <Bee 
+                className="absolute top-1/2 left-10 -translate-y-1/2 w-22 h-22 text-accent/70 animate-float cursor-pointer hover:scale-125 transition-transform" 
+                onClick={() => navigate('/workshops')}
+                style={{ animationDelay: '0.3s' }}
+              />
+              <Mushroom 
+                className="absolute top-20 right-20 w-20 h-20 text-sage/70 animate-float cursor-pointer hover:scale-125 transition-transform" 
+                onClick={() => navigate('/workshops')}
+                style={{ animationDelay: '0.7s' }}
+              />
+              <Snail 
+                className="absolute bottom-20 left-20 w-18 h-18 text-earth/60 animate-float cursor-pointer hover:scale-125 transition-transform" 
+                onClick={() => navigate('/workshops')}
+                style={{ animationDelay: '0.9s' }}
               />
             </div>
           </div>
