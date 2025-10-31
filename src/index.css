@@ -44,13 +44,13 @@ All colors MUST be HSL.
     --radius: 0.75rem;
     
     /* Custom botanical tokens */
-    --sage: 140 20% 45%;
-    --sage-light: 140 20% 65%;
-    --sage-dark: 140 25% 30%;
-    --earth: 28 30% 55%;
-    --sand: 42 25% 90%;
-    --charcoal: 30 8% 20%;
-    --off-white: 42 25% 96%;
+    --sage: 140 30% 45%;
+    --sage-light: 140 30% 65%;
+    --sage-dark: 150 35% 25%;
+    --earth: 15 45% 55%;
+    --sand: 42 35% 88%;
+    --charcoal: 30 10% 20%;
+    --off-white: 42 20% 98%;
     
     /* Gradients */
     --gradient-earth: linear-gradient(135deg, hsl(140 20% 45%) 0%, hsl(28 30% 55%) 100%);
@@ -110,11 +110,11 @@ All colors MUST be HSL.
     --input: 30 12% 22%;
     --ring: 140 25% 55%;
     
-    --sage: 140 25% 55%;
-    --sage-light: 140 25% 65%;
-    --sage-dark: 140 30% 35%;
-    --earth: 28 35% 60%;
-    --sand: 35 15% 25%;
+    --sage: 140 30% 60%;
+    --sage-light: 140 30% 70%;
+    --sage-dark: 150 35% 35%;
+    --earth: 15 45% 65%;
+    --sand: 35 20% 85%;
     --charcoal: 42 25% 96%;
     --off-white: 30 12% 12%;
   }

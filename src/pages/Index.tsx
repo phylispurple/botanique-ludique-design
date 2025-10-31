@@ -29,206 +29,188 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-card to-background">
+    <div className="min-h-screen">
       <Navigation />
-
-      {/* Hero Collage Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20">
+      
+      {/* Hero Section - Split Screen Design */}
+      <section className="min-h-screen bg-sage-dark flex items-center relative overflow-hidden">
+        {/* Decorative geometric shapes */}
+        <div className="absolute top-20 right-20 w-32 h-32 rounded-full bg-earth opacity-80" />
+        <div className="absolute bottom-40 left-10 w-24 h-24 rounded-full bg-accent opacity-60" />
+        <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-sand/30" style={{ borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' }} />
         
-        {/* Floating Illustrations - Top Left */}
-        <LeafBranch 
-          className="absolute top-20 left-[5%] w-12 h-16 text-sage animate-float cursor-pointer hover:text-sage-dark transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-        <Snail 
-          className="absolute top-32 left-[12%] w-14 h-12 text-earth/60 animate-float [animation-delay:1s] cursor-pointer hover:text-earth transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-        <Flower 
-          className="absolute top-40 left-[8%] w-10 h-14 text-sage-light animate-float [animation-delay:2s] cursor-pointer hover:text-sage transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-
-        {/* Top Right */}
-        <Butterfly 
-          className="absolute top-24 right-[8%] w-16 h-12 text-accent/50 animate-float [animation-delay:0.5s] cursor-pointer hover:text-accent transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-        <Bird 
-          className="absolute top-16 right-[15%] w-16 h-10 text-earth/50 animate-float [animation-delay:1.5s] cursor-pointer hover:text-earth transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-        <Bee 
-          className="absolute top-36 right-[5%] w-14 h-10 text-sage animate-float [animation-delay:2.5s] cursor-pointer hover:text-sage-dark transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-
-        {/* Bottom Left */}
-        <Mushroom 
-          className="absolute bottom-32 left-[10%] w-12 h-14 text-earth/60 animate-float [animation-delay:1s] cursor-pointer hover:text-earth transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-        <Seed 
-          className="absolute bottom-24 left-[18%] w-10 h-10 text-sage-light animate-float [animation-delay:3s] cursor-pointer hover:text-sage transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-
-        {/* Bottom Right */}
-        <Strawberry 
-          className="absolute bottom-40 right-[12%] w-10 h-12 text-accent/50 animate-float [animation-delay:2s] cursor-pointer hover:text-accent transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-        <Flower 
-          className="absolute bottom-28 right-[6%] w-12 h-16 text-sage animate-float [animation-delay:0.5s] cursor-pointer hover:text-sage-dark transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-
-        {/* Mobile hidden illustrations for larger screens */}
-        <LeafBranch 
-          className="hidden md:block absolute top-[45%] left-[3%] w-10 h-14 text-sage-light/50 animate-float [animation-delay:1.5s] cursor-pointer hover:text-sage transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-        <Butterfly 
-          className="hidden md:block absolute bottom-[45%] right-[3%] w-14 h-10 text-earth/40 animate-float [animation-delay:2.5s] cursor-pointer hover:text-earth transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-        <Bee 
-          className="hidden lg:block absolute top-[30%] left-[20%] w-12 h-8 text-accent/40 animate-float [animation-delay:3.5s] cursor-pointer hover:text-accent transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-        <Bird 
-          className="hidden lg:block absolute bottom-[35%] right-[18%] w-14 h-9 text-sage/40 animate-float [animation-delay:4s] cursor-pointer hover:text-sage-dark transition-colors"
-          onClick={() => navigate('/workshops')}
-        />
-
-        {/* Central Content with Image */}
-        <div className="relative z-10 max-w-5xl mx-auto">
-          
-          {/* Title Above Image */}
-          <div className="text-center mb-8 animate-fade-up">
-            <p className="font-sans text-sm uppercase tracking-widest text-muted-foreground mb-2">
-              Vintage & Moderne
-            </p>
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light text-foreground mb-2">
-              Botanique
-            </h1>
-            <p className="font-serif text-3xl md:text-4xl lg:text-5xl font-light text-sage italic">
-              Ludique
-            </p>
-          </div>
-
-          {/* Central Image with Watercolor Effect */}
-          <div className="relative mb-8 animate-fade-up [animation-delay:200ms]">
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)]">
-              <img 
-                src={heroImage} 
-                alt="Botanique Ludique - Ateliers créatifs" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
-              
-              {/* Overlay text on image */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center px-4">
-                  <h2 className="font-serif text-4xl md:text-6xl text-white drop-shadow-lg mb-2">
-                    Ateliers Créatifs
+        <div className="container mx-auto px-4 py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Text Content */}
+            <div className="space-y-8 animate-fade-up z-10">
+              <div className="space-y-4">
+                <h1 className="text-7xl md:text-8xl font-bold text-off-white leading-none">
+                  LES ATELIERS
+                </h1>
+                <div className="flex items-center gap-4">
+                  <h2 className="text-5xl md:text-6xl font-light text-sand">
+                    qui font vivre
                   </h2>
-                  <p className="font-sans text-lg md:text-xl text-white/90 drop-shadow">
-                    Créativité • Rituel • Jeu
-                  </p>
+                  <div className="w-16 h-16 rounded-full bg-accent animate-pulse" />
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-earth" />
+                  <h2 className="text-5xl md:text-6xl font-light text-sand">
+                    la nature.
+                  </h2>
+                </div>
+              </div>
+              
+              <p className="text-xl text-sand/90 max-w-xl leading-relaxed">
+                Reconnectez-vous à la nature à travers des ateliers créatifs et sensoriels. 
+                De la création de kokedama aux teintures végétales, explorez le monde végétal 
+                autrement.
+              </p>
+              
+              <button 
+                onClick={() => navigate('/workshops')}
+                className="group relative px-10 py-5 bg-earth hover:bg-earth/90 text-off-white rounded-full text-lg font-semibold transition-all hover:scale-105 hover:shadow-2xl flex items-center gap-3"
+              >
+                Ateliers ?... Go !
+                <span className="text-2xl transition-transform group-hover:translate-x-1">→</span>
+              </button>
+              
+              {/* Workshop Tags Cloud */}
+              <div className="flex flex-wrap gap-3 pt-6">
+                {workshops.map((workshop, index) => (
+                  <Link
+                    key={workshop.name}
+                    to="/workshops"
+                    className="px-5 py-2 rounded-full text-sm font-medium bg-off-white/10 backdrop-blur-sm text-sand border border-sand/20 hover:bg-off-white/20 hover:border-sand/40 hover:-translate-y-1 transition-all duration-300"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {workshop.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            
+            {/* Right Side - Image with decorative elements */}
+            <div className="relative animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              <div className="relative z-10">
+                <img 
+                  src={heroImage} 
+                  alt="Ateliers botaniques créatifs" 
+                  className="rounded-3xl shadow-2xl w-full aspect-[3/4] object-cover"
+                />
+                
+                {/* Decorative accent bar */}
+                <div className="absolute -right-6 top-1/4 w-24 h-64 bg-accent rounded-full" style={{ zIndex: -1 }} />
+                
+                {/* Floating stat badge */}
+                <div className="absolute -bottom-6 -left-6 bg-off-white rounded-2xl p-6 shadow-2xl">
+                  <div className="text-4xl font-bold text-sage-dark">12+</div>
+                  <div className="text-sm text-charcoal font-medium">ateliers créatifs</div>
+                </div>
+              </div>
+              
+              {/* Botanical illustrations */}
+              <LeafBranch 
+                className="absolute -top-10 -left-10 w-24 h-24 text-earth/60 animate-float cursor-pointer hover:scale-110 transition-transform" 
+                onClick={() => navigate('/workshops')}
+              />
+              <Flower 
+                className="absolute top-10 -right-8 w-20 h-20 text-accent/70 animate-float cursor-pointer hover:scale-110 transition-transform" 
+                onClick={() => navigate('/workshops')}
+                style={{ animationDelay: '0.5s' }}
+              />
+              <Butterfly 
+                className="absolute bottom-20 -right-12 w-16 h-16 text-sand/60 animate-float cursor-pointer hover:scale-110 transition-transform" 
+                onClick={() => navigate('/workshops')}
+                style={{ animationDelay: '1s' }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Philosophy Section - Full Width with Contrast */}
+      <section className="bg-sand py-32 px-4 relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-40 h-40 bg-sage/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-60 h-60 bg-earth/20 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-6">
+              <h2 className="text-5xl md:text-6xl font-bold text-charcoal leading-tight">
+                Botanique <span className="text-sage">Ludique</span>
+              </h2>
+              <div className="w-20 h-1 bg-sage" />
+              <p className="text-lg text-charcoal/80 leading-relaxed">
+                Créée par <strong>Vanessa Charlery</strong>, ethnobotaniste passionnée, 
+                Botanique Ludique propose des ateliers créatifs qui reconnectent l'humain 
+                au végétal à travers l'art, le rituel et le jeu.
+              </p>
+              <p className="text-lg text-charcoal/80 leading-relaxed">
+                Chaque atelier est une invitation à ralentir, observer et créer 
+                avec les plantes. De la fabrication de kokedama aux fresques murales 
+                végétales, découvrez une autre façon d'habiter le monde.
+              </p>
+              <Link 
+                to="/philosophy" 
+                className="inline-flex items-center gap-2 px-8 py-4 bg-sage hover:bg-sage-dark text-off-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-xl"
+              >
+                Découvrir la philosophie
+                <span className="text-xl">→</span>
+              </Link>
+            </div>
+            
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="aspect-square bg-sage/20 rounded-3xl flex items-center justify-center">
+                    <Flower className="w-20 h-20 text-sage animate-float" />
+                  </div>
+                  <div className="aspect-[4/5] bg-earth/20 rounded-3xl flex items-center justify-center">
+                    <LeafBranch className="w-24 h-24 text-earth animate-float" style={{ animationDelay: '0.5s' }} />
+                  </div>
+                </div>
+                <div className="space-y-4 pt-8">
+                  <div className="aspect-[4/5] bg-accent/20 rounded-3xl flex items-center justify-center">
+                    <Bee className="w-20 h-20 text-accent animate-float" style={{ animationDelay: '0.3s' }} />
+                  </div>
+                  <div className="aspect-square bg-sage-dark/20 rounded-3xl flex items-center justify-center">
+                    <Mushroom className="w-20 h-20 text-sage-dark animate-float" style={{ animationDelay: '0.7s' }} />
+                  </div>
                 </div>
               </div>
             </div>
-
-            {/* Decorative corner elements */}
-            <div className="absolute -top-4 -left-4 w-20 h-20">
-              <LeafBranch className="w-full h-full text-sage-light opacity-60" />
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-20 h-20">
-              <Flower className="w-full h-full text-earth opacity-60" />
-            </div>
           </div>
-
-          {/* Subtitle and Description */}
-          <div className="text-center animate-fade-up [animation-delay:400ms] mb-8">
-            <p className="font-serif text-xl md:text-2xl text-muted-foreground italic mb-4">
-              par Vanessa Charlery
-            </p>
-            <p className="font-sans text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              illustrations, ateliers, photographie & plus encore
-            </p>
-          </div>
-
-          {/* Workshop Tags Cloud */}
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-12 animate-fade-up [animation-delay:600ms]">
-            {workshops.map((workshop, index) => (
-              <Link
-                key={workshop.name}
-                to="/workshops"
-                className={`group px-4 py-2 rounded-full border-2 border-current ${workshop.color} 
-                  hover:bg-current hover:text-primary-foreground transition-all duration-300
-                  animate-fade-up cursor-pointer`}
-                style={{ animationDelay: `${800 + index * 100}ms` }}
-              >
-                <span className="font-sans text-sm">
-                  {workshop.name}
-                </span>
-              </Link>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <div className="text-center mt-12 animate-fade-up [animation-delay:1200ms]">
-            <Link
-              to="/workshops"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground 
-                font-sans text-sm uppercase tracking-wider hover:bg-primary/90 transition-all duration-300
-                rounded-full shadow-lg hover:shadow-xl hover:scale-105"
+        </div>
+      </section>
+      
+      {/* Call to Action Section */}
+      <section className="bg-earth py-24 px-4">
+        <div className="container mx-auto text-center max-w-3xl space-y-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-off-white">
+            Prêt·e à explorer le monde végétal ?
+          </h2>
+          <p className="text-xl text-off-white/90">
+            Rejoignez-nous pour un atelier et découvrez une nouvelle façon 
+            de créer avec la nature.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center pt-4">
+            <Link 
+              to="/workshops" 
+              className="px-10 py-5 bg-off-white hover:bg-sand text-charcoal rounded-full font-semibold text-lg transition-all hover:scale-105 hover:shadow-2xl"
             >
-              Découvrir les Ateliers
-              <span className="text-lg">→</span>
+              Voir tous les ateliers
+            </Link>
+            <Link 
+              to="/contact" 
+              className="px-10 py-5 bg-transparent border-2 border-off-white hover:bg-off-white/10 text-off-white rounded-full font-semibold text-lg transition-all hover:scale-105"
+            >
+              Nous contacter
             </Link>
           </div>
-
-          {/* Stat Badge */}
-          <div className="absolute top-0 right-0 md:right-8 w-20 h-20 md:w-24 md:h-24 bg-accent/20 
-            rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-accent/30
-            animate-fade-up [animation-delay:400ms]">
-            <div className="text-center">
-              <p className="font-serif text-2xl md:text-3xl font-bold text-accent">12+</p>
-              <p className="font-sans text-xs text-accent/80">ateliers</p>
-            </div>
-          </div>
         </div>
       </section>
-
-      {/* Introduction Section */}
-      <section className="py-20 md:py-32 relative">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center relative">
-            
-            {/* Decorative elements */}
-            <Butterfly className="absolute -top-8 left-0 w-12 h-10 text-sage/30 animate-float" />
-            <Flower className="absolute -top-4 right-4 w-10 h-14 text-earth/30 animate-float [animation-delay:1s]" />
-            
-            <h2 className="font-serif text-3xl md:text-5xl font-light mb-8 text-foreground animate-fade-up">
-              Où la Science Rencontre la Poésie
-            </h2>
-            <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed mb-6 animate-fade-up [animation-delay:200ms]">
-              Fondée par l'ethnobotaniste et photographe Vanessa Charlery, Botanique Ludique vous invite à
-              vous reconnecter avec le monde végétal à travers des expériences créatives et sensorielles.
-            </p>
-            <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed animate-fade-up [animation-delay:400ms]">
-              Chaque atelier mêle savoir botanique traditionnel et créativité contemporaine,
-              créant des espaces de croissance, de rituel et de jeu.
-            </p>
-
-            <Mushroom className="absolute -bottom-4 left-8 w-10 h-12 text-sage-light/30 animate-float [animation-delay:2s]" />
-            <Bee className="absolute bottom-0 right-0 w-12 h-8 text-accent/30 animate-float [animation-delay:1.5s]" />
-          </div>
-        </div>
-      </section>
-
+      
       <Footer />
     </div>
   );
