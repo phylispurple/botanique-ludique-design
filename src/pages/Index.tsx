@@ -66,8 +66,8 @@ const Index = () => {
                 autrement.
               </p>
               
-              <button 
-                onClick={() => navigate('/workshops')}
+              <button
+                onClick={() => navigate('/ateliers')}
                 className="group relative px-10 py-5 bg-earth hover:bg-earth/90 text-off-white rounded-full text-lg font-semibold transition-all hover:scale-105 hover:shadow-2xl flex items-center gap-3"
               >
                 Ateliers ?... Go !
@@ -79,7 +79,7 @@ const Index = () => {
                 {workshops.map((workshop, index) => (
                   <Link
                     key={workshop.name}
-                    to="/workshops"
+                    to="/ateliers"
                     className="px-5 py-2 rounded-full text-sm font-medium bg-off-white/10 backdrop-blur-sm text-sand border border-sand/20 hover:bg-off-white/20 hover:border-sand/40 hover:-translate-y-1 transition-all duration-300"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
@@ -103,33 +103,33 @@ const Index = () => {
               </div>
               
               {/* Botanical illustrations arranged in circle */}
-              <LeafBranch 
-                className="absolute top-10 left-1/2 -translate-x-1/2 w-28 h-28 text-earth/70 animate-float cursor-pointer hover:scale-125 transition-transform" 
-                onClick={() => navigate('/workshops')}
+              <LeafBranch
+                className="absolute top-10 left-1/2 -translate-x-1/2 w-28 h-28 text-earth/70 animate-float cursor-pointer hover:scale-125 transition-transform"
+                onClick={() => navigate('/ateliers')}
               />
-              <Flower 
-                className="absolute top-1/2 right-10 -translate-y-1/2 w-24 h-24 text-accent/80 animate-float cursor-pointer hover:scale-125 transition-transform" 
-                onClick={() => navigate('/workshops')}
+              <Flower
+                className="absolute top-1/2 right-10 -translate-y-1/2 w-24 h-24 text-accent/80 animate-float cursor-pointer hover:scale-125 transition-transform"
+                onClick={() => navigate('/ateliers')}
                 style={{ animationDelay: '0.5s' }}
               />
-              <Butterfly 
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 w-20 h-20 text-sand/70 animate-float cursor-pointer hover:scale-125 transition-transform" 
-                onClick={() => navigate('/workshops')}
+              <Butterfly
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 w-20 h-20 text-sand/70 animate-float cursor-pointer hover:scale-125 transition-transform"
+                onClick={() => navigate('/ateliers')}
                 style={{ animationDelay: '1s' }}
               />
-              <Bee 
-                className="absolute top-1/2 left-10 -translate-y-1/2 w-22 h-22 text-accent/70 animate-float cursor-pointer hover:scale-125 transition-transform" 
-                onClick={() => navigate('/workshops')}
+              <Bee
+                className="absolute top-1/2 left-10 -translate-y-1/2 w-22 h-22 text-accent/70 animate-float cursor-pointer hover:scale-125 transition-transform"
+                onClick={() => navigate('/ateliers')}
                 style={{ animationDelay: '0.3s' }}
               />
-              <Mushroom 
-                className="absolute top-20 right-20 w-20 h-20 text-sage/70 animate-float cursor-pointer hover:scale-125 transition-transform" 
-                onClick={() => navigate('/workshops')}
+              <Mushroom
+                className="absolute top-20 right-20 w-20 h-20 text-sage/70 animate-float cursor-pointer hover:scale-125 transition-transform"
+                onClick={() => navigate('/ateliers')}
                 style={{ animationDelay: '0.7s' }}
               />
-              <Snail 
-                className="absolute bottom-20 left-20 w-18 h-18 text-earth/60 animate-float cursor-pointer hover:scale-125 transition-transform" 
-                onClick={() => navigate('/workshops')}
+              <Snail
+                className="absolute bottom-20 left-20 w-18 h-18 text-earth/60 animate-float cursor-pointer hover:scale-125 transition-transform"
+                onClick={() => navigate('/ateliers')}
                 style={{ animationDelay: '0.9s' }}
               />
             </div>
@@ -159,8 +159,8 @@ const Index = () => {
                 avec les plantes. De la fabrication de kokedama aux fresques murales 
                 végétales, découvrez une autre façon d'habiter le monde.
               </p>
-              <Link 
-                to="/philosophy" 
+              <Link
+                to="/philosophie"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-sage hover:bg-sage-dark text-off-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-xl"
               >
                 Découvrir la philosophie
@@ -203,8 +203,8 @@ const Index = () => {
             de créer avec la nature.
           </p>
           <div className="flex flex-wrap gap-4 justify-center pt-4">
-            <Link 
-              to="/workshops" 
+              <Link
+                to="/ateliers"
               className="px-10 py-5 bg-off-white hover:bg-sand text-charcoal rounded-full font-semibold text-lg transition-all hover:scale-105 hover:shadow-2xl"
             >
               Voir tous les ateliers

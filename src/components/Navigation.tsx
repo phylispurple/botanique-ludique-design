@@ -7,11 +7,11 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Workshops", path: "/workshops" },
-    { name: "Philosophy", path: "/philosophy" },
-    { name: "Gallery", path: "/gallery" },
+    { name: "Accueil", path: "/" },
+    { name: "À propos", path: "/a-propos" },
+    { name: "Ateliers", path: "/ateliers" },
+    { name: "Philosophie", path: "/philosophie" },
+    { name: "Galerie", path: "/galerie" },
     { name: "Contact", path: "/contact" },
   ];
 

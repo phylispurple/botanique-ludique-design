@@ -17,16 +17,16 @@ const Contact = () => {
     // Form validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Please fill in all required fields",
+        title: "Veuillez remplir tous les champs obligatoires",
         variant: "destructive",
       });
       return;
     }
 
-    // Here you would typically send the form data to a backend
+    // Ici, on enverrait normalement les données du formulaire vers un backend
     toast({
-      title: "Message sent!",
-      description: "We'll get back to you soon.",
+      title: "Message envoyé !",
+      description: "Nous revenons vers vous très vite.",
     });
 
     // Reset form
@@ -49,109 +49,139 @@ const Contact = () => {
     <div className="min-h-screen">
       <Navigation />
 
-      <main className="pt-24 pb-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="font-serif text-4xl md:text-6xl font-light mb-6 text-foreground">
-                Get in Touch
-              </h1>
-              <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
-                Whether you're interested in booking a workshop, organizing a private event,
-                or simply want to learn more about our botanical offerings, we'd love to hear from you.
-              </p>
-            </div>
+      <main className="pt-24">
+        <section className="relative overflow-hidden bg-earth py-24 text-off-white">
+          <div className="absolute inset-0 opacity-40">
+            <div className="absolute -top-10 left-12 h-48 w-48 rounded-full bg-sage/40 blur-3xl" />
+            <div className="absolute bottom-0 right-10 h-64 w-64 rounded-full bg-sand/30 blur-3xl" />
+          </div>
+          <div className="container relative mx-auto flex max-w-4xl flex-col items-center gap-8 px-4 text-center md:px-6">
+            <span className="inline-flex items-center gap-2 rounded-full bg-off-white/10 px-6 py-2 font-sans text-xs uppercase tracking-[0.4em] text-off-white/80">
+              Contact
+            </span>
+            <h1 className="font-serif text-4xl font-light leading-tight md:text-6xl">
+              Imaginons ensemble votre expérience végétale
+            </h1>
+            <p className="font-sans text-lg leading-relaxed text-off-white/80">
+              Un atelier sur-mesure, un événement privé, une intervention pédagogique ou une simple question ? Vanessa vous répond avec attention.
+            </p>
+          </div>
+        </section>
 
-            <div className="bg-card rounded-lg shadow-lg p-8 md:p-12">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block font-sans text-sm uppercase tracking-wider mb-2 text-foreground">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                  />
-                </div>
+        <section className="relative -mt-16 pb-24">
+          <div className="container relative mx-auto px-4 md:px-6">
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 md:grid-cols-[1.1fr_0.9fr]">
+              <div className="rounded-3xl border border-sage/20 bg-off-white p-10 shadow-2xl">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid gap-6 md:grid-cols-2">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="font-sans text-xs uppercase tracking-[0.35em] text-charcoal/70">
+                        Nom et prénom *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full rounded-xl border border-sage/30 bg-white px-4 py-3 font-sans text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/60"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="font-sans text-xs uppercase tracking-[0.35em] text-charcoal/70">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full rounded-xl border border-sage/30 bg-white px-4 py-3 font-sans text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/60"
+                      />
+                    </div>
+                  </div>
 
-                <div>
-                  <label htmlFor="email" className="block font-sans text-sm uppercase tracking-wider mb-2 text-foreground">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                  />
-                </div>
+                  <div className="space-y-2">
+                    <label htmlFor="subject" className="font-sans text-xs uppercase tracking-[0.35em] text-charcoal/70">
+                      Objet
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      className="w-full rounded-xl border border-sage/30 bg-white px-4 py-3 font-sans text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/60"
+                    />
+                  </div>
 
-                <div>
-                  <label htmlFor="subject" className="block font-sans text-sm uppercase tracking-wider mb-2 text-foreground">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                  />
-                </div>
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="font-sans text-xs uppercase tracking-[0.35em] text-charcoal/70">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows={6}
+                      className="w-full rounded-xl border border-sage/30 bg-white px-4 py-3 font-sans text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/60"
+                    ></textarea>
+                  </div>
 
-                <div>
-                  <label htmlFor="message" className="block font-sans text-sm uppercase tracking-wider mb-2 text-foreground">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full px-6 py-4 bg-primary text-primary-foreground font-sans text-sm uppercase tracking-wider hover:bg-primary/90 transition-colors rounded-full"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="text-center md:text-left">
-                <h3 className="font-sans text-sm uppercase tracking-wider mb-2 text-foreground">Email</h3>
-                <a
-                  href="mailto:contact@botaniqueludique.com"
-                  className="font-sans text-primary hover:text-primary/80 transition-colors"
-                >
-                  contact@botaniqueludique.com
-                </a>
+                  <button
+                    type="submit"
+                    className="w-full rounded-full bg-earth px-8 py-4 font-sans text-sm uppercase tracking-[0.4em] text-off-white transition-all hover:scale-105 hover:bg-earth/90"
+                  >
+                    Envoyer le message
+                  </button>
+                </form>
               </div>
 
-              <div className="text-center md:text-left">
-                <h3 className="font-sans text-sm uppercase tracking-wider mb-2 text-foreground">Location</h3>
-                <p className="font-sans text-muted-foreground">
-                  Paris & surrounding regions
-                </p>
+              <div className="flex flex-col justify-between gap-10 rounded-3xl border border-sage/20 bg-sand/60 p-10 text-charcoal shadow-2xl">
+                <div className="space-y-6">
+                  <h2 className="font-serif text-3xl font-light">Informations pratiques</h2>
+                  <p className="font-sans text-base leading-relaxed text-charcoal/80">
+                    Partagez vos envies, le nombre de participant·es ou le contexte de votre événement. Nous co-construisons une proposition adaptée à vos besoins.
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-sans text-xs uppercase tracking-[0.35em] text-charcoal/60">Email</h3>
+                    <a
+                      href="mailto:contact@botaniqueludique.com"
+                      className="mt-2 inline-flex items-center gap-2 font-sans text-lg text-earth transition-colors hover:text-earth/80"
+                    >
+                      contact@botaniqueludique.com
+                    </a>
+                  </div>
+                  <div>
+                    <h3 className="font-sans text-xs uppercase tracking-[0.35em] text-charcoal/60">Territoire</h3>
+                    <p className="mt-2 font-sans text-base text-charcoal/80">
+                      Île-de-France & déplacements en régions sur demande
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-sans text-xs uppercase tracking-[0.35em] text-charcoal/60">Réseaux</h3>
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 inline-flex items-center gap-2 font-sans text-base text-charcoal/80 transition-colors hover:text-earth"
+                    >
+                      @botaniqueludique
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
 
       <Footer />
