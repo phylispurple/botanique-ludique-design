@@ -8,12 +8,12 @@ const Footer = () => {
           <div>
             <h3 className="font-serif text-2xl mb-4 text-foreground">Botanique Ludique</h3>
             <p className="font-sans text-sm text-muted-foreground leading-relaxed">
-              Workshops connecting humans and plants through creativity, ritual, and play.
+              Des ateliers qui tissent un lien sensible entre humain et végétal à travers la créativité, le rituel et le jeu.
             </p>
           </div>
 
           <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-foreground">Connect</h4>
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-foreground">Nous suivre</h4>
             <div className="flex gap-4">
               <a
                 href="https://instagram.com"
@@ -35,18 +35,18 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-foreground">Location</h4>
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-foreground">Territoire</h4>
             <p className="font-sans text-sm text-muted-foreground leading-relaxed">
-              Paris & surrounding regions
+              Basé en Île-de-France
               <br />
-              Available for private workshops
+              Déplacements et ateliers privés sur demande
             </p>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="font-sans text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Botanique Ludique. Founded by Vanessa Charlery.
+            © {new Date().getFullYear()} Botanique Ludique. Imaginé par Vanessa Charlery.
           </p>
         </div>
       </div>
