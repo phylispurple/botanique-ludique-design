@@ -30,7 +30,7 @@ const About = () => {
               </div>
 
               <div className="space-y-6 animate-fade-in">
-                <h2 className="text-3xl md:text-4xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
+                <h2 className="text-3xl md:text-4xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   De l'ethnobotanique au rituel créatif
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -50,7 +50,7 @@ const About = () => {
             </div>
 
             <div className="bg-sand rounded-lg p-8 md:p-12 animate-fade-in">
-              <h3 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
+              <h3 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                 La philosophie
               </h3>
               <div className="max-w-3xl mx-auto space-y-4 text-center">
