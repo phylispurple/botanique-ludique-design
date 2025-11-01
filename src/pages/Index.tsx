@@ -146,10 +146,10 @@ const Index = () => {
       {/* Call to Action Section */}
       <section className="py-24 px-4 relative overflow-hidden" style={{ backgroundImage: `url(${heroBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container mx-auto text-center max-w-3xl space-y-8">
-          <h2 className="text-4xl md:text-5xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+          <h2 className="text-4xl md:text-5xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#F7F7EB' }}>
             Prêt·e à explorer le monde végétal ?
           </h2>
-          <p className="text-xl" style={{ color: '#3D3D2E', opacity: 0.8 }}>
+          <p className="text-xl" style={{ color: '#F7F7EB', opacity: 0.9 }}>
             Rejoignez-nous pour un atelier et découvrez une nouvelle façon 
             de créer avec la nature.
           </p>
@@ -164,7 +164,7 @@ const Index = () => {
             <Link 
               to="/contact" 
               className="px-10 py-5 bg-transparent rounded-full font-semibold text-lg transition-all hover:scale-105"
-              style={{ border: '2px solid #3D3D2E', color: '#3D3D2E' }}
+              style={{ border: '2px solid #F7F7EB', color: '#F7F7EB' }}
             >
               Nous contacter
             </Link>
