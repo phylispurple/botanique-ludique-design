@@ -3,7 +3,16 @@ import { toast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
-import { Leaf } from "lucide-react";
+import { Leaf, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Le nom est requis").max(100, "Le nom doit faire moins de 100 caractères"),
+  email: z.string().trim().email("Email invalide").max(255, "L'email doit faire moins de 255 caractères"),
+  subject: z.string().trim().max(200, "Le sujet doit faire moins de 200 caractères"),
+  message: z.string().trim().min(1, "Le message est requis").max(1000, "Le message doit faire moins de 1000 caractères"),
+});
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,32 +21,56 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Form validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Veuillez remplir tous les champs requis",
-        variant: "destructive",
-      });
+    // Validate form data
+    try {
+      contactSchema.parse(formData);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          title: "Erreur de validation",
+          description: error.errors[0].message,
+          variant: "destructive",
+        });
+      }
       return;
     }
 
-    // Here you would typically send the form data to a backend
-    toast({
-      title: "Message envoyé !",
-      description: "Nous vous répondrons bientôt.",
-    });
+    setIsSubmitting(true);
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message envoyé !",
+        description: "Nous vous répondrons bientôt à l'adresse email fournie.",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error: any) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Erreur lors de l'envoi",
+        description: "Une erreur est survenue. Veuillez réessayer plus tard.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -144,12 +177,20 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-4 text-off-white font-semibold text-sm uppercase tracking-wider transition-colors rounded-full"
-                  style={{ backgroundColor: '#A7B795' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5D653A'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#A7B795'}
+                  disabled={isSubmitting}
+                  className="w-full px-6 py-4 text-off-white font-semibold text-sm uppercase tracking-wider transition-colors rounded-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  style={{ backgroundColor: isSubmitting ? '#5D653A' : '#A7B795' }}
+                  onMouseEnter={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = '#5D653A')}
+                  onMouseLeave={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = '#A7B795')}
                 >
-                  Envoyer le message
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Envoi en cours...
+                    </>
+                  ) : (
+                    'Envoyer le message'
+                  )}
                 </button>
               </form>
               
