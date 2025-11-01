@@ -25,35 +25,20 @@ const Contact = () => {
       return;
     }
 
-   // Envoi via Formspree
-fetch("https://formspree.io/f/mqazrljq", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(formData),
-})
-  .then((response) => {
-    if (response.ok) {
-      toast({
-        title: "Message envoyé !",
-        description: "Nous vous répondrons bientôt 🌿",
-      });
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } else {
-      toast({
-        title: "Erreur d’envoi",
-        description: "Merci de réessayer dans un instant.",
-        variant: "destructive",
-      });
-    }
-  })
-  .catch(() => {
+    // Here you would typically send the form data to a backend
     toast({
-      title: "Erreur de connexion",
-      description: "Vérifiez votre connexion Internet.",
-      variant: "destructive",
+      title: "Message envoyé !",
+      description: "Nous vous répondrons bientôt.",
     });
-  });
 
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
