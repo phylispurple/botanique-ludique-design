@@ -21,7 +21,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section - Centered Minimal Design */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ backgroundColor: '#5D653A', paddingTop: '8%', paddingBottom: '10%' }}>
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ backgroundColor: '#5D653A', paddingTop: '15%', paddingBottom: '10%' }}>
         {/* Decorative bubbles - soft green tones with drift animation and varied sizes */}
         <div className="absolute top-20 right-[15%] w-28 h-28 rounded-full bg-[#CAD2B0] opacity-22 animate-drift" style={{ animationDelay: '0s' }} />
         <div className="absolute bottom-32 left-[10%] w-36 h-36 rounded-full bg-[#9EB388] opacity-12 animate-drift-slow" style={{ animationDelay: '5s' }} />
@@ -35,13 +35,13 @@ const Index = () => {
           <div className="flex flex-col items-center text-center space-y-6 animate-fade-up">
             {/* Main Title - Elegant and Centered */}
             <div className="space-y-2" style={{ fontFamily: 'Fraunces, serif' }}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-tight tracking-wide" style={{ color: '#F7F7EB', lineHeight: '1.2' }}>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide" style={{ color: '#F7F7EB', lineHeight: '1.2', fontWeight: 500 }}>
                 Les Ateliers
               </h1>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-tight tracking-wide" style={{ color: '#F7F7EB', opacity: 0.95, lineHeight: '1.2' }}>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide" style={{ color: '#F7F7EB', opacity: 0.95, lineHeight: '1.2', fontWeight: 500 }}>
                 qui font vivre
               </h2>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-tight tracking-wide" style={{ color: '#F7F7EB', opacity: 0.95, lineHeight: '1.2' }}>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide" style={{ color: '#F7F7EB', opacity: 0.95, lineHeight: '1.2', fontWeight: 500 }}>
                 la nature.
               </h2>
             </div>
