@@ -12,7 +12,7 @@ const Philosophy = () => {
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <h1 className="page-title text-5xl md:text-7xl mb-20 text-center text-charcoal">
+            <h1 className="page-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-20 text-center text-charcoal" style={{ fontWeight: 500, lineHeight: '1.2' }}>
               Philosophie
             </h1>
 
