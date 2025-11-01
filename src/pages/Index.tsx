@@ -7,6 +7,23 @@ import heroBackground from "@/assets/hero-background.png";
 const Index = () => {
   const navigate = useNavigate();
 
+  const handleDownloadBrochure = async () => {
+    try {
+      const response = await fetch('/Plaquette_Botanique_ludique_2025-26.pdf');
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Plaquette_Botanique_ludique_2025-26.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Erreur lors du téléchargement:', error);
+    }
+  };
+
   const workshops = [
     { name: "Kokedama", color: "text-sage" },
     { name: "Teinture Végétale", color: "text-earth" },
@@ -119,14 +136,13 @@ const Index = () => {
                 avec les plantes. De la fabrication de kokedama aux fresques murales 
                 végétales, découvrez une autre façon d'habiter le monde.
               </p>
-              <a 
-                href="/Plaquette_Botanique_ludique_2025-26.pdf"
-                download="Plaquette_Botanique_ludique_2025-26.pdf"
+              <button 
+                onClick={handleDownloadBrochure}
                 className="inline-flex items-center gap-2 px-8 py-4 bg-sage hover:bg-sage-dark text-off-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-xl"
               >
                 Télécharger la plaquette
                 <span className="text-xl">→</span>
-              </a>
+              </button>
             </div>
             
             {/* Ils nous font confiance Section */}
