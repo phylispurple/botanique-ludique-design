@@ -30,20 +30,20 @@ const Index = () => {
         <div className="container mx-auto px-4 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text Content */}
-            <div className="space-y-8 animate-fade-up z-10">
+            <div className="space-y-8 animate-fade-up z-10 max-w-2xl mx-auto lg:mx-0">
               <div className="space-y-4">
-                <h1 className="text-7xl md:text-8xl font-bold text-off-white leading-none">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-off-white leading-none">
                   LES ATELIERS
                 </h1>
                 <div className="flex items-center gap-4">
-                  <h2 className="text-5xl md:text-6xl font-light text-sand">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-sand">
                     qui font vivre
                   </h2>
                   <div className="w-16 h-16 rounded-full bg-accent animate-pulse" />
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-earth" />
-                  <h2 className="text-5xl md:text-6xl font-light text-sand">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-sand">
                     la nature.
                   </h2>
                 </div>
@@ -84,12 +84,6 @@ const Index = () => {
               <div className="absolute top-1/4 right-1/4 w-32 h-32 rounded-full bg-earth/20" />
               <div className="absolute bottom-1/3 left-1/4 w-24 h-24 bg-accent/15" style={{ borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' }} />
               <div className="absolute top-1/3 right-1/3 w-40 h-40 rounded-full bg-sage/10" />
-              
-              {/* Central stat badge */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-off-white rounded-2xl p-10 shadow-2xl border border-sand z-10">
-                <div className="text-6xl font-bold text-sage-dark">12+</div>
-                <div className="text-lg text-charcoal font-semibold mt-2">ateliers créatifs</div>
-              </div>
             </div>
           </div>
         </div>

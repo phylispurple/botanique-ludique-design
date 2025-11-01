@@ -44,10 +44,10 @@ All colors MUST be HSL.
     --radius: 0.75rem;
     
     /* Custom botanical tokens */
-    --sage: 42 25% 55%;
-    --sage-light: 45 25% 75%;
-    --sage-dark: 38 30% 35%;
-    --earth: 20 40% 45%;
+    --sage: 75 30% 45%;
+    --sage-light: 80 25% 65%;
+    --sage-dark: 70 35% 30%;
+    --earth: 80 25% 40%;
     --sand: 35 30% 90%;
     --charcoal: 28 15% 25%;
     --off-white: 30 15% 98%;
@@ -111,10 +111,10 @@ All colors MUST be HSL.
     --input: 30 12% 22%;
     --ring: 140 25% 55%;
     
-    --sage: 42 25% 60%;
-    --sage-light: 45 25% 80%;
-    --sage-dark: 38 30% 40%;
-    --earth: 20 40% 50%;
+    --sage: 75 30% 50%;
+    --sage-light: 80 25% 70%;
+    --sage-dark: 70 35% 35%;
+    --earth: 80 25% 45%;
     --sand: 35 30% 85%;
     --charcoal: 28 15% 30%;
     --off-white: 30 15% 93%;
