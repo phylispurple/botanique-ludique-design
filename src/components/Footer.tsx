@@ -16,7 +16,7 @@ const Footer = () => {
             <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-foreground">Connect</h4>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/botanique.ludique/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -25,7 +25,7 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a
-                href="mailto:contact@botaniqueludique.com"
+                href="mailto:botaniqueludique@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Email"
               >

@@ -30,7 +30,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text Content */}
-            <div className="space-y-8 animate-fade-up z-10 max-w-2xl mx-auto lg:mx-0">
+            <div className="space-y-8 animate-fade-up z-10 max-w-2xl mx-auto">
               <div className="space-y-4">
                 <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-off-white leading-none">
                   LES ATELIERS
