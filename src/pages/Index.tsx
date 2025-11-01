@@ -120,7 +120,8 @@ const Index = () => {
                 végétales, découvrez une autre façon d'habiter le monde.
               </p>
               <a 
-                href="#" 
+                href="/Plaquette_Botanique_ludique_2025-26.pdf"
+                download="Plaquette_Botanique_ludique_2025-26.pdf"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-sage hover:bg-sage-dark text-off-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-xl"
               >
                 Télécharger la plaquette
@@ -128,15 +129,26 @@ const Index = () => {
               </a>
             </div>
             
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <div className="aspect-square bg-sage/20 rounded-3xl" />
-                  <div className="aspect-[4/5] bg-earth/20 rounded-3xl" />
+            {/* Ils nous font confiance Section */}
+            <div className="space-y-8">
+              <h3 className="text-3xl font-bold text-charcoal text-center lg:text-left">
+                Ils nous font confiance
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
+                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/region-idf.png" alt="Région Île-de-France" className="max-h-16 w-auto object-contain" />
                 </div>
-                <div className="space-y-4 pt-8">
-                  <div className="aspect-[4/5] bg-accent/20 rounded-3xl" />
-                  <div className="aspect-square bg-sage-dark/20 rounded-3xl" />
+                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/mjc-vesinet.png" alt="MJC du Vésinet" className="max-h-16 w-auto object-contain" />
+                </div>
+                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/jappy-senior.png" alt="Jappy Senior" className="max-h-16 w-auto object-contain" />
+                </div>
+                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/mjc-chatou.png" alt="MJC Chatou" className="max-h-16 w-auto object-contain" />
+                </div>
+                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1">
+                  <img src="/logos/publicis.png" alt="Publicis" className="max-h-16 w-auto object-contain" />
                 </div>
               </div>
             </div>
