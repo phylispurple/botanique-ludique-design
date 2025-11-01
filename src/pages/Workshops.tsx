@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles } from "lucide-react";
 import kokedamaImage from "@/assets/workshop-kokedama.jpg";
 import dyeingImage from "@/assets/workshop-dyeing.jpg";
@@ -104,10 +105,11 @@ const workshops = [
 
 const Workshops = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+      <FloatingIllustrations />
       <Navigation />
 
-      <main className="pt-24 pb-20" style={{ backgroundColor: '#EDEFE5' }}>
+      <main className="pt-24 pb-20" style={{ backgroundColor: '#F7F7EB' }}>
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-4 text-charcoal">

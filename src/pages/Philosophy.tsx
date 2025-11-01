@@ -1,10 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { Leaf, Sprout, Sparkles } from "lucide-react";
 
 const Philosophy = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+      <FloatingIllustrations />
       <Navigation />
 
       <main className="pt-24 pb-20">

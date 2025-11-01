@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingIllustrations from "@/components/FloatingIllustrations";
 import heroImage from "@/assets/hero-botanical.jpg";
 import kokedamaImage from "@/assets/workshop-kokedama.jpg";
 import dyeingImage from "@/assets/workshop-dyeing.jpg";
@@ -18,7 +19,8 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+      <FloatingIllustrations />
       <Navigation />
 
       <main className="pt-24 pb-20">

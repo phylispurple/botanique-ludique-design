@@ -19,16 +19,16 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 md:px-6 py-4 md:py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <Leaf 
-              className="w-6 h-6 md:w-7 md:h-7 transition-all duration-300 group-hover:rotate-12" 
+              className="w-9 h-9 md:w-10 md:h-10 transition-all duration-300 animate-leaf-sway group-hover:scale-110" 
               style={{ color: '#A7B795', strokeWidth: 1.5 }}
             />
             <div className="flex flex-col leading-none animate-fade-in">
-              <span className="font-serif text-base md:text-lg font-light tracking-wider" style={{ color: '#5D653A' }}>
+              <span className="font-serif text-xl md:text-2xl font-light tracking-wider" style={{ color: '#5D653A' }}>
                 Botanique
               </span>
-              <span className="font-serif text-base md:text-lg font-light tracking-wider" style={{ color: '#5D653A' }}>
+              <span className="font-serif text-xl md:text-2xl font-light tracking-wider" style={{ color: '#5D653A' }}>
                 Ludique
               </span>
             </div>
@@ -40,11 +40,14 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-sans text-sm tracking-wider uppercase transition-colors ${
+                className={`menu-link font-sans text-sm tracking-wider uppercase ${
                   location.pathname === link.path
-                    ? "text-primary font-medium"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "font-medium"
+                    : ""
                 }`}
+                style={{ 
+                  color: location.pathname === link.path ? '#5D653A' : '#8B8B7A'
+                }}
               >
                 {link.name}
               </Link>
