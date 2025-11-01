@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import heroBackground from "@/assets/hero-background.png";
 
 const Index = () => {
@@ -118,13 +119,13 @@ const Index = () => {
                 avec les plantes. De la fabrication de kokedama aux fresques murales 
                 végétales, découvrez une autre façon d'habiter le monde.
               </p>
-              <Link 
-                to="/philosophy" 
+              <a 
+                href="#" 
                 className="inline-flex items-center gap-2 px-8 py-4 bg-sage hover:bg-sage-dark text-off-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-xl"
               >
-                Découvrir la philosophie
+                Télécharger la plaquette
                 <span className="text-xl">→</span>
-              </Link>
+              </a>
             </div>
             
             <div className="relative">
@@ -173,6 +174,7 @@ const Index = () => {
       </section>
       
       <Footer />
+      <CookieConsent />
     </div>
   );
 };
