@@ -144,7 +144,7 @@ const Index = () => {
       </section>
       
       {/* Call to Action Section */}
-      <section className="bg-earth py-24 px-4">
+      <section className="py-24 px-4 relative overflow-hidden" style={{ backgroundImage: `url(${heroBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container mx-auto text-center max-w-3xl space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold text-off-white">
             Prêt·e à explorer le monde végétal ?
