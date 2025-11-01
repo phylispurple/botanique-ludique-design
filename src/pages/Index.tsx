@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import heroBackground from "@/assets/hero-background.png";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section - Centered Minimal Design */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ backgroundColor: '#5D653A', paddingTop: '15%', paddingBottom: '10%' }}>
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ backgroundImage: `url(${heroBackground})`, backgroundSize: 'cover', backgroundPosition: 'center', paddingTop: '15%', paddingBottom: '10%' }}>
         {/* Decorative bubbles - soft green tones with drift animation and varied sizes */}
         <div className="absolute top-20 right-[15%] w-28 h-28 rounded-full bg-[#CAD2B0] opacity-22 animate-drift" style={{ animationDelay: '0s' }} />
         <div className="absolute bottom-32 left-[10%] w-36 h-36 rounded-full bg-[#9EB388] opacity-12 animate-drift-slow" style={{ animationDelay: '5s' }} />
