@@ -52,12 +52,13 @@ const Contact = () => {
       <FloatingIllustrations />
       <Navigation />
 
-      <main className="pt-24 pb-20">
+      <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-7xl font-bold mb-4 text-charcoal">
-                Nous contacter
+            <div className="text-center mb-20">
+              <Leaf className="w-16 h-16 mx-auto mb-4" style={{ color: '#A7B795', strokeWidth: 1.5 }} />
+              <h1 className="page-title text-5xl md:text-7xl mb-6 text-charcoal">
+                Contact
               </h1>
               <p className="text-lg italic leading-relaxed" style={{ color: '#A7B795' }}>
                 Nous serions ravis de semer un projet avec vous.

@@ -9,17 +9,17 @@ const Philosophy = () => {
       <FloatingIllustrations />
       <Navigation />
 
-      <main className="pt-24 pb-20">
+      <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-16 text-center text-charcoal">
+            <h1 className="page-title text-5xl md:text-7xl mb-20 text-center text-charcoal">
               Philosophie
             </h1>
 
             <div className="prose prose-lg max-w-none">
               <div className="mb-16">
                 <Leaf size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-sage-dark text-center">
+                <h2 className="text-3xl md:text-4xl mb-6 text-sage-dark text-center" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
                   Connexion
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
@@ -31,7 +31,7 @@ const Philosophy = () => {
 
               <div className="mb-16">
                 <Sprout size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-sage-dark text-center">
+                <h2 className="text-3xl md:text-4xl mb-6 text-sage-dark text-center" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
                   Croissance
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
@@ -43,7 +43,7 @@ const Philosophy = () => {
 
               <div className="mb-16">
                 <Sparkles size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-sage-dark text-center">
+                <h2 className="text-3xl md:text-4xl mb-6 text-sage-dark text-center" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
                   Rituel
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
@@ -65,7 +65,7 @@ const Philosophy = () => {
               </div>
 
               <div className="mt-16 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-charcoal">
+                <h2 className="text-3xl md:text-4xl mb-6 text-charcoal" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
                   Notre approche
                 </h2>
                 <div className="space-y-6 max-w-2xl mx-auto">

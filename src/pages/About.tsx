@@ -9,10 +9,10 @@ const About = () => {
       <FloatingIllustrations />
       <Navigation />
 
-      <main className="pt-24 pb-20">
+      <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-center text-charcoal">
+            <h1 className="page-title text-5xl md:text-7xl mb-6 text-center text-charcoal">
               À propos de Vanessa
             </h1>
             <p className="text-lg text-center italic mb-16" style={{ color: '#A7B795' }}>
@@ -30,7 +30,7 @@ const About = () => {
               </div>
 
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-charcoal">
+                <h2 className="text-3xl md:text-4xl text-charcoal" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
                   De l'ethnobotanique au rituel créatif
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -50,7 +50,7 @@ const About = () => {
             </div>
 
             <div className="bg-sand rounded-lg p-8 md:p-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-charcoal text-center">
+              <h3 className="text-2xl md:text-3xl mb-6 text-charcoal text-center" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
                 La philosophie
               </h3>
               <div className="max-w-3xl mx-auto space-y-4 text-center">

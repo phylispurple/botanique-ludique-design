@@ -36,10 +36,10 @@ const Index = () => {
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-wide" style={{ color: '#F7F7EB' }}>
                 Les Ateliers
               </h1>
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-wide" style={{ color: '#DDE2D0', opacity: 0.95 }}>
+              <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-wide" style={{ color: '#F7F7EB', opacity: 0.95 }}>
                 qui font vivre
               </h2>
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-wide" style={{ color: '#DDE2D0', opacity: 0.95 }}>
+              <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-wide" style={{ color: '#F7F7EB', opacity: 0.95 }}>
                 la nature.
               </h2>
             </div>

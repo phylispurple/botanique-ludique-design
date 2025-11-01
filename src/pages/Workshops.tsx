@@ -109,10 +109,10 @@ const Workshops = () => {
       <FloatingIllustrations />
       <Navigation />
 
-      <main className="pt-24 pb-20" style={{ backgroundColor: '#F7F7EB' }}>
+      <main className="pt-32 pb-20" style={{ backgroundColor: '#F7F7EB' }}>
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-charcoal">
+          <div className="max-w-3xl mx-auto text-center mb-20 animate-fade-in">
+            <h1 className="page-title text-5xl md:text-7xl mb-6 text-charcoal">
               Ateliers
             </h1>
             <p className="text-lg italic mb-6" style={{ color: '#A7B795' }}>
@@ -147,7 +147,7 @@ const Workshops = () => {
                       {workshop.duration}
                     </div>
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-charcoal">
+                  <h2 className="text-3xl md:text-4xl text-charcoal" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
                     {workshop.title}
                   </h2>
                   <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -172,7 +172,7 @@ const Workshops = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-transparent"></div>
               <div className="absolute inset-0 flex items-end">
                 <div className="p-8 md:p-12 w-full">
-                  <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+                  <h2 className="text-3xl md:text-5xl text-white" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
                     Formations Éducatives
                   </h2>
                   <p className="text-lg text-white/90 leading-relaxed max-w-3xl">
@@ -184,7 +184,7 @@ const Workshops = () => {
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-charcoal">
+                <h3 className="text-2xl md:text-3xl text-charcoal" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
                   Pour les établissements scolaires
                 </h3>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -207,7 +207,7 @@ const Workshops = () => {
               </div>
 
               <div className="space-y-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-charcoal">
+                <h3 className="text-2xl md:text-3xl text-charcoal" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
                   Pour les entreprises
                 </h3>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -231,7 +231,7 @@ const Workshops = () => {
             </div>
 
             <div className="mt-12 bg-sand rounded-lg p-8 md:p-12 text-center">
-              <h4 className="text-xl md:text-2xl font-bold mb-4 text-charcoal">
+              <h4 className="text-xl md:text-2xl mb-4 text-charcoal" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
                 Repenser notre lien au végétal
               </h4>
               <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-3xl mx-auto">
@@ -249,7 +249,7 @@ const Workshops = () => {
           {/* Private & Corporate Section */}
           <div className="mt-20 rounded-lg p-8 md:p-12 text-center animate-fade-in" style={{ backgroundColor: '#F7F7EB' }}>
             <Leaf size={40} className="mx-auto mb-6" style={{ color: '#A7B795' }} />
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-charcoal">
+            <h3 className="text-2xl md:text-3xl mb-4 text-charcoal" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
               Ateliers de groupe / entreprises
             </h3>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-2xl mx-auto">
