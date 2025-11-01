@@ -7,11 +7,11 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Workshops", path: "/workshops" },
-    { name: "Philosophy", path: "/philosophy" },
-    { name: "Gallery", path: "/gallery" },
+    { name: "Accueil", path: "/" },
+    { name: "À propos", path: "/about" },
+    { name: "Ateliers", path: "/workshops" },
+    { name: "Philosophie", path: "/philosophy" },
+    { name: "Galerie", path: "/gallery" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -19,7 +19,7 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 md:px-6 py-4 md:py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-serif text-xl md:text-2xl font-light tracking-wide text-foreground hover:text-primary transition-colors">
+          <Link to="/" className="font-sans text-xl md:text-2xl font-bold uppercase tracking-wider text-foreground hover:text-primary transition-colors">
             Botanique Ludique
           </Link>
 

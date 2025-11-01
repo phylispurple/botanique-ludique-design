@@ -24,12 +24,12 @@ const Gallery = () => {
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h1 className="font-serif text-4xl md:text-6xl font-light mb-6 text-foreground">
-              Gallery
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-charcoal">
+              Galerie
             </h1>
-            <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
-              A visual journey through our workshops, botanical encounters, and creative moments.
-              All photographs by Vanessa Charlery.
+            <p className="text-lg text-charcoal/80 leading-relaxed">
+              Un voyage visuel à travers nos ateliers, rencontres botaniques et moments créatifs.
+              Toutes les photographies par Vanessa Charlery.
             </p>
           </div>
 
@@ -50,14 +50,14 @@ const Gallery = () => {
           </div>
 
           <div className="mt-16 text-center">
-            <p className="font-sans text-sm text-muted-foreground mb-6">
-              Follow us on Instagram for more botanical inspiration
+            <p className="text-sm text-charcoal/70 mb-6">
+              Suivez-nous sur Instagram pour plus d'inspiration botanique
             </p>
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-sans text-sm uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-colors rounded-full"
+              className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white font-semibold uppercase tracking-wider transition-all rounded-full"
             >
               @botaniqueludique
             </a>

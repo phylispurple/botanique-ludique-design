@@ -1,17 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { 
-  LeafBranch, 
-  Butterfly, 
-  Flower, 
-  Bee, 
-  Mushroom, 
-  Snail, 
-  Bird, 
-  Seed,
-  Strawberry
-} from "@/components/BotanicalIllustrations";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -89,49 +78,18 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Right Side - Botanical Illustrations */}
+            {/* Right Side - Geometric Composition */}
             <div className="relative animate-fade-up h-[600px]" style={{ animationDelay: '0.2s' }}>
-              {/* Large decorative circle */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-gradient-to-br from-sage/20 to-earth/20 backdrop-blur-sm border border-off-white/10" />
+              {/* Geometric shapes */}
+              <div className="absolute top-1/4 right-1/4 w-32 h-32 rounded-full bg-earth/20" />
+              <div className="absolute bottom-1/3 left-1/4 w-24 h-24 bg-accent/15" style={{ borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' }} />
+              <div className="absolute top-1/3 right-1/3 w-40 h-40 rounded-full bg-sage/10" />
               
-              {/* Floating stat badge */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-sage/90 to-sage-dark/90 backdrop-blur-md rounded-2xl p-8 shadow-2xl hover:scale-110 transition-all duration-300 animate-pulse-slow border border-off-white/20 z-10">
-                <div className="text-5xl font-bold text-off-white">12+</div>
-                <div className="text-base text-sand font-medium">ateliers créatifs</div>
-                {/* Rotating ring */}
-                <div className="absolute inset-0 rounded-2xl border-2 border-accent/30 animate-spin" style={{ animationDuration: '8s' }} />
+              {/* Central stat badge */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-off-white rounded-2xl p-10 shadow-2xl border border-sand z-10">
+                <div className="text-6xl font-bold text-sage-dark">12+</div>
+                <div className="text-lg text-charcoal font-semibold mt-2">ateliers créatifs</div>
               </div>
-              
-              {/* Botanical illustrations arranged in circle */}
-              <LeafBranch 
-                className="absolute top-10 left-1/2 -translate-x-1/2 w-28 h-28 text-earth/70 animate-float cursor-pointer hover:scale-125 transition-transform" 
-                onClick={() => navigate('/workshops')}
-              />
-              <Flower 
-                className="absolute top-1/2 right-10 -translate-y-1/2 w-24 h-24 text-accent/80 animate-float cursor-pointer hover:scale-125 transition-transform" 
-                onClick={() => navigate('/workshops')}
-                style={{ animationDelay: '0.5s' }}
-              />
-              <Butterfly 
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 w-20 h-20 text-sand/70 animate-float cursor-pointer hover:scale-125 transition-transform" 
-                onClick={() => navigate('/workshops')}
-                style={{ animationDelay: '1s' }}
-              />
-              <Bee 
-                className="absolute top-1/2 left-10 -translate-y-1/2 w-22 h-22 text-accent/70 animate-float cursor-pointer hover:scale-125 transition-transform" 
-                onClick={() => navigate('/workshops')}
-                style={{ animationDelay: '0.3s' }}
-              />
-              <Mushroom 
-                className="absolute top-20 right-20 w-20 h-20 text-sage/70 animate-float cursor-pointer hover:scale-125 transition-transform" 
-                onClick={() => navigate('/workshops')}
-                style={{ animationDelay: '0.7s' }}
-              />
-              <Snail 
-                className="absolute bottom-20 left-20 w-18 h-18 text-earth/60 animate-float cursor-pointer hover:scale-125 transition-transform" 
-                onClick={() => navigate('/workshops')}
-                style={{ animationDelay: '0.9s' }}
-              />
             </div>
           </div>
         </div>
@@ -171,20 +129,12 @@ const Index = () => {
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="aspect-square bg-sage/20 rounded-3xl flex items-center justify-center">
-                    <Flower className="w-20 h-20 text-sage animate-float" />
-                  </div>
-                  <div className="aspect-[4/5] bg-earth/20 rounded-3xl flex items-center justify-center">
-                    <LeafBranch className="w-24 h-24 text-earth animate-float" style={{ animationDelay: '0.5s' }} />
-                  </div>
+                  <div className="aspect-square bg-sage/20 rounded-3xl" />
+                  <div className="aspect-[4/5] bg-earth/20 rounded-3xl" />
                 </div>
                 <div className="space-y-4 pt-8">
-                  <div className="aspect-[4/5] bg-accent/20 rounded-3xl flex items-center justify-center">
-                    <Bee className="w-20 h-20 text-accent animate-float" style={{ animationDelay: '0.3s' }} />
-                  </div>
-                  <div className="aspect-square bg-sage-dark/20 rounded-3xl flex items-center justify-center">
-                    <Mushroom className="w-20 h-20 text-sage-dark animate-float" style={{ animationDelay: '0.7s' }} />
-                  </div>
+                  <div className="aspect-[4/5] bg-accent/20 rounded-3xl" />
+                  <div className="aspect-square bg-sage-dark/20 rounded-3xl" />
                 </div>
               </div>
             </div>

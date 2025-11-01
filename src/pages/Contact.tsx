@@ -17,7 +17,7 @@ const Contact = () => {
     // Form validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Please fill in all required fields",
+        title: "Veuillez remplir tous les champs requis",
         variant: "destructive",
       });
       return;
@@ -25,8 +25,8 @@ const Contact = () => {
 
     // Here you would typically send the form data to a backend
     toast({
-      title: "Message sent!",
-      description: "We'll get back to you soon.",
+      title: "Message envoyé !",
+      description: "Nous vous répondrons bientôt.",
     });
 
     // Reset form
@@ -53,20 +53,20 @@ const Contact = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="font-serif text-4xl md:text-6xl font-light mb-6 text-foreground">
-                Get in Touch
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-charcoal">
+                Nous contacter
               </h1>
-              <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
-                Whether you're interested in booking a workshop, organizing a private event,
-                or simply want to learn more about our botanical offerings, we'd love to hear from you.
+              <p className="text-lg text-charcoal/80 leading-relaxed">
+                Que vous souhaitiez réserver un atelier, organiser un événement privé,
+                ou simplement en savoir plus sur nos offres botaniques, nous serions ravis d'échanger avec vous.
               </p>
             </div>
 
-            <div className="bg-card rounded-lg shadow-lg p-8 md:p-12">
+            <div className="bg-sand rounded-lg p-8 md:p-12">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block font-sans text-sm uppercase tracking-wider mb-2 text-foreground">
-                    Name *
+                  <label htmlFor="name" className="block text-sm uppercase tracking-wider mb-2 text-charcoal font-semibold">
+                    Nom *
                   </label>
                   <input
                     type="text"
@@ -75,12 +75,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    className="w-full px-4 py-3 bg-off-white border border-sage/30 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-sage transition-all"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block font-sans text-sm uppercase tracking-wider mb-2 text-foreground">
+                  <label htmlFor="email" className="block text-sm uppercase tracking-wider mb-2 text-charcoal font-semibold">
                     Email *
                   </label>
                   <input
@@ -90,13 +90,13 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    className="w-full px-4 py-3 bg-off-white border border-sage/30 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-sage transition-all"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block font-sans text-sm uppercase tracking-wider mb-2 text-foreground">
-                    Subject
+                  <label htmlFor="subject" className="block text-sm uppercase tracking-wider mb-2 text-charcoal font-semibold">
+                    Sujet
                   </label>
                   <input
                     type="text"
@@ -104,12 +104,12 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    className="w-full px-4 py-3 bg-off-white border border-sage/30 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-sage transition-all"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block font-sans text-sm uppercase tracking-wider mb-2 text-foreground">
+                  <label htmlFor="message" className="block text-sm uppercase tracking-wider mb-2 text-charcoal font-semibold">
                     Message *
                   </label>
                   <textarea
@@ -119,34 +119,34 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none"
+                    className="w-full px-4 py-3 bg-off-white border border-sage/30 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-sage transition-all resize-none"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-4 bg-primary text-primary-foreground font-sans text-sm uppercase tracking-wider hover:bg-primary/90 transition-colors rounded-full"
+                  className="w-full px-6 py-4 bg-sage hover:bg-sage-dark text-off-white font-semibold text-sm uppercase tracking-wider transition-colors rounded-full"
                 >
-                  Send Message
+                  Envoyer le message
                 </button>
               </form>
             </div>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="text-center md:text-left">
-                <h3 className="font-sans text-sm uppercase tracking-wider mb-2 text-foreground">Email</h3>
+                <h3 className="text-sm uppercase tracking-wider mb-2 text-charcoal font-semibold">Email</h3>
                 <a
                   href="mailto:contact@botaniqueludique.com"
-                  className="font-sans text-primary hover:text-primary/80 transition-colors"
+                  className="text-sage hover:text-sage-dark transition-colors"
                 >
                   contact@botaniqueludique.com
                 </a>
               </div>
 
               <div className="text-center md:text-left">
-                <h3 className="font-sans text-sm uppercase tracking-wider mb-2 text-foreground">Location</h3>
-                <p className="font-sans text-muted-foreground">
-                  Paris & surrounding regions
+                <h3 className="text-sm uppercase tracking-wider mb-2 text-charcoal font-semibold">Localisation</h3>
+                <p className="text-charcoal/80">
+                  Paris et régions environnantes
                 </p>
               </div>
             </div>

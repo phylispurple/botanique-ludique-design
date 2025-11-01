@@ -97,10 +97,10 @@ const Workshops = () => {
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-            <h1 className="font-serif text-4xl md:text-6xl font-light mb-6 text-foreground">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-charcoal">
               Ateliers
             </h1>
-            <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-charcoal/80 leading-relaxed">
               Expériences botaniques immersives pour particuliers et groupes. Chaque atelier est conçu pour vous reconnecter avec la nature à travers la créativité manuelle et la pratique consciente.
             </p>
           </div>
@@ -123,16 +123,16 @@ const Workshops = () => {
                 </div>
 
                 <div className={`space-y-4 ${index % 2 === 1 ? "md:order-1" : ""}`}>
-                  <div className="inline-block px-4 py-1 bg-primary/10 text-primary font-sans text-xs uppercase tracking-wider rounded-full animate-fade-in">
+                  <div className="inline-block px-4 py-1 bg-sage/20 text-sage-dark text-xs uppercase tracking-wider rounded-full font-semibold">
                     {workshop.duration}
                   </div>
-                  <h2 className="font-serif text-3xl md:text-4xl font-light text-foreground">
+                  <h2 className="text-3xl md:text-4xl font-bold text-charcoal">
                     {workshop.title}
                   </h2>
-                  <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-lg text-charcoal/80 leading-relaxed">
                     {workshop.description}
                   </p>
-                  <button className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground font-sans text-sm uppercase tracking-wider hover:bg-primary/90 transition-all duration-300 rounded-full hover:scale-105">
+                  <button className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full">
                     Réserver cet atelier
                   </button>
                 </div>
@@ -151,10 +151,10 @@ const Workshops = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-transparent"></div>
               <div className="absolute inset-0 flex items-end">
                 <div className="p-8 md:p-12 w-full">
-                  <h2 className="font-serif text-3xl md:text-5xl font-light mb-4 text-white">
+                  <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
                     Formations Éducatives
                   </h2>
-                  <p className="font-sans text-base md:text-lg text-white/90 leading-relaxed max-w-3xl">
+                  <p className="text-lg text-white/90 leading-relaxed max-w-3xl">
                     Interventions auprès des lycées, collèges et entreprises
                   </p>
                 </div>
@@ -163,62 +163,62 @@ const Workshops = () => {
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <h3 className="font-serif text-2xl md:text-3xl font-light text-foreground">
+                <h3 className="text-2xl md:text-3xl font-bold text-charcoal">
                   Pour les établissements scolaires
                 </h3>
-                <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-charcoal/80 leading-relaxed">
                   Des interventions pédagogiques qui explorent la relation entre l'humain et le végétal. À travers des ateliers pratiques et des discussions, nous abordons l'importance des espaces verts dans notre société moderne, leur symbolique et leur rôle dans notre bien-être collectif.
                 </p>
-                <ul className="space-y-3 font-sans text-muted-foreground">
+                <ul className="space-y-3 text-charcoal/80">
                   <li className="flex items-start">
-                    <span className="text-primary mr-3 mt-1">•</span>
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
                     <span>Sensibilisation à la biodiversité urbaine</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary mr-3 mt-1">•</span>
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
                     <span>L'ethnobotanique : plantes et cultures humaines</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary mr-3 mt-1">•</span>
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
                     <span>Reconnexion sensorielle avec la nature</span>
                   </li>
                 </ul>
               </div>
 
               <div className="space-y-6">
-                <h3 className="font-serif text-2xl md:text-3xl font-light text-foreground">
+                <h3 className="text-2xl md:text-3xl font-bold text-charcoal">
                   Pour les entreprises
                 </h3>
-                <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-charcoal/80 leading-relaxed">
                   Des formations qui questionnent notre regard sur le végétal en milieu professionnel. Comment réintégrer la nature dans nos espaces de travail ? Quelle place accorder aux plantes dans notre quotidien ? Des sessions qui allient réflexion philosophique et mise en pratique concrète.
                 </p>
-                <ul className="space-y-3 font-sans text-muted-foreground">
+                <ul className="space-y-3 text-charcoal/80">
                   <li className="flex items-start">
-                    <span className="text-primary mr-3 mt-1">•</span>
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
                     <span>Végétalisation des espaces de travail</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary mr-3 mt-1">•</span>
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
                     <span>Team-building autour du jardinage collectif</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary mr-3 mt-1">•</span>
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
                     <span>Conférences sur l'écologie et le vivant</span>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="mt-12 bg-card rounded-lg p-8 md:p-12 text-center shadow-lg">
-              <h4 className="font-serif text-xl md:text-2xl font-light mb-4 text-foreground">
+            <div className="mt-12 bg-sand rounded-lg p-8 md:p-12 text-center">
+              <h4 className="text-xl md:text-2xl font-bold mb-4 text-charcoal">
                 Repenser notre lien au végétal
               </h4>
-              <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed mb-6 max-w-3xl mx-auto">
+              <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-3xl mx-auto">
                 Dans une société où la nature est souvent reléguée à l'arrière-plan, ces formations invitent à questionner la place des plantes dans notre vie moderne. Comment les espaces verts façonnent-ils notre santé mentale, notre créativité et notre rapport au temps ? Ensemble, explorons les dimensions symboliques, écologiques et sociales du végétal.
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-sans text-sm uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-full hover:scale-105"
+                className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
               >
                 Demander une formation
               </a>
@@ -226,16 +226,16 @@ const Workshops = () => {
           </div>
 
           {/* Private & Corporate Section */}
-          <div className="mt-20 bg-card rounded-lg p-8 md:p-12 shadow-lg text-center animate-fade-in">
-            <h3 className="font-serif text-2xl md:text-3xl font-light mb-4 text-foreground">
+          <div className="mt-20 bg-sand rounded-lg p-8 md:p-12 text-center animate-fade-in">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-charcoal">
               Ateliers Privés & Entreprises
             </h3>
-            <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed mb-6 max-w-2xl mx-auto">
+            <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-2xl mx-auto">
               Vous recherchez une expérience unique de team-building ou un événement privé ? Nous proposons des ateliers sur mesure pour groupes, entreprises et occasions spéciales.
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-sans text-sm uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-full hover:scale-105"
+              className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
             >
               Nous contacter
             </a>

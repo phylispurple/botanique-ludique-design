@@ -10,8 +10,8 @@ const About = () => {
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
-            <h1 className="font-serif text-4xl md:text-6xl font-light mb-16 text-center text-foreground">
-              About Vanessa
+            <h1 className="text-5xl md:text-7xl font-bold mb-16 text-center text-charcoal">
+              À propos de Vanessa
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center mb-20">
@@ -24,41 +24,41 @@ const About = () => {
               </div>
 
               <div className="space-y-6">
-                <h2 className="font-serif text-3xl md:text-4xl font-light text-foreground">
-                  From Ethnobotany to Creative Ritual
+                <h2 className="text-3xl md:text-4xl font-bold text-charcoal">
+                  De l'ethnobotanique au rituel créatif
                 </h2>
-                <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Vanessa Charlery is an ethnobotanist and photographer who bridges the worlds of
-                  science and art. Her journey began with academic research in plant-human relationships,
-                  exploring how cultures around the world interact with and understand the botanical realm.
+                <p className="text-lg text-charcoal/80 leading-relaxed">
+                  Vanessa Charlery est ethnobotaniste et photographe, créant des ponts entre science et art. 
+                  Son parcours a débuté par la recherche académique sur les relations plantes-humains, 
+                  explorant comment les cultures du monde entier interagissent avec le règne végétal.
                 </p>
-                <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Through her lens as a photographer, she discovered the poetry hidden in leaves, roots,
-                  and flowers — the tactile beauty that academic study alone couldn't capture.
+                <p className="text-lg text-charcoal/80 leading-relaxed">
+                  À travers son objectif de photographe, elle a découvert la poésie cachée dans les feuilles, 
+                  les racines et les fleurs — une beauté tactile que l'étude académique seule ne pouvait capturer.
                 </p>
-                <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
-                  This led to the creation of Botanique Ludique: a space where knowledge meets creativity,
-                  where ritual meets play, and where anyone can rediscover their connection to the plant world.
+                <p className="text-lg text-charcoal/80 leading-relaxed">
+                  Cela a mené à la création de Botanique Ludique : un espace où le savoir rencontre la créativité, 
+                  où le rituel rencontre le jeu, et où chacun peut redécouvrir son lien avec le monde végétal.
                 </p>
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-8 md:p-12 shadow-lg">
-              <h3 className="font-serif text-2xl md:text-3xl font-light mb-6 text-foreground text-center">
-                The Philosophy
+            <div className="bg-sand rounded-lg p-8 md:p-12">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-charcoal text-center">
+                La philosophie
               </h3>
               <div className="max-w-3xl mx-auto space-y-4 text-center">
-                <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Plants have always been our teachers, healers, and companions. In our fast-paced modern world,
-                  we've lost touch with this ancient relationship.
+                <p className="text-lg text-charcoal/80 leading-relaxed">
+                  Les plantes ont toujours été nos enseignantes, nos guérisseuses et nos compagnes. 
+                  Dans notre monde moderne rapide, nous avons perdu le contact avec cette relation ancestrale.
                 </p>
-                <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Through hands-on workshops that combine traditional techniques with contemporary creativity,
-                  we create moments of slowness, observation, and connection.
+                <p className="text-lg text-charcoal/80 leading-relaxed">
+                  À travers des ateliers pratiques qui combinent techniques traditionnelles et créativité contemporaine, 
+                  nous créons des moments de lenteur, d'observation et de connexion.
                 </p>
-                <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed italic">
-                  "Every workshop is an invitation to pause, to create, and to remember that we are part of nature,
-                  not separate from it."
+                <p className="text-lg text-charcoal/80 leading-relaxed italic">
+                  "Chaque atelier est une invitation à faire une pause, à créer, et à se rappeler que nous faisons partie de la nature, 
+                  non séparés d'elle."
                 </p>
               </div>
             </div>
