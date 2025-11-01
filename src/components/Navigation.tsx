@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Leaf } from "lucide-react";
 import { useState } from "react";
 
 const Navigation = () => {
@@ -19,8 +19,19 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 md:px-6 py-4 md:py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-serif text-xl md:text-2xl font-light tracking-wide text-foreground hover:text-primary transition-colors">
-            Botanique Ludique
+          <Link to="/" className="flex items-center gap-2 group">
+            <Leaf 
+              className="w-6 h-6 md:w-7 md:h-7 transition-all duration-300 group-hover:rotate-12" 
+              style={{ color: '#8B9C6B', strokeWidth: 1.5 }}
+            />
+            <div className="flex flex-col leading-none animate-fade-in">
+              <span className="font-serif text-base md:text-lg font-light tracking-wider" style={{ color: '#5D653A' }}>
+                Botanique
+              </span>
+              <span className="font-serif text-base md:text-lg font-light tracking-wider" style={{ color: '#5D653A' }}>
+                Ludique
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

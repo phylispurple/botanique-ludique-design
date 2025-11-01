@@ -22,23 +22,23 @@ const Index = () => {
       
       {/* Hero Section - Centered Minimal Design */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ backgroundColor: '#5D653A', paddingTop: '8%', paddingBottom: '10%' }}>
-        {/* Decorative bubbles - minimal and elegant */}
-        <div className="absolute top-20 right-[15%] w-24 h-24 rounded-full bg-[#F7F7EB] opacity-10 animate-fade-in" style={{ animationDelay: '0.3s' }} />
-        <div className="absolute bottom-32 left-[10%] w-32 h-32 rounded-full bg-[#F7F7EB] opacity-8 animate-fade-in" style={{ animationDelay: '0.5s' }} />
-        <div className="absolute top-1/3 right-[25%] w-16 h-16 rounded-full bg-[#F7F7EB] opacity-12 animate-fade-in" style={{ animationDelay: '0.7s' }} />
-        <div className="absolute bottom-1/4 right-[35%] w-20 h-20 rounded-full bg-[#F7F7EB] opacity-10 animate-fade-in" style={{ animationDelay: '0.9s' }} />
+        {/* Decorative bubbles - soft green tones */}
+        <div className="absolute top-20 right-[15%] w-24 h-24 rounded-full bg-[#CAD2B0] opacity-20 animate-fade-in" style={{ animationDelay: '0.3s' }} />
+        <div className="absolute bottom-32 left-[10%] w-32 h-32 rounded-full bg-[#9EB388] opacity-15 animate-fade-in" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute top-1/3 right-[25%] w-16 h-16 rounded-full bg-[#E2E7D1] opacity-25 animate-fade-in" style={{ animationDelay: '0.7s' }} />
+        <div className="absolute bottom-1/4 right-[35%] w-20 h-20 rounded-full bg-[#CAD2B0] opacity-18 animate-fade-in" style={{ animationDelay: '0.9s' }} />
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center text-center space-y-6 animate-fade-in">
-            {/* Main Title - Strong and Centered */}
-            <div className="space-y-2">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight" style={{ color: '#F7F7EB' }}>
-                LES ATELIERS
+            {/* Main Title - Elegant and Centered */}
+            <div className="space-y-3">
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-wide" style={{ color: '#F7F7EB' }}>
+                Les Ateliers
               </h1>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight" style={{ color: '#F7F7EB', opacity: 0.95 }}>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-wide" style={{ color: '#DDE2D0', opacity: 0.95 }}>
                 qui font vivre
               </h2>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight" style={{ color: '#F7F7EB', opacity: 0.95 }}>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-wide" style={{ color: '#DDE2D0', opacity: 0.95 }}>
                 la nature.
               </h2>
             </div>
