@@ -57,10 +57,10 @@ const Contact = () => {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-20">
               <Leaf className="w-16 h-16 mx-auto mb-4" style={{ color: '#A7B795', strokeWidth: 1.5 }} />
-              <h1 className="page-title text-5xl md:text-7xl mb-6 text-charcoal">
+              <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
                 Contact
               </h1>
-              <p className="text-lg italic leading-relaxed" style={{ color: '#A7B795' }}>
+              <p className="subtitle-italic text-lg leading-relaxed">
                 Nous serions ravis de semer un projet avec vous.
               </p>
               <p className="text-base text-charcoal/80 leading-relaxed mt-4">
@@ -159,9 +159,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
               <div className="text-center md:text-left">
-                <h3 className="text-sm uppercase tracking-wider mb-2 text-charcoal font-semibold">Email</h3>
+                <h3 className="text-sm uppercase tracking-wider mb-2 font-semibold" style={{ fontFamily: 'Fraunces, serif', color: '#3D3D2E' }}>Email</h3>
                 <a
                   href="mailto:botaniqueludique@gmail.com"
                   className="text-sage hover:text-sage-dark transition-colors"
@@ -171,7 +171,7 @@ const Contact = () => {
               </div>
 
               <div className="text-center md:text-left">
-                <h3 className="text-sm uppercase tracking-wider mb-2 text-charcoal font-semibold">Localisation</h3>
+                <h3 className="text-sm uppercase tracking-wider mb-2 font-semibold" style={{ fontFamily: 'Fraunces, serif', color: '#3D3D2E' }}>Localisation</h3>
                 <p className="text-charcoal/80">
                   Paris et régions environnantes
                 </p>

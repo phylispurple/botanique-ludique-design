@@ -112,10 +112,10 @@ const Workshops = () => {
       <main className="pt-32 pb-20" style={{ backgroundColor: '#F7F7EB' }}>
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center mb-20 animate-fade-in">
-            <h1 className="page-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 text-charcoal" style={{ fontWeight: 500, lineHeight: '1.2' }}>
+            <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
               Ateliers
             </h1>
-            <p className="text-lg italic mb-6" style={{ color: '#A7B795' }}>
+            <p className="subtitle-italic text-lg mb-6">
               Des expériences botaniques pour éveiller vos sens.
             </p>
             <p className="text-base text-charcoal/80 leading-relaxed">
@@ -147,7 +147,7 @@ const Workshops = () => {
                       {workshop.duration}
                     </div>
                   </div>
-                  <h2 className="text-3xl md:text-4xl text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
+                  <h2 className="text-3xl md:text-4xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
                     {workshop.title}
                   </h2>
                   <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -172,7 +172,7 @@ const Workshops = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-transparent"></div>
               <div className="absolute inset-0 flex items-end">
                 <div className="p-8 md:p-12 w-full">
-                  <h2 className="text-3xl md:text-5xl text-white" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
+                  <h2 className="text-3xl md:text-5xl text-white" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500 }}>
                     Formations Éducatives
                   </h2>
                   <p className="text-lg text-white/90 leading-relaxed max-w-3xl">
@@ -183,8 +183,8 @@ const Workshops = () => {
             </div>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div className="space-y-6">
-                <h3 className="text-2xl md:text-3xl text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
+              <div className="space-y-6 animate-fade-in">
+                <h3 className="text-2xl md:text-3xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
                   Pour les établissements scolaires
                 </h3>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -206,8 +206,8 @@ const Workshops = () => {
                 </ul>
               </div>
 
-              <div className="space-y-6">
-                <h3 className="text-2xl md:text-3xl text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
+              <div className="space-y-6 animate-fade-in">
+                <h3 className="text-2xl md:text-3xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
                   Pour les entreprises
                 </h3>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -230,8 +230,8 @@ const Workshops = () => {
               </div>
             </div>
 
-            <div className="mt-12 bg-sand rounded-lg p-8 md:p-12 text-center">
-              <h4 className="text-xl md:text-2xl mb-4 text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
+            <div className="mt-12 bg-sand rounded-lg p-8 md:p-12 text-center animate-fade-in">
+              <h4 className="text-xl md:text-2xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
                 Repenser notre lien au végétal
               </h4>
               <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-3xl mx-auto">
@@ -249,7 +249,7 @@ const Workshops = () => {
           {/* Private & Corporate Section */}
           <div className="mt-20 rounded-lg p-8 md:p-12 text-center animate-fade-in" style={{ backgroundColor: '#F7F7EB' }}>
             <Leaf size={40} className="mx-auto mb-6" style={{ color: '#A7B795' }} />
-            <h3 className="text-2xl md:text-3xl mb-4 text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
+            <h3 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
               Ateliers de groupe / entreprises
             </h3>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-2xl mx-auto">

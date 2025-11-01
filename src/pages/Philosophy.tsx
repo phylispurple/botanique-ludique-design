@@ -12,14 +12,14 @@ const Philosophy = () => {
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <h1 className="page-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-20 text-center text-charcoal" style={{ fontWeight: 500, lineHeight: '1.2' }}>
+            <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-20 text-center">
               Philosophie
             </h1>
 
             <div className="prose prose-lg max-w-none">
-              <div className="mb-16">
+              <div className="mb-16 animate-fade-in">
                 <Leaf size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
-                <h2 className="text-3xl md:text-4xl mb-6 text-sage-dark text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
+                <h2 className="text-3xl md:text-4xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
                   Connexion
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
@@ -29,9 +29,9 @@ const Philosophy = () => {
                 <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
               </div>
 
-              <div className="mb-16">
+              <div className="mb-16 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <Sprout size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
-                <h2 className="text-3xl md:text-4xl mb-6 text-sage-dark text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
+                <h2 className="text-3xl md:text-4xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
                   Croissance
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
@@ -41,9 +41,9 @@ const Philosophy = () => {
                 <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
               </div>
 
-              <div className="mb-16">
+              <div className="mb-16 animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <Sparkles size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
-                <h2 className="text-3xl md:text-4xl mb-6 text-sage-dark text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
+                <h2 className="text-3xl md:text-4xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
                   Rituel
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
@@ -64,8 +64,8 @@ const Philosophy = () => {
                 </blockquote>
               </div>
 
-              <div className="mt-16 text-center">
-                <h2 className="text-3xl md:text-4xl mb-6 text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
+              <div className="mt-16 text-center animate-fade-in">
+                <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
                   Notre approche
                 </h2>
                 <div className="space-y-6 max-w-2xl mx-auto">

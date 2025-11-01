@@ -12,10 +12,10 @@ const About = () => {
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
-            <h1 className="page-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 text-center text-charcoal" style={{ fontWeight: 500, lineHeight: '1.2' }}>
+            <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6 text-center">
               À propos de Vanessa
             </h1>
-            <p className="text-lg text-center italic mb-16" style={{ color: '#A7B795' }}>
+            <p className="subtitle-italic text-lg text-center mb-16">
               Entre science et poésie, une rencontre avec le vivant.
             </p>
 
@@ -29,8 +29,8 @@ const About = () => {
                 />
               </div>
 
-              <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
+              <div className="space-y-6 animate-fade-in">
+                <h2 className="text-3xl md:text-4xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
                   De l'ethnobotanique au rituel créatif
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -49,8 +49,8 @@ const About = () => {
               </div>
             </div>
 
-            <div className="bg-sand rounded-lg p-8 md:p-12">
-              <h3 className="text-2xl md:text-3xl mb-6 text-charcoal text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
+            <div className="bg-sand rounded-lg p-8 md:p-12 animate-fade-in">
+              <h3 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}>
                 La philosophie
               </h3>
               <div className="max-w-3xl mx-auto space-y-4 text-center">

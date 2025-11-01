@@ -131,7 +131,7 @@ All colors MUST be HSL.
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    font-family: 'Fraunces', serif;
   }
 }
 
@@ -159,8 +159,18 @@ All colors MUST be HSL.
   
   .page-title {
     font-family: 'Fraunces', serif;
-    font-weight: 600;
+    font-weight: 500;
+    color: #3D3D2E;
+    line-height: 1.2;
     animation: fade-up 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .subtitle-italic {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: #A7B795;
+    animation: fade-up 0.8s ease-out forwards;
     opacity: 0;
   }
   
