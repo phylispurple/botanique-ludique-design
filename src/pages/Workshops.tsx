@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles } from "lucide-react";
 import kokedamaImage from "@/assets/workshop-kokedama.jpg";
 import dyeingImage from "@/assets/workshop-dyeing.jpg";
 import terrariumImage from "@/assets/workshop-terrarium.jpg";
@@ -20,72 +21,84 @@ const workshops = [
     description: "Découvrez l'art japonais du jardinage en boules de mousse. Créez vos propres sculptures végétales suspendues en alliant techniques traditionnelles et design contemporain.",
     duration: "2h30",
     image: kokedamaImage,
+    icon: Sprout,
   },
   {
     title: "Teinture Végétale",
     description: "Explorez l'alchimie de la teinture naturelle. Extrayez des pigments végétaux pour créer des textiles durables aux tons terreux et authentiques.",
     duration: "3h",
     image: dyeingImage,
+    icon: Palette,
   },
   {
     title: "Terrariums",
     description: "Composez des écosystèmes miniatures sous verre. Créez des paysages en couches avec mousses, pierres et plantes délicates — des mondes minuscules qui prospèrent avec peu d'entretien.",
     duration: "2h",
     image: terrariumImage,
+    icon: Sparkles,
   },
   {
     title: "Fresques Végétales",
     description: "Créez des murales botaniques avec fleurs pressées, feuilles et matériaux naturels. Un processus méditatif qui transforme les plantes en œuvres d'art vivantes.",
     duration: "4h",
     image: muralImage,
+    icon: Leaf,
   },
   {
     title: "Bombes de Graines",
     description: "Fabriquez des bombes de graines artisanales avec argile, compost et graines sauvages. Une action de guérilla verte pour reverdir nos espaces urbains.",
     duration: "1h30",
     image: seedBombsImage,
+    icon: Sprout,
   },
   {
     title: "Couronnes de Fleurs",
     description: "Tressez des couronnes végétales avec fleurs sauvages et feuillages de saison. Un savoir-faire ancestral pour célébrer la beauté éphémère de la nature.",
     duration: "2h",
     image: flowerCrownImage,
+    icon: Flower2,
   },
   {
     title: "Vannerie",
     description: "Apprenez l'art du tressage avec osier et fibres naturelles. Créez des paniers fonctionnels et esthétiques en reconnectant avec un artisanat millénaire.",
     duration: "3h30",
     image: basketryImage,
+    icon: Leaf,
   },
   {
     title: "Photographie Végétale",
     description: "Explorez le cyanotype et les techniques photographiques ancestrales. Imprimez l'empreinte des plantes sur papier dans des nuances de bleu intemporel.",
     duration: "2h30",
     image: photoVegetalImage,
+    icon: Sparkles,
   },
   {
     title: "Herbier",
     description: "Constituez votre collection botanique personnelle. Apprenez à sécher, presser et conserver les plantes tout en développant votre regard naturaliste.",
     duration: "2h",
     image: herbariumImage,
+    icon: Leaf,
   },
   {
     title: "Jardin Partagé",
     description: "Participez à la création d'un espace collectif. Du design à la plantation, cultivez ensemble la biodiversité et le lien social à travers le jardinage.",
     duration: "½ journée",
     image: sharedGardenImage,
+    icon: Sprout,
   },
   {
     title: "Sachets Senteur & Pots-Pourris",
     description: "Composez vos propres mélanges aromatiques avec fleurs séchées, herbes et épices. Créez des objets parfumés pour la maison ancrés dans la tradition.",
     duration: "1h30",
     image: sachetsImage,
+    icon: Flower2,
   },
   {
     title: "Huiles Essentielles",
     description: "Initiez-vous à l'extraction et l'usage des essences végétales. Découvrez les propriétés thérapeutiques des plantes et créez vos propres synergies aromatiques.",
     duration: "3h",
     image: essentialOilsImage,
+    icon: Droplets,
   },
 ];
 
@@ -94,13 +107,16 @@ const Workshops = () => {
     <div className="min-h-screen">
       <Navigation />
 
-      <main className="pt-24 pb-20">
+      <main className="pt-24 pb-20" style={{ backgroundColor: '#EDEFE5' }}>
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-charcoal">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-charcoal">
               Ateliers
             </h1>
-            <p className="text-lg text-charcoal/80 leading-relaxed">
+            <p className="text-lg italic mb-6" style={{ color: '#A7B795' }}>
+              Des expériences botaniques pour éveiller vos sens.
+            </p>
+            <p className="text-base text-charcoal/80 leading-relaxed">
               Expériences botaniques immersives pour particuliers et groupes. Chaque atelier est conçu pour vous reconnecter avec la nature à travers la créativité manuelle et la pratique consciente.
             </p>
           </div>
@@ -123,8 +139,11 @@ const Workshops = () => {
                 </div>
 
                 <div className={`space-y-4 ${index % 2 === 1 ? "md:order-1" : ""}`}>
-                  <div className="inline-block px-4 py-1 bg-sage/20 text-sage-dark text-xs uppercase tracking-wider rounded-full font-semibold">
-                    {workshop.duration}
+                  <div className="flex items-center gap-3 mb-2">
+                    <workshop.icon size={24} style={{ color: '#A7B795' }} />
+                    <div className="inline-block px-4 py-1 bg-sage/20 text-sage-dark text-xs uppercase tracking-wider rounded-full font-semibold">
+                      {workshop.duration}
+                    </div>
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold text-charcoal">
                     {workshop.title}
@@ -226,16 +245,20 @@ const Workshops = () => {
           </div>
 
           {/* Private & Corporate Section */}
-          <div className="mt-20 bg-sand rounded-lg p-8 md:p-12 text-center animate-fade-in">
+          <div className="mt-20 rounded-lg p-8 md:p-12 text-center animate-fade-in" style={{ backgroundColor: '#F7F7EB' }}>
+            <Leaf size={40} className="mx-auto mb-6" style={{ color: '#A7B795' }} />
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-charcoal">
-              Ateliers Privés & Entreprises
+              Ateliers de groupe / entreprises
             </h3>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-2xl mx-auto">
               Vous recherchez une expérience unique de team-building ou un événement privé ? Nous proposons des ateliers sur mesure pour groupes, entreprises et occasions spéciales.
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+              className="inline-flex items-center px-6 py-3 hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+              style={{ backgroundColor: '#A7B795' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5D653A'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#A7B795'}
             >
               Nous contacter
             </a>

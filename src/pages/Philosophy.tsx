@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Leaf, Sprout, Sparkles } from "lucide-react";
 
 const Philosophy = () => {
   return (
@@ -15,17 +16,19 @@ const Philosophy = () => {
 
             <div className="prose prose-lg max-w-none">
               <div className="mb-16">
+                <Leaf size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-sage-dark text-center">
                   Connexion
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
                   Nous croyons que se reconnecter aux plantes, c'est aussi se reconnecter à soi.
-                  Dans nos ateliers, vous apprendrez à ralentir, à observer et à entrer en relation avec le monde végétal de manière sensible et consciente.
+                  Dans nos ateliers, vous apprendrez à <em>ralentir</em>, à <em>observer</em> et à <em>écouter le vivant</em> de manière sensible et consciente.
                 </p>
                 <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
               </div>
 
               <div className="mb-16">
+                <Sprout size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-sage-dark text-center">
                   Croissance
                 </h2>
@@ -37,6 +40,7 @@ const Philosophy = () => {
               </div>
 
               <div className="mb-16">
+                <Sparkles size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-sage-dark text-center">
                   Rituel
                 </h2>
@@ -73,6 +77,12 @@ const Philosophy = () => {
                     Que vous soyez curieux débutant ou passionné du monde végétal, nos ateliers offrent un espace d'exploration, d'apprentissage et de lien.
                   </p>
                 </div>
+              </div>
+
+              <div className="mt-16 p-8 rounded-lg text-center" style={{ backgroundColor: '#F7F7EB' }}>
+                <p className="text-xl italic leading-relaxed" style={{ color: '#5D653A' }}>
+                  Nos ateliers sont une invitation à <em>ralentir</em>, <em>ressentir</em> et créer avec la nature.
+                </p>
               </div>
             </div>
           </div>

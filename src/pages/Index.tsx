@@ -50,18 +50,23 @@ const Index = () => {
               autrement.
             </p>
             
+            {/* Manifesto */}
+            <p className="text-base sm:text-lg italic max-w-[600px] leading-relaxed mx-auto" style={{ color: '#E2E7D1', opacity: 0.85 }}>
+              Réapprendre à vivre avec le végétal, par le geste, la beauté et la lenteur.
+            </p>
+            
             {/* Modern Button */}
             <button 
               onClick={() => navigate('/workshops')}
               className="group mt-4 px-10 py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
               style={{ 
-                backgroundColor: '#8B9556',
+                backgroundColor: '#A7B795',
                 color: '#2D3319'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9DAB61'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#8B9556'}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5D653A'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#A7B795'}
             >
-              Ateliers ?... Go !
+              Découvrir les ateliers
               <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
             </button>
             

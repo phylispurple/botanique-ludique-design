@@ -9,12 +9,12 @@ import aboutImage from "@/assets/about-vanessa.jpg";
 
 const Gallery = () => {
   const images = [
-    { src: heroImage, alt: "Botanical close-up" },
-    { src: kokedamaImage, alt: "Kokedama creation" },
-    { src: dyeingImage, alt: "Natural dyeing process" },
-    { src: terrariumImage, alt: "Glass terrarium" },
-    { src: muralImage, alt: "Botanical mural in progress" },
-    { src: aboutImage, alt: "Portrait in nature" },
+    { src: heroImage, alt: "Botanical close-up", caption: "Beauté végétale — Botanique Ludique" },
+    { src: kokedamaImage, alt: "Kokedama creation", caption: "Kokedama — Atelier Botanique Ludique" },
+    { src: dyeingImage, alt: "Natural dyeing process", caption: "Teinture Végétale — Atelier Botanique Ludique" },
+    { src: terrariumImage, alt: "Glass terrarium", caption: "Terrarium — Atelier Botanique Ludique" },
+    { src: muralImage, alt: "Botanical mural in progress", caption: "Fresque Végétale — Atelier Botanique Ludique" },
+    { src: aboutImage, alt: "Portrait in nature", caption: "Portrait — Vanessa Charlery" },
   ];
 
   return (
@@ -37,14 +37,19 @@ const Gallery = () => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
+                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
               >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    style={{ filter: 'sepia(0.1) saturate(0.9)' }}
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-charcoal/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                  <p className="text-white text-sm italic">{image.caption}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -54,12 +59,12 @@ const Gallery = () => {
               Suivez-nous sur Instagram pour plus d'inspiration botanique
             </p>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/botanique.ludique/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white font-semibold uppercase tracking-wider transition-all rounded-full"
             >
-              @botaniqueludique
+              @botanique.ludique
             </a>
           </div>
         </div>

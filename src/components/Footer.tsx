@@ -1,52 +1,61 @@
-import { Instagram, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Instagram, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-card">
-      <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
+    <footer className="border-t" style={{ borderColor: '#E2E7D1', backgroundColor: '#F7F7EB' }}>
+      <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          <div>
-            <h3 className="font-serif text-2xl mb-4 text-foreground">Botanique Ludique</h3>
-            <p className="font-sans text-sm text-muted-foreground leading-relaxed">
-              Workshops connecting humans and plants through creativity, ritual, and play.
+          <div className="space-y-4">
+            <h3 className="font-serif text-2xl font-light" style={{ color: '#5D653A' }}>Botanique Ludique</h3>
+            <p className="text-sm leading-relaxed" style={{ color: '#5D653A', opacity: 0.7 }}>
+              Ateliers botaniques créatifs pour reconnecter l'humain au végétal.
             </p>
           </div>
 
-          <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-foreground">Connect</h4>
-            <div className="flex gap-4">
+          <div className="space-y-4">
+            <h4 className="font-sans text-sm uppercase tracking-wider" style={{ color: '#5D653A', opacity: 0.7 }}>Suivez-nous</h4>
+            <div className="flex flex-col space-y-3">
               <a
                 href="https://www.instagram.com/botanique.ludique/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Instagram"
+                className="flex items-center gap-2 transition-colors"
+                style={{ color: '#5D653A', opacity: 0.7 }}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
               >
-                <Instagram size={20} />
+                <Instagram size={18} />
+                <span className="text-sm">@botanique.ludique</span>
               </a>
               <a
                 href="mailto:botaniqueludique@gmail.com"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Email"
+                className="flex items-center gap-2 transition-colors"
+                style={{ color: '#5D653A', opacity: 0.7 }}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
               >
-                <Mail size={20} />
+                <Mail size={18} />
+                <span className="text-sm">botaniqueludique@gmail.com</span>
               </a>
             </div>
           </div>
 
-          <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-foreground">Location</h4>
-            <p className="font-sans text-sm text-muted-foreground leading-relaxed">
-              Paris & surrounding regions
-              <br />
-              Available for private workshops
-            </p>
+          <div className="space-y-4">
+            <h4 className="font-sans text-sm uppercase tracking-wider" style={{ color: '#5D653A', opacity: 0.7 }}>Localisation</h4>
+            <div className="flex items-start gap-2" style={{ color: '#5D653A', opacity: 0.7 }}>
+              <MapPin size={18} className="mt-1 flex-shrink-0" />
+              <div className="text-sm">
+                <p>Paris et régions environnantes</p>
+                <p className="mt-2 text-xs">Ateliers disponibles pour particuliers et entreprises</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border text-center">
-          <p className="font-sans text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Botanique Ludique. Founded by Vanessa Charlery.
+        <div className="mt-12 pt-8 text-center" style={{ borderTop: '1px solid #E2E7D1' }}>
+          <p className="text-sm" style={{ color: '#5D653A', opacity: 0.6 }}>
+            © Botanique Ludique 2025 | Créé avec amour et nature | <Link to="/mentions-legales" className="hover:underline">Mentions légales</Link>
           </p>
         </div>
       </div>

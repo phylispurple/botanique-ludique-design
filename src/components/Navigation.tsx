@@ -22,7 +22,7 @@ const Navigation = () => {
           <Link to="/" className="flex items-center gap-2 group">
             <Leaf 
               className="w-6 h-6 md:w-7 md:h-7 transition-all duration-300 group-hover:rotate-12" 
-              style={{ color: '#8B9C6B', strokeWidth: 1.5 }}
+              style={{ color: '#A7B795', strokeWidth: 1.5 }}
             />
             <div className="flex flex-col leading-none animate-fade-in">
               <span className="font-serif text-base md:text-lg font-light tracking-wider" style={{ color: '#5D653A' }}>

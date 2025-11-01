@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         serif: ['Cormorant Garamond', 'serif'],
         sans: ['Inter', 'sans-serif'],
+        script: ['Dancing Script', 'cursive'],
       },
       colors: {
         sage: {

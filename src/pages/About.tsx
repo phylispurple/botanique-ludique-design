@@ -10,16 +10,20 @@ const About = () => {
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-16 text-center text-charcoal">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-center text-charcoal">
               À propos de Vanessa
             </h1>
+            <p className="text-lg text-center italic mb-16" style={{ color: '#A7B795' }}>
+              Entre science et poésie, une rencontre avec le vivant.
+            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center mb-20">
               <div className="relative">
+                <div className="absolute inset-0 rounded-lg" style={{ border: '3px solid #C9D2B5', transform: 'translate(8px, 8px)' }}></div>
                 <img
                   src={aboutImage}
                   alt="Vanessa Charlery"
-                  className="w-full rounded-lg shadow-lg"
+                  className="w-full rounded-lg shadow-lg relative z-10"
                 />
               </div>
 
@@ -60,6 +64,11 @@ const About = () => {
                   "Chaque atelier est une invitation à faire une pause, à créer, et à se rappeler que nous faisons partie de la nature, 
                   non séparés d'elle."
                 </p>
+                <div className="mt-8 text-right">
+                  <p className="font-script text-3xl" style={{ color: '#5D653A' }}>
+                    Vanessa Charlery
+                  </p>
+                </div>
               </div>
             </div>
           </div>
