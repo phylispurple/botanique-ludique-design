@@ -20,70 +20,68 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section - Split Screen Design */}
-      <section className="min-h-screen bg-sage-dark flex items-center relative overflow-hidden">
-        {/* Decorative geometric shapes */}
-        <div className="absolute top-20 right-20 w-32 h-32 rounded-full bg-earth opacity-80" />
-        <div className="absolute bottom-40 left-10 w-24 h-24 rounded-full bg-accent opacity-60" />
-        <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-sand/30" style={{ borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' }} />
+      {/* Hero Section - Centered Minimal Design */}
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ backgroundColor: '#5D653A', paddingTop: '8%', paddingBottom: '10%' }}>
+        {/* Decorative bubbles - minimal and elegant */}
+        <div className="absolute top-20 right-[15%] w-24 h-24 rounded-full bg-[#F7F7EB] opacity-10 animate-fade-in" style={{ animationDelay: '0.3s' }} />
+        <div className="absolute bottom-32 left-[10%] w-32 h-32 rounded-full bg-[#F7F7EB] opacity-8 animate-fade-in" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute top-1/3 right-[25%] w-16 h-16 rounded-full bg-[#F7F7EB] opacity-12 animate-fade-in" style={{ animationDelay: '0.7s' }} />
+        <div className="absolute bottom-1/4 right-[35%] w-20 h-20 rounded-full bg-[#F7F7EB] opacity-10 animate-fade-in" style={{ animationDelay: '0.9s' }} />
         
-        <div className="container mx-auto px-4 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Text Content */}
-            <div className="space-y-8 animate-fade-up z-10 max-w-2xl mx-auto">
-              <div className="space-y-4">
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-off-white leading-none">
-                  LES ATELIERS
-                </h1>
-                <div className="flex items-center gap-4">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-sand">
-                    qui font vivre
-                  </h2>
-                  <div className="w-16 h-16 rounded-full bg-accent animate-pulse" />
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-earth" />
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-sand">
-                    la nature.
-                  </h2>
-                </div>
-              </div>
-              
-              <p className="text-xl text-sand/90 max-w-xl leading-relaxed">
-                Reconnectez-vous à la nature à travers des ateliers créatifs et sensoriels. 
-                De la création de kokedama aux teintures végétales, explorez le monde végétal 
-                autrement.
-              </p>
-              
-              <button 
-                onClick={() => navigate('/workshops')}
-                className="group relative px-10 py-5 bg-earth hover:bg-earth/90 text-off-white rounded-full text-lg font-semibold transition-all hover:scale-105 hover:shadow-2xl flex items-center gap-3"
-              >
-                Ateliers ?... Go !
-                <span className="text-2xl transition-transform group-hover:translate-x-1">→</span>
-              </button>
-              
-              {/* Workshop Tags Cloud */}
-              <div className="flex flex-wrap gap-3 pt-6">
-                {workshops.map((workshop, index) => (
-                  <Link
-                    key={workshop.name}
-                    to="/workshops"
-                    className="px-5 py-2 rounded-full text-sm font-medium bg-off-white/10 backdrop-blur-sm text-sand border border-sand/20 hover:bg-off-white/20 hover:border-sand/40 hover:-translate-y-1 transition-all duration-300"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    {workshop.name}
-                  </Link>
-                ))}
-              </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="flex flex-col items-center text-center space-y-6 animate-fade-in">
+            {/* Main Title - Strong and Centered */}
+            <div className="space-y-2">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight" style={{ color: '#F7F7EB' }}>
+                LES ATELIERS
+              </h1>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight" style={{ color: '#F7F7EB', opacity: 0.95 }}>
+                qui font vivre
+              </h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight" style={{ color: '#F7F7EB', opacity: 0.95 }}>
+                la nature.
+              </h2>
             </div>
             
-            {/* Right Side - Geometric Composition */}
-            <div className="relative animate-fade-up h-[600px]" style={{ animationDelay: '0.2s' }}>
-              {/* Geometric shapes */}
-              <div className="absolute top-1/4 right-1/4 w-32 h-32 rounded-full bg-earth/20" />
-              <div className="absolute bottom-1/3 left-1/4 w-24 h-24 bg-accent/15" style={{ borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' }} />
-              <div className="absolute top-1/3 right-1/3 w-40 h-40 rounded-full bg-sage/10" />
+            {/* Description - Centered with max-width */}
+            <p className="text-lg sm:text-xl max-w-[700px] leading-relaxed mx-auto" style={{ color: '#F7F7EB', opacity: 0.9 }}>
+              Reconnectez-vous à la nature à travers des ateliers créatifs et sensoriels. 
+              De la création de kokedama aux teintures végétales, explorez le monde végétal 
+              autrement.
+            </p>
+            
+            {/* Modern Button */}
+            <button 
+              onClick={() => navigate('/workshops')}
+              className="group mt-4 px-10 py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              style={{ 
+                backgroundColor: '#8B9556',
+                color: '#2D3319'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9DAB61'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#8B9556'}
+            >
+              Ateliers ?... Go !
+              <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
+            </button>
+            
+            {/* Workshop Tags - Centered and responsive */}
+            <div className="flex flex-wrap gap-3 justify-center pt-8 max-w-3xl">
+              {workshops.map((workshop, index) => (
+                <Link
+                  key={workshop.name}
+                  to="/workshops"
+                  className="px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-md animate-fade-in"
+                  style={{ 
+                    backgroundColor: 'rgba(247, 247, 235, 0.15)',
+                    color: '#F7F7EB',
+                    border: '1px solid rgba(247, 247, 235, 0.25)',
+                    animationDelay: `${index * 0.1}s`
+                  }}
+                >
+                  {workshop.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
