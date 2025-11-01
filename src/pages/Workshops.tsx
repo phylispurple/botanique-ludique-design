@@ -147,7 +147,7 @@ const Workshops = () => {
                       {workshop.duration}
                     </div>
                   </div>
-                  <h2 className="text-3xl md:text-4xl text-charcoal" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
+                  <h2 className="text-3xl md:text-4xl text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
                     {workshop.title}
                   </h2>
                   <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -172,7 +172,7 @@ const Workshops = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-transparent"></div>
               <div className="absolute inset-0 flex items-end">
                 <div className="p-8 md:p-12 w-full">
-                  <h2 className="text-3xl md:text-5xl text-white" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
+                  <h2 className="text-3xl md:text-5xl text-white" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
                     Formations Éducatives
                   </h2>
                   <p className="text-lg text-white/90 leading-relaxed max-w-3xl">
@@ -184,7 +184,7 @@ const Workshops = () => {
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <h3 className="text-2xl md:text-3xl text-charcoal" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
+                <h3 className="text-2xl md:text-3xl text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
                   Pour les établissements scolaires
                 </h3>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -207,7 +207,7 @@ const Workshops = () => {
               </div>
 
               <div className="space-y-6">
-                <h3 className="text-2xl md:text-3xl text-charcoal" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
+                <h3 className="text-2xl md:text-3xl text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
                   Pour les entreprises
                 </h3>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -231,7 +231,7 @@ const Workshops = () => {
             </div>
 
             <div className="mt-12 bg-sand rounded-lg p-8 md:p-12 text-center">
-              <h4 className="text-xl md:text-2xl mb-4 text-charcoal" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
+              <h4 className="text-xl md:text-2xl mb-4 text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
                 Repenser notre lien au végétal
               </h4>
               <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-3xl mx-auto">
@@ -249,7 +249,7 @@ const Workshops = () => {
           {/* Private & Corporate Section */}
           <div className="mt-20 rounded-lg p-8 md:p-12 text-center animate-fade-in" style={{ backgroundColor: '#F7F7EB' }}>
             <Leaf size={40} className="mx-auto mb-6" style={{ color: '#A7B795' }} />
-            <h3 className="text-2xl md:text-3xl mb-4 text-charcoal" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 600 }}>
+            <h3 className="text-2xl md:text-3xl mb-4 text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 600 }}>
               Ateliers de groupe / entreprises
             </h3>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-2xl mx-auto">

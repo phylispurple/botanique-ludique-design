@@ -17,25 +17,25 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4 md:px-6 py-4 md:py-6">
+      <div className="container mx-auto px-4 md:px-6 py-4 md:py-5">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2.5 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <Leaf 
-              className="w-7 h-7 md:w-8 md:h-8 transition-all duration-300 group-hover:animate-leaf-sway" 
+              className="w-8 h-8 md:w-9 md:h-9 transition-all duration-300 group-hover:animate-leaf-sway" 
               style={{ color: '#A7B795', strokeWidth: 1.5 }}
             />
             <div className="flex flex-col leading-none animate-fade-in">
-              <span className="font-serif text-lg md:text-xl font-light tracking-wider" style={{ color: '#5D653A' }}>
+              <span className="font-serif text-xl md:text-[22px] font-light tracking-wider" style={{ color: '#5D653A' }}>
                 Botanique
               </span>
-              <span className="font-serif text-lg md:text-xl font-light tracking-wider" style={{ color: '#5D653A' }}>
+              <span className="font-serif text-xl md:text-[22px] font-light tracking-wider" style={{ color: '#5D653A' }}>
                 Ludique
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8" style={{ marginLeft: '65px' }}>
+          <div className="hidden md:flex items-center gap-8" style={{ marginLeft: '55px' }}>
             {links.map((link) => (
               <Link
                 key={link.path}

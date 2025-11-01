@@ -17,6 +17,7 @@ export default {
         serif: ['Cormorant Garamond', 'serif'],
         sans: ['Inter', 'sans-serif'],
         script: ['Dancing Script', 'cursive'],
+        display: ['Fraunces', 'serif'],
       },
       colors: {
         sage: {

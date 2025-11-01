@@ -158,8 +158,8 @@ All colors MUST be HSL.
   }
   
   .page-title {
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
     animation: fade-up 0.6s ease-out forwards;
     opacity: 0;
   }

@@ -22,50 +22,52 @@ const Index = () => {
       
       {/* Hero Section - Centered Minimal Design */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ backgroundColor: '#5D653A', paddingTop: '8%', paddingBottom: '10%' }}>
-        {/* Decorative bubbles - soft green tones with drift animation */}
-        <div className="absolute top-20 right-[15%] w-24 h-24 rounded-full bg-[#CAD2B0] opacity-20 animate-drift" style={{ animationDelay: '0s' }} />
-        <div className="absolute bottom-32 left-[10%] w-32 h-32 rounded-full bg-[#9EB388] opacity-15 animate-drift-slow" style={{ animationDelay: '5s' }} />
-        <div className="absolute top-1/3 right-[25%] w-16 h-16 rounded-full bg-[#E2E7D1] opacity-25 animate-drift" style={{ animationDelay: '10s' }} />
-        <div className="absolute bottom-1/4 right-[35%] w-20 h-20 rounded-full bg-[#CAD2B0] opacity-18 animate-drift-slow" style={{ animationDelay: '15s' }} />
-        <div className="absolute top-1/2 left-[20%] w-28 h-28 rounded-full bg-[#C9D2B5] opacity-12 animate-drift" style={{ animationDelay: '20s' }} />
+        {/* Decorative bubbles - soft green tones with drift animation and varied sizes */}
+        <div className="absolute top-20 right-[15%] w-28 h-28 rounded-full bg-[#CAD2B0] opacity-22 animate-drift" style={{ animationDelay: '0s' }} />
+        <div className="absolute bottom-32 left-[10%] w-36 h-36 rounded-full bg-[#9EB388] opacity-12 animate-drift-slow" style={{ animationDelay: '5s' }} />
+        <div className="absolute top-1/3 right-[25%] w-20 h-20 rounded-full bg-[#E2E7D1] opacity-28 animate-drift" style={{ animationDelay: '10s' }} />
+        <div className="absolute bottom-1/4 right-[35%] w-16 h-16 rounded-full bg-[#CAD2B0] opacity-15 animate-drift-slow" style={{ animationDelay: '15s' }} />
+        <div className="absolute top-1/2 left-[20%] w-32 h-32 rounded-full bg-[#C9D2B5] opacity-10 animate-drift" style={{ animationDelay: '20s' }} />
+        <div className="absolute top-[15%] left-[35%] w-24 h-24 rounded-full bg-[#E2E7D1] opacity-18 animate-drift-slow" style={{ animationDelay: '12s' }} />
+        <div className="absolute bottom-[20%] right-[18%] w-20 h-20 rounded-full bg-[#9EB388] opacity-20 animate-drift" style={{ animationDelay: '8s' }} />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col items-center text-center space-y-6 animate-fade-in">
+          <div className="flex flex-col items-center text-center space-y-6 animate-fade-up">
             {/* Main Title - Elegant and Centered */}
-            <div className="space-y-3">
-              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-wide" style={{ color: '#F7F7EB' }}>
+            <div className="space-y-2" style={{ fontFamily: 'Fraunces, serif' }}>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-tight tracking-wide" style={{ color: '#F7F7EB', lineHeight: '1.2' }}>
                 Les Ateliers
               </h1>
-              <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-wide" style={{ color: '#F7F7EB', opacity: 0.95 }}>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-tight tracking-wide" style={{ color: '#F7F7EB', opacity: 0.95, lineHeight: '1.2' }}>
                 qui font vivre
               </h2>
-              <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-wide" style={{ color: '#F7F7EB', opacity: 0.95 }}>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-tight tracking-wide" style={{ color: '#F7F7EB', opacity: 0.95, lineHeight: '1.2' }}>
                 la nature.
               </h2>
             </div>
             
             {/* Description - Centered with max-width */}
-            <p className="text-lg sm:text-xl max-w-[700px] leading-relaxed mx-auto" style={{ color: '#F7F7EB', opacity: 0.9 }}>
+            <p className="text-lg sm:text-xl max-w-[700px] mx-auto pt-4" style={{ color: '#F7F7EB', opacity: 0.9, lineHeight: '1.7' }}>
               Reconnectez-vous à la nature à travers des ateliers créatifs et sensoriels. 
               De la création de kokedama aux teintures végétales, explorez le monde végétal 
               autrement.
             </p>
             
-            {/* Manifesto */}
-            <p className="text-base sm:text-lg italic max-w-[600px] leading-relaxed mx-auto" style={{ color: '#E2E7D1', opacity: 0.85 }}>
+            {/* Manifesto - moved up slightly */}
+            <p className="text-base sm:text-lg italic max-w-[600px] mx-auto -mt-1" style={{ color: '#E2E7D1', opacity: 0.85, lineHeight: '1.6', fontFamily: 'Fraunces, serif' }}>
               Réapprendre à vivre avec le végétal, par le geste, la beauté et la lenteur.
             </p>
             
-            {/* Modern Button */}
+            {/* Modern Button - improved contrast */}
             <button 
               onClick={() => navigate('/workshops')}
-              className="group mt-4 px-10 py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="group mt-6 px-10 py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
               style={{ 
-                backgroundColor: '#A7B795',
-                color: '#2D3319'
+                backgroundColor: '#C9D2B5',
+                color: '#2B2B2B'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5D653A'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#A7B795'}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#A7B795'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#C9D2B5'}
             >
               Découvrir les ateliers
               <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
