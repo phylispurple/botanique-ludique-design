@@ -146,23 +146,25 @@ const Index = () => {
       {/* Call to Action Section */}
       <section className="py-24 px-4 relative overflow-hidden" style={{ backgroundImage: `url(${heroBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container mx-auto text-center max-w-3xl space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-off-white">
+          <h2 className="text-4xl md:text-5xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
             Prêt·e à explorer le monde végétal ?
           </h2>
-          <p className="text-xl text-off-white/90">
+          <p className="text-xl" style={{ color: '#3D3D2E', opacity: 0.8 }}>
             Rejoignez-nous pour un atelier et découvrez une nouvelle façon 
             de créer avec la nature.
           </p>
           <div className="flex flex-wrap gap-4 justify-center pt-4">
             <Link 
               to="/workshops" 
-              className="px-10 py-5 bg-off-white hover:bg-sand text-charcoal rounded-full font-semibold text-lg transition-all hover:scale-105 hover:shadow-2xl"
+              className="px-10 py-5 rounded-full font-semibold text-lg transition-all hover:scale-105 hover:shadow-2xl"
+              style={{ backgroundColor: '#C9D2B5', color: '#2B2B2B' }}
             >
               Voir tous les ateliers
             </Link>
             <Link 
               to="/contact" 
-              className="px-10 py-5 bg-transparent border-2 border-off-white hover:bg-off-white/10 text-off-white rounded-full font-semibold text-lg transition-all hover:scale-105"
+              className="px-10 py-5 bg-transparent rounded-full font-semibold text-lg transition-all hover:scale-105"
+              style={{ border: '2px solid #3D3D2E', color: '#3D3D2E' }}
             >
               Nous contacter
             </Link>
