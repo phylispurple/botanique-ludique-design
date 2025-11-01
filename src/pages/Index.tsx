@@ -152,16 +152,16 @@ const Index = () => {
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
                 <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <img src="/logos/region-idf.png" alt="Région Île-de-France" className="max-h-16 w-auto object-contain" />
+                  <img src="/logos/region-idf.webp" alt="Région Île-de-France" className="max-h-16 w-auto object-contain" />
                 </div>
                 <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <img src="/logos/mjc-vesinet.png" alt="MJC du Vésinet" className="max-h-16 w-auto object-contain" />
                 </div>
                 <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <img src="/logos/jappy-senior.png" alt="Jappy Senior" className="max-h-16 w-auto object-contain" />
+                  <img src="/logos/jappy-senior.svg" alt="Happy Senior" className="max-h-16 w-auto object-contain" />
                 </div>
                 <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <img src="/logos/mjc-chatou.png" alt="MJC Chatou" className="max-h-16 w-auto object-contain" />
+                  <img src="/logos/mjc-chatou.jpeg" alt="MJC Chatou" className="max-h-16 w-auto object-contain" />
                 </div>
                 <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1">
                   <img src="/logos/publicis.png" alt="Publicis" className="max-h-16 w-auto object-contain" />
