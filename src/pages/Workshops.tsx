@@ -229,6 +229,43 @@ const Workshops = () => {
                 </ul>
               </div>
 
+              <div id="formations-professionnelles" className="space-y-6 animate-fade-in">
+                <h3 className="text-2xl md:text-3xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  Pour les formations professionnelles
+                </h3>
+                <p className="text-lg text-charcoal/80 leading-relaxed">
+                  Modules complémentaires destinés aux BTS, lycées professionnels agricoles et formations en aménagement paysager. Une approche anthropologique qui dépasse la simple technique pour questionner le <strong>statut ontologique des plantes</strong> et repenser notre relation au vivant.
+                </p>
+                <p className="text-base text-charcoal/70 leading-relaxed italic mb-4">
+                  Inspirés de mes recherches en anthropologie sur les relations humain-plante en milieu urbain (EHESS), ces modules enrichissent les cursus techniques d'une dimension réflexive essentielle.
+                </p>
+                <ul className="space-y-3 text-charcoal/80">
+                  <li className="flex items-start">
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
+                    <span><strong>Au-delà de la dichotomie nature/culture</strong> : Les plantes comme entités vivantes dotées de leur propre réalité, et non comme simples objets esthétiques ou fonctionnels</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
+                    <span><strong>Anthropologie de la nature</strong> : Comprendre les perceptions et relations entre citadins et plantes dans l'espace urbain</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
+                    <span><strong>Ethnobotanique appliquée</strong> : Le rôle des plantes dans la culture et la société, au-delà de leur fonction écologique</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
+                    <span><strong>Vision holistique du paysagisme</strong> : Intégrer les perspectives anthropologiques, écologiques et politiques dans la gestion des espaces verts</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
+                    <span><strong>Méthodologie de terrain</strong> : Observation participante, entretiens semi-structurés, analyse des interactions humain-végétal</span>
+                  </li>
+                </ul>
+                <p className="text-sm text-charcoal/60 leading-relaxed mt-4">
+                  Ces modules s'appuient sur les travaux de Philippe Descola, Bruno Latour et Tim Ingold pour enrichir les pratiques professionnelles d'une compréhension profonde des enjeux contemporains entre urbanisation et environnement.
+                </p>
+              </div>
+
               <div className="space-y-6 animate-fade-in">
                 <h3 className="text-2xl md:text-3xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   Pour les entreprises

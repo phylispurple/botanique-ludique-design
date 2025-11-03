@@ -21,6 +21,7 @@ const Navigation = () => {
     { name: "Sachets Senteur & Pots-Pourris", id: "sachets-senteur-&-pots-pourris" },
     { name: "Huiles Essentielles", id: "huiles-essentielles" },
     { name: "Scolaires", id: "formations-educatives", divider: true },
+    { name: "Formations Professionnelles", id: "formations-professionnelles" },
     { name: "Entreprises", id: "entreprises" },
   ];
 
