@@ -264,7 +264,7 @@ const Training = () => {
                   Des formations qui questionnent notre regard sur le végétal en milieu professionnel. Comment réintégrer la nature dans nos espaces de travail ? Quelle place accorder aux plantes dans notre quotidien ? Des sessions qui allient réflexion philosophique et mise en pratique concrète.
                 </p>
                 
-                <div className="bg-white rounded-lg p-8 space-y-4">
+                <div className="bg-white rounded-lg p-8 space-y-4 mb-8">
                   <h3 className="text-xl font-semibold text-charcoal mb-4">Nos interventions</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
@@ -289,6 +289,20 @@ const Training = () => {
                       </div>
                     </li>
                   </ul>
+                </div>
+
+                {/* CTA vers ateliers créatifs */}
+                <div className="bg-sage/10 rounded-lg p-6 border-l-4 border-sage">
+                  <h4 className="text-lg font-semibold text-charcoal mb-2">Vous préférez des ateliers créatifs ?</h4>
+                  <p className="text-charcoal/70 mb-4">
+                    Découvrez nos ateliers botaniques ludiques parfaits pour le team-building : kokedama, terrariums, teinture végétale, couronnes de fleurs et bien plus encore.
+                  </p>
+                  <Link
+                    to="/workshops"
+                    className="inline-flex items-center text-sage hover:text-sage-dark font-semibold transition-all"
+                  >
+                    Voir tous nos ateliers créatifs →
+                  </Link>
                 </div>
               </div>
             </div>
