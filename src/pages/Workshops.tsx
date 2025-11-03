@@ -21,7 +21,7 @@ import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
 const workshops = [
   {
     title: "Kokedama",
-    description: "Découvrez l'art japonais du jardinage en boules de mousse. Créez vos propres sculptures végétales suspendues en alliant techniques traditionnelles et design contemporain.",
+    description: "Découvrez l'art japonais du jardinage en boules de mousse, héritage de la tradition bonsaï. Créez vos propres sculptures végétales suspendues en explorant cette pratique séculaire qui unit esthétique et philosophie du vivant.",
     duration: "2h30",
     public: "Adultes, enfants dès 10 ans",
     image: "/videos/workshop-kokedama.mp4",
@@ -30,7 +30,7 @@ const workshops = [
   },
   {
     title: "Teinture Végétale",
-    description: "Explorez l'alchimie de la teinture naturelle. Extrayez des pigments végétaux pour créer des textiles durables aux tons terreux et authentiques.",
+    description: "Explorez l'alchimie ancestrale de la teinture naturelle pratiquée depuis des millénaires. Extrayez des pigments végétaux selon des techniques traditionnelles pour créer des textiles durables aux tons terreux et authentiques.",
     duration: "3h",
     public: "Tout public",
     image: dyeingImage,
@@ -39,7 +39,7 @@ const workshops = [
   },
   {
     title: "Terrariums",
-    description: "Composez des écosystèmes miniatures sous verre. Créez des paysages en couches avec mousses, pierres et plantes délicates — des mondes minuscules qui prospèrent avec peu d'entretien.",
+    description: "Composez des écosystèmes miniatures sous verre en s'inspirant des caisses de Ward victoriennes. Créez des paysages en couches avec mousses, pierres et plantes délicates — des mondes minuscules qui prospèrent avec peu d'entretien.",
     duration: "2h",
     public: "Tout public, enfants dès 8 ans",
     image: terrariumImage,
@@ -47,7 +47,7 @@ const workshops = [
   },
   {
     title: "Tableau Végétal",
-    description: "Créez un tableau botanique vivant avec mousses, plantes stabilisées et matériaux naturels. Une œuvre d'art végétale qui apporte la nature dans votre intérieur sans entretien.",
+    description: "Créez un tableau botanique vivant avec mousses, plantes stabilisées et matériaux naturels. Explorez l'art du jardin vertical inspiré des traditions japonaises et de l'esthétique végétale contemporaine.",
     duration: "4h",
     public: "Adultes",
     image: muralImage,
@@ -55,7 +55,7 @@ const workshops = [
   },
   {
     title: "Bombes de Graines",
-    description: "Fabriquez des bombes de graines artisanales avec argile, compost et graines sauvages. Une action de guérilla verte pour reverdir nos espaces urbains.",
+    description: "Fabriquez des bombes de graines artisanales avec argile, compost et graines sauvages selon la méthode nendo dango de Masanobu Fukuoka. Une pratique de guérilla verte enracinée dans la permaculture japonaise.",
     duration: "1h30",
     public: "Tout public, enfants dès 6 ans",
     image: "/videos/workshop-seed-bombs.mp4",
@@ -64,7 +64,7 @@ const workshops = [
   },
   {
     title: "Couronnes de Fleurs",
-    description: "Tressez des couronnes végétales avec fleurs sauvages et feuillages de saison. Un savoir-faire ancestral pour célébrer la beauté éphémère de la nature.",
+    description: "Tressez des couronnes végétales avec fleurs sauvages et feuillages de saison. Un savoir-faire ancestral qui traverse les cultures, des rituels celtes aux traditions méditerranéennes, pour célébrer la beauté éphémère de la nature.",
     duration: "2h",
     public: "Tout public, enfants dès 10 ans",
     image: flowerCrownImage,
@@ -72,7 +72,7 @@ const workshops = [
   },
   {
     title: "Vannerie",
-    description: "Apprenez l'art du tressage avec osier et fibres naturelles. Créez des paniers fonctionnels et esthétiques en reconnectant avec un artisanat millénaire.",
+    description: "Apprenez l'art du tressage avec osier et fibres naturelles, pratique artisanale millénaire commune à toutes les civilisations. Créez des paniers fonctionnels et esthétiques en reconnectant avec des gestes universels et intemporels.",
     duration: "3h30",
     public: "Adultes, adolescents",
     image: basketryImage,
@@ -80,7 +80,7 @@ const workshops = [
   },
   {
     title: "Photographie Végétale",
-    description: "Explorez le cyanotype et les techniques photographiques ancestrales. Imprimez l'empreinte des plantes sur papier dans des nuances de bleu intemporel.",
+    description: "Explorez le cyanotype et les techniques photographiques ancestrales du XIXe siècle. Imprimez l'empreinte des plantes sur papier comme Anna Atkins, pionnière de l'illustration botanique photographique, dans des nuances de bleu intemporel.",
     duration: "2h30",
     public: "Adultes, adolescents",
     image: photoVegetalImage,
@@ -88,7 +88,7 @@ const workshops = [
   },
   {
     title: "Herbier",
-    description: "Constituez votre collection botanique personnelle. Apprenez à sécher, presser et conserver les plantes tout en développant votre regard naturaliste.",
+    description: "Constituez votre collection botanique personnelle selon les méthodes des naturalistes. Apprenez à sécher, presser et conserver les plantes tout en développant votre regard d'observation et votre compréhension des espèces locales.",
     duration: "2h",
     public: "Tout public, enfants dès 8 ans",
     image: "/videos/workshop-fresque-herbier.mp4",
@@ -97,7 +97,7 @@ const workshops = [
   },
   {
     title: "Jardin Partagé et Aquaponie",
-    description: "Participez à la création d'un espace collectif alliant jardinage traditionnel et aquaponie. Du design à la plantation, explorez ces systèmes écologiques où plantes et poissons coexistent. Cultivez ensemble la biodiversité et le lien social.",
+    description: "Participez à la création d'un espace collectif alliant jardinage traditionnel et aquaponie. Du design à la plantation, explorez ces systèmes écologiques où plantes et poissons coexistent selon des principes permacoles. Cultivez ensemble la biodiversité et le lien social.",
     duration: "½ journée",
     public: "Tout public, groupes",
     image: sharedGardenImage,
@@ -105,7 +105,7 @@ const workshops = [
   },
   {
     title: "Sachets Senteur & Pots-Pourris",
-    description: "Composez vos propres mélanges aromatiques avec fleurs séchées, herbes et épices. Créez des objets parfumés pour la maison ancrés dans la tradition.",
+    description: "Composez vos propres mélanges aromatiques avec fleurs séchées, herbes et épices selon des recettes traditionnelles européennes et orientales. Créez des objets parfumés pour la maison ancrés dans l'histoire des usages domestiques des plantes.",
     duration: "1h30",
     public: "Tout public",
     image: sachetSenteurImage,
@@ -113,7 +113,7 @@ const workshops = [
   },
   {
     title: "Huiles Essentielles",
-    description: "Initiez-vous à l'extraction et l'usage des essences végétales. Découvrez les propriétés thérapeutiques des plantes et créez vos propres synergies aromatiques.",
+    description: "Initiez-vous à l'extraction et l'usage des essences végétales, savoir ancestral transmis par les tradipraticiens et les herboristes. Découvrez les propriétés thérapeutiques des plantes et créez vos propres synergies aromatiques.",
     duration: "3h",
     public: "Adultes",
     image: essentialOilsImage,
@@ -121,7 +121,7 @@ const workshops = [
   },
   {
     title: "Tataki Zome",
-    description: "Explorez l'art ancestral japonais de l'impression végétale par martelage. Transférez les pigments naturels des fleurs et feuilles directement sur textile en créant des empreintes botaniques uniques et éphémères.",
+    description: "Explorez le tataki zome, art ancestral japonais de l'impression végétale par martelage transmis depuis des siècles. Transférez les pigments naturels des fleurs et feuilles directement sur textile en créant des empreintes botaniques uniques et éphémères.",
     duration: "2h",
     public: "Tout public, enfants dès 10 ans",
     image: tatakiZomeImage,
