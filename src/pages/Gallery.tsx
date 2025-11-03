@@ -1,21 +1,25 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
-import heroImage from "@/assets/hero-botanical.jpg";
-import kokedamaImage from "@/assets/workshop-kokedama.jpg";
-import dyeingImage from "@/assets/workshop-dyeing.jpg";
-import terrariumImage from "@/assets/workshop-terrarium.jpg";
-import muralImage from "@/assets/workshop-mural.jpg";
 import aboutImage from "@/assets/about-vanessa.jpg";
+import terrariumImage from "@/assets/gallery-terrarium.jpg";
+import seedBombsImage from "@/assets/gallery-seed-bombs.jpg";
+import workshopTableImage from "@/assets/gallery-workshop-table.jpg";
+import forestWalkImage from "@/assets/gallery-forest-walk.jpg";
+import succulentsImage from "@/assets/gallery-succulents.jpg";
+import autumnLeavesImage from "@/assets/gallery-autumn-leaves.jpg";
+import basketryImage from "@/assets/gallery-basketry.jpg";
 
 const Gallery = () => {
   const images = [
-    { src: heroImage, alt: "Botanical close-up", caption: "Beauté végétale — Botanique Ludique" },
-    { src: kokedamaImage, alt: "Kokedama creation", caption: "Kokedama — Atelier Botanique Ludique" },
-    { src: dyeingImage, alt: "Natural dyeing process", caption: "Teinture Végétale — Atelier Botanique Ludique" },
-    { src: terrariumImage, alt: "Glass terrarium", caption: "Terrarium — Atelier Botanique Ludique" },
-    { src: muralImage, alt: "Botanical mural in progress", caption: "Fresque Végétale — Atelier Botanique Ludique" },
     { src: aboutImage, alt: "Portrait in nature", caption: "Portrait — Vanessa Charlery" },
+    { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium — Atelier Botanique Ludique" },
+    { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines — Atelier Botanique Ludique" },
+    { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier — MJC Le Vésinet" },
+    { src: forestWalkImage, alt: "Balade en forêt", caption: "Atelier sur les espèces exotiques envahissantes" },
+    { src: succulentsImage, alt: "Atelier succulentes", caption: "Succulentes — Atelier Botanique Ludique" },
+    { src: autumnLeavesImage, alt: "Création avec feuilles d'automne", caption: "Création végétale automnale" },
+    { src: basketryImage, alt: "Atelier vannerie", caption: "Atelier vannerie et tressage" },
   ];
 
   return (
@@ -54,6 +58,25 @@ const Gallery = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Video Section */}
+          <div className="mt-12">
+            <h2 className="text-2xl md:text-3xl font-serif text-charcoal mb-6 text-center">
+              Immersion dans nos ateliers
+            </h2>
+            <div className="max-w-4xl mx-auto">
+              <div className="relative overflow-hidden rounded-lg shadow-xl">
+                <video
+                  controls
+                  className="w-full"
+                  poster="/videos/workshop-demo.mp4"
+                >
+                  <source src="/videos/workshop-demo.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+              </div>
+            </div>
           </div>
 
           <div className="mt-16 text-center">
