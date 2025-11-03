@@ -46,7 +46,7 @@ const Footer = () => {
             <div className="flex items-start gap-2" style={{ color: '#5D653A', opacity: 0.7 }}>
               <MapPin size={18} className="mt-1 flex-shrink-0" />
               <div className="text-sm">
-                <p>Paris et régions environnantes</p>
+                <p>Île-de-France</p>
                 <p className="mt-2 text-xs">Ateliers disponibles pour particuliers et entreprises</p>
               </div>
             </div>
