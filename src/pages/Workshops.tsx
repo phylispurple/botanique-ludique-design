@@ -1,7 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
-import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles } from "lucide-react";
+import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import dyeingImage from "@/assets/workshop-dyeing.jpg";
 import terrariumImage from "@/assets/workshop-terrarium.jpg";
 import muralImage from "@/assets/workshop-mural.jpg";
@@ -136,8 +137,33 @@ const Workshops = () => {
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`${index % 2 === 1 ? "md:order-2" : ""} group space-y-4`}>
-                  {workshop.type === "video" ? (
+                <div className={`${index % 2 === 1 ? "md:order-2" : ""} group`}>
+                  {workshop.video && workshop.type !== "video" ? (
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        <CarouselItem>
+                          <img
+                            src={workshop.image}
+                            alt={`Atelier ${workshop.title}`}
+                            className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
+                          />
+                        </CarouselItem>
+                        <CarouselItem>
+                          <video
+                            src={workshop.video}
+                            className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
+                            muted
+                            loop
+                            playsInline
+                            autoPlay
+                            preload="metadata"
+                          />
+                        </CarouselItem>
+                      </CarouselContent>
+                      <CarouselPrevious className="left-4" />
+                      <CarouselNext className="right-4" />
+                    </Carousel>
+                  ) : workshop.type === "video" ? (
                     <video
                       src={workshop.image}
                       className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
@@ -152,17 +178,6 @@ const Workshops = () => {
                       src={workshop.image}
                       alt={`Atelier ${workshop.title}`}
                       className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 group-hover:scale-105"
-                    />
-                  )}
-                  {workshop.video && workshop.type !== "video" && (
-                    <video
-                      src={workshop.video}
-                      className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
-                      muted
-                      loop
-                      playsInline
-                      autoPlay
-                      preload="metadata"
                     />
                   )}
                 </div>
