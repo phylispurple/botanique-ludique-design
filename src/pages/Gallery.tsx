@@ -48,6 +48,14 @@ const Gallery = () => {
               <div
                 key={index}
                 className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
+                onMouseEnter={(e) => {
+                  const vid = e.currentTarget.querySelector('video');
+                  vid?.play().catch(err => console.log('Video play failed:', err));
+                }}
+                onMouseLeave={(e) => {
+                  const vid = e.currentTarget.querySelector('video');
+                  if (vid) { vid.pause(); vid.currentTime = 0; }
+                }}
               >
                 <div className="aspect-[3/4] overflow-hidden">
                   {item.type === "video" ? (
@@ -76,7 +84,7 @@ const Gallery = () => {
                     />
                   )}
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-charcoal/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-charcoal/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4 pointer-events-none">
                   <p className="text-white text-sm italic">{item.caption}</p>
                 </div>
               </div>
