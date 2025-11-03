@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Link } from "react-router-dom";
 import dyeingImage from "@/assets/workshop-dyeing.jpg";
 import terrariumImage from "@/assets/workshop-terrarium.jpg";
 import muralImage from "@/assets/workshop-mural.jpg";
@@ -195,9 +196,12 @@ const Workshops = () => {
                   <p className="text-lg text-charcoal/80 leading-relaxed">
                     {workshop.description}
                   </p>
-                  <button className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full">
+                  <Link 
+                    to={`/contact?subject=${encodeURIComponent(`Réservation atelier : ${workshop.title}`)}`}
+                    className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                  >
                     Réserver cet atelier
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
