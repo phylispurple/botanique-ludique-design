@@ -108,7 +108,7 @@ const Index = () => {
             {/* Modern Button - improved contrast */}
             <button 
               onClick={() => navigate('/workshops')} 
-              className="group mt-6 px-10 py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl" 
+              className="group mt-6 px-12 py-5 rounded-full text-lg sm:text-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl" 
               style={{ backgroundColor: '#C9D2B5', color: '#2B2B2B' }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#A7B795'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#C9D2B5'}
