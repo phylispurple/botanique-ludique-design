@@ -23,7 +23,7 @@ const workshops = [
     title: "Kokedama",
     description: "Découvrez l'art japonais du jardinage en boules de mousse. Créez vos propres sculptures végétales suspendues en alliant techniques traditionnelles et design contemporain.",
     duration: "2h30",
-    public: "Adultes, adolescents",
+    public: "Adultes, enfants dès 10 ans",
     image: "/videos/workshop-kokedama.mp4",
     icon: Sprout,
     type: "video",
