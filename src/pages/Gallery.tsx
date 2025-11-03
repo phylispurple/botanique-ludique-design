@@ -12,6 +12,10 @@ import basketryImage from "@/assets/gallery-basketry.jpg";
 import atelierAdulteImage from "@/assets/gallery-atelier-adulte.jpg";
 import sachetSenteurImage from "@/assets/gallery-sachet-senteur.jpg";
 import flowerCrownImage from "@/assets/gallery-flower-crown.jpg";
+import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
+import collegeEee2Image from "@/assets/gallery-college-eee-2.jpg";
+import collegeEee3Image from "@/assets/gallery-college-eee-3.jpg";
+import collegeEee4Image from "@/assets/gallery-college-eee-4.jpg";
 
 const Gallery = () => {
   const items = [
@@ -30,6 +34,10 @@ const Gallery = () => {
     { src: atelierAdulteImage, alt: "Atelier herbier adulte", caption: "Atelier création d'herbier — Adultes", type: "image" },
     { src: sachetSenteurImage, alt: "Sachets de senteur", caption: "Sachets de senteur aux plantes aromatiques", type: "image" },
     { src: flowerCrownImage, alt: "Couronne de fleurs", caption: "Atelier couronne de fleurs", type: "image" },
+    { src: collegeEee1Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee2Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee3Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee4Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
   ];
 
   return (
