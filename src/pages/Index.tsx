@@ -128,21 +128,23 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl relative z-10">
           {/* Présentation Botanique Ludique - Centré */}
           <div className="max-w-4xl mx-auto text-center mb-20">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <Leaf 
-                className="w-16 h-16 md:w-20 md:h-20" 
-                style={{ color: '#A7B795', strokeWidth: 1.5 }}
-              />
-              <div className="flex flex-col leading-none">
-                <span className="font-serif text-5xl md:text-6xl font-light tracking-wider" style={{ color: '#5D653A' }}>
-                  Botanique
-                </span>
-                <span className="font-serif text-5xl md:text-6xl font-light tracking-wider" style={{ color: '#5D653A' }}>
-                  Ludique
-                </span>
+            <div className="flex flex-col items-center justify-center mb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Leaf 
+                  className="w-14 h-14 md:w-16 md:h-16" 
+                  style={{ color: '#A7B795', strokeWidth: 1.5 }}
+                />
+                <div className="flex flex-col leading-none">
+                  <span className="font-serif text-4xl md:text-5xl font-light tracking-wider" style={{ color: '#5D653A' }}>
+                    Botanique
+                  </span>
+                  <span className="font-serif text-4xl md:text-5xl font-light tracking-wider" style={{ color: '#5D653A' }}>
+                    Ludique
+                  </span>
+                </div>
               </div>
+              <div className="w-20 h-1 bg-sage" />
             </div>
-            <div className="w-20 h-1 bg-sage mx-auto mb-8" />
             
             <div className="space-y-6 mb-8">
               <p className="text-lg text-charcoal/80 leading-relaxed">
