@@ -58,7 +58,10 @@ const Gallery = () => {
                       muted
                       loop
                       playsInline
-                      onMouseEnter={(e) => e.currentTarget.play()}
+                      preload="metadata"
+                      onMouseEnter={(e) => {
+                        e.currentTarget.play().catch(err => console.log('Video play failed:', err));
+                      }}
                       onMouseLeave={(e) => {
                         e.currentTarget.pause();
                         e.currentTarget.currentTime = 0;
