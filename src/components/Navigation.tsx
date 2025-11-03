@@ -33,9 +33,9 @@ const Navigation = () => {
   const links = [
     { name: "Accueil", path: "/" },
     { name: "À propos", path: "/about" },
+    { name: "Philosophie", path: "/philosophy" },
     { name: "Ateliers", path: "/workshops" },
     { name: "Formations", path: "/training" },
-    { name: "Philosophie", path: "/philosophy" },
     { name: "Galerie", path: "/gallery" },
     { name: "FAQ", path: "/faq" },
     { name: "Contact", path: "/contact" },
