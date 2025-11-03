@@ -23,6 +23,7 @@ const workshops = [
     title: "Kokedama",
     description: "Découvrez l'art japonais du jardinage en boules de mousse. Créez vos propres sculptures végétales suspendues en alliant techniques traditionnelles et design contemporain.",
     duration: "2h30",
+    public: "Adultes, adolescents",
     image: "/videos/workshop-kokedama.mp4",
     icon: Sprout,
     type: "video",
@@ -31,6 +32,7 @@ const workshops = [
     title: "Teinture Végétale",
     description: "Explorez l'alchimie de la teinture naturelle. Extrayez des pigments végétaux pour créer des textiles durables aux tons terreux et authentiques.",
     duration: "3h",
+    public: "Tout public",
     image: dyeingImage,
     video: "/videos/workshop-dyeing.mp4",
     icon: Palette,
@@ -39,6 +41,7 @@ const workshops = [
     title: "Terrariums",
     description: "Composez des écosystèmes miniatures sous verre. Créez des paysages en couches avec mousses, pierres et plantes délicates — des mondes minuscules qui prospèrent avec peu d'entretien.",
     duration: "2h",
+    public: "Tout public, enfants dès 8 ans",
     image: terrariumImage,
     icon: Sparkles,
   },
@@ -46,6 +49,7 @@ const workshops = [
     title: "Tableau Végétal",
     description: "Créez un tableau botanique vivant avec mousses, plantes stabilisées et matériaux naturels. Une œuvre d'art végétale qui apporte la nature dans votre intérieur sans entretien.",
     duration: "4h",
+    public: "Adultes",
     image: muralImage,
     icon: Leaf,
   },
@@ -53,6 +57,7 @@ const workshops = [
     title: "Bombes de Graines",
     description: "Fabriquez des bombes de graines artisanales avec argile, compost et graines sauvages. Une action de guérilla verte pour reverdir nos espaces urbains.",
     duration: "1h30",
+    public: "Tout public, enfants dès 6 ans",
     image: "/videos/workshop-seed-bombs.mp4",
     icon: Sprout,
     type: "video",
@@ -61,6 +66,7 @@ const workshops = [
     title: "Couronnes de Fleurs",
     description: "Tressez des couronnes végétales avec fleurs sauvages et feuillages de saison. Un savoir-faire ancestral pour célébrer la beauté éphémère de la nature.",
     duration: "2h",
+    public: "Tout public, enfants dès 10 ans",
     image: flowerCrownImage,
     icon: Flower2,
   },
@@ -68,6 +74,7 @@ const workshops = [
     title: "Vannerie",
     description: "Apprenez l'art du tressage avec osier et fibres naturelles. Créez des paniers fonctionnels et esthétiques en reconnectant avec un artisanat millénaire.",
     duration: "3h30",
+    public: "Adultes, adolescents",
     image: basketryImage,
     icon: Leaf,
   },
@@ -75,6 +82,7 @@ const workshops = [
     title: "Photographie Végétale",
     description: "Explorez le cyanotype et les techniques photographiques ancestrales. Imprimez l'empreinte des plantes sur papier dans des nuances de bleu intemporel.",
     duration: "2h30",
+    public: "Adultes, adolescents",
     image: photoVegetalImage,
     icon: Sparkles,
   },
@@ -82,6 +90,7 @@ const workshops = [
     title: "Herbier",
     description: "Constituez votre collection botanique personnelle. Apprenez à sécher, presser et conserver les plantes tout en développant votre regard naturaliste.",
     duration: "2h",
+    public: "Tout public, enfants dès 8 ans",
     image: "/videos/workshop-fresque-herbier.mp4",
     icon: Leaf,
     type: "video",
@@ -90,6 +99,7 @@ const workshops = [
     title: "Jardin Partagé",
     description: "Participez à la création d'un espace collectif. Du design à la plantation, cultivez ensemble la biodiversité et le lien social à travers le jardinage.",
     duration: "½ journée",
+    public: "Tout public, groupes",
     image: sharedGardenImage,
     icon: Sprout,
   },
@@ -97,6 +107,7 @@ const workshops = [
     title: "Sachets Senteur & Pots-Pourris",
     description: "Composez vos propres mélanges aromatiques avec fleurs séchées, herbes et épices. Créez des objets parfumés pour la maison ancrés dans la tradition.",
     duration: "1h30",
+    public: "Tout public",
     image: sachetSenteurImage,
     icon: Flower2,
   },
@@ -104,6 +115,7 @@ const workshops = [
     title: "Huiles Essentielles",
     description: "Initiez-vous à l'extraction et l'usage des essences végétales. Découvrez les propriétés thérapeutiques des plantes et créez vos propres synergies aromatiques.",
     duration: "3h",
+    public: "Adultes",
     image: essentialOilsImage,
     icon: Droplets,
   },
@@ -111,8 +123,17 @@ const workshops = [
     title: "Tataki Zome",
     description: "Explorez l'art ancestral japonais de l'impression végétale par martelage. Transférez les pigments naturels des fleurs et feuilles directement sur textile en créant des empreintes botaniques uniques et éphémères.",
     duration: "2h",
+    public: "Tout public, enfants dès 10 ans",
     image: tatakiZomeImage,
     icon: Palette,
+  },
+  {
+    title: "Aquaponie",
+    description: "Découvrez l'aquaponie, système écologique qui unit culture de plantes et élevage de poissons. Apprenez à créer un écosystème autonome où plantes et poissons se nourrissent mutuellement dans un cycle vertueux.",
+    duration: "3h",
+    public: "Tout public, enfants dès 12 ans",
+    image: sharedGardenImage,
+    icon: Droplets,
   },
 ];
 
@@ -201,6 +222,9 @@ const Workshops = () => {
                   <h2 className="text-3xl md:text-4xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                     {workshop.title}
                   </h2>
+                  <p className="text-sm text-sage-dark font-semibold mb-2">
+                    Public : {workshop.public}
+                  </p>
                   <p className="text-lg text-charcoal/80 leading-relaxed">
                     {workshop.description}
                   </p>
@@ -208,7 +232,7 @@ const Workshops = () => {
                     to={`/contact?subject=${encodeURIComponent(`Réservation atelier : ${workshop.title}`)}`}
                     className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
                   >
-                    Réserver cet atelier
+                    Demande d'information et réservation
                   </Link>
                 </div>
               </div>
