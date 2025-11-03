@@ -29,6 +29,7 @@ const workshops = [
     description: "Explorez l'alchimie de la teinture naturelle. Extrayez des pigments végétaux pour créer des textiles durables aux tons terreux et authentiques.",
     duration: "3h",
     image: dyeingImage,
+    video: "/videos/workshop-dyeing.mp4",
     icon: Palette,
   },
   {
@@ -135,7 +136,7 @@ const Workshops = () => {
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`${index % 2 === 1 ? "md:order-2" : ""} group`}>
+                <div className={`${index % 2 === 1 ? "md:order-2" : ""} group space-y-4`}>
                   {workshop.type === "video" ? (
                     <video
                       src={workshop.image}
@@ -151,6 +152,17 @@ const Workshops = () => {
                       src={workshop.image}
                       alt={`Atelier ${workshop.title}`}
                       className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 group-hover:scale-105"
+                    />
+                  )}
+                  {workshop.video && workshop.type !== "video" && (
+                    <video
+                      src={workshop.video}
+                      className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
+                      muted
+                      loop
+                      playsInline
+                      autoPlay
+                      preload="metadata"
                     />
                   )}
                 </div>
