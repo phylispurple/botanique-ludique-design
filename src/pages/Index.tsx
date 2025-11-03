@@ -163,8 +163,11 @@ const Index = () => {
                 <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <img src="/logos/mjc-chatou.jpeg" alt="MJC Chatou" className="max-h-16 w-auto object-contain" />
                 </div>
-                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1">
+                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <img src="/logos/publicis.jpg" alt="Publicis" className="max-h-16 w-auto object-contain" />
+                </div>
+                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/f93.jpg" alt="F93" className="max-h-16 w-auto object-contain" />
                 </div>
               </div>
             </div>
