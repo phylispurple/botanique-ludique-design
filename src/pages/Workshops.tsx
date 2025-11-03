@@ -42,8 +42,9 @@ const workshops = [
     title: "Fresques Végétales",
     description: "Créez des murales botaniques avec fleurs pressées, feuilles et matériaux naturels. Un processus méditatif qui transforme les plantes en œuvres d'art vivantes.",
     duration: "4h",
-    image: muralImage,
+    image: "/videos/workshop-fresque-herbier.mp4",
     icon: Leaf,
+    type: "video",
   },
   {
     title: "Bombes de Graines",
@@ -78,8 +79,9 @@ const workshops = [
     title: "Herbier",
     description: "Constituez votre collection botanique personnelle. Apprenez à sécher, presser et conserver les plantes tout en développant votre regard naturaliste.",
     duration: "2h",
-    image: herbariumImage,
+    image: "/videos/workshop-fresque-herbier.mp4",
     icon: Leaf,
+    type: "video",
   },
   {
     title: "Jardin Partagé",
