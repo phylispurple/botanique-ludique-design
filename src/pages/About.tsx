@@ -40,7 +40,7 @@ const About = () => {
                   Vanessa Charlery
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Vanessa Charlery est diplômée de l'EHESS en anthropologie avec une spécialisation en ethnobotanique. Elle a également obtenu une licence en sociologie de l'Université Toulouse 2 et une formation en botanique à l'École Dubreuil.
+                  Vanessa Charlery a étudié à l'EHESS en anthropologie avec une spécialisation en ethnobotanique. Elle a également obtenu une licence en sociologie de l'Université Toulouse 2.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
                   Sa recherche se concentre sur les interactions entre les citadins et les plantes dans les espaces verts urbains du Grand Paris, explorant les liens entre nature et culture. Vanessa a également suivi des cours sur la "Nature en ville" dispensés par Michel Auduy de l'ENSP.
