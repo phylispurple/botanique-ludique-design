@@ -141,7 +141,14 @@ const Index = () => {
             
             {/* Workshop Tags - Centered and responsive */}
             <div className="flex flex-wrap gap-3 justify-center pt-8 max-w-3xl">
-              {workshops.map((workshop, index) => {})}
+              {workshops.map((workshop, index) => (
+                <span
+                  key={index}
+                  className={`px-4 py-2 rounded-full text-sm font-medium ${workshop.color} bg-white/10 backdrop-blur-sm`}
+                >
+                  {workshop.name}
+                </span>
+              ))}
             </div>
           </div>
         </div>

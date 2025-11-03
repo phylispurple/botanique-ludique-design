@@ -231,154 +231,20 @@ const Workshops = () => {
             ))}
           </div>
 
-          {/* Formation Section */}
-          <div id="formations-educatives" className="mt-32 animate-fade-in">
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-              <img 
-                src={collegeEee1Image} 
-                alt="Éducation et sensibilisation à la botanique"
-                className="w-full h-[400px] md:h-[500px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-transparent"></div>
-              <div className="absolute inset-0 flex items-end">
-                <div className="p-8 md:p-12 w-full">
-                  <h2 className="text-3xl md:text-5xl text-white" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
-                    Éducation & Sensibilisation
-                  </h2>
-                  <p className="text-lg text-white/90 leading-relaxed max-w-3xl">
-                    Interventions auprès des lycées, collèges et entreprises
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div className="space-y-6 animate-fade-in">
-                <h3 className="text-2xl md:text-3xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Pour les établissements scolaires
-                </h3>
-                <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Des parcours de sensibilisation spécialement conçus pour les collèges et lycées, alliant dimension éducative et pratique botanique. Ces interventions engagent les élèves dans une réflexion active sur les enjeux environnementaux contemporains tout en développant leur lien avec le vivant.
-                </p>
-                <ul className="space-y-3 text-charcoal/80">
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span>Espèces exotiques envahissantes : identification, impacts écologiques et actions de préservation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span>Biodiversité urbaine et sauvage : reconnaissance des espèces locales et leur rôle dans l'écosystème</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span>Changement climatique et adaptation des plantes : observer et comprendre la résilience végétale</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span>Ethnobotanique : relations entre plantes et cultures humaines à travers l'histoire</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span>Cycles naturels et saisonnalité : comprendre les rythmes du vivant</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div id="formations-professionnelles" className="space-y-6 animate-fade-in">
-                <h3 className="text-2xl md:text-3xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Pour les formations professionnelles
-                </h3>
-                <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Modules complémentaires destinés aux BTS, lycées professionnels agricoles et formations en aménagement paysager. Une approche anthropologique qui dépasse la simple technique pour questionner le <strong>statut ontologique des plantes</strong> et repenser notre relation au vivant.
-                </p>
-                <p className="text-base text-charcoal/70 leading-relaxed italic mb-4">
-                  Inspirés de mes recherches en anthropologie sur les relations humain-plante en milieu urbain (EHESS), ces modules enrichissent les cursus techniques d'une dimension réflexive essentielle.
-                </p>
-                <ul className="space-y-3 text-charcoal/80">
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span><strong>Au-delà de la dichotomie nature/culture</strong> : Les plantes comme entités vivantes dotées de leur propre réalité, et non comme simples objets esthétiques ou fonctionnels</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span><strong>Anthropologie de la nature</strong> : Comprendre les perceptions et relations entre citadins et plantes dans l'espace urbain</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span><strong>Ethnobotanique appliquée</strong> : Le rôle des plantes dans la culture et la société, au-delà de leur fonction écologique</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span><strong>Vision holistique du paysagisme</strong> : Intégrer les perspectives anthropologiques, écologiques et politiques dans la gestion des espaces verts</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span><strong>Méthodologie de terrain</strong> : Observation participante, entretiens semi-structurés, analyse des interactions humain-végétal</span>
-                  </li>
-                </ul>
-                <p className="text-sm text-charcoal/60 leading-relaxed mt-4">
-                  Ces modules s'appuient sur les travaux de Philippe Descola, Bruno Latour et Tim Ingold pour enrichir les pratiques professionnelles d'une compréhension profonde des enjeux contemporains entre urbanisation et environnement.
-                </p>
-              </div>
-
-              <div className="space-y-6 animate-fade-in">
-                <h3 className="text-2xl md:text-3xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Pour les entreprises
-                </h3>
-                <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Des formations qui questionnent notre regard sur le végétal en milieu professionnel. Comment réintégrer la nature dans nos espaces de travail ? Quelle place accorder aux plantes dans notre quotidien ? Des sessions qui allient réflexion philosophique et mise en pratique concrète.
-                </p>
-                <ul className="space-y-3 text-charcoal/80">
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span>Végétalisation des espaces de travail</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span>Team-building autour du jardinage collectif</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span>Conférences sur l'écologie et le vivant</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-12 bg-sand rounded-lg p-8 md:p-12 text-center animate-fade-in">
-              <h4 className="text-xl md:text-2xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                Repenser notre lien au végétal
-              </h4>
-              <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-3xl mx-auto">
-                Dans une société où la nature est souvent reléguée à l'arrière-plan, ces formations invitent à questionner la place des plantes dans notre vie moderne. Comment les espaces verts façonnent-ils notre santé mentale, notre créativité et notre rapport au temps ? Ensemble, explorons les dimensions symboliques, écologiques et sociales du végétal.
-              </p>
-              <a
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
-              >
-                Demander une formation
-              </a>
-            </div>
-          </div>
-
-          {/* Private & Corporate Section */}
-          <div id="entreprises" className="mt-20 rounded-lg p-8 md:p-12 text-center animate-fade-in" style={{ backgroundColor: '#F7F7EB' }}>
-            <Leaf size={40} className="mx-auto mb-6" style={{ color: '#A7B795' }} />
+          {/* CTA Section - Formations */}
+          <div className="mt-20 bg-sand rounded-lg p-8 md:p-12 text-center animate-fade-in">
             <h3 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-              Ateliers de groupe / entreprises
+              Vous êtes un établissement scolaire ou une entreprise ?
             </h3>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-2xl mx-auto">
-              Vous recherchez une expérience unique de team-building ou un événement privé ? Nous proposons des ateliers sur mesure pour groupes, entreprises et occasions spéciales.
+              Découvrez nos formations professionnelles et interventions éducatives sur mesure pour collèges, lycées, BTS et entreprises.
             </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center px-6 py-3 hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
-              style={{ backgroundColor: '#A7B795' }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5D653A'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#A7B795'}
+            <Link
+              to="/training"
+              className="inline-flex items-center px-8 py-4 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
             >
-              Nous contacter
-            </a>
+              Voir les formations professionnelles
+            </Link>
           </div>
         </div>
       </main>
