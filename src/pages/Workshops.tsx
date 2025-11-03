@@ -96,8 +96,8 @@ const workshops = [
     type: "video",
   },
   {
-    title: "Jardin Partagé",
-    description: "Participez à la création d'un espace collectif. Du design à la plantation, cultivez ensemble la biodiversité et le lien social à travers le jardinage.",
+    title: "Jardin Partagé et Aquaponie",
+    description: "Participez à la création d'un espace collectif alliant jardinage traditionnel et aquaponie. Du design à la plantation, explorez ces systèmes écologiques où plantes et poissons coexistent. Cultivez ensemble la biodiversité et le lien social.",
     duration: "½ journée",
     public: "Tout public, groupes",
     image: sharedGardenImage,
@@ -126,14 +126,6 @@ const workshops = [
     public: "Tout public, enfants dès 10 ans",
     image: tatakiZomeImage,
     icon: Palette,
-  },
-  {
-    title: "Aquaponie",
-    description: "Découvrez l'aquaponie, système écologique qui unit culture de plantes et élevage de poissons. Apprenez à créer un écosystème autonome où plantes et poissons se nourrissent mutuellement dans un cycle vertueux.",
-    duration: "3h",
-    public: "Tout public, enfants dès 12 ans",
-    image: sharedGardenImage,
-    icon: Droplets,
   },
 ];
 
