@@ -11,15 +11,16 @@ import autumnLeavesImage from "@/assets/gallery-autumn-leaves.jpg";
 import basketryImage from "@/assets/gallery-basketry.jpg";
 
 const Gallery = () => {
-  const images = [
-    { src: aboutImage, alt: "Portrait in nature", caption: "Portrait — Vanessa Charlery" },
-    { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium — Atelier Botanique Ludique" },
-    { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines — Atelier Botanique Ludique" },
-    { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier — MJC Le Vésinet" },
-    { src: forestWalkImage, alt: "Balade en forêt", caption: "Atelier sur les espèces exotiques envahissantes" },
-    { src: succulentsImage, alt: "Atelier succulentes", caption: "Succulentes — Atelier Botanique Ludique" },
-    { src: autumnLeavesImage, alt: "Création avec feuilles d'automne", caption: "Création végétale automnale" },
-    { src: basketryImage, alt: "Atelier vannerie", caption: "Atelier vannerie et tressage" },
+  const items = [
+    { src: aboutImage, alt: "Portrait in nature", caption: "Portrait — Vanessa Charlery", type: "image" },
+    { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium — Atelier Botanique Ludique", type: "image" },
+    { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines — Atelier Botanique Ludique", type: "image" },
+    { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier — MJC Le Vésinet", type: "image" },
+    { src: "/videos/workshop-demo.mp4", alt: "Immersion dans nos ateliers", caption: "Immersion dans nos ateliers", type: "video" },
+    { src: forestWalkImage, alt: "Balade en forêt", caption: "Atelier sur les espèces exotiques envahissantes", type: "image" },
+    { src: succulentsImage, alt: "Atelier succulentes", caption: "Succulentes — Atelier Botanique Ludique", type: "image" },
+    { src: autumnLeavesImage, alt: "Création avec feuilles d'automne", caption: "Création végétale automnale", type: "image" },
+    { src: basketryImage, alt: "Atelier vannerie", caption: "Atelier vannerie et tressage", type: "image" },
   ];
 
   return (
@@ -40,43 +41,40 @@ const Gallery = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {images.map((image, index) => (
+            {items.map((item, index) => (
               <div
                 key={index}
                 className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
               >
                 <div className="aspect-[3/4] overflow-hidden">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    style={{ filter: 'sepia(0.1) saturate(0.9)' }}
-                  />
+                  {item.type === "video" ? (
+                    <video
+                      src={item.src}
+                      className="w-full h-full object-cover"
+                      style={{ filter: 'sepia(0.1) saturate(0.9)' }}
+                      muted
+                      loop
+                      playsInline
+                      onMouseEnter={(e) => e.currentTarget.play()}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.pause();
+                        e.currentTarget.currentTime = 0;
+                      }}
+                    />
+                  ) : (
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      style={{ filter: 'sepia(0.1) saturate(0.9)' }}
+                    />
+                  )}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-charcoal/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
-                  <p className="text-white text-sm italic">{image.caption}</p>
+                  <p className="text-white text-sm italic">{item.caption}</p>
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Video Section */}
-          <div className="mt-12">
-            <h2 className="text-2xl md:text-3xl font-serif text-charcoal mb-6 text-center">
-              Immersion dans nos ateliers
-            </h2>
-            <div className="max-w-4xl mx-auto">
-              <div className="relative overflow-hidden rounded-lg shadow-xl">
-                <video
-                  controls
-                  className="w-full"
-                  poster="/videos/workshop-demo.mp4"
-                >
-                  <source src="/videos/workshop-demo.mp4" type="video/mp4" />
-                  Votre navigateur ne supporte pas la lecture de vidéos.
-                </video>
-              </div>
-            </div>
           </div>
 
           <div className="mt-16 text-center">
