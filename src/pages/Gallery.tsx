@@ -9,6 +9,8 @@ import forestWalkImage from "@/assets/gallery-forest-walk.jpg";
 import succulentsImage from "@/assets/gallery-succulents.jpg";
 import autumnLeavesImage from "@/assets/gallery-autumn-leaves.jpg";
 import basketryImage from "@/assets/gallery-basketry.jpg";
+import atelierAdulteImage from "@/assets/gallery-atelier-adulte.jpg";
+import sachetSenteurImage from "@/assets/gallery-sachet-senteur.jpg";
 
 const Gallery = () => {
   const items = [
@@ -24,6 +26,8 @@ const Gallery = () => {
     { src: "/videos/workshop-demo-4.mp4", alt: "Atelier en groupe", caption: "Atelier participatif", type: "video" },
     { src: autumnLeavesImage, alt: "Création avec feuilles d'automne", caption: "Création végétale automnale", type: "image" },
     { src: basketryImage, alt: "Atelier vannerie", caption: "Atelier vannerie et tressage", type: "image" },
+    { src: atelierAdulteImage, alt: "Atelier herbier adulte", caption: "Atelier création d'herbier — Adultes", type: "image" },
+    { src: sachetSenteurImage, alt: "Sachets de senteur", caption: "Sachets de senteur aux plantes aromatiques", type: "image" },
   ];
 
   return (
