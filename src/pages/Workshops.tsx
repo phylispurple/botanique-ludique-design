@@ -203,20 +203,28 @@ const Workshops = () => {
                   Pour les établissements scolaires
                 </h3>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Des interventions pédagogiques qui explorent la relation entre l'humain et le végétal. À travers des ateliers pratiques et des discussions, nous abordons l'importance des espaces verts dans notre société moderne, leur symbolique et leur rôle dans notre bien-être collectif.
+                  Des parcours de sensibilisation spécialement conçus pour les collèges et lycées, alliant dimension éducative et pratique botanique. Ces interventions engagent les élèves dans une réflexion active sur les enjeux environnementaux contemporains tout en développant leur lien avec le vivant.
                 </p>
                 <ul className="space-y-3 text-charcoal/80">
                   <li className="flex items-start">
                     <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span>Sensibilisation à la biodiversité urbaine</span>
+                    <span>Espèces exotiques envahissantes : identification, impacts écologiques et actions de préservation</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span>L'ethnobotanique : plantes et cultures humaines</span>
+                    <span>Biodiversité urbaine et sauvage : reconnaissance des espèces locales et leur rôle dans l'écosystème</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-sage mr-3 mt-1 font-bold">•</span>
-                    <span>Reconnexion sensorielle avec la nature</span>
+                    <span>Changement climatique et adaptation des plantes : observer et comprendre la résilience végétale</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
+                    <span>Ethnobotanique : relations entre plantes et cultures humaines à travers l'histoire</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-sage mr-3 mt-1 font-bold">•</span>
+                    <span>Cycles naturels et saisonnalité : comprendre les rythmes du vivant</span>
                   </li>
                 </ul>
               </div>
