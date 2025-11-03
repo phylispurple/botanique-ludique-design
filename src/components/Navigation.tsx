@@ -32,6 +32,7 @@ const Navigation = () => {
     { name: "Ateliers", path: "/workshops" },
     { name: "Philosophie", path: "/philosophy" },
     { name: "Galerie", path: "/gallery" },
+    { name: "FAQ", path: "/faq" },
     { name: "Contact", path: "/contact" },
   ];
 
