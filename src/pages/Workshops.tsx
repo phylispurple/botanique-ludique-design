@@ -16,7 +16,7 @@ import sharedGardenImage from "@/assets/workshop-shared-garden.jpg";
 import sachetSenteurImage from "@/assets/gallery-sachet-senteur.jpg";
 import essentialOilsImage from "@/assets/workshop-essential-oils.jpg";
 import tatakiZomeImage from "@/assets/workshop-tataki-zome.jpg";
-import formationImage from "@/assets/formation-education.jpg";
+import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
 
 const workshops = [
   {
@@ -219,15 +219,15 @@ const Workshops = () => {
           <div id="formations-educatives" className="mt-32 animate-fade-in">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img 
-                src={formationImage} 
-                alt="Formation éducative sur la relation homme-plantes"
+                src={collegeEee1Image} 
+                alt="Éducation et sensibilisation à la botanique"
                 className="w-full h-[400px] md:h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-transparent"></div>
               <div className="absolute inset-0 flex items-end">
                 <div className="p-8 md:p-12 w-full">
                   <h2 className="text-3xl md:text-5xl text-white" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
-                    Formations Éducatives
+                    Éducation & Sensibilisation
                   </h2>
                   <p className="text-lg text-white/90 leading-relaxed max-w-3xl">
                     Interventions auprès des lycées, collèges et entreprises
