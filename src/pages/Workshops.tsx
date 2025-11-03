@@ -106,6 +106,13 @@ const workshops = [
     image: essentialOilsImage,
     icon: Droplets,
   },
+  {
+    title: "Tataki Zome",
+    description: "Explorez l'art ancestral japonais de l'impression végétale par martelage. Transférez les pigments naturels des fleurs et feuilles directement sur textile en créant des empreintes botaniques uniques et éphémères.",
+    duration: "2h",
+    image: photoVegetalImage,
+    icon: Palette,
+  },
 ];
 
 const Workshops = () => {
