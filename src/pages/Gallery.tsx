@@ -11,6 +11,7 @@ import autumnLeavesImage from "@/assets/gallery-autumn-leaves.jpg";
 import basketryImage from "@/assets/gallery-basketry.jpg";
 import atelierAdulteImage from "@/assets/gallery-atelier-adulte.jpg";
 import sachetSenteurImage from "@/assets/gallery-sachet-senteur.jpg";
+import flowerCrownImage from "@/assets/gallery-flower-crown.jpg";
 
 const Gallery = () => {
   const items = [
@@ -28,6 +29,7 @@ const Gallery = () => {
     { src: basketryImage, alt: "Atelier vannerie", caption: "Atelier vannerie et tressage", type: "image" },
     { src: atelierAdulteImage, alt: "Atelier herbier adulte", caption: "Atelier création d'herbier — Adultes", type: "image" },
     { src: sachetSenteurImage, alt: "Sachets de senteur", caption: "Sachets de senteur aux plantes aromatiques", type: "image" },
+    { src: flowerCrownImage, alt: "Couronne de fleurs", caption: "Atelier couronne de fleurs", type: "image" },
   ];
 
   return (
