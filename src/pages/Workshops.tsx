@@ -49,8 +49,9 @@ const workshops = [
     title: "Bombes de Graines",
     description: "Fabriquez des bombes de graines artisanales avec argile, compost et graines sauvages. Une action de guérilla verte pour reverdir nos espaces urbains.",
     duration: "1h30",
-    image: seedBombsImage,
+    image: "/videos/workshop-seed-bombs.mp4",
     icon: Sprout,
+    type: "video",
   },
   {
     title: "Couronnes de Fleurs",
