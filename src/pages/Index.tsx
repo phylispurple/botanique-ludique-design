@@ -177,7 +177,9 @@ const Index = () => {
             
             {/* Ils nous font confiance Section */}
             <div className="space-y-8">
-              <h3 className="text-3xl font-bold text-charcoal text-center lg:text-left">Ils nous font confiance</h3>
+              <h3 className="text-3xl font-bold text-charcoal text-center lg:text-left" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                Ils nous font confiance
+              </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
                 <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <img src="/logos/region-idf.webp" alt="Région Île-de-France" className="max-h-16 w-auto object-contain" />
