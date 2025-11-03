@@ -43,18 +43,18 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4 md:px-6 py-4 md:py-5">
+      <div className="container mx-auto px-4 md:px-6 py-5 md:py-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3 group">
             <Leaf 
-              className="w-8 h-8 md:w-9 md:h-9 transition-all duration-300 group-hover:animate-leaf-sway" 
+              className="w-10 h-10 md:w-12 md:h-12 transition-all duration-300 group-hover:animate-leaf-sway" 
               style={{ color: '#A7B795', strokeWidth: 1.5 }}
             />
             <div className="flex flex-col leading-none animate-fade-in">
-              <span className="font-serif text-xl md:text-[22px] font-light tracking-wider" style={{ color: '#5D653A' }}>
+              <span className="font-serif text-2xl md:text-[28px] font-light tracking-wider" style={{ color: '#5D653A' }}>
                 Botanique
               </span>
-              <span className="font-serif text-xl md:text-[22px] font-light tracking-wider" style={{ color: '#5D653A' }}>
+              <span className="font-serif text-2xl md:text-[28px] font-light tracking-wider" style={{ color: '#5D653A' }}>
                 Ludique
               </span>
             </div>
@@ -72,7 +72,7 @@ const Navigation = () => {
                 >
                   <Link
                     to={link.path}
-                    className={`menu-link font-sans text-sm tracking-wider uppercase flex items-center gap-1 ${
+                    className={`menu-link font-sans text-[15px] tracking-wider uppercase flex items-center gap-1 ${
                       location.pathname === link.path ? "font-medium" : ""
                     }`}
                     style={{ 
@@ -80,7 +80,7 @@ const Navigation = () => {
                     }}
                   >
                     {link.name}
-                    <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180" />
+                    <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
                   </Link>
                   
                   {/* Dropdown Menu */}
@@ -128,7 +128,7 @@ const Navigation = () => {
                 >
                   <Link
                     to={link.path}
-                    className={`menu-link font-sans text-sm tracking-wider uppercase flex items-center gap-1 ${
+                    className={`menu-link font-sans text-[15px] tracking-wider uppercase flex items-center gap-1 ${
                       location.pathname === link.path ? "font-medium" : ""
                     }`}
                     style={{ 
@@ -136,7 +136,7 @@ const Navigation = () => {
                     }}
                   >
                     {link.name}
-                    <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180" />
+                    <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
                   </Link>
                   
                   {/* Dropdown Menu */}
@@ -179,7 +179,7 @@ const Navigation = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`menu-link font-sans text-sm tracking-wider uppercase ${
+                  className={`menu-link font-sans text-[15px] tracking-wider uppercase ${
                     location.pathname === link.path ? "font-medium" : ""
                   }`}
                   style={{ 
