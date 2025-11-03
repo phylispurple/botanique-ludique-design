@@ -46,29 +46,17 @@ const About = () => {
                   <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
                     Sa recherche se concentre sur les interactions entre les citadins et les plantes dans les espaces verts urbains du Grand Paris, explorant les liens entre nature et culture. Vanessa a également suivi des cours sur la "Nature en ville" dispensés par Michel Auduy de l'ENSP.
                   </p>
-                  <p className="text-lg text-charcoal/80 leading-relaxed">
-                    Artiste photographe depuis 2014, elle documente à travers son objectif la beauté et la complexité des relations entre l'humain et le végétal, créant des ponts entre science, art et éducation.
-                  </p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                    Benjamin Riou
-                  </h2>
                   <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
-                    Benjamin Riou est responsable de la logistique et des achats. Passionné par les plantes, il met en place des ateliers de qualité adaptés à tous les publics.
-                  </p>
-                  <p className="text-lg text-charcoal/80 leading-relaxed">
-                    Son expertise en gestion assure que chaque atelier soit parfaitement organisé avec tout le matériel nécessaire.
+                    Artiste photographe depuis 2014, elle documente à travers son objectif la beauté et la complexité des relations entre l'humain et le végétal, créant des ponts entre science, art et éducation.
                   </p>
                 </div>
 
                 <div className="bg-sage/10 rounded-lg p-8 md:p-10">
                   <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                    Notre parcours
+                    Mon parcours
                   </h2>
                   <p className="text-lg text-charcoal/80 leading-relaxed">
-                    Le duo a voyagé pour découvrir diverses pratiques botaniques. Au Japon, ils ont appris des techniques de jardinage et d'aquaponie. Au Kosovo, ils ont participé à des projets d'autonomie, de permaculture et d'écoconstruction, obtenant une certification Youthpath en permaculture et écoconstruction.
+                    J'ai voyagé pour découvrir diverses pratiques botaniques. Au Japon, j'ai appris des techniques de jardinage et d'aquaponie. Au Kosovo, j'ai participé à des projets d'autonomie, de permaculture et d'écoconstruction, obtenant une certification Youthpath en permaculture et écoconstruction.
                   </p>
                 </div>
               </div>
