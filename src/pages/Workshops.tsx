@@ -11,7 +11,7 @@ import basketryImage from "@/assets/workshop-basketry.jpg";
 import photoVegetalImage from "@/assets/workshop-photo-vegetal.jpg";
 import herbariumImage from "@/assets/workshop-herbarium.jpg";
 import sharedGardenImage from "@/assets/workshop-shared-garden.jpg";
-import sachetsImage from "@/assets/workshop-sachets.jpg";
+import sachetSenteurImage from "@/assets/gallery-sachet-senteur.jpg";
 import essentialOilsImage from "@/assets/workshop-essential-oils.jpg";
 import formationImage from "@/assets/formation-education.jpg";
 
@@ -93,7 +93,7 @@ const workshops = [
     title: "Sachets Senteur & Pots-Pourris",
     description: "Composez vos propres mélanges aromatiques avec fleurs séchées, herbes et épices. Créez des objets parfumés pour la maison ancrés dans la tradition.",
     duration: "1h30",
-    image: sachetsImage,
+    image: sachetSenteurImage,
     icon: Flower2,
   },
   {
