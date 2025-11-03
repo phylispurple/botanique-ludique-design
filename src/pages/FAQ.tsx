@@ -52,7 +52,7 @@ const FAQ = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4">
+      <section className="relative pt-32 pb-12 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center gap-4 mb-6 animate-fade-in">
             <HelpCircle className="w-12 h-12" style={{ color: '#A7B795' }} />
@@ -73,7 +73,7 @@ const FAQ = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 px-4">
+      <section className="py-4 px-4">
         <div className="container mx-auto max-w-3xl">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
