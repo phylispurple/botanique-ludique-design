@@ -35,30 +35,22 @@ const About = () => {
                 />
               </div>
 
-              <div className="space-y-8 animate-fade-in">
-                <div>
-                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                    Vanessa Charlery
-                  </h2>
-                  <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
-                    Vanessa Charlery est diplômée de l'EHESS en anthropologie avec une spécialisation en ethnobotanique. Elle a également obtenu une licence en sociologie de l'Université Toulouse 2 et une formation en botanique à l'École Dubreuil.
-                  </p>
-                  <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
-                    Sa recherche se concentre sur les interactions entre les citadins et les plantes dans les espaces verts urbains du Grand Paris, explorant les liens entre nature et culture. Vanessa a également suivi des cours sur la "Nature en ville" dispensés par Michel Auduy de l'ENSP.
-                  </p>
-                  <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
-                    Artiste photographe depuis 2014, elle documente à travers son objectif la beauté et la complexité des relations entre l'humain et le végétal, créant des ponts entre science, art et éducation.
-                  </p>
-                </div>
-
-                <div className="bg-sage/10 rounded-lg p-8 md:p-10">
-                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                    Mon parcours
-                  </h2>
-                  <p className="text-lg text-charcoal/80 leading-relaxed">
-                    J'ai voyagé pour découvrir diverses pratiques botaniques. Au Japon, j'ai appris des techniques de jardinage et d'aquaponie. Au Kosovo, j'ai participé à des projets d'autonomie, de permaculture et d'écoconstruction, obtenant une certification Youthpath en permaculture et écoconstruction.
-                  </p>
-                </div>
+              <div className="space-y-6 animate-fade-in">
+                <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  Vanessa Charlery
+                </h2>
+                <p className="text-lg text-charcoal/80 leading-relaxed">
+                  Vanessa Charlery est diplômée de l'EHESS en anthropologie avec une spécialisation en ethnobotanique. Elle a également obtenu une licence en sociologie de l'Université Toulouse 2 et une formation en botanique à l'École Dubreuil.
+                </p>
+                <p className="text-lg text-charcoal/80 leading-relaxed">
+                  Sa recherche se concentre sur les interactions entre les citadins et les plantes dans les espaces verts urbains du Grand Paris, explorant les liens entre nature et culture. Vanessa a également suivi des cours sur la "Nature en ville" dispensés par Michel Auduy de l'ENSP.
+                </p>
+                <p className="text-lg text-charcoal/80 leading-relaxed">
+                  Artiste photographe depuis 2014, elle documente à travers son objectif la beauté et la complexité des relations entre l'humain et le végétal, créant des ponts entre science, art et éducation.
+                </p>
+                <p className="text-lg text-charcoal/80 leading-relaxed">
+                  Elle a voyagé pour découvrir diverses pratiques botaniques. Au Japon, elle a appris des techniques de jardinage et d'aquaponie. Au Kosovo, elle a participé à des projets d'autonomie, de permaculture et d'écoconstruction, obtenant une certification Youthpath en permaculture et écoconstruction.
+                </p>
               </div>
             </div>
           </div>
