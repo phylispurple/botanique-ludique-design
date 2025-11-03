@@ -55,13 +55,13 @@ const Index = () => {
             {/* Main Title - Elegant and Centered */}
             <div className="space-y-2" style={{ fontFamily: 'Fraunces, serif' }}>
               <h1 className="text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide" style={{ color: '#F7F7EB', lineHeight: '1.2', fontWeight: 400 }}>
-                Les Ateliers
+                Des ateliers
               </h1>
               <h2 className="text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide" style={{ color: '#F7F7EB', lineHeight: '1.2', fontWeight: 400 }}>
-                qui font vivre
+                pour renouer
               </h2>
               <h2 className="text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide" style={{ color: '#F7F7EB', lineHeight: '1.2', fontWeight: 400 }}>
-                la nature.
+                avec le vivant.
               </h2>
             </div>
             
