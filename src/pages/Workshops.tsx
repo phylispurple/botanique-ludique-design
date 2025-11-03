@@ -39,8 +39,8 @@ const workshops = [
     icon: Sparkles,
   },
   {
-    title: "Fresques Végétales",
-    description: "Créez des murales botaniques avec fleurs pressées, feuilles et matériaux naturels. Un processus méditatif qui transforme les plantes en œuvres d'art vivantes.",
+    title: "Tableau Végétal",
+    description: "Créez un tableau botanique vivant avec mousses, plantes stabilisées et matériaux naturels. Une œuvre d'art végétale qui apporte la nature dans votre intérieur sans entretien.",
     duration: "4h",
     image: muralImage,
     icon: Leaf,
