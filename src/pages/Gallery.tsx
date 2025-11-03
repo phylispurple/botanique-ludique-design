@@ -19,6 +19,7 @@ import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
 import collegeEee2Image from "@/assets/gallery-college-eee-2.jpg";
 import collegeEee3Image from "@/assets/gallery-college-eee-3.jpg";
 import collegeEee4Image from "@/assets/gallery-college-eee-4.jpg";
+import fresqueVegetaleImage from "@/assets/gallery-fresque-vegetale.jpg";
 
 const Gallery = () => {
   const [selectedItem, setSelectedItem] = useState<{ src: string; alt: string; caption: string; type: string } | null>(null);
@@ -43,6 +44,7 @@ const Gallery = () => {
     { src: collegeEee2Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
     { src: collegeEee3Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
     { src: collegeEee4Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
+    { src: fresqueVegetaleImage, alt: "Fresque végétale", caption: "Fresques Végétales", type: "image" },
   ];
 
   return (
