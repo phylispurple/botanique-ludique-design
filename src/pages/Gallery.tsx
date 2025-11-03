@@ -1,6 +1,9 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { X } from "lucide-react";
 import aboutImage from "@/assets/about-vanessa.jpg";
 import terrariumImage from "@/assets/gallery-terrarium.jpg";
 import seedBombsImage from "@/assets/gallery-seed-bombs.jpg";
@@ -18,6 +21,8 @@ import collegeEee3Image from "@/assets/gallery-college-eee-3.jpg";
 import collegeEee4Image from "@/assets/gallery-college-eee-4.jpg";
 
 const Gallery = () => {
+  const [selectedItem, setSelectedItem] = useState<{ src: string; alt: string; caption: string; type: string } | null>(null);
+
   const items = [
     { src: aboutImage, alt: "Portrait in nature", caption: "Portrait — Vanessa Charlery", type: "image" },
     { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium — Atelier Botanique Ludique", type: "image" },
@@ -61,7 +66,8 @@ const Gallery = () => {
             {items.map((item, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
+                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer"
+                onClick={() => setSelectedItem(item)}
                 onMouseEnter={(e) => {
                   const vid = e.currentTarget.querySelector('video');
                   vid?.play().catch(err => console.log('Video play failed:', err));
@@ -120,6 +126,40 @@ const Gallery = () => {
           </div>
         </div>
       </main>
+
+      <Dialog open={!!selectedItem} onOpenChange={() => setSelectedItem(null)}>
+        <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 bg-charcoal/95 border-none">
+          <button
+            onClick={() => setSelectedItem(null)}
+            className="absolute top-4 right-4 z-50 p-2 rounded-full bg-off-white/10 hover:bg-off-white/20 transition-colors"
+          >
+            <X className="w-6 h-6 text-off-white" />
+          </button>
+          {selectedItem && (
+            <div className="relative w-full h-full flex items-center justify-center p-8">
+              {selectedItem.type === "video" ? (
+                <video
+                  src={selectedItem.src}
+                  className="max-w-full max-h-[85vh] object-contain"
+                  controls
+                  autoPlay
+                  loop
+                  playsInline
+                />
+              ) : (
+                <img
+                  src={selectedItem.src}
+                  alt={selectedItem.alt}
+                  className="max-w-full max-h-[85vh] object-contain"
+                />
+              )}
+              <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-off-white text-sm italic bg-charcoal/80 px-4 py-2 rounded-full">
+                {selectedItem.caption}
+              </p>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       <Footer />
     </div>
