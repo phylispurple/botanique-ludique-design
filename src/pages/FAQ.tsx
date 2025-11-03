@@ -6,20 +6,20 @@ import { Leaf, HelpCircle } from "lucide-react";
 const FAQ = () => {
   const faqs = [
     {
-      question: "Quels sont les publics concernés par vos ateliers ?",
-      answer: "Mes ateliers s'adressent à tous : enfants à partir de 5 ans, adolescents, adultes, seniors, personnes en situation de handicap, groupes scolaires, entreprises, et structures socio-culturelles. Chaque atelier est adapté au niveau et aux besoins spécifiques du groupe."
+      question: "Où se déroulent les ateliers ?",
+      answer: "Les ateliers peuvent se dérouler dans vos locaux (écoles, entreprises, centres sociaux, MJC) ou en extérieur (parcs, jardins, forêts). Je me déplace dans toute l'Île-de-France avec le matériel nécessaire. Pour des projets hors Île-de-France, n'hésitez pas à me contacter."
     },
     {
-      question: "Où se déroulent les ateliers ?",
-      answer: "Les ateliers peuvent se dérouler dans vos locaux (écoles, entreprises, centres sociaux, MJC) ou en extérieur (parcs, jardins, forêts). Je me déplace dans toute l'Île-de-France avec le matériel nécessaire."
+      question: "Quels sont les publics concernés par vos ateliers ?",
+      answer: "Mes ateliers s'adressent à tous : enfants à partir de 6 ans, adolescents, adultes, seniors, personnes en situation de handicap, groupes scolaires, entreprises, et structures socio-culturelles. Chaque atelier est adapté au niveau et aux besoins spécifiques du groupe."
     },
     {
       question: "Quelle est la durée d'un atelier ?",
-      answer: "La durée varie selon le type d'atelier et le public : de 1h30 pour les enfants à une demi-journée ou journée complète pour les formations professionnelles. Chaque atelier est modulable selon vos contraintes."
+      answer: "La durée varie selon le type d'atelier et le public : de 1h30 pour les ateliers courts à une demi-journée ou journée complète pour les formations professionnelles. Chaque atelier est modulable selon vos contraintes."
     },
     {
       question: "Combien de participants par atelier ?",
-      answer: "Pour garantir une expérience de qualité, je recommande des groupes de 8 à 15 participants pour les ateliers manuels, et jusqu'à 25 personnes pour les sorties nature et conférences. Des groupes plus importants peuvent être divisés en plusieurs sessions."
+      answer: "Pour garantir une expérience de qualité, je recommande des groupes de 8 à 15 participants pour les ateliers créatifs, et jusqu'à 25 personnes pour les sorties nature et conférences. Des groupes plus importants peuvent être divisés en plusieurs sessions."
     },
     {
       question: "Fournissez-vous le matériel ?",
@@ -34,20 +34,8 @@ const FAQ = () => {
       answer: "Absolument ! Aucune connaissance préalable n'est nécessaire. Chaque atelier commence par une introduction claire et progressive. Mon approche pédagogique ludique permet à chacun d'apprendre à son rythme dans une ambiance bienveillante."
     },
     {
-      question: "Proposez-vous des ateliers pour les entreprises ?",
-      answer: "Oui, je propose des ateliers de team-building végétal, des animations RSE, et des conférences sur le bien-être au travail par les plantes. Ces moments permettent de renforcer la cohésion d'équipe tout en sensibilisant à l'environnement."
-    },
-    {
       question: "Comment réserver un atelier ?",
-      answer: "Il suffit de me contacter via le formulaire de contact ou par email. Nous échangerons sur vos besoins, le nombre de participants, les dates souhaitées et je vous ferai parvenir un devis personnalisé."
-    },
-    {
-      question: "Proposez-vous des cycles d'ateliers ou des interventions régulières ?",
-      answer: "Oui, je peux mettre en place des programmes sur plusieurs séances pour approfondir les connaissances botaniques et créatives. C'est idéal pour les écoles, les centres de loisirs, et les structures qui souhaitent un accompagnement sur l'année."
-    },
-    {
-      question: "Les plantes utilisées sont-elles bio et locales ?",
-      answer: "J'accorde une grande importance à l'éthique et à l'écologie. J'utilise au maximum des plantes bio, locales et de saison. Pour certains ateliers, nous pouvons même cueillir ensemble les plantes nécessaires en respectant les bonnes pratiques de cueillette durable."
+      answer: "Il suffit de me contacter via le formulaire de contact ou par email. Nous échangerons sur vos besoins, le nombre de participants, les dates souhaitées et je vous ferai parvenir un devis personnalisé sous 48h."
     },
     {
       question: "Peut-on repartir avec ses créations ?",
@@ -55,11 +43,7 @@ const FAQ = () => {
     },
     {
       question: "Quels sont vos tarifs ?",
-      answer: "Les tarifs varient selon le type d'atelier, la durée, le nombre de participants et la distance de déplacement. Je propose des devis personnalisés adaptés à chaque projet. N'hésitez pas à me contacter pour obtenir une estimation."
-    },
-    {
-      question: "Intervenez-vous dans les établissements scolaires ?",
-      answer: "Oui, j'interviens régulièrement dans les écoles, collèges et lycées. Mes ateliers peuvent s'inscrire dans des projets pédagogiques (EDD, EAC, sciences naturelles) et sont adaptés aux programmes scolaires."
+      answer: "Les tarifs varient selon le type d'atelier, la durée, le nombre de participants et la distance de déplacement. Je propose des devis personnalisés adaptés à chaque projet. N'hésitez pas à me contacter pour obtenir une estimation gratuite."
     }
   ];
 
@@ -79,8 +63,11 @@ const FAQ = () => {
             Questions Fréquentes
           </h1>
           
-          <p className="text-center text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-center text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in mb-4" style={{ animationDelay: '0.1s' }}>
             Vous trouverez ici les réponses aux questions les plus courantes concernant mes ateliers d'ethnobotanique et de créations végétales.
+          </p>
+          <p className="text-center text-sm font-medium animate-fade-in" style={{ color: '#A7B795', animationDelay: '0.2s' }}>
+            📍 Interventions dans toute l'Île-de-France
           </p>
         </div>
       </section>
