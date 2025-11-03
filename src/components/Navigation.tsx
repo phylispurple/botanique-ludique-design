@@ -1,10 +1,26 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X, Leaf, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 const Navigation = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [workshopsOpen, setWorkshopsOpen] = useState(false);
+
+  const workshops = [
+    { name: "Kokedama", id: "kokedama" },
+    { name: "Teinture Végétale", id: "teinture-vegetale" },
+    { name: "Terrariums", id: "terrariums" },
+    { name: "Tableau Végétal", id: "tableau-vegetal" },
+    { name: "Bombes de Graines", id: "bombes-de-graines" },
+    { name: "Couronnes de Fleurs", id: "couronnes-de-fleurs" },
+    { name: "Vannerie", id: "vannerie" },
+    { name: "Photographie Végétale", id: "photographie-vegetale" },
+    { name: "Herbier", id: "herbier" },
+    { name: "Jardin Partagé", id: "jardin-partage" },
+    { name: "Sachets Senteur & Pots-Pourris", id: "sachets-senteur-&-pots-pourris" },
+    { name: "Huiles Essentielles", id: "huiles-essentielles" },
+  ];
 
   const links = [
     { name: "Accueil", path: "/" },
@@ -37,20 +53,76 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8" style={{ marginLeft: '55px' }}>
             {links.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`menu-link font-sans text-sm tracking-wider uppercase ${
-                  location.pathname === link.path
-                    ? "font-medium"
-                    : ""
-                }`}
-                style={{ 
-                  color: location.pathname === link.path ? '#5D653A' : '#8B8B7A'
-                }}
-              >
-                {link.name}
-              </Link>
+              link.name === "Ateliers" ? (
+                <div
+                  key={link.path}
+                  className="relative group"
+                  onMouseEnter={() => setWorkshopsOpen(true)}
+                  onMouseLeave={() => setWorkshopsOpen(false)}
+                >
+                  <Link
+                    to={link.path}
+                    className={`menu-link font-sans text-sm tracking-wider uppercase flex items-center gap-1 ${
+                      location.pathname === link.path ? "font-medium" : ""
+                    }`}
+                    style={{ 
+                      color: location.pathname === link.path ? '#5D653A' : '#8B8B7A'
+                    }}
+                  >
+                    {link.name}
+                    <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180" />
+                  </Link>
+                  
+                  {/* Dropdown Menu */}
+                  <div
+                    className={`absolute top-full left-0 mt-2 w-64 bg-background/95 backdrop-blur-md border border-border rounded-lg shadow-xl overflow-hidden transition-all duration-200 ${
+                      workshopsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                    }`}
+                    style={{ zIndex: 100 }}
+                  >
+                    <div className="py-2">
+                      {workshops.map((workshop) => (
+                        <Link
+                          key={workshop.id}
+                          to={`/workshops#${workshop.id}`}
+                          className="block px-4 py-2 text-sm hover:bg-sage/10 transition-colors"
+                          style={{ color: '#3D3D2E' }}
+                          onClick={() => {
+                            setWorkshopsOpen(false);
+                            setTimeout(() => {
+                              const element = document.getElementById(workshop.id);
+                              if (element) {
+                                const offset = 100;
+                                const elementPosition = element.getBoundingClientRect().top;
+                                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                                window.scrollTo({
+                                  top: offsetPosition,
+                                  behavior: 'smooth'
+                                });
+                              }
+                            }, 100);
+                          }}
+                        >
+                          {workshop.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`menu-link font-sans text-sm tracking-wider uppercase ${
+                    location.pathname === link.path ? "font-medium" : ""
+                  }`}
+                  style={{ 
+                    color: location.pathname === link.path ? '#5D653A' : '#8B8B7A'
+                  }}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
 
@@ -68,18 +140,59 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden mt-6 pb-4 space-y-4 animate-fade-up">
             {links.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className={`block font-sans text-sm tracking-wider uppercase transition-colors ${
-                  location.pathname === link.path
-                    ? "text-primary font-medium"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {link.name}
-              </Link>
+              link.name === "Ateliers" ? (
+                <div key={link.path}>
+                  <button
+                    onClick={() => setWorkshopsOpen(!workshopsOpen)}
+                    className="flex items-center gap-1 font-sans text-sm tracking-wider uppercase transition-colors text-muted-foreground hover:text-foreground w-full"
+                  >
+                    {link.name}
+                    <ChevronDown size={14} className={`transition-transform duration-200 ${workshopsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {workshopsOpen && (
+                    <div className="ml-4 mt-2 space-y-2">
+                      {workshops.map((workshop) => (
+                        <Link
+                          key={workshop.id}
+                          to={`/workshops#${workshop.id}`}
+                          className="block text-xs text-muted-foreground hover:text-foreground"
+                          onClick={() => {
+                            setIsOpen(false);
+                            setWorkshopsOpen(false);
+                            setTimeout(() => {
+                              const element = document.getElementById(workshop.id);
+                              if (element) {
+                                const offset = 100;
+                                const elementPosition = element.getBoundingClientRect().top;
+                                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                                window.scrollTo({
+                                  top: offsetPosition,
+                                  behavior: 'smooth'
+                                });
+                              }
+                            }, 100);
+                          }}
+                        >
+                          {workshop.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block font-sans text-sm tracking-wider uppercase transition-colors ${
+                    location.pathname === link.path
+                      ? "text-primary font-medium"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
         )}

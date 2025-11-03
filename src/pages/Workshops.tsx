@@ -129,6 +129,7 @@ const Workshops = () => {
             {workshops.map((workshop, index) => (
               <div
                 key={workshop.title}
+                id={workshop.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "-")}
                 className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center animate-fade-in ${
                   index % 2 === 1 ? "md:flex-row-reverse" : ""
                 }`}
