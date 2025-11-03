@@ -33,7 +33,7 @@ const Navigation = () => {
   const links = [
     { name: "Accueil", path: "/" },
     { name: "À propos", path: "/about" },
-    { name: "Philosophie", path: "/philosophy" },
+    { name: "Éthique", path: "/philosophy" },
     { name: "Ateliers", path: "/workshops" },
     { name: "Formations", path: "/training" },
     { name: "Galerie", path: "/gallery" },

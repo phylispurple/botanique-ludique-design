@@ -13,7 +13,7 @@ const Philosophy = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-8 text-center">
-              Philosophie
+              Éthique
             </h1>
             <p className="subtitle-italic text-lg text-center mb-20">
               Repenser notre lien au vivant à l'heure de l'urgence écologique
