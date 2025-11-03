@@ -20,6 +20,7 @@ import collegeEee2Image from "@/assets/gallery-college-eee-2.jpg";
 import collegeEee3Image from "@/assets/gallery-college-eee-3.jpg";
 import collegeEee4Image from "@/assets/gallery-college-eee-4.jpg";
 import fresqueVegetaleImage from "@/assets/gallery-fresque-vegetale.jpg";
+import tatakiZomeImage from "@/assets/workshop-tataki-zome.jpg";
 
 const Gallery = () => {
   const [selectedItem, setSelectedItem] = useState<{ src: string; alt: string; caption: string; type: string } | null>(null);
@@ -46,6 +47,7 @@ const Gallery = () => {
     { src: collegeEee3Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
     { src: collegeEee4Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
     { src: fresqueVegetaleImage, alt: "Fresque végétale", caption: "Fresques Végétales", type: "image" },
+    { src: tatakiZomeImage, alt: "Atelier Tataki Zome", caption: "Atelier Tataki Zome — Impression végétale japonaise", type: "image" },
   ];
 
   return (
