@@ -2,7 +2,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles } from "lucide-react";
-import kokedamaImage from "@/assets/workshop-kokedama.jpg";
 import dyeingImage from "@/assets/workshop-dyeing.jpg";
 import terrariumImage from "@/assets/workshop-terrarium.jpg";
 import muralImage from "@/assets/workshop-mural.jpg";
@@ -21,8 +20,9 @@ const workshops = [
     title: "Kokedama",
     description: "Découvrez l'art japonais du jardinage en boules de mousse. Créez vos propres sculptures végétales suspendues en alliant techniques traditionnelles et design contemporain.",
     duration: "2h30",
-    image: kokedamaImage,
+    image: "/videos/workshop-kokedama.mp4",
     icon: Sprout,
+    type: "video",
   },
   {
     title: "Teinture Végétale",
@@ -133,11 +133,23 @@ const Workshops = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className={`${index % 2 === 1 ? "md:order-2" : ""} group`}>
-                  <img
-                    src={workshop.image}
-                    alt={`Atelier ${workshop.title}`}
-                    className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 group-hover:scale-105"
-                  />
+                  {workshop.type === "video" ? (
+                    <video
+                      src={workshop.image}
+                      className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
+                      muted
+                      loop
+                      playsInline
+                      autoPlay
+                      preload="metadata"
+                    />
+                  ) : (
+                    <img
+                      src={workshop.image}
+                      alt={`Atelier ${workshop.title}`}
+                      className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 group-hover:scale-105"
+                    />
+                  )}
                 </div>
 
                 <div className={`space-y-4 ${index % 2 === 1 ? "md:order-1" : ""}`}>
