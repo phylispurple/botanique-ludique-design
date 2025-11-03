@@ -177,7 +177,7 @@ const Workshops = () => {
           </div>
 
           {/* Formation Section */}
-          <div className="mt-32 animate-fade-in">
+          <div id="formations-educatives" className="mt-32 animate-fade-in">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img 
                 src={formationImage} 
@@ -262,7 +262,7 @@ const Workshops = () => {
           </div>
 
           {/* Private & Corporate Section */}
-          <div className="mt-20 rounded-lg p-8 md:p-12 text-center animate-fade-in" style={{ backgroundColor: '#F7F7EB' }}>
+          <div id="entreprises" className="mt-20 rounded-lg p-8 md:p-12 text-center animate-fade-in" style={{ backgroundColor: '#F7F7EB' }}>
             <Leaf size={40} className="mx-auto mb-6" style={{ color: '#A7B795' }} />
             <h3 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
               Ateliers de groupe / entreprises

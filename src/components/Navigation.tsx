@@ -20,6 +20,8 @@ const Navigation = () => {
     { name: "Jardin Partagé", id: "jardin-partage" },
     { name: "Sachets Senteur & Pots-Pourris", id: "sachets-senteur-&-pots-pourris" },
     { name: "Huiles Essentielles", id: "huiles-essentielles" },
+    { name: "Scolaires", id: "formations-educatives", divider: true },
+    { name: "Entreprises", id: "entreprises" },
   ];
 
   const links = [
@@ -82,29 +84,33 @@ const Navigation = () => {
                   >
                     <div className="py-2">
                       {workshops.map((workshop) => (
-                        <Link
-                          key={workshop.id}
-                          to={`/workshops#${workshop.id}`}
-                          className="block px-4 py-2 text-sm hover:bg-sage/10 transition-colors"
-                          style={{ color: '#3D3D2E' }}
-                          onClick={() => {
-                            setWorkshopsOpen(false);
-                            setTimeout(() => {
-                              const element = document.getElementById(workshop.id);
-                              if (element) {
-                                const offset = 100;
-                                const elementPosition = element.getBoundingClientRect().top;
-                                const offsetPosition = elementPosition + window.pageYOffset - offset;
-                                window.scrollTo({
-                                  top: offsetPosition,
-                                  behavior: 'smooth'
-                                });
-                              }
-                            }, 100);
-                          }}
-                        >
-                          {workshop.name}
-                        </Link>
+                        <div key={workshop.id}>
+                          {workshop.divider && (
+                            <div className="border-t border-border my-2"></div>
+                          )}
+                          <Link
+                            to={`/workshops#${workshop.id}`}
+                            className="block px-4 py-2 text-sm hover:bg-sage/10 transition-colors"
+                            style={{ color: '#3D3D2E' }}
+                            onClick={() => {
+                              setWorkshopsOpen(false);
+                              setTimeout(() => {
+                                const element = document.getElementById(workshop.id);
+                                if (element) {
+                                  const offset = 100;
+                                  const elementPosition = element.getBoundingClientRect().top;
+                                  const offsetPosition = elementPosition + window.pageYOffset - offset;
+                                  window.scrollTo({
+                                    top: offsetPosition,
+                                    behavior: 'smooth'
+                                  });
+                                }
+                              }, 100);
+                            }}
+                          >
+                            {workshop.name}
+                          </Link>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -152,29 +158,33 @@ const Navigation = () => {
                   {workshopsOpen && (
                     <div className="ml-4 mt-2 space-y-2">
                       {workshops.map((workshop) => (
-                        <Link
-                          key={workshop.id}
-                          to={`/workshops#${workshop.id}`}
-                          className="block text-xs text-muted-foreground hover:text-foreground"
-                          onClick={() => {
-                            setIsOpen(false);
-                            setWorkshopsOpen(false);
-                            setTimeout(() => {
-                              const element = document.getElementById(workshop.id);
-                              if (element) {
-                                const offset = 100;
-                                const elementPosition = element.getBoundingClientRect().top;
-                                const offsetPosition = elementPosition + window.pageYOffset - offset;
-                                window.scrollTo({
-                                  top: offsetPosition,
-                                  behavior: 'smooth'
-                                });
-                              }
-                            }, 100);
-                          }}
-                        >
-                          {workshop.name}
-                        </Link>
+                        <div key={workshop.id}>
+                          {workshop.divider && (
+                            <div className="border-t border-border my-2"></div>
+                          )}
+                          <Link
+                            to={`/workshops#${workshop.id}`}
+                            className="block text-xs text-muted-foreground hover:text-foreground"
+                            onClick={() => {
+                              setIsOpen(false);
+                              setWorkshopsOpen(false);
+                              setTimeout(() => {
+                                const element = document.getElementById(workshop.id);
+                                if (element) {
+                                  const offset = 100;
+                                  const elementPosition = element.getBoundingClientRect().top;
+                                  const offsetPosition = elementPosition + window.pageYOffset - offset;
+                                  window.scrollTo({
+                                    top: offsetPosition,
+                                    behavior: 'smooth'
+                                  });
+                                }
+                              }, 100);
+                            }}
+                          >
+                            {workshop.name}
+                          </Link>
+                        </div>
                       ))}
                     </div>
                   )}
