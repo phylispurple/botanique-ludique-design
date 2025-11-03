@@ -51,7 +51,20 @@ const Training = () => {
           {/* Three Columns */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             {/* Établissements Scolaires */}
-            <div className="bg-sand rounded-lg p-8 space-y-4 animate-fade-in hover:shadow-lg transition-all">
+            <a
+              href="#colleges-lycees"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('colleges-lycees');
+                if (element) {
+                  const offset = 100;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - offset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+              }}
+              className="bg-sand rounded-lg p-8 space-y-4 animate-fade-in hover:shadow-lg hover:scale-105 transition-all cursor-pointer"
+            >
               <div className="w-12 h-12 bg-sage/20 rounded-full flex items-center justify-center mb-4">
                 <GraduationCap className="text-sage" size={24} />
               </div>
@@ -61,10 +74,24 @@ const Training = () => {
               <p className="text-charcoal/70 text-sm">
                 Parcours de sensibilisation aux enjeux environnementaux
               </p>
-            </div>
+            </a>
 
             {/* Formations Professionnelles */}
-            <div className="bg-sand rounded-lg p-8 space-y-4 animate-fade-in hover:shadow-lg transition-all" style={{ animationDelay: '100ms' }}>
+            <a
+              href="#formations-pro"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('formations-pro');
+                if (element) {
+                  const offset = 100;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - offset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+              }}
+              className="bg-sand rounded-lg p-8 space-y-4 animate-fade-in hover:shadow-lg hover:scale-105 transition-all cursor-pointer"
+              style={{ animationDelay: '100ms' }}
+            >
               <div className="w-12 h-12 bg-sage/20 rounded-full flex items-center justify-center mb-4">
                 <Users className="text-sage" size={24} />
               </div>
@@ -74,10 +101,24 @@ const Training = () => {
               <p className="text-charcoal/70 text-sm">
                 Modules anthropologiques pour paysagistes et agriculteurs
               </p>
-            </div>
+            </a>
 
             {/* Entreprises */}
-            <div className="bg-sand rounded-lg p-8 space-y-4 animate-fade-in hover:shadow-lg transition-all" style={{ animationDelay: '200ms' }}>
+            <a
+              href="#entreprises"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('entreprises');
+                if (element) {
+                  const offset = 100;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - offset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+              }}
+              className="bg-sand rounded-lg p-8 space-y-4 animate-fade-in hover:shadow-lg hover:scale-105 transition-all cursor-pointer"
+              style={{ animationDelay: '200ms' }}
+            >
               <div className="w-12 h-12 bg-sage/20 rounded-full flex items-center justify-center mb-4">
                 <Briefcase className="text-sage" size={24} />
               </div>
@@ -87,7 +128,7 @@ const Training = () => {
               <p className="text-charcoal/70 text-sm">
                 Team-building et conférences sur l'écologie
               </p>
-            </div>
+            </a>
           </div>
 
           {/* Detailed Sections */}
