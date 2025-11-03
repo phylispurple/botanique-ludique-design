@@ -55,26 +55,26 @@ const Index = () => {
             {/* Main Title - Elegant and Centered */}
             <div className="space-y-2" style={{ fontFamily: 'Fraunces, serif' }}>
               <h1 className="text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide" style={{ color: '#F7F7EB', lineHeight: '1.2', fontWeight: 400 }}>
-                Des ateliers
+                L'ethnobotanique
               </h1>
               <h2 className="text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide" style={{ color: '#F7F7EB', lineHeight: '1.2', fontWeight: 400 }}>
-                pour renouer
+                par la création
               </h2>
               <h2 className="text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide" style={{ color: '#F7F7EB', lineHeight: '1.2', fontWeight: 400 }}>
-                avec le vivant.
+                artistique.
               </h2>
             </div>
             
             {/* Description - Centered with max-width */}
             <p className="text-lg sm:text-xl max-w-[700px] mx-auto pt-4" style={{ color: '#F7F7EB', opacity: 0.9, lineHeight: '1.7' }}>
-              Reconnectez-vous à la nature à travers des ateliers créatifs et sensoriels. 
-              De la création de kokedama aux teintures végétales, explorez le monde végétal 
-              autrement.
+              Des ateliers où art et botanique se rencontrent pour explorer les liens ancestraux 
+              entre humains et plantes. Une approche pédagogique et ethnographique qui transforme 
+              chaque geste créatif en voyage culturel.
             </p>
             
             {/* Manifesto - moved up slightly */}
             <p className="text-base sm:text-lg italic max-w-[600px] mx-auto -mt-1" style={{ color: '#E2E7D1', opacity: 0.85, lineHeight: '1.6', fontFamily: 'Fraunces, serif' }}>
-              Réapprendre à vivre avec le végétal, par le geste, la beauté et la lenteur.
+              Comprendre les plantes à travers leurs usages, leurs histoires, et leurs savoirs transmis.
             </p>
             
             {/* Modern Button - improved contrast */}
@@ -127,14 +127,15 @@ const Index = () => {
               </h2>
               <div className="w-20 h-1 bg-sage" />
               <p className="text-lg text-charcoal/80 leading-relaxed">
-                Créée par <strong>Vanessa Charlery</strong>, ethnobotaniste passionnée, 
-                Botanique Ludique propose des ateliers créatifs qui reconnectent l'humain 
-                au végétal à travers l'art, le rituel et le jeu.
+                Créée par <strong>Vanessa Charlery</strong>, ethnobotaniste et anthropologue, 
+                Botanique Ludique propose des ateliers qui allient créativité artistique et transmission 
+                des savoirs ethnobotaniques. Chaque pratique explore les relations culturelles entre humains 
+                et plantes, de l'Asie à l'Europe.
               </p>
               <p className="text-lg text-charcoal/80 leading-relaxed">
-                Chaque atelier est une invitation à ralentir, observer et créer 
-                avec les plantes. De la fabrication de kokedama aux fresques murales 
-                végétales, découvrez une autre façon d'habiter le monde.
+                Au-delà du simple geste créatif, ces ateliers offrent une compréhension profonde 
+                des usages traditionnels, des symboliques végétales et des pratiques ancestrales. 
+                Une approche pédagogique qui enrichit l'expérience artistique d'une dimension culturelle et scientifique.
               </p>
               <button 
                 onClick={handleDownloadBrochure}
