@@ -138,23 +138,25 @@ const Index = () => {
         <div className="absolute bottom-10 right-10 w-60 h-60 bg-earth/20 rounded-full blur-3xl" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 mb-2">
-                <Leaf 
-                  className="w-16 h-16 md:w-20 md:h-20" 
-                  style={{ color: '#A7B795', strokeWidth: 1.5 }}
-                />
-                <div className="flex flex-col leading-none">
-                  <span className="font-serif text-5xl md:text-6xl font-light tracking-wider" style={{ color: '#5D653A' }}>
-                    Botanique
-                  </span>
-                  <span className="font-serif text-5xl md:text-6xl font-light tracking-wider" style={{ color: '#5D653A' }}>
-                    Ludique
-                  </span>
-                </div>
+          {/* Présentation Botanique Ludique - Centré */}
+          <div className="max-w-4xl mx-auto text-center mb-20">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <Leaf 
+                className="w-16 h-16 md:w-20 md:h-20" 
+                style={{ color: '#A7B795', strokeWidth: 1.5 }}
+              />
+              <div className="flex flex-col leading-none">
+                <span className="font-serif text-5xl md:text-6xl font-light tracking-wider" style={{ color: '#5D653A' }}>
+                  Botanique
+                </span>
+                <span className="font-serif text-5xl md:text-6xl font-light tracking-wider" style={{ color: '#5D653A' }}>
+                  Ludique
+                </span>
               </div>
-              <div className="w-20 h-1 bg-sage" />
+            </div>
+            <div className="w-20 h-1 bg-sage mx-auto mb-8" />
+            
+            <div className="space-y-6 mb-8">
               <p className="text-lg text-charcoal/80 leading-relaxed">
                 Créée par <strong>Vanessa Charlery</strong>, ethnobotaniste et anthropologue, 
                 Botanique Ludique propose des ateliers qui allient créativité artistique et transmission 
@@ -166,39 +168,40 @@ const Index = () => {
                 des usages traditionnels, des symboliques végétales et des pratiques ancestrales. 
                 Une approche pédagogique qui enrichit l'expérience artistique d'une dimension culturelle et scientifique.
               </p>
-              <button 
-                onClick={handleDownloadBrochure} 
-                className="inline-flex items-center gap-2 px-8 py-4 bg-sage hover:bg-sage-dark text-off-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-xl"
-              >
-                Télécharger la plaquette
-                <span className="text-xl">→</span>
-              </button>
             </div>
             
-            {/* Ils nous font confiance Section */}
-            <div className="space-y-8">
-              <h3 className="text-3xl font-bold text-charcoal text-center lg:text-left" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
-                Ils nous font confiance
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
-                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <img src="/logos/region-idf.webp" alt="Région Île-de-France" className="max-h-16 w-auto object-contain" />
-                </div>
-                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <img src="/logos/mjc-vesinet.jpg" alt="MJC du Vésinet" className="max-h-16 w-auto object-contain" />
-                </div>
-                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <img src="/logos/jappy-senior.svg" alt="Happy Senior" className="max-h-16 w-auto object-contain" />
-                </div>
-                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <img src="/logos/mjc-chatou.jpeg" alt="MJC Chatou" className="max-h-16 w-auto object-contain" />
-                </div>
-                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <img src="/logos/publicis.jpg" alt="Publicis" className="max-h-16 w-auto object-contain" />
-                </div>
-                <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <img src="/logos/f93.jpg" alt="F93" className="max-h-16 w-auto object-contain" />
-                </div>
+            <button 
+              onClick={handleDownloadBrochure} 
+              className="inline-flex items-center gap-2 px-8 py-4 bg-sage hover:bg-sage-dark text-off-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-xl"
+            >
+              Télécharger la plaquette
+              <span className="text-xl">→</span>
+            </button>
+          </div>
+          
+          {/* Ils nous font confiance - Pleine largeur */}
+          <div className="space-y-8 animate-fade-in">
+            <h3 className="text-3xl md:text-4xl text-charcoal text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+              Ils nous font confiance
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center max-w-5xl mx-auto">
+              <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <img src="/logos/region-idf.webp" alt="Région Île-de-France" className="max-h-16 w-auto object-contain" />
+              </div>
+              <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <img src="/logos/mjc-vesinet.jpg" alt="MJC du Vésinet" className="max-h-16 w-auto object-contain" />
+              </div>
+              <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <img src="/logos/jappy-senior.svg" alt="Happy Senior" className="max-h-16 w-auto object-contain" />
+              </div>
+              <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <img src="/logos/mjc-chatou.jpeg" alt="MJC Chatou" className="max-h-16 w-auto object-contain" />
+              </div>
+              <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <img src="/logos/publicis.jpg" alt="Publicis" className="max-h-16 w-auto object-contain" />
+              </div>
+              <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <img src="/logos/f93.jpg" alt="F93" className="max-h-16 w-auto object-contain" />
               </div>
             </div>
           </div>
