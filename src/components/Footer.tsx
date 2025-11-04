@@ -47,7 +47,7 @@ const Footer = () => {
               <MapPin size={18} className="mt-1 flex-shrink-0" />
               <div className="text-sm">
                 <p>Île-de-France</p>
-                <p className="mt-2 text-xs">Ateliers disponibles pour particuliers et entreprises</p>
+                <p className="mt-2 text-xs">Ateliers disponibles pour particuliers, entreprises et institutions</p>
               </div>
             </div>
           </div>
