@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
-import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import WorkshopFilters, { WorkshopCategory } from "@/components/WorkshopFilters";
+import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer, Pencil } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
 import dyeingImage from "@/assets/workshop-dyeing.jpg";
@@ -14,20 +16,27 @@ import photoVegetalImage from "@/assets/workshop-photo-vegetal.jpg";
 import herbariumImage from "@/assets/workshop-herbarium.jpg";
 import sharedGardenImage from "@/assets/workshop-shared-garden.jpg";
 import sachetSenteurImage from "@/assets/gallery-sachet-senteur.jpg";
-import essentialOilsImage from "@/assets/workshop-essential-oils.jpg";
 import tatakiZomeImage from "@/assets/workshop-tataki-zome.jpg";
-import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
+import veganLeatherImage from "@/assets/workshop-vegan-leather.jpg";
+import cobTotemsImage from "@/assets/workshop-cob-totems.jpg";
+import floralWatersImage from "@/assets/workshop-floral-waters.jpg";
+import recycledPaperImage from "@/assets/workshop-recycled-paper.jpg";
+import plantChalkImage from "@/assets/workshop-plant-chalk.jpg";
 
-const workshops = [
-  {
-    title: "Kokedama",
-    description: "Découvrez l'art japonais du jardinage en boules de mousse, héritage de la tradition bonsaï. Créez vos propres sculptures végétales suspendues en explorant cette pratique séculaire qui unit esthétique et philosophie du vivant.",
-    duration: "2h30",
-    public: "Adultes, enfants dès 10 ans",
-    image: "/videos/workshop-kokedama.mp4",
-    icon: Sprout,
-    type: "video",
-  },
+interface Workshop {
+  title: string;
+  description: string;
+  duration: string;
+  public: string;
+  image: string;
+  video?: string;
+  icon: any;
+  type?: string;
+  category: WorkshopCategory;
+}
+
+const workshops: Workshop[] = [
+  // Créations Textiles & Teintures
   {
     title: "Teinture Végétale",
     description: "Explorez l'alchimie ancestrale de la teinture naturelle pratiquée depuis des millénaires. Extrayez des pigments végétaux selon des techniques traditionnelles pour créer des textiles durables aux tons terreux et authentiques.",
@@ -36,6 +45,37 @@ const workshops = [
     image: dyeingImage,
     video: "/videos/workshop-dyeing.mp4",
     icon: Palette,
+    category: "textiles",
+  },
+  {
+    title: "Tataki Zome",
+    description: "Explorez le tataki zome, art ancestral japonais de l'impression végétale par martelage transmis depuis des siècles. Transférez les pigments naturels des fleurs et feuilles directement sur textile en créant des empreintes botaniques uniques et éphémères.",
+    duration: "2h",
+    public: "Tout public, enfants dès 10 ans",
+    image: tatakiZomeImage,
+    icon: Palette,
+    category: "textiles",
+  },
+  {
+    title: "Cuir Végétal",
+    description: "Créez du cuir végétal à partir de champignons ou de fruits selon des techniques innovantes inspirées des savoir-faire traditionnels. Découvrez cette alternative écologique au cuir animal, durable et biodégradable, en façonnant vos propres matériaux textiles du futur.",
+    duration: "3h30",
+    public: "Adultes, adolescents",
+    image: veganLeatherImage,
+    icon: Palette,
+    category: "textiles",
+  },
+
+  // Jardinage & Plantations
+  {
+    title: "Kokedama",
+    description: "Découvrez l'art japonais du jardinage en boules de mousse, héritage de la tradition bonsaï. Créez vos propres sculptures végétales suspendues en explorant cette pratique séculaire qui unit esthétique et philosophie du vivant.",
+    duration: "2h30",
+    public: "Adultes, enfants dès 10 ans",
+    image: "/videos/workshop-kokedama.mp4",
+    icon: Sprout,
+    type: "video",
+    category: "jardinage",
   },
   {
     title: "Terrariums",
@@ -44,14 +84,7 @@ const workshops = [
     public: "Tout public, enfants dès 8 ans",
     image: terrariumImage,
     icon: Sparkles,
-  },
-  {
-    title: "Tableau Végétal",
-    description: "Créez un tableau botanique vivant avec mousses, plantes stabilisées et matériaux naturels. Explorez l'art du jardin vertical inspiré des traditions japonaises et de l'esthétique végétale contemporaine.",
-    duration: "4h",
-    public: "Adultes",
-    image: muralImage,
-    icon: Leaf,
+    category: "jardinage",
   },
   {
     title: "Bombes de Graines",
@@ -61,7 +94,19 @@ const workshops = [
     image: "/videos/workshop-seed-bombs.mp4",
     icon: Sprout,
     type: "video",
+    category: "jardinage",
   },
+  {
+    title: "Jardin Partagé et Aquaponie",
+    description: "Participez à la création d'un espace collectif alliant jardinage traditionnel et aquaponie. Du design à la plantation, explorez ces systèmes écologiques où plantes et poissons coexistent selon des principes permacoles. Cultivez ensemble la biodiversité et le lien social.",
+    duration: "½ journée",
+    public: "Tout public, groupes",
+    image: sharedGardenImage,
+    icon: Sprout,
+    category: "jardinage",
+  },
+
+  // Art Floral & Compositions
   {
     title: "Couronnes de Fleurs",
     description: "Tressez des couronnes végétales avec fleurs sauvages et feuillages de saison. Un savoir-faire ancestral qui traverse les cultures, des rituels celtes aux traditions méditerranéennes, pour célébrer la beauté éphémère de la nature.",
@@ -69,22 +114,16 @@ const workshops = [
     public: "Tout public, enfants dès 10 ans",
     image: flowerCrownImage,
     icon: Flower2,
+    category: "floral",
   },
   {
-    title: "Vannerie",
-    description: "Apprenez l'art du tressage avec osier et fibres naturelles, pratique artisanale millénaire commune à toutes les civilisations. Créez des paniers fonctionnels et esthétiques en reconnectant avec des gestes universels et intemporels.",
-    duration: "3h30",
-    public: "Adultes, adolescents",
-    image: basketryImage,
+    title: "Tableau Végétal",
+    description: "Créez un tableau botanique vivant avec mousses, plantes stabilisées et matériaux naturels. Explorez l'art du jardin vertical inspiré des traditions japonaises et de l'esthétique végétale contemporaine.",
+    duration: "4h",
+    public: "Adultes",
+    image: muralImage,
     icon: Leaf,
-  },
-  {
-    title: "Photographie Végétale",
-    description: "Explorez le cyanotype et les techniques photographiques ancestrales du XIXe siècle. Imprimez l'empreinte des plantes sur papier comme Anna Atkins, pionnière de l'illustration botanique photographique, dans des nuances de bleu intemporel.",
-    duration: "2h30",
-    public: "Adultes, adolescents",
-    image: photoVegetalImage,
-    icon: Sparkles,
+    category: "floral",
   },
   {
     title: "Herbier",
@@ -94,42 +133,111 @@ const workshops = [
     image: "/videos/workshop-fresque-herbier.mp4",
     icon: Leaf,
     type: "video",
+    category: "floral",
+  },
+
+  // Artisanat & Techniques Ancestrales
+  {
+    title: "Vannerie",
+    description: "Apprenez l'art du tressage avec osier et fibres naturelles, pratique artisanale millénaire commune à toutes les civilisations. Créez des paniers fonctionnels et esthétiques en reconnectant avec des gestes universels et intemporels.",
+    duration: "3h30",
+    public: "Adultes, adolescents",
+    image: basketryImage,
+    icon: Hammer,
+    category: "artisanat",
   },
   {
-    title: "Jardin Partagé et Aquaponie",
-    description: "Participez à la création d'un espace collectif alliant jardinage traditionnel et aquaponie. Du design à la plantation, explorez ces systèmes écologiques où plantes et poissons coexistent selon des principes permacoles. Cultivez ensemble la biodiversité et le lien social.",
+    title: "Photographie Végétale",
+    description: "Explorez le cyanotype et les techniques photographiques ancestrales du XIXe siècle. Imprimez l'empreinte des plantes sur papier comme Anna Atkins, pionnière de l'illustration botanique photographique, dans des nuances de bleu intemporel.",
+    duration: "2h30",
+    public: "Adultes, adolescents",
+    image: photoVegetalImage,
+    icon: Sparkles,
+    category: "artisanat",
+  },
+  {
+    title: "Éco-construction & Totems en Forêt",
+    description: "Apprenez à travailler le torchis pour créer des totems animaliers ou sculptures en pleine forêt. Découvrez les techniques ancestrales de construction naturelle en mêlant argile, paille et créativité dans un cadre sauvage et inspirant.",
     duration: "½ journée",
     public: "Tout public, groupes",
-    image: sharedGardenImage,
-    icon: Sprout,
+    image: cobTotemsImage,
+    icon: Hammer,
+    category: "artisanat",
   },
+
+  // Bien-être & Aromathérapie
   {
     title: "Sachets Senteur & Pots-Pourris",
     description: "Composez vos propres mélanges aromatiques avec fleurs séchées, herbes et épices selon des recettes traditionnelles européennes et orientales. Créez des objets parfumés pour la maison ancrés dans l'histoire des usages domestiques des plantes.",
     duration: "1h30",
     public: "Tout public",
     image: sachetSenteurImage,
-    icon: Flower2,
+    icon: Droplets,
+    category: "bien-etre",
   },
   {
-    title: "Huiles Essentielles",
-    description: "Initiez-vous à l'extraction et l'usage des essences végétales, savoir ancestral transmis par les tradipraticiens et les herboristes. Découvrez les propriétés thérapeutiques des plantes et créez vos propres synergies aromatiques.",
+    title: "Création d'Eaux Florales",
+    description: "Distillez vos propres eaux florales et hydrolats selon les méthodes traditionnelles d'extraction douce. Découvrez les propriétés thérapeutiques et cosmétiques des plantes en créant des eaux aromatiques pures et naturelles pour le bien-être quotidien.",
     duration: "3h",
     public: "Adultes",
-    image: essentialOilsImage,
+    image: floralWatersImage,
     icon: Droplets,
+    category: "bien-etre",
+  },
+
+  // Créations Artistiques & Papeterie
+  {
+    title: "Papier Recyclé & Carnets",
+    description: "Fabriquez votre propre papier recyclé à partir de fibres végétales et reliez votre carnet artisanal selon des techniques ancestrales. De la pulpe à la reliure, explorez tout le processus de création d'un objet unique, écologique et personnalisé.",
+    duration: "4h",
+    public: "Adultes, adolescents",
+    image: recycledPaperImage,
+    icon: Pencil,
+    category: "artistique",
   },
   {
-    title: "Tataki Zome",
-    description: "Explorez le tataki zome, art ancestral japonais de l'impression végétale par martelage transmis depuis des siècles. Transférez les pigments naturels des fleurs et feuilles directement sur textile en créant des empreintes botaniques uniques et éphémères.",
+    title: "Craies Végétales",
+    description: "Créez des craies colorées à partir de pigments végétaux et minéraux naturels pour dessiner de manière écologique. Apprenez à extraire et mélanger les couleurs de la nature pour fabriquer vos propres outils d'art durables et non toxiques.",
     duration: "2h",
-    public: "Tout public, enfants dès 10 ans",
-    image: tatakiZomeImage,
-    icon: Palette,
+    public: "Tout public, enfants dès 8 ans",
+    image: plantChalkImage,
+    icon: Pencil,
+    category: "artistique",
   },
 ];
 
+const categoryTitles: Record<WorkshopCategory, string> = {
+  all: "Tous les ateliers",
+  textiles: "🎨 Créations Textiles & Teintures",
+  jardinage: "🌱 Jardinage & Plantations",
+  floral: "🌸 Art Floral & Compositions",
+  artisanat: "🪵 Artisanat & Techniques Ancestrales",
+  "bien-etre": "🌿 Bien-être & Aromathérapie",
+  artistique: "✏️ Créations Artistiques & Papeterie",
+};
+
 const Workshops = () => {
+  const [activeCategory, setActiveCategory] = useState<WorkshopCategory>("all");
+
+  const filteredWorkshops = activeCategory === "all" 
+    ? workshops 
+    : workshops.filter(w => w.category === activeCategory);
+
+  const workshopCounts = workshops.reduce((acc, workshop) => {
+    acc[workshop.category] = (acc[workshop.category] || 0) + 1;
+    return acc;
+  }, { all: workshops.length } as Record<WorkshopCategory, number>);
+
+  const groupedWorkshops = activeCategory === "all" 
+    ? Object.keys(categoryTitles).filter(cat => cat !== "all").reduce((acc, category) => {
+        const categoryWorkshops = workshops.filter(w => w.category === category);
+        if (categoryWorkshops.length > 0) {
+          acc[category as WorkshopCategory] = categoryWorkshops;
+        }
+        return acc;
+      }, {} as Record<WorkshopCategory, Workshop[]>)
+    : { [activeCategory]: filteredWorkshops };
+
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <FloatingIllustrations />
@@ -137,7 +245,7 @@ const Workshops = () => {
 
       <main className="pt-32 pb-20" style={{ backgroundColor: '#F7F7EB' }}>
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center mb-20 animate-fade-in">
+          <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
             <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
               Ateliers
             </h1>
@@ -149,30 +257,61 @@ const Workshops = () => {
             </p>
           </div>
 
-          <div className="space-y-20">
-            {workshops.map((workshop, index) => (
-              <div
-                key={workshop.title}
-                id={workshop.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "-")}
-                className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center animate-fade-in ${
-                  index % 2 === 1 ? "md:flex-row-reverse" : ""
-                }`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className={`${index % 2 === 1 ? "md:order-2" : ""} group`}>
-                  {workshop.video && workshop.type !== "video" ? (
-                    <Carousel className="w-full">
-                      <CarouselContent>
-                        <CarouselItem>
-                          <img
-                            src={workshop.image}
-                            alt={`Atelier ${workshop.title}`}
-                            className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
-                          />
-                        </CarouselItem>
-                        <CarouselItem>
+          <WorkshopFilters 
+            activeCategory={activeCategory}
+            onCategoryChange={setActiveCategory}
+            workshopCounts={workshopCounts}
+          />
+
+          <div className="space-y-24">
+            {Object.entries(groupedWorkshops).map(([category, categoryWorkshops]) => (
+              <section key={category} className="scroll-mt-32">
+                <h2 
+                  className="text-3xl md:text-4xl text-center mb-12 animate-fade-in"
+                  style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}
+                >
+                  {categoryTitles[category as WorkshopCategory]}
+                </h2>
+                
+                <div className="space-y-20">
+                  {categoryWorkshops.map((workshop, index) => (
+                    <div
+                      key={workshop.title}
+                      id={workshop.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "-")}
+                      className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center animate-fade-in ${
+                        index % 2 === 1 ? "md:flex-row-reverse" : ""
+                      }`}
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      <div className={`${index % 2 === 1 ? "md:order-2" : ""} group`}>
+                        {workshop.video && workshop.type !== "video" ? (
+                          <Carousel className="w-full">
+                            <CarouselContent>
+                              <CarouselItem>
+                                <img
+                                  src={workshop.image}
+                                  alt={`Atelier ${workshop.title}`}
+                                  className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
+                                />
+                              </CarouselItem>
+                              <CarouselItem>
+                                <video
+                                  src={workshop.video}
+                                  className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
+                                  muted
+                                  loop
+                                  playsInline
+                                  autoPlay
+                                  preload="metadata"
+                                />
+                              </CarouselItem>
+                            </CarouselContent>
+                            <CarouselPrevious className="left-4" />
+                            <CarouselNext className="right-4" />
+                          </Carousel>
+                        ) : workshop.type === "video" ? (
                           <video
-                            src={workshop.video}
+                            src={workshop.image}
                             className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
                             muted
                             loop
@@ -180,54 +319,42 @@ const Workshops = () => {
                             autoPlay
                             preload="metadata"
                           />
-                        </CarouselItem>
-                      </CarouselContent>
-                      <CarouselPrevious className="left-4" />
-                      <CarouselNext className="right-4" />
-                    </Carousel>
-                  ) : workshop.type === "video" ? (
-                    <video
-                      src={workshop.image}
-                      className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
-                      muted
-                      loop
-                      playsInline
-                      autoPlay
-                      preload="metadata"
-                    />
-                  ) : (
-                    <img
-                      src={workshop.image}
-                      alt={`Atelier ${workshop.title}`}
-                      className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 group-hover:scale-105"
-                    />
-                  )}
-                </div>
+                        ) : (
+                          <img
+                            src={workshop.image}
+                            alt={`Atelier ${workshop.title}`}
+                            className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 group-hover:scale-105"
+                          />
+                        )}
+                      </div>
 
-                <div className={`space-y-4 ${index % 2 === 1 ? "md:order-1" : ""}`}>
-                  <div className="flex items-center gap-3 mb-2">
-                    <workshop.icon size={24} style={{ color: '#A7B795' }} />
-                    <div className="inline-block px-4 py-1 bg-sage/20 text-sage-dark text-xs uppercase tracking-wider rounded-full font-semibold">
-                      {workshop.duration}
+                      <div className={`space-y-4 ${index % 2 === 1 ? "md:order-1" : ""}`}>
+                        <div className="flex items-center gap-3 mb-2">
+                          <workshop.icon size={24} style={{ color: '#A7B795' }} />
+                          <div className="inline-block px-4 py-1 bg-sage/20 text-sage-dark text-xs uppercase tracking-wider rounded-full font-semibold">
+                            {workshop.duration}
+                          </div>
+                        </div>
+                        <h3 className="text-3xl md:text-4xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                          {workshop.title}
+                        </h3>
+                        <p className="text-sm text-sage-dark font-semibold mb-2">
+                          Public : {workshop.public}
+                        </p>
+                        <p className="text-lg text-charcoal/80 leading-relaxed">
+                          {workshop.description}
+                        </p>
+                        <Link 
+                          to={`/contact?subject=${encodeURIComponent(`Réservation atelier : ${workshop.title}`)}`}
+                          className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                        >
+                          Demande d'information et réservation
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                  <h2 className="text-3xl md:text-4xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                    {workshop.title}
-                  </h2>
-                  <p className="text-sm text-sage-dark font-semibold mb-2">
-                    Public : {workshop.public}
-                  </p>
-                  <p className="text-lg text-charcoal/80 leading-relaxed">
-                    {workshop.description}
-                  </p>
-                  <Link 
-                    to={`/contact?subject=${encodeURIComponent(`Réservation atelier : ${workshop.title}`)}`}
-                    className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
-                  >
-                    Demande d'information et réservation
-                  </Link>
+                  ))}
                 </div>
-              </div>
+              </section>
             ))}
           </div>
 
