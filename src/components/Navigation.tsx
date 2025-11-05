@@ -101,6 +101,16 @@ const Navigation = () => {
                 >
                   <Link
                     to={link.path}
+                    onClick={(e) => {
+                      if (location.pathname === '/workshops') {
+                        e.preventDefault();
+                        window.scrollTo({
+                          top: 0,
+                          behavior: 'smooth'
+                        });
+                      }
+                      setWorkshopsOpen(false);
+                    }}
                     className={`menu-link font-sans text-[15px] tracking-wider uppercase flex items-center gap-1 ${
                       location.pathname === link.path ? "font-medium" : ""
                     }`}
@@ -254,6 +264,18 @@ const Navigation = () => {
                   </button>
                   {workshopsOpen && (
                     <div className="ml-4 mt-2 space-y-3">
+                      <Link
+                        to="/workshops"
+                        className="block text-sm font-medium hover:text-primary mb-3"
+                        style={{ color: '#5D653A' }}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setWorkshopsOpen(false);
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                      >
+                        → Tous les ateliers
+                      </Link>
                       {workshopCategories.map((category) => (
                         <div key={category.category}>
                           <div className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#5D653A' }}>
