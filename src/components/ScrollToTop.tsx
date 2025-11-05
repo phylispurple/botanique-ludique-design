@@ -2,14 +2,18 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // Don't scroll to top for workshops page as it has different behavior
-    if (pathname !== "/workshops") {
+    // For workshops page, only scroll to top if no hash (clicking on main "Ateliers" link)
+    if (pathname === "/workshops") {
+      if (!hash) {
+        window.scrollTo(0, 0);
+      }
+    } else {
       window.scrollTo(0, 0);
     }
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return null;
 };

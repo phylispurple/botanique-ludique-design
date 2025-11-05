@@ -101,15 +101,15 @@ const Navigation = () => {
                 >
                   <Link
                     to={link.path}
-                    onClick={(e) => {
-                      if (location.pathname === '/workshops') {
-                        e.preventDefault();
+                    onClick={() => {
+                      setWorkshopsOpen(false);
+                      // Force scroll to top immediately
+                      setTimeout(() => {
                         window.scrollTo({
                           top: 0,
                           behavior: 'smooth'
                         });
-                      }
-                      setWorkshopsOpen(false);
+                      }, 50);
                     }}
                     className={`menu-link font-sans text-[15px] tracking-wider uppercase flex items-center gap-1 ${
                       location.pathname === link.path ? "font-medium" : ""
