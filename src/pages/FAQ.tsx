@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { SchemaOrg } from "@/components/SchemaOrg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Leaf, HelpCircle } from "lucide-react";
 
@@ -49,6 +51,18 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="FAQ - Questions Fréquentes sur nos Ateliers Botaniques"
+        description="Réponses aux questions fréquentes sur nos ateliers d'ethnobotanique : tarifs, durée, publics, matériel, réservation. Interventions en Île-de-France."
+        keywords="FAQ ateliers botaniques, questions ethnobotanique, tarifs ateliers nature, réservation atelier botanique"
+        canonical="/faq"
+      />
+      <SchemaOrg 
+        type="FAQPage"
+        data={{
+          questions: faqs
+        }}
+      />
       <Navigation />
       
       {/* Hero Section */}

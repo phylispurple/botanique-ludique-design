@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
+import { SEO } from "@/components/SEO";
 import { GraduationCap, Users, Briefcase, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import formationImage from "@/assets/formation-education.jpg";
@@ -9,6 +10,12 @@ import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
 const Training = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+      <SEO 
+        title="Formations Professionnelles - Interventions Scolaires & Entreprises"
+        description="Formations botaniques pour entreprises, interventions en collèges et lycées, team building végétal. Sensibilisation ethnobotanique sur-mesure en Île-de-France."
+        keywords="formation botanique entreprise, team building végétal, intervention collège botanique, animation pédagogique nature, formation ethnobotanique"
+        canonical="/training"
+      />
       <FloatingIllustrations />
       <Navigation />
 

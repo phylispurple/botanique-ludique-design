@@ -4,6 +4,7 @@ import { toast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
+import { SEO } from "@/components/SEO";
 import { Leaf, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
@@ -94,6 +95,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+      <SEO 
+        title="Contact - Réserver un Atelier Botanique"
+        description="Contactez-nous pour réserver un atelier botanique à Paris et en Île-de-France. Devis personnalisé sous 48h pour particuliers, entreprises, écoles."
+        keywords="contact atelier botanique, réserver kokedama, devis formation botanique, contact Botanique Ludique"
+        canonical="/contact"
+      />
       <FloatingIllustrations />
       <Navigation />
 

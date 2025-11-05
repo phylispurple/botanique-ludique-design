@@ -1,11 +1,18 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
+import { SEO } from "@/components/SEO";
 import aboutImage from "@/assets/about-vanessa.jpg";
 
 const About = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+      <SEO 
+        title="À Propos - Vanessa Charlery, Ethnobotaniste et Artiste"
+        description="Découvrez Vanessa Charlery, ethnobotaniste et artiste photographe, fondatrice de Botanique Ludique. Formation EHESS en anthropologie, spécialisée en ethnobotanique."
+        keywords="Vanessa Charlery, ethnobotaniste, anthropologie botanique, EHESS, photographe botanique, éducation environnement"
+        canonical="/about"
+      />
       <FloatingIllustrations />
       <Navigation />
 

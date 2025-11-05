@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
+import { SEO } from "@/components/SEO";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import aboutImage from "@/assets/about-vanessa.jpg";
@@ -66,6 +67,12 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+      <SEO 
+        title="Galerie - Photos de nos Ateliers Botaniques"
+        description="Découvrez en images nos ateliers botaniques : kokedama, teinture végétale, éco-construction, vannerie, terrariums. Photos de nos créations et réalisations."
+        keywords="galerie ateliers botaniques, photos kokedama, teinture végétale images, éco-construction photos, vannerie galerie"
+        canonical="/gallery"
+      />
       <FloatingIllustrations />
       <Navigation />
 

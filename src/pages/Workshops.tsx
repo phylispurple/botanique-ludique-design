@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import WorkshopFilters, { WorkshopCategory } from "@/components/WorkshopFilters";
+import { SEO } from "@/components/SEO";
 import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
@@ -238,6 +239,12 @@ const Workshops = () => {
 
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+      <SEO 
+        title="Ateliers Botaniques - Kokedama, Teinture Végétale, Vannerie"
+        description="Découvrez nos ateliers botaniques créatifs à Paris et en Île-de-France : kokedama, teinture végétale, vannerie, terrarium, éco-construction, bombes de graines et plus encore."
+        keywords="ateliers botaniques, kokedama Paris, teinture végétale, vannerie, terrarium, éco-construction, bombes graines, art floral, ethnobotanique"
+        canonical="/workshops"
+      />
       <FloatingIllustrations />
       <Navigation />
 

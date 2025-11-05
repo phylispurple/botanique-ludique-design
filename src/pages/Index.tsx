@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import Testimonials from "@/components/Testimonials";
 import { SEO } from "@/components/SEO";
+import { SchemaOrg } from "@/components/SchemaOrg";
 import { Leaf } from "lucide-react";
 import heroBackground from "@/assets/hero-background.png";
 
@@ -45,6 +46,42 @@ const Index = () => {
         description="Ateliers botaniques créatifs à Paris et en Île-de-France. Kokedama, teinture végétale, vannerie, terrarium, éco-construction. Ethnobotanique par la création artistique."
         keywords="ateliers botaniques Paris, kokedama, teinture végétale, vannerie, terrarium, ethnobotanique, ateliers nature Paris"
         canonical="/"
+      />
+      <SchemaOrg 
+        type="LocalBusiness"
+        data={{
+          "founder": {
+            "@type": "Person",
+            "name": "Vanessa Charlery",
+            "jobTitle": "Ethnobotaniste et Artiste Photographe"
+          },
+          "makesOffer": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Ateliers Kokedama",
+                "description": "Art japonais du jardinage en boule de mousse"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Teinture Végétale",
+                "description": "Techniques de teinture naturelle avec des plantes"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Vannerie",
+                "description": "Tressage d'osier et fibres naturelles"
+              }
+            }
+          ]
+        }}
       />
       <Navigation />
       

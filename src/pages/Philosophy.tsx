@@ -1,11 +1,18 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
+import { SEO } from "@/components/SEO";
 import { Leaf, Sprout, Sparkles } from "lucide-react";
 
 const Philosophy = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+      <SEO 
+        title="Éthique & Philosophie - Reconnexion au Vivant"
+        description="Notre approche ethnobotanique : repenser le lien humain-nature face à l'urgence écologique. Inspirés par Philippe Descola et Bruno Latour."
+        keywords="ethnobotanique, philosophie nature, écologie, reconnexion vivant, Philippe Descola, Bruno Latour, anthropologie environnement"
+        canonical="/philosophy"
+      />
       <FloatingIllustrations />
       <Navigation />
 
