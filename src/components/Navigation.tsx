@@ -8,20 +8,54 @@ const Navigation = () => {
   const [workshopsOpen, setWorkshopsOpen] = useState(false);
   const [trainingOpen, setTrainingOpen] = useState(false);
 
-  const workshops = [
-    { name: "Kokedama", id: "kokedama" },
-    { name: "Teinture Végétale", id: "teinture-vegetale" },
-    { name: "Terrariums", id: "terrariums" },
-    { name: "Tableau Végétal", id: "tableau-vegetal" },
-    { name: "Bombes de Graines", id: "bombes-de-graines" },
-    { name: "Couronnes de Fleurs", id: "couronnes-de-fleurs" },
-    { name: "Vannerie", id: "vannerie" },
-    { name: "Photographie Végétale", id: "photographie-vegetale" },
-    { name: "Herbier", id: "herbier" },
-    { name: "Jardin Partagé et Aquaponie", id: "jardin-partage-et-aquaponie" },
-    { name: "Sachets Senteur & Pots-Pourris", id: "sachets-senteur-&-pots-pourris" },
-    { name: "Huiles Essentielles", id: "huiles-essentielles" },
-    { name: "Tataki Zome", id: "tataki-zome" },
+  const workshopCategories = [
+    {
+      category: "Créations Textiles & Teintures",
+      workshops: [
+        { name: "Teinture Végétale", id: "teinture-vegetale" },
+        { name: "Tataki Zome", id: "tataki-zome" },
+        { name: "Cuir Végétal", id: "cuir-vegetal" },
+      ]
+    },
+    {
+      category: "Jardinage & Plantations",
+      workshops: [
+        { name: "Kokedama", id: "kokedama" },
+        { name: "Terrariums", id: "terrariums" },
+        { name: "Bombes de Graines", id: "bombes-de-graines" },
+        { name: "Jardin Partagé", id: "jardin-partage-et-aquaponie" },
+      ]
+    },
+    {
+      category: "Art Floral & Compositions",
+      workshops: [
+        { name: "Couronnes de Fleurs", id: "couronnes-de-fleurs" },
+        { name: "Tableau Végétal", id: "tableau-vegetal" },
+        { name: "Herbier", id: "herbier" },
+      ]
+    },
+    {
+      category: "Artisanat & Techniques Ancestrales",
+      workshops: [
+        { name: "Vannerie", id: "vannerie" },
+        { name: "Photographie Végétale", id: "photographie-vegetale" },
+        { name: "Totems en Forêt", id: "eco-construction-totems-en-foret" },
+      ]
+    },
+    {
+      category: "Bien-être & Aromathérapie",
+      workshops: [
+        { name: "Sachets Senteur", id: "sachets-senteur-&-pots-pourris" },
+        { name: "Eaux Florales", id: "creation-d-eaux-florales" },
+      ]
+    },
+    {
+      category: "Créations Artistiques",
+      workshops: [
+        { name: "Papier Recyclé", id: "papier-recycle-&-carnets" },
+        { name: "Craies Végétales", id: "craies-vegetales" },
+      ]
+    },
   ];
 
   const trainingCategories = [
@@ -85,36 +119,44 @@ const Navigation = () => {
                   
                   {/* Dropdown Menu */}
                   <div
-                    className={`absolute top-full left-0 mt-2 w-64 bg-[#F7F7EB] backdrop-blur-md border border-sage/20 rounded-lg shadow-xl overflow-hidden transition-all duration-200 ${
+                    className={`absolute top-full left-0 mt-2 w-72 bg-[#F7F7EB] backdrop-blur-md border border-sage/20 rounded-lg shadow-xl overflow-hidden transition-all duration-200 max-h-[80vh] overflow-y-auto ${
                       workshopsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                     }`}
                     style={{ zIndex: 100 }}
                   >
                     <div className="py-2">
-                      {workshops.map((workshop) => (
-                        <Link
-                          key={workshop.id}
-                          to={`/workshops#${workshop.id}`}
-                          className="block px-4 py-2 text-sm hover:bg-sage/10 transition-colors"
-                          style={{ color: '#3D3D2E' }}
-                          onClick={() => {
-                            setWorkshopsOpen(false);
-                            setTimeout(() => {
-                              const element = document.getElementById(workshop.id);
-                              if (element) {
-                                const offset = 100;
-                                const elementPosition = element.getBoundingClientRect().top;
-                                const offsetPosition = elementPosition + window.pageYOffset - offset;
-                                window.scrollTo({
-                                  top: offsetPosition,
-                                  behavior: 'smooth'
-                                });
-                              }
-                            }, 100);
-                          }}
-                        >
-                          {workshop.name}
-                        </Link>
+                      {workshopCategories.map((category, index) => (
+                        <div key={category.category}>
+                          {index > 0 && <div className="border-t border-sage/20 my-2" />}
+                          <div className="px-4 py-1 text-xs font-semibold uppercase tracking-wider" style={{ color: '#5D653A' }}>
+                            {category.category}
+                          </div>
+                          {category.workshops.map((workshop) => (
+                            <Link
+                              key={workshop.id}
+                              to={`/workshops#${workshop.id}`}
+                              className="block px-6 py-2 text-sm hover:bg-sage/10 transition-colors"
+                              style={{ color: '#3D3D2E' }}
+                              onClick={() => {
+                                setWorkshopsOpen(false);
+                                setTimeout(() => {
+                                  const element = document.getElementById(workshop.id);
+                                  if (element) {
+                                    const offset = 100;
+                                    const elementPosition = element.getBoundingClientRect().top;
+                                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+                                    window.scrollTo({
+                                      top: offsetPosition,
+                                      behavior: 'smooth'
+                                    });
+                                  }
+                                }, 100);
+                              }}
+                            >
+                              {workshop.name}
+                            </Link>
+                          ))}
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -216,31 +258,38 @@ const Navigation = () => {
                     <ChevronDown size={14} className={`transition-transform duration-200 ${workshopsOpen ? 'rotate-180' : ''}`} />
                   </button>
                   {workshopsOpen && (
-                    <div className="ml-4 mt-2 space-y-2">
-                      {workshops.map((workshop) => (
-                        <Link
-                          key={workshop.id}
-                          to={`/workshops#${workshop.id}`}
-                          className="block text-xs text-muted-foreground hover:text-foreground"
-                          onClick={() => {
-                            setIsOpen(false);
-                            setWorkshopsOpen(false);
-                            setTimeout(() => {
-                              const element = document.getElementById(workshop.id);
-                              if (element) {
-                                const offset = 100;
-                                const elementPosition = element.getBoundingClientRect().top;
-                                const offsetPosition = elementPosition + window.pageYOffset - offset;
-                                window.scrollTo({
-                                  top: offsetPosition,
-                                  behavior: 'smooth'
-                                });
-                              }
-                            }, 100);
-                          }}
-                        >
-                          {workshop.name}
-                        </Link>
+                    <div className="ml-4 mt-2 space-y-3">
+                      {workshopCategories.map((category) => (
+                        <div key={category.category}>
+                          <div className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#5D653A' }}>
+                            {category.category}
+                          </div>
+                          {category.workshops.map((workshop) => (
+                            <Link
+                              key={workshop.id}
+                              to={`/workshops#${workshop.id}`}
+                              className="block ml-2 text-xs text-muted-foreground hover:text-foreground py-1"
+                              onClick={() => {
+                                setIsOpen(false);
+                                setWorkshopsOpen(false);
+                                setTimeout(() => {
+                                  const element = document.getElementById(workshop.id);
+                                  if (element) {
+                                    const offset = 100;
+                                    const elementPosition = element.getBoundingClientRect().top;
+                                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+                                    window.scrollTo({
+                                      top: offsetPosition,
+                                      behavior: 'smooth'
+                                    });
+                                  }
+                                }, 100);
+                              }}
+                            >
+                              {workshop.name}
+                            </Link>
+                          ))}
+                        </div>
                       ))}
                     </div>
                   )}
