@@ -18,7 +18,7 @@ import sharedGardenImage from "@/assets/workshop-shared-garden.jpg";
 import sachetSenteurImage from "@/assets/gallery-sachet-senteur.jpg";
 import tatakiZomeImage from "@/assets/workshop-tataki-zome.jpg";
 import veganLeatherImage from "@/assets/workshop-vegan-leather.jpg";
-import cobTotemsImage from "@/assets/workshop-cob-totems.jpg";
+import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.jpg";
 import floralWatersImage from "@/assets/workshop-floral-waters.jpg";
 import recycledPaperImage from "@/assets/workshop-recycled-paper.jpg";
 import plantChalkImage from "@/assets/workshop-plant-chalk.jpg";
@@ -160,7 +160,7 @@ const workshops: Workshop[] = [
     description: "Apprenez à travailler le torchis pour créer des totems animaliers ou sculptures en pleine forêt. Découvrez les techniques ancestrales de construction naturelle en mêlant argile, paille et créativité dans un cadre sauvage et inspirant.",
     duration: "½ journée",
     public: "Tout public, groupes",
-    image: cobTotemsImage,
+    image: kosovoConstruction4,
     icon: Hammer,
     category: "artisanat",
   },
