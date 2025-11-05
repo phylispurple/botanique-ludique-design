@@ -40,6 +40,8 @@ const Navigation = () => {
         { name: "Vannerie", id: "vannerie" },
         { name: "Photographie Végétale", id: "photographie-vegetale" },
         { name: "Totems en Forêt", id: "eco-construction-totems-en-foret" },
+        { name: "Papier Recyclé", id: "papier-recycle-&-carnets" },
+        { name: "Craies Végétales", id: "craies-vegetales" },
       ]
     },
     {
@@ -47,13 +49,6 @@ const Navigation = () => {
       workshops: [
         { name: "Sachets Senteur", id: "sachets-senteur-&-pots-pourris" },
         { name: "Eaux Florales", id: "creation-d-eaux-florales" },
-      ]
-    },
-    {
-      category: "Créations Artistiques",
-      workshops: [
-        { name: "Papier Recyclé", id: "papier-recycle-&-carnets" },
-        { name: "Craies Végétales", id: "craies-vegetales" },
       ]
     },
   ];

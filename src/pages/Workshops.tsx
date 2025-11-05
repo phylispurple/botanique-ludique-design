@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import WorkshopFilters, { WorkshopCategory } from "@/components/WorkshopFilters";
-import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer, Pencil } from "lucide-react";
+import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
 import dyeingImage from "@/assets/workshop-dyeing.jpg";
@@ -185,15 +185,14 @@ const workshops: Workshop[] = [
     category: "bien-etre",
   },
 
-  // Créations Artistiques & Papeterie
   {
     title: "Papier Recyclé & Carnets",
     description: "Fabriquez votre propre papier recyclé à partir de fibres végétales et reliez votre carnet artisanal selon des techniques ancestrales. De la pulpe à la reliure, explorez tout le processus de création d'un objet unique, écologique et personnalisé.",
     duration: "4h",
     public: "Adultes, adolescents",
     image: recycledPaperImage,
-    icon: Pencil,
-    category: "artistique",
+    icon: Hammer,
+    category: "artisanat",
   },
   {
     title: "Craies Végétales",
@@ -201,8 +200,8 @@ const workshops: Workshop[] = [
     duration: "2h",
     public: "Tout public, enfants dès 8 ans",
     image: plantChalkImage,
-    icon: Pencil,
-    category: "artistique",
+    icon: Hammer,
+    category: "artisanat",
   },
 ];
 
@@ -213,7 +212,6 @@ const categoryTitles: Record<WorkshopCategory, string> = {
   floral: "🌸 Art Floral & Compositions",
   artisanat: "🪵 Artisanat & Techniques Ancestrales",
   "bien-etre": "🌿 Bien-être & Aromathérapie",
-  artistique: "✏️ Créations Artistiques & Papeterie",
 };
 
 const Workshops = () => {

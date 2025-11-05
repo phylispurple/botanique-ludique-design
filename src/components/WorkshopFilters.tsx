@@ -1,14 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Palette, Sprout, Flower2, Hammer, Droplets, Pencil } from "lucide-react";
+import { Palette, Sprout, Flower2, Hammer, Droplets } from "lucide-react";
 
 export type WorkshopCategory = 
-  | "all"
-  | "textiles"
-  | "jardinage"
-  | "floral"
-  | "artisanat"
-  | "bien-etre"
-  | "artistique";
+  | "all" 
+  | "textiles" 
+  | "jardinage" 
+  | "floral" 
+  | "artisanat" 
+  | "bien-etre";
 
 interface WorkshopFiltersProps {
   activeCategory: WorkshopCategory;
@@ -23,7 +22,6 @@ const categories = [
   { id: "floral" as WorkshopCategory, label: "Art Floral", icon: Flower2 },
   { id: "artisanat" as WorkshopCategory, label: "Artisanat Ancestral", icon: Hammer },
   { id: "bien-etre" as WorkshopCategory, label: "Bien-être", icon: Droplets },
-  { id: "artistique" as WorkshopCategory, label: "Créations Artistiques", icon: Pencil },
 ];
 
 const WorkshopFilters = ({ activeCategory, onCategoryChange, workshopCounts }: WorkshopFiltersProps) => {
