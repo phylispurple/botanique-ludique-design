@@ -61,10 +61,6 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="mb-16">
-          <TestimonialForm />
-        </div>
-
         {isLoading ? (
           <div className="text-center py-12">
             <p className="text-muted-foreground">Chargement des témoignages...</p>
@@ -74,7 +70,7 @@ const Testimonials = () => {
             <p className="text-muted-foreground">Aucun témoignage pour le moment. Soyez le premier à partager votre expérience !</p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
@@ -112,6 +108,10 @@ const Testimonials = () => {
           ))}
           </div>
         )}
+
+        <div className="mt-16">
+          <TestimonialForm />
+        </div>
       </div>
     </section>
   );
