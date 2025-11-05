@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import Testimonials from "@/components/Testimonials";
 import { Leaf } from "lucide-react";
 import heroBackground from "@/assets/hero-background.png";
 
@@ -197,6 +198,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      {/* Testimonials Section */}
+      <Testimonials />
       
       {/* Call to Action Section */}
       <section className="py-24 px-4 relative overflow-hidden" style={{
