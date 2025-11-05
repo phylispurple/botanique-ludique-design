@@ -1,52 +1,50 @@
+import { useEffect, useState } from "react";
 import { Star, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
+import TestimonialForm from "./TestimonialForm";
 
-const testimonials = [
-  {
-    name: "Sophie M.",
-    role: "Professeure des écoles",
-    content: "Les ateliers de Vanessa ont transformé notre approche pédagogique. Mes élèves ont découvert l'ethnobotanique de manière ludique et créative. Un vrai succès !",
-    rating: 5,
-    workshop: "Bombes de graines"
-  },
-  {
-    name: "Camille D.",
-    role: "Animatrice MJC",
-    content: "Une approche professionnelle et passionnante. Vanessa sait transmettre son savoir avec pédagogie. Les participants repartent enrichis culturellement et créativement.",
-    rating: 5,
-    workshop: "Teinture végétale"
-  },
-  {
-    name: "Jean-Marc L.",
-    role: "Responsable RSE",
-    content: "Nous avons organisé plusieurs ateliers pour nos équipes. L'alliance entre art et botanique a créé une dynamique formidable. Une expérience mémorable !",
-    rating: 5,
-    workshop: "Kokedama"
-  },
-  {
-    name: "Marie R.",
-    role: "Particulière",
-    content: "J'ai participé à l'atelier terrarium et j'ai adoré ! Au-delà de la création, j'ai appris tant de choses sur les plantes et leurs usages traditionnels.",
-    rating: 5,
-    workshop: "Terrarium"
-  },
-  {
-    name: "Thomas B.",
-    role: "Directeur d'établissement",
-    content: "Le parcours de sensibilisation sur les espèces exotiques envahissantes en collège a été un véritable succès pédagogique. Les élèves ont été captivés par cette approche concrète et engagée.",
-    rating: 5,
-    workshop: "Sensibilisation EEE"
-  },
-  {
-    name: "Élise M.",
-    role: "Animatrice senior",
-    content: "Les résidents ont été ravis de l'atelier couronnes de fleurs. Vanessa a su adapter le contenu avec bienveillance et expertise. Merci !",
-    rating: 5,
-    workshop: "Couronnes de fleurs"
-  }
-];
+interface Testimonial {
+  id: string;
+  name: string;
+  role: string;
+  content: string;
+  rating: number;
+  workshop: string;
+}
 
 const Testimonials = () => {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const { toast } = useToast();
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("testimonials")
+          .select("*")
+          .eq("approved", true)
+          .order("created_at", { ascending: false });
+
+        if (error) throw error;
+
+        setTestimonials(data || []);
+      } catch (error) {
+        console.error("Error fetching testimonials:", error);
+        toast({
+          variant: "destructive",
+          title: "Erreur",
+          description: "Impossible de charger les témoignages.",
+        });
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchTestimonials();
+  }, [toast]);
   return (
     <section className="py-24 px-4 bg-gradient-to-b from-background to-sand">
       <div className="container mx-auto max-w-6xl">
@@ -63,7 +61,20 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mb-16">
+          <TestimonialForm />
+        </div>
+
+        {isLoading ? (
+          <div className="text-center py-12">
+            <p className="text-muted-foreground">Chargement des témoignages...</p>
+          </div>
+        ) : testimonials.length === 0 ? (
+          <div className="text-center py-12">
+            <p className="text-muted-foreground">Aucun témoignage pour le moment. Soyez le premier à partager votre expérience !</p>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
@@ -99,7 +110,8 @@ const Testimonials = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
+          </div>
+        )}
       </div>
     </section>
   );
