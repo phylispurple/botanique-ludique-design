@@ -11,6 +11,7 @@ import Philosophy from "./pages/Philosophy";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import LegalNotice from "./pages/LegalNotice";
+import SalesTerms from "./pages/SalesTerms";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
+          <Route path="/conditions-de-vente" element={<SalesTerms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
