@@ -21,6 +21,13 @@ import collegeEee3Image from "@/assets/gallery-college-eee-3.jpg";
 import collegeEee4Image from "@/assets/gallery-college-eee-4.jpg";
 import fresqueVegetaleImage from "@/assets/gallery-fresque-vegetale.jpg";
 import tatakiZomeImage from "@/assets/workshop-tataki-zome.jpg";
+import kosovoConstruction1 from "@/assets/gallery-kosovo-construction-1.jpg";
+import kosovoConstruction2 from "@/assets/gallery-kosovo-construction-2.jpg";
+import kosovoConstruction3 from "@/assets/gallery-kosovo-construction-3.jpg";
+import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.jpg";
+import kosovoConstruction5 from "@/assets/gallery-kosovo-construction-5.jpg";
+import kosovoConstruction6 from "@/assets/gallery-kosovo-construction-6.jpg";
+import kosovoConstruction7 from "@/assets/gallery-kosovo-construction-7.jpg";
 
 const Gallery = () => {
   const [selectedItem, setSelectedItem] = useState<{ src: string; alt: string; caption: string; type: string } | null>(null);
@@ -48,6 +55,13 @@ const Gallery = () => {
     { src: collegeEee4Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
     { src: fresqueVegetaleImage, alt: "Fresque végétale", caption: "Fresques Végétales", type: "image" },
     { src: tatakiZomeImage, alt: "Atelier Tataki Zome", caption: "Atelier Tataki Zome — Impression végétale japonaise", type: "image" },
+    { src: kosovoConstruction1, alt: "Éco-construction au Kosovo", caption: "Construction d'une structure en bois — Kosovo", type: "image" },
+    { src: kosovoConstruction2, alt: "Équipe éco-construction Kosovo", caption: "Travail d'équipe en éco-construction avec torchis — Kosovo", type: "image" },
+    { src: kosovoConstruction3, alt: "Préparation du torchis", caption: "Préparation du torchis en groupe — Kosovo", type: "image" },
+    { src: kosovoConstruction4, alt: "Structure en torchis", caption: "Réalisation d'un bâtiment en torchis et paille — Kosovo", type: "image" },
+    { src: kosovoConstruction5, alt: "Atelier torchis", caption: "Les mains dans le torchis — Kosovo", type: "image" },
+    { src: kosovoConstruction6, alt: "Application du torchis", caption: "Techniques ancestrales de construction en torchis — Kosovo", type: "image" },
+    { src: kosovoConstruction7, alt: "Manipulation du torchis", caption: "Apprentissage des techniques d'éco-construction — Kosovo", type: "image" },
   ];
 
   return (
