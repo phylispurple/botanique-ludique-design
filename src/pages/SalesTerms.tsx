@@ -11,7 +11,7 @@ const SalesTerms = () => {
     <div className="min-h-screen flex flex-col">
         <Navigation />
         
-        <main className="flex-1 container mx-auto px-4 md:px-6 py-12 md:py-20 max-w-4xl">
+        <main className="flex-1 container mx-auto px-4 md:px-6 pt-32 pb-12 md:pb-20 max-w-4xl">
           <h1 className="font-serif text-4xl md:text-5xl mb-8" style={{ color: '#5D653A' }}>
             Conditions de Vente
           </h1>

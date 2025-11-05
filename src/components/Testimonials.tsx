@@ -3,42 +3,42 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    name: "Sophie Martin",
+    name: "Sophie M.",
     role: "Professeure des écoles",
     content: "Les ateliers de Vanessa ont transformé notre approche pédagogique. Mes élèves ont découvert l'ethnobotanique de manière ludique et créative. Un vrai succès !",
     rating: 5,
     workshop: "Bombes de graines"
   },
   {
-    name: "Camille Dubois",
+    name: "Camille D.",
     role: "Animatrice MJC",
     content: "Une approche professionnelle et passionnante. Vanessa sait transmettre son savoir avec pédagogie. Les participants repartent enrichis culturellement et créativement.",
     rating: 5,
     workshop: "Teinture végétale"
   },
   {
-    name: "Jean-Marc Leroy",
+    name: "Jean-Marc L.",
     role: "Responsable RSE",
     content: "Nous avons organisé plusieurs ateliers pour nos équipes. L'alliance entre art et botanique a créé une dynamique formidable. Une expérience mémorable !",
     rating: 5,
     workshop: "Kokedama"
   },
   {
-    name: "Marie Rousseau",
+    name: "Marie R.",
     role: "Particulière",
     content: "J'ai participé à l'atelier terrarium et j'ai adoré ! Au-delà de la création, j'ai appris tant de choses sur les plantes et leurs usages traditionnels.",
     rating: 5,
     workshop: "Terrarium"
   },
   {
-    name: "Thomas Bernard",
+    name: "Thomas B.",
     role: "Directeur d'établissement",
-    content: "Les ateliers Botanique Ludique ont apporté une dimension culturelle exceptionnelle à notre programmation. Les retours des participants sont unanimes.",
+    content: "Le parcours de sensibilisation sur les espèces exotiques envahissantes en collège a été un véritable succès pédagogique. Les élèves ont été captivés par cette approche concrète et engagée.",
     rating: 5,
-    workshop: "Fresques végétales"
+    workshop: "Sensibilisation EEE"
   },
   {
-    name: "Élise Morel",
+    name: "Élise M.",
     role: "Animatrice senior",
     content: "Les résidents ont été ravis de l'atelier couronnes de fleurs. Vanessa a su adapter le contenu avec bienveillance et expertise. Merci !",
     rating: 5,
