@@ -1,7 +1,28 @@
 import { Link } from "react-router-dom";
 import { Instagram, Mail, MapPin } from "lucide-react";
+import { useEffect, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 const Footer = () => {
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    checkAdminStatus();
+  }, []);
+
+  const checkAdminStatus = async () => {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) return;
+
+    const { data: roles } = await supabase
+      .from('user_roles')
+      .select('role')
+      .eq('user_id', user.id)
+      .eq('role', 'admin')
+      .maybeSingle();
+
+    setIsAdmin(!!roles);
+  };
   return (
     <footer className="border-t" style={{ borderColor: '#E2E7D1', backgroundColor: '#F7F7EB' }}>
       <div className="container mx-auto px-4 md:px-6 py-12">
@@ -56,6 +77,9 @@ const Footer = () => {
         <div className="mt-12 pt-8 text-center" style={{ borderTop: '1px solid #E2E7D1' }}>
           <p className="text-sm" style={{ color: '#5D653A', opacity: 0.6 }}>
             © Botanique Ludique 2025 | Créé avec amour et nature | <Link to="/mentions-legales" className="hover:underline">Mentions légales</Link> | <Link to="/conditions-de-vente" className="hover:underline">Conditions de vente</Link>
+            {isAdmin && (
+              <> | <Link to="/admin/testimonials" className="hover:underline font-medium">Administration</Link></>
+            )}
           </p>
         </div>
       </div>

@@ -82,6 +82,22 @@ const TestimonialForm = () => {
 
       if (error) throw error;
 
+      // Send email notification to admin
+      try {
+        await supabase.functions.invoke('send-testimonial-notification', {
+          body: {
+            name: data.name,
+            role: data.role,
+            workshop: data.workshop,
+            content: data.content,
+            rating: data.rating,
+          }
+        });
+      } catch (emailError) {
+        console.error('Error sending notification email:', emailError);
+        // Don't block the user experience if email fails
+      }
+
       toast({
         title: "Témoignage envoyé !",
         description: "Merci pour votre avis. Il sera publié après validation.",
