@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import Testimonials from "@/components/Testimonials";
+import { SEO } from "@/components/SEO";
 import { Leaf } from "lucide-react";
 import heroBackground from "@/assets/hero-background.png";
 
@@ -39,6 +40,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Botanique Ludique - Ateliers Botaniques à Paris"
+        description="Ateliers botaniques créatifs à Paris et en Île-de-France. Kokedama, teinture végétale, vannerie, terrarium, éco-construction. Ethnobotanique par la création artistique."
+        keywords="ateliers botaniques Paris, kokedama, teinture végétale, vannerie, terrarium, ethnobotanique, ateliers nature Paris"
+        canonical="/"
+      />
       <Navigation />
       
       {/* Hero Section - Centered Minimal Design */}
