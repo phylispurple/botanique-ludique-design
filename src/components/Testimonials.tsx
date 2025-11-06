@@ -45,61 +45,60 @@ const Testimonials = () => {
     fetchTestimonials();
   }, [toast]);
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-background to-sand">
+    <section className="py-16 px-4 bg-gradient-to-b from-background to-sand">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16 space-y-4">
+        <div className="text-center mb-10 space-y-2">
           <h2 
-            className="text-4xl md:text-5xl text-charcoal"
+            className="text-3xl md:text-4xl text-charcoal"
             style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}
           >
             Ce qu'ils en disent
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Découvrez les retours de nos participants, professionnels et institutions 
-            qui ont exploré l'ethnobotanique à travers nos ateliers.
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+            Retours de nos participants
           </p>
         </div>
 
         {isLoading ? (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground">Chargement des témoignages...</p>
+          <div className="text-center py-8">
+            <p className="text-muted-foreground text-sm">Chargement...</p>
           </div>
         ) : testimonials.length === 0 ? (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground">Aucun témoignage pour le moment. Soyez le premier à partager votre expérience !</p>
+          <div className="text-center py-8">
+            <p className="text-muted-foreground text-sm">Aucun témoignage pour le moment.</p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {testimonials.map((testimonial, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {testimonials.slice(0, 3).map((testimonial, index) => (
             <Card 
               key={index}
               className="bg-card border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
             >
-              <div className="absolute top-0 right-0 w-20 h-20 bg-sage/5 rounded-bl-full transition-all duration-300 group-hover:bg-sage/10" />
+              <div className="absolute top-0 right-0 w-16 h-16 bg-sage/5 rounded-bl-full transition-all duration-300 group-hover:bg-sage/10" />
               
-              <CardContent className="p-6 space-y-4">
+              <CardContent className="p-5 space-y-3">
                 <div className="flex items-start justify-between">
-                  <Quote className="w-8 h-8 text-sage/30" />
+                  <Quote className="w-6 h-6 text-sage/30" />
                   <div className="flex gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                      <Star key={i} className="w-3.5 h-3.5 fill-accent text-accent" />
                     ))}
                   </div>
                 </div>
 
-                <p className="text-foreground/80 leading-relaxed italic">
+                <p className="text-sm text-foreground/80 leading-relaxed italic line-clamp-4">
                   "{testimonial.content}"
                 </p>
 
-                <div className="pt-4 border-t border-border/50 space-y-1">
-                  <p className="font-semibold text-charcoal">
+                <div className="pt-3 border-t border-border/50 space-y-0.5">
+                  <p className="font-semibold text-charcoal text-sm">
                     {testimonial.name}
                   </p>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-xs text-muted-foreground">
                     {testimonial.role}
                   </p>
                   <p className="text-xs text-sage font-medium">
-                    Atelier : {testimonial.workshop}
+                    {testimonial.workshop}
                   </p>
                 </div>
               </CardContent>
