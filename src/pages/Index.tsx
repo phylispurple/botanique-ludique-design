@@ -289,8 +289,8 @@ const Index = () => {
       </section>
       
       {/* Newsletter Section */}
-      <section className="py-24 px-4" style={{ backgroundColor: '#F7F7EB' }}>
-        <div className="container mx-auto max-w-5xl">
+      <section className="py-16 px-4" style={{ backgroundColor: '#F7F7EB' }}>
+        <div className="container mx-auto max-w-4xl">
           <NewsletterSignup />
         </div>
       </section>
