@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import Testimonials from "@/components/Testimonials";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Leaf } from "lucide-react";
@@ -245,6 +246,13 @@ const Index = () => {
       
       {/* Testimonials Section */}
       <Testimonials />
+      
+      {/* Newsletter Section */}
+      <section className="py-24 px-4" style={{ backgroundColor: '#F7F7EB' }}>
+        <div className="container mx-auto max-w-5xl">
+          <NewsletterSignup />
+        </div>
+      </section>
       
       {/* Call to Action Section */}
       <section className="py-24 px-4 relative overflow-hidden" style={{
