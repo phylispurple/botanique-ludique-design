@@ -166,14 +166,13 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Philosophy Section - Full Width with Contrast */}
+      {/* Philosophy Section - Présentation Botanique Ludique */}
       <section className="bg-sand py-32 px-4 relative overflow-hidden">
         <div className="absolute top-10 left-10 w-40 h-40 bg-sage/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-60 h-60 bg-earth/20 rounded-full blur-3xl" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
-          {/* Présentation Botanique Ludique - Centré */}
-          <div className="max-w-4xl mx-auto text-center mb-20">
+          <div className="max-w-4xl mx-auto text-center">
             <div className="flex flex-col items-center justify-center mb-6">
               <div className="flex items-center gap-3 mb-4">
                 <Leaf 
@@ -214,8 +213,15 @@ const Index = () => {
               <span className="text-xl">→</span>
             </button>
           </div>
-          
-          {/* Ils nous font confiance - Pleine largeur */}
+        </div>
+      </section>
+      
+      {/* Testimonials Section */}
+      <Testimonials />
+      
+      {/* Partners Section - Ils nous font confiance */}
+      <section className="py-24 px-4" style={{ backgroundColor: '#F7F7EB' }}>
+        <div className="container mx-auto max-w-6xl">
           <div className="space-y-8 animate-fade-in">
             <h3 className="text-3xl md:text-4xl text-charcoal text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
               Ils nous font confiance
@@ -241,16 +247,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      
-      {/* Testimonials Section */}
-      <Testimonials />
-      
-      {/* Newsletter Section */}
-      <section className="py-24 px-4" style={{ backgroundColor: '#F7F7EB' }}>
-        <div className="container mx-auto max-w-5xl">
-          <NewsletterSignup />
         </div>
       </section>
       
@@ -289,6 +285,13 @@ const Index = () => {
               Nous contacter
             </Link>
           </div>
+        </div>
+      </section>
+      
+      {/* Newsletter Section */}
+      <section className="py-24 px-4" style={{ backgroundColor: '#F7F7EB' }}>
+        <div className="container mx-auto max-w-5xl">
+          <NewsletterSignup />
         </div>
       </section>
       
