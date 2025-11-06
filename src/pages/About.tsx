@@ -50,13 +50,21 @@ const About = () => {
                   Vanessa Charlery a étudié à l'EHESS en anthropologie avec une spécialisation en ethnobotanique. Elle a également obtenu une licence en sociologie de l'Université Toulouse 2.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Sa recherche se concentre sur les interactions entre les citadins et les plantes dans les espaces verts urbains du Grand Paris, explorant les liens entre nature et culture. Vanessa a également suivi des cours sur la "Nature en ville" dispensés par Michel Auduy de l'ENSP.
+                  Sa recherche, menée sous la direction de Florence Brunois-Pasina à l'EHESS, se concentre sur les interactions entre les citadins et les plantes dans les espaces verts urbains du Grand Paris, explorant les liens entre nature et culture. Vanessa a également suivi des cours sur la "Nature en ville" dispensés par Michel Auduy de l'ENSP.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
                   Artiste photographe depuis 2014, elle documente à travers son objectif la beauté et la complexité des relations entre l'humain et le végétal, créant des ponts entre science, art et éducation.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Elle a voyagé pour découvrir diverses pratiques botaniques. Au Japon, elle a appris des techniques de jardinage et d'aquaponie. Au Kosovo, elle a participé à des projets d'autonomie, de permaculture et d'écoconstruction, obtenant une certification Youthpath en permaculture et écoconstruction.
+                  Elle a voyagé pour découvrir diverses pratiques botaniques. Au Japon, elle a appris des techniques de jardinage et d'aquaponie. Au Kosovo, dans le cadre d'un Service Volontaire Européen avec l'association{' '}
+                  <a 
+                    href="https://www.gaiakosovo.org" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sage hover:text-sage-dark underline transition-colors"
+                  >
+                    Gaia Kosovo
+                  </a>, elle a participé à des projets d'autonomie, de permaculture et d'écoconstruction, obtenant une certification Youthpath en permaculture et écoconstruction.
                 </p>
                 
                 <div className="mt-8 text-center">
