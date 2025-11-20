@@ -13,6 +13,7 @@ import galleryFlowerCrown from "@/assets/gallery-flower-crown.jpg";
 import gallerySeedBombs from "@/assets/gallery-seed-bombs.jpg";
 import galleryBasketry from "@/assets/gallery-basketry.jpg";
 import galleryKokedamaGarden from "@/assets/gallery-kokedama-garden.jpg";
+import tatakiZomeImage from "@/assets/workshop-tataki-zome.jpg";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -183,7 +184,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
             <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
               <img 
                 src={galleryAtelierAdulte}
@@ -204,6 +205,14 @@ const Index = () => {
               <img 
                 src={galleryKokedamaGarden}
                 alt="Kokedama dans un jardin"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
+              <img 
+                src={tatakiZomeImage}
+                alt="Atelier Tataki Zome"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
