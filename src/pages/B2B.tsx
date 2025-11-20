@@ -6,11 +6,24 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Building2, Heart, Leaf, Calendar, Mail, Phone, CheckCircle } from "lucide-react";
+import { Users, Building2, Heart, Leaf, Calendar, Mail, Phone, CheckCircle, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { z } from "zod";
+
+const quoteSchema = z.object({
+  name: z.string().trim().min(1, "Le nom est requis").max(100, "Le nom doit faire moins de 100 caractères"),
+  organization: z.string().trim().min(1, "Le nom de l'organisation est requis").max(200, "Le nom de l'organisation doit faire moins de 200 caractères"),
+  email: z.string().trim().email("Email invalide").max(255, "L'email doit faire moins de 255 caractères"),
+  phone: z.string().trim().max(20, "Le téléphone doit faire moins de 20 caractères").optional(),
+  eventType: z.string().trim().min(1, "Le type d'événement est requis").max(200, "Le type d'événement doit faire moins de 200 caractères"),
+  date: z.string().optional(),
+  message: z.string().trim().max(2000, "Le message doit faire moins de 2000 caractères").optional(),
+});
 
 const B2B = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     organization: "",
@@ -24,20 +37,54 @@ const B2B = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    toast({
-      title: "Demande envoyée !",
-      description: "Nous vous contacterons dans les plus brefs délais.",
-    });
-    
-    setFormData({
-      name: "",
-      organization: "",
-      email: "",
-      phone: "",
-      eventType: "",
-      date: "",
-      message: "",
-    });
+    // Validate form data
+    try {
+      quoteSchema.parse(formData);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          title: "Erreur de validation",
+          description: error.errors[0].message,
+          variant: "destructive",
+        });
+      }
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-b2b-quote-email', {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Demande envoyée !",
+        description: "Nous vous contacterons dans les plus brefs délais (sous 48h).",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        organization: "",
+        email: "",
+        phone: "",
+        eventType: "",
+        date: "",
+        message: "",
+      });
+    } catch (error: any) {
+      console.error('Error sending B2B quote request:', error);
+      toast({
+        title: "Erreur lors de l'envoi",
+        description: "Une erreur est survenue. Veuillez réessayer plus tard.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const clientTypes = [
@@ -244,9 +291,17 @@ const B2B = () => {
                 <Button 
                   type="submit"
                   size="lg"
+                  disabled={isSubmitting}
                   className="w-full bg-sage hover:bg-sage-dark text-white"
                 >
-                  Envoyer ma demande
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Envoi en cours...
+                    </>
+                  ) : (
+                    "Envoyer ma demande"
+                  )}
                 </Button>
               </form>
             </CardContent>
