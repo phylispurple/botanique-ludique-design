@@ -17,6 +17,7 @@ import SalesTerms from "./pages/SalesTerms";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import AdminTestimonials from "./pages/AdminTestimonials";
+import B2B from "./pages/B2B";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/b2b" element={<B2B />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/conditions-de-vente" element={<SalesTerms />} />
           <Route path="/admin/testimonials" element={<AdminTestimonials />} />
