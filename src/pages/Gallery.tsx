@@ -29,6 +29,7 @@ import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.jpg";
 import kosovoConstruction5 from "@/assets/gallery-kosovo-construction-5.jpg";
 import kosovoConstruction6 from "@/assets/gallery-kosovo-construction-6.jpg";
 import kosovoConstruction7 from "@/assets/gallery-kosovo-construction-7.jpg";
+import kokedamaGardenImage from "@/assets/gallery-kokedama-garden.jpg";
 
 const Gallery = () => {
   const [selectedItem, setSelectedItem] = useState<{ src: string; alt: string; caption: string; type: string } | null>(null);
@@ -36,6 +37,7 @@ const Gallery = () => {
   const items = [
     { src: aboutImage, alt: "Portrait in nature", caption: "Portrait — Vanessa Charlery", type: "image" },
     { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium — Atelier Botanique Ludique", type: "image" },
+    { src: kokedamaGardenImage, alt: "Kokedama dans un jardin", caption: "Kokedama dans un jardin naturel", type: "image" },
     { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines — Atelier Botanique Ludique", type: "image" },
     { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier — MJC Le Vésinet", type: "image" },
     { src: "/videos/workshop-demo.mp4", alt: "Immersion dans nos ateliers", caption: "Immersion dans nos ateliers", type: "video" },
