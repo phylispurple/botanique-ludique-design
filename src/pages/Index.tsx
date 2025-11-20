@@ -8,6 +8,10 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Leaf } from "lucide-react";
 import heroBackground from "@/assets/hero-background.png";
+import galleryKokedama from "@/assets/workshop-kokedama.jpg";
+import galleryFlowerCrown from "@/assets/gallery-flower-crown.jpg";
+import gallerySeedBombs from "@/assets/gallery-seed-bombs.jpg";
+import galleryTerrarium from "@/assets/gallery-terrarium.jpg";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -106,62 +110,121 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center text-center space-y-6 animate-fade-up">
             {/* Main Title - Elegant and Centered */}
-            <div className="space-y-2" style={{ fontFamily: 'Fraunces, serif' }}>
-              <h1 className="text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide" style={{
+            <div className="space-y-4" style={{ fontFamily: 'Fraunces, serif' }}>
+              <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide" style={{
                 color: '#F7F7EB',
-                lineHeight: '1.2',
+                lineHeight: '1.3',
                 fontWeight: 400
               }}>
-                L'ethnobotanique
+                Botanique Ludique : L'Art de créer et de reconnecter à la Nature
               </h1>
-              <h2 className="text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide" style={{
+              <h2 className="text-lg sm:text-xl md:text-2xl leading-relaxed" style={{
                 color: '#F7F7EB',
-                lineHeight: '1.2',
-                fontWeight: 400
+                lineHeight: '1.5',
+                fontWeight: 300,
+                opacity: 0.95
               }}>
-                par la création
-              </h2>
-              <h2 className="text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide" style={{
-                color: '#F7F7EB',
-                lineHeight: '1.2',
-                fontWeight: 400
-              }}>
-                artistique.
+                Découvrez des ateliers créatifs pour tous, de l'herbier au Kokédama
               </h2>
             </div>
             
             {/* Description - Centered with max-width */}
-            <p className="text-lg sm:text-xl max-w-[700px] mx-auto pt-4" style={{
+            <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2 font-semibold" style={{
               color: '#F7F7EB',
-              opacity: 0.9,
-              lineHeight: '1.7'
+              opacity: 0.95,
+              lineHeight: '1.6'
             }}>
-              Des ateliers où art et botanique se rencontrent pour explorer les liens ancestraux 
-              entre humains et plantes. Une approche pédagogique et ethnographique qui transforme 
-              chaque geste créatif en voyage culturel.
+              Ateliers disponibles pour les particuliers et les entreprises en Île-de-France.
             </p>
             
-            {/* Manifesto - moved up slightly */}
-            <p className="text-base sm:text-lg italic max-w-[600px] mx-auto -mt-1" style={{
-              color: '#E2E7D1',
-              opacity: 0.85,
-              lineHeight: '1.6',
-              fontFamily: 'Fraunces, serif'
-            }}>
-              Comprendre les plantes à travers leurs usages, leurs histoires, et leurs savoirs transmis.
-            </p>
-            
-            {/* Modern Button - improved contrast */}
-            <button 
-              onClick={() => navigate('/workshops')} 
-              className="group mt-6 px-12 py-5 rounded-full text-lg sm:text-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl" 
-              style={{ backgroundColor: '#C9D2B5', color: '#2B2B2B' }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#A7B795'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#C9D2B5'}
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+              <button
+                onClick={() => navigate('/workshops')}
+                className="px-10 py-5 rounded-full text-xl font-bold transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-lg"
+                style={{
+                  background: 'linear-gradient(135deg, #F4D03F 0%, #F39C12 100%)',
+                  color: '#2A3A2E',
+                  border: '3px solid #2A3A2E'
+                }}
+              >
+                Découvrir les ateliers
+              </button>
+              
+              <button
+                onClick={() => navigate('/b2b')}
+                className="px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.9)',
+                  color: '#2A3A2E',
+                  border: '2px solid #9EB384'
+                }}
+              >
+                Organiser un Team Building
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Gallery Preview Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-background to-sand/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 
+              className="text-3xl md:text-4xl mb-4 text-charcoal"
+              style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}
             >
-              Découvrir les ateliers
-              <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
-            </button>
+              Inspirez-vous : Les plus belles créations de nos participants
+            </h2>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+              Découvrez l'ambiance de nos ateliers, les processus créatifs et les magnifiques résultats
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
+              <img 
+                src={galleryKokedama}
+                alt="Création de Kokedama"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
+              <img 
+                src={galleryFlowerCrown}
+                alt="Atelier couronne de fleurs"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
+              <img 
+                src={gallerySeedBombs}
+                alt="Fabrication de bombes à graines"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
+              <img 
+                src={galleryTerrarium}
+                alt="Atelier terrarium"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/gallery"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-sage hover:bg-sage-dark text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-xl"
+            >
+              Voir toute la galerie
+              <span className="text-xl">→</span>
+            </Link>
           </div>
         </div>
       </section>
