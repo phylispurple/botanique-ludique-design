@@ -8,10 +8,10 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Leaf } from "lucide-react";
 import heroBackground from "@/assets/hero-background.png";
-import galleryKokedama from "@/assets/workshop-kokedama.jpg";
+import galleryAtelierAdulte from "@/assets/gallery-atelier-adulte.jpg";
 import galleryFlowerCrown from "@/assets/gallery-flower-crown.jpg";
 import gallerySeedBombs from "@/assets/gallery-seed-bombs.jpg";
-import galleryTerrarium from "@/assets/gallery-terrarium.jpg";
+import galleryBasketry from "@/assets/gallery-basketry.jpg";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -185,8 +185,8 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
               <img 
-                src={galleryKokedama}
-                alt="Création de Kokedama"
+                src={galleryAtelierAdulte}
+                alt="Participants pendant un atelier"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -209,8 +209,8 @@ const Index = () => {
             </div>
             <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
               <img 
-                src={galleryTerrarium}
-                alt="Atelier terrarium"
+                src={galleryBasketry}
+                alt="Atelier vannerie"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
