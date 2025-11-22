@@ -1,6 +1,7 @@
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@4.0.0";
+import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -10,12 +11,25 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-interface ContactEmailRequest {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+const contactEmailSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  subject: z.string().trim().max(200, "Subject must be less than 200 characters").optional(),
+  message: z.string().trim().min(1, "Message is required").max(2000, "Message must be less than 2000 characters"),
+});
+
+const escapeHtml = (text: string): string => {
+  return text.replace(/[&<>"']/g, (char) => {
+    const entities: Record<string, string> = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    };
+    return entities[char] || char;
+  });
+};
 
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
@@ -24,7 +38,27 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, subject, message }: ContactEmailRequest = await req.json();
+    const body = await req.json();
+    
+    // Validate input with Zod
+    const validationResult = contactEmailSchema.safeParse(body);
+    
+    if (!validationResult.success) {
+      console.error("Validation error:", validationResult.error);
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: "Invalid input data",
+          details: validationResult.error.issues 
+        }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+    
+    const { name, email, subject, message } = validationResult.data;
 
     console.log("Sending contact email from:", email);
 
@@ -39,14 +73,14 @@ const handler = async (req: Request): Promise<Response> => {
           <h2 style="color: #A7B795;">Nouveau message reçu via le formulaire de contact</h2>
           
           <div style="background-color: #F7F7EB; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <p style="margin: 10px 0;"><strong>Nom :</strong> ${name}</p>
-            <p style="margin: 10px 0;"><strong>Email :</strong> ${email}</p>
-            <p style="margin: 10px 0;"><strong>Sujet :</strong> ${subject || "Non spécifié"}</p>
+            <p style="margin: 10px 0;"><strong>Nom :</strong> ${escapeHtml(name)}</p>
+            <p style="margin: 10px 0;"><strong>Email :</strong> ${escapeHtml(email)}</p>
+            <p style="margin: 10px 0;"><strong>Sujet :</strong> ${escapeHtml(subject || "Non spécifié")}</p>
           </div>
           
           <div style="background-color: #ffffff; padding: 20px; border-left: 4px solid #A7B795; margin: 20px 0;">
             <h3 style="color: #3D3D2E; margin-top: 0;">Message :</h3>
-            <p style="color: #3D3D2E; line-height: 1.6; white-space: pre-wrap;">${message}</p>
+            <p style="color: #3D3D2E; line-height: 1.6; white-space: pre-wrap;">${escapeHtml(message)}</p>
           </div>
           
           <hr style="border: none; border-top: 1px solid #C9D2B5; margin: 30px 0;" />
