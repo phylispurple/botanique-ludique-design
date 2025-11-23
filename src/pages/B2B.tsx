@@ -193,12 +193,6 @@ const B2B = () => {
                 <p className="text-muted-foreground">
                   Interventions à Paris, Yvelines (78), Hauts-de-Seine (92) pour vos événements d'entreprise
                 </p>
-                <Link
-                  to="/ateliers-idf"
-                  className="inline-flex items-center gap-1 text-sm text-sage-dark hover:text-sage font-medium transition-colors"
-                >
-                  Voir nos zones →
-                </Link>
               </CardContent>
             </Card>
           </div>
