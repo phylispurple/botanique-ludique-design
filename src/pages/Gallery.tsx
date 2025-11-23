@@ -129,6 +129,7 @@ const Gallery = () => {
                       alt={item.alt}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       style={{ filter: 'sepia(0.1) saturate(0.9)' }}
+                      loading="lazy"
                     />
                   )}
                 </div>

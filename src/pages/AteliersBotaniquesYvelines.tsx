@@ -107,6 +107,7 @@ const AteliersBotaniquesYvelines = () => {
                         src={workshop.image} 
                         alt={`Atelier ${workshop.title} Yvelines`}
                         className="w-full h-48 object-cover rounded-t-lg"
+                        loading="lazy"
                       />
                       <div className="p-6 space-y-3">
                         <h3 className="text-2xl font-semibold text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
