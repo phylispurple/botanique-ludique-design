@@ -37,6 +37,7 @@ const About = () => {
                 <div className="absolute inset-0 rounded-lg" style={{ border: '3px solid #C9D2B5', transform: 'translate(8px, 8px)' }}></div>
                 <img
                   src={aboutImage}
+                  loading="lazy"
                   alt="Vanessa Charlery"
                   className="w-full rounded-lg shadow-lg relative z-10"
                 />

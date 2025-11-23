@@ -73,6 +73,7 @@ const Blog = () => {
                         src={post.image} 
                         alt={post.title}
                         className="w-full h-56 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
                       />
                       <div className="absolute top-4 left-4 bg-sage text-white px-3 py-1 rounded-full text-xs font-semibold">
                         {post.category}

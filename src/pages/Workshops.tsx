@@ -297,6 +297,7 @@ const Workshops = () => {
                                   src={workshop.image}
                                   alt={`Atelier ${workshop.title}`}
                                   className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
+                                  loading="lazy"
                                 />
                               </CarouselItem>
                               <CarouselItem>
@@ -329,6 +330,7 @@ const Workshops = () => {
                             src={workshop.image}
                             alt={`Atelier ${workshop.title}`}
                             className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 group-hover:scale-105"
+                            loading="lazy"
                           />
                         )}
                       </div>
