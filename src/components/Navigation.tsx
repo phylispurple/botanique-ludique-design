@@ -64,6 +64,7 @@ const Navigation = () => {
     { name: "À propos", path: "/about" },
     { name: "Éthique", path: "/philosophy" },
     { name: "Ateliers", path: "/workshops" },
+    { name: "Calendrier", path: "/calendar" },
     { name: "Formations", path: "/training" },
     { name: "Professionnels", path: "/b2b" },
     { name: "Galerie", path: "/gallery" },
