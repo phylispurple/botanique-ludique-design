@@ -1,0 +1,234 @@
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import FloatingIllustrations from "@/components/FloatingIllustrations";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent } from "@/components/ui/card";
+import { MapPin, Calendar, Users, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
+import kokedamaImage from "@/assets/workshop-kokedama.jpg";
+import dyeingImage from "@/assets/workshop-dyeing.jpg";
+import basketryImage from "@/assets/workshop-basketry.jpg";
+
+const AteliersBotaniquesYvelines = () => {
+  const cities = ["Chatou", "Le Pecq", "Le Vésinet", "Saint-Germain-en-Laye", "Croissy-sur-Seine", "Montesson"];
+  
+  const workshops = [
+    {
+      title: "Kokedama",
+      description: "L'art japonais du jardin suspendu s'invite dans les Yvelines ! Créez vos boules de mousse végétales lors de nos ateliers à Chatou et Le Pecq.",
+      image: kokedamaImage,
+      duration: "2h30",
+      public: "Adultes et enfants dès 10 ans"
+    },
+    {
+      title: "Teinture Végétale",
+      description: "Explorez les techniques ancestrales de teinture naturelle avec des plantes locales des Yvelines. Ateliers réguliers à Chatou.",
+      image: dyeingImage,
+      duration: "3h",
+      public: "Tout public"
+    },
+    {
+      title: "Vannerie Sauvage",
+      description: "Apprenez le tressage traditionnel avec osier et fibres naturelles récoltées dans les Yvelines. Stages week-end au Vésinet.",
+      image: basketryImage,
+      duration: "3h30",
+      public: "Adultes et adolescents"
+    }
+  ];
+
+  const benefits = [
+    "Ateliers en petits groupes (8-12 personnes)",
+    "Matériel fourni et produits naturels",
+    "Encadrement par une ethnobotaniste diplômée",
+    "Accessible en transports (RER A, Transilien L)",
+    "Parking disponible sur place",
+    "Ateliers adaptés à tous les niveaux"
+  ];
+
+  return (
+    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+      <SEO 
+        title="Ateliers Botaniques dans les Yvelines (78) - Chatou, Le Pecq, Le Vésinet"
+        description="Découvrez nos ateliers botaniques créatifs dans les Yvelines : kokedama, teinture végétale, vannerie à Chatou, Le Pecq, Le Vésinet, Saint-Germain-en-Laye. Ateliers nature pour tous."
+        keywords="atelier botanique Yvelines, atelier Chatou, atelier Le Pecq, kokedama Yvelines, teinture végétale 78, vannerie Yvelines, atelier nature Yvelines"
+        canonical="/ateliers-botaniques-yvelines"
+      />
+      <FloatingIllustrations />
+      <Navigation />
+
+      <main className="pt-32 pb-20">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            {/* Hero Section */}
+            <div className="text-center mb-16 animate-fade-in">
+              <div className="flex justify-center gap-2 mb-6 flex-wrap">
+                <MapPin className="w-12 h-12 text-sage" />
+              </div>
+              <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
+                Ateliers Botaniques dans les Yvelines (78)
+              </h1>
+              <p className="subtitle-italic text-lg mb-6">
+                Reconnectez-vous à la nature près de chez vous : Chatou, Le Pecq, Le Vésinet
+              </p>
+              <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
+                Botanique Ludique propose des ateliers créatifs et pédagogiques dans tout le département des Yvelines. 
+                Découvrez nos ateliers de kokedama, teinture végétale, vannerie et plus encore dans un cadre convivial 
+                à proximité de Paris.
+              </p>
+            </div>
+
+            {/* Villes couvertes */}
+            <div className="bg-sage/10 rounded-lg p-8 mb-16 animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                Nos Ateliers dans les Yvelines
+              </h2>
+              <div className="flex flex-wrap justify-center gap-3 mb-6">
+                {cities.map((city, index) => (
+                  <div key={index} className="bg-white px-4 py-2 rounded-full text-sage-dark font-semibold shadow-sm">
+                    📍 {city}
+                  </div>
+                ))}
+              </div>
+              <p className="text-center text-charcoal/70">
+                Nous intervenons également dans toute l'Île-de-France pour vos événements groupés
+              </p>
+            </div>
+
+            {/* Workshops Grid */}
+            <div className="mb-16">
+              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                Nos Ateliers Phares dans les Yvelines
+              </h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {workshops.map((workshop, index) => (
+                  <Card key={index} className="hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+                    <CardContent className="p-0">
+                      <img 
+                        src={workshop.image} 
+                        alt={`Atelier ${workshop.title} Yvelines`}
+                        className="w-full h-48 object-cover rounded-t-lg"
+                      />
+                      <div className="p-6 space-y-3">
+                        <h3 className="text-2xl font-semibold text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                          {workshop.title}
+                        </h3>
+                        <div className="flex items-center gap-4 text-sm text-sage-dark">
+                          <div className="flex items-center gap-1">
+                            <Calendar className="w-4 h-4" />
+                            {workshop.duration}
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <Users className="w-4 h-4" />
+                            {workshop.public}
+                          </div>
+                        </div>
+                        <p className="text-charcoal/70 leading-relaxed">
+                          {workshop.description}
+                        </p>
+                        <Link 
+                          to={`/contact?subject=${encodeURIComponent(`Atelier ${workshop.title} - Yvelines`)}`}
+                          className="inline-flex items-center px-4 py-2 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                        >
+                          Réserver
+                        </Link>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Benefits Section */}
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              <div className="bg-sand rounded-lg p-8">
+                <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  Pourquoi Choisir Nos Ateliers ?
+                </h2>
+                <ul className="space-y-3">
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" />
+                      <span className="text-charcoal/80">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-sand rounded-lg p-8">
+                <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  Accès et Pratique
+                </h2>
+                <div className="space-y-4 text-charcoal/80">
+                  <p>
+                    <strong className="text-sage-dark">🚇 En transports :</strong><br />
+                    RER A : Chatou-Croissy, Le Vésinet-Le Pecq<br />
+                    Transilien L : Saint-Germain-en-Laye
+                  </p>
+                  <p>
+                    <strong className="text-sage-dark">🚗 En voiture :</strong><br />
+                    Parking gratuit disponible sur place<br />
+                    À 15 min de Paris par l'A14
+                  </p>
+                  <p>
+                    <strong className="text-sage-dark">📅 Horaires :</strong><br />
+                    Week-ends et mercredis après-midi<br />
+                    Réservation obligatoire
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonials Section */}
+            <div className="bg-white rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                Témoignages de Participants des Yvelines
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-sage/5 p-6 rounded-lg">
+                  <p className="text-charcoal/80 italic mb-4">
+                    "Atelier kokedama au top à Chatou ! Vanessa est très pédagogue et l'ambiance est super conviviale. Je recommande !"
+                  </p>
+                  <p className="text-sage-dark font-semibold">— Marie, Chatou</p>
+                </div>
+                <div className="bg-sage/5 p-6 rounded-lg">
+                  <p className="text-charcoal/80 italic mb-4">
+                    "J'ai adoré l'atelier de teinture végétale au Pecq. On apprend vraiment les techniques anciennes avec des matériaux naturels."
+                  </p>
+                  <p className="text-sage-dark font-semibold">— Sophie, Le Vésinet</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="bg-sage text-off-white rounded-lg p-8 md:p-12 text-center animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                Prêt·e à découvrir nos ateliers dans les Yvelines ?
+              </h2>
+              <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">
+                Consultez notre calendrier complet ou contactez-nous pour organiser votre atelier
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/calendar"
+                  className="inline-flex items-center px-6 py-3 bg-off-white hover:bg-sand text-sage font-semibold uppercase tracking-wider transition-all rounded-full"
+                >
+                  Voir le calendrier
+                </Link>
+                <Link 
+                  to="/contact"
+                  className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-sage text-off-white font-semibold uppercase tracking-wider transition-all rounded-full"
+                >
+                  Nous contacter
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default AteliersBotaniquesYvelines;

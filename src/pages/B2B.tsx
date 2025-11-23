@@ -143,6 +143,97 @@ const B2B = () => {
         </div>
       </section>
 
+      {/* Team Building RSE Section */}
+      <section className="py-16 px-4 bg-sage/5">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 
+              className="text-3xl md:text-4xl mb-6 text-charcoal"
+              style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}
+            >
+              Team Building Botanique & RSE en Île-de-France
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Renforcez la cohésion de vos équipes avec nos ateliers team building botaniques à Paris et dans les Yvelines (78)
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Card className="text-center">
+              <CardContent className="p-6 space-y-4">
+                <div className="bg-sage/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle className="w-8 h-8 text-sage" />
+                </div>
+                <h3 className="text-xl font-semibold text-charcoal">Démarche RSE Concrète</h3>
+                <p className="text-muted-foreground">
+                  Engagez votre entreprise dans une démarche RSE mesurable avec des ateliers éco-responsables
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardContent className="p-6 space-y-4">
+                <div className="bg-sage/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                  <Users className="w-8 h-8 text-sage" />
+                </div>
+                <h3 className="text-xl font-semibold text-charcoal">Team Building Créatif</h3>
+                <p className="text-muted-foreground">
+                  Activités nature originales pour renforcer la cohésion et la créativité de vos équipes
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardContent className="p-6 space-y-4">
+                <div className="bg-sage/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                  <Leaf className="w-8 h-8 text-sage" />
+                </div>
+                <h3 className="text-xl font-semibold text-charcoal">Toute l'Île-de-France</h3>
+                <p className="text-muted-foreground">
+                  Interventions à Paris, Yvelines, Hauts-de-Seine pour vos événements d'entreprise
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="bg-white rounded-lg p-8 md:p-12">
+            <h3 className="text-2xl md:text-3xl mb-6 text-charcoal text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+              Nos Ateliers Team Building les Plus Demandés
+            </h3>
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-sage flex-shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-charcoal mb-1">🌱 Kokedama d'Équipe - 2h30 - Paris/Yvelines</h4>
+                  <p className="text-muted-foreground">Créez ensemble des jardins suspendus japonais pour renforcer la cohésion</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-sage flex-shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-charcoal mb-1">🎨 Teinture Végétale Collaborative - 3h - Chatou/Le Pecq</h4>
+                  <p className="text-muted-foreground">Atelier créatif de teinture naturelle pour des textiles éco-responsables</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-sage flex-shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-charcoal mb-1">🌿 Création de Terrarium - 2h - Paris 16e/Chatou</h4>
+                  <p className="text-muted-foreground">Fabrication d'écosystèmes miniatures pour sensibiliser à la biodiversité</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-sage flex-shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-charcoal mb-1">🪵 Vannerie & Artisanat - 3h30 - Yvelines</h4>
+                  <p className="text-muted-foreground">Ateliers de tressage et techniques ancestrales pour un moment ressourçant</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Client Types */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
