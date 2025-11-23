@@ -71,9 +71,9 @@ const TeamBuildingRSEParis = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="Team Building RSE à Paris - Ateliers Botaniques pour Entreprises"
-        description="Organisez un team building nature et RSE à Paris avec des ateliers botaniques créatifs. Kokedama, teinture végétale, terrarium pour renforcer la cohésion d'équipe et votre démarche RSE."
-        keywords="team building Paris, team building RSE, team building nature, atelier entreprise Paris, cohésion équipe, RSE Paris, team building créatif, événement entreprise nature"
+        title="Team Building RSE Paris, Yvelines, Hauts-de-Seine - Ateliers Botaniques"
+        description="Organisez un team building nature et RSE à Paris, Yvelines (78), Hauts-de-Seine (92) avec des ateliers botaniques créatifs. Kokedama, teinture végétale, terrarium pour renforcer la cohésion d'équipe."
+        keywords="team building Paris, team building RSE, team building Yvelines, team building Hauts-de-Seine, atelier entreprise Paris, cohésion équipe, RSE IDF"
         canonical="/team-building-rse-paris"
       />
       <FloatingIllustrations />
@@ -94,7 +94,7 @@ const TeamBuildingRSEParis = () => {
                 Renforcez vos équipes avec des ateliers botaniques engagés
               </p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
-                Botanique Ludique accompagne les entreprises parisiennes dans leur démarche RSE avec des ateliers 
+                Botanique Ludique accompagne les entreprises à Paris, dans les Yvelines (78) et les Hauts-de-Seine (92) dans leur démarche RSE avec des ateliers 
                 team building créatifs et éco-responsables. Cohésion d'équipe, bien-être au travail et engagement 
                 environnemental au cœur de nos activités.
               </p>

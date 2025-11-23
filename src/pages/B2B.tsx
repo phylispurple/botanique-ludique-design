@@ -117,9 +117,9 @@ const B2B = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Professionnels - Team Building et Événements d'Entreprise"
-        description="Organisez des ateliers botaniques pour vos équipes, événements d'entreprise, collectivités et EHPAD en Île-de-France. Team building créatif et cohésion d'équipe."
-        keywords="team building Paris, événement entreprise, atelier entreprise, RSE, collectivités, EHPAD, animation nature"
+        title="Professionnels - Team Building et Événements Nature Paris, Yvelines, 92"
+        description="Organisez des ateliers botaniques pour vos équipes, événements d'entreprise, collectivités et EHPAD à Paris, Yvelines (78) et Hauts-de-Seine (92). Team building créatif et cohésion d'équipe."
+        keywords="team building Paris, événement entreprise, atelier entreprise Yvelines, atelier entreprise Hauts-de-Seine, RSE, collectivités, EHPAD, animation nature"
         canonical="/b2b"
       />
       <Navigation />
@@ -136,10 +136,10 @@ const B2B = () => {
           >
             Ateliers Botaniques pour Professionnels
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Renforcez la cohésion de vos équipes et engagez votre démarche RSE 
-            avec des ateliers créatifs et nature en Île-de-France
-          </p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Renforcez la cohésion de vos équipes et engagez votre démarche RSE 
+              avec des ateliers créatifs et nature à Paris, dans les Yvelines (78) et les Hauts-de-Seine (92)
+            </p>
         </div>
       </section>
 
@@ -154,7 +154,7 @@ const B2B = () => {
               Team Building Botanique & RSE en Île-de-France
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Renforcez la cohésion de vos équipes avec nos ateliers team building botaniques à Paris et dans les Yvelines (78)
+              Renforcez la cohésion de vos équipes avec nos ateliers team building botaniques à Paris, dans les Yvelines (78) et les Hauts-de-Seine (92)
             </p>
           </div>
 
@@ -190,7 +190,7 @@ const B2B = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-charcoal">Toute l'Île-de-France</h3>
                 <p className="text-muted-foreground">
-                  Interventions à Paris, Yvelines, Hauts-de-Seine pour vos événements d'entreprise
+                  Interventions à Paris, Yvelines (78), Hauts-de-Seine (92) pour vos événements d'entreprise
                 </p>
               </CardContent>
             </Card>
