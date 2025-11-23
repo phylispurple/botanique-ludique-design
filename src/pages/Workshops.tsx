@@ -257,18 +257,9 @@ const Workshops = () => {
             <p className="subtitle-italic text-lg mb-6">
               Des expériences botaniques pour éveiller vos sens à Paris, Chatou, Le Pecq, Nanterre, Boulogne.
             </p>
-            <p className="text-base text-charcoal/80 leading-relaxed mb-6">
+            <p className="text-base text-charcoal/80 leading-relaxed">
               Expériences botaniques immersives pour particuliers et groupes en Île-de-France. Ateliers disponibles à Paris, dans les Yvelines (78) et les Hauts-de-Seine (92) : Chatou, Le Pecq, Le Vésinet, Saint-Germain-en-Laye, Nanterre, Boulogne-Billancourt. Chaque atelier est conçu pour vous reconnecter avec la nature à travers la créativité manuelle et la pratique consciente.
             </p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sage/10 border border-sage/20 rounded-full text-sm">
-              <span className="text-charcoal/80">Ateliers disponibles partout en Île-de-France</span>
-              <Link 
-                to="/ateliers-idf" 
-                className="text-sage-dark hover:text-sage font-semibold transition-colors"
-              >
-                En savoir plus →
-              </Link>
-            </div>
           </div>
 
           <WorkshopFilters 

@@ -130,14 +130,6 @@ const Navigation = () => {
                     style={{ zIndex: 100 }}
                   >
                     <div className="py-2">
-                      <Link
-                        to="/ateliers-idf"
-                        className="block px-4 py-3 bg-sage/5 border-b border-sage/20 text-sm font-semibold hover:bg-sage/10 transition-colors"
-                        style={{ color: '#5D653A' }}
-                        onClick={() => setWorkshopsOpen(false)}
-                      >
-                        📍 Ateliers en Île-de-France
-                      </Link>
                       {workshopCategories.map((category, index) => (
                         <div key={category.category}>
                           {index > 0 && <div className="border-t border-sage/20 my-2" />}
@@ -283,17 +275,6 @@ const Navigation = () => {
                         }}
                       >
                         → Tous les ateliers
-                      </Link>
-                      <Link
-                        to="/ateliers-idf"
-                        className="block text-sm font-medium hover:text-primary mb-3"
-                        style={{ color: '#5D653A' }}
-                        onClick={() => {
-                          setIsOpen(false);
-                          setWorkshopsOpen(false);
-                        }}
-                      >
-                        📍 Ateliers en Île-de-France
                       </Link>
                       {workshopCategories.map((category) => (
                         <div key={category.category}>
