@@ -49,9 +49,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Botanique Ludique - Ateliers Botaniques à Paris"
-        description="Ateliers botaniques créatifs à Paris et en Île-de-France. Kokedama, teinture végétale, vannerie, terrarium, éco-construction. Ethnobotanique par la création artistique."
-        keywords="ateliers botaniques Paris, kokedama, teinture végétale, vannerie, terrarium, ethnobotanique, ateliers nature Paris"
+        title="Botanique Ludique - Ateliers Botaniques à Paris, Yvelines (78), Hauts-de-Seine (92)"
+        description="Ateliers botaniques créatifs à Paris, Yvelines (78) et Hauts-de-Seine (92). Kokedama, teinture végétale, vannerie, terrarium. Particuliers et entreprises."
+        keywords="ateliers botaniques Paris, ateliers nature Yvelines 78, ateliers Hauts-de-Seine 92, kokedama Paris, teinture végétale Yvelines, vannerie Hauts-de-Seine, team building nature Paris, atelier botanique Chatou, atelier végétal Saint-Germain-en-Laye"
         canonical="/"
       />
       <SchemaOrg 
@@ -136,7 +136,7 @@ const Index = () => {
               opacity: 0.95,
               lineHeight: '1.6'
             }}>
-              Ateliers disponibles pour les particuliers et les entreprises en Île-de-France.
+              Ateliers à Paris, Yvelines (78) et Hauts-de-Seine (92) pour particuliers et entreprises.
             </p>
             
             {/* CTA Buttons */}
@@ -275,7 +275,7 @@ const Index = () => {
             <div className="space-y-6 mb-8">
               <p className="text-lg text-charcoal/80 leading-relaxed">
                 Créée par <strong>Vanessa Charlery</strong>, ethnobotaniste et anthropologue, 
-                Botanique Ludique propose des ateliers qui allient créativité artistique et transmission 
+                Botanique Ludique propose des ateliers à Paris, Yvelines (78) et Hauts-de-Seine (92) qui allient créativité artistique et transmission 
                 des savoirs ethnobotaniques. Chaque pratique explore les relations culturelles entre humains 
                 et plantes, de l'Asie à l'Europe.
               </p>
@@ -349,7 +349,7 @@ const Index = () => {
             color: '#F7F7EB',
             opacity: 0.9
           }}>
-            Rejoignez-nous pour un atelier et découvrez une nouvelle façon 
+            Rejoignez-nous pour un atelier à Paris, Yvelines (78) ou Hauts-de-Seine (92) et découvrez une nouvelle façon 
             de créer avec la nature.
           </p>
           <div className="flex flex-wrap gap-4 justify-center pt-4">
