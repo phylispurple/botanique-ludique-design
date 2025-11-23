@@ -204,28 +204,28 @@ const B2B = () => {
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-6 h-6 text-sage flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-charcoal mb-1">🌱 Kokedama d'Équipe - 2h30 - Paris/Yvelines</h4>
+                  <h4 className="font-semibold text-charcoal mb-1">🌱 Kokedama d'Équipe - 2h30 - Paris, Yvelines, Hauts-de-Seine</h4>
                   <p className="text-muted-foreground">Créez ensemble des jardins suspendus japonais pour renforcer la cohésion</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-6 h-6 text-sage flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-charcoal mb-1">🎨 Teinture Végétale Collaborative - 3h - Chatou/Le Pecq</h4>
+                  <h4 className="font-semibold text-charcoal mb-1">🎨 Teinture Végétale Collaborative - 3h - Paris, Yvelines, Hauts-de-Seine</h4>
                   <p className="text-muted-foreground">Atelier créatif de teinture naturelle pour des textiles éco-responsables</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-6 h-6 text-sage flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-charcoal mb-1">🌿 Création de Terrarium - 2h - Paris 16e/Chatou</h4>
+                  <h4 className="font-semibold text-charcoal mb-1">🌿 Création de Terrarium - 2h - Paris, Yvelines, Hauts-de-Seine</h4>
                   <p className="text-muted-foreground">Fabrication d'écosystèmes miniatures pour sensibiliser à la biodiversité</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-6 h-6 text-sage flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-charcoal mb-1">🪵 Vannerie & Artisanat - 3h30 - Yvelines</h4>
+                  <h4 className="font-semibold text-charcoal mb-1">🪵 Vannerie & Artisanat - 3h30 - Paris, Yvelines, Hauts-de-Seine</h4>
                   <p className="text-muted-foreground">Ateliers de tressage et techniques ancestrales pour un moment ressourçant</p>
                 </div>
               </div>
