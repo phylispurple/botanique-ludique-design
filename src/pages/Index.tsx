@@ -284,6 +284,19 @@ const Index = () => {
                 des usages traditionnels, des symboliques végétales et des pratiques ancestrales. 
                 Une approche pédagogique qui enrichit l'expérience artistique d'une dimension culturelle et scientifique.
               </p>
+              <div className="bg-sage/10 border border-sage/20 rounded-xl p-6 mt-6">
+                <p className="text-base text-charcoal/80 leading-relaxed mb-4">
+                  Nos ateliers sont disponibles dans toute l'Île-de-France, avec des interventions régulières 
+                  à Paris, dans les Yvelines (Chatou, Saint-Germain-en-Laye, Le Vésinet) et les Hauts-de-Seine (Nanterre, Boulogne-Billancourt).
+                </p>
+                <Link 
+                  to="/ateliers-idf"
+                  className="inline-flex items-center gap-2 text-sage-dark font-semibold hover:text-sage transition-colors"
+                >
+                  Découvrir nos zones d'intervention
+                  <span className="text-xl">→</span>
+                </Link>
+              </div>
             </div>
             
             <button 

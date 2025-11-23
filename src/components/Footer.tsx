@@ -69,6 +69,15 @@ const Footer = () => {
               <div className="text-sm">
                 <p>Île-de-France</p>
                 <p className="mt-2 text-xs">Ateliers disponibles pour particuliers, entreprises et institutions</p>
+                <Link 
+                  to="/ateliers-idf" 
+                  className="inline-block mt-3 text-xs font-medium hover:underline transition-all"
+                  style={{ color: '#5D653A' }}
+                  onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+                  onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}
+                >
+                  → Voir nos zones d'intervention
+                </Link>
               </div>
             </div>
           </div>
