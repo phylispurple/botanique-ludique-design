@@ -18,6 +18,11 @@ import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import AdminTestimonials from "./pages/AdminTestimonials";
 import B2B from "./pages/B2B";
+import Calendar from "./pages/Calendar";
+import AteliersBotaniquesYvelines from "./pages/AteliersBotaniquesYvelines";
+import TeamBuildingRSEParis from "./pages/TeamBuildingRSEParis";
+import AteliersBotaniqueEntrepriseIDF from "./pages/AteliersBotaniqueEntrepriseIDF";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +44,13 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/b2b" element={<B2B />} />
+          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/calendrier" element={<Calendar />} />
+          <Route path="/ateliers-botaniques-yvelines" element={<AteliersBotaniquesYvelines />} />
+          <Route path="/team-building-rse-paris" element={<TeamBuildingRSEParis />} />
+          <Route path="/ateliers-botanique-entreprise-idf" element={<AteliersBotaniqueEntrepriseIDF />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/actualites" element={<Blog />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/conditions-de-vente" element={<SalesTerms />} />
           <Route path="/admin/testimonials" element={<AdminTestimonials />} />
