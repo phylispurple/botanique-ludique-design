@@ -21,6 +21,7 @@ import Calendar from "./pages/Calendar";
 import AteliersBotaniquesYvelines from "./pages/AteliersBotaniquesYvelines";
 import TeamBuildingRSEParis from "./pages/TeamBuildingRSEParis";
 import AteliersBotaniqueEntrepriseIDF from "./pages/AteliersBotaniqueEntrepriseIDF";
+import AteliersIDF from "./pages/AteliersIDF";
 import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/ateliers-botaniques-yvelines" element={<AteliersBotaniquesYvelines />} />
           <Route path="/team-building-rse-paris" element={<TeamBuildingRSEParis />} />
           <Route path="/ateliers-botanique-entreprise-idf" element={<AteliersBotaniqueEntrepriseIDF />} />
+          <Route path="/ateliers-idf" element={<AteliersIDF />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/actualites" element={<Blog />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
