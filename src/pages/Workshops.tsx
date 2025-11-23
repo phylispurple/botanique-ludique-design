@@ -240,9 +240,9 @@ const Workshops = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="Ateliers Botaniques à Paris, Yvelines (78) - Chatou, Le Pecq"
-        description="Ateliers botaniques créatifs à Paris et dans les Yvelines (78) : kokedama, teinture végétale, vannerie, terrarium à Chatou, Le Pecq, Le Vésinet, Saint-Germain-en-Laye."
-        keywords="atelier botanique Paris, atelier botanique Yvelines, kokedama Paris, teinture végétale Paris, atelier Chatou, atelier Le Pecq, vannerie Yvelines, terrarium Paris"
+        title="Ateliers Botaniques Paris, Yvelines, Hauts-de-Seine | Botanique Ludique"
+        description="Ateliers botaniques créatifs à Paris, Yvelines (78) et Hauts-de-Seine (92) : kokedama, teinture végétale, vannerie, terrarium à Chatou, Le Pecq, Nanterre, Boulogne."
+        keywords="atelier botanique Paris, atelier botanique Yvelines, atelier botanique Hauts-de-Seine, kokedama Paris, teinture végétale Paris, atelier Chatou, atelier Nanterre, vannerie 92, terrarium Paris"
         canonical="/workshops"
       />
       <FloatingIllustrations />
@@ -252,13 +252,13 @@ const Workshops = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
             <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
-              Ateliers Botaniques à Paris et Yvelines (78)
+              Ateliers Botaniques à Paris, Yvelines & Hauts-de-Seine
             </h1>
             <p className="subtitle-italic text-lg mb-6">
-              Des expériences botaniques pour éveiller vos sens à Paris, Chatou, Le Pecq, Le Vésinet.
+              Des expériences botaniques pour éveiller vos sens à Paris, Chatou, Le Pecq, Nanterre, Boulogne.
             </p>
             <p className="text-base text-charcoal/80 leading-relaxed">
-              Expériences botaniques immersives pour particuliers et groupes en Île-de-France. Ateliers disponibles à Paris et dans les Yvelines (78) : Chatou, Le Pecq, Le Vésinet, Saint-Germain-en-Laye. Chaque atelier est conçu pour vous reconnecter avec la nature à travers la créativité manuelle et la pratique consciente.
+              Expériences botaniques immersives pour particuliers et groupes en Île-de-France. Ateliers disponibles à Paris, dans les Yvelines (78) et les Hauts-de-Seine (92) : Chatou, Le Pecq, Le Vésinet, Saint-Germain-en-Laye, Nanterre, Boulogne-Billancourt. Chaque atelier est conçu pour vous reconnecter avec la nature à travers la créativité manuelle et la pratique consciente.
             </p>
           </div>
 

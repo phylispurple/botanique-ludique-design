@@ -62,7 +62,6 @@ const Navigation = () => {
   const links = [
     { name: "Accueil", path: "/" },
     { name: "À propos", path: "/about" },
-    { name: "Éthique", path: "/philosophy" },
     { name: "Ateliers", path: "/workshops" },
     { name: "Formations", path: "/training" },
     { name: "Professionnels", path: "/b2b" },

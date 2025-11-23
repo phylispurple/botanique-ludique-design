@@ -9,7 +9,6 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Workshops from "./pages/Workshops";
 import Training from "./pages/Training";
-import Philosophy from "./pages/Philosophy";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import LegalNotice from "./pages/LegalNotice";
@@ -39,7 +38,6 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/training" element={<Training />} />
-          <Route path="/philosophy" element={<Philosophy />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
