@@ -13,7 +13,7 @@ export const SEO = ({
   title, 
   description, 
   keywords, 
-  ogImage = "https://botaniqueludique.com/hero-botanical.jpg",
+  ogImage = "https://botaniqueludique.com/og-image.jpg",
   canonical,
   type = "website"
 }: SEOProps) => {
