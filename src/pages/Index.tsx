@@ -42,7 +42,7 @@ const Index = () => {
   const stats = [
     { value: "50+", label: "Ateliers réalisés", icon: Calendar },
     { value: "400+", label: "Participants accompagnés", icon: Users },
-    { value: "6", label: "Partenaires de confiance", icon: Building2 },
+    { value: "15+", label: "Partenaires de confiance", icon: Building2 },
     { value: "2023", label: "Année de création", icon: Award }
   ];
 
