@@ -118,15 +118,6 @@ const workshops: Workshop[] = [
     category: "floral",
   },
   {
-    title: "Tableau Végétal",
-    description: "Créez un tableau botanique vivant avec mousses, plantes stabilisées et matériaux naturels. Explorez l'art du jardin vertical inspiré des traditions japonaises et de l'esthétique végétale contemporaine.",
-    duration: "4h",
-    public: "Adultes",
-    image: muralImage,
-    icon: Leaf,
-    category: "floral",
-  },
-  {
     title: "Herbier",
     description: "Constituez votre collection botanique personnelle selon les méthodes des naturalistes. Apprenez à sécher, presser et conserver les plantes tout en développant votre regard d'observation et votre compréhension des espèces locales.",
     duration: "2h",
