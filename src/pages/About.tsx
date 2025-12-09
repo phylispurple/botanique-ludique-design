@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { Leaf, Sprout, Sparkles } from "lucide-react";
-import aboutImage from "@/assets/about-vanessa.jpg";
+import aboutImage from "@/assets/portrait-vanessa.png";
 
 const About = () => {
   return (
@@ -34,14 +34,16 @@ const About = () => {
                 </p>
               </div>
 
-              <div className="relative mb-12">
-                <div className="absolute inset-0 rounded-lg" style={{ border: '3px solid #C9D2B5', transform: 'translate(8px, 8px)' }}></div>
-                <img
-                  src={aboutImage}
-                  loading="lazy"
-                  alt="Vanessa Charlery"
-                  className="w-full rounded-lg shadow-lg relative z-10"
-                />
+              <div className="flex justify-center mb-12">
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-full" style={{ border: '3px solid #C9D2B5', transform: 'translate(4px, 4px)' }}></div>
+                  <img
+                    src={aboutImage}
+                    loading="lazy"
+                    alt="Vanessa Charlery, ethnobotaniste et fondatrice de Botanique Ludique"
+                    className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-lg relative z-10"
+                  />
+                </div>
               </div>
 
               <div className="space-y-6 animate-fade-in">
