@@ -8,10 +8,10 @@ const ScrollToTop = () => {
     // For workshops page, only scroll to top if no hash (clicking on main "Ateliers" link)
     if (pathname === "/workshops") {
       if (!hash) {
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     } else {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [pathname, hash]);
 
