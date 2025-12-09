@@ -65,6 +65,7 @@ const Gallery = () => {
     { src: kosovoConstruction5, alt: "Atelier torchis", caption: "Les mains dans le torchis — Kosovo", type: "image" },
     { src: kosovoConstruction6, alt: "Application du torchis", caption: "Techniques ancestrales de construction en torchis — Kosovo", type: "image" },
     { src: kosovoConstruction7, alt: "Manipulation du torchis", caption: "Apprentissage des techniques d'éco-construction — Kosovo", type: "image" },
+    { src: "/videos/workshop-epoxy-floral.mp4", alt: "Création époxy floral", caption: "Atelier Époxy Floral — Plateaux et tables en résine", type: "video" },
   ];
 
   return (
