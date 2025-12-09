@@ -252,52 +252,8 @@ const Contact = () => {
                 </Card>
               </div>
 
-              {/* Contact Info Sidebar */}
+              {/* Sidebar */}
               <div className="lg:col-span-2 space-y-6">
-                {/* Quick Info Card */}
-                <Card className="border-sage/20 overflow-hidden">
-                  <div className="h-1.5 bg-gradient-to-r from-sand via-sage/50 to-sand" />
-                  <CardContent className="p-6 space-y-6">
-                    <h3 className="text-xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                      Coordonnées
-                    </h3>
-                    
-                    <div className="space-y-4">
-                      <a 
-                        href="mailto:botaniqueludique@gmail.com"
-                        className="flex items-start gap-4 p-4 rounded-xl bg-sage/5 hover:bg-sage/10 transition-colors group"
-                      >
-                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center group-hover:bg-sage/30 transition-colors">
-                          <Mail className="w-5 h-5 text-sage-dark" />
-                        </div>
-                        <div>
-                          <p className="text-xs uppercase tracking-wider text-charcoal/60 mb-1">Email</p>
-                          <p className="text-charcoal font-medium">botaniqueludique@gmail.com</p>
-                        </div>
-                      </a>
-
-                      <div className="flex items-start gap-4 p-4 rounded-xl bg-sage/5">
-                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center">
-                          <MapPin className="w-5 h-5 text-sage-dark" />
-                        </div>
-                        <div>
-                          <p className="text-xs uppercase tracking-wider text-charcoal/60 mb-1">Zone d'intervention</p>
-                          <p className="text-charcoal font-medium">Paris, Yvelines (78), Hauts-de-Seine (92)</p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4 p-4 rounded-xl bg-sage/5">
-                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center">
-                          <Phone className="w-5 h-5 text-sage-dark" />
-                        </div>
-                        <div>
-                          <p className="text-xs uppercase tracking-wider text-charcoal/60 mb-1">Réponse</p>
-                          <p className="text-charcoal font-medium">Sous 48h maximum</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
 
                 {/* FAQ Teaser */}
                 <Card className="border-sage/20 bg-gradient-to-br from-sand/50 to-sage/10">
@@ -320,11 +276,6 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                {/* Social Proof */}
-                <div className="text-center p-6 rounded-xl border border-sage/20 bg-background">
-                  <p className="text-3xl font-light text-sage-dark mb-1" style={{ fontFamily: 'Fraunces, serif' }}>+100</p>
-                  <p className="text-sm text-charcoal/70">ateliers animés depuis 2022</p>
-                </div>
               </div>
             </div>
           </div>
