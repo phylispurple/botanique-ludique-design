@@ -216,6 +216,24 @@ const categoryTitles: Record<WorkshopCategory, string> = {
   "bien-etre": "🌿 Bien-être & Aromathérapie",
 };
 
+const categoryColors: Record<WorkshopCategory, { bg: string; text: string; border: string }> = {
+  all: { bg: "bg-sage/20", text: "text-sage-dark", border: "border-sage/30" },
+  textiles: { bg: "bg-purple-100", text: "text-purple-700", border: "border-purple-300" },
+  jardinage: { bg: "bg-emerald-100", text: "text-emerald-700", border: "border-emerald-300" },
+  floral: { bg: "bg-pink-100", text: "text-pink-700", border: "border-pink-300" },
+  artisanat: { bg: "bg-amber-100", text: "text-amber-700", border: "border-amber-300" },
+  "bien-etre": { bg: "bg-teal-100", text: "text-teal-700", border: "border-teal-300" },
+};
+
+const categoryLabels: Record<WorkshopCategory, string> = {
+  all: "Tous",
+  textiles: "Textiles & Teintures",
+  jardinage: "Jardinage",
+  floral: "Art Floral",
+  artisanat: "Artisanat",
+  "bien-etre": "Bien-être",
+};
+
 const Workshops = () => {
   const [activeCategory, setActiveCategory] = useState<WorkshopCategory>("all");
   const location = useLocation();
@@ -297,50 +315,63 @@ const Workshops = () => {
                       }`}
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
-                      <div className={`${index % 2 === 1 ? "md:order-2" : ""} group`}>
+                      <div className={`${index % 2 === 1 ? "md:order-2" : ""} group relative overflow-hidden rounded-xl`}>
+                        {/* Category Badge */}
+                        <div className={`absolute top-4 left-4 z-10 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide border backdrop-blur-sm ${categoryColors[workshop.category].bg} ${categoryColors[workshop.category].text} ${categoryColors[workshop.category].border}`}>
+                          {categoryLabels[workshop.category]}
+                        </div>
+                        
                         {workshop.video && workshop.type !== "video" ? (
                           <Carousel className="w-full">
                             <CarouselContent>
                               <CarouselItem>
-                                <img
-                                  src={workshop.image}
-                                  alt={`Atelier ${workshop.title}`}
-                                  className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
-                                  loading="lazy"
-                                />
+                                <div className="overflow-hidden rounded-xl">
+                                  <img
+                                    src={workshop.image}
+                                    alt={`Atelier ${workshop.title}`}
+                                    className="w-full rounded-xl shadow-lg transition-all duration-700 group-hover:scale-110 group-hover:brightness-105"
+                                    loading="lazy"
+                                  />
+                                </div>
                               </CarouselItem>
                               <CarouselItem>
-                                <video
-                                  src={workshop.video}
-                                  className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
-                                  muted
-                                  loop
-                                  playsInline
-                                  autoPlay
-                                  preload="metadata"
-                                />
+                                <div className="overflow-hidden rounded-xl">
+                                  <video
+                                    src={workshop.video}
+                                    className="w-full rounded-xl shadow-lg transition-all duration-500"
+                                    muted
+                                    loop
+                                    playsInline
+                                    autoPlay
+                                    preload="metadata"
+                                  />
+                                </div>
                               </CarouselItem>
                             </CarouselContent>
                             <CarouselPrevious className="left-4" />
                             <CarouselNext className="right-4" />
                           </Carousel>
                         ) : workshop.type === "video" ? (
-                          <video
-                            src={workshop.image}
-                            className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500"
-                            muted
-                            loop
-                            playsInline
-                            autoPlay
-                            preload="metadata"
-                          />
+                          <div className="overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
+                            <video
+                              src={workshop.image}
+                              className="w-full rounded-xl transition-all duration-700 group-hover:scale-105"
+                              muted
+                              loop
+                              playsInline
+                              autoPlay
+                              preload="metadata"
+                            />
+                          </div>
                         ) : (
-                          <img
-                            src={workshop.image}
-                            alt={`Atelier ${workshop.title}`}
-                            className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 group-hover:scale-105"
-                            loading="lazy"
-                          />
+                          <div className="overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
+                            <img
+                              src={workshop.image}
+                              alt={`Atelier ${workshop.title}`}
+                              className="w-full rounded-xl transition-all duration-700 group-hover:scale-110 group-hover:brightness-105"
+                              loading="lazy"
+                            />
+                          </div>
                         )}
                       </div>
 
