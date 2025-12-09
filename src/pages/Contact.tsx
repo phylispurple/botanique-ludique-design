@@ -5,9 +5,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
-import { Leaf, Loader2 } from "lucide-react";
+import { Leaf, Loader2, Mail, MapPin, Phone, Send, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
+import { Card, CardContent } from "@/components/ui/card";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Le nom est requis").max(100, "Le nom doit faire moins de 100 caractères"),
@@ -26,9 +27,19 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Get atelier from URL params and set as subject
   useEffect(() => {
+    const atelierFromUrl = searchParams.get('atelier');
     const subjectFromUrl = searchParams.get('subject');
-    if (subjectFromUrl) {
+    
+    if (atelierFromUrl) {
+      const decodedAtelier = decodeURIComponent(atelierFromUrl);
+      setFormData(prev => ({
+        ...prev,
+        subject: `Réservation : ${decodedAtelier}`,
+        message: prev.message || `Bonjour,\n\nJe souhaite réserver l'atelier "${decodedAtelier}".\n\nMerci de me recontacter pour finaliser ma réservation.\n\nCordialement,`
+      }));
+    } else if (subjectFromUrl) {
       setFormData(prev => ({
         ...prev,
         subject: decodeURIComponent(subjectFromUrl)
@@ -93,6 +104,8 @@ const Contact = () => {
     });
   };
 
+  const atelierFromUrl = searchParams.get('atelier');
+
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
@@ -106,135 +119,212 @@ const Contact = () => {
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-20">
-              <Leaf className="w-16 h-16 mx-auto mb-4" style={{ color: '#A7B795', strokeWidth: 1.5 }} />
+          <div className="max-w-5xl mx-auto">
+            {/* Hero Section */}
+            <div className="text-center mb-16 animate-fade-in">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-sage/20 mb-6">
+                <Leaf className="w-10 h-10 text-sage" strokeWidth={1.5} />
+              </div>
               <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
                 Contact
               </h1>
-              <p className="subtitle-italic text-lg leading-relaxed">
+              <p className="subtitle-italic text-lg leading-relaxed max-w-2xl mx-auto">
                 Nous serions ravis de semer un projet avec vous.
               </p>
-              <p className="text-base text-charcoal/80 leading-relaxed mt-4">
-                Que vous souhaitiez réserver un atelier, organiser un événement privé,
-                ou simplement en savoir plus sur nos offres botaniques.
-              </p>
             </div>
 
-            <div className="rounded-lg p-8 md:p-12 relative" style={{ backgroundColor: '#F7F7EB' }}>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm uppercase tracking-wider mb-2 text-charcoal font-semibold">
-                    Nom *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    style={{ backgroundColor: '#F7F7EB', border: '1px solid #C9D2B5' }}
-                    className="w-full px-4 py-3 rounded-lg text-charcoal focus:outline-none focus:ring-2 transition-all"
-                    onFocus={(e) => e.currentTarget.style.borderColor = '#A7B795'}
-                    onBlur={(e) => e.currentTarget.style.borderColor = '#C9D2B5'}
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm uppercase tracking-wider mb-2 text-charcoal font-semibold">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    style={{ backgroundColor: '#F7F7EB', border: '1px solid #C9D2B5' }}
-                    className="w-full px-4 py-3 rounded-lg text-charcoal focus:outline-none focus:ring-2 transition-all"
-                    onFocus={(e) => e.currentTarget.style.borderColor = '#A7B795'}
-                    onBlur={(e) => e.currentTarget.style.borderColor = '#C9D2B5'}
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm uppercase tracking-wider mb-2 text-charcoal font-semibold">
-                    Sujet
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    style={{ backgroundColor: '#F7F7EB', border: '1px solid #C9D2B5' }}
-                    className="w-full px-4 py-3 rounded-lg text-charcoal focus:outline-none focus:ring-2 transition-all"
-                    onFocus={(e) => e.currentTarget.style.borderColor = '#A7B795'}
-                    onBlur={(e) => e.currentTarget.style.borderColor = '#C9D2B5'}
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm uppercase tracking-wider mb-2 text-charcoal font-semibold">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    style={{ backgroundColor: '#F7F7EB', border: '1px solid #C9D2B5' }}
-                    className="w-full px-4 py-3 rounded-lg text-charcoal focus:outline-none focus:ring-2 transition-all resize-none"
-                    onFocus={(e) => e.currentTarget.style.borderColor = '#A7B795'}
-                    onBlur={(e) => e.currentTarget.style.borderColor = '#C9D2B5'}
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full px-6 py-4 text-off-white font-semibold text-sm uppercase tracking-wider transition-colors rounded-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                  style={{ backgroundColor: isSubmitting ? '#5D653A' : '#A7B795' }}
-                  onMouseEnter={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = '#5D653A')}
-                  onMouseLeave={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = '#A7B795')}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                      Envoi en cours...
-                    </>
-                  ) : (
-                    'Envoyer le message'
-                  )}
-                </button>
-              </form>
-              
-              {/* Decorative plant illustration */}
-              <div className="absolute bottom-4 right-4 opacity-20">
-                <Leaf size={64} style={{ color: '#A7B795', transform: 'rotate(-15deg)' }} />
+            {/* Atelier Banner - Show when coming from Agenda */}
+            {atelierFromUrl && (
+              <div className="mb-10 animate-fade-in">
+                <Card className="bg-gradient-to-r from-sage/20 to-sand/30 border-sage/30 overflow-hidden">
+                  <CardContent className="p-6 flex items-center gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-sage/30 flex items-center justify-center">
+                      <Sparkles className="w-6 h-6 text-sage-dark" />
+                    </div>
+                    <div>
+                      <p className="text-sm uppercase tracking-wider text-sage-dark font-semibold mb-1">
+                        Vous souhaitez réserver
+                      </p>
+                      <p className="text-xl font-medium text-charcoal" style={{ fontFamily: 'Fraunces, serif' }}>
+                        {decodeURIComponent(atelierFromUrl)}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
-            </div>
+            )}
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
-              <div className="text-center md:text-left">
-                <h3 className="text-sm uppercase tracking-wider mb-2 font-semibold" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Email</h3>
-                <a
-                  href="mailto:botaniqueludique@gmail.com"
-                  className="text-sage hover:text-sage-dark transition-colors"
-                >
-                  botaniqueludique@gmail.com
-                </a>
+            <div className="grid lg:grid-cols-5 gap-10">
+              {/* Contact Form */}
+              <div className="lg:col-span-3">
+                <Card className="overflow-hidden border-sage/20 shadow-lg">
+                  <div className="h-2 bg-gradient-to-r from-sage via-sage-dark to-sage" />
+                  <CardContent className="p-8 md:p-10">
+                    <h2 className="text-2xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                      Envoyez-nous un message
+                    </h2>
+                    
+                    <form onSubmit={handleSubmit} className="space-y-5">
+                      <div className="grid md:grid-cols-2 gap-5">
+                        <div>
+                          <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
+                            Nom <span className="text-sage-dark">*</span>
+                          </label>
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            placeholder="Votre nom"
+                            className="w-full px-4 py-3 rounded-xl border border-sage/30 bg-background text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-all placeholder:text-charcoal/40"
+                          />
+                        </div>
+
+                        <div>
+                          <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
+                            Email <span className="text-sage-dark">*</span>
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            placeholder="votre@email.com"
+                            className="w-full px-4 py-3 rounded-xl border border-sage/30 bg-background text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-all placeholder:text-charcoal/40"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label htmlFor="subject" className="block text-sm font-medium text-charcoal mb-2">
+                          Sujet
+                        </label>
+                        <input
+                          type="text"
+                          id="subject"
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleChange}
+                          placeholder="Objet de votre message"
+                          className="w-full px-4 py-3 rounded-xl border border-sage/30 bg-background text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-all placeholder:text-charcoal/40"
+                        />
+                      </div>
+
+                      <div>
+                        <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
+                          Message <span className="text-sage-dark">*</span>
+                        </label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          required
+                          rows={6}
+                          placeholder="Décrivez votre projet ou posez vos questions..."
+                          className="w-full px-4 py-3 rounded-xl border border-sage/30 bg-background text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-all resize-none placeholder:text-charcoal/40"
+                        ></textarea>
+                      </div>
+
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full px-6 py-4 bg-sage hover:bg-sage-dark text-off-white font-semibold text-sm uppercase tracking-wider transition-all duration-300 rounded-full flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="w-5 h-5 animate-spin" />
+                            Envoi en cours...
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-5 h-5" />
+                            Envoyer le message
+                          </>
+                        )}
+                      </button>
+                    </form>
+                  </CardContent>
+                </Card>
               </div>
 
-              <div className="text-center md:text-left">
-                <h3 className="text-sm uppercase tracking-wider mb-2 font-semibold" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Localisation</h3>
-                <p className="text-charcoal/80">
-                  Paris et régions environnantes
-                </p>
+              {/* Contact Info Sidebar */}
+              <div className="lg:col-span-2 space-y-6">
+                {/* Quick Info Card */}
+                <Card className="border-sage/20 overflow-hidden">
+                  <div className="h-1.5 bg-gradient-to-r from-sand via-sage/50 to-sand" />
+                  <CardContent className="p-6 space-y-6">
+                    <h3 className="text-xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                      Coordonnées
+                    </h3>
+                    
+                    <div className="space-y-4">
+                      <a 
+                        href="mailto:botaniqueludique@gmail.com"
+                        className="flex items-start gap-4 p-4 rounded-xl bg-sage/5 hover:bg-sage/10 transition-colors group"
+                      >
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center group-hover:bg-sage/30 transition-colors">
+                          <Mail className="w-5 h-5 text-sage-dark" />
+                        </div>
+                        <div>
+                          <p className="text-xs uppercase tracking-wider text-charcoal/60 mb-1">Email</p>
+                          <p className="text-charcoal font-medium">botaniqueludique@gmail.com</p>
+                        </div>
+                      </a>
+
+                      <div className="flex items-start gap-4 p-4 rounded-xl bg-sage/5">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center">
+                          <MapPin className="w-5 h-5 text-sage-dark" />
+                        </div>
+                        <div>
+                          <p className="text-xs uppercase tracking-wider text-charcoal/60 mb-1">Zone d'intervention</p>
+                          <p className="text-charcoal font-medium">Paris, Yvelines (78), Hauts-de-Seine (92)</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4 p-4 rounded-xl bg-sage/5">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center">
+                          <Phone className="w-5 h-5 text-sage-dark" />
+                        </div>
+                        <div>
+                          <p className="text-xs uppercase tracking-wider text-charcoal/60 mb-1">Réponse</p>
+                          <p className="text-charcoal font-medium">Sous 48h maximum</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* FAQ Teaser */}
+                <Card className="border-sage/20 bg-gradient-to-br from-sand/50 to-sage/10">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 rounded-full bg-sage/20 flex items-center justify-center mx-auto mb-4">
+                      <Leaf className="w-6 h-6 text-sage-dark" />
+                    </div>
+                    <h3 className="text-lg mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                      Des questions ?
+                    </h3>
+                    <p className="text-sm text-charcoal/70 mb-4">
+                      Consultez notre FAQ pour des réponses rapides à vos questions.
+                    </p>
+                    <a 
+                      href="/faq"
+                      className="inline-flex items-center text-sm font-semibold text-sage-dark hover:text-sage transition-colors"
+                    >
+                      Voir la FAQ →
+                    </a>
+                  </CardContent>
+                </Card>
+
+                {/* Social Proof */}
+                <div className="text-center p-6 rounded-xl border border-sage/20 bg-background">
+                  <p className="text-3xl font-light text-sage-dark mb-1" style={{ fontFamily: 'Fraunces, serif' }}>+100</p>
+                  <p className="text-sm text-charcoal/70">ateliers animés depuis 2022</p>
+                </div>
               </div>
             </div>
           </div>
