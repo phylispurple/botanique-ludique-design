@@ -92,6 +92,38 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Landing Pages React stratégiques -->
+  <url>
+    <loc>https://botaniqueludique.com/animation-seniors-ehpad</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/animation-cse-entreprise</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/animation-scolaire-nature</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/ateliers-mjc-association</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/team-building-nature-entreprise</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
   <!-- Pages de redirection SEO - Art Floral -->
   <url>
     <loc>https://botaniqueludique.com/art-floral-paris.html</loc>
