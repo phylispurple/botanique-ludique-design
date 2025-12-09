@@ -16,6 +16,16 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           "name": "Botanique Ludique",
           "image": "https://botaniqueludique.com/hero-botanical.jpg",
           "description": "Ateliers botaniques créatifs à Paris et en Île-de-France. Team building RSE, animations nature pour entreprises, collectivités et particuliers. Kokedama, teinture végétale, vannerie, terrarium.",
+          "founder": {
+            "@type": "Person",
+            "name": "Vanessa Charlery",
+            "jobTitle": "Ethnobotaniste et Fondatrice",
+            "description": "Ethnobotaniste diplômée de l'EHESS, Vanessa dirige Botanique Ludique et collabore avec un réseau d'artisans, artistes et professionnels de la nature.",
+            "alumniOf": {
+              "@type": "EducationalOrganization",
+              "name": "EHESS - École des Hautes Études en Sciences Sociales"
+            }
+          },
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Paris",
@@ -43,6 +53,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           },
           "url": "https://botaniqueludique.com",
           "email": "botaniqueludique@gmail.com",
+          "telephone": "+33609831606",
           "priceRange": "€€",
           "paymentAccepted": "Cash, Credit Card, Bank Transfer",
           "currenciesAccepted": "EUR",
