@@ -6,7 +6,7 @@ const Navigation = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [workshopsOpen, setWorkshopsOpen] = useState(false);
-  const [trainingOpen, setTrainingOpen] = useState(false);
+  const [proOpen, setProOpen] = useState(false);
 
   const workshopCategories = [
     {
@@ -53,18 +53,19 @@ const Navigation = () => {
     },
   ];
 
-  const trainingCategories = [
-    { name: "Collèges & Lycées", id: "colleges-lycees" },
-    { name: "BTS & Formations Pro", id: "formations-pro" },
-    { name: "Entreprises", id: "entreprises" },
+  const proCategories = [
+    { name: "Entreprises & Team Building", id: "entreprises" },
+    { name: "Établissements Scolaires", id: "scolaires" },
+    { name: "Collectivités & Associations", id: "collectivites" },
+    { name: "EHPAD & Santé", id: "ehpad" },
+    { name: "Événementiel", id: "evenementiel" },
   ];
 
   const links = [
     { name: "Accueil", path: "/" },
     { name: "À propos", path: "/about" },
     { name: "Ateliers", path: "/workshops" },
-    { name: "Formations", path: "/training" },
-    { name: "Professionnels", path: "/b2b" },
+    { name: "Pro & Entreprises", path: "/pro" },
     { name: "Galerie", path: "/gallery" },
     { name: "Agenda", path: "/agenda" },
     { name: "FAQ", path: "/faq" },
@@ -104,7 +105,6 @@ const Navigation = () => {
                     to={link.path}
                     onClick={() => {
                       setWorkshopsOpen(false);
-                      // Force scroll to top immediately
                       setTimeout(() => {
                         window.scrollTo({
                           top: 0,
@@ -167,12 +167,12 @@ const Navigation = () => {
                     </div>
                   </div>
                 </div>
-              ) : link.name === "Formations" ? (
+              ) : link.name === "Pro & Entreprises" ? (
                 <div
                   key={link.path}
                   className="relative group"
-                  onMouseEnter={() => setTrainingOpen(true)}
-                  onMouseLeave={() => setTrainingOpen(false)}
+                  onMouseEnter={() => setProOpen(true)}
+                  onMouseLeave={() => setProOpen(false)}
                 >
                   <Link
                     to={link.path}
@@ -190,19 +190,19 @@ const Navigation = () => {
                   {/* Dropdown Menu */}
                   <div
                     className={`absolute top-full left-0 mt-2 w-64 bg-[#F7F7EB] backdrop-blur-md border border-sage/20 rounded-lg shadow-xl overflow-hidden transition-all duration-200 ${
-                      trainingOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                      proOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                     }`}
                     style={{ zIndex: 100 }}
                   >
                     <div className="py-2">
-                      {trainingCategories.map((category) => (
+                      {proCategories.map((category) => (
                         <Link
                           key={category.id}
-                          to={`/training#${category.id}`}
+                          to={`/pro#${category.id}`}
                           className="block px-4 py-2 text-sm hover:bg-sage/10 transition-colors"
                           style={{ color: '#3D3D2E' }}
                           onClick={() => {
-                            setTrainingOpen(false);
+                            setProOpen(false);
                             setTimeout(() => {
                               const element = document.getElementById(category.id);
                               if (element) {
@@ -312,25 +312,37 @@ const Navigation = () => {
                     </div>
                   )}
                 </div>
-              ) : link.name === "Formations" ? (
+              ) : link.name === "Pro & Entreprises" ? (
                 <div key={link.path}>
                   <button
-                    onClick={() => setTrainingOpen(!trainingOpen)}
+                    onClick={() => setProOpen(!proOpen)}
                     className="flex items-center gap-1 font-sans text-sm tracking-wider uppercase transition-colors text-muted-foreground hover:text-foreground w-full"
                   >
                     {link.name}
-                    <ChevronDown size={14} className={`transition-transform duration-200 ${trainingOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown size={14} className={`transition-transform duration-200 ${proOpen ? 'rotate-180' : ''}`} />
                   </button>
-                  {trainingOpen && (
+                  {proOpen && (
                     <div className="ml-4 mt-2 space-y-2">
-                      {trainingCategories.map((category) => (
+                      <Link
+                        to="/pro"
+                        className="block text-sm font-medium hover:text-primary mb-2"
+                        style={{ color: '#5D653A' }}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setProOpen(false);
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                      >
+                        → Toutes nos offres pro
+                      </Link>
+                      {proCategories.map((category) => (
                         <Link
                           key={category.id}
-                          to={`/training#${category.id}`}
+                          to={`/pro#${category.id}`}
                           className="block text-xs text-muted-foreground hover:text-foreground"
                           onClick={() => {
                             setIsOpen(false);
-                            setTrainingOpen(false);
+                            setProOpen(false);
                             setTimeout(() => {
                               const element = document.getElementById(category.id);
                               if (element) {
