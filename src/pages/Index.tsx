@@ -4,6 +4,9 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import Testimonials from "@/components/Testimonials";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import NewsSection from "@/components/NewsSection";
+import StatsCounter from "@/components/StatsCounter";
+import SeasonalBanner from "@/components/SeasonalBanner";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Leaf } from "lucide-react";
@@ -90,6 +93,7 @@ const Index = () => {
           ]
         }}
       />
+      <SeasonalBanner />
       <Navigation />
       
       {/* Hero Section - Centered Minimal Design */}
@@ -246,6 +250,12 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      {/* Stats Counter Section */}
+      <StatsCounter />
+      
+      {/* News Section */}
+      <NewsSection />
       
       {/* Philosophy Section - Présentation Botanique Ludique */}
       <section className="bg-sand py-32 px-4 relative overflow-hidden">
