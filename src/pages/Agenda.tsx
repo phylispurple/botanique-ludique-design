@@ -370,14 +370,13 @@ const Agenda = () => {
                     Vous souhaitez organiser un atelier en petit groupe avec vos amis, votre famille ou entre collègues ? 
                     Nous proposons des ateliers sur mesure adaptés à vos envies et votre planning !
                   </p>
-                  <a 
-                    href="#demande-info"
-                    onClick={() => setContactForm(prev => ({ ...prev, workshop: "Atelier sur mesure / Groupe privé" }))}
+                  <Link 
+                    to="/contact?atelier=Atelier%20sur%20mesure%20/%20Groupe%20privé"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
                   >
                     <Mail className="w-4 h-4" />
                     Contactez-nous pour un atelier sur mesure
-                  </a>
+                  </Link>
                 </CardContent>
               </Card>
             </div>
