@@ -154,129 +154,101 @@ const Contact = () => {
               </div>
             )}
 
-            <div className="grid lg:grid-cols-5 gap-10">
+            <div className="max-w-3xl mx-auto">
               {/* Contact Form */}
-              <div className="lg:col-span-3">
-                <Card className="overflow-hidden border-sage/20 shadow-lg">
-                  <div className="h-2 bg-gradient-to-r from-sage via-sage-dark to-sage" />
-                  <CardContent className="p-8 md:p-10">
-                    <h2 className="text-2xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                      Envoyez-nous un message
-                    </h2>
-                    
-                    <form onSubmit={handleSubmit} className="space-y-5">
-                      <div className="grid md:grid-cols-2 gap-5">
-                        <div>
-                          <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
-                            Nom <span className="text-sage-dark">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            placeholder="Votre nom"
-                            className="w-full px-4 py-3 rounded-xl border border-sage/30 bg-background text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-all placeholder:text-charcoal/40"
-                          />
-                        </div>
-
-                        <div>
-                          <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
-                            Email <span className="text-sage-dark">*</span>
-                          </label>
-                          <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            placeholder="votre@email.com"
-                            className="w-full px-4 py-3 rounded-xl border border-sage/30 bg-background text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-all placeholder:text-charcoal/40"
-                          />
-                        </div>
-                      </div>
-
+              <Card className="overflow-hidden border-sage/20 shadow-lg">
+                <div className="h-2 bg-gradient-to-r from-sage via-sage-dark to-sage" />
+                <CardContent className="p-8 md:p-12">
+                  <h2 className="text-2xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                    Envoyez-nous un message
+                  </h2>
+                  
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-5">
                       <div>
-                        <label htmlFor="subject" className="block text-sm font-medium text-charcoal mb-2">
-                          Sujet
+                        <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
+                          Nom <span className="text-sage-dark">*</span>
                         </label>
                         <input
                           type="text"
-                          id="subject"
-                          name="subject"
-                          value={formData.subject}
+                          id="name"
+                          name="name"
+                          value={formData.name}
                           onChange={handleChange}
-                          placeholder="Objet de votre message"
+                          required
+                          placeholder="Votre nom"
                           className="w-full px-4 py-3 rounded-xl border border-sage/30 bg-background text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-all placeholder:text-charcoal/40"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
-                          Message <span className="text-sage-dark">*</span>
+                        <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
+                          Email <span className="text-sage-dark">*</span>
                         </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          value={formData.message}
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={formData.email}
                           onChange={handleChange}
                           required
-                          rows={6}
-                          placeholder="Décrivez votre projet ou posez vos questions..."
-                          className="w-full px-4 py-3 rounded-xl border border-sage/30 bg-background text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-all resize-none placeholder:text-charcoal/40"
-                        ></textarea>
+                          placeholder="votre@email.com"
+                          className="w-full px-4 py-3 rounded-xl border border-sage/30 bg-background text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-all placeholder:text-charcoal/40"
+                        />
                       </div>
-
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full px-6 py-4 bg-sage hover:bg-sage-dark text-off-white font-semibold text-sm uppercase tracking-wider transition-all duration-300 rounded-full flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
-                      >
-                        {isSubmitting ? (
-                          <>
-                            <Loader2 className="w-5 h-5 animate-spin" />
-                            Envoi en cours...
-                          </>
-                        ) : (
-                          <>
-                            <Send className="w-5 h-5" />
-                            Envoyer le message
-                          </>
-                        )}
-                      </button>
-                    </form>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Sidebar */}
-              <div className="lg:col-span-2 space-y-6">
-
-                {/* FAQ Teaser */}
-                <Card className="border-sage/20 bg-gradient-to-br from-sand/50 to-sage/10">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 rounded-full bg-sage/20 flex items-center justify-center mx-auto mb-4">
-                      <Leaf className="w-6 h-6 text-sage-dark" />
                     </div>
-                    <h3 className="text-lg mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                      Des questions ?
-                    </h3>
-                    <p className="text-sm text-charcoal/70 mb-4">
-                      Consultez notre FAQ pour des réponses rapides à vos questions.
-                    </p>
-                    <a 
-                      href="/faq"
-                      className="inline-flex items-center text-sm font-semibold text-sage-dark hover:text-sage transition-colors"
-                    >
-                      Voir la FAQ →
-                    </a>
-                  </CardContent>
-                </Card>
 
-              </div>
+                    <div>
+                      <label htmlFor="subject" className="block text-sm font-medium text-charcoal mb-2">
+                        Sujet
+                      </label>
+                      <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        placeholder="Objet de votre message"
+                        className="w-full px-4 py-3 rounded-xl border border-sage/30 bg-background text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-all placeholder:text-charcoal/40"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
+                        Message <span className="text-sage-dark">*</span>
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        rows={8}
+                        placeholder="Décrivez votre projet ou posez vos questions..."
+                        className="w-full px-4 py-3 rounded-xl border border-sage/30 bg-background text-charcoal focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-all resize-none placeholder:text-charcoal/40"
+                      ></textarea>
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full px-6 py-4 bg-sage hover:bg-sage-dark text-off-white font-semibold text-sm uppercase tracking-wider transition-all duration-300 rounded-full flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-5 h-5 animate-spin" />
+                          Envoi en cours...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-5 h-5" />
+                          Envoyer le message
+                        </>
+                      )}
+                    </button>
+                  </form>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
