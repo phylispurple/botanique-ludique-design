@@ -17,7 +17,7 @@ const About = () => {
       <FloatingIllustrations />
       <Navigation />
 
-      <main className="pt-24 pb-20">
+      <main className="pt-40 pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
             <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6 text-center">
