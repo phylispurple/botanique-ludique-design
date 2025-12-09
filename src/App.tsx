@@ -24,6 +24,11 @@ import TeamBuildingRSEParis from "./pages/TeamBuildingRSEParis";
 import AteliersBotaniqueEntrepriseIDF from "./pages/AteliersBotaniqueEntrepriseIDF";
 import AteliersIDF from "./pages/AteliersIDF";
 import Blog from "./pages/Blog";
+import LandingSeniorsEHPAD from "./pages/LandingSeniorsEHPAD";
+import LandingCSE from "./pages/LandingCSE";
+import LandingEcoles from "./pages/LandingEcoles";
+import LandingMJC from "./pages/LandingMJC";
+import LandingTeamBuilding from "./pages/LandingTeamBuilding";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +59,11 @@ const App = () => (
           <Route path="/ateliers-idf" element={<AteliersIDF />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/actualites" element={<Blog />} />
+          <Route path="/animation-seniors-ehpad" element={<LandingSeniorsEHPAD />} />
+          <Route path="/animation-cse-entreprise" element={<LandingCSE />} />
+          <Route path="/animation-scolaire-nature" element={<LandingEcoles />} />
+          <Route path="/ateliers-mjc-association" element={<LandingMJC />} />
+          <Route path="/team-building-nature-entreprise" element={<LandingTeamBuilding />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/conditions-de-vente" element={<SalesTerms />} />
           <Route path="/admin/testimonials" element={<AdminTestimonials />} />
