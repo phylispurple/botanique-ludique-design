@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
-import { Leaf, Loader2, Mail, MapPin, Phone, Send, Sparkles } from "lucide-react";
+import { Leaf, Loader2, Mail, MapPin, Phone, Send, Sparkles, Calendar as CalendarIcon } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 import { Card, CardContent } from "@/components/ui/card";
@@ -27,17 +27,38 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Get atelier from URL params and set as subject
+  // Get atelier, date, and location from URL params
   useEffect(() => {
     const atelierFromUrl = searchParams.get('atelier');
+    const dateFromUrl = searchParams.get('date');
+    const lieuFromUrl = searchParams.get('lieu');
     const subjectFromUrl = searchParams.get('subject');
     
     if (atelierFromUrl) {
       const decodedAtelier = decodeURIComponent(atelierFromUrl);
+      const decodedDate = dateFromUrl ? decodeURIComponent(dateFromUrl) : null;
+      const decodedLieu = lieuFromUrl ? decodeURIComponent(lieuFromUrl) : null;
+      
+      // Build subject with date if available
+      let subject = `Réservation : ${decodedAtelier}`;
+      if (decodedDate && decodedDate !== "Dates à venir") {
+        subject += ` - ${decodedDate}`;
+      }
+      
+      // Build message with all details
+      let message = `Bonjour,\n\nJe souhaite réserver l'atelier "${decodedAtelier}"`;
+      if (decodedDate && decodedDate !== "Dates à venir") {
+        message += ` prévu le ${decodedDate}`;
+      }
+      if (decodedLieu) {
+        message += ` à ${decodedLieu}`;
+      }
+      message += `.\n\nMerci de me recontacter pour finaliser ma réservation.\n\nCordialement,`;
+      
       setFormData(prev => ({
         ...prev,
-        subject: `Réservation : ${decodedAtelier}`,
-        message: prev.message || `Bonjour,\n\nJe souhaite réserver l'atelier "${decodedAtelier}".\n\nMerci de me recontacter pour finaliser ma réservation.\n\nCordialement,`
+        subject,
+        message: prev.message || message
       }));
     } else if (subjectFromUrl) {
       setFormData(prev => ({
@@ -105,6 +126,8 @@ const Contact = () => {
   };
 
   const atelierFromUrl = searchParams.get('atelier');
+  const dateFromUrl = searchParams.get('date');
+  const lieuFromUrl = searchParams.get('lieu');
 
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
@@ -137,17 +160,33 @@ const Contact = () => {
             {atelierFromUrl && (
               <div className="mb-10 animate-fade-in">
                 <Card className="bg-gradient-to-r from-sage/20 to-sand/30 border-sage/30 overflow-hidden">
-                  <CardContent className="p-6 flex items-center gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-sage/30 flex items-center justify-center">
-                      <Sparkles className="w-6 h-6 text-sage-dark" />
-                    </div>
-                    <div>
-                      <p className="text-sm uppercase tracking-wider text-sage-dark font-semibold mb-1">
-                        Vous souhaitez réserver
-                      </p>
-                      <p className="text-xl font-medium text-charcoal" style={{ fontFamily: 'Fraunces, serif' }}>
-                        {decodeURIComponent(atelierFromUrl)}
-                      </p>
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-sage/30 flex items-center justify-center">
+                        <Sparkles className="w-6 h-6 text-sage-dark" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm uppercase tracking-wider text-sage-dark font-semibold mb-1">
+                          Vous souhaitez réserver
+                        </p>
+                        <p className="text-xl font-medium text-charcoal mb-2" style={{ fontFamily: 'Fraunces, serif' }}>
+                          {decodeURIComponent(atelierFromUrl)}
+                        </p>
+                        <div className="flex flex-wrap gap-3 text-sm text-charcoal/70">
+                          {dateFromUrl && (
+                            <span className="inline-flex items-center gap-1.5 bg-background/50 px-3 py-1 rounded-full">
+                              <CalendarIcon className="w-4 h-4 text-sage" />
+                              {decodeURIComponent(dateFromUrl)}
+                            </span>
+                          )}
+                          {lieuFromUrl && (
+                            <span className="inline-flex items-center gap-1.5 bg-background/50 px-3 py-1 rounded-full">
+                              <MapPin className="w-4 h-4 text-sage" />
+                              {decodeURIComponent(lieuFromUrl)}
+                            </span>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
