@@ -14,7 +14,7 @@ const Navigation = () => {
       workshops: [
         { name: "Teinture Végétale", id: "teinture-vegetale" },
         { name: "Tataki Zome", id: "tataki-zome" },
-        { name: "Cuir Végétal", id: "cuir-vegetal" },
+        { name: "Cycle Matières Végétales", id: "cycle-matieres-vegetales" },
       ]
     },
     {
@@ -30,8 +30,8 @@ const Navigation = () => {
       category: "Art Floral & Compositions",
       workshops: [
         { name: "Couronnes de Fleurs", id: "couronnes-de-fleurs" },
-        { name: "Tableau Végétal", id: "tableau-vegetal" },
         { name: "Herbier", id: "herbier" },
+        { name: "Époxy Floral", id: "epoxy-floral" },
       ]
     },
     {
@@ -39,7 +39,7 @@ const Navigation = () => {
       workshops: [
         { name: "Vannerie", id: "vannerie" },
         { name: "Photographie Végétale", id: "photographie-vegetale" },
-        { name: "Totems en Forêt", id: "eco-construction-totems-en-foret" },
+        { name: "Totems en Forêt", id: "eco-construction-&-totems-en-foret" },
         { name: "Papier Recyclé", id: "papier-recycle-&-carnets" },
         { name: "Craies Végétales", id: "craies-vegetales" },
       ]
@@ -48,7 +48,7 @@ const Navigation = () => {
       category: "Bien-être & Aromathérapie",
       workshops: [
         { name: "Sachets Senteur", id: "sachets-senteur-&-pots-pourris" },
-        { name: "Eaux Florales", id: "creation-d-eaux-florales" },
+        { name: "Eaux Florales", id: "creation-d'eaux-florales" },
       ]
     },
   ];
