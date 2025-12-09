@@ -31,14 +31,14 @@ const FloatingContactButton = () => {
             
             {/* Téléphone */}
             <a
-              href="tel:+33612345678"
+              href="tel:+33609831606"
               className="flex items-center gap-3 p-3 rounded-xl hover:bg-sage/10 transition-colors group"
             >
               <div className="p-2 bg-sage/20 rounded-full group-hover:bg-sage/30 transition-colors">
                 <Phone className="w-4 h-4 text-sage" />
               </div>
               <div>
-                <p className="text-sm font-medium text-charcoal">Téléphone</p>
+                <p className="text-sm font-medium text-charcoal">06 09 83 16 06</p>
                 <p className="text-xs text-muted-foreground">Du lundi au vendredi</p>
               </div>
             </a>
