@@ -75,32 +75,32 @@ const About = () => {
             <div className="max-w-4xl mx-auto mb-20">
               <div className="mb-12">
                 <h2 className="text-3xl md:text-4xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Notre Démarche Éthique
+                  Ma Démarche
                 </h2>
                 <p className="subtitle-italic text-lg text-center mb-12">
-                  Repenser notre lien au vivant à l'heure de l'urgence écologique
+                  Une approche anthropologique du végétal
                 </p>
               </div>
 
               <div className="bg-sand rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
                 <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
-                  Dans un monde confronté à une crise climatique sans précédent, où la biodiversité s'amenuise et où nos vies urbaines nous ont progressivement éloignés du vivant, reconnecter avec les plantes n'est plus un luxe, mais une nécessité vitale.
+                  Ce que je propose n'est pas du folklore. Ce n'est pas une activité vide de sens où l'on fabrique un objet joli pour l'oublier le lendemain. <strong>C'est une invitation à comprendre d'où viennent ces pratiques</strong>, à saisir leur profondeur historique et culturelle, et à travers cette compréhension, à développer notre propre sensibilité au vivant.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
-                  L'urbanisation effrénée, les infrastructures de béton et le rythme effréné de nos sociétés modernes ont créé une séparation profonde entre l'humain et la nature. Nous avons oublié que nous ne sommes pas séparés de la nature, mais que nous en faisons partie intégrante.
+                  Ma formation en anthropologie à l'EHESS, sous la direction de Florence Brunois-Pasina, m'a appris que chaque geste technique porte en lui une vision du monde. Créer un kokedama, teindre un tissu avec des plantes, tresser de l'osier — ces pratiques ancestrales racontent des histoires de cohabitation entre humains et végétaux.
                 </p>
               </div>
 
               <div className="mb-16 animate-fade-in">
                 <Leaf size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
                 <h3 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Dépasser la séparation Homme-Nature
+                  Une dimension anthropologique
                 </h3>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-6">
-                  Notre approche s'inspire des travaux de Philippe Descola et Bruno Latour, qui remettent en question la dichotomie traditionnelle entre l'humain et la nature. Nous croyons que les plantes ne sont pas de simples objets esthétiques ou fonctionnels, mais des entités vivantes dotées de leur propre existence.
+                  Dans mes recherches sur les interactions entre citadins et végétaux dans le Grand Paris, j'ai exploré comment les urbains perçoivent, nomment et interagissent avec les plantes qui les entourent. Ce qui m'a frappée, c'est à quel point nous avons perdu le vocabulaire, les gestes et les savoirs qui reliaient autrefois l'humain au monde végétal.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
-                  Dans nos ateliers, nous vous invitons à <em>ralentir</em>, à <em>observer</em> et à <em>écouter le vivant</em> de manière sensible et consciente. C'est dans cette reconnexion que nous trouvons un sens profond et un équilibre essentiel.
+                  Mes ateliers sont une tentative de <em>réactiver ces savoirs</em>. Non pas pour reproduire le passé de manière nostalgique, mais pour comprendre ce que ces pratiques révèlent de notre rapport au monde — et ce qu'elles peuvent nous apprendre aujourd'hui.
                 </p>
                 <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
               </div>
@@ -108,13 +108,13 @@ const About = () => {
               <div className="mb-16 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <Sprout size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
                 <h3 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  L'urgence de la sensibilisation écologique
+                  Comprendre pour ressentir
                 </h3>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-6">
-                  Face aux enjeux environnementaux actuels — changement climatique, perte de biodiversité, pollution — il est urgent de repenser notre place dans l'écosystème. Les plantes, en tant qu'acteurs essentiels de nos environnements, jouent un rôle capital dans notre survie et notre bien-être.
+                  L'ethnobotanique nous enseigne que les plantes ne sont jamais de simples ressources. Dans de nombreuses cultures, elles sont des partenaires, des enseignantes, des êtres avec lesquels on dialogue. Cette vision, que Philippe Descola appelle le "naturalisme" occidental, n'est qu'une cosmologie parmi d'autres.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
-                  À travers nos ateliers, nous souhaitons contribuer à une prise de conscience collective de la valeur intrinsèque du monde végétal. Chaque geste créatif devient une méditation sur notre interdépendance avec le vivant.
+                  Quand on comprend que la teinture végétale était un acte sacré dans certaines sociétés, que le tressage de l'osier accompagnait les rites de passage, ou que le jardin japonais incarne une philosophie du vide et de l'impermanence — alors le geste créatif prend une tout autre dimension. <strong>On ne fait plus "juste" un atelier : on s'inscrit dans une lignée de pratiques millénaires.</strong>
                 </p>
                 <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
               </div>
@@ -122,10 +122,10 @@ const About = () => {
               <div className="mb-16 animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <Sparkles size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
                 <h3 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Le rituel comme reconnexion
+                  Développer sa sensibilité
                 </h3>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
-                  Il y a une forme de magie dans la répétition, dans la préparation minutieuse des matières naturelles, dans le geste de créer avec ses mains. Nous voyons le rituel comme une méditation — une manière d'insuffler intention et présence dans notre relation au vivant. C'est dans ces moments que nous retrouvons ce qui a été perdu dans le tumulte de la vie moderne.
+                  Ce qui m'intéresse, c'est ce qui se passe <em>pendant</em> l'atelier : le moment où les mains touchent la mousse, où l'on sent l'odeur de la garance qui chauffe, où l'on observe les nervures d'une feuille avec un regard neuf. Ces moments de présence et d'attention au vivant sont précieux car ils nous sortent de notre rapport utilitariste au monde. C'est là que quelque chose se transforme.
                 </p>
                 <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
               </div>
@@ -133,7 +133,7 @@ const About = () => {
               <div className="bg-sand rounded-lg p-8 md:p-12 mb-16">
                 <blockquote className="text-center">
                   <p className="text-2xl md:text-3xl italic text-charcoal mb-6">
-                    "Dans chaque graine réside la possibilité d'une forêt. Dans chaque atelier, la possibilité d'une transformation."
+                    "Je ne cherche pas à divertir, mais à éveiller — à créer des espaces où l'on peut réapprendre à regarder, à toucher, à s'émerveiller."
                   </p>
                   <footer className="text-sm text-charcoal/70 uppercase tracking-wider font-semibold">
                     — Vanessa Charlery
@@ -143,17 +143,17 @@ const About = () => {
 
               <div className="text-center animate-fade-in">
                 <h3 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Notre approche
+                  Mes travaux de recherche
                 </h3>
                 <div className="space-y-6 max-w-2xl mx-auto">
                   <p className="text-lg text-charcoal/80 leading-relaxed">
-                    Nous allions savoirs ethnobotaniques et pratiques artistiques contemporaines pour imaginer des ateliers à la fois pédagogiques et profondément créatifs. Notre démarche s'inscrit dans une vision holistique qui reconnaît l'importance du bien-être des plantes autant que celui des humains.
+                    Mon mémoire de recherche, dirigé par Florence Brunois-Pasina à l'EHESS, porte sur les relations entre les citadins et les plantes dans les espaces verts urbains du Grand Paris. J'y explore comment les urbains développent — ou perdent — leur sensibilité au végétal, comment ils nomment les plantes qu'ils croisent, et quels liens affectifs se tissent dans ces rencontres quotidiennes.
                   </p>
                   <p className="text-lg text-charcoal/80 leading-relaxed">
-                    Chaque expérience est pensée pour être accessible à tous, tout en conservant une réelle profondeur et authenticité. Nous travaillons avec des matériaux durables et locaux, dans le respect du vivant et des cycles naturels.
+                    Cette recherche nourrit directement ma pratique d'ateliers : elle m'a convaincue que pour reconnecter au vivant, il ne suffit pas de "faire" — il faut aussi <em>comprendre</em>, <em>nommer</em>, <em>situer</em> ces pratiques dans leur contexte culturel et historique.
                   </p>
                   <p className="text-lg text-charcoal/80 leading-relaxed">
-                    Nos ateliers sont une invitation à redécouvrir cette connexion ancestrale que la société moderne nous a fait oublier. C'est un appel à <em>ralentir</em>, <em>ressentir</em> et créer avec la nature, pour construire ensemble un avenir plus durable et conscient.
+                    C'est cette approche — à la fois sensorielle, créative et réflexive — qui fait la singularité de Botanique Ludique.
                   </p>
                 </div>
               </div>
