@@ -34,6 +34,7 @@ interface Workshop {
   icon: any;
   type?: string;
   category: WorkshopCategory;
+  tag?: "populaire" | "nouveau";
 }
 
 const workshops: Workshop[] = [
@@ -47,6 +48,7 @@ const workshops: Workshop[] = [
     video: "/videos/workshop-dyeing.mp4",
     icon: Palette,
     category: "textiles",
+    tag: "populaire",
   },
   {
     title: "Tataki Zome",
@@ -77,6 +79,7 @@ const workshops: Workshop[] = [
     icon: Sprout,
     type: "video",
     category: "jardinage",
+    tag: "populaire",
   },
   {
     title: "Terrariums",
@@ -136,6 +139,7 @@ const workshops: Workshop[] = [
     icon: Flower2,
     type: "video",
     category: "floral",
+    tag: "nouveau",
   },
 
   // Artisanat & Techniques Ancestrales
@@ -321,6 +325,16 @@ const Workshops = () => {
                           {categoryLabels[workshop.category]}
                         </div>
                         
+                        {/* Tag Badge (Populaire / Nouveau) */}
+                        {workshop.tag && (
+                          <div className={`absolute top-4 right-4 z-10 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide shadow-lg ${
+                            workshop.tag === "populaire" 
+                              ? "bg-gradient-to-r from-orange-500 to-red-500 text-white" 
+                              : "bg-gradient-to-r from-blue-500 to-indigo-500 text-white"
+                          }`}>
+                            {workshop.tag === "populaire" ? "⭐ Populaire" : "✨ Nouveau"}
+                          </div>
+                        )}
                         {workshop.video && workshop.type !== "video" ? (
                           <Carousel className="w-full">
                             <CarouselContent>
