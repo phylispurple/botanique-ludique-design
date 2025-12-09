@@ -18,7 +18,7 @@ const stats: StatItem[] = [
     icon: "users"
   },
   {
-    value: "6",
+    value: "15+",
     label: "Partenaires de confiance",
     icon: "building"
   },
