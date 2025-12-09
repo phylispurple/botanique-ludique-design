@@ -5,6 +5,8 @@ import CookieConsent from "@/components/CookieConsent";
 import Testimonials from "@/components/Testimonials";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import SeasonalBanner from "@/components/SeasonalBanner";
+import AnimatedSection from "@/components/AnimatedSection";
+import AnimatedCounter from "@/components/AnimatedCounter";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Leaf, Users, Calendar, Building2, Award, Mail } from "lucide-react";
@@ -174,7 +176,7 @@ const Index = () => {
         
         <div className="container mx-auto max-w-6xl relative z-10">
           {/* Logo et Titre */}
-          <div className="flex flex-col items-center justify-center mb-10">
+          <AnimatedSection className="flex flex-col items-center justify-center mb-10">
             <div className="flex items-center gap-3 mb-4">
               <Leaf 
                 className="w-12 h-12 md:w-14 md:h-14" 
@@ -190,57 +192,60 @@ const Index = () => {
               </div>
             </div>
             <div className="w-16 h-1 bg-sage" />
-          </div>
+          </AnimatedSection>
 
           {/* Contenu en deux colonnes sur desktop */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Texte de présentation */}
-            <div className="space-y-5">
-              <p className="text-lg text-charcoal/80 leading-relaxed">
-                Créée par <strong>Vanessa Charlery</strong>, ethnobotaniste et anthropologue, 
-                Botanique Ludique propose des ateliers à Paris, Yvelines (78) et Hauts-de-Seine (92) qui allient créativité artistique et transmission 
-                des savoirs ethnobotaniques.
-              </p>
-              <p className="text-base text-charcoal/70 leading-relaxed">
-                Chaque pratique explore les relations culturelles entre humains 
-                et plantes, de l'Asie à l'Europe. Une approche pédagogique qui enrichit l'expérience artistique d'une dimension culturelle et scientifique.
-              </p>
-              <button 
-                onClick={handleDownloadBrochure} 
-                className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-off-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg text-sm"
-              >
-                Télécharger la plaquette
-                <span>→</span>
-              </button>
-            </div>
+            <AnimatedSection delay={100} direction="left">
+              <div className="space-y-5">
+                <p className="text-lg text-charcoal/80 leading-relaxed">
+                  Créée par <strong>Vanessa Charlery</strong>, ethnobotaniste et anthropologue, 
+                  Botanique Ludique propose des ateliers à Paris, Yvelines (78) et Hauts-de-Seine (92) qui allient créativité artistique et transmission 
+                  des savoirs ethnobotaniques.
+                </p>
+                <p className="text-base text-charcoal/70 leading-relaxed">
+                  Chaque pratique explore les relations culturelles entre humains 
+                  et plantes, de l'Asie à l'Europe. Une approche pédagogique qui enrichit l'expérience artistique d'une dimension culturelle et scientifique.
+                </p>
+                <button 
+                  onClick={handleDownloadBrochure} 
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-off-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg text-sm"
+                >
+                  Télécharger la plaquette
+                  <span>→</span>
+                </button>
+              </div>
+            </AnimatedSection>
 
-            {/* Stats intégrées */}
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => {
-                const IconComponent = stat.icon;
-                return (
-                  <div 
-                    key={index}
-                    className="text-center p-5 bg-white/60 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                  >
-                    <div className="flex justify-center mb-2">
-                      <div className="p-2 rounded-full bg-sage/10 text-sage">
-                        <IconComponent className="w-5 h-5" />
+            {/* Stats intégrées avec animation de comptage */}
+            <AnimatedSection delay={200} direction="right">
+              <div className="grid grid-cols-2 gap-6">
+                {stats.map((stat, index) => {
+                  const IconComponent = stat.icon;
+                  return (
+                    <div 
+                      key={index}
+                      className="text-center p-5 bg-white/60 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                    >
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 rounded-full bg-sage/10 text-sage">
+                          <IconComponent className="w-5 h-5" />
+                        </div>
+                      </div>
+                      <AnimatedCounter 
+                        value={stat.value}
+                        className="text-2xl md:text-3xl font-bold text-charcoal mb-1"
+                        style={{ fontFamily: 'Fraunces, serif' }}
+                      />
+                      <div className="text-xs text-muted-foreground">
+                        {stat.label}
                       </div>
                     </div>
-                    <div 
-                      className="text-2xl md:text-3xl font-bold text-charcoal mb-1"
-                      style={{ fontFamily: 'Fraunces, serif' }}
-                    >
-                      {stat.value}
-                    </div>
-                    <div className="text-xs text-muted-foreground">
-                      {stat.label}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -248,7 +253,7 @@ const Index = () => {
       {/* Gallery Preview Section */}
       <section className="py-16 px-4 bg-gradient-to-b from-background to-sand/30">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-10">
+          <AnimatedSection className="text-center mb-10">
             <h2 
               className="text-2xl md:text-3xl mb-3 text-charcoal"
               style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}
@@ -258,60 +263,31 @@ const Index = () => {
             <p className="text-sm text-muted-foreground max-w-xl mx-auto">
               Découvrez l'ambiance de nos ateliers et les magnifiques résultats
             </p>
-          </div>
+          </AnimatedSection>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-            <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
-              <img 
-                src={galleryAtelierAdulte}
-                alt="Participants pendant un atelier"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
-              <img 
-                src={galleryFlowerCrown}
-                alt="Atelier couronne de fleurs"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
-              <img 
-                src={galleryKokedamaGarden}
-                alt="Kokedama dans un jardin"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
-              <img 
-                src={tatakiZomeImage}
-                alt="Atelier Tataki Zome"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
-              <img 
-                src={gallerySeedBombs}
-                alt="Fabrication de bombes à graines"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
-              <img 
-                src={galleryBasketry}
-                alt="Atelier vannerie"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
+            {[
+              { src: galleryAtelierAdulte, alt: "Participants pendant un atelier" },
+              { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs" },
+              { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin" },
+              { src: tatakiZomeImage, alt: "Atelier Tataki Zome" },
+              { src: gallerySeedBombs, alt: "Fabrication de bombes à graines" },
+              { src: galleryBasketry, alt: "Atelier vannerie" }
+            ].map((image, index) => (
+              <AnimatedSection key={index} delay={index * 100}>
+                <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
+                  <img 
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </AnimatedSection>
+            ))}
           </div>
           
-          <div className="text-center">
+          <AnimatedSection delay={600} className="text-center">
             <Link 
               to="/gallery"
               className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg text-sm"
@@ -319,7 +295,7 @@ const Index = () => {
               Voir toute la galerie
               <span>→</span>
             </Link>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
       
@@ -329,29 +305,33 @@ const Index = () => {
       {/* Partners Section - Ils nous font confiance */}
       <section className="py-16 px-4" style={{ backgroundColor: '#F7F7EB' }}>
         <div className="container mx-auto max-w-5xl">
-          <h3 className="text-2xl md:text-3xl text-charcoal text-center mb-8" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
-            Ils nous font confiance
-          </h3>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 items-center">
-            <div className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <img src="/logos/region-idf.webp" alt="Région Île-de-France" className="max-h-12 w-auto object-contain" loading="lazy" />
+          <AnimatedSection>
+            <h3 className="text-2xl md:text-3xl text-charcoal text-center mb-8" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+              Ils nous font confiance
+            </h3>
+          </AnimatedSection>
+          <AnimatedSection delay={100}>
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 items-center">
+              {[
+                { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
+                { src: "/logos/mjc-vesinet.jpg", alt: "MJC du Vésinet" },
+                { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
+                { src: "/logos/mjc-chatou.jpeg", alt: "MJC Chatou" },
+                { src: "/logos/publicis.jpg", alt: "Publicis" },
+                { src: "/logos/f93.jpg", alt: "F93" }
+              ].map((logo, index) => (
+                <div 
+                  key={index}
+                  className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                  style={{
+                    animationDelay: `${index * 100}ms`
+                  }}
+                >
+                  <img src={logo.src} alt={logo.alt} className="max-h-12 w-auto object-contain" loading="lazy" />
+                </div>
+              ))}
             </div>
-            <div className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <img src="/logos/mjc-vesinet.jpg" alt="MJC du Vésinet" className="max-h-12 w-auto object-contain" loading="lazy" />
-            </div>
-            <div className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <img src="/logos/jappy-senior.svg" alt="Happy Senior" className="max-h-12 w-auto object-contain" loading="lazy" />
-            </div>
-            <div className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <img src="/logos/mjc-chatou.jpeg" alt="MJC Chatou" className="max-h-12 w-auto object-contain" loading="lazy" />
-            </div>
-            <div className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <img src="/logos/publicis.jpg" alt="Publicis" className="max-h-12 w-auto object-contain" loading="lazy" />
-            </div>
-            <div className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <img src="/logos/f93.jpg" alt="F93" className="max-h-12 w-auto object-contain" loading="lazy" />
-            </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
       
@@ -364,48 +344,52 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* CTA */}
-            <div className="text-center md:text-left space-y-4">
-              <h2 className="text-3xl md:text-4xl" style={{
-                fontFamily: 'Fraunces, serif',
-                fontWeight: 400,
-                color: '#F7F7EB'
-              }}>
-                Prêt·e à explorer le monde végétal ?
-              </h2>
-              <p className="text-base" style={{
-                color: '#F7F7EB',
-                opacity: 0.9
-              }}>
-                Rejoignez-nous pour un atelier à Paris, Yvelines ou Hauts-de-Seine.
-              </p>
-              <div className="flex flex-wrap gap-3 justify-center md:justify-start pt-2">
-                <Link to="/workshops" className="px-6 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105 hover:shadow-lg" style={{
-                  backgroundColor: '#C9D2B5',
-                  color: '#2B2B2B'
-                }}>
-                  Voir les ateliers
-                </Link>
-                <Link to="/contact" className="px-6 py-3 bg-transparent border-2 border-off-white rounded-full font-semibold text-sm transition-all hover:scale-105" style={{
+            <AnimatedSection direction="left">
+              <div className="text-center md:text-left space-y-4">
+                <h2 className="text-3xl md:text-4xl" style={{
+                  fontFamily: 'Fraunces, serif',
+                  fontWeight: 400,
                   color: '#F7F7EB'
                 }}>
-                  Nous contacter
-                </Link>
+                  Prêt·e à explorer le monde végétal ?
+                </h2>
+                <p className="text-base" style={{
+                  color: '#F7F7EB',
+                  opacity: 0.9
+                }}>
+                  Rejoignez-nous pour un atelier à Paris, Yvelines ou Hauts-de-Seine.
+                </p>
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start pt-2">
+                  <Link to="/workshops" className="px-6 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105 hover:shadow-lg" style={{
+                    backgroundColor: '#C9D2B5',
+                    color: '#2B2B2B'
+                  }}>
+                    Voir les ateliers
+                  </Link>
+                  <Link to="/contact" className="px-6 py-3 bg-transparent border-2 border-off-white rounded-full font-semibold text-sm transition-all hover:scale-105" style={{
+                    color: '#F7F7EB'
+                  }}>
+                    Nous contacter
+                  </Link>
+                </div>
               </div>
-            </div>
+            </AnimatedSection>
 
             {/* Newsletter Compact */}
-            <div className="bg-white/95 rounded-2xl p-6 shadow-xl">
-              <div className="flex items-center gap-2 mb-3">
-                <Mail className="w-5 h-5 text-sage" />
-                <h3 className="text-lg font-semibold text-charcoal" style={{ fontFamily: 'Fraunces, serif' }}>
-                  Restez informé·e
-                </h3>
+            <AnimatedSection delay={200} direction="right">
+              <div className="bg-white/95 rounded-2xl p-6 shadow-xl">
+                <div className="flex items-center gap-2 mb-3">
+                  <Mail className="w-5 h-5 text-sage" />
+                  <h3 className="text-lg font-semibold text-charcoal" style={{ fontFamily: 'Fraunces, serif' }}>
+                    Restez informé·e
+                  </h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Recevez nos actualités et les dates des prochains ateliers.
+                </p>
+                <NewsletterSignup compact />
               </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                Recevez nos actualités et les dates des prochains ateliers.
-              </p>
-              <NewsletterSignup compact />
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
