@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { SchemaOrg } from "@/components/SchemaOrg";
+import TrustBadges from "@/components/TrustBadges";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Building2, Heart, Leaf, Calendar, Mail, Phone, CheckCircle, Loader2 } from "lucide-react";
+import { Users, Building2, Heart, Leaf, Calendar, Mail, Phone, CheckCircle, Loader2, Clock, Star, Shield, Award } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
@@ -118,29 +120,67 @@ const B2B = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Professionnels - Team Building et Événements Nature Paris, Yvelines, 92"
-        description="Organisez des ateliers botaniques pour vos équipes, événements d'entreprise, collectivités et EHPAD à Paris, Yvelines (78) et Hauts-de-Seine (92). Team building créatif et cohésion d'équipe."
-        keywords="team building Paris, événement entreprise, atelier entreprise Yvelines, atelier entreprise Hauts-de-Seine, RSE, collectivités, EHPAD, animation nature"
+        title="Team Building RSE Paris, Yvelines, Hauts-de-Seine | Ateliers Nature Entreprise"
+        description="Team building botanique et RSE à Paris, Yvelines (78) et Hauts-de-Seine (92). Animations QVT, cohésion d'équipe, événements CSE, EHPAD. Devis en 24h. +400 participants accompagnés."
+        keywords="team building RSE Paris, animation QVT entreprise, team building nature, atelier entreprise Yvelines, cohésion équipe écologique, événement CSE nature, animation EHPAD, team building Hauts-de-Seine, séminaire RSE, bien-être travail"
         canonical="/b2b"
+      />
+      <SchemaOrg 
+        type="Service"
+        data={{
+          serviceType: "Team Building et Animations Botaniques",
+          name: "Ateliers Botaniques pour Professionnels",
+          description: "Team building RSE, animations QVT, événements CSE et ateliers EHPAD à Paris et Île-de-France",
+          offers: [
+            { "@type": "Offer", "name": "Team Building Kokedama", "description": "Création collaborative de jardins suspendus" },
+            { "@type": "Offer", "name": "Animation QVT", "description": "Bien-être au travail par la nature" },
+            { "@type": "Offer", "name": "Événement RSE", "description": "Ateliers éco-responsables pour entreprises" }
+          ]
+        }}
       />
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section avec urgence */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-background to-sage/5">
         <div className="container mx-auto max-w-6xl text-center space-y-6">
           <div className="flex justify-center mb-6">
-            <Leaf className="w-16 h-16 text-sage" />
+            <div className="relative">
+              <Leaf className="w-16 h-16 text-sage" />
+              <span className="absolute -top-2 -right-2 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse">
+                Devis 24h
+              </span>
+            </div>
           </div>
           <h1 
             className="text-4xl md:text-5xl lg:text-6xl text-charcoal"
             style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}
           >
-            Ateliers Botaniques pour Professionnels
+            Team Building Botanique & RSE
           </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Renforcez la cohésion de vos équipes et engagez votre démarche RSE 
-              avec des ateliers créatifs et nature à Paris, dans les Yvelines (78) et les Hauts-de-Seine (92)
-            </p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Renforcez la cohésion de vos équipes et engagez votre démarche RSE 
+            avec des ateliers créatifs et nature à Paris, dans les Yvelines (78) et les Hauts-de-Seine (92)
+          </p>
+          
+          {/* Badges de confiance compacts */}
+          <TrustBadges variant="compact" showAll={false} />
+          
+          {/* CTA Urgence */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+            <a 
+              href="#devis" 
+              className="px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl bg-gradient-to-r from-sage to-sage-dark text-white"
+            >
+              Demander un devis gratuit →
+            </a>
+            <a 
+              href="mailto:botaniqueludique@gmail.com"
+              className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-sage text-sage hover:bg-sage/10 transition-colors font-medium"
+            >
+              <Mail className="w-5 h-5" />
+              Contact direct
+            </a>
+          </div>
         </div>
       </section>
 
@@ -281,17 +321,21 @@ const B2B = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-16 px-4 bg-sand/30">
+      <section id="devis" className="py-16 px-4 bg-sand/30">
         <div className="container mx-auto max-w-2xl">
           <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <Clock className="w-4 h-4" />
+              Réponse garantie sous 24h
+            </div>
             <h2 
               className="text-3xl md:text-4xl mb-4 text-charcoal"
               style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}
             >
-              Demande de Devis
+              Demande de Devis Gratuit
             </h2>
             <p className="text-muted-foreground">
-              Parlez-nous de votre projet, nous vous répondrons rapidement
+              Parlez-nous de votre projet, nous vous répondrons rapidement avec une proposition personnalisée
             </p>
           </div>
 

@@ -9,6 +9,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
+import TrustBadges from "@/components/TrustBadges";
 import { Leaf, Users, Calendar, Building2, Award, Mail } from "lucide-react";
 import heroBackground from "@/assets/hero-background.png";
 import galleryAtelierAdulte from "@/assets/gallery-atelier-adulte.jpg";
@@ -301,6 +302,15 @@ const Index = () => {
       
       {/* Testimonials Section */}
       <Testimonials />
+      
+      {/* Trust Badges Section */}
+      <section className="py-8 px-4 bg-sage/5">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <TrustBadges variant="horizontal" showAll={true} />
+          </AnimatedSection>
+        </div>
+      </section>
       
       {/* Partners Section - Ils nous font confiance */}
       <section className="py-16 px-4" style={{ backgroundColor: '#F7F7EB' }}>
