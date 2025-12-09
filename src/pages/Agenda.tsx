@@ -250,7 +250,7 @@ const Agenda = () => {
                         </TableCell>
                         <TableCell className="text-right">
                           <Link 
-                            to={`/contact?atelier=${encodeURIComponent(workshop.name)}`}
+                            to={`/contact?atelier=${encodeURIComponent(workshop.name)}&date=${encodeURIComponent(workshop.dates)}&lieu=${encodeURIComponent(workshop.location)}`}
                             className="inline-flex items-center px-4 py-2 bg-sage hover:bg-sage-dark text-off-white text-xs uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
                           >
                             Réserver
@@ -289,7 +289,7 @@ const Agenda = () => {
                         {workshop.dates}
                       </Badge>
                       <Link 
-                        to={`/contact?atelier=${encodeURIComponent(workshop.name)}`}
+                        to={`/contact?atelier=${encodeURIComponent(workshop.name)}&date=${encodeURIComponent(workshop.dates)}&lieu=${encodeURIComponent(workshop.location)}`}
                         className="mt-2 w-full inline-flex items-center justify-center px-4 py-2.5 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
                       >
                         Réserver cet atelier
