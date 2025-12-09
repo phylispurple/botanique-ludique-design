@@ -24,13 +24,13 @@ const About = () => {
               À Propos de Botanique Ludique
             </h1>
             <p className="subtitle-italic text-lg text-center mb-16">
-              Un projet né d'une passion commune pour la nature et l'éducation.
+              Reconnecter l'humain au végétal par la création et le savoir
             </p>
 
             <div className="max-w-4xl mx-auto mb-20">
               <div className="bg-sand rounded-lg p-8 md:p-12 animate-fade-in mb-12">
                 <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Botanique Ludique est un projet né d'une passion commune pour la nature et l'éducation. Créé en 2022 par Vanessa Charlery et Benjamin Riou, notre mission est de rendre la botanique accessible, ludique et enrichissante pour tous.
+                  Botanique Ludique a été fondée en 2022 par Vanessa Charlery, ethnobotaniste diplômée de l'EHESS. Ma mission : rendre la botanique accessible, ludique et enrichissante pour tous, en transmettant des savoirs ancestraux avec une approche contemporaine. Selon les projets et les besoins, je collabore avec un réseau d'artisans, d'artistes et de professionnels de la nature pour enrichir les expériences proposées.
                 </p>
               </div>
 
