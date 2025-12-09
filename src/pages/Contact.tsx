@@ -39,10 +39,13 @@ const Contact = () => {
       const decodedDate = dateFromUrl ? decodeURIComponent(dateFromUrl) : null;
       const decodedLieu = lieuFromUrl ? decodeURIComponent(lieuFromUrl) : null;
       
-      // Build subject with date if available
+      // Build subject with date and location
       let subject = `Réservation : ${decodedAtelier}`;
-      if (decodedDate && decodedDate !== "Dates à venir") {
-        subject += ` - ${decodedDate}`;
+      if (decodedDate) {
+        subject += ` | ${decodedDate}`;
+      }
+      if (decodedLieu) {
+        subject += ` | ${decodedLieu}`;
       }
       
       // Build message with all details
