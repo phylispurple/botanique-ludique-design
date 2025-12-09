@@ -59,7 +59,7 @@ const Footer = () => {
                 onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
               >
                 <Linkedin size={18} />
-                <span className="text-sm">Vanessa Charlery</span>
+                <span className="text-sm">Botanique Ludique</span>
               </a>
               <a
                 href="mailto:botaniqueludique@gmail.com"
