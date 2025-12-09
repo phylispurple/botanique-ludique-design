@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar as CalendarIcon, MapPin, Clock, Users, Gift, Mail, Send, Info } from "lucide-react";
+import { Calendar as CalendarIcon, MapPin, Clock, Users, Gift, Mail, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
@@ -89,16 +88,7 @@ const giftCardOptions = [
 ];
 
 const Agenda = () => {
-  const [searchParams] = useSearchParams();
-  const selectedAtelier = searchParams.get('atelier');
   const { toast } = useToast();
-  
-  const [contactForm, setContactForm] = useState({
-    name: "",
-    email: "",
-    workshop: selectedAtelier || "",
-    message: ""
-  });
   
   const [giftCardForm, setGiftCardForm] = useState({
     name: "",
@@ -109,54 +99,10 @@ const Agenda = () => {
     message: ""
   });
   
-  const [isSubmittingContact, setIsSubmittingContact] = useState(false);
+  
   const [isSubmittingGiftCard, setIsSubmittingGiftCard] = useState(false);
 
-  useEffect(() => {
-    if (selectedAtelier) {
-      setContactForm(prev => ({ ...prev, workshop: selectedAtelier }));
-      // Scroll to the contact form section
-      setTimeout(() => {
-        const element = document.getElementById('demande-info');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 300);
-    }
-  }, [selectedAtelier]);
 
-  const handleContactSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmittingContact(true);
-    
-    try {
-      const { error } = await supabase.functions.invoke('send-contact-email', {
-        body: {
-          name: contactForm.name,
-          email: contactForm.email,
-          subject: `Demande de réservation : ${contactForm.workshop}`,
-          message: contactForm.message
-        }
-      });
-      
-      if (error) throw error;
-      
-      toast({
-        title: "Demande envoyée !",
-        description: "Nous vous répondrons dans les plus brefs délais.",
-      });
-      
-      setContactForm({ name: "", email: "", workshop: "", message: "" });
-    } catch (error) {
-      toast({
-        title: "Erreur",
-        description: "Une erreur s'est produite. Veuillez réessayer.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmittingContact(false);
-    }
-  };
 
   const handleGiftCardSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -290,7 +236,7 @@ const Agenda = () => {
                     {workshops.map((workshop, index) => (
                       <TableRow 
                         key={index} 
-                        className={`hover:bg-sage/5 transition-colors ${selectedAtelier === workshop.name ? 'bg-sage/10' : ''}`}
+                        className="hover:bg-sage/5 transition-colors"
                       >
                         <TableCell className="font-medium text-charcoal">{workshop.name}</TableCell>
                         <TableCell className="text-charcoal/70">{workshop.location}</TableCell>
@@ -303,13 +249,12 @@ const Agenda = () => {
                           </Badge>
                         </TableCell>
                         <TableCell className="text-right">
-                          <a 
-                            href="#demande-info"
-                            onClick={() => setContactForm(prev => ({ ...prev, workshop: workshop.name }))}
+                          <Link 
+                            to={`/contact?atelier=${encodeURIComponent(workshop.name)}`}
                             className="inline-flex items-center px-4 py-2 bg-sage hover:bg-sage-dark text-off-white text-xs uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
                           >
                             Réserver
-                          </a>
+                          </Link>
                         </TableCell>
                       </TableRow>
                     ))}
@@ -320,7 +265,7 @@ const Agenda = () => {
               {/* Mobile Cards */}
               <div className="md:hidden space-y-4">
                 {workshops.map((workshop, index) => (
-                  <Card key={index} className={`${selectedAtelier === workshop.name ? 'ring-2 ring-sage' : ''}`}>
+                  <Card key={index}>
                     <CardContent className="p-5 space-y-3">
                       <h3 className="text-xl font-semibold text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
                         {workshop.name}
@@ -343,13 +288,12 @@ const Agenda = () => {
                       <Badge variant="outline" className="bg-sand/50 text-charcoal/70 border-sage/30">
                         {workshop.dates}
                       </Badge>
-                      <a 
-                        href="#demande-info"
-                        onClick={() => setContactForm(prev => ({ ...prev, workshop: workshop.name }))}
+                      <Link 
+                        to={`/contact?atelier=${encodeURIComponent(workshop.name)}`}
                         className="mt-2 w-full inline-flex items-center justify-center px-4 py-2.5 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
                       >
                         Réserver cet atelier
-                      </a>
+                      </Link>
                     </CardContent>
                   </Card>
                 ))}
@@ -377,87 +321,6 @@ const Agenda = () => {
                     <Mail className="w-4 h-4" />
                     Contactez-nous pour un atelier sur mesure
                   </Link>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Contact Form Section */}
-            <div id="demande-info" className="scroll-mt-32 mb-20 animate-fade-in">
-              <Card className="max-w-2xl mx-auto">
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-3 mb-6">
-                    <Mail className="w-8 h-8 text-sage" />
-                    <div>
-                      <h2 className="text-2xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                        Demande d'information et réservation
-                      </h2>
-                      <p className="text-sm text-charcoal/60">Nous vous répondrons sous 48h</p>
-                    </div>
-                  </div>
-                  
-                  <form onSubmit={handleContactSubmit} className="space-y-5">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-charcoal mb-2">Nom *</label>
-                        <input
-                          type="text"
-                          required
-                          value={contactForm.name}
-                          onChange={(e) => setContactForm(prev => ({ ...prev, name: e.target.value }))}
-                          className="w-full px-4 py-3 rounded-lg border border-sage/30 bg-background focus:outline-none focus:ring-2 focus:ring-sage/50"
-                          placeholder="Votre nom"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-charcoal mb-2">Email *</label>
-                        <input
-                          type="email"
-                          required
-                          value={contactForm.email}
-                          onChange={(e) => setContactForm(prev => ({ ...prev, email: e.target.value }))}
-                          className="w-full px-4 py-3 rounded-lg border border-sage/30 bg-background focus:outline-none focus:ring-2 focus:ring-sage/50"
-                          placeholder="votre@email.com"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-charcoal mb-2">Atelier souhaité *</label>
-                      <select
-                        required
-                        value={contactForm.workshop}
-                        onChange={(e) => setContactForm(prev => ({ ...prev, workshop: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-lg border border-sage/30 bg-background focus:outline-none focus:ring-2 focus:ring-sage/50"
-                      >
-                        <option value="">Sélectionnez un atelier</option>
-                        {workshops.map((w, i) => (
-                          <option key={i} value={w.name}>{w.name}</option>
-                        ))}
-                        <option value="Atelier sur mesure / Groupe privé">Atelier sur mesure / Groupe privé</option>
-                        <option value="Autre">Autre atelier</option>
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-charcoal mb-2">Message (optionnel)</label>
-                      <textarea
-                        value={contactForm.message}
-                        onChange={(e) => setContactForm(prev => ({ ...prev, message: e.target.value }))}
-                        rows={4}
-                        className="w-full px-4 py-3 rounded-lg border border-sage/30 bg-background focus:outline-none focus:ring-2 focus:ring-sage/50 resize-none"
-                        placeholder="Précisez vos disponibilités, le nombre de participants, vos questions..."
-                      />
-                    </div>
-                    
-                    <button
-                      type="submit"
-                      disabled={isSubmittingContact}
-                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark disabled:opacity-50 text-off-white font-semibold uppercase tracking-wider transition-all duration-300 rounded-full"
-                    >
-                      <Send className="w-4 h-4" />
-                      {isSubmittingContact ? "Envoi en cours..." : "Envoyer ma demande"}
-                    </button>
-                  </form>
                 </CardContent>
               </Card>
             </div>
