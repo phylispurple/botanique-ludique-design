@@ -140,7 +140,7 @@ const Navigation = () => {
                           {category.workshops.map((workshop) => (
                             <Link
                               key={workshop.id}
-                              to={`/workshops#${workshop.id}`}
+                              to={`/workshops?reset=true#${workshop.id}`}
                               className="block px-6 py-2 text-sm hover:bg-sage/10 transition-colors"
                               style={{ color: '#3D3D2E' }}
                               onClick={() => {
@@ -285,7 +285,7 @@ const Navigation = () => {
                           {category.workshops.map((workshop) => (
                             <Link
                               key={workshop.id}
-                              to={`/workshops#${workshop.id}`}
+                              to={`/workshops?reset=true#${workshop.id}`}
                               className="block ml-2 text-xs text-muted-foreground hover:text-foreground py-1"
                               onClick={() => {
                                 setIsOpen(false);
