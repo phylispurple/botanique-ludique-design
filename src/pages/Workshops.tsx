@@ -352,7 +352,7 @@ const Workshops = () => {
                           {workshop.description}
                         </p>
                         <Link 
-                          to={`/contact?subject=${encodeURIComponent(`Réservation atelier : ${workshop.title}`)}`}
+                          to={`/agenda?atelier=${encodeURIComponent(workshop.title)}`}
                           className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
                         >
                           Demande d'information et réservation

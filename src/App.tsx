@@ -17,7 +17,7 @@ import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import AdminTestimonials from "./pages/AdminTestimonials";
 import B2B from "./pages/B2B";
-import Calendar from "./pages/Calendar";
+import Agenda from "./pages/Agenda";
 import AteliersBotaniquesYvelines from "./pages/AteliersBotaniquesYvelines";
 import TeamBuildingRSEParis from "./pages/TeamBuildingRSEParis";
 import AteliersBotaniqueEntrepriseIDF from "./pages/AteliersBotaniqueEntrepriseIDF";
@@ -43,8 +43,9 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/b2b" element={<B2B />} />
-          <Route path="/calendar" element={<Calendar />} />
-          <Route path="/calendrier" element={<Calendar />} />
+          <Route path="/agenda" element={<Agenda />} />
+          <Route path="/calendar" element={<Agenda />} />
+          <Route path="/calendrier" element={<Agenda />} />
           <Route path="/ateliers-botaniques-yvelines" element={<AteliersBotaniquesYvelines />} />
           <Route path="/team-building-rse-paris" element={<TeamBuildingRSEParis />} />
           <Route path="/ateliers-botanique-entreprise-idf" element={<AteliersBotaniqueEntrepriseIDF />} />

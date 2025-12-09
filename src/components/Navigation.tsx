@@ -66,6 +66,7 @@ const Navigation = () => {
     { name: "Formations", path: "/training" },
     { name: "Professionnels", path: "/b2b" },
     { name: "Galerie", path: "/gallery" },
+    { name: "Agenda", path: "/agenda" },
     { name: "FAQ", path: "/faq" },
     { name: "Contact", path: "/contact" },
   ];
