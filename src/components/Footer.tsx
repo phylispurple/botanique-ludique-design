@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Mail, MapPin } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -50,6 +50,18 @@ const Footer = () => {
                 <span className="text-sm">@botanique.ludique</span>
               </a>
               <a
+                href="https://www.linkedin.com/in/vanessa-charlery-a988a8319/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 transition-colors"
+                style={{ color: '#5D653A', opacity: 0.7 }}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
+              >
+                <Linkedin size={18} />
+                <span className="text-sm">Vanessa Charlery</span>
+              </a>
+              <a
                 href="mailto:botaniqueludique@gmail.com"
                 className="flex items-center gap-2 transition-colors"
                 style={{ color: '#5D653A', opacity: 0.7 }}
@@ -58,6 +70,16 @@ const Footer = () => {
               >
                 <Mail size={18} />
                 <span className="text-sm">botaniqueludique@gmail.com</span>
+              </a>
+              <a
+                href="tel:+33609831606"
+                className="flex items-center gap-2 transition-colors"
+                style={{ color: '#5D653A', opacity: 0.7 }}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
+              >
+                <Phone size={18} />
+                <span className="text-sm">06 09 83 16 06</span>
               </a>
             </div>
           </div>

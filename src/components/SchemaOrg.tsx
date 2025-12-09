@@ -70,8 +70,8 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
             "closes": "18:00"
           },
           "sameAs": [
-            "https://www.instagram.com/botaniqueludique/",
-            "https://www.facebook.com/botaniqueludique/"
+            "https://www.instagram.com/botanique.ludique/",
+            "https://www.linkedin.com/in/vanessa-charlery-a988a8319/"
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
