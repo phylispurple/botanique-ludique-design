@@ -21,7 +21,7 @@ const workshops = [
     price: "À partir de 45€",
     audience: "Adultes et enfants dès 10 ans",
     dates: "Dates à venir",
-    spots: "8 places max"
+    spots: "10 places max"
   },
   {
     name: "Atelier Teinture Végétale",
@@ -36,7 +36,7 @@ const workshops = [
     name: "Atelier Terrarium",
     location: "Paris et Yvelines",
     duration: "2h",
-    price: "À partir de 40€",
+    price: "À partir de 50€",
     audience: "Tout public dès 8 ans",
     dates: "Dates à venir",
     spots: "10 places max"
@@ -48,7 +48,7 @@ const workshops = [
     price: "À partir de 60€",
     audience: "Adultes et adolescents",
     dates: "Dates à venir",
-    spots: "6 places max"
+    spots: "10 places max"
   },
   {
     name: "Atelier Bombes de Graines",
@@ -66,7 +66,17 @@ const workshops = [
     price: "À partir de 40€",
     audience: "Tout public dès 10 ans",
     dates: "Dates à venir",
-    spots: "8 places max"
+    spots: "10 places max"
+  },
+  {
+    name: "Cycle Matières Végétales",
+    location: "Paris et Yvelines",
+    duration: "4 séances × 2h30",
+    price: "À partir de 200€",
+    audience: "Adultes",
+    dates: "Dates à venir",
+    spots: "10 places max",
+    description: "Cuir de kombucha, tableau végétal d'automne, carnet papier recyclé"
   }
 ];
 
@@ -74,6 +84,7 @@ const giftCardOptions = [
   { value: "50", label: "50€ - Un atelier découverte" },
   { value: "80", label: "80€ - Un atelier complet" },
   { value: "100", label: "100€ - Atelier premium ou duo" },
+  { value: "200", label: "200€ - Cycle Matières Végétales" },
   { value: "libre", label: "Montant libre" }
 ];
 
@@ -345,6 +356,32 @@ const Agenda = () => {
               </div>
             </div>
 
+            {/* Custom Workshop Section */}
+            <div className="mb-16 animate-fade-in">
+              <Card className="max-w-3xl mx-auto bg-gradient-to-br from-sage/10 to-sand/30 border-sage/30">
+                <CardContent className="p-8 text-center">
+                  <div className="flex justify-center mb-4">
+                    <Users className="w-12 h-12 text-sage" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                    Votre atelier n'apparaît pas dans la liste ?
+                  </h3>
+                  <p className="text-charcoal/80 mb-6 max-w-xl mx-auto">
+                    Vous souhaitez organiser un atelier en petit groupe avec vos amis, votre famille ou entre collègues ? 
+                    Nous proposons des ateliers sur mesure adaptés à vos envies et votre planning !
+                  </p>
+                  <a 
+                    href="#demande-info"
+                    onClick={() => setContactForm(prev => ({ ...prev, workshop: "Atelier sur mesure / Groupe privé" }))}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                  >
+                    <Mail className="w-4 h-4" />
+                    Contactez-nous pour un atelier sur mesure
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+
             {/* Contact Form Section */}
             <div id="demande-info" className="scroll-mt-32 mb-20 animate-fade-in">
               <Card className="max-w-2xl mx-auto">
@@ -397,6 +434,7 @@ const Agenda = () => {
                         {workshops.map((w, i) => (
                           <option key={i} value={w.name}>{w.name}</option>
                         ))}
+                        <option value="Atelier sur mesure / Groupe privé">Atelier sur mesure / Groupe privé</option>
                         <option value="Autre">Autre atelier</option>
                       </select>
                     </div>
