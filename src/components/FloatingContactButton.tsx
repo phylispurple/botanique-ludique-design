@@ -66,7 +66,7 @@ const FloatingContactButton = () => {
             >
               <div className="text-center w-full">
                 <p className="text-sm font-semibold text-sage">Devis Entreprise</p>
-                <p className="text-xs text-muted-foreground">Réponse sous 48h</p>
+                <p className="text-xs text-muted-foreground">Réponse sous 24h</p>
               </div>
             </Link>
           </div>
