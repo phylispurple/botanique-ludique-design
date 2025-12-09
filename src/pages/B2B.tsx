@@ -144,12 +144,7 @@ const B2B = () => {
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-background to-sage/5">
         <div className="container mx-auto max-w-6xl text-center space-y-6">
           <div className="flex justify-center mb-6">
-            <div className="relative">
-              <Leaf className="w-16 h-16 text-sage" />
-              <span className="absolute -top-2 -right-2 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse">
-                Devis 24h
-              </span>
-            </div>
+            <Leaf className="w-16 h-16 text-sage" />
           </div>
           <h1 
             className="text-4xl md:text-5xl lg:text-6xl text-charcoal"
