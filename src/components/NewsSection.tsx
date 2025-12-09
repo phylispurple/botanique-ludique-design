@@ -16,8 +16,8 @@ const newsItems: NewsItem[] = [
   {
     id: "1",
     title: "Nouveau : Cycle Matières Végétales",
-    description: "Programme de 4 séances pour explorer le cuir végétal, l'art botanique et le papier recyclé. Une immersion complète dans la création végétale.",
-    date: "Décembre 2024",
+    description: "Programme de 4 séances pour explorer le cuir de kombucha, l'art botanique et le papier recyclé. Une immersion complète dans la création végétale.",
+    date: "Janvier 2025",
     icon: "sparkles",
     link: "/agenda",
     linkText: "Découvrir le programme"
@@ -26,7 +26,7 @@ const newsItems: NewsItem[] = [
     id: "2",
     title: "Cartes cadeaux disponibles",
     description: "Offrez une expérience unique ! Cartes cadeaux de 50€ à 200€ pour un atelier botanique au choix.",
-    date: "Décembre 2024",
+    date: "Janvier 2025",
     icon: "gift",
     link: "/agenda",
     linkText: "Commander une carte"
@@ -35,7 +35,7 @@ const newsItems: NewsItem[] = [
     id: "3",
     title: "Ateliers Team Building 2025",
     description: "Réservations ouvertes pour vos événements d'entreprise. Kokedama, teinture végétale, terrarium en groupe.",
-    date: "Novembre 2024",
+    date: "Décembre 2024",
     icon: "users",
     link: "/b2b",
     linkText: "Demander un devis"
