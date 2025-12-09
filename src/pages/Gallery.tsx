@@ -5,7 +5,6 @@ import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
-import aboutImage from "@/assets/about-vanessa.jpg";
 import terrariumImage from "@/assets/gallery-terrarium.jpg";
 import seedBombsImage from "@/assets/gallery-seed-bombs.jpg";
 import workshopTableImage from "@/assets/gallery-workshop-table.jpg";
@@ -36,38 +35,54 @@ const Gallery = () => {
   const [selectedItem, setSelectedItem] = useState<{ src: string; alt: string; caption: string; type: string } | null>(null);
 
   const items = [
+    // Ligne 1 : Portrait + Ateliers phares
     { src: portraitVanessaImage, alt: "Vanessa Charlery, ethnobotaniste", caption: "Portrait — Vanessa Charlery, fondatrice", type: "image" },
-    { src: aboutImage, alt: "Portrait in nature", caption: "Portrait — Vanessa Charlery", type: "image" },
-    { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium — Atelier Botanique Ludique", type: "image" },
     { src: kokedamaGardenImage, alt: "Kokedama dans un jardin", caption: "Kokedama dans un jardin naturel", type: "image" },
+    { src: "/videos/workshop-demo.mp4", alt: "Immersion dans nos ateliers", caption: "Immersion dans nos ateliers", type: "video" },
+    
+    // Ligne 2 : Créations botaniques
+    { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium — Atelier Botanique Ludique", type: "image" },
+    { src: flowerCrownImage, alt: "Couronne de fleurs", caption: "Atelier couronne de fleurs", type: "image" },
+    { src: "/videos/workshop-epoxy-floral.mp4", alt: "Création époxy floral", caption: "Atelier Époxy Floral — Plateaux et tables en résine", type: "video" },
+    
+    // Ligne 3 : Ateliers en action
     { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines — Atelier Botanique Ludique", type: "image" },
     { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier — MJC Le Vésinet", type: "image" },
-    { src: "/videos/workshop-demo.mp4", alt: "Immersion dans nos ateliers", caption: "Immersion dans nos ateliers", type: "video" },
-    { src: "/videos/workshop-demo-2.mp4", alt: "Atelier botanique", caption: "Atelier de création botanique", type: "video" },
-    { src: forestWalkImage, alt: "Balade en forêt", caption: "Atelier sur les espèces exotiques envahissantes", type: "image" },
-    { src: "/videos/workshop-demo-3.mp4", alt: "Création naturelle", caption: "Création avec éléments naturels", type: "video" },
-    { src: succulentsImage, alt: "Atelier succulentes", caption: "Succulentes — Atelier Botanique Ludique", type: "image" },
-    { src: "/videos/workshop-demo-4.mp4", alt: "Atelier en groupe", caption: "Atelier participatif", type: "video" },
-    { src: autumnLeavesImage, alt: "Création avec feuilles d'automne", caption: "Création végétale automnale", type: "image" },
-    { src: basketryImage, alt: "Atelier vannerie", caption: "Atelier vannerie et tressage", type: "image" },
     { src: "/videos/workshop-dyeing.mp4", alt: "Atelier teinture végétale", caption: "Atelier teinture végétale", type: "video" },
-    { src: atelierAdulteImage, alt: "Atelier herbier adulte", caption: "Atelier création d'herbier — Adultes", type: "image" },
-    { src: sachetSenteurImage, alt: "Sachets de senteur", caption: "Sachets de senteur aux plantes aromatiques", type: "image" },
-    { src: flowerCrownImage, alt: "Couronne de fleurs", caption: "Atelier couronne de fleurs", type: "image" },
-    { src: collegeEee1Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
-    { src: collegeEee2Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
-    { src: collegeEee3Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
-    { src: collegeEee4Image, alt: "Atelier college - especes exotiques envahissantes", caption: "Atelier college - espèces exotiques envahissantes", type: "image" },
-    { src: fresqueVegetaleImage, alt: "Fresque végétale", caption: "Fresques Végétales", type: "image" },
+    
+    // Ligne 4 : Nature et créativité
+    { src: forestWalkImage, alt: "Balade en forêt", caption: "Atelier sur les espèces exotiques envahissantes", type: "image" },
     { src: tatakiZomeImage, alt: "Atelier Tataki Zome", caption: "Atelier Tataki Zome — Impression végétale japonaise", type: "image" },
+    { src: "/videos/workshop-demo-2.mp4", alt: "Atelier botanique", caption: "Atelier de création botanique", type: "video" },
+    
+    // Ligne 5 : Artisanat végétal
+    { src: basketryImage, alt: "Atelier vannerie", caption: "Atelier vannerie et tressage", type: "image" },
+    { src: succulentsImage, alt: "Atelier succulentes", caption: "Succulentes — Atelier Botanique Ludique", type: "image" },
+    { src: "/videos/workshop-demo-3.mp4", alt: "Création naturelle", caption: "Création avec éléments naturels", type: "video" },
+    
+    // Ligne 6 : Bien-être et saisons
+    { src: sachetSenteurImage, alt: "Sachets de senteur", caption: "Sachets de senteur aux plantes aromatiques", type: "image" },
+    { src: autumnLeavesImage, alt: "Création avec feuilles d'automne", caption: "Création végétale automnale", type: "image" },
+    { src: "/videos/workshop-demo-4.mp4", alt: "Atelier en groupe", caption: "Atelier participatif", type: "video" },
+    
+    // Ligne 7 : Ateliers éducatifs
+    { src: atelierAdulteImage, alt: "Atelier herbier adulte", caption: "Atelier création d'herbier — Adultes", type: "image" },
+    { src: fresqueVegetaleImage, alt: "Fresque végétale", caption: "Fresques Végétales", type: "image" },
+    { src: collegeEee1Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
+    
+    // Ligne 8 : Interventions scolaires
+    { src: collegeEee2Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee3Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee4Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
+    
+    // Ligne 9-11 : Éco-construction Kosovo
     { src: kosovoConstruction1, alt: "Éco-construction au Kosovo", caption: "Construction d'une structure en bois — Kosovo", type: "image" },
-    { src: kosovoConstruction2, alt: "Équipe éco-construction Kosovo", caption: "Travail d'équipe en éco-construction avec torchis — Kosovo", type: "image" },
+    { src: kosovoConstruction2, alt: "Équipe éco-construction Kosovo", caption: "Travail d'équipe en éco-construction — Kosovo", type: "image" },
     { src: kosovoConstruction3, alt: "Préparation du torchis", caption: "Préparation du torchis en groupe — Kosovo", type: "image" },
-    { src: kosovoConstruction4, alt: "Structure en torchis", caption: "Réalisation d'un bâtiment en torchis et paille — Kosovo", type: "image" },
+    { src: kosovoConstruction4, alt: "Structure en torchis", caption: "Réalisation d'un bâtiment en torchis — Kosovo", type: "image" },
     { src: kosovoConstruction5, alt: "Atelier torchis", caption: "Les mains dans le torchis — Kosovo", type: "image" },
-    { src: kosovoConstruction6, alt: "Application du torchis", caption: "Techniques ancestrales de construction en torchis — Kosovo", type: "image" },
-    { src: kosovoConstruction7, alt: "Manipulation du torchis", caption: "Apprentissage des techniques d'éco-construction — Kosovo", type: "image" },
-    { src: "/videos/workshop-epoxy-floral.mp4", alt: "Création époxy floral", caption: "Atelier Époxy Floral — Plateaux et tables en résine", type: "video" },
+    { src: kosovoConstruction6, alt: "Application du torchis", caption: "Techniques ancestrales de construction — Kosovo", type: "image" },
+    { src: kosovoConstruction7, alt: "Manipulation du torchis", caption: "Apprentissage éco-construction — Kosovo", type: "image" },
   ];
 
   return (
