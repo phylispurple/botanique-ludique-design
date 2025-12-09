@@ -4,12 +4,10 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import Testimonials from "@/components/Testimonials";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import NewsSection from "@/components/NewsSection";
-import StatsCounter from "@/components/StatsCounter";
 import SeasonalBanner from "@/components/SeasonalBanner";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
-import { Leaf } from "lucide-react";
+import { Leaf, Users, Calendar, Building2, Award, Mail } from "lucide-react";
 import heroBackground from "@/assets/hero-background.png";
 import galleryAtelierAdulte from "@/assets/gallery-atelier-adulte.jpg";
 import galleryFlowerCrown from "@/assets/gallery-flower-crown.jpg";
@@ -38,15 +36,11 @@ const Index = () => {
     }
   };
 
-  const workshops = [
-    { name: "Kokedama", color: "text-sage" },
-    { name: "Teinture Végétale", color: "text-earth" },
-    { name: "Terrariums", color: "text-sage-dark" },
-    { name: "Fresques Végétales", color: "text-accent" },
-    { name: "Bombes de Graines", color: "text-sage-light" },
-    { name: "Couronnes de Fleurs", color: "text-earth" },
-    { name: "Vannerie", color: "text-sage" },
-    { name: "Herbier", color: "text-accent" },
+  const stats = [
+    { value: "50+", label: "Ateliers réalisés", icon: Calendar },
+    { value: "400+", label: "Participants accompagnés", icon: Users },
+    { value: "6", label: "Partenaires de confiance", icon: Building2 },
+    { value: "2023", label: "Année de création", icon: Award }
   ];
 
   return (
@@ -172,23 +166,101 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Présentation Compacte - Philosophy + Stats Combined */}
+      <section className="py-20 px-4 bg-sand relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-40 h-40 bg-sage/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-60 h-60 bg-earth/20 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
+          {/* Logo et Titre */}
+          <div className="flex flex-col items-center justify-center mb-10">
+            <div className="flex items-center gap-3 mb-4">
+              <Leaf 
+                className="w-12 h-12 md:w-14 md:h-14" 
+                style={{ color: '#A7B795', strokeWidth: 1.5 }}
+              />
+              <div className="flex flex-col leading-none">
+                <span className="font-serif text-3xl md:text-4xl font-light tracking-wider" style={{ color: '#5D653A' }}>
+                  Botanique
+                </span>
+                <span className="font-serif text-3xl md:text-4xl font-light tracking-wider" style={{ color: '#5D653A' }}>
+                  Ludique
+                </span>
+              </div>
+            </div>
+            <div className="w-16 h-1 bg-sage" />
+          </div>
+
+          {/* Contenu en deux colonnes sur desktop */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Texte de présentation */}
+            <div className="space-y-5">
+              <p className="text-lg text-charcoal/80 leading-relaxed">
+                Créée par <strong>Vanessa Charlery</strong>, ethnobotaniste et anthropologue, 
+                Botanique Ludique propose des ateliers à Paris, Yvelines (78) et Hauts-de-Seine (92) qui allient créativité artistique et transmission 
+                des savoirs ethnobotaniques.
+              </p>
+              <p className="text-base text-charcoal/70 leading-relaxed">
+                Chaque pratique explore les relations culturelles entre humains 
+                et plantes, de l'Asie à l'Europe. Une approche pédagogique qui enrichit l'expérience artistique d'une dimension culturelle et scientifique.
+              </p>
+              <button 
+                onClick={handleDownloadBrochure} 
+                className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-off-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg text-sm"
+              >
+                Télécharger la plaquette
+                <span>→</span>
+              </button>
+            </div>
+
+            {/* Stats intégrées */}
+            <div className="grid grid-cols-2 gap-6">
+              {stats.map((stat, index) => {
+                const IconComponent = stat.icon;
+                return (
+                  <div 
+                    key={index}
+                    className="text-center p-5 bg-white/60 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex justify-center mb-2">
+                      <div className="p-2 rounded-full bg-sage/10 text-sage">
+                        <IconComponent className="w-5 h-5" />
+                      </div>
+                    </div>
+                    <div 
+                      className="text-2xl md:text-3xl font-bold text-charcoal mb-1"
+                      style={{ fontFamily: 'Fraunces, serif' }}
+                    >
+                      {stat.value}
+                    </div>
+                    <div className="text-xs text-muted-foreground">
+                      {stat.label}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* Gallery Preview Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-background to-sand/30">
+      <section className="py-16 px-4 bg-gradient-to-b from-background to-sand/30">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <h2 
-              className="text-3xl md:text-4xl mb-4 text-charcoal"
+              className="text-2xl md:text-3xl mb-3 text-charcoal"
               style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}
             >
-              Inspirez-vous : Les plus belles créations de nos participants
+              Inspirez-vous : Les plus belles créations
             </h2>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-              Découvrez l'ambiance de nos ateliers, les processus créatifs et les magnifiques résultats
+            <p className="text-sm text-muted-foreground max-w-xl mx-auto">
+              Découvrez l'ambiance de nos ateliers et les magnifiques résultats
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
             <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
               <img 
                 src={galleryAtelierAdulte}
@@ -242,67 +314,11 @@ const Index = () => {
           <div className="text-center">
             <Link 
               to="/gallery"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-sage hover:bg-sage-dark text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-xl"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg text-sm"
             >
               Voir toute la galerie
-              <span className="text-xl">→</span>
+              <span>→</span>
             </Link>
-          </div>
-        </div>
-      </section>
-      
-      {/* Stats Counter Section */}
-      <StatsCounter />
-      
-      {/* News Section */}
-      <NewsSection />
-      
-      {/* Philosophy Section - Présentation Botanique Ludique */}
-      <section className="bg-sand py-32 px-4 relative overflow-hidden">
-        <div className="absolute top-10 left-10 w-40 h-40 bg-sage/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-60 h-60 bg-earth/20 rounded-full blur-3xl" />
-        
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex flex-col items-center justify-center mb-6">
-              <div className="flex items-center gap-3 mb-4">
-                <Leaf 
-                  className="w-14 h-14 md:w-16 md:h-16" 
-                  style={{ color: '#A7B795', strokeWidth: 1.5 }}
-                />
-                <div className="flex flex-col leading-none">
-                  <span className="font-serif text-4xl md:text-5xl font-light tracking-wider" style={{ color: '#5D653A' }}>
-                    Botanique
-                  </span>
-                  <span className="font-serif text-4xl md:text-5xl font-light tracking-wider" style={{ color: '#5D653A' }}>
-                    Ludique
-                  </span>
-                </div>
-              </div>
-              <div className="w-20 h-1 bg-sage" />
-            </div>
-            
-            <div className="space-y-6 mb-8">
-              <p className="text-lg text-charcoal/80 leading-relaxed">
-                Créée par <strong>Vanessa Charlery</strong>, ethnobotaniste et anthropologue, 
-                Botanique Ludique propose des ateliers à Paris, Yvelines (78) et Hauts-de-Seine (92) qui allient créativité artistique et transmission 
-                des savoirs ethnobotaniques. Chaque pratique explore les relations culturelles entre humains 
-                et plantes, de l'Asie à l'Europe.
-              </p>
-              <p className="text-lg text-charcoal/80 leading-relaxed">
-                Au-delà du simple geste créatif, ces ateliers offrent une compréhension profonde 
-                des usages traditionnels, des symboliques végétales et des pratiques ancestrales. 
-                Une approche pédagogique qui enrichit l'expérience artistique d'une dimension culturelle et scientifique.
-              </p>
-            </div>
-            
-            <button 
-              onClick={handleDownloadBrochure} 
-              className="inline-flex items-center gap-2 px-8 py-4 bg-sage hover:bg-sage-dark text-off-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-xl"
-            >
-              Télécharger la plaquette
-              <span className="text-xl">→</span>
-            </button>
           </div>
         </div>
       </section>
@@ -311,81 +327,90 @@ const Index = () => {
       <Testimonials />
       
       {/* Partners Section - Ils nous font confiance */}
-      <section className="py-24 px-4" style={{ backgroundColor: '#F7F7EB' }}>
-        <div className="container mx-auto max-w-6xl">
-          <div className="space-y-8 animate-fade-in">
-            <h3 className="text-3xl md:text-4xl text-charcoal text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
-              Ils nous font confiance
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center max-w-5xl mx-auto">
-              <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <img src="/logos/region-idf.webp" alt="Région Île-de-France" className="max-h-16 w-auto object-contain" loading="lazy" />
-              </div>
-              <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <img src="/logos/mjc-vesinet.jpg" alt="MJC du Vésinet" className="max-h-16 w-auto object-contain" loading="lazy" />
-              </div>
-              <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <img src="/logos/jappy-senior.svg" alt="Happy Senior" className="max-h-16 w-auto object-contain" loading="lazy" />
-              </div>
-              <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <img src="/logos/mjc-chatou.jpeg" alt="MJC Chatou" className="max-h-16 w-auto object-contain" loading="lazy" />
-              </div>
-              <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <img src="/logos/publicis.jpg" alt="Publicis" className="max-h-16 w-auto object-contain" loading="lazy" />
-              </div>
-              <div className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <img src="/logos/f93.jpg" alt="F93" className="max-h-16 w-auto object-contain" loading="lazy" />
-              </div>
+      <section className="py-16 px-4" style={{ backgroundColor: '#F7F7EB' }}>
+        <div className="container mx-auto max-w-5xl">
+          <h3 className="text-2xl md:text-3xl text-charcoal text-center mb-8" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+            Ils nous font confiance
+          </h3>
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 items-center">
+            <div className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <img src="/logos/region-idf.webp" alt="Région Île-de-France" className="max-h-12 w-auto object-contain" loading="lazy" />
+            </div>
+            <div className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <img src="/logos/mjc-vesinet.jpg" alt="MJC du Vésinet" className="max-h-12 w-auto object-contain" loading="lazy" />
+            </div>
+            <div className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <img src="/logos/jappy-senior.svg" alt="Happy Senior" className="max-h-12 w-auto object-contain" loading="lazy" />
+            </div>
+            <div className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <img src="/logos/mjc-chatou.jpeg" alt="MJC Chatou" className="max-h-12 w-auto object-contain" loading="lazy" />
+            </div>
+            <div className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <img src="/logos/publicis.jpg" alt="Publicis" className="max-h-12 w-auto object-contain" loading="lazy" />
+            </div>
+            <div className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <img src="/logos/f93.jpg" alt="F93" className="max-h-12 w-auto object-contain" loading="lazy" />
             </div>
           </div>
         </div>
       </section>
       
-      {/* Call to Action Section */}
-      <section className="py-24 px-4 relative overflow-hidden" style={{
+      {/* CTA Final + Newsletter Combined */}
+      <section className="py-16 px-4 relative overflow-hidden" style={{
         backgroundImage: `url(${heroBackground})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
-        <div className="container mx-auto text-center max-w-3xl space-y-8">
-          <h2 className="text-4xl md:text-5xl" style={{
-            fontFamily: 'Fraunces, serif',
-            fontWeight: 400,
-            color: '#F7F7EB'
-          }}>
-            Prêt·e à explorer le monde végétal ?
-          </h2>
-          <p className="text-xl" style={{
-            color: '#F7F7EB',
-            opacity: 0.9
-          }}>
-            Rejoignez-nous pour un atelier à Paris, Yvelines (78) ou Hauts-de-Seine (92) et découvrez une nouvelle façon 
-            de créer avec la nature.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center pt-4">
-            <Link to="/workshops" className="px-10 py-5 rounded-full font-semibold text-lg transition-all hover:scale-105 hover:shadow-2xl" style={{
-              backgroundColor: '#C9D2B5',
-              color: '#2B2B2B'
-            }}>
-              Voir tous les ateliers
-            </Link>
-            <Link to="/contact" className="px-10 py-5 bg-transparent rounded-full font-semibold text-lg transition-all hover:scale-105" style={{
-              border: '2px solid #F7F7EB',
-              color: '#F7F7EB'
-            }}>
-              Nous contacter
-            </Link>
+        <div className="container mx-auto max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* CTA */}
+            <div className="text-center md:text-left space-y-4">
+              <h2 className="text-3xl md:text-4xl" style={{
+                fontFamily: 'Fraunces, serif',
+                fontWeight: 400,
+                color: '#F7F7EB'
+              }}>
+                Prêt·e à explorer le monde végétal ?
+              </h2>
+              <p className="text-base" style={{
+                color: '#F7F7EB',
+                opacity: 0.9
+              }}>
+                Rejoignez-nous pour un atelier à Paris, Yvelines ou Hauts-de-Seine.
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start pt-2">
+                <Link to="/workshops" className="px-6 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105 hover:shadow-lg" style={{
+                  backgroundColor: '#C9D2B5',
+                  color: '#2B2B2B'
+                }}>
+                  Voir les ateliers
+                </Link>
+                <Link to="/contact" className="px-6 py-3 bg-transparent border-2 border-off-white rounded-full font-semibold text-sm transition-all hover:scale-105" style={{
+                  color: '#F7F7EB'
+                }}>
+                  Nous contacter
+                </Link>
+              </div>
+            </div>
+
+            {/* Newsletter Compact */}
+            <div className="bg-white/95 rounded-2xl p-6 shadow-xl">
+              <div className="flex items-center gap-2 mb-3">
+                <Mail className="w-5 h-5 text-sage" />
+                <h3 className="text-lg font-semibold text-charcoal" style={{ fontFamily: 'Fraunces, serif' }}>
+                  Restez informé·e
+                </h3>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                Recevez nos actualités et les dates des prochains ateliers.
+              </p>
+              <NewsletterSignup compact />
+            </div>
           </div>
         </div>
       </section>
       
-      {/* Newsletter Section */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#F7F7EB' }}>
-        <div className="container mx-auto max-w-4xl">
-          <NewsletterSignup />
-        </div>
-      </section>
-      
+      {/* Footer */}
       <Footer />
       <CookieConsent />
     </div>
