@@ -5,7 +5,11 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Mail } from "lucide-react";
 
-const NewsletterSignup = () => {
+interface NewsletterSignupProps {
+  compact?: boolean;
+}
+
+const NewsletterSignup = ({ compact = false }: NewsletterSignupProps) => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -37,6 +41,29 @@ const NewsletterSignup = () => {
       setIsLoading(false);
     }
   };
+
+  if (compact) {
+    return (
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
+        <Input
+          type="email"
+          placeholder="Votre adresse email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          disabled={isLoading}
+          className="flex-1 text-sm"
+        />
+        <Button 
+          type="submit" 
+          disabled={isLoading}
+          className="bg-sage hover:bg-sage-dark text-off-white text-sm"
+        >
+          {isLoading ? "..." : "S'inscrire"}
+        </Button>
+      </form>
+    );
+  }
 
   return (
     <div className="bg-sage/10 rounded-lg p-6 md:p-8">
