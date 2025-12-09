@@ -136,6 +136,16 @@ const workshops: Workshop[] = [
     type: "video",
     category: "floral",
   },
+  {
+    title: "Époxy Floral",
+    description: "Créez des plateaux et tables uniques en résine époxy intégrant des fleurs séchées. Apprenez les techniques de coulage, de disposition florale et de finition pour réaliser des pièces décoratives durables qui immortalisent la beauté des végétaux dans un écrin transparent.",
+    duration: "3h",
+    public: "Adultes",
+    image: "/videos/workshop-epoxy-floral.mp4",
+    icon: Flower2,
+    type: "video",
+    category: "floral",
+  },
 
   // Artisanat & Techniques Ancestrales
   {
