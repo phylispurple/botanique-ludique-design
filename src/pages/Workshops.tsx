@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
@@ -6,7 +6,7 @@ import WorkshopFilters, { WorkshopCategory } from "@/components/WorkshopFilters"
 import { SEO } from "@/components/SEO";
 import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import dyeingImage from "@/assets/workshop-dyeing.jpg";
 import terrariumImage from "@/assets/workshop-terrarium.jpg";
 import muralImage from "@/assets/workshop-mural.jpg";
@@ -218,6 +218,14 @@ const categoryTitles: Record<WorkshopCategory, string> = {
 
 const Workshops = () => {
   const [activeCategory, setActiveCategory] = useState<WorkshopCategory>("all");
+  const location = useLocation();
+
+  // Reset filter when navigating from menu with hash
+  useEffect(() => {
+    if (location.hash) {
+      setActiveCategory("all");
+    }
+  }, [location.hash]);
 
   const filteredWorkshops = activeCategory === "all" 
     ? workshops 
