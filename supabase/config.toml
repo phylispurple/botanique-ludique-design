@@ -5,3 +5,9 @@ verify_jwt = false
 
 [functions.send-testimonial-notification]
 verify_jwt = false
+
+[functions.send-b2b-quote-email]
+verify_jwt = false
+
+[functions.send-newsletter-signup]
+verify_jwt = false
