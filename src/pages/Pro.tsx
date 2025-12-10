@@ -586,10 +586,145 @@ const Pro = () => {
         </div>
       </section>
 
-      {/* CTA Ateliers créatifs */}
-      <section className="py-12 px-4">
+      {/* FAQ Section */}
+      <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
-          <div className="bg-sand rounded-lg p-6 border-l-4 border-sage text-center">
+          <h2 
+            className="text-3xl md:text-4xl text-center mb-4 text-charcoal"
+            style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}
+          >
+            Questions Fréquentes
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Tout ce que vous devez savoir pour organiser votre événement botanique
+          </p>
+          
+          <div className="space-y-4">
+            {/* Logistique */}
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-sage/10">
+              <h3 className="text-lg font-semibold text-charcoal mb-3 flex items-center gap-2">
+                <span className="text-sage">📦</span> Que fournissez-vous pour les ateliers ?
+              </h3>
+              <p className="text-charcoal/80 leading-relaxed">
+                <strong>Tout est inclus et clé en main :</strong> matériel, outils, matières premières (plantes, argile, pigments naturels, textiles...), 
+                protections de table, et supports pédagogiques. Vous avez juste à prévoir un espace adapté avec tables et chaises. 
+                Chaque participant repart avec sa création.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-sage/10">
+              <h3 className="text-lg font-semibold text-charcoal mb-3 flex items-center gap-2">
+                <span className="text-sage">📍</span> Où intervenez-vous ?
+              </h3>
+              <p className="text-charcoal/80 leading-relaxed">
+                Nous intervenons dans toute l'Île-de-France : <strong>Paris, Yvelines (78) et Hauts-de-Seine (92)</strong>. 
+                Nous nous déplaçons dans vos locaux, ou nous pouvons vous recommander des lieux partenaires si vous cherchez un espace extérieur.
+              </p>
+            </div>
+
+            {/* Tarifs */}
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-sage/10">
+              <h3 className="text-lg font-semibold text-charcoal mb-3 flex items-center gap-2">
+                <span className="text-sage">💰</span> Comment sont calculés les tarifs ?
+              </h3>
+              <p className="text-charcoal/80 leading-relaxed">
+                Les tarifs dépendent de plusieurs critères : <strong>type d'atelier, durée, nombre de participants et lieu</strong>. 
+                Nous proposons des forfaits adaptés aux entreprises (team building), aux collectivités et aux établissements scolaires. 
+                Comptez en moyenne <strong>entre 400€ et 1200€ HT</strong> pour une intervention groupe (10-20 personnes). 
+                Chaque devis est personnalisé et gratuit.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-sage/10">
+              <h3 className="text-lg font-semibold text-charcoal mb-3 flex items-center gap-2">
+                <span className="text-sage">🧾</span> Proposez-vous des facilités de paiement ?
+              </h3>
+              <p className="text-charcoal/80 leading-relaxed">
+                Oui, nous acceptons le <strong>paiement en plusieurs fois</strong> pour les structures publiques et les projets de grande envergure. 
+                Un acompte de 30% est demandé à la réservation, le solde étant réglé après l'événement. 
+                Nous émettons des factures conformes pour les comptabilités d'entreprise.
+              </p>
+            </div>
+
+            {/* Délais */}
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-sage/10">
+              <h3 className="text-lg font-semibold text-charcoal mb-3 flex items-center gap-2">
+                <span className="text-sage">⏰</span> Quel est le délai de réservation ?
+              </h3>
+              <p className="text-charcoal/80 leading-relaxed">
+                Idéalement, réservez <strong>3 à 4 semaines à l'avance</strong> pour garantir la disponibilité. 
+                Pour les périodes chargées (Noël, printemps, rentrée), prévoyez <strong>6 à 8 semaines</strong>. 
+                En cas d'urgence, nous faisons notre maximum pour répondre aux demandes de dernière minute sous 48h.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-sage/10">
+              <h3 className="text-lg font-semibold text-charcoal mb-3 flex items-center gap-2">
+                <span className="text-sage">📧</span> Sous quel délai recevrai-je mon devis ?
+              </h3>
+              <p className="text-charcoal/80 leading-relaxed">
+                <strong>Réponse garantie sous 24h ouvrées.</strong> Vous recevrez un devis détaillé avec le programme de l'atelier, 
+                les objectifs pédagogiques, le matériel inclus et les options possibles. Nous restons disponibles par téléphone 
+                pour affiner votre projet.
+              </p>
+            </div>
+
+            {/* Déroulement */}
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-sage/10">
+              <h3 className="text-lg font-semibold text-charcoal mb-3 flex items-center gap-2">
+                <span className="text-sage">🎯</span> Comment se déroule un atelier type ?
+              </h3>
+              <div className="text-charcoal/80 leading-relaxed space-y-2">
+                <p>Chaque atelier suit un déroulé structuré :</p>
+                <ul className="list-disc list-inside space-y-1 ml-2">
+                  <li><strong>Accueil (10 min)</strong> : Présentation du thème et des matériaux</li>
+                  <li><strong>Démonstration (15-20 min)</strong> : Explication des techniques pas à pas</li>
+                  <li><strong>Création (1h-2h30)</strong> : Réalisation guidée avec accompagnement individuel</li>
+                  <li><strong>Clôture (10 min)</strong> : Photos de groupe, emballage des créations, échanges</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-sage/10">
+              <h3 className="text-lg font-semibold text-charcoal mb-3 flex items-center gap-2">
+                <span className="text-sage">👥</span> Combien de participants maximum ?
+              </h3>
+              <p className="text-charcoal/80 leading-relaxed">
+                Pour garantir un accompagnement de qualité, nous accueillons <strong>10 à 15 participants par animateur</strong>. 
+                Pour les grands groupes (20-50 personnes), nous pouvons organiser des ateliers en rotation 
+                ou mobiliser des animateurs supplémentaires. Nous nous adaptons à vos contraintes.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-sage/10">
+              <h3 className="text-lg font-semibold text-charcoal mb-3 flex items-center gap-2">
+                <span className="text-sage">🌱</span> Les ateliers sont-ils accessibles aux débutants ?
+              </h3>
+              <p className="text-charcoal/80 leading-relaxed">
+                <strong>Absolument !</strong> Nos ateliers sont conçus pour être accessibles à tous, sans prérequis. 
+                Chaque participant est accompagné individuellement. Le plaisir de créer et la découverte 
+                sont au cœur de notre pédagogie, pas la performance technique.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-sage/10">
+              <h3 className="text-lg font-semibold text-charcoal mb-3 flex items-center gap-2">
+                <span className="text-sage">❌</span> Quelle est votre politique d'annulation ?
+              </h3>
+              <p className="text-charcoal/80 leading-relaxed">
+                Annulation gratuite <strong>jusqu'à 14 jours</strong> avant l'événement. 
+                Entre 14 et 7 jours : 50% de l'acompte conservé. Moins de 7 jours : acompte non remboursable. 
+                En cas de report, nous faisons preuve de flexibilité pour trouver une nouvelle date qui vous convient.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Ateliers créatifs */}
+      <section className="py-12 px-4 bg-sage/5">
+        <div className="container mx-auto max-w-4xl">
+          <div className="bg-white rounded-lg p-6 border-l-4 border-sage text-center shadow-sm">
             <h4 className="text-lg font-semibold text-charcoal mb-2">Vous cherchez des ateliers créatifs pour particuliers ?</h4>
             <p className="text-charcoal/70 mb-4">
               Découvrez nos ateliers botaniques ludiques : kokedama, terrariums, teinture végétale, couronnes de fleurs et bien plus encore.
