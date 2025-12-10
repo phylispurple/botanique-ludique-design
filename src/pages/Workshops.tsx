@@ -419,8 +419,50 @@ const Workshops = () => {
             ))}
           </div>
 
+          {/* Section Ateliers par ville */}
+          <div className="mt-20 bg-sage/10 rounded-lg p-8 md:p-12 animate-fade-in">
+            <h3 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              Nos Ateliers par Ville dans les Yvelines
+            </h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+              <Link 
+                to="/atelier-botanique-saint-germain-en-laye"
+                className="bg-white px-4 py-4 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group"
+              >
+                <span className="block text-sage-dark font-semibold group-hover:text-off-white text-lg">📍 Saint-Germain-en-Laye</span>
+                <span className="text-sm text-charcoal/60 group-hover:text-off-white/80">Forêt domaniale & patrimoine royal</span>
+              </Link>
+              <Link 
+                to="/atelier-botanique-chatou"
+                className="bg-white px-4 py-4 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group"
+              >
+                <span className="block text-sage-dark font-semibold group-hover:text-off-white text-lg">📍 Chatou</span>
+                <span className="text-sm text-charcoal/60 group-hover:text-off-white/80">L'île des Impressionnistes</span>
+              </Link>
+              <Link 
+                to="/atelier-botanique-le-vesinet"
+                className="bg-white px-4 py-4 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group"
+              >
+                <span className="block text-sage-dark font-semibold group-hover:text-off-white text-lg">📍 Le Vésinet</span>
+                <span className="text-sm text-charcoal/60 group-hover:text-off-white/80">Ville-parc classée</span>
+              </Link>
+              <Link 
+                to="/atelier-botanique-le-pecq"
+                className="bg-white px-4 py-4 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group"
+              >
+                <span className="block text-sage-dark font-semibold group-hover:text-off-white text-lg">📍 Le Pecq</span>
+                <span className="text-sm text-charcoal/60 group-hover:text-off-white/80">Bords de Seine</span>
+              </Link>
+            </div>
+            <p className="text-center text-charcoal/70">
+              <Link to="/ateliers-botaniques-yvelines" className="text-sage hover:text-sage-dark underline">
+                Voir tous nos ateliers dans les Yvelines →
+              </Link>
+            </p>
+          </div>
+
           {/* CTA Section - Formations */}
-          <div className="mt-20 bg-sand rounded-lg p-8 md:p-12 text-center animate-fade-in">
+          <div className="mt-12 bg-sand rounded-lg p-8 md:p-12 text-center animate-fade-in">
             <h3 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
               Vous êtes un établissement scolaire ou une entreprise ?
             </h3>
@@ -428,10 +470,10 @@ const Workshops = () => {
               Découvrez nos formations professionnelles et interventions éducatives sur mesure pour collèges, lycées, BTS et entreprises.
             </p>
             <Link
-              to="/training"
+              to="/pro"
               className="inline-flex items-center px-8 py-4 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
             >
-              Voir les formations professionnelles
+              Voir les offres professionnelles
             </Link>
           </div>
         </div>
