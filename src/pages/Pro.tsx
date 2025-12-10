@@ -630,7 +630,6 @@ const Pro = () => {
               <p className="text-charcoal/80 leading-relaxed">
                 Les tarifs dépendent de plusieurs critères : <strong>type d'atelier, durée, nombre de participants et lieu</strong>. 
                 Nous proposons des forfaits adaptés aux entreprises (team building), aux collectivités et aux établissements scolaires. 
-                Comptez en moyenne <strong>entre 400€ et 1200€ HT</strong> pour une intervention groupe (10-20 personnes). 
                 Chaque devis est personnalisé et gratuit.
               </p>
             </div>
