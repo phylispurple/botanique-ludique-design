@@ -77,20 +77,43 @@ const AteliersBotaniquesYvelines = () => {
               </p>
             </div>
 
-            {/* Villes couvertes */}
+            {/* Villes couvertes avec liens SEO */}
             <div className="bg-sage/10 rounded-lg p-8 mb-16 animate-fade-in">
               <h2 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                Nos Ateliers dans les Yvelines
+                Nos Ateliers par Ville dans les Yvelines
               </h2>
-              <div className="flex flex-wrap justify-center gap-3 mb-6">
-                {cities.map((city, index) => (
-                  <div key={index} className="bg-white px-4 py-2 rounded-full text-sage-dark font-semibold shadow-sm">
-                    📍 {city}
-                  </div>
-                ))}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <Link 
+                  to="/atelier-botanique-saint-germain-en-laye"
+                  className="bg-white px-4 py-3 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group"
+                >
+                  <span className="block text-sage-dark font-semibold group-hover:text-off-white">📍 Saint-Germain-en-Laye</span>
+                  <span className="text-xs text-charcoal/60 group-hover:text-off-white/80">Forêt domaniale & patrimoine</span>
+                </Link>
+                <Link 
+                  to="/atelier-botanique-chatou"
+                  className="bg-white px-4 py-3 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group"
+                >
+                  <span className="block text-sage-dark font-semibold group-hover:text-off-white">📍 Chatou</span>
+                  <span className="text-xs text-charcoal/60 group-hover:text-off-white/80">Île des Impressionnistes</span>
+                </Link>
+                <Link 
+                  to="/atelier-botanique-le-vesinet"
+                  className="bg-white px-4 py-3 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group"
+                >
+                  <span className="block text-sage-dark font-semibold group-hover:text-off-white">📍 Le Vésinet</span>
+                  <span className="text-xs text-charcoal/60 group-hover:text-off-white/80">Ville-parc classée</span>
+                </Link>
+                <Link 
+                  to="/atelier-botanique-le-pecq"
+                  className="bg-white px-4 py-3 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group"
+                >
+                  <span className="block text-sage-dark font-semibold group-hover:text-off-white">📍 Le Pecq</span>
+                  <span className="text-xs text-charcoal/60 group-hover:text-off-white/80">Bords de Seine</span>
+                </Link>
               </div>
               <p className="text-center text-charcoal/70">
-                Nous intervenons également dans toute l'Île-de-France pour vos événements groupés
+                Nous intervenons également à Croissy-sur-Seine, Montesson et dans toute l'Île-de-France
               </p>
             </div>
 
