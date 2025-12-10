@@ -1,4 +1,4 @@
-import { Award, MapPin, Users, Shield, Clock, Star, GraduationCap, CheckCircle2 } from "lucide-react";
+import { MapPin, Users, Shield, Clock, Star, Leaf, Package, CheckCircle2 } from "lucide-react";
 
 interface TrustBadgesProps {
   variant?: "horizontal" | "vertical" | "compact" | "premium";
@@ -8,20 +8,21 @@ interface TrustBadgesProps {
 const TrustBadges = ({ variant = "horizontal", showAll = true }: TrustBadgesProps) => {
   const badges = [
     {
-      icon: GraduationCap,
-      title: "Ethnobotaniste EHESS",
-      description: "Master recherche",
+      icon: Package,
+      title: "Clé en main",
+      description: "Matériel fourni sur place",
+      highlight: true,
+    },
+    {
+      icon: Leaf,
+      title: "Éco-responsable",
+      description: "Matériaux naturels",
       highlight: true,
     },
     {
       icon: Users,
       title: "400+ participants",
       description: "Accompagnés",
-    },
-    {
-      icon: Clock,
-      title: "Réponse sous 24h",
-      description: "Devis rapide",
     },
     {
       icon: Shield,
