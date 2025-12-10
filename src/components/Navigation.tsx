@@ -145,7 +145,7 @@ const Navigation = () => {
                               style={{ color: '#3D3D2E' }}
                               onClick={() => {
                                 setWorkshopsOpen(false);
-                                setTimeout(() => {
+                                const scrollToWorkshop = (retries = 0) => {
                                   const element = document.getElementById(workshop.id);
                                   if (element) {
                                     const offset = 100;
@@ -155,8 +155,11 @@ const Navigation = () => {
                                       top: offsetPosition,
                                       behavior: 'smooth'
                                     });
+                                  } else if (retries < 10) {
+                                    setTimeout(() => scrollToWorkshop(retries + 1), 100);
                                   }
-                                }, 100);
+                                };
+                                setTimeout(() => scrollToWorkshop(), 150);
                               }}
                             >
                               {workshop.name}
@@ -290,7 +293,7 @@ const Navigation = () => {
                               onClick={() => {
                                 setIsOpen(false);
                                 setWorkshopsOpen(false);
-                                setTimeout(() => {
+                                const scrollToWorkshop = (retries = 0) => {
                                   const element = document.getElementById(workshop.id);
                                   if (element) {
                                     const offset = 100;
@@ -300,8 +303,11 @@ const Navigation = () => {
                                       top: offsetPosition,
                                       behavior: 'smooth'
                                     });
+                                  } else if (retries < 10) {
+                                    setTimeout(() => scrollToWorkshop(retries + 1), 100);
                                   }
-                                }, 100);
+                                };
+                                setTimeout(() => scrollToWorkshop(), 150);
                               }}
                             >
                               {workshop.name}
