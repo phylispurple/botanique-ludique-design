@@ -40,8 +40,8 @@ const Blog = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="Blog - Actualités et Guides sur la Botanique"
-        description="Découvrez nos articles sur les ateliers botaniques, le kokedama, la teinture végétale, l'ethnobotanique et les activités nature à Paris et en Île-de-France."
+        title="Blog Botanique | Guides, Tutoriels & Idées Nature ✦ Actualités"
+        description="📖 Articles, guides et tutoriels sur la botanique : kokedama, teinture végétale, team building nature. Conseils d'experts et idées d'activités à Paris & IDF."
         keywords="blog botanique, actualités nature, guide kokedama, teinture végétale, team building nature, ateliers botaniques Paris"
         canonical="/blog"
       />
