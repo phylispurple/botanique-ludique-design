@@ -307,7 +307,7 @@ const Index = () => {
       <section className="py-8 px-4 bg-sage/5">
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <TrustBadges variant="horizontal" showAll={true} />
+            <TrustBadges variant="premium" showAll={true} />
           </AnimatedSection>
         </div>
       </section>
