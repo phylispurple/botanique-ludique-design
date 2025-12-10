@@ -194,10 +194,6 @@ const Agenda = () => {
               <p className="subtitle-italic text-lg mb-6">
                 Réservez votre prochaine expérience botanique
               </p>
-              <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
-                Nos ateliers ont lieu toute l'année sur réservation à Paris et dans les Yvelines (78). 
-                Les prochaines dates seront annoncées très prochainement !
-              </p>
             </div>
 
             {/* Info Banner */}
