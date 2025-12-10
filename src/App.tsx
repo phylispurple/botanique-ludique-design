@@ -28,6 +28,7 @@ import LandingCSE from "./pages/LandingCSE";
 import LandingEcoles from "./pages/LandingEcoles";
 import LandingMJC from "./pages/LandingMJC";
 import LandingTeamBuilding from "./pages/LandingTeamBuilding";
+import AtelierBotaniqueSaintGermain from "./pages/AtelierBotaniqueSaintGermain";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +66,7 @@ const App = () => (
           <Route path="/animation-scolaire-nature" element={<LandingEcoles />} />
           <Route path="/ateliers-mjc-association" element={<LandingMJC />} />
           <Route path="/team-building-nature-entreprise" element={<LandingTeamBuilding />} />
+          <Route path="/atelier-botanique-saint-germain-en-laye" element={<AtelierBotaniqueSaintGermain />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/conditions-de-vente" element={<SalesTerms />} />
           <Route path="/admin/testimonials" element={<AdminTestimonials />} />
