@@ -143,22 +143,6 @@ const About = () => {
                 </blockquote>
               </div>
 
-              <div className="text-center animate-fade-in">
-                <h3 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Mes travaux de recherche
-                </h3>
-                <div className="space-y-6 max-w-2xl mx-auto">
-                  <p className="text-lg text-charcoal/80 leading-relaxed">
-                    Mon mémoire de recherche, dirigé par Florence Brunois-Pasina à l'EHESS, porte sur les relations entre les citadins et les plantes dans les espaces verts urbains du Grand Paris. J'y explore comment les urbains développent — ou perdent — leur sensibilité au végétal, comment ils nomment les plantes qu'ils croisent, et quels liens affectifs se tissent dans ces rencontres quotidiennes.
-                  </p>
-                  <p className="text-lg text-charcoal/80 leading-relaxed">
-                    Cette recherche nourrit directement ma pratique d'ateliers : elle m'a convaincue que pour reconnecter au vivant, il ne suffit pas de "faire" — il faut aussi <em>comprendre</em>, <em>nommer</em>, <em>situer</em> ces pratiques dans leur contexte culturel et historique.
-                  </p>
-                  <p className="text-lg text-charcoal/80 leading-relaxed">
-                    C'est cette approche — à la fois sensorielle, créative et réflexive — qui fait la singularité de Botanique Ludique.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

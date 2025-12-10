@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MessageCircle, X, Mail, Phone, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const FloatingContactButton = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasBeenOpened, setHasBeenOpened] = useState(false);
 
+  useEffect(() => {
+    if (isOpen && !hasBeenOpened) {
+      setHasBeenOpened(true);
+    }
+  }, [isOpen, hasBeenOpened]);
   return (
     <div className="fixed bottom-6 right-6 z-50">
       {/* Menu ouvert */}
@@ -93,8 +99,8 @@ const FloatingContactButton = () => {
         )}
       </button>
       
-      {/* Badge notification */}
-      {!isOpen && (
+      {/* Badge notification - hidden once menu has been opened */}
+      {!isOpen && !hasBeenOpened && (
         <span className="absolute -top-1 -right-1 w-4 h-4 bg-amber-500 rounded-full flex items-center justify-center animate-pulse">
           <span className="text-[10px] text-white font-bold">!</span>
         </span>
