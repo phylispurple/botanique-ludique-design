@@ -15,6 +15,58 @@ interface WorkshopFiltersProps {
   workshopCounts: Record<WorkshopCategory, number>;
 }
 
+// Colors matching the category badges on workshop cards
+const categoryColors: Record<WorkshopCategory, { 
+  bg: string; 
+  bgActive: string;
+  text: string; 
+  border: string;
+  hoverBg: string;
+}> = {
+  all: { 
+    bg: "bg-sage/10", 
+    bgActive: "bg-sage",
+    text: "text-sage-dark", 
+    border: "border-sage/30",
+    hoverBg: "hover:bg-sage/20"
+  },
+  textiles: { 
+    bg: "bg-purple-50", 
+    bgActive: "bg-purple-600",
+    text: "text-purple-700", 
+    border: "border-purple-300",
+    hoverBg: "hover:bg-purple-100"
+  },
+  jardinage: { 
+    bg: "bg-emerald-50", 
+    bgActive: "bg-emerald-600",
+    text: "text-emerald-700", 
+    border: "border-emerald-300",
+    hoverBg: "hover:bg-emerald-100"
+  },
+  floral: { 
+    bg: "bg-pink-50", 
+    bgActive: "bg-pink-600",
+    text: "text-pink-700", 
+    border: "border-pink-300",
+    hoverBg: "hover:bg-pink-100"
+  },
+  artisanat: { 
+    bg: "bg-amber-50", 
+    bgActive: "bg-amber-600",
+    text: "text-amber-700", 
+    border: "border-amber-300",
+    hoverBg: "hover:bg-amber-100"
+  },
+  "bien-etre": { 
+    bg: "bg-teal-50", 
+    bgActive: "bg-teal-600",
+    text: "text-teal-700", 
+    border: "border-teal-300",
+    hoverBg: "hover:bg-teal-100"
+  },
+};
+
 const categories = [
   { id: "all" as WorkshopCategory, label: "Tous les ateliers", icon: null },
   { id: "textiles" as WorkshopCategory, label: "Textiles & Teintures", icon: Palette },
@@ -32,17 +84,18 @@ const WorkshopFilters = ({ activeCategory, onCategoryChange, workshopCounts }: W
           const Icon = category.icon;
           const count = workshopCounts[category.id];
           const isActive = activeCategory === category.id;
+          const colors = categoryColors[category.id];
           
           return (
             <Button
               key={category.id}
               onClick={() => onCategoryChange(category.id)}
-              variant={isActive ? "default" : "outline"}
+              variant="outline"
               className={`
-                px-4 py-2 rounded-full transition-all duration-300
+                px-4 py-2 rounded-full transition-all duration-300 border
                 ${isActive 
-                  ? "bg-sage hover:bg-sage-dark text-off-white shadow-md scale-105" 
-                  : "bg-off-white/80 hover:bg-sage/20 text-charcoal border-sage/30"
+                  ? `${colors.bgActive} text-white shadow-md scale-105 border-transparent` 
+                  : `${colors.bg} ${colors.text} ${colors.border} ${colors.hoverBg}`
                 }
               `}
             >
@@ -52,7 +105,7 @@ const WorkshopFilters = ({ activeCategory, onCategoryChange, workshopCounts }: W
               </span>
               {count > 0 && (
                 <span className={`ml-2 px-2 py-0.5 rounded-full text-xs ${
-                  isActive ? "bg-off-white/20" : "bg-sage/20"
+                  isActive ? "bg-white/20" : "bg-black/10"
                 }`}>
                   {count}
                 </span>
