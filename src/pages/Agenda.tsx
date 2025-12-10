@@ -171,8 +171,8 @@ const Agenda = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="Agenda des Ateliers Botaniques - Paris et Yvelines | Réservation"
-        description="Consultez l'agenda et réservez nos ateliers botaniques à Paris et dans les Yvelines. Kokedama, teinture végétale, vannerie, terrarium. Cartes cadeaux disponibles."
+        title="Agenda & Réservation Ateliers | Paris, 78, 92 ✦ Cartes Cadeaux"
+        description="📅 Réservez votre atelier botanique à Paris & IDF. Kokedama, teinture, terrarium dès 25€. Cartes cadeaux disponibles. Places limitées, réservez maintenant !"
         keywords="agenda atelier botanique, réservation atelier Paris, dates ateliers Yvelines, carte cadeau atelier nature, planning ateliers botaniques"
         canonical="/agenda"
       />

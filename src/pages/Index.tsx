@@ -49,8 +49,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Botanique Ludique - Ateliers Botaniques à Paris, Yvelines (78), Hauts-de-Seine (92)"
-        description="Ateliers botaniques créatifs à Paris, Yvelines (78) et Hauts-de-Seine (92). Kokedama, teinture végétale, vannerie, terrarium. Particuliers et entreprises."
+        title="Ateliers Botaniques Paris & IDF | Kokedama, Teinture ✦ Réservez"
+        description="🌿 Ateliers créatifs nature à Paris, Yvelines (78) & Hauts-de-Seine (92). Kokedama, teinture végétale, terrarium. +400 participants. Réservez votre atelier !"
         keywords="ateliers botaniques Paris, ateliers nature Yvelines 78, ateliers Hauts-de-Seine 92, kokedama Paris, teinture végétale Yvelines, vannerie Hauts-de-Seine, team building nature Paris, atelier botanique Chatou, atelier végétal Saint-Germain-en-Laye"
         canonical="/"
       />

@@ -52,8 +52,8 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="FAQ - Questions Fréquentes sur nos Ateliers Botaniques"
-        description="Réponses aux questions fréquentes sur nos ateliers d'ethnobotanique : tarifs, durée, publics, matériel, réservation. Interventions en Île-de-France."
+        title="FAQ Ateliers Botaniques | Tarifs, Durée, Réservation ✦ Réponses"
+        description="❓ Toutes vos questions sur nos ateliers : tarifs dès 25€, durée 1h30-3h, matériel fourni, déplacement IDF. Trouvez votre réponse ou contactez-nous !"
         keywords="FAQ ateliers botaniques, questions ethnobotanique, tarifs ateliers nature, réservation atelier botanique"
         canonical="/faq"
       />

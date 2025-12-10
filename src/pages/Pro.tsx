@@ -140,8 +140,8 @@ const Pro = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="Pro & Entreprises - Team Building, Formations, Animations Botaniques"
-        description="Team building botanique, formations scolaires, animations EHPAD et collectivités à Paris, Yvelines (78) et Hauts-de-Seine (92). Devis en 24h. +400 participants accompagnés."
+        title="Team Building Nature & RSE Paris | Devis 24h ✦ +400 Participants"
+        description="🏢 Team building botanique, animations EHPAD, interventions scolaires à Paris & IDF. +400 participants. Devis gratuit sous 24h. Réservez votre événement !"
         keywords="team building RSE Paris, formation botanique entreprise, intervention collège botanique, animation EHPAD, animation MJC, team building nature, atelier entreprise Yvelines"
         canonical="/pro"
       />

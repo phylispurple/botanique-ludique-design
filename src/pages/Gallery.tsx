@@ -88,8 +88,8 @@ const Gallery = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="Galerie - Photos de nos Ateliers Botaniques"
-        description="Découvrez en images nos ateliers botaniques : kokedama, teinture végétale, éco-construction, vannerie, terrariums. Photos de nos créations et réalisations."
+        title="Galerie Photos & Vidéos | Nos Ateliers en Images ✦ Inspirations"
+        description="📸 Découvrez nos créations en images : kokedama, teinture végétale, terrarium, vannerie. +50 ateliers réalisés. Trouvez l'inspiration pour votre prochain atelier !"
         keywords="galerie ateliers botaniques, photos kokedama, teinture végétale images, éco-construction photos, vannerie galerie"
         canonical="/gallery"
       />

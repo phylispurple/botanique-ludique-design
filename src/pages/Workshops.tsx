@@ -271,8 +271,8 @@ const Workshops = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="Ateliers Botaniques Paris, Yvelines, Hauts-de-Seine | Botanique Ludique"
-        description="Ateliers botaniques créatifs à Paris, Yvelines (78) et Hauts-de-Seine (92) : kokedama, teinture végétale, vannerie, terrarium à Chatou, Le Pecq, Nanterre, Boulogne."
+        title="15+ Ateliers Nature à Paris & IDF | Dès 25€ ✦ Tout Public"
+        description="Découvrez nos 15 ateliers botaniques : kokedama, teinture végétale, terrarium, vannerie. Dès 25€ à Paris, Yvelines & 92. Enfants, adultes, groupes. Réservez !"
         keywords="atelier botanique Paris, atelier botanique Yvelines, atelier botanique Hauts-de-Seine, kokedama Paris, teinture végétale Paris, atelier Chatou, atelier Nanterre, vannerie 92, terrarium Paris"
         canonical="/workshops"
       />
