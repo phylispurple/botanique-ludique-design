@@ -314,12 +314,12 @@ const Workshops = () => {
                     <div
                       key={workshop.title}
                       id={workshop.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "-")}
-                      className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center animate-fade-in ${
+                      className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center animate-fade-in card-premium bg-white/40 p-6 md:p-8 rounded-2xl ${
                         index % 2 === 1 ? "md:flex-row-reverse" : ""
                       }`}
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
-                      <div className={`${index % 2 === 1 ? "md:order-2" : ""} group relative overflow-hidden rounded-xl`}>
+                      <div className={`${index % 2 === 1 ? "md:order-2" : ""} group relative img-zoom-container rounded-xl`}>
                         {/* Category Badge */}
                         <div className={`absolute top-4 left-4 z-10 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide border backdrop-blur-sm ${categoryColors[workshop.category].bg} ${categoryColors[workshop.category].text} ${categoryColors[workshop.category].border}`}>
                           {categoryLabels[workshop.category]}
@@ -378,11 +378,11 @@ const Workshops = () => {
                             />
                           </div>
                         ) : (
-                          <div className="overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
+                          <div className="overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-500">
                             <img
                               src={workshop.image}
                               alt={`Atelier ${workshop.title}`}
-                              className="w-full rounded-xl transition-all duration-700 group-hover:scale-110 group-hover:brightness-105"
+                              className="w-full rounded-xl img-zoom"
                               loading="lazy"
                             />
                           </div>
@@ -391,12 +391,12 @@ const Workshops = () => {
 
                       <div className={`space-y-4 ${index % 2 === 1 ? "md:order-1" : ""}`}>
                         <div className="flex items-center gap-3 mb-2">
-                          <workshop.icon size={24} style={{ color: '#A7B795' }} />
-                          <div className="inline-block px-4 py-1 bg-sage/20 text-sage-dark text-xs uppercase tracking-wider rounded-full font-semibold">
+                          <workshop.icon size={24} className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" style={{ color: '#A7B795' }} />
+                          <div className="inline-block px-4 py-1 bg-sage/20 text-sage-dark text-xs uppercase tracking-wider rounded-full font-semibold transition-all duration-300 group-hover:bg-sage/30 group-hover:scale-105">
                             {workshop.duration}
                           </div>
                         </div>
-                        <h3 className="text-3xl md:text-4xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                        <h3 className="text-3xl md:text-4xl transition-colors duration-300 group-hover:text-sage-dark" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                           {workshop.title}
                         </h3>
                         <p className="text-sm text-sage-dark font-semibold mb-2">
@@ -407,7 +407,7 @@ const Workshops = () => {
                         </p>
                         <Link 
                           to={`/agenda?atelier=${encodeURIComponent(workshop.title)}`}
-                          className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                          className="inline-flex items-center px-6 py-3 bg-sage text-off-white text-sm uppercase tracking-wider font-semibold rounded-full btn-premium"
                         >
                           Demande d'information et réservation
                         </Link>
@@ -420,7 +420,7 @@ const Workshops = () => {
           </div>
 
           {/* CTA Section - Formations */}
-          <div className="mt-12 bg-sand rounded-lg p-8 md:p-12 text-center animate-fade-in">
+          <div className="mt-12 bg-sand rounded-2xl p-8 md:p-12 text-center animate-fade-in card-premium">
             <h3 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
               Vous êtes un établissement scolaire ou une entreprise ?
             </h3>
@@ -429,7 +429,7 @@ const Workshops = () => {
             </p>
             <Link
               to="/pro"
-              className="inline-flex items-center px-8 py-4 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+              className="inline-flex items-center px-8 py-4 bg-sage text-off-white text-sm uppercase tracking-wider font-semibold rounded-full btn-premium"
             >
               Voir les offres professionnelles
             </Link>
