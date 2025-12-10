@@ -63,7 +63,25 @@
   </url>
   <url>
     <loc>https://botaniqueludique.com/atelier-botanique-saint-germain-en-laye</loc>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/atelier-botanique-le-pecq</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/atelier-botanique-le-vesinet</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/atelier-botanique-chatou</loc>
+    <lastmod>2025-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
