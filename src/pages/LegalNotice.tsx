@@ -20,7 +20,7 @@ const LegalNotice = () => {
               <strong>Botanique Ludique</strong><br />
               Vanessa Charlery<br />
               Le Pecq, Yvelines (78), France<br />
-              Email : <a href="mailto:botaniqueludique@gmail.com" className="underline hover:opacity-70 transition-opacity">botaniqueludique@gmail.com</a>
+              Email : <a href="mailto:contact@botaniqueludique.com" className="underline hover:opacity-70 transition-opacity">contact@botaniqueludique.com</a>
             </p>
           </section>
 
@@ -74,8 +74,8 @@ const LegalNotice = () => {
               à Botanique Ludique pour répondre à vos demandes. Conformément au RGPD, vous disposez 
               d'un droit d'accès, de rectification et de suppression de vos données personnelles. 
               Pour exercer ce droit, contactez-nous à l'adresse : 
-              <a href="mailto:botaniqueludique@gmail.com" className="underline hover:opacity-70 transition-opacity ml-1">
-                botaniqueludique@gmail.com
+              <a href="mailto:contact@botaniqueludique.com" className="underline hover:opacity-70 transition-opacity ml-1">
+                contact@botaniqueludique.com
               </a>
             </p>
           </section>

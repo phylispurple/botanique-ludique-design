@@ -200,7 +200,7 @@ const Pro = () => {
               Demander un devis gratuit →
             </a>
             <a 
-              href="mailto:botaniqueludique@gmail.com"
+              href="mailto:contact@botaniqueludique.com"
               className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-sage text-sage hover:bg-sage/10 transition-colors font-medium"
             >
               <Mail className="w-5 h-5" />

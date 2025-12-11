@@ -77,7 +77,7 @@ const FloatingContactButton = () => {
             
             {/* Email */}
             <a
-              href="mailto:botaniqueludique@gmail.com"
+              href="mailto:contact@botaniqueludique.com"
               className="flex items-center gap-3 p-3 rounded-xl hover:bg-sage/10 transition-colors group"
             >
               <div className="p-2 bg-sage/20 rounded-full group-hover:bg-sage/30 transition-colors">
