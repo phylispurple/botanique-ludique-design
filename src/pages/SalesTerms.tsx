@@ -44,7 +44,7 @@ const SalesTerms = () => {
               </p>
               <ul className="list-none pl-6 space-y-1">
                 <li>Dénomination sociale : Botanique Ludique</li>
-                <li>Contact : botaniqueludique@gmail.com</li>
+                <li>Contact : contact@botaniqueludique.com</li>
                 <li>Localisation : Île-de-France</li>
               </ul>
             </section>
@@ -182,7 +182,7 @@ const SalesTerms = () => {
                 Les données collectées (nom, prénom, email, téléphone) sont utilisées uniquement pour la gestion des commandes et la relation client.
               </p>
               <p className="leading-relaxed">
-                Le Client dispose d'un droit d'accès, de rectification et de suppression de ses données personnelles en contactant : botaniqueludique@gmail.com
+                Le Client dispose d'un droit d'accès, de rectification et de suppression de ses données personnelles en contactant : contact@botaniqueludique.com
               </p>
             </section>
 

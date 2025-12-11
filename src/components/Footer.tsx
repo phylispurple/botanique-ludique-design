@@ -62,14 +62,14 @@ const Footer = () => {
                 <span className="text-sm">Botanique Ludique</span>
               </a>
               <a
-                href="mailto:botaniqueludique@gmail.com"
+                href="mailto:contact@botaniqueludique.com"
                 className="flex items-center gap-2 transition-colors"
                 style={{ color: '#5D653A', opacity: 0.7 }}
                 onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
                 onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
               >
                 <Mail size={18} />
-                <span className="text-sm">botaniqueludique@gmail.com</span>
+                <span className="text-sm">contact@botaniqueludique.com</span>
               </a>
               <a
                 href="tel:+33609831606"

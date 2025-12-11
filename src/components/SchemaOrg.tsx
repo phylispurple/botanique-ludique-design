@@ -52,7 +52,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
             "longitude": "2.3522"
           },
           "url": "https://botaniqueludique.com",
-          "email": "botaniqueludique@gmail.com",
+          "email": "contact@botaniqueludique.com",
           "telephone": "+33609831606",
           "priceRange": "€€",
           "paymentAccepted": "Cash, Credit Card, Bank Transfer",
@@ -135,7 +135,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "customer service",
-            "email": "botaniqueludique@gmail.com",
+            "email": "contact@botaniqueludique.com",
             "areaServed": "FR",
             "availableLanguage": "French"
           },
