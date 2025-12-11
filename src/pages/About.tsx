@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { Leaf, Sprout, Sparkles } from "lucide-react";
-import aboutImage from "@/assets/portrait-vanessa.png";
+import aboutImage from "@/assets/portrait-vanessa.webp";
 
 const About = () => {
   return (
