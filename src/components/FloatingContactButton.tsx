@@ -2,38 +2,33 @@ import { useState, useEffect } from "react";
 import { X, Mail, Phone, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// Custom Monstera Leaf SVG Component - style minimaliste comme le logo
-const MonsteraLeaf = ({ className }: { className?: string }) => (
+// Feuille simple style logo Botanique Ludique
+const SimpleLeaf = ({ className }: { className?: string }) => (
   <svg 
     viewBox="0 0 64 64" 
     fill="none" 
     xmlns="http://www.w3.org/2000/svg"
     className={className}
   >
-    {/* Tige */}
+    {/* Tige courbée */}
     <path 
-      d="M32 56C32 56 33 46 35 38" 
+      d="M28 58C28 58 26 48 28 38C30 28 32 24 32 24" 
       stroke="currentColor" 
       strokeWidth="2.5" 
       strokeLinecap="round"
     />
-    {/* Forme principale de la feuille monstera */}
+    {/* Feuille simple en forme de goutte */}
     <path 
-      d="M32 6C20 6 12 16 10 28C8 40 14 50 24 54C28 55.5 30 54 32 52C34 54 36 55.5 40 54C50 50 56 40 54 28C52 16 44 6 32 6Z" 
+      d="M32 6C32 6 48 18 48 32C48 46 40 52 32 52C24 52 16 46 16 32C16 18 32 6 32 6Z" 
       fill="currentColor"
     />
-    {/* Trous caractéristiques de la monstera */}
-    <ellipse cx="20" cy="26" rx="4" ry="7" fill="hsl(var(--sage))" />
-    <ellipse cx="44" cy="26" rx="4" ry="7" fill="hsl(var(--sage))" />
-    <ellipse cx="24" cy="42" rx="3" ry="5" fill="hsl(var(--sage))" />
-    <ellipse cx="40" cy="42" rx="3" ry="5" fill="hsl(var(--sage))" />
     {/* Nervure centrale */}
     <path 
-      d="M32 12V48" 
+      d="M32 14C32 14 32 44 32 48" 
       stroke="hsl(var(--sage))" 
       strokeWidth="1.5" 
       strokeLinecap="round"
-      opacity="0.6"
+      opacity="0.5"
     />
   </svg>
 );
@@ -132,7 +127,7 @@ const FloatingContactButton = () => {
         {isOpen ? (
           <X className="w-7 h-7" />
         ) : (
-          <MonsteraLeaf className="w-10 h-10" />
+          <SimpleLeaf className="w-10 h-10" />
         )}
       </button>
       
