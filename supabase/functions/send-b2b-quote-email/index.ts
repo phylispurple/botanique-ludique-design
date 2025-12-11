@@ -90,7 +90,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email to botaniqueludique@gmail.com
     const emailResponse = await resend.emails.send({
-      from: "Botanique Ludique <contact@botaniqueludique.com>",
+      from: "Botanique Ludique <onboarding@resend.dev>",
       replyTo: email,
       to: ["contact@botaniqueludique.com"],
       subject: `[Demande B2B] ${safeEventType} - ${safeOrganization}`,
