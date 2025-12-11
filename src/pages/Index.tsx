@@ -11,13 +11,13 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
 import { Leaf, Users, Calendar, Building2, Award, Mail } from "lucide-react";
-import heroBackground from "@/assets/hero-background.png";
-import galleryAtelierAdulte from "@/assets/gallery-atelier-adulte.jpg";
-import galleryFlowerCrown from "@/assets/gallery-flower-crown.jpg";
-import gallerySeedBombs from "@/assets/gallery-seed-bombs.jpg";
-import galleryBasketry from "@/assets/gallery-basketry.jpg";
-import galleryKokedamaGarden from "@/assets/gallery-kokedama-garden.jpg";
-import tatakiZomeImage from "@/assets/workshop-tataki-zome.jpg";
+import heroBackground from "@/assets/hero-background.webp";
+import galleryAtelierAdulte from "@/assets/gallery-atelier-adulte.webp";
+import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
+import gallerySeedBombs from "@/assets/gallery-seed-bombs.webp";
+import galleryBasketry from "@/assets/gallery-basketry.webp";
+import galleryKokedamaGarden from "@/assets/gallery-kokedama-garden.webp";
+import tatakiZomeImage from "@/assets/workshop-tataki-zome.webp";
 
 const Index = () => {
   const navigate = useNavigate();
