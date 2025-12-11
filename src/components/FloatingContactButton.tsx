@@ -135,7 +135,7 @@ const FloatingContactButton = () => {
       {/* Badge notification - hidden once menu has been opened */}
       {!isOpen && !hasBeenOpened && (
         <span className="absolute -top-1 -right-1 w-5 h-5 bg-amber-500 rounded-full flex items-center justify-center animate-pulse shadow-lg">
-          <span className="text-[11px] text-white font-bold">?</span>
+          <span className="text-[11px] text-white font-bold">1</span>
         </span>
       )}
     </div>
