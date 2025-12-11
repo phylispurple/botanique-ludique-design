@@ -1,7 +1,42 @@
 import { useState, useEffect } from "react";
 import { X, Mail, Phone, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
-import monsteraLeafIcon from "@/assets/monstera-leaf-icon.png";
+
+// Custom Monstera Leaf SVG Component - style minimaliste comme le logo
+const MonsteraLeaf = ({ className }: { className?: string }) => (
+  <svg 
+    viewBox="0 0 64 64" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    {/* Tige */}
+    <path 
+      d="M32 56C32 56 33 46 35 38" 
+      stroke="currentColor" 
+      strokeWidth="2.5" 
+      strokeLinecap="round"
+    />
+    {/* Forme principale de la feuille monstera */}
+    <path 
+      d="M32 6C20 6 12 16 10 28C8 40 14 50 24 54C28 55.5 30 54 32 52C34 54 36 55.5 40 54C50 50 56 40 54 28C52 16 44 6 32 6Z" 
+      fill="currentColor"
+    />
+    {/* Trous caractéristiques de la monstera */}
+    <ellipse cx="20" cy="26" rx="4" ry="7" fill="hsl(var(--sage))" />
+    <ellipse cx="44" cy="26" rx="4" ry="7" fill="hsl(var(--sage))" />
+    <ellipse cx="24" cy="42" rx="3" ry="5" fill="hsl(var(--sage))" />
+    <ellipse cx="40" cy="42" rx="3" ry="5" fill="hsl(var(--sage))" />
+    {/* Nervure centrale */}
+    <path 
+      d="M32 12V48" 
+      stroke="hsl(var(--sage))" 
+      strokeWidth="1.5" 
+      strokeLinecap="round"
+      opacity="0.6"
+    />
+  </svg>
+);
 
 const FloatingContactButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,7 +132,7 @@ const FloatingContactButton = () => {
         {isOpen ? (
           <X className="w-7 h-7" />
         ) : (
-          <img src={monsteraLeafIcon} alt="Contact" className="w-9 h-9 object-contain" />
+          <MonsteraLeaf className="w-10 h-10" />
         )}
       </button>
       
