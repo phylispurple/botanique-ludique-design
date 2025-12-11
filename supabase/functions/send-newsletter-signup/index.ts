@@ -59,7 +59,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Newsletter signup request received for:", email);
 
     const emailResponse = await resend.emails.send({
-      from: "Botanique Ludique <onboarding@resend.dev>",
+      from: "Botanique Ludique <contact@botaniqueludique.com>",
       to: ["contact@botaniqueludique.com"],
       subject: "Nouvelle inscription à la newsletter",
       html: `

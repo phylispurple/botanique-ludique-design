@@ -64,7 +64,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email to botaniqueludique@gmail.com
     const emailResponse = await resend.emails.send({
-      from: "Botanique Ludique <onboarding@resend.dev>",
+      from: "Botanique Ludique <contact@botaniqueludique.com>",
       replyTo: email,
       to: ["contact@botaniqueludique.com"],
       subject: `[Botanique Ludique] ${subject || "Nouveau message de contact"}`,

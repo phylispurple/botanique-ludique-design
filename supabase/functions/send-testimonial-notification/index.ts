@@ -63,7 +63,7 @@ serve(async (req) => {
     const stars = '⭐'.repeat(rating);
 
     const emailResponse = await resend.emails.send({
-      from: "Botanique Ludique <onboarding@resend.dev>",
+      from: "Botanique Ludique <contact@botaniqueludique.com>",
       to: ["vanessa.charlery@gmail.com"], // Email de l'administrateur
       subject: "Nouveau témoignage soumis - Botanique Ludique",
       html: `
