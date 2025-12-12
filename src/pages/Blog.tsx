@@ -5,20 +5,31 @@ import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import teintureChouRougeImage from "@/assets/gallery-teinture-2.jpg";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
+
+// Images pour l'article teinture chou rouge
+import teintureChouRougeImage1 from "@/assets/gallery-teinture-1.jpg";
+import teintureChouRougeImage2 from "@/assets/gallery-teinture-2.jpg";
+import teintureChouRougeImage3 from "@/assets/gallery-teinture-3.jpg";
 
 const blogPosts = [
   {
     slug: "teinture-vegetale-chou-rouge-indigo-naturel",
     title: "Teinture Végétale au Chou Rouge : Guide Complet pour Obtenir un Indigo Naturel",
     excerpt: "Découvrez comment créer une teinture indigo naturelle à partir de chou rouge fermenté. Tutoriel étape par étape : fermentation, modification du pH, mordançage à l'alun et techniques de fixation.",
-    image: teintureChouRougeImage,
+    images: [teintureChouRougeImage1, teintureChouRougeImage2, teintureChouRougeImage3],
     date: "2025-01-20",
     category: "Tutoriels"
   }
 ];
 
 const Blog = () => {
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  );
+
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
@@ -48,17 +59,42 @@ const Blog = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post, index) => (
-                <Card key={index} className="hover:shadow-lg transition-all animate-fade-in group" style={{ animationDelay: `${index * 100}ms` }}>
+                <Card key={index} className="hover:shadow-lg transition-all animate-fade-in group overflow-hidden" style={{ animationDelay: `${index * 100}ms` }}>
                   <CardContent className="p-0">
-                    <div className="relative overflow-hidden">
-                      <img 
-                        src={post.image} 
-                        alt={post.title}
-                        className="w-full h-56 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                      <div className="absolute top-4 left-4 bg-sage text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    <div className="relative">
+                      <Carousel
+                        plugins={[autoplayPlugin.current]}
+                        className="w-full"
+                        opts={{
+                          loop: true,
+                        }}
+                      >
+                        <CarouselContent>
+                          {post.images.map((image, imgIndex) => (
+                            <CarouselItem key={imgIndex}>
+                              <div className="relative aspect-[4/3] overflow-hidden rounded-t-lg">
+                                <img 
+                                  src={image} 
+                                  alt={`${post.title} - Image ${imgIndex + 1}`}
+                                  className="w-full h-full object-contain bg-charcoal/5"
+                                  loading="lazy"
+                                />
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                      </Carousel>
+                      <div className="absolute top-4 left-4 bg-sage text-white px-3 py-1 rounded-full text-xs font-semibold z-10">
                         {post.category}
+                      </div>
+                      {/* Indicateurs de carousel */}
+                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                        {post.images.map((_, dotIndex) => (
+                          <div 
+                            key={dotIndex}
+                            className="w-2 h-2 rounded-full bg-white/60"
+                          />
+                        ))}
                       </div>
                     </div>
                     <div className="p-6 space-y-4">
