@@ -63,7 +63,7 @@ const Blog = () => {
                   to={`/blog/${post.slug}`}
                   className="block"
                 >
-                  <Card className="hover:shadow-lg transition-all animate-fade-in group overflow-hidden cursor-pointer" style={{ animationDelay: `${index * 100}ms` }}>
+                  <Card className="hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-fade-in group overflow-hidden cursor-pointer border-transparent hover:border-sage/20" style={{ animationDelay: `${index * 100}ms` }}>
                     <CardContent className="p-0">
                       <div className="relative">
                         <Carousel
