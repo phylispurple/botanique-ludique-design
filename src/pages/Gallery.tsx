@@ -28,8 +28,8 @@ import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.jpg";
 import kosovoConstruction5 from "@/assets/gallery-kosovo-construction-5.jpg";
 import kosovoConstruction6 from "@/assets/gallery-kosovo-construction-6.jpg";
 import kosovoConstruction7 from "@/assets/gallery-kosovo-construction-7.jpg";
-import kokedamaGardenImage from "@/assets/gallery-kokedama-garden.jpg";
-import portraitVanessaImage from "@/assets/portrait-vanessa.png";
+import kokedamaGardenImage from "@/assets/gallery-kokedama-garden.webp";
+import portraitVanessaImage from "@/assets/portrait-vanessa.webp";
 
 const Gallery = () => {
   const [selectedItem, setSelectedItem] = useState<{ src: string; alt: string; caption: string; type: string } | null>(null);
