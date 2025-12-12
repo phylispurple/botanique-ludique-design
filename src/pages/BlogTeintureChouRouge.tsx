@@ -32,8 +32,8 @@ const BlogTeintureChouRouge = () => {
           headline: "Teinture Végétale au Chou Rouge : Guide Complet pour Obtenir un Indigo Naturel",
           description: "Découvrez comment créer une teinture indigo naturelle à partir de chou rouge fermenté. Tutoriel complet avec toutes les étapes.",
           author: { name: "Vanessa Charlery" },
-          datePublished: "2025-01-20",
-          dateModified: "2025-01-20"
+          datePublished: "2025-12-12",
+          dateModified: "2025-12-12"
         }}
       />
       <FloatingIllustrations />
@@ -81,7 +81,7 @@ const BlogTeintureChouRouge = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  <time dateTime="2025-01-20">20 janvier 2025</time>
+                  <time dateTime="2025-12-12">12 décembre 2025</time>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />
