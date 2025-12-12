@@ -242,10 +242,18 @@ const Workshops = () => {
   const [activeCategory, setActiveCategory] = useState<WorkshopCategory>("all");
   const location = useLocation();
 
-  // Reset filter when navigating from menu with hash
+  // Reset filter and scroll to element when navigating with hash
   useEffect(() => {
     if (location.hash) {
       setActiveCategory("all");
+      // Wait for DOM to update then scroll to element
+      setTimeout(() => {
+        const elementId = location.hash.substring(1);
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
     }
   }, [location.hash]);
 

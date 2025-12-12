@@ -58,65 +58,68 @@ const Blog = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post, index) => (
-                <Card key={index} className="hover:shadow-lg transition-all animate-fade-in group overflow-hidden" style={{ animationDelay: `${index * 100}ms` }}>
-                  <CardContent className="p-0">
-                    <div className="relative">
-                      <Carousel
-                        plugins={[autoplayPlugin.current]}
-                        className="w-full"
-                        opts={{
-                          loop: true,
-                        }}
-                      >
-                        <CarouselContent>
-                          {post.images.map((image, imgIndex) => (
-                            <CarouselItem key={imgIndex}>
-                              <div className="relative aspect-[4/3] overflow-hidden rounded-t-lg">
-                                <img 
-                                  src={image} 
-                                  alt={`${post.title} - Image ${imgIndex + 1}`}
-                                  className="w-full h-full object-contain bg-charcoal/5"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </CarouselItem>
+                <Link 
+                  key={index}
+                  to={`/blog/${post.slug}`}
+                  className="block"
+                >
+                  <Card className="hover:shadow-lg transition-all animate-fade-in group overflow-hidden cursor-pointer" style={{ animationDelay: `${index * 100}ms` }}>
+                    <CardContent className="p-0">
+                      <div className="relative">
+                        <Carousel
+                          plugins={[autoplayPlugin.current]}
+                          className="w-full pointer-events-none"
+                          opts={{
+                            loop: true,
+                          }}
+                        >
+                          <CarouselContent>
+                            {post.images.map((image, imgIndex) => (
+                              <CarouselItem key={imgIndex}>
+                                <div className="relative aspect-[4/3] overflow-hidden rounded-t-lg">
+                                  <img 
+                                    src={image} 
+                                    alt={`${post.title} - Image ${imgIndex + 1}`}
+                                    className="w-full h-full object-contain bg-charcoal/5"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              </CarouselItem>
+                            ))}
+                          </CarouselContent>
+                        </Carousel>
+                        <div className="absolute top-4 left-4 bg-sage text-white px-3 py-1 rounded-full text-xs font-semibold z-10">
+                          {post.category}
+                        </div>
+                        {/* Indicateurs de carousel */}
+                        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                          {post.images.map((_, dotIndex) => (
+                            <div 
+                              key={dotIndex}
+                              className="w-2 h-2 rounded-full bg-white/60"
+                            />
                           ))}
-                        </CarouselContent>
-                      </Carousel>
-                      <div className="absolute top-4 left-4 bg-sage text-white px-3 py-1 rounded-full text-xs font-semibold z-10">
-                        {post.category}
+                        </div>
                       </div>
-                      {/* Indicateurs de carousel */}
-                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-                        {post.images.map((_, dotIndex) => (
-                          <div 
-                            key={dotIndex}
-                            className="w-2 h-2 rounded-full bg-white/60"
-                          />
-                        ))}
+                      <div className="p-6 space-y-4">
+                        <div className="flex items-center gap-2 text-sm text-charcoal/60">
+                          <Calendar className="w-4 h-4" />
+                          {new Date(post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
+                        </div>
+                        <h2 className="text-xl font-semibold text-charcoal leading-tight group-hover:text-sage-dark transition-colors" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                          {post.title}
+                        </h2>
+                        <p className="text-charcoal/70 leading-relaxed text-sm">
+                          {post.excerpt}
+                        </p>
+                        <span className="inline-flex items-center gap-2 text-sage-dark group-hover:text-sage font-semibold text-sm group-hover:gap-3 transition-all">
+                          Lire l'article
+                          <ArrowRight className="w-4 h-4" />
+                        </span>
                       </div>
-                    </div>
-                    <div className="p-6 space-y-4">
-                      <div className="flex items-center gap-2 text-sm text-charcoal/60">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
-                      </div>
-                      <h2 className="text-xl font-semibold text-charcoal leading-tight" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
-                        {post.title}
-                      </h2>
-                      <p className="text-charcoal/70 leading-relaxed text-sm">
-                        {post.excerpt}
-                      </p>
-                      <Link 
-                        to={`/blog/${post.slug}`}
-                        className="inline-flex items-center gap-2 text-sage-dark hover:text-sage font-semibold text-sm group-hover:gap-3 transition-all"
-                      >
-                        Lire l'article
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
 
