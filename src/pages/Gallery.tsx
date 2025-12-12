@@ -30,6 +30,9 @@ import kosovoConstruction6 from "@/assets/gallery-kosovo-construction-6.webp";
 import kosovoConstruction7 from "@/assets/gallery-kosovo-construction-7.webp";
 import kokedamaGardenImage from "@/assets/gallery-kokedama-garden.webp";
 import portraitVanessaImage from "@/assets/portrait-vanessa.webp";
+import teinture1Image from "@/assets/gallery-teinture-1.jpg";
+import teinture2Image from "@/assets/gallery-teinture-2.jpg";
+import teinture3Image from "@/assets/gallery-teinture-3.jpg";
 
 const Gallery = () => {
   const [selectedItem, setSelectedItem] = useState<{ src: string; alt: string; caption: string; type: string } | null>(null);
@@ -48,9 +51,14 @@ const Gallery = () => {
     // Ligne 3 : Ateliers en action
     { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines — Atelier Botanique Ludique", type: "image" },
     { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier — MJC Le Vésinet", type: "image" },
-    { src: "/videos/workshop-dyeing.mp4", alt: "Atelier teinture végétale", caption: "Atelier teinture végétale", type: "video" },
+    { src: teinture1Image, alt: "Atelier teinture végétale", caption: "Atelier teinture végétale — Préparation des tissus", type: "image" },
     
-    // Ligne 4 : Nature et créativité
+    // Ligne 4 : Teinture végétale (suite)
+    { src: teinture2Image, alt: "Teinture végétale résultat", caption: "Atelier teinture végétale — Couleurs naturelles", type: "image" },
+    { src: teinture3Image, alt: "Détail teinture végétale", caption: "Atelier teinture végétale — Fil teint au bleu", type: "image" },
+    { src: "/videos/workshop-dyeing.mp4", alt: "Atelier teinture végétale", caption: "Atelier teinture végétale en vidéo", type: "video" },
+    
+    // Ligne 5 : Nature et créativité
     { src: forestWalkImage, alt: "Balade en forêt", caption: "Atelier sur les espèces exotiques envahissantes", type: "image" },
     { src: tatakiZomeImage, alt: "Atelier Tataki Zome", caption: "Atelier Tataki Zome — Impression végétale japonaise", type: "image" },
     { src: "/videos/workshop-demo-2.mp4", alt: "Atelier botanique", caption: "Atelier de création botanique", type: "video" },
