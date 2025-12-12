@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 interface SchemaOrgProps {
-  type: 'LocalBusiness' | 'Course' | 'FAQPage' | 'Service' | 'Event' | 'Organization' | 'Person';
+  type: 'LocalBusiness' | 'Course' | 'FAQPage' | 'Service' | 'Event' | 'Organization' | 'Person' | 'Article';
   data: any;
 }
 
@@ -228,6 +228,35 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
             "availability": "https://schema.org/InStock",
             "validFrom": new Date().toISOString()
           },
+          ...data
+        };
+
+      case 'Article':
+        return {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": data.headline,
+          "description": data.description,
+          "author": {
+            "@type": "Person",
+            "name": data.author?.name || "Vanessa Charlery",
+            "url": "https://botaniqueludique.com/about"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Botanique Ludique",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://botaniqueludique.com/favicon.png"
+            }
+          },
+          "datePublished": data.datePublished,
+          "dateModified": data.dateModified || data.datePublished,
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://botaniqueludique.com/blog/${data.slug || ''}`
+          },
+          "image": data.image || "https://botaniqueludique.com/og-image.jpg",
           ...data
         };
       

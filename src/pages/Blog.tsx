@@ -6,10 +6,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import kokedamaImage from "@/assets/workshop-kokedama.jpg";
-import dyeingImage from "@/assets/workshop-dyeing.jpg";
 import terrariumImage from "@/assets/workshop-terrarium.jpg";
+import teintureChouRougeImage from "@/assets/gallery-teinture-2.jpg";
 
 const blogPosts = [
+  {
+    slug: "teinture-vegetale-chou-rouge-indigo-naturel",
+    title: "Teinture Végétale au Chou Rouge : Guide Complet pour Obtenir un Indigo Naturel",
+    excerpt: "Découvrez comment créer une teinture indigo naturelle à partir de chou rouge fermenté. Tutoriel étape par étape : fermentation, modification du pH, mordançage à l'alun et techniques de fixation.",
+    image: teintureChouRougeImage,
+    date: "2025-01-20",
+    category: "Tutoriels"
+  },
   {
     slug: "top-5-ateliers-botaniques-paris-2025",
     title: "Top 5 des Ateliers Botaniques à Faire à Paris en 2025",
@@ -25,14 +33,6 @@ const blogPosts = [
     image: terrariumImage,
     date: "2025-01-10",
     category: "Entreprise"
-  },
-  {
-    slug: "kokedama-guide-complet-art-japonais",
-    title: "Kokedama : Guide Complet de l'Art Japonais du Jardinage",
-    excerpt: "Tout savoir sur le kokedama, cet art japonais millénaire du jardinage en boule de mousse. Histoire, techniques et conseils d'entretien.",
-    image: dyeingImage,
-    date: "2025-01-05",
-    category: "Tutoriels"
   }
 ];
 
