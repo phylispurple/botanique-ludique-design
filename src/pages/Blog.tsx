@@ -5,8 +5,6 @@ import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import kokedamaImage from "@/assets/workshop-kokedama.jpg";
-import terrariumImage from "@/assets/workshop-terrarium.jpg";
 import teintureChouRougeImage from "@/assets/gallery-teinture-2.jpg";
 
 const blogPosts = [
@@ -17,22 +15,6 @@ const blogPosts = [
     image: teintureChouRougeImage,
     date: "2025-01-20",
     category: "Tutoriels"
-  },
-  {
-    slug: "top-5-ateliers-botaniques-paris-2025",
-    title: "Top 5 des Ateliers Botaniques à Faire à Paris en 2025",
-    excerpt: "Découvrez notre sélection des meilleurs ateliers botaniques créatifs à Paris cette année : kokedama, teinture végétale, terrarium et plus encore.",
-    image: kokedamaImage,
-    date: "2025-01-15",
-    category: "Guides"
-  },
-  {
-    slug: "organiser-team-building-nature-yvelines",
-    title: "Comment Organiser un Team Building Nature dans les Yvelines ?",
-    excerpt: "Guide complet pour organiser un team building réussi avec des ateliers botaniques dans les Yvelines. Conseils, formats et idées d'activités.",
-    image: terrariumImage,
-    date: "2025-01-10",
-    category: "Entreprise"
   }
 ];
 
