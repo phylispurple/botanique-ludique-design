@@ -9,16 +9,16 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 
-// Images pour l'article teinture chou rouge (carousel)
-import teintureChouRougeImage1 from "@/assets/gallery-teinture-1.jpg";
-import teintureChouRougeImage3 from "@/assets/gallery-teinture-3.jpg";
+// Images pour le carousel de l'article teinture chou rouge
+import blogCarouselBocal from "@/assets/blog-carousel-bocal-indigo.jpg";
+import blogCarouselFil from "@/assets/blog-carousel-fil-indigo.jpg";
 
 const blogPosts = [
   {
     slug: "teinture-vegetale-chou-rouge-indigo-naturel",
     title: "Teinture Végétale au Chou Rouge : Guide Complet pour Obtenir un Indigo Naturel",
     excerpt: "Découvrez comment créer une teinture indigo naturelle à partir de chou rouge fermenté. Tutoriel étape par étape : fermentation, modification du pH, mordançage à l'alun et techniques de fixation.",
-    images: [teintureChouRougeImage1, teintureChouRougeImage3],
+    images: [blogCarouselBocal, blogCarouselFil],
     date: "2025-01-20",
     category: "Tutoriels"
   }
