@@ -116,7 +116,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Botanique Ludique <onboarding@resend.dev>",
-      to: ["contact@botaniqueludique.com"],
+      to: ["botaniqueludique@gmail.com"],
       subject: "Nouvelle inscription à la newsletter",
       html: `
         <h1>Nouvelle inscription à votre newsletter</h1>

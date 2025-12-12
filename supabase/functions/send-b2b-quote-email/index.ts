@@ -149,7 +149,7 @@ const handler = async (req: Request): Promise<Response> => {
     const emailResponse = await resend.emails.send({
       from: "Botanique Ludique <onboarding@resend.dev>",
       replyTo: email,
-      to: ["contact@botaniqueludique.com"],
+      to: ["botaniqueludique@gmail.com"],
       subject: `[Demande B2B] ${safeEventType} - ${safeOrganization}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
