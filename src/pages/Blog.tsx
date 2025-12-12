@@ -19,7 +19,7 @@ const blogPosts = [
     title: "Teinture Végétale au Chou Rouge : Guide Complet pour Obtenir un Indigo Naturel",
     excerpt: "Découvrez comment créer une teinture indigo naturelle à partir de chou rouge fermenté. Tutoriel étape par étape : fermentation, modification du pH, mordançage à l'alun et techniques de fixation.",
     images: [blogCarouselBocal, blogCarouselFil],
-    date: "2025-01-20",
+    date: "2025-12-12",
     category: "Tutoriels"
   }
 ];
