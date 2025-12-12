@@ -68,6 +68,7 @@ const Navigation = () => {
     { name: "Pro & Entreprises", path: "/pro" },
     { name: "Galerie", path: "/gallery" },
     { name: "Agenda", path: "/agenda" },
+    { name: "Blog", path: "/blog" },
     { name: "FAQ", path: "/faq" },
     { name: "Contact", path: "/contact" },
   ];
