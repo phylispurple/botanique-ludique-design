@@ -7,7 +7,7 @@ import { SEO } from "@/components/SEO";
 import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link, useLocation } from "react-router-dom";
-import dyeingImage from "@/assets/workshop-dyeing.jpg";
+import dyeingImage from "@/assets/gallery-teinture-2.jpg";
 import terrariumImage from "@/assets/workshop-terrarium.jpg";
 import muralImage from "@/assets/workshop-mural.jpg";
 import seedBombsImage from "@/assets/workshop-seed-bombs.jpg";
