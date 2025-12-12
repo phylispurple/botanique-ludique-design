@@ -5,6 +5,7 @@ import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
+import { cn } from "@/lib/utils";
 import terrariumImage from "@/assets/gallery-terrarium.webp";
 import seedBombsImage from "@/assets/gallery-seed-bombs.webp";
 import workshopTableImage from "@/assets/gallery-workshop-table.webp";
@@ -33,6 +34,36 @@ import portraitVanessaImage from "@/assets/portrait-vanessa.webp";
 import teinture1Image from "@/assets/gallery-teinture-1.webp";
 import teinture2Image from "@/assets/gallery-teinture-2.webp";
 import teinture3Image from "@/assets/gallery-teinture-3.webp";
+
+const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string; className?: string; style?: React.CSSProperties }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  return (
+    <div className="relative w-full h-full">
+      {/* Skeleton with blur placeholder */}
+      <div 
+        className={cn(
+          "absolute inset-0 bg-sage/20 animate-pulse transition-opacity duration-500",
+          isLoaded ? "opacity-0" : "opacity-100"
+        )}
+      >
+        <div className="w-full h-full bg-gradient-to-br from-sage/10 via-sage/20 to-sage/10" />
+      </div>
+      <img
+        src={src}
+        alt={alt}
+        className={cn(
+          "transition-all duration-700",
+          isLoaded ? "opacity-100 blur-0" : "opacity-0 blur-sm",
+          className
+        )}
+        style={style}
+        loading="lazy"
+        onLoad={() => setIsLoaded(true)}
+      />
+    </div>
+  );
+};
 
 const Gallery = () => {
   const [selectedItem, setSelectedItem] = useState<{ src: string; alt: string; caption: string; type: string } | null>(null);
@@ -150,12 +181,11 @@ const Gallery = () => {
                       }}
                     />
                   ) : (
-                    <img
+                    <GalleryImage
                       src={item.src}
                       alt={item.alt}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="w-full h-full object-cover group-hover:scale-110"
                       style={{ filter: 'sepia(0.1) saturate(0.9)' }}
-                      loading="lazy"
                     />
                   )}
                 </div>
