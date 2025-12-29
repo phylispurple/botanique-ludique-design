@@ -7,6 +7,8 @@ interface SEOProps {
   ogImage?: string;
   canonical?: string;
   type?: string;
+  city?: string;
+  region?: string;
 }
 
 export const SEO = ({ 
@@ -15,7 +17,9 @@ export const SEO = ({
   keywords, 
   ogImage = "https://botaniqueludique.com/og-image.jpg",
   canonical,
-  type = "website"
+  type = "website",
+  city = "Paris",
+  region = "FR-IDF"
 }: SEOProps) => {
   const fullTitle = `${title} | Botanique Ludique`;
   const siteUrl = "https://botaniqueludique.com";
@@ -23,12 +27,27 @@ export const SEO = ({
 
   return (
     <Helmet>
+      {/* Language & Hreflang */}
+      <html lang="fr" />
+      <link rel="alternate" hrefLang="fr" href={canonicalUrl} />
+      <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={canonicalUrl} />
+
+      {/* Language Meta */}
+      <meta name="language" content="French" />
+      <meta http-equiv="content-language" content="fr-FR" />
+
+      {/* Geo Targeting for France / Île-de-France */}
+      <meta name="geo.region" content={region} />
+      <meta name="geo.placename" content={`${city}, Île-de-France, France`} />
+      <meta name="geo.position" content="48.8566;2.3522" />
+      <meta name="ICBM" content="48.8566, 2.3522" />
 
       {/* Open Graph */}
       <meta property="og:type" content={type} />
@@ -45,10 +64,13 @@ export const SEO = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
 
-      {/* Additional Meta */}
+      {/* Additional Meta for Local SEO */}
       <meta name="author" content="Vanessa Charlery" />
-      <meta name="geo.region" content="FR-IDF" />
-      <meta name="geo.placename" content="Paris" />
+      <meta name="publisher" content="Botanique Ludique" />
+      <meta name="copyright" content="Botanique Ludique" />
+      <meta name="distribution" content="France" />
+      <meta name="rating" content="general" />
+      <meta name="revisit-after" content="7 days" />
     </Helmet>
   );
 };

@@ -28,22 +28,59 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           },
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Île-de-France",
             "addressLocality": "Paris",
+            "postalCode": "75000",
             "addressRegion": "Île-de-France",
             "addressCountry": "FR"
           },
           "areaServed": [
             {
               "@type": "City",
-              "name": "Paris"
+              "name": "Paris",
+              "sameAs": "https://fr.wikipedia.org/wiki/Paris"
             },
             {
               "@type": "AdministrativeArea",
-              "name": "Yvelines (78)"
+              "name": "Yvelines",
+              "sameAs": "https://fr.wikipedia.org/wiki/Yvelines"
             },
             {
               "@type": "AdministrativeArea",
-              "name": "Hauts-de-Seine (92)"
+              "name": "Hauts-de-Seine",
+              "sameAs": "https://fr.wikipedia.org/wiki/Hauts-de-Seine"
+            },
+            {
+              "@type": "City",
+              "name": "Chatou"
+            },
+            {
+              "@type": "City",
+              "name": "Saint-Germain-en-Laye"
+            },
+            {
+              "@type": "City",
+              "name": "Le Vésinet"
+            },
+            {
+              "@type": "City",
+              "name": "Le Pecq"
+            },
+            {
+              "@type": "City",
+              "name": "Versailles"
+            },
+            {
+              "@type": "City",
+              "name": "Boulogne-Billancourt"
+            },
+            {
+              "@type": "City",
+              "name": "Nanterre"
+            },
+            {
+              "@type": "City",
+              "name": "Rueil-Malmaison"
             }
           ],
           "geo": {
