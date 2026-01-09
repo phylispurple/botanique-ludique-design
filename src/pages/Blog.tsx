@@ -9,11 +9,21 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 
-// Images pour le carousel de l'article teinture chou rouge
+// Images pour les articles
 import blogCarouselBocal from "@/assets/blog-carousel-bocal-indigo.jpg";
 import blogCarouselFil from "@/assets/blog-carousel-fil-indigo.jpg";
+import blogMonsteraTendance from "@/assets/blog-monstera-tendance.jpg";
+import blogMonsteraDeco from "@/assets/blog-monstera-deco-interieur.jpg";
 
 const blogPosts = [
+  {
+    slug: "monstera-plante-coloniale-distinction-sociale",
+    title: "La Monstera : Une Plante Déplacée — Histoire Coloniale et Distinction Sociale",
+    excerpt: "Analyse ethnobotanique : comment la Monstera est passée des forêts mexicaines aux salons bourgeois via l'histoire coloniale du XIXe siècle. Références : Guillaume Blanc, Bourdieu, jardins d'acclimatation.",
+    images: [blogMonsteraTendance, blogMonsteraDeco],
+    date: "2026-01-09",
+    category: "Ethnobotanique"
+  },
   {
     slug: "teinture-vegetale-chou-rouge-indigo-naturel",
     title: "Teinture Végétale au Chou Rouge : Guide Complet pour Obtenir un Indigo Naturel",
