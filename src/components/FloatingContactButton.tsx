@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { X, Mail, Phone, Calendar } from "lucide-react";
+import { X, Mail, Phone, Calendar, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Feuille simple style logo Botanique Ludique
@@ -53,6 +53,22 @@ const FloatingContactButton = () => {
             <p className="text-sm font-semibold text-charcoal border-b pb-2 mb-3">
               Contactez-nous
             </p>
+            
+            {/* WhatsApp - en premier pour plus de visibilité */}
+            <a
+              href={`https://wa.me/33609831606?text=${encodeURIComponent("Bonjour ! Je suis intéressé(e) par vos ateliers botaniques.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-3 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/20 transition-colors group"
+            >
+              <div className="p-2 bg-[#25D366] rounded-full">
+                <MessageCircle className="w-4 h-4 text-white" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-charcoal">WhatsApp</p>
+                <p className="text-xs text-muted-foreground">Réponse rapide</p>
+              </div>
+            </a>
             
             {/* Email */}
             <a
