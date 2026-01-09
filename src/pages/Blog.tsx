@@ -18,7 +18,7 @@ import blogMonsteraDeco from "@/assets/blog-monstera-deco-interieur.jpg";
 const blogPosts = [
   {
     slug: "monstera-plante-coloniale-distinction-sociale",
-    title: "La Monstera : Une Plante Déplacée — Histoire Coloniale et Distinction Sociale",
+    title: "La Monstera : Une Plante Déplacée. Histoire Coloniale et Distinction Sociale",
     excerpt: "Analyse ethnobotanique : comment la Monstera est passée des forêts mexicaines aux salons bourgeois via l'histoire coloniale du XIXe siècle. Références : Guillaume Blanc, Bourdieu, jardins d'acclimatation.",
     images: [blogMonsteraTendance, blogMonsteraDeco],
     date: "2026-01-09",
