@@ -19,7 +19,7 @@ const BlogMonsteraColonialisme = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "La Monstera : Une Plante Déplacée — Histoire Coloniale et Distinction Sociale",
+    "headline": "La Monstera : Une Plante Déplacée. Histoire Coloniale et Distinction Sociale",
     "description": "Analyse ethnobotanique de la Monstera deliciosa : comment cette plante tropicale est passée des forêts du Mexique aux salons bourgeois européens à travers l'histoire coloniale du XIXe siècle.",
     "image": imgTendance,
     "author": {
@@ -47,7 +47,7 @@ const BlogMonsteraColonialisme = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="La Monstera : Une Plante Déplacée — Histoire Coloniale et Distinction Sociale | Ethnobotanique"
+        title="La Monstera : Une Plante Déplacée. Histoire Coloniale et Distinction Sociale | Ethnobotanique"
         description="Analyse ethnobotanique : comment la Monstera est passée des forêts mexicaines aux salons bourgeois via l'histoire coloniale. Références : Guillaume Blanc, Bourdieu, jardins d'acclimatation."
         keywords="monstera histoire coloniale, ethnobotanique, distinction sociale Bourdieu, colonialisme vert Guillaume Blanc, jardin acclimatation, plantes tropicales colonisation, monstera deliciosa origine, plante décoloniale"
         canonical="/blog/monstera-plante-coloniale-distinction-sociale"
@@ -91,7 +91,7 @@ const BlogMonsteraColonialisme = () => {
               La Monstera : Une Plante Déplacée
             </h1>
             <p className="subtitle-italic text-xl md:text-2xl mb-6 text-charcoal/80">
-              Histoire coloniale, jardins d'acclimatation et distinction sociale — Une analyse ethnobotanique
+              Histoire coloniale, jardins d'acclimatation et distinction sociale. Une analyse ethnobotanique
             </p>
             
             <div className="flex flex-wrap items-center gap-4 text-sm text-charcoal/60 border-b border-charcoal/10 pb-6">
@@ -114,7 +114,7 @@ const BlogMonsteraColonialisme = () => {
           <figure className="mb-12 animate-fade-in">
             <img 
               src={imgTendance}
-              alt="Monstera deliciosa dans un intérieur contemporain — plante tropicale devenue icône décorative"
+              alt="Monstera deliciosa dans un intérieur contemporain, plante tropicale devenue icône décorative"
               className="w-full rounded-lg shadow-lg"
               loading="eager"
             />
@@ -160,7 +160,7 @@ const BlogMonsteraColonialisme = () => {
               <figure className="my-8">
                 <img 
                   src={imgDecoModerne}
-                  alt="Intérieur contemporain saturé de plantes tropicales — la jungle domestiquée"
+                  alt="Intérieur contemporain saturé de plantes tropicales, la jungle domestiquée"
                   className="w-full rounded-lg shadow-md"
                   loading="lazy"
                 />
@@ -182,14 +182,14 @@ const BlogMonsteraColonialisme = () => {
               </p>
               <p className="text-charcoal/80 leading-relaxed mb-4">
                 C'est dans ce contexte que le botaniste danois <strong>Frederik Michael Liebmann</strong> décrit officiellement la <em>Monstera deliciosa</em> en 1849. 
-                Le nom même qu'il lui attribue — <em>Monstera</em>, du latin <em>monstrum</em> — révèle le regard européen de l'époque : ce qui est 
+                Le nom même qu'il lui attribue, <em>Monstera</em>, du latin <em>monstrum</em>, révèle le regard européen de l'époque : ce qui est 
                 différent, imposant, hors norme selon les critères occidentaux, est qualifié de « monstrueux » (Madison, 1977).
               </p>
               
               <figure className="my-8">
                 <img 
                   src={imgColonialisme}
-                  alt="Représentation de Christophe Colomb prenant possession des Amériques — gravure historique"
+                  alt="Représentation de Christophe Colomb prenant possession des Amériques, gravure historique"
                   className="w-full rounded-lg shadow-md"
                   loading="lazy"
                 />
@@ -201,7 +201,7 @@ const BlogMonsteraColonialisme = () => {
               <blockquote className="border-l-4 border-terracotta pl-6 my-8 italic text-charcoal/70">
                 « L'acte de nommer n'est jamais neutre : il inscrit l'objet nommé dans un système de classification qui est aussi un système de pouvoir. 
                 Nommer une plante, c'est déjà l'arracher à son contexte d'origine pour l'intégrer dans l'ordre du savoir occidental. »
-                <footer className="text-sm mt-2 not-italic">— Lucile Brockway, <cite>Science and Colonial Expansion</cite> (1979)</footer>
+                <footer className="text-sm mt-2 not-italic">Lucile Brockway, <cite>Science and Colonial Expansion</cite> (1979)</footer>
               </blockquote>
 
               <p className="text-charcoal/80 leading-relaxed mb-4">
@@ -230,7 +230,7 @@ const BlogMonsteraColonialisme = () => {
               <figure className="my-8">
                 <img 
                   src={imgAcclimatation}
-                  alt="Affiche du Jardin Zoologique d'Acclimatation — Somalis, Paris XIXe siècle"
+                  alt="Affiche du Jardin Zoologique d'Acclimatation, Somalis, Paris XIXe siècle"
                   className="w-full max-w-md mx-auto rounded-lg shadow-md"
                   loading="lazy"
                 />
@@ -241,7 +241,7 @@ const BlogMonsteraColonialisme = () => {
 
               <p className="text-charcoal/80 leading-relaxed mb-4">
                 La Monstera, comme d'autres Aracées tropicales, fait partie des espèces qui « résistent » à ce processus d'acclimatation. 
-                Mais attention : elle ne s'adapte pas véritablement — elle <em>supporte</em>. Cette nuance est importante : 
+                Mais attention : elle ne s'adapte pas véritablement, elle <em>supporte</em>. Cette nuance est importante :
                 la plante survit dans des conditions qui ne sont pas les siennes, souvent au prix d'un développement incomplet 
                 (absence de floraison, feuilles plus petites, etc.).
               </p>
@@ -260,7 +260,7 @@ const BlogMonsteraColonialisme = () => {
               <figure className="my-8">
                 <img 
                   src={imgSalonBourgeois}
-                  alt="Salon bourgeois du XIXe siècle avec plantes tropicales — peinture d'époque"
+                  alt="Salon bourgeois du XIXe siècle avec plantes tropicales, peinture d'époque"
                   className="w-full rounded-lg shadow-md"
                   loading="lazy"
                 />
@@ -279,11 +279,11 @@ const BlogMonsteraColonialisme = () => {
                 <ul className="space-y-3 text-charcoal/80">
                   <li className="flex items-start gap-3">
                     <span className="text-sage font-bold text-xl">1.</span>
-                    <span><strong>« Je connais l'ailleurs »</strong> — Je suis cultivé, je voyage (au moins par procuration), j'ai accès à des réseaux d'approvisionnement exclusifs.</span>
+                    <span><strong>« Je connais l'ailleurs »</strong> : Je suis cultivé, je voyage (au moins par procuration), j'ai accès à des réseaux d'approvisionnement exclusifs.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-sage font-bold text-xl">2.</span>
-                    <span><strong>« Je le maîtrise »</strong> — J'ai les moyens (financiers, techniques, domestiques) de maintenir en vie un fragment de jungle tropicale chez moi.</span>
+                    <span><strong>« Je le maîtrise »</strong> : J'ai les moyens (financiers, techniques, domestiques) de maintenir en vie un fragment de jungle tropicale chez moi.</span>
                   </li>
                 </ul>
               </div>
@@ -308,7 +308,7 @@ const BlogMonsteraColonialisme = () => {
               <figure className="my-8">
                 <img 
                   src={imgZooHumain}
-                  alt="Zoo humain — populations colonisées exhibées lors d'une exposition coloniale"
+                  alt="Zoo humain, populations colonisées exhibées lors d'une exposition coloniale"
                   className="w-full rounded-lg shadow-md"
                   loading="lazy"
                 />
@@ -357,7 +357,7 @@ const BlogMonsteraColonialisme = () => {
               <figure className="my-8">
                 <img 
                   src={imgDecoInterieur}
-                  alt="Monstera dans la décoration intérieure contemporaine — motif omniprésent"
+                  alt="Monstera dans la décoration intérieure contemporaine, motif omniprésent"
                   className="w-full rounded-lg shadow-md"
                   loading="lazy"
                 />
@@ -398,13 +398,13 @@ const BlogMonsteraColonialisme = () => {
               </h2>
               <p className="text-charcoal/80 leading-relaxed mb-4">
                 L'ethnobotanique, en croisant les apports de la botanique, de l'anthropologie et de l'histoire, nous offre des outils 
-                précieux pour déconstruire ces héritages. Elle nous rappelle que chaque plante a une histoire — sociale, politique, 
-                culturelle — et que cette histoire mérite d'être racontée.
+                précieux pour déconstruire ces héritages. Elle nous rappelle que chaque plante a une histoire, sociale, politique, 
+                culturelle, et que cette histoire mérite d'être racontée.
               </p>
               <p className="text-charcoal/80 leading-relaxed mb-4">
                 La Monstera deliciosa, loin d'être une simple tendance déco, est un <strong>témoin végétal</strong> de l'histoire coloniale 
                 et des mécanismes de distinction sociale qui structurent encore nos sociétés. En prendre conscience, c'est déjà commencer 
-                à transformer notre regard — et peut-être nos pratiques.
+                à transformer notre regard, et peut-être nos pratiques.
               </p>
             </section>
 
@@ -462,7 +462,7 @@ const BlogMonsteraColonialisme = () => {
                 N'hésitez pas à me suivre pour plus de contenus sur l'ethnobotanique !
               </p>
               <a 
-                href="https://www.instagram.com/botanistludique/"
+                href="https://www.instagram.com/botanique.ludique/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500 text-white font-semibold rounded-full hover:opacity-90 transition-opacity"
