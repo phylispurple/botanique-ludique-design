@@ -4,13 +4,14 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import Testimonials from "@/components/Testimonials";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import PromoPopup from "@/components/PromoPopup";
 
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
-import { Leaf, Users, Calendar, Building2, Award, Mail } from "lucide-react";
+import { Leaf, Users, Calendar, Building2, Award, Mail, Phone, ArrowRight } from "lucide-react";
 import heroBackground from "@/assets/hero-background.webp";
 import galleryAtelierAdulte from "@/assets/gallery-atelier-adulte.webp";
 import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
@@ -403,6 +404,41 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      {/* Bandeau Contact Rapide - Sticky en bas */}
+      <section className="py-6 px-4 bg-charcoal sticky bottom-0 z-40">
+        <div className="container mx-auto max-w-4xl">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-center sm:text-left">
+              <p className="text-white font-semibold text-lg">
+                📞 Une question ? Contactez-nous !
+              </p>
+              <p className="text-white/70 text-sm">
+                Réponse garantie sous 24h
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 items-center justify-center">
+              <a 
+                href="tel:+33609831606"
+                className="flex items-center gap-2 px-5 py-3 bg-white text-charcoal rounded-full font-semibold text-sm hover:scale-105 transition-all hover:shadow-lg"
+              >
+                <Phone className="w-4 h-4" />
+                06 09 83 16 06
+              </a>
+              <Link 
+                to="/contact"
+                className="flex items-center gap-2 px-5 py-3 bg-sage hover:bg-sage-dark text-white rounded-full font-semibold text-sm hover:scale-105 transition-all"
+              >
+                Demander un devis
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Popup promo pour nouveaux visiteurs */}
+      <PromoPopup />
       
       {/* Footer */}
       <Footer />
