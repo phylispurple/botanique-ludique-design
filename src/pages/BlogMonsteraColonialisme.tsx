@@ -14,6 +14,7 @@ import imgDecoModerne from "@/assets/blog-monstera-deco-moderne.jpg";
 import imgDecoInterieur from "@/assets/blog-monstera-deco-interieur.jpg";
 import imgTendance from "@/assets/blog-monstera-tendance.jpg";
 import imgExpoColoniale from "@/assets/blog-monstera-expo-coloniale.webp";
+import imgJardinEssai from "@/assets/blog-monstera-jardin-essai.jpg";
 
 const BlogMonsteraColonialisme = () => {
   const articleSchema = {
@@ -214,12 +215,30 @@ const BlogMonsteraColonialisme = () => {
             {/* Section 2 */}
             <section className="mb-12">
               <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                2. Les jardins d'acclimatation : laboratoires du contrôle du vivant
+                2. Les jardins d'essai et d'acclimatation : laboratoires du contrôle du vivant
               </h2>
               <p className="text-charcoal/80 leading-relaxed mb-4">
                 Avant d'entrer dans nos salons, les plantes tropicales passent par des <strong>jardins d'essai</strong> et des <strong>jardins d'acclimatation</strong>. 
                 Ces lieux, véritables laboratoires coloniaux, ont une fonction précise : tester le vivant. On y observe ce qui survit au transport, 
                 ce qui résiste hors de son milieu d'origine, ce qui peut être maintenu et finalement <em>contrôlé</em>.
+              </p>
+              
+              <figure className="my-8">
+                <img 
+                  src={imgJardinEssai}
+                  alt="Jardin botanique colonial, gravure du XIXe siècle montrant des visiteurs européens"
+                  className="w-full rounded-lg shadow-md"
+                  loading="lazy"
+                />
+                <figcaption className="text-sm text-charcoal/60 mt-3 italic text-center">
+                  Un jardin botanique colonial au XIXe siècle : lieu de transition où les plantes « exotiques » étaient acclimatées avant d'intégrer les collections européennes.
+                </figcaption>
+              </figure>
+
+              <p className="text-charcoal/80 leading-relaxed mb-4">
+                Ces <strong>jardins d'essai</strong>, implantés dans les colonies (Alger, Pondichéry, Antilles, Indochine...) comme en métropole, 
+                constituaient de véritables réseaux botaniques impériaux. Ils servaient à collecter, identifier, multiplier et expédier des spécimens 
+                vers les grands jardins botaniques européens comme Kew Gardens à Londres ou le Jardin des Plantes à Paris.
               </p>
               <p className="text-charcoal/80 leading-relaxed mb-4">
                 Le <strong>Jardin d'Acclimatation de Paris</strong>, fondé en 1860, en est un exemple emblématique. Comme le rappelle 
@@ -241,7 +260,7 @@ const BlogMonsteraColonialisme = () => {
 
               <p className="text-charcoal/80 leading-relaxed mb-4">
                 La Monstera, comme d'autres Aracées tropicales, fait partie des espèces qui « résistent » à ce processus d'acclimatation. 
-                Mais attention : elle ne s'adapte pas véritablement, elle <em>supporte</em>. Cette nuance est importante :
+                Mais attention : elle ne s'adapte pas véritablement, elle <em>supporte</em>. Cette nuance est importante : 
                 la plante survit dans des conditions qui ne sont pas les siennes, souvent au prix d'un développement incomplet 
                 (absence de floraison, feuilles plus petites, etc.).
               </p>
@@ -260,18 +279,18 @@ const BlogMonsteraColonialisme = () => {
               <figure className="my-8">
                 <img 
                   src={imgSalonBourgeois}
-                  alt="Salon bourgeois du XIXe siècle avec plantes tropicales, peinture d'époque"
+                  alt="La Fermette Marbeuf 1900, salle de restaurant Art Nouveau avec verrière et plantes tropicales"
                   className="w-full rounded-lg shadow-md"
                   loading="lazy"
                 />
                 <figcaption className="text-sm text-charcoal/60 mt-3 italic text-center">
-                  Un salon bourgeois du XIXe siècle : les plantes tropicales comme signe extérieur de richesse et de cosmopolitisme.
+                  La Fermette Marbeuf (1900), Paris : un exemple emblématique de l'esthétique Art Nouveau où les plantes tropicales ornent les espaces bourgeois.
                 </figcaption>
               </figure>
 
               <p className="text-charcoal/80 leading-relaxed mb-4">
                 Pierre Bourdieu, dans <strong><cite>La Distinction : Critique sociale du jugement</cite></strong> (1979), a montré comment 
-                les pratiques de consommation — y compris les choix décoratifs — fonctionnent comme des marqueurs de position sociale. 
+                les pratiques de consommation, y compris les choix décoratifs, fonctionnent comme des marqueurs de position sociale. 
                 Posséder une plante tropicale dans son salon, au XIXe siècle, c'est afficher un message double :
               </p>
               
