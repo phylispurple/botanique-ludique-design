@@ -25,6 +25,7 @@ import AteliersIDF from "./pages/AteliersIDF";
 import Blog from "./pages/Blog";
 import BlogTeintureChouRouge from "./pages/BlogTeintureChouRouge";
 import BlogMonsteraColonialisme from "./pages/BlogMonsteraColonialisme";
+import BlogPalmiersHaussmann from "./pages/BlogPalmiersHaussmann";
 import LandingSeniorsEHPAD from "./pages/LandingSeniorsEHPAD";
 import LandingCSE from "./pages/LandingCSE";
 import LandingEcoles from "./pages/LandingEcoles";
@@ -67,6 +68,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/teinture-vegetale-chou-rouge-indigo-naturel" element={<BlogTeintureChouRouge />} />
           <Route path="/blog/monstera-plante-coloniale-distinction-sociale" element={<BlogMonsteraColonialisme />} />
+          <Route path="/blog/palmiers-architecture-haussmannienne-colonialisme" element={<BlogPalmiersHaussmann />} />
           <Route path="/actualites" element={<Blog />} />
           <Route path="/animation-seniors-ehpad" element={<LandingSeniorsEHPAD />} />
           <Route path="/animation-cse-entreprise" element={<LandingCSE />} />
