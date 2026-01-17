@@ -569,19 +569,19 @@ const BlogMonsteraColonialisme = () => {
           </div>
 
           {/* Navigation articles */}
-          <nav className="flex justify-between items-center pt-8 border-t border-charcoal/10 mt-12">
+          <nav className="flex justify-between items-center pt-8 border-t border-charcoal/10 mt-12 max-w-4xl mx-auto">
             <Link 
               to="/blog" 
               className="inline-flex items-center gap-2 text-sage-dark hover:text-sage transition-colors group"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-              Tous les articles
+              <span className="hidden sm:inline">Tous les articles</span>
             </Link>
             <Link 
-              to="/blog/teinture-vegetale-chou-rouge-indigo-naturel" 
+              to="/blog/palmiers-architecture-haussmannienne-colonialisme" 
               className="inline-flex items-center gap-2 text-sage-dark hover:text-sage transition-colors group"
             >
-              Article suivant
+              <span className="hidden sm:inline">Article suivant</span>
               <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
             </Link>
           </nav>

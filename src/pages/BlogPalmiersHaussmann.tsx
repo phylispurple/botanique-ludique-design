@@ -446,12 +446,12 @@ const BlogPalmiersHaussmann = () => {
             </div>
 
             {/* Navigation articles */}
-            <nav className="flex justify-between items-center mt-16 pt-8 border-t border-charcoal/10">
+            <nav className="flex justify-between items-center pt-8 border-t border-charcoal/10 mt-12">
               <Link 
                 to="/blog/monstera-plante-coloniale-distinction-sociale"
-                className="flex items-center gap-2 text-sage-dark hover:text-sage transition-colors"
+                className="inline-flex items-center gap-2 text-sage-dark hover:text-sage transition-colors group"
               >
-                <ArrowLeft className="w-4 h-4" />
+                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                 <span className="hidden sm:inline">Article précédent</span>
               </Link>
               <Link 
@@ -459,6 +459,13 @@ const BlogPalmiersHaussmann = () => {
                 className="text-charcoal/60 hover:text-charcoal transition-colors"
               >
                 Tous les articles
+              </Link>
+              <Link 
+                to="/blog/teinture-vegetale-chou-rouge-indigo-naturel"
+                className="inline-flex items-center gap-2 text-sage-dark hover:text-sage transition-colors group"
+              >
+                <span className="hidden sm:inline">Article suivant</span>
+                <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
               </Link>
             </nav>
 
