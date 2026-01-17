@@ -4,6 +4,14 @@ import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { ArrowLeft, Calendar, User, BookOpen, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import BlogTableOfContents from "@/components/BlogTableOfContents";
+import BlogFAQ from "@/components/BlogFAQ";
+import BlogCTA from "@/components/BlogCTA";
+import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+
+// Images pour articles liés
+import blogPalmiersAvenue from "@/assets/blog-palmiers-avenue-coloniale.jpg";
+import blogCarouselBocal from "@/assets/blog-carousel-bocal-indigo.jpg";
 
 // Images
 import imgColonialisme from "@/assets/blog-monstera-colonialisme.jpg";
@@ -127,6 +135,19 @@ const BlogMonsteraColonialisme = () => {
           {/* Contenu de l'article */}
           <div className="prose prose-lg max-w-none">
             
+            {/* Table des matières */}
+            <BlogTableOfContents 
+              items={[
+                { id: "introduction", title: "Introduction : « Est-ce que tu savais ? »" },
+                { id: "extraction-coloniale", title: "L'extraction coloniale : nommer, classer, posséder" },
+                { id: "jardins-essai", title: "Les jardins d'essai et d'acclimatation" },
+                { id: "salon-bourgeois", title: "Du jardin d'essai au salon bourgeois" },
+                { id: "zoos-humains", title: "Zoos humains et expositions coloniales" },
+                { id: "monstera-aujourdhui", title: "La Monstera aujourd'hui : une jungle sans danger" },
+                { id: "conclusion", title: "Conclusion : vers une ethnobotanique décoloniale" },
+              ]}
+            />
+            
             {/* Résumé / Abstract */}
             <div className="bg-sand rounded-lg p-6 mb-10 border-l-4 border-sage">
               <h2 className="text-lg font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif' }}>
@@ -142,7 +163,7 @@ const BlogMonsteraColonialisme = () => {
             </div>
 
             {/* Introduction */}
-            <section className="mb-12">
+            <section id="introduction" className="mb-12 scroll-mt-28">
               <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                 Introduction : « Est-ce que tu savais ? »
               </h2>
@@ -172,7 +193,7 @@ const BlogMonsteraColonialisme = () => {
             </section>
 
             {/* Section 1 */}
-            <section className="mb-12">
+            <section id="extraction-coloniale" className="mb-12 scroll-mt-28">
               <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                 1. L'extraction coloniale : nommer, classer, posséder
               </h2>
@@ -213,7 +234,7 @@ const BlogMonsteraColonialisme = () => {
             </section>
 
             {/* Section 2 */}
-            <section className="mb-12">
+            <section id="jardins-essai" className="mb-12 scroll-mt-28">
               <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                 2. Les jardins d'essai et d'acclimatation : laboratoires du contrôle du vivant
               </h2>
@@ -267,7 +288,7 @@ const BlogMonsteraColonialisme = () => {
             </section>
 
             {/* Section 3 */}
-            <section className="mb-12">
+            <section id="salon-bourgeois" className="mb-12 scroll-mt-28">
               <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                 3. Du jardin d'essai au salon bourgeois : la distinction sociale par le végétal
               </h2>
@@ -314,7 +335,7 @@ const BlogMonsteraColonialisme = () => {
             </section>
 
             {/* Section 4 */}
-            <section className="mb-12">
+            <section id="zoos-humains" className="mb-12 scroll-mt-28">
               <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                 4. Zoos humains et expositions coloniales : la mise en scène de l'altérité
               </h2>
@@ -368,7 +389,7 @@ const BlogMonsteraColonialisme = () => {
             </section>
 
             {/* Section 5 */}
-            <section className="mb-12">
+            <section id="monstera-aujourdhui" className="mb-12 scroll-mt-28">
               <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                 5. La Monstera aujourd'hui : une jungle sans danger
               </h2>
@@ -411,7 +432,7 @@ const BlogMonsteraColonialisme = () => {
             </section>
 
             {/* Conclusion */}
-            <section className="mb-12">
+            <section id="conclusion" className="mb-12 scroll-mt-28">
               <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                 Conclusion : vers une ethnobotanique décoloniale
               </h2>
@@ -522,10 +543,61 @@ const BlogMonsteraColonialisme = () => {
               </div>
             </section>
 
+            {/* FAQ Section */}
+            <BlogFAQ 
+              schemaId="monstera-faq"
+              items={[
+                {
+                  question: "D'où vient vraiment la Monstera deliciosa ?",
+                  answer: "La Monstera deliciosa est originaire des forêts tropicales humides du Mexique et d'Amérique centrale (Guatemala, Panama). Elle pousse naturellement comme liane épiphyte, grimpant sur les arbres pour atteindre la lumière."
+                },
+                {
+                  question: "Pourquoi la Monstera s'appelle-t-elle 'Monstera' ?",
+                  answer: "Le nom 'Monstera' vient du latin 'monstrum' (monstre). Le botaniste danois Frederik Michael Liebmann l'a nommée ainsi en 1849, reflétant le regard européen de l'époque qui qualifiait de 'monstrueux' ce qui était imposant ou différent des standards occidentaux."
+                },
+                {
+                  question: "Qu'est-ce qu'un jardin d'essai colonial ?",
+                  answer: "Les jardins d'essai étaient des laboratoires botaniques implantés dans les colonies françaises (Alger, Pondichéry, Antilles...). Ils servaient à tester, acclimater et multiplier des espèces végétales avant leur exploitation économique ou leur exportation vers l'Europe."
+                },
+                {
+                  question: "Pourquoi parle-t-on de 'colonialisme vert' ?",
+                  answer: "Le 'colonialisme vert', concept développé par l'historien Guillaume Blanc, désigne la façon dont l'appropriation et le contrôle de la nature (plantes, territoires, ressources) ont servi de justification et d'outil à l'entreprise coloniale européenne."
+                },
+                {
+                  question: "La Monstera peut-elle fleurir et produire des fruits en intérieur ?",
+                  answer: "Très rarement. En intérieur, la Monstera survit mais ne dispose pas des conditions optimales (lumière, humidité, espace) pour fleurir. Dans son habitat naturel, elle produit un fruit comestible appelé 'cérimane' ou 'fruit délicieux'."
+                }
+              ]}
+            />
+
+            {/* CTA Ateliers */}
+            <BlogCTA variant="ethnobotanique" />
+
+            {/* Articles liés */}
+            <BlogRelatedArticles 
+              currentSlug="monstera-plante-coloniale-distinction-sociale"
+              articles={[
+                {
+                  slug: "palmiers-architecture-haussmannienne-colonialisme",
+                  title: "Palmiers et Architecture Haussmannienne : Quand les Boulevards Racontent l'Empire Colonial",
+                  excerpt: "Comment les grands boulevards haussmanniens ont été exportés dans les colonies avec les palmiers comme logo de l'empire.",
+                  image: blogPalmiersAvenue,
+                  category: "Ethnobotanique"
+                },
+                {
+                  slug: "teinture-vegetale-chou-rouge-indigo-naturel",
+                  title: "Teinture Végétale au Chou Rouge : Guide Complet pour Obtenir un Indigo Naturel",
+                  excerpt: "Découvrez comment créer une teinture indigo naturelle à partir de chou rouge fermenté.",
+                  image: blogCarouselBocal,
+                  category: "Tutoriel"
+                }
+              ]}
+            />
+
           </div>
 
           {/* Navigation articles */}
-          <nav className="flex justify-between items-center pt-8 border-t border-charcoal/10">
+          <nav className="flex justify-between items-center pt-8 border-t border-charcoal/10 mt-12">
             <Link 
               to="/blog" 
               className="inline-flex items-center gap-2 text-sage-dark hover:text-sage transition-colors group"
