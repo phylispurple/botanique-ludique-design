@@ -14,7 +14,7 @@ import blogCarouselBocal from "@/assets/blog-carousel-bocal-indigo.jpg";
 import blogCarouselFil from "@/assets/blog-carousel-fil-indigo.jpg";
 import blogMonsteraTendance from "@/assets/blog-monstera-tendance.jpg";
 import blogMonsteraDeco from "@/assets/blog-monstera-deco-interieur.jpg";
-import blogPalmiersParis from "@/assets/blog-palmiers-haussmann-paris.jpg";
+import blogPalmiersAvenue from "@/assets/blog-palmiers-avenue-coloniale.jpg";
 import blogPalmiersAlger from "@/assets/blog-palmiers-jardin-hamma-alger.jpg";
 
 const blogPosts = [
@@ -22,7 +22,7 @@ const blogPosts = [
     slug: "palmiers-architecture-haussmannienne-colonialisme",
     title: "Palmiers et Architecture Haussmannienne : Quand les Boulevards Racontent l'Empire Colonial",
     excerpt: "Comment les grands boulevards haussmanniens ont été exportés dans les colonies avec un twist botanique : les palmiers comme logo de l'empire. Références : Hélène Blais, Edward Said.",
-    images: [blogPalmiersParis, blogPalmiersAlger],
+    images: [blogPalmiersAvenue, blogPalmiersAlger],
     date: "2026-01-17",
     category: "Ethnobotanique"
   },
