@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
-import { Calendar, Clock, User, ArrowLeft, Leaf, Droplets, Palette } from "lucide-react";
+import { Calendar, User, ArrowLeft, Leaf, Droplets, Palette, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import BlogTableOfContents from "@/components/BlogTableOfContents";
 import BlogCTA from "@/components/BlogCTA";
@@ -61,14 +61,16 @@ const BlogTeintureChouRouge = () => {
               </Link>
             </nav>
 
-            {/* Article Header */}
             <header className="mb-12 animate-fade-in">
-              <div className="flex items-center gap-4 mb-6">
-                <span className="bg-violet-100 text-violet-700 px-4 py-1 rounded-full text-sm font-semibold">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-violet-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
                   Tutoriel
                 </span>
-                <span className="bg-sage/20 text-sage-dark px-4 py-1 rounded-full text-sm font-semibold">
+                <span className="bg-sage text-white px-3 py-1 rounded-full text-xs font-semibold">
                   Teinture Végétale
+                </span>
+                <span className="bg-terracotta/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  DIY
                 </span>
               </div>
               
@@ -81,18 +83,18 @@ const BlogTeintureChouRouge = () => {
                 Découvrez les secrets des <strong>anthocyanes</strong>, ces pigments magiques qui changent de couleur selon le pH.
               </p>
 
-              <div className="flex flex-wrap items-center gap-6 text-sm text-charcoal/60 border-t border-b border-charcoal/10 py-4">
+              <div className="flex flex-wrap items-center gap-4 text-sm text-charcoal/60 border-b border-charcoal/10 pb-6">
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
-                  <span>Par <strong>Vanessa Charlery</strong></span>
+                  <span>Vanessa Charlery, Botaniste</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
                   <time dateTime="2025-12-12">12 décembre 2025</time>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span>12 min de lecture</span>
+                  <BookOpen className="w-4 h-4" />
+                  <span>Temps de lecture : 12 min</span>
                 </div>
               </div>
             </header>
