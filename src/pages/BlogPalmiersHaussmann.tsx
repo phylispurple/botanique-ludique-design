@@ -5,6 +5,10 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Calendar, ArrowLeft, User, Instagram, BookOpen, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import BlogTableOfContents from "@/components/BlogTableOfContents";
+import BlogFAQ from "@/components/BlogFAQ";
+import BlogCTA from "@/components/BlogCTA";
+import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 // Images
 import blogPalmiersParis from "@/assets/blog-palmiers-haussmann-paris.jpg";
@@ -12,6 +16,10 @@ import blogPalmiersAlger from "@/assets/blog-palmiers-jardin-hamma-alger.jpg";
 import blogPalmiersAvenue from "@/assets/blog-palmiers-avenue-coloniale.jpg";
 import blogParisPreHaussmann from "@/assets/blog-paris-pre-haussmann.jpg";
 import blogImmeubleAlger from "@/assets/blog-immeuble-colonial-alger.jpg";
+
+// Images pour articles liés
+import blogMonsteraTendance from "@/assets/blog-monstera-tendance.jpg";
+import blogCarouselBocal from "@/assets/blog-carousel-bocal-indigo.jpg";
 
 const BlogPalmiersHaussmann = () => {
   const articleData = {
@@ -108,6 +116,18 @@ const BlogPalmiersHaussmann = () => {
             {/* Contenu de l'article */}
             <div className="prose prose-lg max-w-none space-y-8">
               
+              {/* Table des matières */}
+              <BlogTableOfContents 
+                items={[
+                  { id: "haussmann", title: "Le Baron Haussmann et la transformation de Paris" },
+                  { id: "jardin-essai", title: "Le Jardin d'Essai du Hamma : laboratoire botanique" },
+                  { id: "cosplay-botanique", title: "Du cosplay botanique impérial" },
+                  { id: "platanes-palmiers", title: "Les platanes disent République, les palmiers disent Colonies" },
+                  { id: "orientalisme", title: "L'orientalisme végétal : une projection fantasmée" },
+                  { id: "aujourdhui", title: "Du symbole impérial à l'icône tropicale" },
+                ]}
+              />
+
               {/* Introduction */}
               <section className="animate-fade-in">
                 <p className="text-lg leading-relaxed text-charcoal/90">
@@ -119,7 +139,7 @@ const BlogPalmiersHaussmann = () => {
               </section>
 
               {/* Section 1 : Haussmann */}
-              <section className="animate-fade-in">
+              <section id="haussmann" className="animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   Le Baron Haussmann et la transformation de Paris
                 </h2>
@@ -151,7 +171,7 @@ const BlogPalmiersHaussmann = () => {
               </section>
 
               {/* Section 2 : Le Jardin d'Essai */}
-              <section className="animate-fade-in">
+              <section id="jardin-essai" className="animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   Le Jardin d'Essai du Hamma : laboratoire botanique de l'empire
                 </h2>
@@ -185,7 +205,7 @@ const BlogPalmiersHaussmann = () => {
               </section>
 
               {/* Section 3 : L'exportation du modèle */}
-              <section className="animate-fade-in">
+              <section id="cosplay-botanique" className="animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   Du cosplay botanique impérial
                 </h2>
@@ -218,7 +238,7 @@ const BlogPalmiersHaussmann = () => {
               </section>
 
               {/* Section 4 : Platanes vs Palmiers */}
-              <section className="animate-fade-in">
+              <section id="platanes-palmiers" className="animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   "Les platanes disent République, les palmiers disent Colonies"
                 </h2>
@@ -250,7 +270,7 @@ const BlogPalmiersHaussmann = () => {
               </section>
 
               {/* Section 5 : Orientalisme */}
-              <section className="animate-fade-in">
+              <section id="orientalisme" className="animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   L'orientalisme végétal : une projection fantasmée
                 </h2>
@@ -288,7 +308,7 @@ const BlogPalmiersHaussmann = () => {
               </section>
 
               {/* Section 6 : Aujourd'hui */}
-              <section className="animate-fade-in">
+              <section id="aujourdhui" className="animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   Du symbole impérial à l'icône tropicale
                 </h2>
@@ -399,6 +419,57 @@ const BlogPalmiersHaussmann = () => {
                   </a>
                 </div>
               </div>
+
+              {/* FAQ Section */}
+              <BlogFAQ 
+                schemaId="palmiers-faq"
+                items={[
+                  {
+                    question: "Quels palmiers ont été utilisés dans l'urbanisme colonial ?",
+                    answer: "Principalement le Phoenix canariensis (palmier des Canaries) et le Washingtonia (originaire de Californie). Ironie : ces 'palmiers orientaux' ne venaient pas du Maghreb mais ont été testés au Jardin d'Essai du Hamma à Alger avant d'être plantés dans les villes coloniales."
+                  },
+                  {
+                    question: "Pourquoi les colons ont-ils choisi les palmiers plutôt que les platanes ?",
+                    answer: "Le palmier partage les qualités du platane (droit, résistant, alignement parfait) mais ajoute une dimension 'exotique' qui correspond au fantasme orientaliste. Il devient le logo visuel de l'empire colonial : platanes = République, palmiers = Colonies."
+                  },
+                  {
+                    question: "Qu'est-ce que le Jardin d'Essai du Hamma ?",
+                    answer: "Créé en 1832 à Alger, c'était le plus grand laboratoire botanique colonial français. Il testait les espèces végétales pour leur exploitation économique et ornementale dans les colonies. C'est là que les palmiers ont été acclimatés avant d'orner les boulevards coloniaux."
+                  },
+                  {
+                    question: "Pourquoi n'y avait-il pas de palmiers dans les médinas ?",
+                    answer: "Les palmiers alignés marquaient les quartiers européens 'modernes'. Les médinas étaient volontairement exclues de ce paysage végétal. C'était un code spatial : palmiers = ordre colonial, absence de palmiers = 'espaces à civiliser'."
+                  },
+                  {
+                    question: "Peut-on encore visiter des jardins d'essai coloniaux ?",
+                    answer: "Oui ! Le Jardin d'Essai du Hamma à Alger est toujours ouvert. D'autres jardins botaniques coloniaux existent : Jardin des Pamplemousses (Maurice), Jardins de Peradeniya (Sri Lanka), Jardin botanique de Saint-Denis (La Réunion)."
+                  }
+                ]}
+              />
+
+              {/* CTA Ateliers */}
+              <BlogCTA variant="ethnobotanique" />
+
+              {/* Articles liés */}
+              <BlogRelatedArticles 
+                currentSlug="palmiers-architecture-haussmannienne-colonialisme"
+                articles={[
+                  {
+                    slug: "monstera-plante-coloniale-distinction-sociale",
+                    title: "La Monstera : Une Plante Déplacée. Histoire Coloniale et Distinction Sociale",
+                    excerpt: "Comment la Monstera est passée des forêts mexicaines aux salons bourgeois via l'histoire coloniale.",
+                    image: blogMonsteraTendance,
+                    category: "Ethnobotanique"
+                  },
+                  {
+                    slug: "teinture-vegetale-chou-rouge-indigo-naturel",
+                    title: "Teinture Végétale au Chou Rouge : Guide Complet pour Obtenir un Indigo Naturel",
+                    excerpt: "Découvrez comment créer une teinture indigo naturelle à partir de chou rouge fermenté.",
+                    image: blogCarouselBocal,
+                    category: "Tutoriel"
+                  }
+                ]}
+              />
 
             </div>
 

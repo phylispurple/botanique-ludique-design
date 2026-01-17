@@ -5,6 +5,9 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Calendar, Clock, User, ArrowLeft, Leaf, Droplets, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
+import BlogTableOfContents from "@/components/BlogTableOfContents";
+import BlogFAQ from "@/components/BlogFAQ";
+import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 // Images de processus
 import chouRougeImage from "@/assets/blog-teinture-chou-rouge-1.jpg";
@@ -15,6 +18,10 @@ import materielImage from "@/assets/blog-teinture-chou-rouge-3.jpg";
 import resultat1 from "@/assets/gallery-teinture-1.jpg";
 import resultat2 from "@/assets/gallery-teinture-2.jpg";
 import resultat3 from "@/assets/gallery-teinture-3.jpg";
+
+// Images pour articles liés
+import blogMonsteraTendance from "@/assets/blog-monstera-tendance.jpg";
+import blogPalmiersAvenue from "@/assets/blog-palmiers-avenue-coloniale.jpg";
 
 const BlogTeintureChouRouge = () => {
   return (
@@ -106,8 +113,22 @@ const BlogTeintureChouRouge = () => {
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               
+              {/* Table des matières */}
+              <BlogTableOfContents 
+                items={[
+                  { id: "pourquoi-magique", title: "Pourquoi le Chou Rouge est-il Magique ?" },
+                  { id: "materiel", title: "Matériel Nécessaire" },
+                  { id: "fermentation", title: "Étape 1 : La Fermentation (3 mois)" },
+                  { id: "modifier-ph", title: "Étape 2 : Modifier le pH pour Obtenir l'Indigo" },
+                  { id: "mordancage", title: "Étape 3 : Le Mordançage à l'Alun" },
+                  { id: "teinture", title: "Étape 4 : La Teinture" },
+                  { id: "variations", title: "Astuces et Variations de Couleurs" },
+                  { id: "conclusion", title: "Une Teinture Accessible et Éco-Responsable" },
+                ]}
+              />
+
               {/* Introduction */}
-              <section className="mb-12 animate-fade-in">
+              <section id="pourquoi-magique" className="mb-12 animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   Pourquoi le Chou Rouge est-il Magique ?
                 </h2>
@@ -144,7 +165,7 @@ const BlogTeintureChouRouge = () => {
               </section>
 
               {/* Materials */}
-              <section className="mb-12 animate-fade-in bg-sand/50 rounded-2xl p-8">
+              <section id="materiel" className="mb-12 animate-fade-in bg-sand/50 rounded-2xl p-8 scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   <Leaf className="inline-block w-8 h-8 mr-3 text-sage" />
                   Matériel Nécessaire
@@ -185,7 +206,7 @@ const BlogTeintureChouRouge = () => {
               </section>
 
               {/* Step 1 */}
-              <section className="mb-12 animate-fade-in">
+              <section id="fermentation" className="mb-12 animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   Étape 1 : La Fermentation (3 mois)
                 </h2>
@@ -238,7 +259,7 @@ const BlogTeintureChouRouge = () => {
               </section>
 
               {/* Step 2 */}
-              <section className="mb-12 animate-fade-in">
+              <section id="modifier-ph" className="mb-12 animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   <Droplets className="inline-block w-8 h-8 mr-3 text-blue-500" />
                   Étape 2 : Modifier le pH pour Obtenir l'Indigo
@@ -269,7 +290,7 @@ const BlogTeintureChouRouge = () => {
               </section>
 
               {/* Step 3 */}
-              <section className="mb-12 animate-fade-in">
+              <section id="mordancage" className="mb-12 animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   <Palette className="inline-block w-8 h-8 mr-3 text-violet-500" />
                   Étape 3 : Le Mordançage à l'Alun
@@ -303,7 +324,7 @@ const BlogTeintureChouRouge = () => {
               </section>
 
               {/* Step 4 */}
-              <section className="mb-12 animate-fade-in">
+              <section id="teinture" className="mb-12 animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   Étape 4 : La Teinture
                 </h2>
@@ -397,7 +418,8 @@ const BlogTeintureChouRouge = () => {
               </section>
 
               {/* Tips & Variations */}
-              <section className="mb-12 animate-fade-in">
+              {/* Tips */}
+              <section id="variations" className="mb-12 animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   Astuces et Variations de Couleurs
                 </h2>
@@ -431,7 +453,7 @@ const BlogTeintureChouRouge = () => {
               </section>
 
               {/* Conclusion */}
-              <section className="mb-12 animate-fade-in">
+              <section id="conclusion" className="mb-12 animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
                   Une Teinture Accessible et Éco-Responsable
                 </h2>
@@ -477,6 +499,50 @@ const BlogTeintureChouRouge = () => {
                   </Link>
                 </div>
               </section>
+
+              {/* FAQ Section */}
+              <BlogFAQ 
+                schemaId="teinture-faq"
+                items={[
+                  {
+                    question: "Combien de temps faut-il pour faire une teinture au chou rouge ?",
+                    answer: "La fermentation prend 3 mois minimum pour obtenir des pigments concentrés. Le mordançage et la teinture elle-même prennent environ 24-48h. Patience est le maître mot !"
+                  },
+                  {
+                    question: "La couleur tient-elle au lavage ?",
+                    answer: "Avec un bon mordançage à l'alun, la couleur tient plusieurs lavages. Cependant, les anthocyanes s'atténuent progressivement. Lavez à froid et évitez la lumière directe du soleil pour prolonger la durée."
+                  },
+                  {
+                    question: "Quels tissus fonctionnent le mieux ?",
+                    answer: "Les fibres naturelles : lin (idéal), coton, soie, laine. Évitez les fibres synthétiques (polyester, nylon) qui ne retiennent pas les pigments naturels."
+                  },
+                  {
+                    question: "Peut-on obtenir d'autres couleurs que le bleu ?",
+                    answer: "Oui ! En modifiant le pH : acide = rose/rouge, neutre = violet, basique = bleu. En combinant avec d'autres teintures (curcuma), on obtient du vert."
+                  }
+                ]}
+              />
+
+              {/* Articles liés */}
+              <BlogRelatedArticles 
+                currentSlug="teinture-vegetale-chou-rouge-indigo-naturel"
+                articles={[
+                  {
+                    slug: "monstera-plante-coloniale-distinction-sociale",
+                    title: "La Monstera : Une Plante Déplacée. Histoire Coloniale et Distinction Sociale",
+                    excerpt: "Comment la Monstera est passée des forêts mexicaines aux salons bourgeois via l'histoire coloniale.",
+                    image: blogMonsteraTendance,
+                    category: "Ethnobotanique"
+                  },
+                  {
+                    slug: "palmiers-architecture-haussmannienne-colonialisme",
+                    title: "Palmiers et Architecture Haussmannienne : Quand les Boulevards Racontent l'Empire Colonial",
+                    excerpt: "Comment les grands boulevards haussmanniens ont été exportés dans les colonies.",
+                    image: blogPalmiersAvenue,
+                    category: "Ethnobotanique"
+                  }
+                ]}
+              />
 
             </div>
           </div>
