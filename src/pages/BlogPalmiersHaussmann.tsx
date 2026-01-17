@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import BlogTableOfContents from "@/components/BlogTableOfContents";
 import BlogCTA from "@/components/BlogCTA";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogShareButtons from "@/components/BlogShareButtons";
 
 // Images
 import blogPalmiersParis from "@/assets/blog-palmiers-haussmann-paris.jpg";
@@ -92,19 +93,25 @@ const BlogPalmiersHaussmann = () => {
                 à la place des platanes, des palmiers importés pour créer un décor orientaliste fantasmé.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 text-sm text-charcoal/60 border-b border-charcoal/10 pb-6">
-                <div className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  <span>Vanessa Charlery, Botaniste</span>
+              <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-charcoal/60 border-b border-charcoal/10 pb-6">
+                <div className="flex flex-wrap items-center gap-4">
+                  <div className="flex items-center gap-2">
+                    <User className="w-4 h-4" />
+                    <span>Vanessa Charlery, Botaniste</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <time dateTime="2026-01-17">17 janvier 2026</time>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <BookOpen className="w-4 h-4" />
+                    <span>Temps de lecture : 6 min</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <time dateTime="2026-01-17">17 janvier 2026</time>
-                </div>
-                <div className="flex items-center gap-2">
-                  <BookOpen className="w-4 h-4" />
-                  <span>Temps de lecture : 6 min</span>
-                </div>
+                <BlogShareButtons 
+                  title="Palmiers et Architecture Haussmannienne : Quand les Boulevards Racontent l'Empire Colonial"
+                  url="/blog/palmiers-architecture-haussmannienne-colonialisme"
+                />
               </div>
             </header>
 

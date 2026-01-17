@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import BlogTableOfContents from "@/components/BlogTableOfContents";
 import BlogCTA from "@/components/BlogCTA";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogShareButtons from "@/components/BlogShareButtons";
 
 // Images de processus
 import chouRougeImage from "@/assets/blog-teinture-chou-rouge-1.jpg";
@@ -83,19 +84,25 @@ const BlogTeintureChouRouge = () => {
                 Découvrez les secrets des <strong>anthocyanes</strong>, ces pigments magiques qui changent de couleur selon le pH.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 text-sm text-charcoal/60 border-b border-charcoal/10 pb-6">
-                <div className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  <span>Vanessa Charlery, Botaniste</span>
+              <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-charcoal/60 border-b border-charcoal/10 pb-6">
+                <div className="flex flex-wrap items-center gap-4">
+                  <div className="flex items-center gap-2">
+                    <User className="w-4 h-4" />
+                    <span>Vanessa Charlery, Botaniste</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <time dateTime="2025-12-12">12 décembre 2025</time>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <BookOpen className="w-4 h-4" />
+                    <span>Temps de lecture : 12 min</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <time dateTime="2025-12-12">12 décembre 2025</time>
-                </div>
-                <div className="flex items-center gap-2">
-                  <BookOpen className="w-4 h-4" />
-                  <span>Temps de lecture : 12 min</span>
-                </div>
+                <BlogShareButtons 
+                  title="Teinture Végétale au Chou Rouge : Guide Complet pour Obtenir un Indigo Naturel"
+                  url="/blog/teinture-vegetale-chou-rouge-indigo-naturel"
+                />
               </div>
             </header>
 

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import BlogTableOfContents from "@/components/BlogTableOfContents";
 import BlogCTA from "@/components/BlogCTA";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogShareButtons from "@/components/BlogShareButtons";
 
 // Images pour articles liés
 import blogPalmiersAvenue from "@/assets/blog-palmiers-avenue-coloniale.jpg";
@@ -102,19 +103,25 @@ const BlogMonsteraColonialisme = () => {
               Histoire coloniale, jardins d'acclimatation et distinction sociale. Une analyse ethnobotanique.
             </p>
             
-            <div className="flex flex-wrap items-center gap-4 text-sm text-charcoal/60 border-b border-charcoal/10 pb-6">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                <span>Vanessa Charlery, Botaniste</span>
+            <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-charcoal/60 border-b border-charcoal/10 pb-6">
+              <div className="flex flex-wrap items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <User className="w-4 h-4" />
+                  <span>Vanessa Charlery, Botaniste</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  <time dateTime="2026-01-09">9 janvier 2026</time>
+                </div>
+                <div className="flex items-center gap-2">
+                  <BookOpen className="w-4 h-4" />
+                  <span>Temps de lecture : 12 min</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <time dateTime="2026-01-09">9 janvier 2026</time>
-              </div>
-              <div className="flex items-center gap-2">
-                <BookOpen className="w-4 h-4" />
-                <span>Temps de lecture : 12 min</span>
-              </div>
+              <BlogShareButtons 
+                title="La Monstera : Une Plante Déplacée. Histoire Coloniale et Distinction Sociale"
+                url="/blog/monstera-plante-coloniale-distinction-sociale"
+              />
             </div>
           </header>
 
