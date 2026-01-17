@@ -475,31 +475,6 @@ const BlogTeintureChouRouge = () => {
                 </p>
               </section>
 
-              {/* CTA */}
-              <section className="bg-gradient-to-br from-sage/20 to-sage/10 rounded-2xl p-8 md:p-12 text-center animate-fade-in">
-                <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Envie de Pratiquer avec Moi ?
-                </h2>
-                <p className="text-lg text-charcoal/80 leading-relaxed mb-8 max-w-2xl mx-auto">
-                  Participez à un atelier de teinture végétale pour découvrir ces techniques en direct, 
-                  poser vos questions et repartir avec vos propres créations.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    to="/workshops#teinture-vegetale"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-sage hover:bg-sage-dark text-off-white font-semibold uppercase tracking-wider transition-all rounded-full"
-                  >
-                    Découvrir l'Atelier Teinture Végétale
-                  </Link>
-                  <Link 
-                    to="/agenda"
-                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-sage text-sage hover:bg-sage hover:text-off-white font-semibold uppercase tracking-wider transition-all rounded-full"
-                  >
-                    Voir les Prochaines Dates
-                  </Link>
-                </div>
-              </section>
-
               {/* CTA Ateliers */}
               <BlogCTA variant="teinture" />
 
