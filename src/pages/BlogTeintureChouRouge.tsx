@@ -501,7 +501,7 @@ const BlogTeintureChouRouge = () => {
               </section>
 
               {/* CTA Ateliers */}
-              <BlogCTA />
+              <BlogCTA variant="teinture" />
 
               {/* Articles liés */}
               <BlogRelatedArticles 
@@ -523,6 +523,23 @@ const BlogTeintureChouRouge = () => {
                   }
                 ]}
               />
+
+              {/* Navigation articles */}
+              <nav className="flex justify-between items-center pt-8 border-t border-charcoal/10 mt-12">
+                <Link 
+                  to="/blog/palmiers-architecture-haussmannienne-colonialisme"
+                  className="inline-flex items-center gap-2 text-sage-dark hover:text-sage transition-colors group"
+                >
+                  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                  <span className="hidden sm:inline">Article précédent</span>
+                </Link>
+                <Link 
+                  to="/blog"
+                  className="text-charcoal/60 hover:text-charcoal transition-colors"
+                >
+                  Tous les articles
+                </Link>
+              </nav>
 
             </div>
           </div>
