@@ -71,14 +71,16 @@ const BlogPalmiersHaussmann = () => {
 
             {/* En-tête de l'article */}
             <header className="mb-12 animate-fade-in">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="bg-sage text-white px-4 py-1.5 rounded-full text-sm font-semibold">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-sage text-white px-3 py-1 rounded-full text-xs font-semibold">
                   Ethnobotanique
                 </span>
-                <div className="flex items-center gap-2 text-charcoal/60 text-sm">
-                  <Calendar className="w-4 h-4" />
-                  17 janvier 2026
-                </div>
+                <span className="bg-terracotta/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  Histoire Coloniale
+                </span>
+                <span className="bg-charcoal/70 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  Urbanisme
+                </span>
               </div>
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
@@ -90,13 +92,19 @@ const BlogPalmiersHaussmann = () => {
                 à la place des platanes, des palmiers importés pour créer un décor orientaliste fantasmé.
               </p>
 
-              <div className="flex items-center gap-4 text-sm text-charcoal/70">
+              <div className="flex flex-wrap items-center gap-4 text-sm text-charcoal/60 border-b border-charcoal/10 pb-6">
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
-                  <span>Vanessa Charlery</span>
+                  <span>Vanessa Charlery, Botaniste</span>
                 </div>
-                <span>•</span>
-                <span>Lecture : 6 min</span>
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  <time dateTime="2026-01-17">17 janvier 2026</time>
+                </div>
+                <div className="flex items-center gap-2">
+                  <BookOpen className="w-4 h-4" />
+                  <span>Temps de lecture : 6 min</span>
+                </div>
               </div>
             </header>
 

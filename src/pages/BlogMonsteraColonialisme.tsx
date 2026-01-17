@@ -95,11 +95,11 @@ const BlogMonsteraColonialisme = () => {
               </span>
             </div>
             
-            <h1 className="page-title text-[2rem] sm:text-4xl md:text-5xl mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
               La Monstera : Une Plante Déplacée
             </h1>
-            <p className="subtitle-italic text-xl md:text-2xl mb-6 text-charcoal/80">
-              Histoire coloniale, jardins d'acclimatation et distinction sociale. Une analyse ethnobotanique
+            <p className="text-xl text-charcoal/80 leading-relaxed mb-8">
+              Histoire coloniale, jardins d'acclimatation et distinction sociale. Une analyse ethnobotanique.
             </p>
             
             <div className="flex flex-wrap items-center gap-4 text-sm text-charcoal/60 border-b border-charcoal/10 pb-6">
