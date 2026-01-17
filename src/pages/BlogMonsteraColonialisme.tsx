@@ -5,7 +5,6 @@ import { SEO } from "@/components/SEO";
 import { ArrowLeft, Calendar, User, BookOpen, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import BlogTableOfContents from "@/components/BlogTableOfContents";
-import BlogFAQ from "@/components/BlogFAQ";
 import BlogCTA from "@/components/BlogCTA";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
@@ -543,35 +542,8 @@ const BlogMonsteraColonialisme = () => {
               </div>
             </section>
 
-            {/* FAQ Section */}
-            <BlogFAQ 
-              schemaId="monstera-faq"
-              items={[
-                {
-                  question: "D'où vient vraiment la Monstera deliciosa ?",
-                  answer: "La Monstera deliciosa est originaire des forêts tropicales humides du Mexique et d'Amérique centrale (Guatemala, Panama). Elle pousse naturellement comme liane épiphyte, grimpant sur les arbres pour atteindre la lumière."
-                },
-                {
-                  question: "Pourquoi la Monstera s'appelle-t-elle 'Monstera' ?",
-                  answer: "Le nom 'Monstera' vient du latin 'monstrum' (monstre). Le botaniste danois Frederik Michael Liebmann l'a nommée ainsi en 1849, reflétant le regard européen de l'époque qui qualifiait de 'monstrueux' ce qui était imposant ou différent des standards occidentaux."
-                },
-                {
-                  question: "Qu'est-ce qu'un jardin d'essai colonial ?",
-                  answer: "Les jardins d'essai étaient des laboratoires botaniques implantés dans les colonies françaises (Alger, Pondichéry, Antilles...). Ils servaient à tester, acclimater et multiplier des espèces végétales avant leur exploitation économique ou leur exportation vers l'Europe."
-                },
-                {
-                  question: "Pourquoi parle-t-on de 'colonialisme vert' ?",
-                  answer: "Le 'colonialisme vert', concept développé par l'historien Guillaume Blanc, désigne la façon dont l'appropriation et le contrôle de la nature (plantes, territoires, ressources) ont servi de justification et d'outil à l'entreprise coloniale européenne."
-                },
-                {
-                  question: "La Monstera peut-elle fleurir et produire des fruits en intérieur ?",
-                  answer: "Très rarement. En intérieur, la Monstera survit mais ne dispose pas des conditions optimales (lumière, humidité, espace) pour fleurir. Dans son habitat naturel, elle produit un fruit comestible appelé 'cérimane' ou 'fruit délicieux'."
-                }
-              ]}
-            />
-
             {/* CTA Ateliers */}
-            <BlogCTA variant="ethnobotanique" />
+            <BlogCTA />
 
             {/* Articles liés */}
             <BlogRelatedArticles 
