@@ -6,7 +6,7 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import { Calendar, Clock, User, ArrowLeft, Leaf, Droplets, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
 import BlogTableOfContents from "@/components/BlogTableOfContents";
-import BlogFAQ from "@/components/BlogFAQ";
+import BlogCTA from "@/components/BlogCTA";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 // Images de processus
@@ -500,28 +500,8 @@ const BlogTeintureChouRouge = () => {
                 </div>
               </section>
 
-              {/* FAQ Section */}
-              <BlogFAQ 
-                schemaId="teinture-faq"
-                items={[
-                  {
-                    question: "Combien de temps faut-il pour faire une teinture au chou rouge ?",
-                    answer: "La fermentation prend 3 mois minimum pour obtenir des pigments concentrés. Le mordançage et la teinture elle-même prennent environ 24-48h. Patience est le maître mot !"
-                  },
-                  {
-                    question: "La couleur tient-elle au lavage ?",
-                    answer: "Avec un bon mordançage à l'alun, la couleur tient plusieurs lavages. Cependant, les anthocyanes s'atténuent progressivement. Lavez à froid et évitez la lumière directe du soleil pour prolonger la durée."
-                  },
-                  {
-                    question: "Quels tissus fonctionnent le mieux ?",
-                    answer: "Les fibres naturelles : lin (idéal), coton, soie, laine. Évitez les fibres synthétiques (polyester, nylon) qui ne retiennent pas les pigments naturels."
-                  },
-                  {
-                    question: "Peut-on obtenir d'autres couleurs que le bleu ?",
-                    answer: "Oui ! En modifiant le pH : acide = rose/rouge, neutre = violet, basique = bleu. En combinant avec d'autres teintures (curcuma), on obtient du vert."
-                  }
-                ]}
-              />
+              {/* CTA Ateliers */}
+              <BlogCTA />
 
               {/* Articles liés */}
               <BlogRelatedArticles 

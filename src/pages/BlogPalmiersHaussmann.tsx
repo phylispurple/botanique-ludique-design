@@ -6,7 +6,6 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import { Calendar, ArrowLeft, User, Instagram, BookOpen, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import BlogTableOfContents from "@/components/BlogTableOfContents";
-import BlogFAQ from "@/components/BlogFAQ";
 import BlogCTA from "@/components/BlogCTA";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
@@ -420,35 +419,8 @@ const BlogPalmiersHaussmann = () => {
                 </div>
               </div>
 
-              {/* FAQ Section */}
-              <BlogFAQ 
-                schemaId="palmiers-faq"
-                items={[
-                  {
-                    question: "Quels palmiers ont été utilisés dans l'urbanisme colonial ?",
-                    answer: "Principalement le Phoenix canariensis (palmier des Canaries) et le Washingtonia (originaire de Californie). Ironie : ces 'palmiers orientaux' ne venaient pas du Maghreb mais ont été testés au Jardin d'Essai du Hamma à Alger avant d'être plantés dans les villes coloniales."
-                  },
-                  {
-                    question: "Pourquoi les colons ont-ils choisi les palmiers plutôt que les platanes ?",
-                    answer: "Le palmier partage les qualités du platane (droit, résistant, alignement parfait) mais ajoute une dimension 'exotique' qui correspond au fantasme orientaliste. Il devient le logo visuel de l'empire colonial : platanes = République, palmiers = Colonies."
-                  },
-                  {
-                    question: "Qu'est-ce que le Jardin d'Essai du Hamma ?",
-                    answer: "Créé en 1832 à Alger, c'était le plus grand laboratoire botanique colonial français. Il testait les espèces végétales pour leur exploitation économique et ornementale dans les colonies. C'est là que les palmiers ont été acclimatés avant d'orner les boulevards coloniaux."
-                  },
-                  {
-                    question: "Pourquoi n'y avait-il pas de palmiers dans les médinas ?",
-                    answer: "Les palmiers alignés marquaient les quartiers européens 'modernes'. Les médinas étaient volontairement exclues de ce paysage végétal. C'était un code spatial : palmiers = ordre colonial, absence de palmiers = 'espaces à civiliser'."
-                  },
-                  {
-                    question: "Peut-on encore visiter des jardins d'essai coloniaux ?",
-                    answer: "Oui ! Le Jardin d'Essai du Hamma à Alger est toujours ouvert. D'autres jardins botaniques coloniaux existent : Jardin des Pamplemousses (Maurice), Jardins de Peradeniya (Sri Lanka), Jardin botanique de Saint-Denis (La Réunion)."
-                  }
-                ]}
-              />
-
               {/* CTA Ateliers */}
-              <BlogCTA variant="ethnobotanique" />
+              <BlogCTA />
 
               {/* Articles liés */}
               <BlogRelatedArticles 
