@@ -370,23 +370,34 @@ const BlogPalmiersHaussmann = () => {
                 </ul>
               </section>
 
-              {/* CTA Instagram */}
+              {/* CTA Instagram avec vidéo */}
               <div className="bg-gradient-to-r from-sage/20 to-sand p-8 rounded-lg text-center mt-12 animate-fade-in">
                 <h3 className="text-xl md:text-2xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Pour aller plus loin
+                  Voir la vidéo sur ce sujet
                 </h3>
                 <p className="text-charcoal/80 mb-6">
-                  Retrouvez mes vidéos d'ethnobotanique et mes contenus sur l'histoire des plantes sur Instagram !
+                  Retrouvez ma vidéo complète sur les palmiers et l'architecture coloniale sur Instagram !
                 </p>
-                <a 
-                  href="https://www.instagram.com/botanique.ludique/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white px-6 py-3 rounded-full font-semibold transition-colors"
-                >
-                  <Instagram className="w-5 h-5" />
-                  @botanique.ludique
-                </a>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="https://www.instagram.com/p/DTdEVMVDlmo/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white px-6 py-3 rounded-full font-semibold transition-colors"
+                  >
+                    <Instagram className="w-5 h-5" />
+                    Voir la vidéo
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/botanique.ludique/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-white/80 hover:bg-white text-sage-dark px-6 py-3 rounded-full font-semibold transition-colors border border-sage/30"
+                  >
+                    <Instagram className="w-5 h-5" />
+                    @botanique.ludique
+                  </a>
+                </div>
               </div>
 
             </div>
