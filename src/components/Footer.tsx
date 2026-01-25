@@ -98,7 +98,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 text-center" style={{ borderTop: '1px solid #E2E7D1' }}>
           <p className="text-sm" style={{ color: '#5D653A', opacity: 0.6 }}>
-            © Botanique Ludique 2025 | Créé avec amour et nature | <Link to="/mentions-legales" className="hover:underline">Mentions légales</Link> | <Link to="/conditions-de-vente" className="hover:underline">Conditions de vente</Link>
+            © Botanique Ludique 2026 | Créé avec amour et nature | <Link to="/mentions-legales" className="hover:underline">Mentions légales</Link> | <Link to="/conditions-de-vente" className="hover:underline">Conditions de vente</Link>
             {isAdmin && (
               <> | <Link to="/admin/testimonials" className="hover:underline font-medium">Administration</Link></>
             )}
