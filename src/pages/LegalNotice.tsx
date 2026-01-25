@@ -82,7 +82,7 @@ const LegalNotice = () => {
 
           <div className="pt-12 text-center">
             <p className="text-sm italic" style={{ color: '#A7B795' }}>
-              Dernière mise à jour : Janvier 2025
+              Dernière mise à jour : Janvier 2026
             </p>
           </div>
         </div>
