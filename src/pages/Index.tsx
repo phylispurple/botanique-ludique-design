@@ -50,8 +50,8 @@ const Index = () => {
     <div className="min-h-screen">
       <SEO 
         title="Ateliers Botaniques Paris & IDF | Kokedama, Teinture ✦ Réservez"
-        description="🌿 Ateliers créatifs nature à Paris, Yvelines (78) & Hauts-de-Seine (92). Kokedama, teinture végétale, terrarium. +400 participants. Réservez votre atelier !"
-        keywords="ateliers botaniques Paris, ateliers nature Yvelines 78, ateliers Hauts-de-Seine 92, kokedama Paris, teinture végétale Yvelines, vannerie Hauts-de-Seine, team building nature Paris, atelier botanique Chatou, atelier végétal Saint-Germain-en-Laye"
+        description="🌿 Ateliers créatifs nature à Paris, Yvelines (78), Hauts-de-Seine (92) & Val-d'Oise (95). Kokedama, teinture végétale, terrarium. +400 participants. Réservez votre atelier !"
+        keywords="ateliers botaniques Paris, ateliers nature Yvelines 78, ateliers Hauts-de-Seine 92, ateliers Val-d'Oise 95, kokedama Paris, teinture végétale Yvelines, vannerie Hauts-de-Seine, team building nature Paris, atelier botanique Chatou, atelier végétal Saint-Germain-en-Laye"
         canonical="/"
       />
       <SchemaOrg 
@@ -137,7 +137,7 @@ const Index = () => {
               opacity: 0.95,
               lineHeight: '1.6'
             }}>
-              Ateliers à Paris, Yvelines (78) et Hauts-de-Seine (92) pour particuliers et entreprises.
+              Ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95) pour particuliers et entreprises.
             </p>
             
             {/* CTA Buttons */}
@@ -202,7 +202,7 @@ const Index = () => {
               <div className="space-y-5">
                 <p className="text-lg text-charcoal/80 leading-relaxed">
                   Créée par <strong>Vanessa Charlery</strong>, ethnobotaniste et anthropologue, 
-                  Botanique Ludique propose des ateliers à Paris, Yvelines (78) et Hauts-de-Seine (92) qui allient créativité artistique et transmission 
+                  Botanique Ludique propose des ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95) qui allient créativité artistique et transmission 
                   des savoirs ethnobotaniques.
                 </p>
                 <p className="text-base text-charcoal/70 leading-relaxed">
@@ -367,7 +367,7 @@ const Index = () => {
                   color: '#F7F7EB',
                   opacity: 0.9
                 }}>
-                  Rejoignez-nous pour un atelier à Paris, Yvelines ou Hauts-de-Seine.
+                  Rejoignez-nous pour un atelier à Paris, Yvelines, Hauts-de-Seine ou Val-d'Oise.
                 </p>
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start pt-2">
                   <Link to="/workshops" className="px-6 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105 hover:shadow-lg" style={{
