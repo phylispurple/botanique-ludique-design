@@ -51,6 +51,11 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
               "sameAs": "https://fr.wikipedia.org/wiki/Hauts-de-Seine"
             },
             {
+              "@type": "AdministrativeArea",
+              "name": "Val-d'Oise",
+              "sameAs": "https://fr.wikipedia.org/wiki/Val-d%27Oise"
+            },
+            {
               "@type": "City",
               "name": "Chatou"
             },
@@ -151,7 +156,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
             "name": "Botanique Ludique",
             "url": "https://botaniqueludique.com"
           },
-          "areaServed": ["Paris", "Yvelines (78)", "Hauts-de-Seine (92)"],
+          "areaServed": ["Paris", "Yvelines (78)", "Hauts-de-Seine (92)", "Val-d'Oise (95)"],
           "hasOfferCatalog": data.offers,
           ...data
         };
