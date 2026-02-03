@@ -23,7 +23,7 @@ const LandingTeamBuilding = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Team Building Nature Paris - Atelier RSE Entreprise" description="Team building nature et RSE en Île-de-France. Ateliers botaniques pour entreprises : kokedama, teinture végétale, terrarium." keywords="team building nature paris, atelier rse entreprise, team building écologique" canonical="/team-building-nature" />
+      <SEO title="Team Building Nature Paris - Atelier RSE Entreprise" description="Team building nature et RSE en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques pour entreprises." keywords="team building nature paris, atelier rse entreprise, team building écologique, team building val d'oise" canonical="/team-building-nature" />
       <Navigation />
       
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">
@@ -72,7 +72,7 @@ const LandingTeamBuilding = () => {
         <div className="container mx-auto max-w-6xl text-center">
           <h2 className="text-3xl font-display text-charcoal mb-6">Zone d'intervention</h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Paris", "La Défense", "Hauts-de-Seine (92)", "Yvelines (78)", "Boulogne-Billancourt", "Nanterre", "Courbevoie", "Rueil-Malmaison", "Versailles"].map((city) => (
+            {["Paris", "La Défense", "Hauts-de-Seine (92)", "Yvelines (78)", "Val-d'Oise (95)", "Nanterre", "Cergy", "Pontoise"].map((city) => (
               <span key={city} className="inline-flex items-center gap-1 bg-white px-4 py-2 rounded-full text-sm text-charcoal shadow-sm"><MapPin className="w-3 h-3 text-sage" />{city}</span>
             ))}
           </div>
