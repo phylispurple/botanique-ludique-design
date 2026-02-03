@@ -18,7 +18,7 @@ const LandingMJC = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Ateliers MJC & Associations - Cours Botanique Adultes" description="Ateliers botaniques pour MJC et associations en Île-de-France. Kokedama, teinture végétale, vannerie. Cours adultes et stages vacances." keywords="atelier mjc botanique, cours nature association, atelier adultes plantes" canonical="/mjc-associations" />
+      <SEO title="Ateliers MJC & Associations - Cours Botanique Adultes" description="Ateliers botaniques pour MJC et associations en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Kokedama, teinture végétale, vannerie." keywords="atelier mjc botanique, cours nature association, atelier adultes plantes, atelier mjc val d'oise" canonical="/mjc-associations" />
       <Navigation />
       
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">
@@ -56,7 +56,7 @@ const LandingMJC = () => {
         <div className="container mx-auto max-w-6xl text-center">
           <h2 className="text-3xl font-display text-charcoal mb-6">Zone d'intervention</h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Paris", "Hauts-de-Seine (92)", "Yvelines (78)", "Chatou", "Le Vésinet", "Saint-Germain-en-Laye", "Versailles"].map((city) => (
+            {["Paris", "Hauts-de-Seine (92)", "Yvelines (78)", "Val-d'Oise (95)", "Chatou", "Le Vésinet", "Cergy", "Pontoise"].map((city) => (
               <span key={city} className="inline-flex items-center gap-1 bg-white px-4 py-2 rounded-full text-sm text-charcoal"><MapPin className="w-3 h-3 text-sage" />{city}</span>
             ))}
           </div>

@@ -15,7 +15,7 @@ const LandingEcoles = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Animation Scolaire Nature - Ateliers Botaniques Écoles" description="Interventions pédagogiques nature dans les écoles maternelles et primaires en Île-de-France. Ateliers botaniques en lien avec les programmes." keywords="intervention scolaire nature, animation école botanique, atelier pédagogique plantes" canonical="/ecoles-scolaire" />
+      <SEO title="Animation Scolaire Nature - Ateliers Botaniques Écoles" description="Interventions pédagogiques nature dans les écoles maternelles et primaires en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques." keywords="intervention scolaire nature, animation école botanique, atelier pédagogique plantes, intervention scolaire val d'oise" canonical="/ecoles-scolaire" />
       <Navigation />
       
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">
@@ -54,7 +54,7 @@ const LandingEcoles = () => {
         <div className="container mx-auto max-w-6xl text-center">
           <h2 className="text-3xl font-display text-charcoal mb-6">Zone d'intervention</h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Paris", "Hauts-de-Seine (92)", "Yvelines (78)", "Versailles", "Saint-Germain-en-Laye", "Chatou", "Nanterre"].map((city) => (
+            {["Paris", "Hauts-de-Seine (92)", "Yvelines (78)", "Val-d'Oise (95)", "Versailles", "Saint-Germain-en-Laye", "Cergy", "Pontoise"].map((city) => (
               <span key={city} className="inline-flex items-center gap-1 bg-white px-4 py-2 rounded-full text-sm text-charcoal"><MapPin className="w-3 h-3 text-sage" />{city}</span>
             ))}
           </div>
