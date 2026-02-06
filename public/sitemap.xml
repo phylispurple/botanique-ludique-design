@@ -111,8 +111,26 @@
   </url>
   <url>
     <loc>https://botaniqueludique.com/blog</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/blog/terrarium-biopiraterie-histoire-coloniale</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/blog/palmiers-architecture-haussmannienne-colonialisme</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/blog/monstera-plante-coloniale-distinction-sociale</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

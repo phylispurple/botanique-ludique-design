@@ -16,8 +16,18 @@ import blogMonsteraTendance from "@/assets/blog-monstera-tendance.jpg";
 import blogMonsteraDeco from "@/assets/blog-monstera-deco-interieur.jpg";
 import blogPalmiersAvenue from "@/assets/blog-palmiers-avenue-coloniale.jpg";
 import blogPalmiersAlger from "@/assets/blog-palmiers-jardin-hamma-alger.jpg";
+import blogTerrariumModerne from "@/assets/blog-terrarium-moderne.jpg";
+import blogTerrariumWardian from "@/assets/blog-terrarium-wardian-case.jpg";
 
 const blogPosts = [
+  {
+    slug: "terrarium-biopiraterie-histoire-coloniale",
+    title: "Ton Terrarium était Initialement une Arme de Biopiraterie",
+    excerpt: "De l'invention accidentelle du Wardian Case au vol de 70 000 graines d'hévéa : comment un simple bocal en verre a redessiné les frontières économiques du monde.",
+    images: [blogTerrariumModerne, blogTerrariumWardian],
+    date: "2026-02-06",
+    category: "Ethnobotanique"
+  },
   {
     slug: "palmiers-architecture-haussmannienne-colonialisme",
     title: "Palmiers et Architecture Haussmannienne : Quand les Boulevards Racontent l'Empire Colonial",
