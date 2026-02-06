@@ -410,7 +410,7 @@ const BlogTerrariumBiopiraterie = () => {
                     loading="lazy"
                   />
                   <figcaption className="text-center text-sm text-charcoal/60 mt-3 italic">
-                    <em>Seringueiros</em> — travailleurs du caoutchouc en Amazonie, piégés par le système de dette
+                    <em>Seringueiros</em>, travailleurs du caoutchouc en Amazonie, piégés par le système de dette
                   </figcaption>
                 </figure>
 
