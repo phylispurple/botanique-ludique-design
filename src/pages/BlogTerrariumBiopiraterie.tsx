@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
-import { Calendar, User, ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
+import { Calendar, User, ArrowLeft, ArrowRight, BookOpen, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import BlogTableOfContents from "@/components/BlogTableOfContents";
 import BlogCTA from "@/components/BlogCTA";
@@ -24,7 +24,7 @@ import plantationHevea from "@/assets/blog-terrarium-plantation-hevea.jpg";
 import seringueiros from "@/assets/blog-terrarium-seringueiros.jpg";
 import fordT from "@/assets/blog-terrarium-ford-t.jpg";
 import malaisiePlantation from "@/assets/blog-terrarium-malaisie-plantation.jpg";
-import chaplinGif from "@/assets/blog-terrarium-chaplin.gif";
+
 
 // Images pour articles liés
 import blogMonsteraTendance from "@/assets/blog-monstera-tendance.jpg";
@@ -355,15 +355,6 @@ const BlogTerrariumBiopiraterie = () => {
 
                 <figure className="mb-8">
                   <img 
-                    src={chaplinGif} 
-                    alt="GIF Charlie Chaplin - réaction humoristique"
-                    className="w-full max-w-sm mx-auto h-auto rounded-xl"
-                    loading="lazy"
-                  />
-                </figure>
-
-                <figure className="mb-8">
-                  <img 
                     src={plantationHevea} 
                     alt="Plantation d'hévéas avec récipients de collecte de latex - exploitation coloniale du caoutchouc"
                     className="w-full h-auto rounded-xl"
@@ -497,6 +488,36 @@ const BlogTerrariumBiopiraterie = () => {
                   Parce que comprendre d'où viennent les plantes, c'est aussi comprendre d'où l'on vient.
                 </p>
               </section>
+
+              {/* CTA Instagram avec vidéo */}
+              <div className="bg-gradient-to-r from-sage/20 to-sand p-8 rounded-lg text-center mt-12 animate-fade-in">
+                <h3 className="text-xl md:text-2xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  Voir la vidéo sur ce sujet
+                </h3>
+                <p className="text-charcoal/80 mb-6">
+                  Retrouvez ma vidéo complète sur l'histoire du terrarium et la biopiraterie sur Instagram !
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="https://www.instagram.com/botanique.ludique/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white px-6 py-3 rounded-full font-semibold transition-colors"
+                  >
+                    <Instagram className="w-5 h-5" />
+                    Voir la vidéo
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/botanique.ludique/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-white/80 hover:bg-white text-sage-dark px-6 py-3 rounded-full font-semibold transition-colors border border-sage/30"
+                  >
+                    <Instagram className="w-5 h-5" />
+                    @botanique.ludique
+                  </a>
+                </div>
+              </div>
 
               {/* CTA Ateliers */}
               <BlogCTA variant="ethnobotanique" />
