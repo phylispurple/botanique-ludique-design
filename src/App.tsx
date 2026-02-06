@@ -27,6 +27,7 @@ import BlogTeintureChouRouge from "./pages/BlogTeintureChouRouge";
 import BlogMonsteraColonialisme from "./pages/BlogMonsteraColonialisme";
 import BlogPalmiersHaussmann from "./pages/BlogPalmiersHaussmann";
 import BlogTerrariumBiopiraterie from "./pages/BlogTerrariumBiopiraterie";
+import BlogFilmsNature from "./pages/BlogFilmsNature";
 import LandingSeniorsEHPAD from "./pages/LandingSeniorsEHPAD";
 import LandingCSE from "./pages/LandingCSE";
 import LandingEcoles from "./pages/LandingEcoles";
@@ -71,6 +72,7 @@ const App = () => (
           <Route path="/blog/monstera-plante-coloniale-distinction-sociale" element={<BlogMonsteraColonialisme />} />
           <Route path="/blog/palmiers-architecture-haussmannienne-colonialisme" element={<BlogPalmiersHaussmann />} />
           <Route path="/blog/terrarium-biopiraterie-histoire-coloniale" element={<BlogTerrariumBiopiraterie />} />
+          <Route path="/blog/10-films-nature-idees-fausses" element={<BlogFilmsNature />} />
           <Route path="/actualites" element={<Blog />} />
           <Route path="/animation-seniors-ehpad" element={<LandingSeniorsEHPAD />} />
           <Route path="/animation-cse-entreprise" element={<LandingCSE />} />

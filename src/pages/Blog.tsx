@@ -18,8 +18,17 @@ import blogPalmiersAvenue from "@/assets/blog-palmiers-avenue-coloniale.jpg";
 import blogPalmiersAlger from "@/assets/blog-palmiers-jardin-hamma-alger.jpg";
 import blogTerrariumModerne from "@/assets/blog-terrarium-moderne.jpg";
 import blogTerrariumWardian from "@/assets/blog-terrarium-wardian-case.jpg";
+import blogFilmsPoster from "@/assets/blog-films-nature-poster.jpg";
 
 const blogPosts = [
+  {
+    slug: "10-films-nature-idees-fausses",
+    title: "Les 10 Films qui Nous Ont Raconté N'importe Quoi à Propos de la « Nature »",
+    excerpt: "D'Avatar à Jurassic Park, analyse ethnobotanique de 10 films cultes qui véhiculent des idées fausses sur le vivant. La jungle hostile, les plantes tueuses, la nature « vierge » : décryptage des mythes cinématographiques.",
+    images: [blogFilmsPoster],
+    date: "2026-02-06",
+    category: "Ethnobotanique"
+  },
   {
     slug: "terrarium-biopiraterie-histoire-coloniale",
     title: "Le Terrarium, une Arme de Biopiraterie à l'Ère Coloniale Victorienne",
