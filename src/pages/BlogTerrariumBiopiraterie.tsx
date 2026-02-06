@@ -35,17 +35,17 @@ const BlogTerrariumBiopiraterie = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="Terrarium & Biopiraterie : L'Histoire Coloniale Cachée du Wardian Case"
-        description="Saviez-vous que votre terrarium était initialement une arme de biopiraterie ? De l'invention accidentelle du Wardian Case au vol de 70 000 graines d'hévéa, découvrez l'histoire coloniale derrière cet objet déco."
-        keywords="terrarium histoire, wardian case, biopiraterie, Nathaniel Ward, hévéa Brésil, Henry Wickham, fern fever, caoutchouc colonialisme, histoire botanique, ethnobotanique terrarium"
+        title="Le Terrarium, une Arme de Biopiraterie à l'Ère Coloniale Victorienne"
+        description="Du Wardian Case victorien au vol de 70 000 graines d'hévéa : comment un simple bocal en verre est devenu l'outil de la plus grande opération de biopiraterie de l'histoire coloniale."
+        keywords="terrarium histoire, wardian case, biopiraterie, Nathaniel Ward, hévéa Brésil, Henry Wickham, fern fever, caoutchouc colonialisme, aviamento, seringueiros, esclavage dette, histoire botanique, ethnobotanique terrarium"
         canonical="/blog/terrarium-biopiraterie-histoire-coloniale"
         type="article"
       />
       <SchemaOrg 
         type="Article"
         data={{
-          headline: "Terrarium & Biopiraterie : L'Histoire Coloniale Cachée du Wardian Case",
-          description: "De l'invention accidentelle du Wardian Case au vol de 70 000 graines d'hévéa : l'histoire coloniale cachée derrière votre terrarium.",
+          headline: "Le Terrarium, une Arme de Biopiraterie à l'Ère Coloniale Victorienne",
+          description: "Du Wardian Case victorien au vol de 70 000 graines d'hévéa : comment un simple bocal en verre est devenu l'outil de la plus grande opération de biopiraterie de l'histoire coloniale.",
           author: { name: "Vanessa Charlery" },
           datePublished: "2026-02-06",
           dateModified: "2026-02-06"
@@ -83,7 +83,7 @@ const BlogTerrariumBiopiraterie = () => {
               </div>
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                Est-ce que tu savais que ton terrarium était initialement une arme de biopiraterie ?
+                Le Terrarium, une Arme de Biopiraterie à l'Ère Coloniale Victorienne
               </h1>
               
               <p className="text-xl text-charcoal/80 leading-relaxed mb-8">
@@ -103,11 +103,11 @@ const BlogTerrariumBiopiraterie = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <BookOpen className="w-4 h-4" />
-                    <span>Temps de lecture : 10 min</span>
+                    <span>Temps de lecture : 14 min</span>
                   </div>
                 </div>
                 <BlogShareButtons 
-                  title="Est-ce que tu savais que ton terrarium était initialement une arme de biopiraterie ?"
+                  title="Le Terrarium, une Arme de Biopiraterie à l'Ère Coloniale Victorienne"
                   url="/blog/terrarium-biopiraterie-histoire-coloniale"
                 />
               </div>
@@ -136,6 +136,7 @@ const BlogTerrariumBiopiraterie = () => {
                   { id: "fern-fever", title: "La Fern Fever : Quand l'Angleterre Victorienne Rêvait de Fougères" },
                   { id: "revolution-maritime", title: "Le Wardian Case : Une Révolution pour le Transport Maritime" },
                   { id: "biopiraterie-hevea", title: "Le Cas de l'Hévéa au Brésil : Quand la Biopiraterie Change le Monde" },
+                  { id: "aviamento", title: "L'Aviamento : le Système d'Esclavage par la Dette" },
                   { id: "consequences-humaines", title: "Les Conséquences Humaines Désastreuses" },
                   { id: "heritage-terrarium", title: "L'Héritage du Terrarium : Cultiver Aussi la Mémoire" },
                 ]}
@@ -386,10 +387,10 @@ const BlogTerrariumBiopiraterie = () => {
                 </figure>
               </section>
 
-              {/* Section 5 - Conséquences humaines */}
-              <section id="consequences-humaines" className="mb-12 animate-fade-in scroll-mt-28">
+              {/* Section 5 - Aviamento */}
+              <section id="aviamento" className="mb-12 animate-fade-in scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Les Conséquences Humaines Désastreuses
+                  L'Aviamento : le Système d'Esclavage par la Dette
                 </h2>
 
                 <p className="text-charcoal/80 leading-relaxed mb-6">
@@ -398,8 +399,16 @@ const BlogTerrariumBiopiraterie = () => {
 
                 <p className="text-charcoal/80 leading-relaxed mb-6">
                   Entre <strong>1890 et 1920</strong>, pas moins de <strong>500 000 migrants</strong> débarquent 
-                  en Amazonie, portés par l'opportunité du travail dans le caoutchouc. Cependant, ils sont tenus 
-                  par un <strong>système d'esclavage par la dette</strong>.
+                  en Amazonie, portés par la promesse d'une vie meilleure grâce au caoutchouc. Mais ce qui les 
+                  attend, c'est un système bien rodé qu'on appelle l'<strong>aviamento</strong>.
+                </p>
+
+                <p className="text-charcoal/80 leading-relaxed mb-6">
+                  Le principe est simple, et redoutablement pervers. Les travailleurs, appelés 
+                  les <strong><em>seringueiros</em></strong> (saigneurs d'hévéas), sont recrutés par 
+                  des intermédiaires, les <strong><em>aviadores</em></strong>, qui leur avancent le voyage, 
+                  les outils et les vivres. Sauf que tout cela est à crédit, à des prix astronomiques. 
+                  Dès le premier jour, le <em>seringueiro</em> est endetté.
                 </p>
 
                 <figure className="mb-8">
@@ -410,14 +419,71 @@ const BlogTerrariumBiopiraterie = () => {
                     loading="lazy"
                   />
                   <figcaption className="text-center text-sm text-charcoal/60 mt-3 italic">
-                    <em>Seringueiros</em>, travailleurs du caoutchouc en Amazonie, piégés par le système de dette
+                    <em>Seringueiros</em>, travailleurs du caoutchouc en Amazonie, piégés par le système d'aviamento
                   </figcaption>
                 </figure>
 
                 <p className="text-charcoal/80 leading-relaxed mb-6">
-                  Résultat : des centaines de milliers de travailleurs brésiliens sont coincés à vie 
-                  en forêt amazonienne, avec une ardoise qui ne fait qu'augmenter et zéro échappatoire.
+                  Une fois en forêt, il dépend entièrement du <strong><em>seringalista</em></strong>, 
+                  le patron propriétaire du <em>seringal</em> (la concession d'hévéas). Pour manger, 
+                  s'habiller, se soigner, il doit acheter au <strong><em>barracão</em></strong>, 
+                  le magasin du patron, où les prix sont gonflés de 100 à 400%.
                 </p>
+
+                <div className="bg-terracotta/10 border-l-4 border-terracotta p-6 rounded-r-xl mb-8">
+                  <p className="text-charcoal/80 text-lg mb-4">
+                    <strong>Comment ça fonctionnait concrètement :</strong>
+                  </p>
+                  <ul className="space-y-3 text-charcoal/80">
+                    <li className="flex items-start gap-3">
+                      <span className="text-terracotta font-bold text-lg">1.</span>
+                      <span>Le <em>seringueiro</em> reçoit outils, vivres et transport <strong>à crédit</strong></span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-terracotta font-bold text-lg">2.</span>
+                      <span>Il paie tout au <em>barracão</em> du patron, à des prix 2 à 5 fois supérieurs au marché</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-terracotta font-bold text-lg">3.</span>
+                      <span>Son caoutchouc est racheté <strong>en dessous du cours</strong> par le même patron</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-terracotta font-bold text-lg">4.</span>
+                      <span>Résultat : la dette <strong>ne fait qu'augmenter</strong>, et il est interdit de partir tant qu'elle n'est pas remboursée</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <p className="text-charcoal/80 leading-relaxed mb-6">
+                  On les appelait parfois les <strong><em>brancos da terra</em></strong> (les « blancs de la terre »), 
+                  des migrants <em>nordestinos</em> venus du Nordeste brésilien, fuyant les sécheresses et la misère, 
+                  et qui se retrouvaient dans une situation d'asservissement total. Quant aux populations autochtones, 
+                  les <strong><em>caboclos</em></strong> et les peuples indigènes, ils étaient exploités de la même 
+                  manière, quand ils n'étaient pas tout simplement chassés de leurs terres ou exterminés.
+                </p>
+
+                <p className="text-charcoal/80 leading-relaxed mb-6">
+                  Le système était si verrouillé que le <em>seringueiro</em> ne pouvait vendre son caoutchouc 
+                  à personne d'autre qu'à son <em>seringalista</em>. Certains étaient même surveillés par 
+                  des <strong><em>capangas</em></strong>, des hommes de main armés, pour empêcher toute fuite. 
+                  Pour faire simple : on avait techniquement aboli l'esclavage au Brésil en 1888, 
+                  mais on l'avait remplacé par un système de dette dont il était tout aussi impossible de sortir.
+                </p>
+
+                <div className="bg-charcoal/5 border-l-4 border-charcoal/30 p-6 rounded-r-xl mb-8">
+                  <p className="text-charcoal/80 italic">
+                    « L'esclavage par la dette est la forme la plus insidieuse de servitude : 
+                    elle n'a besoin ni de chaînes ni de fouet, seulement d'un livre de comptes 
+                    et d'un magasin bien tenu. »
+                  </p>
+                </div>
+              </section>
+
+              {/* Section 6 - Conséquences humaines */}
+              <section id="consequences-humaines" className="mb-12 animate-fade-in scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  Les Conséquences Humaines Désastreuses
+                </h2>
 
                 <p className="text-charcoal/80 leading-relaxed mb-6">
                   Et accrochez-vous, parce qu'au même moment, les Britanniques construisent leurs plantations 
@@ -443,6 +509,23 @@ const BlogTerrariumBiopiraterie = () => {
                   les quotas se faisaient torturer et tuer.
                 </p>
 
+                <p className="text-charcoal/80 leading-relaxed mb-6">
+                  Le cas le plus effroyable reste celui du <strong>Putumayo</strong>, à la frontière 
+                  entre le Pérou et la Colombie, où la <em>Casa Arana</em> (Peruvian Amazon Company) 
+                  a réduit en esclavage des milliers d'indigènes <strong>Huitoto, Bora et Ocaina</strong> 
+                  pour la collecte du caoutchouc. Flagellations, mutilations, exécutions sommaires : 
+                  le scandale, révélé en 1912, a choqué le monde entier. On estime que <strong>plus de 
+                  30 000 indigènes</strong> ont péri dans cette seule région.
+                </p>
+
+                <p className="text-charcoal/80 leading-relaxed mb-6">
+                  De l'autre côté du monde, en <strong>Malaisie et à Ceylan</strong>, les plantations 
+                  britanniques fonctionnaient grâce à des <strong><em>indentured labourers</em></strong>, 
+                  des travailleurs sous contrat venus d'Inde et de Chine. Là encore, un système de 
+                  semi-servitude : contrats de 3 à 5 ans, impossibilité de quitter la plantation, 
+                  conditions de travail inhumaines, taux de mortalité effarants.
+                </p>
+
                 <div className="bg-charcoal/5 border-l-4 border-charcoal/30 p-6 rounded-r-xl mb-8">
                   <h3 className="font-semibold text-charcoal mb-4">Le bilan est lourd :</h3>
                   <ul className="space-y-3 text-charcoal/80">
@@ -452,12 +535,21 @@ const BlogTerrariumBiopiraterie = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-terracotta font-bold text-lg">•</span>
-                      <span>Au moins <strong>100 000 autochtones amazoniens</strong> meurent</span>
+                      <span>Au moins <strong>100 000 autochtones amazoniens</strong> meurent dans les seringais</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-terracotta font-bold text-lg">•</span>
-                      <span>En Malaisie, des <strong>centaines de milliers de travailleurs indiens</strong> sont 
-                      déportés et traités de façon inhumaine</span>
+                      <span>Plus de <strong>30 000 indigènes</strong> sont exterminés dans le Putumayo</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-terracotta font-bold text-lg">•</span>
+                      <span>En Malaisie, des <strong>centaines de milliers de travailleurs indiens et chinois</strong> sont 
+                      déportés sous contrat et traités de façon inhumaine</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-terracotta font-bold text-lg">•</span>
+                      <span>Des villes entières comme <strong>Manaus</strong>, construites sur la richesse du caoutchouc, 
+                      s'effondrent économiquement</span>
                     </li>
                   </ul>
                 </div>

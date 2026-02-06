@@ -22,8 +22,8 @@ import blogTerrariumWardian from "@/assets/blog-terrarium-wardian-case.jpg";
 const blogPosts = [
   {
     slug: "terrarium-biopiraterie-histoire-coloniale",
-    title: "Ton Terrarium était Initialement une Arme de Biopiraterie",
-    excerpt: "De l'invention accidentelle du Wardian Case au vol de 70 000 graines d'hévéa : comment un simple bocal en verre a redessiné les frontières économiques du monde.",
+    title: "Le Terrarium, une Arme de Biopiraterie à l'Ère Coloniale Victorienne",
+    excerpt: "Du Wardian Case victorien au vol de 70 000 graines d'hévéa : comment un simple bocal en verre est devenu l'outil de la plus grande opération de biopiraterie, entraînant esclavage par la dette et effondrement économique.",
     images: [blogTerrariumModerne, blogTerrariumWardian],
     date: "2026-02-06",
     category: "Ethnobotanique"
