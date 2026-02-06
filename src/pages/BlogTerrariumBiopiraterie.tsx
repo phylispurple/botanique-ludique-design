@@ -318,7 +318,7 @@ const BlogTerrariumBiopiraterie = () => {
                       loading="lazy"
                     />
                     <figcaption className="text-center text-sm text-charcoal/60 mt-3 italic">
-                      <em>Hevea peruviana</em> — planche botanique d'archive
+                      <em>Hevea peruviana</em>, planche botanique d'archive
                     </figcaption>
                   </figure>
                   <figure>
