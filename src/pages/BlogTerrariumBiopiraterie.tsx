@@ -195,7 +195,7 @@ const BlogTerrariumBiopiraterie = () => {
                 </p>
 
                 <p className="text-charcoal/80 leading-relaxed mb-6">
-                  Mais <strong>plot twist</strong> — une semaine plus tard : une fougère et de l'herbe poussent 
+                  Mais <strong>plot twist</strong>, une semaine plus tard : une fougère et de l'herbe poussent 
                   dans la bouteille. Le gars voulait élever un papillon et il vient d'inventer accidentellement 
                   le <strong>Wardian Case</strong>, l'ancêtre du terrarium. RIP le papillon, bonjour la révolution botanique.
                 </p>
@@ -234,14 +234,14 @@ const BlogTerrariumBiopiraterie = () => {
                     loading="lazy"
                   />
                   <figcaption className="text-center text-sm text-charcoal/60 mt-3 italic">
-                    Collecteurs de fougères à l'époque victorienne — une véritable passion nationale
+                    Collecteurs de fougères à l'époque victorienne, une véritable passion nationale
                   </figcaption>
                 </figure>
 
                 <p className="text-charcoal/80 leading-relaxed mb-6">
                   Des familles entières partent en expédition dans la campagne anglaise pour collecter des spécimens. 
                   On publie des guides, on crée des sociétés savantes, on décore les salons avec des motifs de fougères. 
-                  C'est dans ce contexte de passion botanique que Ward fait sa découverte — et que le Wardian Case 
+                  C'est dans ce contexte de passion botanique que Ward fait sa découverte, et que le Wardian Case 
                   devient immédiatement un objet convoité.
                 </p>
 
@@ -318,7 +318,7 @@ const BlogTerrariumBiopiraterie = () => {
                       loading="lazy"
                     />
                     <figcaption className="text-center text-sm text-charcoal/60 mt-3 italic">
-                      <em>Hevea peruviana</em> — planche botanique d'archive
+                      <em>Hevea peruviana</em>, planche botanique d'archive
                     </figcaption>
                   </figure>
                   <figure>
@@ -361,7 +361,7 @@ const BlogTerrariumBiopiraterie = () => {
                     loading="lazy"
                   />
                   <figcaption className="text-center text-sm text-charcoal/60 mt-3 italic">
-                    Plantation d'hévéas avec saignées pour la récolte du latex — le modèle exporté en Asie
+                    Plantation d'hévéas avec saignées pour la récolte du latex, le modèle exporté en Asie
                   </figcaption>
                 </figure>
 
@@ -410,7 +410,7 @@ const BlogTerrariumBiopiraterie = () => {
                     loading="lazy"
                   />
                   <figcaption className="text-center text-sm text-charcoal/60 mt-3 italic">
-                    <em>Seringueiros</em> — travailleurs du caoutchouc en Amazonie, piégés par le système de dette
+                    <em>Seringueiros</em>, travailleurs du caoutchouc en Amazonie, piégés par le système de dette
                   </figcaption>
                 </figure>
 
@@ -432,7 +432,7 @@ const BlogTerrariumBiopiraterie = () => {
                     loading="lazy"
                   />
                   <figcaption className="text-center text-sm text-charcoal/60 mt-3 italic">
-                    Atelier de transformation du caoutchouc en Malaisie britannique — main-d'œuvre déportée
+                    Atelier de transformation du caoutchouc en Malaisie britannique, main-d'œuvre déportée
                   </figcaption>
                 </figure>
 
@@ -483,7 +483,7 @@ const BlogTerrariumBiopiraterie = () => {
                 </p>
 
                 <p className="text-charcoal/80 leading-relaxed mb-6">
-                  C'est cette lecture du monde végétal — anthropologique, historique, politique — que je propose 
+                  C'est cette lecture du monde végétal, anthropologique, historique, politique, que je propose 
                   dans mes <Link to="/workshops" className="text-sage hover:text-sage-dark underline font-semibold">ateliers botaniques</Link>. 
                   Parce que comprendre d'où viennent les plantes, c'est aussi comprendre d'où l'on vient.
                 </p>
