@@ -241,7 +241,7 @@ const BlogTerrariumBiopiraterie = () => {
                 <p className="text-charcoal/80 leading-relaxed mb-6">
                   Des familles entières partent en expédition dans la campagne anglaise pour collecter des spécimens. 
                   On publie des guides, on crée des sociétés savantes, on décore les salons avec des motifs de fougères. 
-                  C'est dans ce contexte de passion botanique que Ward fait sa découverte — et que le Wardian Case 
+                  C'est dans ce contexte de passion botanique que Ward fait sa découverte, et que le Wardian Case 
                   devient immédiatement un objet convoité.
                 </p>
 
