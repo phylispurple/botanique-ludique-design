@@ -355,15 +355,6 @@ const BlogTerrariumBiopiraterie = () => {
 
                 <figure className="mb-8">
                   <img 
-                    src={chaplinGif} 
-                    alt="GIF Charlie Chaplin - réaction humoristique"
-                    className="w-full max-w-sm mx-auto h-auto rounded-xl"
-                    loading="lazy"
-                  />
-                </figure>
-
-                <figure className="mb-8">
-                  <img 
                     src={plantationHevea} 
                     alt="Plantation d'hévéas avec récipients de collecte de latex - exploitation coloniale du caoutchouc"
                     className="w-full h-auto rounded-xl"
