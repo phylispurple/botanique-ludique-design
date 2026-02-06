@@ -28,6 +28,7 @@ export default {
         earth: 'hsl(var(--earth))',
         sand: 'hsl(var(--sand))',
         charcoal: 'hsl(var(--charcoal))',
+        terracotta: 'hsl(var(--terracotta))',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
