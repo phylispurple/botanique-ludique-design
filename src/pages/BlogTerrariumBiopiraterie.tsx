@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
-import { Calendar, User, ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
+import { Calendar, User, ArrowLeft, ArrowRight, BookOpen, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import BlogTableOfContents from "@/components/BlogTableOfContents";
 import BlogCTA from "@/components/BlogCTA";
