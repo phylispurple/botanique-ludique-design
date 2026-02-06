@@ -195,7 +195,7 @@ const BlogTerrariumBiopiraterie = () => {
                 </p>
 
                 <p className="text-charcoal/80 leading-relaxed mb-6">
-                  Mais <strong>plot twist</strong> — une semaine plus tard : une fougère et de l'herbe poussent 
+                  Mais <strong>plot twist</strong>, une semaine plus tard : une fougère et de l'herbe poussent 
                   dans la bouteille. Le gars voulait élever un papillon et il vient d'inventer accidentellement 
                   le <strong>Wardian Case</strong>, l'ancêtre du terrarium. RIP le papillon, bonjour la révolution botanique.
                 </p>
