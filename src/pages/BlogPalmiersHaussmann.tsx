@@ -79,7 +79,7 @@ const BlogPalmiersHaussmann = () => {
                 <span className="bg-terracotta/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
                   Histoire Coloniale
                 </span>
-                <span className="bg-charcoal/70 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                <span className="bg-terracotta text-white px-3 py-1 rounded-full text-xs font-semibold">
                   Urbanisme
                 </span>
               </div>
