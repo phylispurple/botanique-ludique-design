@@ -234,7 +234,7 @@ const BlogTerrariumBiopiraterie = () => {
                     loading="lazy"
                   />
                   <figcaption className="text-center text-sm text-charcoal/60 mt-3 italic">
-                    Collecteurs de fougères à l'époque victorienne — une véritable passion nationale
+                    Collecteurs de fougères à l'époque victorienne, une véritable passion nationale
                   </figcaption>
                 </figure>
 
