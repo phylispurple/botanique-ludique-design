@@ -483,7 +483,7 @@ const BlogTerrariumBiopiraterie = () => {
                 </p>
 
                 <p className="text-charcoal/80 leading-relaxed mb-6">
-                  C'est cette lecture du monde végétal — anthropologique, historique, politique — que je propose 
+                  C'est cette lecture du monde végétal, anthropologique, historique, politique, que je propose 
                   dans mes <Link to="/workshops" className="text-sage hover:text-sage-dark underline font-semibold">ateliers botaniques</Link>. 
                   Parce que comprendre d'où viennent les plantes, c'est aussi comprendre d'où l'on vient.
                 </p>
