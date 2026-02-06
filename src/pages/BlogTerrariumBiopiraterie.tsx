@@ -432,7 +432,7 @@ const BlogTerrariumBiopiraterie = () => {
                     loading="lazy"
                   />
                   <figcaption className="text-center text-sm text-charcoal/60 mt-3 italic">
-                    Atelier de transformation du caoutchouc en Malaisie britannique — main-d'œuvre déportée
+                    Atelier de transformation du caoutchouc en Malaisie britannique, main-d'œuvre déportée
                   </figcaption>
                 </figure>
 
