@@ -26,6 +26,7 @@ import Blog from "./pages/Blog";
 import BlogTeintureChouRouge from "./pages/BlogTeintureChouRouge";
 import BlogMonsteraColonialisme from "./pages/BlogMonsteraColonialisme";
 import BlogPalmiersHaussmann from "./pages/BlogPalmiersHaussmann";
+import BlogTerrariumBiopiraterie from "./pages/BlogTerrariumBiopiraterie";
 import LandingSeniorsEHPAD from "./pages/LandingSeniorsEHPAD";
 import LandingCSE from "./pages/LandingCSE";
 import LandingEcoles from "./pages/LandingEcoles";
