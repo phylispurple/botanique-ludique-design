@@ -361,7 +361,7 @@ const BlogTerrariumBiopiraterie = () => {
                     loading="lazy"
                   />
                   <figcaption className="text-center text-sm text-charcoal/60 mt-3 italic">
-                    Plantation d'hévéas avec saignées pour la récolte du latex — le modèle exporté en Asie
+                    Plantation d'hévéas avec saignées pour la récolte du latex, le modèle exporté en Asie
                   </figcaption>
                 </figure>
 
