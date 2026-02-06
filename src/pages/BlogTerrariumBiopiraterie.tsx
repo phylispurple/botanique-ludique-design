@@ -246,6 +246,28 @@ const BlogTerrariumBiopiraterie = () => {
                   devient immédiatement un objet convoité.
                 </p>
 
+                <p className="text-charcoal/80 leading-relaxed mb-6">
+                  D'ailleurs, en faisant mes recherches pour{' '}
+                  <a 
+                    href="https://www.instagram.com/botanique.ludique/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sage hover:text-sage-dark underline underline-offset-2 transition-colors"
+                  >
+                    ma vidéo sur ce sujet
+                  </a>, je suis tombée par hasard sur la chaîne YouTube anglaise{' '}
+                  <a 
+                    href="https://www.youtube.com/watch?v=7hIHpvhxP18" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sage hover:text-sage-dark underline underline-offset-2 transition-colors font-semibold"
+                  >
+                    Blood and Botany
+                  </a>{' '}
+                  qui explique parfaitement ce phénomène de la <em>fern fever</em> pendant l'époque victorienne. 
+                  Je vous la recommande chaudement si le sujet vous intéresse !
+                </p>
+
                 <figure className="mb-8">
                   <img 
                     src={fougereArchive} 
@@ -649,6 +671,21 @@ const BlogTerrariumBiopiraterie = () => {
                       <span>
                         Allen, David Elliston (1969). <em>The Victorian Fern Craze: A History of Pteridomania</em>. Hutchinson. 
                         — L'ouvrage de référence sur la <em>fern fever</em> victorienne.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-sage font-bold mt-0.5">•</span>
+                      <span>
+                        Blood and Botany (2025).{' '}
+                        <a 
+                          href="https://www.youtube.com/watch?v=7hIHpvhxP18" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-sage hover:text-sage-dark underline underline-offset-2 transition-colors"
+                        >
+                          <em>The Fern Fever</em> — YouTube
+                        </a>. 
+                        — Excellente vidéo de vulgarisation sur le phénomène de la ptéridomanie victorienne.
                       </span>
                     </li>
                   </ul>
