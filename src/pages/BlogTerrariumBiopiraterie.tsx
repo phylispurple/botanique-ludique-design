@@ -24,7 +24,7 @@ import plantationHevea from "@/assets/blog-terrarium-plantation-hevea.jpg";
 import seringueiros from "@/assets/blog-terrarium-seringueiros.jpg";
 import fordT from "@/assets/blog-terrarium-ford-t.jpg";
 import malaisiePlantation from "@/assets/blog-terrarium-malaisie-plantation.jpg";
-import chaplinGif from "@/assets/blog-terrarium-chaplin.gif";
+
 
 // Images pour articles liés
 import blogMonsteraTendance from "@/assets/blog-monstera-tendance.jpg";
