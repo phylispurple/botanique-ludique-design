@@ -80,9 +80,9 @@ const Gallery = () => {
     { src: "/videos/workshop-epoxy-floral.mp4", alt: "Création époxy floral", caption: "Atelier Époxy Floral, Plateaux et tables en résine", type: "video" },
     
     // Ligne 3 : Ateliers en action
-    { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines — Atelier Botanique Ludique", type: "image" },
-    { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier — MJC Le Vésinet", type: "image" },
-    { src: teinture1Image, alt: "Atelier teinture végétale", caption: "Atelier teinture végétale — Préparation des tissus", type: "image" },
+    { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines, Atelier Botanique Ludique", type: "image" },
+    { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier, MJC Le Vésinet", type: "image" },
+    { src: teinture1Image, alt: "Atelier teinture végétale", caption: "Atelier teinture végétale, Préparation des tissus", type: "image" },
     
     // Ligne 4 : Teinture végétale (suite)
     { src: teinture2Image, alt: "Teinture végétale résultat", caption: "Atelier teinture végétale — Couleurs naturelles", type: "image" },
