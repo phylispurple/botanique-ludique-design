@@ -212,7 +212,7 @@ const AteliersBotaniquesYvelines = () => {
                   <p className="text-charcoal/80 italic mb-4">
                     "Atelier kokedama au top à Chatou ! Vanessa est très pédagogue et l'ambiance est super conviviale. Je recommande !"
                   </p>
-                  <p className="text-sage-dark font-semibold">— Marie, Chatou</p>
+                  <p className="text-sage-dark font-semibold">Marie, Chatou</p>
                 </div>
                 <div className="bg-sage/5 p-6 rounded-lg">
                   <p className="text-charcoal/80 italic mb-4">
