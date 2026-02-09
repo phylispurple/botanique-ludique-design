@@ -91,7 +91,7 @@ const Gallery = () => {
     
     // Ligne 5 : Nature et créativité
     { src: forestWalkImage, alt: "Balade en forêt", caption: "Atelier sur les espèces exotiques envahissantes", type: "image" },
-    { src: tatakiZomeImage, alt: "Atelier Tataki Zome", caption: "Atelier Tataki Zome — Impression végétale japonaise", type: "image" },
+    { src: tatakiZomeImage, alt: "Atelier Tataki Zome", caption: "Atelier Tataki Zome, Impression végétale japonaise", type: "image" },
     { src: "/videos/workshop-demo-2.mp4", alt: "Atelier botanique", caption: "Atelier de création botanique", type: "video" },
     
     // Ligne 5 : Artisanat végétal
