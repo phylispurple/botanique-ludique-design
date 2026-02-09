@@ -218,7 +218,7 @@ const AteliersBotaniquesYvelines = () => {
                   <p className="text-charcoal/80 italic mb-4">
                     "J'ai adoré l'atelier de teinture végétale au Pecq. On apprend vraiment les techniques anciennes avec des matériaux naturels."
                   </p>
-                  <p className="text-sage-dark font-semibold">— Sophie, Le Vésinet</p>
+                  <p className="text-sage-dark font-semibold">Sophie, Le Vésinet</p>
                 </div>
               </div>
             </div>

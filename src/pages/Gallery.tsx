@@ -117,11 +117,11 @@ const Gallery = () => {
     // Ligne 9-11 : Éco-construction Kosovo
     { src: kosovoConstruction1, alt: "Éco-construction au Kosovo", caption: "Construction d'une structure en bois, Kosovo", type: "image" },
     { src: kosovoConstruction2, alt: "Équipe éco-construction Kosovo", caption: "Travail d'équipe en éco-construction, Kosovo", type: "image" },
-    { src: kosovoConstruction3, alt: "Préparation du torchis", caption: "Préparation du torchis en groupe — Kosovo", type: "image" },
-    { src: kosovoConstruction4, alt: "Structure en torchis", caption: "Réalisation d'un bâtiment en torchis — Kosovo", type: "image" },
-    { src: kosovoConstruction5, alt: "Atelier torchis", caption: "Les mains dans le torchis — Kosovo", type: "image" },
-    { src: kosovoConstruction6, alt: "Application du torchis", caption: "Techniques ancestrales de construction — Kosovo", type: "image" },
-    { src: kosovoConstruction7, alt: "Manipulation du torchis", caption: "Apprentissage éco-construction — Kosovo", type: "image" },
+    { src: kosovoConstruction3, alt: "Préparation du torchis", caption: "Préparation du torchis en groupe, Kosovo", type: "image" },
+    { src: kosovoConstruction4, alt: "Structure en torchis", caption: "Réalisation d'un bâtiment en torchis, Kosovo", type: "image" },
+    { src: kosovoConstruction5, alt: "Atelier torchis", caption: "Les mains dans le torchis, Kosovo", type: "image" },
+    { src: kosovoConstruction6, alt: "Application du torchis", caption: "Techniques ancestrales de construction, Kosovo", type: "image" },
+    { src: kosovoConstruction7, alt: "Manipulation du torchis", caption: "Apprentissage éco-construction, Kosovo", type: "image" },
   ];
 
   return (

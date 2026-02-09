@@ -270,7 +270,7 @@ const AtelierBotaniqueLePecq = () => {
                     Une activité parfaite pour profiter des beaux jours en bord de Seine !"
                   </p>
                   <footer className="text-sm text-charcoal/70">
-                    — <strong>Sophie M.</strong>, Le Pecq
+                    <strong>Sophie M.</strong>, Le Pecq
                   </footer>
                 </blockquote>
               </div>
