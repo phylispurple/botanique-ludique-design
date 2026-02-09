@@ -110,9 +110,9 @@ const Gallery = () => {
     { src: collegeEee1Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
     
     // Ligne 8 : Interventions scolaires
-    { src: collegeEee2Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
-    { src: collegeEee3Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
-    { src: collegeEee4Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee2Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee3Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee4Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
     
     // Ligne 9-11 : Éco-construction Kosovo
     { src: kosovoConstruction1, alt: "Éco-construction au Kosovo", caption: "Construction d'une structure en bois — Kosovo", type: "image" },
