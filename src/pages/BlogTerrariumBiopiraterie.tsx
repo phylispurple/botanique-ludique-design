@@ -614,63 +614,63 @@ const BlogTerrariumBiopiraterie = () => {
                       <span className="text-sage font-bold mt-0.5">•</span>
                       <span>
                         Ward, N.B. (1842). <em>On the Growth of Plants in Closely Glazed Cases</em>. London: John Van Voorst. 
-                        — L'ouvrage fondateur de Nathaniel Ward décrivant l'invention du Wardian Case.
+                        L'ouvrage fondateur de Nathaniel Ward décrivant l'invention du Wardian Case.
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-sage font-bold mt-0.5">•</span>
                       <span>
                         Keogh, Luke (2020). <em>The Wardian Case: How a Simple Box Moved Plants and Changed the World</em>. University of Chicago Press. 
-                        — Étude historique complète sur l'impact du Wardian Case sur le commerce colonial des plantes.
+                        Étude historique complète sur l'impact du Wardian Case sur le commerce colonial des plantes.
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-sage font-bold mt-0.5">•</span>
                       <span>
                         Jackson, Joe (2008). <em>The Thief at the End of the World: Rubber, Power, and the Seeds of Empire</em>. Viking Press. 
-                        — Récit détaillé du vol des graines d'hévéa par Henry Wickham.
+                        Récit détaillé du vol des graines d'hévéa par Henry Wickham.
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-sage font-bold mt-0.5">•</span>
                       <span>
                         Dean, Warren (1987). <em>Brazil and the Struggle for Rubber: A Study in Environmental History</em>. Cambridge University Press. 
-                        — Analyse de l'industrie du caoutchouc au Brésil et du système d'aviamento.
+                        Analyse de l'industrie du caoutchouc au Brésil et du système d'aviamento.
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-sage font-bold mt-0.5">•</span>
                       <span>
                         Taussig, Michael (1987). <em>Shamanism, Colonialism, and the Wild Man: A Study in Terror and Healing</em>. University of Chicago Press. 
-                        — Étude anthropologique majeure sur la terreur dans le Putumayo et l'exploitation des peuples indigènes.
+                        Étude anthropologique majeure sur la terreur dans le Putumayo et l'exploitation des peuples indigènes.
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-sage font-bold mt-0.5">•</span>
                       <span>
                         Hardenburg, W.E. (1912). <em>The Putumayo, the Devil's Paradise</em>. London: T. Fisher Unwin. 
-                        — Témoignage de première main sur les atrocités de la Casa Arana dans le Putumayo.
+                        Témoignage de première main sur les atrocités de la Casa Arana dans le Putumayo.
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-sage font-bold mt-0.5">•</span>
                       <span>
                         Brockway, Lucile H. (1979). <em>Science and Colonial Expansion: The Role of the British Royal Botanic Gardens</em>. Academic Press. 
-                        — Sur le rôle de Kew Gardens dans le transfert colonial des plantes économiques.
+                        Sur le rôle de Kew Gardens dans le transfert colonial des plantes économiques.
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-sage font-bold mt-0.5">•</span>
                       <span>
                         Weinstein, Barbara (1983). <em>The Amazon Rubber Boom, 1850–1920</em>. Stanford University Press. 
-                        — Référence académique sur le boom du caoutchouc, l'effondrement de Manaus et les conditions des <em>seringueiros</em>.
+                        Référence académique sur le boom du caoutchouc, l'effondrement de Manaus et les conditions des <em>seringueiros</em>.
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-sage font-bold mt-0.5">•</span>
                       <span>
                         Allen, David Elliston (1969). <em>The Victorian Fern Craze: A History of Pteridomania</em>. Hutchinson. 
-                        — L'ouvrage de référence sur la <em>fern fever</em> victorienne.
+                        L'ouvrage de référence sur la <em>fern fever</em> victorienne.
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
@@ -683,9 +683,9 @@ const BlogTerrariumBiopiraterie = () => {
                           rel="noopener noreferrer"
                           className="text-sage hover:text-sage-dark underline underline-offset-2 transition-colors"
                         >
-                          <em>The Fern Fever</em> — YouTube
+                          <em>The Fern Fever</em>, YouTube
                         </a>. 
-                        — Excellente vidéo de vulgarisation sur le phénomène de la ptéridomanie victorienne.
+                        Excellente vidéo de vulgarisation sur le phénomène de la ptéridomanie victorienne.
                       </span>
                     </li>
                   </ul>
