@@ -85,8 +85,8 @@ const Gallery = () => {
     { src: teinture1Image, alt: "Atelier teinture végétale", caption: "Atelier teinture végétale, Préparation des tissus", type: "image" },
     
     // Ligne 4 : Teinture végétale (suite)
-    { src: teinture2Image, alt: "Teinture végétale résultat", caption: "Atelier teinture végétale — Couleurs naturelles", type: "image" },
-    { src: teinture3Image, alt: "Détail teinture végétale", caption: "Atelier teinture végétale — Fil teint au bleu", type: "image" },
+    { src: teinture2Image, alt: "Teinture végétale résultat", caption: "Atelier teinture végétale, Couleurs naturelles", type: "image" },
+    { src: teinture3Image, alt: "Détail teinture végétale", caption: "Atelier teinture végétale, Fil teint au bleu", type: "image" },
     { src: "/videos/workshop-dyeing.mp4", alt: "Atelier teinture végétale", caption: "Atelier teinture végétale en vidéo", type: "video" },
     
     // Ligne 5 : Nature et créativité
