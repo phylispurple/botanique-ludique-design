@@ -119,7 +119,7 @@ const Index = () => {
                 lineHeight: '1.3',
                 fontWeight: 400
               }}>
-                Botanique Ludique : L'Art de créer et de reconnecter à la Nature
+                Quand l'atelier créatif rencontre l'anthropologie de la nature
               </h1>
               <h2 className="text-lg sm:text-xl md:text-2xl leading-relaxed" style={{
                 color: '#F7F7EB',
@@ -127,7 +127,7 @@ const Index = () => {
                 fontWeight: 300,
                 opacity: 0.95
               }}>
-                Découvrez des ateliers créatifs pour tous, de l'herbier au Kokédama
+                Association d'ethnobotanique — Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
               </h2>
             </div>
             
