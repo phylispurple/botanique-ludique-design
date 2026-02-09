@@ -105,7 +105,7 @@ const Gallery = () => {
     { src: "/videos/workshop-demo-4.mp4", alt: "Atelier en groupe", caption: "Atelier participatif", type: "video" },
     
     // Ligne 7 : Ateliers éducatifs
-    { src: atelierAdulteImage, alt: "Atelier herbier adulte", caption: "Atelier création d'herbier — Adultes", type: "image" },
+    { src: atelierAdulteImage, alt: "Atelier herbier adulte", caption: "Atelier création d'herbier, Adultes", type: "image" },
     { src: fresqueVegetaleImage, alt: "Fresque végétale", caption: "Fresques Végétales", type: "image" },
     { src: collegeEee1Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
     
