@@ -75,9 +75,9 @@ const Gallery = () => {
     { src: "/videos/workshop-demo.mp4", alt: "Immersion dans nos ateliers", caption: "Immersion dans nos ateliers", type: "video" },
     
     // Ligne 2 : Créations botaniques
-    { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium — Atelier Botanique Ludique", type: "image" },
+    { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium, Atelier Botanique Ludique", type: "image" },
     { src: flowerCrownImage, alt: "Couronne de fleurs", caption: "Atelier couronne de fleurs", type: "image" },
-    { src: "/videos/workshop-epoxy-floral.mp4", alt: "Création époxy floral", caption: "Atelier Époxy Floral — Plateaux et tables en résine", type: "video" },
+    { src: "/videos/workshop-epoxy-floral.mp4", alt: "Création époxy floral", caption: "Atelier Époxy Floral, Plateaux et tables en résine", type: "video" },
     
     // Ligne 3 : Ateliers en action
     { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines — Atelier Botanique Ludique", type: "image" },
