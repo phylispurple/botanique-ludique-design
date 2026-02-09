@@ -173,8 +173,8 @@ const Pro = () => {
             Pro & Entreprises
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Team building, formations scolaires, animations pour collectivités et EHPAD — 
-            Des interventions botaniques sur mesure à Paris, dans les Yvelines (78) et les Hauts-de-Seine (92)
+            Team building, formations scolaires, animations pour collectivités et EHPAD. 
+            Des interventions botaniques sur mesure à Paris, dans les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95)
           </p>
           
           <TrustBadges variant="compact" showAll={false} />
