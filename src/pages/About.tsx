@@ -102,7 +102,7 @@ const About = () => {
                   Dans mes recherches sur les interactions entre citadins et végétaux dans le Grand Paris, j'ai exploré comment les urbains perçoivent, nomment et interagissent avec les plantes qui les entourent. Ce qui m'a frappée, c'est à quel point nous avons perdu le vocabulaire, les gestes et les savoirs qui reliaient autrefois l'humain au monde végétal.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
-                  Mes ateliers sont une tentative de <em>réactiver ces savoirs</em>. Non pas pour reproduire le passé de manière nostalgique, mais pour comprendre ce que ces pratiques révèlent de notre rapport au monde — et ce qu'elles peuvent nous apprendre aujourd'hui.
+                  Mes ateliers sont une tentative de <em>réactiver ces savoirs</em>. Non pas pour reproduire le passé de manière nostalgique, mais pour comprendre ce que ces pratiques révèlent de notre rapport au monde, et ce qu'elles peuvent nous apprendre aujourd'hui.
                 </p>
                 <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
               </div>
