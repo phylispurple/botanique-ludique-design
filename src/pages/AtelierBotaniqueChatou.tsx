@@ -347,7 +347,7 @@ const AtelierBotaniqueChatou = () => {
                     chargé d'histoire artistique, c'était magique. Je reviens pour le prochain atelier !"
                   </p>
                   <footer className="text-sm text-charcoal/70">
-                    — <strong>Isabelle D.</strong>, Chatou
+                    <strong>Isabelle D.</strong>, Chatou
                   </footer>
                 </blockquote>
               </div>

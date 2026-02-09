@@ -49,7 +49,7 @@ const SeasonalBanner = () => {
         <div className="flex items-center gap-3 text-off-white">
           <IconComponent className="w-5 h-5" />
           <span className="font-semibold text-lg">{content.title}</span>
-          <span className="hidden sm:inline text-off-white/80">—</span>
+          <span className="hidden sm:inline text-off-white/80">·</span>
           <span className="hidden sm:inline text-off-white/90">{content.subtitle}</span>
         </div>
         <span className="sm:hidden text-off-white/90 text-sm text-center">{content.subtitle}</span>
