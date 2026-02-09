@@ -328,7 +328,7 @@ const Pro = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-charcoal">Toute l'Île-de-France</h3>
                 <p className="text-muted-foreground">
-                  Interventions à Paris, Yvelines (78), Hauts-de-Seine (92) pour vos événements d'entreprise
+                  Interventions à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95) pour vos événements d'entreprise
                 </p>
               </CardContent>
             </Card>

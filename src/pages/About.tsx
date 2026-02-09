@@ -135,10 +135,10 @@ const About = () => {
               <div className="bg-sand rounded-lg p-8 md:p-12 mb-16">
                 <blockquote className="text-center">
                   <p className="text-2xl md:text-3xl italic text-charcoal mb-6">
-                    "Je ne cherche pas à divertir, mais à éveiller — à créer des espaces où l'on peut réapprendre à regarder, à toucher, à s'émerveiller."
+                    "Je ne cherche pas à divertir, mais à éveiller, à créer des espaces où l'on peut réapprendre à regarder, à toucher, à s'émerveiller."
                   </p>
                   <footer className="text-sm text-charcoal/70 uppercase tracking-wider font-semibold">
-                    — Vanessa Charlery
+                    Vanessa Charlery
                   </footer>
                 </blockquote>
               </div>

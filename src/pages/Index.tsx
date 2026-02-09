@@ -127,7 +127,7 @@ const Index = () => {
                 fontWeight: 300,
                 opacity: 0.95
               }}>
-                Association d'ethnobotanique — Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
+                Association d'ethnobotanique. Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
               </h2>
             </div>
             
