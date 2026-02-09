@@ -226,7 +226,7 @@ const Pro = () => {
                   Interventions sur mesure
                 </h2>
                 <p className="text-base md:text-lg text-white/90 leading-relaxed max-w-2xl">
-                  Entreprises, écoles, collectivités, EHPAD — Une approche anthropologique unique pour reconnecter au végétal
+                  Entreprises, écoles, collectivités, EHPAD. Une approche anthropologique unique pour reconnecter au végétal
                 </p>
               </div>
             </div>
