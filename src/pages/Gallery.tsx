@@ -96,7 +96,7 @@ const Gallery = () => {
     
     // Ligne 5 : Artisanat végétal
     { src: basketryImage, alt: "Atelier vannerie", caption: "Atelier vannerie et tressage", type: "image" },
-    { src: succulentsImage, alt: "Atelier succulentes", caption: "Succulentes — Atelier Botanique Ludique", type: "image" },
+    { src: succulentsImage, alt: "Atelier succulentes", caption: "Succulentes, Atelier Botanique Ludique", type: "image" },
     { src: "/videos/workshop-demo-3.mp4", alt: "Création naturelle", caption: "Création avec éléments naturels", type: "video" },
     
     // Ligne 6 : Bien-être et saisons
