@@ -70,7 +70,7 @@ const Gallery = () => {
 
   const items = [
     // Ligne 1 : Portrait + Ateliers phares
-    { src: portraitVanessaImage, alt: "Vanessa Charlery, ethnobotaniste", caption: "Portrait — Vanessa Charlery, fondatrice", type: "image" },
+    { src: portraitVanessaImage, alt: "Vanessa Charlery, ethnobotaniste", caption: "Portrait, Vanessa Charlery, fondatrice", type: "image" },
     { src: kokedamaGardenImage, alt: "Kokedama dans un jardin", caption: "Kokedama dans un jardin naturel", type: "image" },
     { src: "/videos/workshop-demo.mp4", alt: "Immersion dans nos ateliers", caption: "Immersion dans nos ateliers", type: "video" },
     
