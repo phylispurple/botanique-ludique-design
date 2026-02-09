@@ -107,7 +107,7 @@ const Gallery = () => {
     // Ligne 7 : Ateliers éducatifs
     { src: atelierAdulteImage, alt: "Atelier herbier adulte", caption: "Atelier création d'herbier, Adultes", type: "image" },
     { src: fresqueVegetaleImage, alt: "Fresque végétale", caption: "Fresques Végétales", type: "image" },
-    { src: collegeEee1Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee1Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
     
     // Ligne 8 : Interventions scolaires
     { src: collegeEee2Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
