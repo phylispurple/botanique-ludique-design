@@ -89,7 +89,7 @@ const About = () => {
                   Ce que je propose n'est pas du folklore. Ce n'est pas une activité vide de sens où l'on fabrique un objet joli pour l'oublier le lendemain. <strong>C'est une invitation à comprendre d'où viennent ces pratiques</strong>, à saisir leur profondeur historique et culturelle, et à travers cette compréhension, à développer notre propre sensibilité au vivant.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Ma formation en anthropologie à l'EHESS, sous la direction de Florence Brunois-Pasina, m'a appris que chaque geste technique porte en lui une vision du monde. Créer un kokedama, teindre un tissu avec des plantes, tresser de l'osier — ces pratiques ancestrales racontent des histoires de cohabitation entre humains et végétaux.
+                  Ma formation en anthropologie à l'EHESS, sous la direction de Florence Brunois-Pasina, m'a appris que chaque geste technique porte en lui une vision du monde. Créer un kokedama, teindre un tissu avec des plantes, tresser de l'osier, ces pratiques ancestrales racontent des histoires de cohabitation entre humains et végétaux.
                 </p>
               </div>
 
