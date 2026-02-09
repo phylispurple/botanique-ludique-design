@@ -116,7 +116,7 @@ const About = () => {
                   L'ethnobotanique nous enseigne que les plantes ne sont jamais de simples ressources. Dans de nombreuses cultures, elles sont des partenaires, des enseignantes, des êtres avec lesquels on dialogue. Cette vision, que Philippe Descola appelle le "naturalisme" occidental, n'est qu'une cosmologie parmi d'autres.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
-                  Quand on comprend que la teinture végétale était un acte sacré dans certaines sociétés, que le tressage de l'osier accompagnait les rites de passage, ou que le jardin japonais incarne une philosophie du vide et de l'impermanence — alors le geste créatif prend une tout autre dimension. <strong>On ne fait plus "juste" un atelier : on s'inscrit dans une lignée de pratiques millénaires.</strong>
+                  Quand on comprend que la teinture végétale était un acte sacré dans certaines sociétés, que le tressage de l'osier accompagnait les rites de passage, ou que le jardin japonais incarne une philosophie du vide et de l'impermanence, alors le geste créatif prend une tout autre dimension. <strong>On ne fait plus "juste" un atelier : on s'inscrit dans une lignée de pratiques millénaires.</strong>
                 </p>
                 <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
               </div>
