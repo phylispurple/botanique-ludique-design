@@ -648,63 +648,63 @@ const BlogFilmsNature = () => {
                     <span className="text-sage font-bold mt-0.5">•</span>
                     <span>
                       Botkin, Daniel (1990). <em>Discordant Harmonies: A New Ecology for the Twenty-First Century</em>. Oxford University Press. 
-                      — Sur le mythe de l'équilibre de la nature.
+                      Sur le mythe de l'équilibre de la nature.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-sage font-bold mt-0.5">•</span>
                     <span>
                       Cronon, William (1995). « The Trouble with Wilderness; or, Getting Back to the Wrong Nature ». <em>Environmental History</em>, 1(1), 7-28. 
-                      — Déconstruction du concept de « nature sauvage ».
+                      Déconstruction du concept de « nature sauvage ».
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-sage font-bold mt-0.5">•</span>
                     <span>
                       Morton, Timothy (2013). <em>Hyperobjects: Philosophy and Ecology after the End of the World</em>. University of Minnesota Press. 
-                      — Sur l'imperceptibilité des phénomènes écologiques à grande échelle.
+                      Sur l'imperceptibilité des phénomènes écologiques à grande échelle.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-sage font-bold mt-0.5">•</span>
                     <span>
                       Simard, Suzanne (2021). <em>Finding the Mother Tree: Discovering the Wisdom of the Forest</em>. Penguin. 
-                      — Sur les réseaux mycorhiziens et la communication entre les arbres.
+                      Sur les réseaux mycorhiziens et la communication entre les arbres.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-sage font-bold mt-0.5">•</span>
                     <span>
                       Brockway, Lucile (1979). <em>Science and Colonial Expansion: The Role of the British Royal Botanic Gardens</em>. Academic Press. 
-                      — Sur le rôle de la botanique dans l'expansion coloniale.
+                      Sur le rôle de la botanique dans l'expansion coloniale.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-sage font-bold mt-0.5">•</span>
                     <span>
                       Allaby, Michael (2006). <em>The Age of DNA: Molecular Paleontology and the Jurassic Park Effect</em>. 
-                      — Sur la demi-vie de l'ADN et l'impossibilité de cloner des dinosaures.
+                      Sur la demi-vie de l'ADN et l'impossibilité de cloner des dinosaures.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-sage font-bold mt-0.5">•</span>
                     <span>
                       Krakauer, Jon (1996). <em>Into the Wild</em>. Villard Books. 
-                      — Récit de la vie et de la mort de Christopher McCandless.
+                      Récit de la vie et de la mort de Christopher McCandless.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-sage font-bold mt-0.5">•</span>
                     <span>
                       Blanc, Guillaume (2020). <em>L'invention du colonialisme vert. Pour en finir avec le mythe de l'Éden africain</em>. Flammarion. 
-                      — Sur la construction coloniale de la « nature vierge ».
+                      Sur la construction coloniale de la « nature vierge ».
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-sage font-bold mt-0.5">•</span>
                     <span>
                       Clausen, Thomas P. et al. (2014). « ODAP and the death of Chris McCandless ». <em>Wilderness & Environmental Medicine</em>. 
-                      — Sur la toxicité des graines d'<em>Hedysarum alpinum</em>.
+                      Sur la toxicité des graines d'<em>Hedysarum alpinum</em>.
                     </span>
                   </li>
                 </ul>
