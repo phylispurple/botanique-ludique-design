@@ -212,13 +212,13 @@ const AteliersBotaniquesYvelines = () => {
                   <p className="text-charcoal/80 italic mb-4">
                     "Atelier kokedama au top à Chatou ! Vanessa est très pédagogue et l'ambiance est super conviviale. Je recommande !"
                   </p>
-                  <p className="text-sage-dark font-semibold">— Marie, Chatou</p>
+                  <p className="text-sage-dark font-semibold">Marie, Chatou</p>
                 </div>
                 <div className="bg-sage/5 p-6 rounded-lg">
                   <p className="text-charcoal/80 italic mb-4">
                     "J'ai adoré l'atelier de teinture végétale au Pecq. On apprend vraiment les techniques anciennes avec des matériaux naturels."
                   </p>
-                  <p className="text-sage-dark font-semibold">— Sophie, Le Vésinet</p>
+                  <p className="text-sage-dark font-semibold">Sophie, Le Vésinet</p>
                 </div>
               </div>
             </div>

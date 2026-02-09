@@ -211,7 +211,7 @@ const TeamBuildingRSEParis = () => {
                 Nos collaborateurs ont adoré cette parenthèse nature créative, et cela s'inscrit parfaitement dans notre 
                 démarche RSE. À refaire !"
               </p>
-              <p className="text-sage-dark font-semibold">— Responsable RH, Entreprise Tech Paris 16e</p>
+              <p className="text-sage-dark font-semibold">Responsable RH, Entreprise Tech Paris 16e</p>
             </div>
 
             {/* CTA */}

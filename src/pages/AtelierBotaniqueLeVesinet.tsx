@@ -315,7 +315,7 @@ const AtelierBotaniqueLeVesinet = () => {
                     a rendu l'expérience encore plus spéciale. Je recommande à toutes les familles !"
                   </p>
                   <footer className="text-sm text-charcoal/70">
-                    — <strong>Marie L.</strong>, Le Vésinet
+                    <strong>Marie L.</strong>, Le Vésinet
                   </footer>
                 </blockquote>
               </div>

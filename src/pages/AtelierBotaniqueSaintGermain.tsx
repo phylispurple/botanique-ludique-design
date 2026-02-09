@@ -268,7 +268,7 @@ const AtelierBotaniqueSaintGermain = () => {
                     à toutes les familles du secteur de Saint-Germain."
                   </p>
                   <footer className="text-sm text-charcoal/70">
-                    — <strong>Marie L.</strong>, Le Vésinet
+                    <strong>Marie L.</strong>, Le Vésinet
                   </footer>
                 </blockquote>
               </div>

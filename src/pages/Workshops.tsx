@@ -83,7 +83,7 @@ const workshops: Workshop[] = [
   },
   {
     title: "Terrariums",
-    description: "Composez des écosystèmes miniatures sous verre en s'inspirant des caisses de Ward victoriennes. Créez des paysages en couches avec mousses, pierres et plantes délicates — des mondes minuscules qui prospèrent avec peu d'entretien.",
+    description: "Composez des écosystèmes miniatures sous verre en s'inspirant des caisses de Ward victoriennes. Créez des paysages en couches avec mousses, pierres et plantes délicates, des mondes minuscules qui prospèrent avec peu d'entretien.",
     duration: "2h",
     public: "Tout public, enfants dès 8 ans",
     image: terrariumImage,

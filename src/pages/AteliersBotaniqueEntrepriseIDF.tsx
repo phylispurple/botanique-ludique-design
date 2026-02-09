@@ -248,7 +248,7 @@ const AteliersBotaniqueEntrepriseIDF = () => {
                 déplacée avec tout le matériel, l'animation était top et nos 35 collaborateurs ont adoré l'atelier 
                 kokedama. Je recommande vivement !"
               </p>
-              <p className="text-sage-dark font-semibold">— DRH, Groupe Tech Évry (91)</p>
+              <p className="text-sage-dark font-semibold">DRH, Groupe Tech Évry (91)</p>
             </div>
 
             {/* CTA */}

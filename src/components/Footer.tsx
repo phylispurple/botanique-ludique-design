@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-serif text-2xl font-light" style={{ color: '#5D653A' }}>Botanique Ludique</h3>
             <p className="text-sm leading-relaxed" style={{ color: '#5D653A', opacity: 0.7 }}>
-              Ateliers botaniques créatifs pour reconnecter l'humain au végétal.
+              Association d'ethnobotanique. Ateliers créatifs pour reconnecter l'humain au végétal.
             </p>
           </div>
 

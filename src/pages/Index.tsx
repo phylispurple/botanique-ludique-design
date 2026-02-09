@@ -127,7 +127,7 @@ const Index = () => {
                 fontWeight: 300,
                 opacity: 0.95
               }}>
-                Association d'ethnobotanique — Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
+                Association d'ethnobotanique. Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
               </h2>
             </div>
             
@@ -202,7 +202,7 @@ const Index = () => {
               <div className="space-y-5">
                 <p className="text-lg text-charcoal/80 leading-relaxed">
                   Créée par <strong>Vanessa Charlery</strong>, ethnobotaniste et anthropologue, 
-                  Botanique Ludique propose des ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95) qui allient créativité artistique et transmission 
+                  l'association Botanique Ludique propose des ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95) qui allient créativité artistique et transmission 
                   des savoirs ethnobotaniques.
                 </p>
                 <p className="text-base text-charcoal/70 leading-relaxed">

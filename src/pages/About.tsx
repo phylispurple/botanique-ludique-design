@@ -89,7 +89,7 @@ const About = () => {
                   Ce que je propose n'est pas du folklore. Ce n'est pas une activité vide de sens où l'on fabrique un objet joli pour l'oublier le lendemain. <strong>C'est une invitation à comprendre d'où viennent ces pratiques</strong>, à saisir leur profondeur historique et culturelle, et à travers cette compréhension, à développer notre propre sensibilité au vivant.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Ma formation en anthropologie à l'EHESS, sous la direction de Florence Brunois-Pasina, m'a appris que chaque geste technique porte en lui une vision du monde. Créer un kokedama, teindre un tissu avec des plantes, tresser de l'osier — ces pratiques ancestrales racontent des histoires de cohabitation entre humains et végétaux.
+                  Ma formation en anthropologie à l'EHESS, sous la direction de Florence Brunois-Pasina, m'a appris que chaque geste technique porte en lui une vision du monde. Créer un kokedama, teindre un tissu avec des plantes, tresser de l'osier, ces pratiques ancestrales racontent des histoires de cohabitation entre humains et végétaux.
                 </p>
               </div>
 
@@ -102,7 +102,7 @@ const About = () => {
                   Dans mes recherches sur les interactions entre citadins et végétaux dans le Grand Paris, j'ai exploré comment les urbains perçoivent, nomment et interagissent avec les plantes qui les entourent. Ce qui m'a frappée, c'est à quel point nous avons perdu le vocabulaire, les gestes et les savoirs qui reliaient autrefois l'humain au monde végétal.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
-                  Mes ateliers sont une tentative de <em>réactiver ces savoirs</em>. Non pas pour reproduire le passé de manière nostalgique, mais pour comprendre ce que ces pratiques révèlent de notre rapport au monde — et ce qu'elles peuvent nous apprendre aujourd'hui.
+                  Mes ateliers sont une tentative de <em>réactiver ces savoirs</em>. Non pas pour reproduire le passé de manière nostalgique, mais pour comprendre ce que ces pratiques révèlent de notre rapport au monde, et ce qu'elles peuvent nous apprendre aujourd'hui.
                 </p>
                 <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
               </div>
@@ -116,7 +116,7 @@ const About = () => {
                   L'ethnobotanique nous enseigne que les plantes ne sont jamais de simples ressources. Dans de nombreuses cultures, elles sont des partenaires, des enseignantes, des êtres avec lesquels on dialogue. Cette vision, que Philippe Descola appelle le "naturalisme" occidental, n'est qu'une cosmologie parmi d'autres.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
-                  Quand on comprend que la teinture végétale était un acte sacré dans certaines sociétés, que le tressage de l'osier accompagnait les rites de passage, ou que le jardin japonais incarne une philosophie du vide et de l'impermanence — alors le geste créatif prend une tout autre dimension. <strong>On ne fait plus "juste" un atelier : on s'inscrit dans une lignée de pratiques millénaires.</strong>
+                  Quand on comprend que la teinture végétale était un acte sacré dans certaines sociétés, que le tressage de l'osier accompagnait les rites de passage, ou que le jardin japonais incarne une philosophie du vide et de l'impermanence, alors le geste créatif prend une tout autre dimension. <strong>On ne fait plus "juste" un atelier : on s'inscrit dans une lignée de pratiques millénaires.</strong>
                 </p>
                 <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
               </div>
@@ -135,10 +135,10 @@ const About = () => {
               <div className="bg-sand rounded-lg p-8 md:p-12 mb-16">
                 <blockquote className="text-center">
                   <p className="text-2xl md:text-3xl italic text-charcoal mb-6">
-                    "Je ne cherche pas à divertir, mais à éveiller — à créer des espaces où l'on peut réapprendre à regarder, à toucher, à s'émerveiller."
+                    "Je ne cherche pas à divertir, mais à éveiller, à créer des espaces où l'on peut réapprendre à regarder, à toucher, à s'émerveiller."
                   </p>
                   <footer className="text-sm text-charcoal/70 uppercase tracking-wider font-semibold">
-                    — Vanessa Charlery
+                    Vanessa Charlery
                   </footer>
                 </blockquote>
               </div>

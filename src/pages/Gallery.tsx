@@ -70,33 +70,33 @@ const Gallery = () => {
 
   const items = [
     // Ligne 1 : Portrait + Ateliers phares
-    { src: portraitVanessaImage, alt: "Vanessa Charlery, ethnobotaniste", caption: "Portrait — Vanessa Charlery, fondatrice", type: "image" },
+    { src: portraitVanessaImage, alt: "Vanessa Charlery, ethnobotaniste", caption: "Portrait, Vanessa Charlery, fondatrice", type: "image" },
     { src: kokedamaGardenImage, alt: "Kokedama dans un jardin", caption: "Kokedama dans un jardin naturel", type: "image" },
     { src: "/videos/workshop-demo.mp4", alt: "Immersion dans nos ateliers", caption: "Immersion dans nos ateliers", type: "video" },
     
     // Ligne 2 : Créations botaniques
-    { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium — Atelier Botanique Ludique", type: "image" },
+    { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium, Atelier Botanique Ludique", type: "image" },
     { src: flowerCrownImage, alt: "Couronne de fleurs", caption: "Atelier couronne de fleurs", type: "image" },
-    { src: "/videos/workshop-epoxy-floral.mp4", alt: "Création époxy floral", caption: "Atelier Époxy Floral — Plateaux et tables en résine", type: "video" },
+    { src: "/videos/workshop-epoxy-floral.mp4", alt: "Création époxy floral", caption: "Atelier Époxy Floral, Plateaux et tables en résine", type: "video" },
     
     // Ligne 3 : Ateliers en action
-    { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines — Atelier Botanique Ludique", type: "image" },
-    { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier — MJC Le Vésinet", type: "image" },
-    { src: teinture1Image, alt: "Atelier teinture végétale", caption: "Atelier teinture végétale — Préparation des tissus", type: "image" },
+    { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines, Atelier Botanique Ludique", type: "image" },
+    { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier, MJC Le Vésinet", type: "image" },
+    { src: teinture1Image, alt: "Atelier teinture végétale", caption: "Atelier teinture végétale, Préparation des tissus", type: "image" },
     
     // Ligne 4 : Teinture végétale (suite)
-    { src: teinture2Image, alt: "Teinture végétale résultat", caption: "Atelier teinture végétale — Couleurs naturelles", type: "image" },
-    { src: teinture3Image, alt: "Détail teinture végétale", caption: "Atelier teinture végétale — Fil teint au bleu", type: "image" },
+    { src: teinture2Image, alt: "Teinture végétale résultat", caption: "Atelier teinture végétale, Couleurs naturelles", type: "image" },
+    { src: teinture3Image, alt: "Détail teinture végétale", caption: "Atelier teinture végétale, Fil teint au bleu", type: "image" },
     { src: "/videos/workshop-dyeing.mp4", alt: "Atelier teinture végétale", caption: "Atelier teinture végétale en vidéo", type: "video" },
     
     // Ligne 5 : Nature et créativité
     { src: forestWalkImage, alt: "Balade en forêt", caption: "Atelier sur les espèces exotiques envahissantes", type: "image" },
-    { src: tatakiZomeImage, alt: "Atelier Tataki Zome", caption: "Atelier Tataki Zome — Impression végétale japonaise", type: "image" },
+    { src: tatakiZomeImage, alt: "Atelier Tataki Zome", caption: "Atelier Tataki Zome, Impression végétale japonaise", type: "image" },
     { src: "/videos/workshop-demo-2.mp4", alt: "Atelier botanique", caption: "Atelier de création botanique", type: "video" },
     
     // Ligne 5 : Artisanat végétal
     { src: basketryImage, alt: "Atelier vannerie", caption: "Atelier vannerie et tressage", type: "image" },
-    { src: succulentsImage, alt: "Atelier succulentes", caption: "Succulentes — Atelier Botanique Ludique", type: "image" },
+    { src: succulentsImage, alt: "Atelier succulentes", caption: "Succulentes, Atelier Botanique Ludique", type: "image" },
     { src: "/videos/workshop-demo-3.mp4", alt: "Création naturelle", caption: "Création avec éléments naturels", type: "video" },
     
     // Ligne 6 : Bien-être et saisons
@@ -105,23 +105,23 @@ const Gallery = () => {
     { src: "/videos/workshop-demo-4.mp4", alt: "Atelier en groupe", caption: "Atelier participatif", type: "video" },
     
     // Ligne 7 : Ateliers éducatifs
-    { src: atelierAdulteImage, alt: "Atelier herbier adulte", caption: "Atelier création d'herbier — Adultes", type: "image" },
+    { src: atelierAdulteImage, alt: "Atelier herbier adulte", caption: "Atelier création d'herbier, Adultes", type: "image" },
     { src: fresqueVegetaleImage, alt: "Fresque végétale", caption: "Fresques Végétales", type: "image" },
-    { src: collegeEee1Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee1Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
     
     // Ligne 8 : Interventions scolaires
-    { src: collegeEee2Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
-    { src: collegeEee3Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
-    { src: collegeEee4Image, alt: "Atelier collège", caption: "Atelier collège — Espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee2Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee3Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
+    { src: collegeEee4Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
     
     // Ligne 9-11 : Éco-construction Kosovo
-    { src: kosovoConstruction1, alt: "Éco-construction au Kosovo", caption: "Construction d'une structure en bois — Kosovo", type: "image" },
-    { src: kosovoConstruction2, alt: "Équipe éco-construction Kosovo", caption: "Travail d'équipe en éco-construction — Kosovo", type: "image" },
-    { src: kosovoConstruction3, alt: "Préparation du torchis", caption: "Préparation du torchis en groupe — Kosovo", type: "image" },
-    { src: kosovoConstruction4, alt: "Structure en torchis", caption: "Réalisation d'un bâtiment en torchis — Kosovo", type: "image" },
-    { src: kosovoConstruction5, alt: "Atelier torchis", caption: "Les mains dans le torchis — Kosovo", type: "image" },
-    { src: kosovoConstruction6, alt: "Application du torchis", caption: "Techniques ancestrales de construction — Kosovo", type: "image" },
-    { src: kosovoConstruction7, alt: "Manipulation du torchis", caption: "Apprentissage éco-construction — Kosovo", type: "image" },
+    { src: kosovoConstruction1, alt: "Éco-construction au Kosovo", caption: "Construction d'une structure en bois, Kosovo", type: "image" },
+    { src: kosovoConstruction2, alt: "Équipe éco-construction Kosovo", caption: "Travail d'équipe en éco-construction, Kosovo", type: "image" },
+    { src: kosovoConstruction3, alt: "Préparation du torchis", caption: "Préparation du torchis en groupe, Kosovo", type: "image" },
+    { src: kosovoConstruction4, alt: "Structure en torchis", caption: "Réalisation d'un bâtiment en torchis, Kosovo", type: "image" },
+    { src: kosovoConstruction5, alt: "Atelier torchis", caption: "Les mains dans le torchis, Kosovo", type: "image" },
+    { src: kosovoConstruction6, alt: "Application du torchis", caption: "Techniques ancestrales de construction, Kosovo", type: "image" },
+    { src: kosovoConstruction7, alt: "Manipulation du torchis", caption: "Apprentissage éco-construction, Kosovo", type: "image" },
   ];
 
   return (
