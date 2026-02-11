@@ -37,6 +37,14 @@ import AtelierBotaniqueSaintGermain from "./pages/AtelierBotaniqueSaintGermain";
 import AtelierBotaniqueLePecq from "./pages/AtelierBotaniqueLePecq";
 import AtelierBotaniqueLeVesinet from "./pages/AtelierBotaniqueLeVesinet";
 import AtelierBotaniqueChatou from "./pages/AtelierBotaniqueChatou";
+import AtelierTerrariumTeamBuilding from "./pages/AtelierTerrariumTeamBuilding";
+import AtelierBienEtreNatureEntreprise from "./pages/AtelierBienEtreNatureEntreprise";
+import AnimationSemaineQVCT from "./pages/AnimationSemaineQVCT";
+import ActiviteIntergenerationnelle from "./pages/ActiviteIntergenerationnelle";
+import AtelierKokedamaTeamBuilding from "./pages/AtelierKokedamaTeamBuilding";
+import AtelierTeintureScolaire from "./pages/AtelierTeintureScolaire";
+import AnimationNatureEHPAD from "./pages/AnimationNatureEHPAD";
+import AteliersBotaniquesComplets from "./pages/AteliersBotaniquesComplets";
 
 const queryClient = new QueryClient();
 
@@ -82,8 +90,16 @@ const App = () => (
           <Route path="/atelier-botanique-saint-germain-en-laye" element={<AtelierBotaniqueSaintGermain />} />
           <Route path="/atelier-botanique-le-pecq" element={<AtelierBotaniqueLePecq />} />
           <Route path="/atelier-botanique-le-vesinet" element={<AtelierBotaniqueLeVesinet />} />
-          <Route path="/atelier-botanique-chatou" element={<AtelierBotaniqueChatou />} />
-          <Route path="/mentions-legales" element={<LegalNotice />} />
+           <Route path="/atelier-botanique-chatou" element={<AtelierBotaniqueChatou />} />
+           <Route path="/atelier-terrarium-team-building" element={<AtelierTerrariumTeamBuilding />} />
+           <Route path="/atelier-bien-etre-nature-entreprise" element={<AtelierBienEtreNatureEntreprise />} />
+           <Route path="/animation-semaine-qvct" element={<AnimationSemaineQVCT />} />
+           <Route path="/activite-intergenerationnelle-nature" element={<ActiviteIntergenerationnelle />} />
+           <Route path="/atelier-kokedama-team-building" element={<AtelierKokedamaTeamBuilding />} />
+           <Route path="/atelier-teinture-vegetale-ecole" element={<AtelierTeintureScolaire />} />
+           <Route path="/animation-nature-ehpad" element={<AnimationNatureEHPAD />} />
+           <Route path="/ateliers-botaniques-tous" element={<AteliersBotaniquesComplets />} />
+           <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/conditions-de-vente" element={<SalesTerms />} />
           <Route path="/admin/testimonials" element={<AdminTestimonials />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
