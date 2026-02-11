@@ -106,42 +106,39 @@ const Index = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center text-center space-y-6 animate-fade-up">
-            {/* Main Title */}
-            <div className="space-y-5">
-              <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight uppercase" style={{
-                color: '#FFFFFF',
-                lineHeight: '1.15',
-                fontWeight: 800,
-                fontFamily: 'system-ui, -apple-system, sans-serif',
-                letterSpacing: '-0.02em',
-                textShadow: '0 2px 20px rgba(0,0,0,0.5)'
+            {/* Main Title - Elegant and Centered */}
+            <div className="space-y-4" style={{ fontFamily: 'Fraunces, serif' }}>
+              <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide" style={{
+                color: '#F7F7EB',
+                lineHeight: '1.3',
+                fontWeight: 400
               }}>
                 Quand l'atelier créatif rencontre l'anthropologie de la nature
               </h1>
-              <div className="w-20 h-1 bg-white/60 mx-auto rounded-full" />
-              <h2 className="text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto" style={{
-                color: 'rgba(255,255,255,0.9)',
-                lineHeight: '1.6',
-                fontWeight: 400,
-                fontFamily: 'system-ui, -apple-system, sans-serif'
+              <h2 className="text-lg sm:text-xl md:text-2xl leading-relaxed" style={{
+                color: '#F7F7EB',
+                lineHeight: '1.5',
+                fontWeight: 300,
+                opacity: 0.95
               }}>
                 Association d'ethnobotanique. Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
               </h2>
             </div>
             
-            {/* Description */}
-            <p className="text-sm sm:text-base max-w-[600px] mx-auto pt-1 font-medium" style={{
-              color: 'rgba(255,255,255,0.85)',
-              lineHeight: '1.6',
-              fontFamily: 'system-ui, -apple-system, sans-serif'
+            {/* Description - Centered with max-width */}
+            <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2 font-semibold" style={{
+              color: '#F7F7EB',
+              opacity: 0.95,
+              lineHeight: '1.6'
             }}>
               Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
             </p>
-            <p className="text-xs sm:text-sm max-w-[500px] mx-auto tracking-widest uppercase" style={{
-              color: 'rgba(255,255,255,0.65)',
-              fontFamily: 'system-ui, -apple-system, sans-serif'
+            <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
+              color: '#F7F7EB',
+              opacity: 0.8,
+              lineHeight: '1.5'
             }}>
-              Paris · Yvelines (78) · Hauts-de-Seine (92) · Val-d'Oise (95)
+              À Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
             </p>
             
             {/* CTA Buttons */}
