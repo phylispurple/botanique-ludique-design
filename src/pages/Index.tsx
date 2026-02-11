@@ -105,9 +105,9 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/60" />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col items-center text-center space-y-6 animate-fade-up">
-            {/* Main Title - Elegant and Centered */}
-            <div className="space-y-4" style={{ fontFamily: 'Fraunces, serif' }}>
+          <div className="flex flex-col items-center text-center space-y-6 animate-fade-up" style={{ fontFamily: 'Fraunces, serif' }}>
+            {/* Main Title */}
+            <div className="space-y-4">
               <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide" style={{
                 color: '#F7F7EB',
                 lineHeight: '1.3',
@@ -125,18 +125,20 @@ const Index = () => {
               </h2>
             </div>
             
-            {/* Description - Centered with max-width */}
-            <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2 font-semibold" style={{
+            {/* Description */}
+            <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2" style={{
               color: '#F7F7EB',
               opacity: 0.95,
-              lineHeight: '1.6'
+              lineHeight: '1.6',
+              fontWeight: 400
             }}>
               Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
             </p>
             <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
               color: '#F7F7EB',
               opacity: 0.8,
-              lineHeight: '1.5'
+              lineHeight: '1.5',
+              fontWeight: 300
             }}>
               À Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
             </p>
