@@ -101,47 +101,47 @@ const Index = () => {
         paddingTop: '15%',
         paddingBottom: '10%'
       }}>
-        
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/50" />
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center text-center space-y-6 animate-fade-up">
-            {/* Main Title - Elegant and Centered */}
-            <div className="space-y-4" style={{ fontFamily: 'Fraunces, serif' }}>
-              <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide" style={{
-                color: '#F4D03F',
-                lineHeight: '1.3',
-                fontWeight: 400,
-                textShadow: '2px 2px 4px rgba(0,0,0,0.8), -1px -1px 3px rgba(0,0,0,0.6)'
+            {/* Main Title */}
+            <div className="space-y-5">
+              <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight uppercase" style={{
+                color: '#FFFFFF',
+                lineHeight: '1.15',
+                fontWeight: 800,
+                fontFamily: 'system-ui, -apple-system, sans-serif',
+                letterSpacing: '-0.02em',
+                textShadow: '0 2px 20px rgba(0,0,0,0.5)'
               }}>
                 Quand l'atelier créatif rencontre l'anthropologie de la nature
               </h1>
-              <h2 className="text-lg sm:text-xl md:text-2xl leading-relaxed" style={{
-                color: '#FDE8A3',
-                lineHeight: '1.5',
-                fontWeight: 300,
-                opacity: 0.95,
-                textShadow: '1px 1px 3px rgba(0,0,0,0.7), -1px -1px 2px rgba(0,0,0,0.5)'
+              <div className="w-20 h-1 bg-white/60 mx-auto rounded-full" />
+              <h2 className="text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto" style={{
+                color: 'rgba(255,255,255,0.9)',
+                lineHeight: '1.6',
+                fontWeight: 400,
+                fontFamily: 'system-ui, -apple-system, sans-serif'
               }}>
                 Association d'ethnobotanique. Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
               </h2>
             </div>
             
-            {/* Description - Centered with max-width */}
-            <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2 font-semibold" style={{
-              color: '#FDE8A3',
-              opacity: 0.95,
+            {/* Description */}
+            <p className="text-sm sm:text-base max-w-[600px] mx-auto pt-1 font-medium" style={{
+              color: 'rgba(255,255,255,0.85)',
               lineHeight: '1.6',
-              textShadow: '1px 1px 3px rgba(0,0,0,0.7)'
+              fontFamily: 'system-ui, -apple-system, sans-serif'
             }}>
               Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
             </p>
-            <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
-              color: '#FDE8A3',
-              opacity: 0.8,
-              lineHeight: '1.5',
-              textShadow: '1px 1px 3px rgba(0,0,0,0.7)'
+            <p className="text-xs sm:text-sm max-w-[500px] mx-auto tracking-widest uppercase" style={{
+              color: 'rgba(255,255,255,0.65)',
+              fontFamily: 'system-ui, -apple-system, sans-serif'
             }}>
-              À Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
+              Paris · Yvelines (78) · Hauts-de-Seine (92) · Val-d'Oise (95)
             </p>
             
             {/* CTA Buttons */}
