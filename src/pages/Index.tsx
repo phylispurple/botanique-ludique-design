@@ -115,14 +115,14 @@ const Index = () => {
             {/* Main Title - Elegant and Centered */}
             <div className="space-y-4" style={{ fontFamily: 'Fraunces, serif' }}>
               <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide" style={{
-                color: '#F7F7EB',
+                color: '#F4D03F',
                 lineHeight: '1.3',
                 fontWeight: 400
               }}>
                 Quand l'atelier créatif rencontre l'anthropologie de la nature
               </h1>
               <h2 className="text-lg sm:text-xl md:text-2xl leading-relaxed" style={{
-                color: '#F7F7EB',
+                color: '#FDE8A3',
                 lineHeight: '1.5',
                 fontWeight: 300,
                 opacity: 0.95
