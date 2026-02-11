@@ -90,8 +90,16 @@ const App = () => (
           <Route path="/atelier-botanique-saint-germain-en-laye" element={<AtelierBotaniqueSaintGermain />} />
           <Route path="/atelier-botanique-le-pecq" element={<AtelierBotaniqueLePecq />} />
           <Route path="/atelier-botanique-le-vesinet" element={<AtelierBotaniqueLeVesinet />} />
-          <Route path="/atelier-botanique-chatou" element={<AtelierBotaniqueChatou />} />
-          <Route path="/mentions-legales" element={<LegalNotice />} />
+           <Route path="/atelier-botanique-chatou" element={<AtelierBotaniqueChatou />} />
+           <Route path="/atelier-terrarium-team-building" element={<AtelierTerrariumTeamBuilding />} />
+           <Route path="/atelier-bien-etre-nature-entreprise" element={<AtelierBienEtreNatureEntreprise />} />
+           <Route path="/animation-semaine-qvct" element={<AnimationSemaineQVCT />} />
+           <Route path="/activite-intergenerationnelle-nature" element={<ActiviteIntergenerationnelle />} />
+           <Route path="/atelier-kokedama-team-building" element={<AtelierKokedamaTeamBuilding />} />
+           <Route path="/atelier-teinture-vegetale-ecole" element={<AtelierTeintureScolaire />} />
+           <Route path="/animation-nature-ehpad" element={<AnimationNatureEHPAD />} />
+           <Route path="/ateliers-botaniques-tous" element={<AteliersBotaniquesComplets />} />
+           <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/conditions-de-vente" element={<SalesTerms />} />
           <Route path="/admin/testimonials" element={<AdminTestimonials />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
