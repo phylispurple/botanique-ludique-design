@@ -105,53 +105,56 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/60" />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col items-center text-center space-y-6 animate-fade-up" style={{ fontFamily: 'Fraunces, serif' }}>
+          <div className="flex flex-col items-center text-center space-y-8 animate-fade-up" style={{ fontFamily: 'Fraunces, serif' }}>
             {/* Main Title */}
-            <div className="space-y-4">
+            <div className="space-y-6">
               <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide" style={{
-                color: '#F7F7EB',
+                color: '#FFFFFF',
                 lineHeight: '1.3',
                 fontWeight: 400
               }}>
                 Quand l'atelier créatif rencontre l'anthropologie de la nature
               </h1>
               <h2 className="text-lg sm:text-xl md:text-2xl leading-relaxed" style={{
-                color: '#F7F7EB',
-                lineHeight: '1.5',
-                fontWeight: 300,
-                opacity: 0.95
+                color: '#C9D2B5',
+                lineHeight: '1.6',
+                fontWeight: 300
               }}>
                 Association d'ethnobotanique. Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
               </h2>
             </div>
             
             {/* Description */}
-            <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2" style={{
-              color: '#F7F7EB',
-              opacity: 0.95,
-              lineHeight: '1.6',
-              fontWeight: 400
-            }}>
-              Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
-            </p>
-            <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
-              color: '#F7F7EB',
-              opacity: 0.8,
-              lineHeight: '1.5',
-              fontWeight: 300
-            }}>
-              À Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
-            </p>
+            <div className="space-y-3">
+              <p className="text-base sm:text-lg max-w-[650px] mx-auto" style={{
+                color: '#F7F7EB',
+                opacity: 0.9,
+                lineHeight: '1.7',
+                fontWeight: 300
+              }}>
+                Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
+              </p>
+              <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
+                color: '#C9D2B5',
+                opacity: 0.8,
+                lineHeight: '1.5',
+                fontWeight: 300
+              }}>
+                À Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
+              </p>
+            </div>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center pt-4">
               <button
                 onClick={() => navigate('/workshops')}
-                className="px-10 py-5 rounded-full text-xl font-bold transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-lg"
+                className="px-10 py-5 rounded-full text-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-lg"
                 style={{
                   background: 'linear-gradient(135deg, #F4D03F 0%, #F39C12 100%)',
                   color: '#2A3A2E',
-                  border: '3px solid #2A3A2E'
+                  border: '3px solid #2A3A2E',
+                  fontFamily: 'Fraunces, serif',
+                  fontWeight: 600
                 }}
               >
                 Découvrir les ateliers
@@ -159,11 +162,13 @@ const Index = () => {
               
               <button
                 onClick={() => navigate('/b2b')}
-                className="px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="px-10 py-5 rounded-full text-xl transition-all duration-300 hover:scale-105 hover:shadow-xl"
                 style={{
                   background: 'rgba(255, 255, 255, 0.9)',
                   color: '#2A3A2E',
-                  border: '2px solid #9EB384'
+                  border: '2px solid #9EB384',
+                  fontFamily: 'Fraunces, serif',
+                  fontWeight: 500
                 }}
               >
                 Organiser un Team Building
