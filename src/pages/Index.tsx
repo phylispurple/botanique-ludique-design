@@ -138,7 +138,8 @@ const Index = () => {
             <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
               color: '#FDE8A3',
               opacity: 0.8,
-              lineHeight: '1.5'
+              lineHeight: '1.5',
+              textShadow: '1px 1px 3px rgba(0,0,0,0.7)'
             }}>
               À Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
             </p>
