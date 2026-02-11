@@ -130,7 +130,8 @@ const Index = () => {
             <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2 font-semibold" style={{
               color: '#FDE8A3',
               opacity: 0.95,
-              lineHeight: '1.6'
+              lineHeight: '1.6',
+              textShadow: '1px 1px 3px rgba(0,0,0,0.7)'
             }}>
               Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
             </p>
