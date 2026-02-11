@@ -111,7 +111,8 @@ const Index = () => {
               <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide" style={{
                 color: '#FFFFFF',
                 lineHeight: '1.3',
-                fontWeight: 400
+                fontWeight: 400,
+                textShadow: '-1px -1px 0 rgba(0,0,0,0.7), 1px -1px 0 rgba(0,0,0,0.7), -1px 1px 0 rgba(0,0,0,0.7), 1px 1px 0 rgba(0,0,0,0.7), 0 2px 8px rgba(0,0,0,0.4)'
               }}>
                 Quand l'atelier créatif rencontre l'anthropologie de la nature
               </h1>
