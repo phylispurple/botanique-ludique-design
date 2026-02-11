@@ -101,14 +101,7 @@ const Index = () => {
         paddingTop: '15%',
         paddingBottom: '10%'
       }}>
-        {/* Decorative bubbles - soft green tones with drift animation and varied sizes */}
-        <div className="absolute top-20 right-[15%] w-28 h-28 rounded-full bg-[#CAD2B0] opacity-22 animate-drift" style={{ animationDelay: '0s' }} />
-        <div className="absolute bottom-32 left-[10%] w-36 h-36 rounded-full bg-[#9EB388] opacity-12 animate-drift-slow" style={{ animationDelay: '5s' }} />
-        <div className="absolute top-1/3 right-[25%] w-20 h-20 rounded-full bg-[#E2E7D1] opacity-28 animate-drift" style={{ animationDelay: '10s' }} />
-        <div className="absolute bottom-1/4 right-[35%] w-16 h-16 rounded-full bg-[#CAD2B0] opacity-15 animate-drift-slow" style={{ animationDelay: '15s' }} />
-        <div className="absolute top-1/2 left-[20%] w-32 h-32 rounded-full bg-[#C9D2B5] opacity-10 animate-drift" style={{ animationDelay: '20s' }} />
-        <div className="absolute top-[15%] left-[35%] w-24 h-24 rounded-full bg-[#E2E7D1] opacity-18 animate-drift-slow" style={{ animationDelay: '12s' }} />
-        <div className="absolute bottom-[20%] right-[18%] w-20 h-20 rounded-full bg-[#9EB388] opacity-20 animate-drift" style={{ animationDelay: '8s' }} />
+        
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center text-center space-y-6 animate-fade-up">
@@ -117,7 +110,8 @@ const Index = () => {
               <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide" style={{
                 color: '#F4D03F',
                 lineHeight: '1.3',
-                fontWeight: 400
+                fontWeight: 400,
+                textShadow: '2px 2px 4px rgba(0,0,0,0.8), -1px -1px 3px rgba(0,0,0,0.6)'
               }}>
                 Quand l'atelier créatif rencontre l'anthropologie de la nature
               </h1>
@@ -125,7 +119,8 @@ const Index = () => {
                 color: '#FDE8A3',
                 lineHeight: '1.5',
                 fontWeight: 300,
-                opacity: 0.95
+                opacity: 0.95,
+                textShadow: '1px 1px 3px rgba(0,0,0,0.7), -1px -1px 2px rgba(0,0,0,0.5)'
               }}>
                 Association d'ethnobotanique. Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
               </h2>
@@ -135,14 +130,16 @@ const Index = () => {
             <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2 font-semibold" style={{
               color: '#FDE8A3',
               opacity: 0.95,
-              lineHeight: '1.6'
+              lineHeight: '1.6',
+              textShadow: '1px 1px 3px rgba(0,0,0,0.7)'
             }}>
               Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
             </p>
             <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
               color: '#FDE8A3',
               opacity: 0.8,
-              lineHeight: '1.5'
+              lineHeight: '1.5',
+              textShadow: '1px 1px 3px rgba(0,0,0,0.7)'
             }}>
               À Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
             </p>
