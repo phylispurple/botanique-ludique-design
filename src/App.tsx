@@ -99,7 +99,8 @@ const App = () => (
            <Route path="/atelier-kokedama-team-building" element={<AtelierKokedamaTeamBuilding />} />
            <Route path="/atelier-teinture-vegetale-ecole" element={<AtelierTeintureScolaire />} />
            <Route path="/animation-nature-ehpad" element={<AnimationNatureEHPAD />} />
-           <Route path="/ateliers-botaniques-tous" element={<AteliersBotaniquesComplets />} />
+            <Route path="/ateliers-botaniques-tous" element={<AteliersBotaniquesComplets />} />
+            <Route path="/animation-collectivites-mairies" element={<LandingCollectivites />} />
            <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/conditions-de-vente" element={<SalesTerms />} />
           <Route path="/admin/testimonials" element={<AdminTestimonials />} />
