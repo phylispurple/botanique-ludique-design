@@ -133,14 +133,14 @@ const Index = () => {
             
             {/* Description - Centered with max-width */}
             <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2 font-semibold" style={{
-              color: '#F7F7EB',
+              color: '#FDE8A3',
               opacity: 0.95,
               lineHeight: '1.6'
             }}>
               Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
             </p>
             <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
-              color: '#F7F7EB',
+              color: '#FDE8A3',
               opacity: 0.8,
               lineHeight: '1.5'
             }}>
