@@ -11,7 +11,7 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
 import { Leaf, Users, Calendar, Building2, Award, Mail } from "lucide-react";
-import heroBackground from "@/assets/hero-test.jpg";
+import heroBackground from "@/assets/hero-background.webp";
 import galleryAtelierAdulte from "@/assets/gallery-atelier-adulte.webp";
 import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
 import gallerySeedBombs from "@/assets/gallery-seed-bombs.webp";
@@ -101,61 +101,61 @@ const Index = () => {
         paddingTop: '15%',
         paddingBottom: '10%'
       }}>
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/70" />
+        {/* Decorative bubbles - soft green tones with drift animation and varied sizes */}
+        <div className="absolute top-20 right-[15%] w-28 h-28 rounded-full bg-[#CAD2B0] opacity-22 animate-drift" style={{ animationDelay: '0s' }} />
+        <div className="absolute bottom-32 left-[10%] w-36 h-36 rounded-full bg-[#9EB388] opacity-12 animate-drift-slow" style={{ animationDelay: '5s' }} />
+        <div className="absolute top-1/3 right-[25%] w-20 h-20 rounded-full bg-[#E2E7D1] opacity-28 animate-drift" style={{ animationDelay: '10s' }} />
+        <div className="absolute bottom-1/4 right-[35%] w-16 h-16 rounded-full bg-[#CAD2B0] opacity-15 animate-drift-slow" style={{ animationDelay: '15s' }} />
+        <div className="absolute top-1/2 left-[20%] w-32 h-32 rounded-full bg-[#C9D2B5] opacity-10 animate-drift" style={{ animationDelay: '20s' }} />
+        <div className="absolute top-[15%] left-[35%] w-24 h-24 rounded-full bg-[#E2E7D1] opacity-18 animate-drift-slow" style={{ animationDelay: '12s' }} />
+        <div className="absolute bottom-[20%] right-[18%] w-20 h-20 rounded-full bg-[#9EB388] opacity-20 animate-drift" style={{ animationDelay: '8s' }} />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col items-center text-center space-y-8 animate-fade-up" style={{ fontFamily: 'Fraunces, serif' }}>
-            {/* Main Title */}
-            <div className="space-y-6">
+          <div className="flex flex-col items-center text-center space-y-6 animate-fade-up">
+            {/* Main Title - Elegant and Centered */}
+            <div className="space-y-4" style={{ fontFamily: 'Fraunces, serif' }}>
               <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide" style={{
-                color: '#FFFFFF',
+                color: '#F7F7EB',
                 lineHeight: '1.3',
-                fontWeight: 400,
-                textShadow: '-1px -1px 0 rgba(0,0,0,0.7), 1px -1px 0 rgba(0,0,0,0.7), -1px 1px 0 rgba(0,0,0,0.7), 1px 1px 0 rgba(0,0,0,0.7), 0 2px 8px rgba(0,0,0,0.4)'
+                fontWeight: 400
               }}>
                 Quand l'atelier créatif rencontre l'anthropologie de la nature
               </h1>
               <h2 className="text-lg sm:text-xl md:text-2xl leading-relaxed" style={{
-                color: '#C9D2B5',
-                lineHeight: '1.6',
-                fontWeight: 300
+                color: '#F7F7EB',
+                lineHeight: '1.5',
+                fontWeight: 300,
+                opacity: 0.95
               }}>
                 Association d'ethnobotanique. Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
               </h2>
             </div>
             
-            {/* Description */}
-            <div className="space-y-3">
-              <p className="text-base sm:text-lg max-w-[650px] mx-auto" style={{
-                color: '#F7F7EB',
-                opacity: 0.9,
-                lineHeight: '1.7',
-                fontWeight: 300
-              }}>
-                Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
-              </p>
-              <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
-                color: '#C9D2B5',
-                opacity: 0.8,
-                lineHeight: '1.5',
-                fontWeight: 300
-              }}>
-                À Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
-              </p>
-            </div>
+            {/* Description - Centered with max-width */}
+            <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2 font-semibold" style={{
+              color: '#F7F7EB',
+              opacity: 0.95,
+              lineHeight: '1.6'
+            }}>
+              Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
+            </p>
+            <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
+              color: '#F7F7EB',
+              opacity: 0.8,
+              lineHeight: '1.5'
+            }}>
+              À Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
+            </p>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
               <button
                 onClick={() => navigate('/workshops')}
-                className="px-10 py-5 rounded-full text-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-lg"
+                className="px-10 py-5 rounded-full text-xl font-bold transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-lg"
                 style={{
                   background: 'linear-gradient(135deg, #F4D03F 0%, #F39C12 100%)',
                   color: '#2A3A2E',
-                  border: '3px solid #2A3A2E',
-                  fontFamily: 'Fraunces, serif',
-                  fontWeight: 600
+                  border: '3px solid #2A3A2E'
                 }}
               >
                 Découvrir les ateliers
@@ -163,13 +163,11 @@ const Index = () => {
               
               <button
                 onClick={() => navigate('/b2b')}
-                className="px-10 py-5 rounded-full text-xl transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl"
                 style={{
                   background: 'rgba(255, 255, 255, 0.9)',
                   color: '#2A3A2E',
-                  border: '2px solid #9EB384',
-                  fontFamily: 'Fraunces, serif',
-                  fontWeight: 500
+                  border: '2px solid #9EB384'
                 }}
               >
                 Organiser un Team Building
