@@ -115,14 +115,14 @@ const Index = () => {
             {/* Main Title - Elegant and Centered */}
             <div className="space-y-4" style={{ fontFamily: 'Fraunces, serif' }}>
               <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide" style={{
-                color: '#F7F7EB',
+                color: '#F4D03F',
                 lineHeight: '1.3',
                 fontWeight: 400
               }}>
                 Quand l'atelier créatif rencontre l'anthropologie de la nature
               </h1>
               <h2 className="text-lg sm:text-xl md:text-2xl leading-relaxed" style={{
-                color: '#F7F7EB',
+                color: '#FDE8A3',
                 lineHeight: '1.5',
                 fontWeight: 300,
                 opacity: 0.95
@@ -133,14 +133,14 @@ const Index = () => {
             
             {/* Description - Centered with max-width */}
             <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2 font-semibold" style={{
-              color: '#F7F7EB',
+              color: '#FDE8A3',
               opacity: 0.95,
               lineHeight: '1.6'
             }}>
               Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
             </p>
             <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
-              color: '#F7F7EB',
+              color: '#FDE8A3',
               opacity: 0.8,
               lineHeight: '1.5'
             }}>
