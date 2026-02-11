@@ -11,7 +11,7 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
 import { Leaf, Users, Calendar, Building2, Award, Mail } from "lucide-react";
-import heroBackground from "@/assets/hero-background.webp";
+import heroBackground from "@/assets/hero-test.jpg";
 import galleryAtelierAdulte from "@/assets/gallery-atelier-adulte.webp";
 import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
 import gallerySeedBombs from "@/assets/gallery-seed-bombs.webp";
