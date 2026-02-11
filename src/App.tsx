@@ -45,6 +45,7 @@ import AtelierKokedamaTeamBuilding from "./pages/AtelierKokedamaTeamBuilding";
 import AtelierTeintureScolaire from "./pages/AtelierTeintureScolaire";
 import AnimationNatureEHPAD from "./pages/AnimationNatureEHPAD";
 import AteliersBotaniquesComplets from "./pages/AteliersBotaniquesComplets";
+import LandingCollectivites from "./pages/LandingCollectivites";
 
 const queryClient = new QueryClient();
 
