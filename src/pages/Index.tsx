@@ -119,7 +119,8 @@ const Index = () => {
                 color: '#FDE8A3',
                 lineHeight: '1.5',
                 fontWeight: 300,
-                opacity: 0.95
+                opacity: 0.95,
+                textShadow: '1px 1px 3px rgba(0,0,0,0.7), -1px -1px 2px rgba(0,0,0,0.5)'
               }}>
                 Association d'ethnobotanique. Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
               </h2>
