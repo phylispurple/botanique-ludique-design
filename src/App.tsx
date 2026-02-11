@@ -37,6 +37,14 @@ import AtelierBotaniqueSaintGermain from "./pages/AtelierBotaniqueSaintGermain";
 import AtelierBotaniqueLePecq from "./pages/AtelierBotaniqueLePecq";
 import AtelierBotaniqueLeVesinet from "./pages/AtelierBotaniqueLeVesinet";
 import AtelierBotaniqueChatou from "./pages/AtelierBotaniqueChatou";
+import AtelierTerrariumTeamBuilding from "./pages/AtelierTerrariumTeamBuilding";
+import AtelierBienEtreNatureEntreprise from "./pages/AtelierBienEtreNatureEntreprise";
+import AnimationSemaineQVCT from "./pages/AnimationSemaineQVCT";
+import ActiviteIntergenerationnelle from "./pages/ActiviteIntergenerationnelle";
+import AtelierKokedamaTeamBuilding from "./pages/AtelierKokedamaTeamBuilding";
+import AtelierTeintureScolaire from "./pages/AtelierTeintureScolaire";
+import AnimationNatureEHPAD from "./pages/AnimationNatureEHPAD";
+import AteliersBotaniquesComplets from "./pages/AteliersBotaniquesComplets";
 
 const queryClient = new QueryClient();
 
