@@ -137,7 +137,14 @@ const Index = () => {
               opacity: 0.95,
               lineHeight: '1.6'
             }}>
-              Ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95) pour particuliers et entreprises.
+              Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
+            </p>
+            <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
+              color: '#F7F7EB',
+              opacity: 0.8,
+              lineHeight: '1.5'
+            }}>
+              À Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
             </p>
             
             {/* CTA Buttons */}
@@ -206,8 +213,8 @@ const Index = () => {
                   des savoirs ethnobotaniques.
                 </p>
                 <p className="text-base text-charcoal/70 leading-relaxed">
-                  Chaque pratique explore les relations culturelles entre humains 
-                  et plantes, de l'Asie à l'Europe. Une approche pédagogique qui enrichit l'expérience artistique d'une dimension culturelle et scientifique.
+                  Nos ateliers s'adressent à <strong>tous les publics</strong> : enfants dès 4 ans, adultes, seniors en résidence ou EHPAD, écoles et centres de loisirs, MJC, centres sociaux, associations, entreprises et collectivités. Chaque pratique explore les relations culturelles entre humains 
+                  et plantes, de l'Asie à l'Europe.
                 </p>
                 <button 
                   onClick={handleDownloadBrochure} 
