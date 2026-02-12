@@ -37,6 +37,10 @@ import AtelierBotaniqueSaintGermain from "./pages/AtelierBotaniqueSaintGermain";
 import AtelierBotaniqueLePecq from "./pages/AtelierBotaniqueLePecq";
 import AtelierBotaniqueLeVesinet from "./pages/AtelierBotaniqueLeVesinet";
 import AtelierBotaniqueChatou from "./pages/AtelierBotaniqueChatou";
+import AtelierBotaniqueVersailles from "./pages/AtelierBotaniqueVersailles";
+import AtelierBotaniqueNanterre from "./pages/AtelierBotaniqueNanterre";
+import AtelierBotaniqueBoulogne from "./pages/AtelierBotaniqueBoulogne";
+import AtelierBotaniqueCergy from "./pages/AtelierBotaniqueCergy";
 import AtelierTerrariumTeamBuilding from "./pages/AtelierTerrariumTeamBuilding";
 import AtelierBienEtreNatureEntreprise from "./pages/AtelierBienEtreNatureEntreprise";
 import AnimationSemaineQVCT from "./pages/AnimationSemaineQVCT";
@@ -92,6 +96,10 @@ const App = () => (
           <Route path="/atelier-botanique-le-pecq" element={<AtelierBotaniqueLePecq />} />
           <Route path="/atelier-botanique-le-vesinet" element={<AtelierBotaniqueLeVesinet />} />
            <Route path="/atelier-botanique-chatou" element={<AtelierBotaniqueChatou />} />
+           <Route path="/atelier-botanique-versailles" element={<AtelierBotaniqueVersailles />} />
+           <Route path="/atelier-botanique-nanterre" element={<AtelierBotaniqueNanterre />} />
+           <Route path="/atelier-botanique-boulogne-billancourt" element={<AtelierBotaniqueBoulogne />} />
+           <Route path="/atelier-botanique-cergy" element={<AtelierBotaniqueCergy />} />
            <Route path="/atelier-terrarium-team-building" element={<AtelierTerrariumTeamBuilding />} />
            <Route path="/atelier-bien-etre-nature-entreprise" element={<AtelierBienEtreNatureEntreprise />} />
            <Route path="/animation-semaine-qvct" element={<AnimationSemaineQVCT />} />
