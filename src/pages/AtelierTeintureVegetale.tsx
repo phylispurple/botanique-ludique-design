@@ -211,6 +211,39 @@ const AtelierTeintureVegetale = () => {
               </div>
             </section>
 
+            {/* Related Workshops Section */}
+            <section className="mt-20 pt-12 border-t border-sage/20">
+              <h3 className="text-2xl font-semibold text-charcoal mb-8 text-center" style={{ fontFamily: 'Fraunces, serif' }}>
+                Découvrez nos autres créations
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <Link 
+                  to="/atelier-kokedama-paris"
+                  className="group p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+                >
+                  <h4 className="font-semibold text-charcoal mb-2 group-hover:text-sage">Atelier Kokedama</h4>
+                  <p className="text-sm text-charcoal/70 mb-4">L'art végétal japonais en sphères suspendues</p>
+                  <span className="text-sage font-medium">Découvrir →</span>
+                </Link>
+                <Link 
+                  to="/atelier-terrarium-paris"
+                  className="group p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+                >
+                  <h4 className="font-semibold text-charcoal mb-2 group-hover:text-sage">Atelier Terrarium</h4>
+                  <p className="text-sm text-charcoal/70 mb-4">Un jardin miniature sous verre</p>
+                  <span className="text-sage font-medium">Découvrir →</span>
+                </Link>
+                <Link 
+                  to="/atelier-botanique-evenement"
+                  className="group p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+                >
+                  <h4 className="font-semibold text-charcoal mb-2 group-hover:text-sage">Pour vos Événements</h4>
+                  <p className="text-sm text-charcoal/70 mb-4">Mariages, EVJF, anniversaires en ateliers</p>
+                  <span className="text-sage font-medium">Découvrir →</span>
+                </Link>
+              </div>
+            </section>
+
           </div>
         </div>
       </main>

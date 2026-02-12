@@ -427,6 +427,46 @@ const Workshops = () => {
             ))}
           </div>
 
+          {/* Landing Pages Preview Section */}
+          <div className="mt-16 bg-gradient-to-r from-sage/10 to-earth/10 rounded-2xl p-8 md:p-12 animate-fade-in">
+            <h3 className="text-2xl md:text-3xl mb-2 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              Découvrez nos pages thématiques
+            </h3>
+            <p className="text-center text-charcoal/70 mb-8 max-w-2xl mx-auto">
+              Explorez nos ateliers spécialisés et trouvez celui qui vous correspond
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Link 
+                to="/atelier-kokedama-paris"
+                className="group p-5 bg-white rounded-lg hover:shadow-md transition-all hover:-translate-y-1 text-center"
+              >
+                <h4 className="font-semibold text-charcoal mb-2 group-hover:text-sage">Kokedama à Paris</h4>
+                <p className="text-xs text-charcoal/70">L'art japonais en sphères suspendues</p>
+              </Link>
+              <Link 
+                to="/atelier-terrarium-paris"
+                className="group p-5 bg-white rounded-lg hover:shadow-md transition-all hover:-translate-y-1 text-center"
+              >
+                <h4 className="font-semibold text-charcoal mb-2 group-hover:text-sage">Terrarium à Paris</h4>
+                <p className="text-xs text-charcoal/70">Jardin miniature sous verre</p>
+              </Link>
+              <Link 
+                to="/atelier-teinture-vegetale"
+                className="group p-5 bg-white rounded-lg hover:shadow-md transition-all hover:-translate-y-1 text-center"
+              >
+                <h4 className="font-semibold text-charcoal mb-2 group-hover:text-sage">Teinture Végétale</h4>
+                <p className="text-xs text-charcoal/70">Pigments naturels & textiles</p>
+              </Link>
+              <Link 
+                to="/atelier-botanique-evenement"
+                className="group p-5 bg-white rounded-lg hover:shadow-md transition-all hover:-translate-y-1 text-center"
+              >
+                <h4 className="font-semibold text-charcoal mb-2 group-hover:text-sage">Événements Privés</h4>
+                <p className="text-xs text-charcoal/70">Mariages, EVJF, anniversaires</p>
+              </Link>
+            </div>
+          </div>
+
           {/* CTA Section - Formations */}
           <div className="mt-12 bg-sand rounded-2xl p-8 md:p-12 text-center animate-fade-in card-premium">
             <h3 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
