@@ -139,17 +139,14 @@ const AtelierBotaniqueSaintGermain = () => {
                         {workshop.title}
                       </h3>
                       <p className="text-charcoal/70 mb-4">{workshop.description}</p>
-                      <div className="flex items-center justify-between text-sm">
-                        <div className="flex items-center gap-4">
-                          <span className="flex items-center gap-1 text-charcoal/60">
-                            <Clock className="w-4 h-4" /> {workshop.duration}
-                          </span>
-                          <span className="flex items-center gap-1 text-charcoal/60">
-                            <Users className="w-4 h-4" /> 10 max
-                          </span>
-                        </div>
-                        <span className="text-sage-dark font-semibold">{workshop.price}</span>
-                      </div>
+                       <div className="flex items-center gap-4">
+                         <span className="flex items-center gap-1 text-charcoal/60">
+                           <Clock className="w-4 h-4" /> {workshop.duration}
+                         </span>
+                         <span className="flex items-center gap-1 text-charcoal/60">
+                           <Users className="w-4 h-4" /> 10 max
+                         </span>
+                       </div>
                     </CardContent>
                   </Card>
                 ))}
