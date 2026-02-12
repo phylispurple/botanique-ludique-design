@@ -5,7 +5,7 @@ import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { MapPin, Calendar, Users, Leaf, Clock, CheckCircle, Star, Phone, Mail, Sparkles, Palette } from "lucide-react";
-import dyeingImage from "@/assets/workshop-dyeing.jpg";
+import dyeingImage from "@/assets/gallery-teinture-1.webp";
 
 const AtelierTeintureVegetale = () => {
   return (
