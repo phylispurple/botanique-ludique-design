@@ -6,10 +6,10 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { MapPin, Calendar, Users, Leaf, Clock, CheckCircle, Star, Phone, Mail, Heart, Gift, PartyPopper } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import kokedamaImage from "@/assets/workshop-kokedama.jpg";
-import dyeingImage from "@/assets/workshop-dyeing.jpg";
-import terrariumImage from "@/assets/workshop-terrarium.jpg";
-import basketryImage from "@/assets/workshop-basketry.jpg";
+import kokedamaImage from "@/assets/gallery-kokedama-garden.webp";
+import dyeingImage from "@/assets/gallery-teinture-1.webp";
+import terrariumImage from "@/assets/gallery-terrarium.webp";
+import flowerCrownImage from "@/assets/gallery-flower-crown.webp";
 
 const AtelierBotaniqueEvenement = () => {
   const workshops = [
@@ -39,7 +39,7 @@ const AtelierBotaniqueEvenement = () => {
       description: "Tressez votre couronne végétale, parfaite pour les EVJF, fêtes champêtres et célébrations.",
       duration: "2h",
       price: "40€",
-      image: basketryImage
+      image: flowerCrownImage
     }
   ];
 

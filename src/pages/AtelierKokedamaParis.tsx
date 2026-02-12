@@ -5,7 +5,7 @@ import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { MapPin, Calendar, Users, Leaf, Clock, CheckCircle, Star, Phone, Mail, Sparkles } from "lucide-react";
-import kokedamaImage from "@/assets/workshop-kokedama.jpg";
+import kokedamaImage from "@/assets/gallery-kokedama-garden.webp";
 
 const AtelierKokedamaParis = () => {
   return (

@@ -5,7 +5,7 @@ import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { MapPin, Calendar, Users, Leaf, Clock, CheckCircle, Star, Phone, Mail, Sparkles } from "lucide-react";
-import terrariumImage from "@/assets/workshop-terrarium.jpg";
+import terrariumImage from "@/assets/gallery-terrarium.webp";
 
 const AtelierTerrariumParis = () => {
   return (
