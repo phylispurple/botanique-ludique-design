@@ -34,6 +34,7 @@ import portraitVanessaImage from "@/assets/portrait-vanessa.webp";
 import teinture1Image from "@/assets/gallery-teinture-1.webp";
 import teinture2Image from "@/assets/gallery-teinture-2.webp";
 import teinture3Image from "@/assets/gallery-teinture-3.webp";
+import workshopGroupImage from "@/assets/gallery-workshop-group.webp";
 
 const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string; className?: string; style?: React.CSSProperties }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -81,6 +82,7 @@ const Gallery = () => {
     
     // Ligne 3 : Ateliers en action
     { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines, Atelier Botanique Ludique", type: "image" },
+    { src: workshopGroupImage, alt: "Atelier kokedama en groupe", caption: "Atelier kokedama, Participants en création", type: "image" },
     { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier, MJC Le Vésinet", type: "image" },
     { src: teinture1Image, alt: "Atelier teinture végétale", caption: "Atelier teinture végétale, Préparation des tissus", type: "image" },
     
