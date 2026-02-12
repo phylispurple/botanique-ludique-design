@@ -6,10 +6,10 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { MapPin, Calendar, Users, Leaf, Clock, CheckCircle, Star, Phone, Mail } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import kokedamaImage from "@/assets/workshop-kokedama.jpg";
-import dyeingImage from "@/assets/workshop-dyeing.jpg";
-import terrariumImage from "@/assets/workshop-terrarium.jpg";
-import basketryImage from "@/assets/workshop-basketry.jpg";
+import kokedamaImage from "@/assets/gallery-kokedama-garden.webp";
+import dyeingImage from "@/assets/gallery-teinture-1.webp";
+import terrariumImage from "@/assets/gallery-terrarium.webp";
+import basketryImage from "@/assets/gallery-basketry.webp";
 
 const AtelierBotaniqueCergy = () => {
   const workshops = [

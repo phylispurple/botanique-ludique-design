@@ -8,11 +8,11 @@ import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "luci
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link, useLocation } from "react-router-dom";
 import dyeingImage from "@/assets/gallery-teinture-2.jpg";
-import terrariumImage from "@/assets/workshop-terrarium.jpg";
+import terrariumImage from "@/assets/gallery-terrarium.webp";
 import muralImage from "@/assets/workshop-mural.jpg";
-import seedBombsImage from "@/assets/workshop-seed-bombs.jpg";
-import flowerCrownImage from "@/assets/workshop-flower-crown.jpg";
-import basketryImage from "@/assets/workshop-basketry.jpg";
+import seedBombsImage from "@/assets/gallery-seed-bombs.webp";
+import flowerCrownImage from "@/assets/gallery-flower-crown.webp";
+import basketryImage from "@/assets/gallery-basketry.webp";
 import photoVegetalImage from "@/assets/workshop-photo-vegetal.jpg";
 import herbariumImage from "@/assets/workshop-herbarium.jpg";
 import sharedGardenImage from "@/assets/workshop-shared-garden.jpg";

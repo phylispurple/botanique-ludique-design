@@ -5,9 +5,9 @@ import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Calendar, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import kokedamaImage from "@/assets/workshop-kokedama.jpg";
-import dyeingImage from "@/assets/workshop-dyeing.jpg";
-import basketryImage from "@/assets/workshop-basketry.jpg";
+import kokedamaImage from "@/assets/gallery-kokedama-garden.webp";
+import dyeingImage from "@/assets/gallery-teinture-1.webp";
+import basketryImage from "@/assets/gallery-basketry.webp";
 
 const AteliersBotaniquesYvelines = () => {
   const cities = ["Chatou", "Le Pecq", "Le Vésinet", "Saint-Germain-en-Laye", "Croissy-sur-Seine", "Montesson"];
