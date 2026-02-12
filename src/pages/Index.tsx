@@ -293,38 +293,15 @@ const Index = () => {
             ))}
           </div>
           
-           <AnimatedSection delay={600} className="text-center">
-             <Link 
-               to="/gallery"
-               className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg text-sm"
-             >
-               Voir toute la galerie
-               <span>→</span>
-             </Link>
-           </AnimatedSection>
-
-           {/* Popular Workshops Links */}
-           <AnimatedSection delay={700} className="mt-12">
-             <h3 className="text-lg font-semibold text-charcoal text-center mb-6" style={{ fontFamily: 'Fraunces, serif' }}>
-               Nos ateliers les plus populaires
-             </h3>
-             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-               {[
-                 { to: "/atelier-kokedama-paris", label: "Kokedama à Paris" },
-                 { to: "/atelier-terrarium-paris", label: "Terrarium à Paris" },
-                 { to: "/atelier-teinture-vegetale", label: "Teinture Végétale" },
-                 { to: "/atelier-botanique-evenement", label: "Événements & Mariages" }
-               ].map((link, index) => (
-                 <Link
-                   key={index}
-                   to={link.to}
-                   className="text-center p-3 bg-white/60 rounded-lg hover:bg-sage/10 transition-all text-sm text-charcoal/80 hover:text-charcoal hover:font-semibold"
-                 >
-                   {link.label}
-                 </Link>
-               ))}
-             </div>
-           </AnimatedSection>
+          <AnimatedSection delay={600} className="text-center">
+            <Link 
+              to="/gallery"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg text-sm"
+            >
+              Voir toute la galerie
+              <span>→</span>
+            </Link>
+          </AnimatedSection>
         </div>
       </section>
       

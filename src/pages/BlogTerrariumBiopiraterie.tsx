@@ -753,23 +753,6 @@ const BlogTerrariumBiopiraterie = () => {
                 ]}
               />
 
-              {/* CTA Section - Workshop Link */}
-              <div className="my-12 p-8 bg-gradient-to-r from-sage/10 to-earth/10 rounded-lg border-l-4 border-sage">
-                <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontSize: '1.3rem' }}>
-                  Envie de découvrir les terrariums par la pratique ?
-                </h3>
-                <p className="text-charcoal/80 mb-4">
-                  Participez à nos <strong>ateliers terrarium</strong> et créez votre propre écosystème miniature en apprenant les techniques de composition et d'entretien.
-                </p>
-                <Link 
-                  to="/atelier-terrarium-paris"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-sage text-off-white rounded-full font-semibold hover:bg-sage-dark transition-all hover:scale-105"
-                >
-                  Découvrir l'atelier Terrarium
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-
               {/* Navigation articles */}
               <nav className="flex justify-between items-center pt-8 border-t border-charcoal/10 mt-12">
                 <Link 
