@@ -356,7 +356,9 @@ const Index = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
-        <div className="container mx-auto max-w-4xl">
+        {/* Dark overlay 60% */}
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="container mx-auto max-w-4xl relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* CTA */}
             <AnimatedSection direction="left">
