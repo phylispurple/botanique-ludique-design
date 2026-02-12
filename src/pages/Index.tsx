@@ -108,35 +108,39 @@ const Index = () => {
           <div className="flex flex-col items-center text-center space-y-6 animate-fade-up">
             {/* Main Title - Elegant and Centered */}
             <div className="space-y-4" style={{ fontFamily: 'Fraunces, serif' }}>
-              <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide" style={{
+              <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" style={{
                 color: '#F7F7EB',
                 lineHeight: '1.3',
-                fontWeight: 400
+                fontWeight: 400,
+                textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.4)'
               }}>
                 Quand l'atelier créatif rencontre l'anthropologie de la nature
               </h1>
-              <h2 className="text-lg sm:text-xl md:text-2xl leading-relaxed" style={{
+              <h2 className="text-lg sm:text-xl md:text-2xl leading-relaxed drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]" style={{
                 color: '#F7F7EB',
                 lineHeight: '1.5',
                 fontWeight: 300,
-                opacity: 0.95
+                opacity: 0.95,
+                textShadow: '0 1px 6px rgba(0,0,0,0.5), 0 0 2px rgba(0,0,0,0.3)'
               }}>
                 Association d'ethnobotanique. Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
               </h2>
             </div>
             
             {/* Description - Centered with max-width */}
-            <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2 font-semibold" style={{
+            <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2 font-semibold drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]" style={{
               color: '#F7F7EB',
               opacity: 0.95,
-              lineHeight: '1.6'
+              lineHeight: '1.6',
+              textShadow: '0 1px 4px rgba(0,0,0,0.5)'
             }}>
               Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
             </p>
-            <p className="text-sm sm:text-base max-w-[550px] mx-auto" style={{
+            <p className="text-sm sm:text-base max-w-[550px] mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]" style={{
               color: '#F7F7EB',
               opacity: 0.8,
-              lineHeight: '1.5'
+              lineHeight: '1.5',
+              textShadow: '0 1px 4px rgba(0,0,0,0.4)'
             }}>
               À Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
             </p>
