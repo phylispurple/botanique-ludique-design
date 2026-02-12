@@ -50,6 +50,13 @@ import AtelierTeintureScolaire from "./pages/AtelierTeintureScolaire";
 import AnimationNatureEHPAD from "./pages/AnimationNatureEHPAD";
 import AteliersBotaniquesComplets from "./pages/AteliersBotaniquesComplets";
 import LandingCollectivites from "./pages/LandingCollectivites";
+import AtelierBotaniqueEvenement from "./pages/AtelierBotaniqueEvenement";
+import AtelierBotaniqueRueilMalmaison from "./pages/AtelierBotaniqueRueilMalmaison";
+import AtelierBotaniqueConflans from "./pages/AtelierBotaniqueConflans";
+import AtelierKokedamaParis from "./pages/AtelierKokedamaParis";
+import AtelierTerrariumParis from "./pages/AtelierTerrariumParis";
+import AtelierTeintureVegetale from "./pages/AtelierTeintureVegetale";
+import AnimationCentreSocial from "./pages/AnimationCentreSocial";
 
 const queryClient = new QueryClient();
 
@@ -108,7 +115,17 @@ const App = () => (
            <Route path="/atelier-teinture-vegetale-ecole" element={<AtelierTeintureScolaire />} />
            <Route path="/animation-nature-ehpad" element={<AnimationNatureEHPAD />} />
             <Route path="/ateliers-botaniques-tous" element={<AteliersBotaniquesComplets />} />
-            <Route path="/animation-collectivites-mairies" element={<LandingCollectivites />} />
+             <Route path="/animation-collectivites-mairies" element={<LandingCollectivites />} />
+             <Route path="/atelier-botanique-evenement" element={<AtelierBotaniqueEvenement />} />
+             <Route path="/atelier-botanique-rueil-malmaison" element={<AtelierBotaniqueRueilMalmaison />} />
+             <Route path="/atelier-botanique-conflans-sainte-honorine" element={<AtelierBotaniqueConflans />} />
+             <Route path="/atelier-kokedama-paris" element={<AtelierKokedamaParis />} />
+             <Route path="/atelier-terrarium-paris" element={<AtelierTerrariumParis />} />
+             <Route path="/atelier-teinture-vegetale" element={<AtelierTeintureVegetale />} />
+             <Route path="/animation-centre-social" element={<AnimationCentreSocial />} />
+             {/* Redirects for existing pages with alternate URLs */}
+             <Route path="/atelier-botanique-ehpad" element={<Navigate to="/animation-seniors-ehpad" replace />} />
+             <Route path="/atelier-botanique-ecole" element={<Navigate to="/animation-scolaire-nature" replace />} />
            <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/conditions-de-vente" element={<SalesTerms />} />
           <Route path="/admin/testimonials" element={<AdminTestimonials />} />
