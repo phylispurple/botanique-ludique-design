@@ -3,9 +3,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { MapPin, Leaf, Users, Building2 } from "lucide-react";
-import workshopKokedama from "@/assets/workshop-kokedama.jpg";
-import workshopDyeing from "@/assets/workshop-dyeing.jpg";
-import workshopTerrarium from "@/assets/workshop-terrarium.jpg";
+import workshopKokedama from "@/assets/gallery-kokedama-garden.webp";
+import workshopDyeing from "@/assets/gallery-teinture-1.webp";
+import workshopTerrarium from "@/assets/gallery-terrarium.webp";
 
 const AteliersIDF = () => {
   const departments = [
