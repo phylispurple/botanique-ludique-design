@@ -12,12 +12,12 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
 import { Leaf, Users, Calendar, Building2, Award, Mail } from "lucide-react";
 import heroBackground from "@/assets/hero-background-new.webp";
-import galleryAtelierAdulte from "@/assets/gallery-atelier-adulte.webp";
+import galleryTerrarium from "@/assets/gallery-terrarium.webp";
+import galleryTeinture from "@/assets/gallery-teinture-1.webp";
 import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
-import gallerySeedBombs from "@/assets/gallery-seed-bombs.webp";
-import galleryBasketry from "@/assets/gallery-basketry.webp";
 import galleryKokedamaGarden from "@/assets/gallery-kokedama-garden.webp";
-import tatakiZomeImage from "@/assets/workshop-tataki-zome.webp";
+import galleryWorkshopGroup from "@/assets/gallery-workshop-group.webp";
+import galleryFresqueVegetale from "@/assets/gallery-fresque-vegetale.webp";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -273,12 +273,12 @@ const Index = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
             {[
-              { src: galleryAtelierAdulte, alt: "Participants pendant un atelier" },
+              { src: galleryTerrarium, alt: "Atelier terrarium botanique" },
+              { src: galleryTeinture, alt: "Atelier teinture végétale" },
               { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs" },
               { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin" },
-              { src: tatakiZomeImage, alt: "Atelier Tataki Zome" },
-              { src: gallerySeedBombs, alt: "Fabrication de bombes à graines" },
-              { src: galleryBasketry, alt: "Atelier vannerie" }
+              { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama" },
+              { src: galleryFresqueVegetale, alt: "Fresque végétale collaborative" }
             ].map((image, index) => (
               <AnimatedSection key={index} delay={index * 100}>
                 <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
