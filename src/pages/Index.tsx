@@ -17,7 +17,7 @@ import galleryTeinture from "@/assets/gallery-teinture-1.webp";
 import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
 import galleryKokedamaGarden from "@/assets/gallery-kokedama-garden.webp";
 import galleryWorkshopGroup from "@/assets/gallery-workshop-group.webp";
-import galleryFresqueVegetale from "@/assets/gallery-fresque-vegetale.webp";
+import gallerySachetSenteur from "@/assets/gallery-sachet-senteur.webp";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -278,7 +278,7 @@ const Index = () => {
               { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs" },
               { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin" },
               { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama" },
-              { src: galleryFresqueVegetale, alt: "Fresque végétale collaborative" }
+              { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" }
             ].map((image, index) => (
               <AnimatedSection key={index} delay={index * 100}>
                 <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
