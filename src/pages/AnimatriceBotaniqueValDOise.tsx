@@ -171,7 +171,7 @@ const AnimatriceBotaniqueValDOise = () => {
               </h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">Devis gratuit sous 24h · Tout le 95 · Tous publics</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-off-white hover:bg-sand text-sage font-semibold uppercase tracking-wider transition-all rounded-full">Demander un devis</Link>
+                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-sage text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Demander un devis</Link>
                 <Link to="/atelier-botanique-cergy" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-sage text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Ateliers à Cergy</Link>
               </div>
             </div>
