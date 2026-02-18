@@ -57,6 +57,11 @@ import AtelierKokedamaParis from "./pages/AtelierKokedamaParis";
 import AtelierTerrariumParis from "./pages/AtelierTerrariumParis";
 import AtelierTeintureVegetale from "./pages/AtelierTeintureVegetale";
 import AnimationCentreSocial from "./pages/AnimationCentreSocial";
+import AnimatriceNatureIDF from "./pages/AnimatriceNatureIDF";
+import AnimatriceBotaniqueYvelines from "./pages/AnimatriceBotaniqueYvelines";
+import AnimatriceNatureParis from "./pages/AnimatriceNatureParis";
+import AnimatriceNatureHautsDeSeine from "./pages/AnimatriceNatureHautsDeSeine";
+import AnimatriceBotaniqueValDOise from "./pages/AnimatriceBotaniqueValDOise";
 
 const queryClient = new QueryClient();
 
@@ -122,8 +127,13 @@ const App = () => (
              <Route path="/atelier-kokedama-paris" element={<AtelierKokedamaParis />} />
              <Route path="/atelier-terrarium-paris" element={<AtelierTerrariumParis />} />
              <Route path="/atelier-teinture-vegetale" element={<AtelierTeintureVegetale />} />
-             <Route path="/animation-centre-social" element={<AnimationCentreSocial />} />
-             {/* Redirects for existing pages with alternate URLs */}
+              <Route path="/animation-centre-social" element={<AnimationCentreSocial />} />
+              <Route path="/animatrice-nature-ile-de-france" element={<AnimatriceNatureIDF />} />
+              <Route path="/animatrice-botanique-yvelines" element={<AnimatriceBotaniqueYvelines />} />
+              <Route path="/animatrice-nature-paris" element={<AnimatriceNatureParis />} />
+              <Route path="/animatrice-nature-hauts-de-seine" element={<AnimatriceNatureHautsDeSeine />} />
+              <Route path="/animatrice-botanique-val-d-oise" element={<AnimatriceBotaniqueValDOise />} />
+              {/* Redirects for existing pages with alternate URLs */}
              <Route path="/atelier-botanique-ehpad" element={<Navigate to="/animation-seniors-ehpad" replace />} />
              <Route path="/atelier-botanique-ecole" element={<Navigate to="/animation-scolaire-nature" replace />} />
            <Route path="/mentions-legales" element={<LegalNotice />} />
