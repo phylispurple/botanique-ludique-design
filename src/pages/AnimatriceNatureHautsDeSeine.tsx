@@ -156,8 +156,8 @@ const AnimatriceNatureHautsDeSeine = () => {
               </h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">Devis gratuit · Tout le département · Entreprises, écoles, collectivités</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-sage text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Demander un devis</Link>
-                <Link to="/pro" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-sage text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Offres professionnelles</Link>
+                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Demander un devis</Link>
+                <Link to="/pro" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Offres professionnelles</Link>
               </div>
             </div>
           </div>
