@@ -62,6 +62,21 @@ import AnimatriceBotaniqueYvelines from "./pages/AnimatriceBotaniqueYvelines";
 import AnimatriceNatureParis from "./pages/AnimatriceNatureParis";
 import AnimatriceNatureHautsDeSeine from "./pages/AnimatriceNatureHautsDeSeine";
 import AnimatriceBotaniqueValDOise from "./pages/AnimatriceBotaniqueValDOise";
+import IntervenantScientifiqueIDF from "./pages/IntervenantScientifiqueIDF";
+import IntervenantScientifiqueParis from "./pages/IntervenantScientifiqueParis";
+import IntervenantScientifiqueYvelines from "./pages/IntervenantScientifiqueYvelines";
+import IntervenantScientifiqueHautsDeSeine from "./pages/IntervenantScientifiqueHautsDeSeine";
+import IntervenantScientifiqueValDOise from "./pages/IntervenantScientifiqueValDOise";
+import AtelierBotaniqueEnfantIDF from "./pages/AtelierBotaniqueEnfantIDF";
+import AtelierBotaniqueEnfantParis from "./pages/AtelierBotaniqueEnfantParis";
+import AtelierBotaniqueEnfantYvelines from "./pages/AtelierBotaniqueEnfantYvelines";
+import AtelierBotaniqueEnfantHautsDeSeine from "./pages/AtelierBotaniqueEnfantHautsDeSeine";
+import AtelierBotaniqueEnfantValDOise from "./pages/AtelierBotaniqueEnfantValDOise";
+import AtelierBotaniqueAdulteIDF from "./pages/AtelierBotaniqueAdulteIDF";
+import AtelierBotaniqueAdulteParis from "./pages/AtelierBotaniqueAdulteParis";
+import AtelierBotaniqueAdulteYvelines from "./pages/AtelierBotaniqueAdulteYvelines";
+import AtelierBotaniqueAdulteHautsDeSeine from "./pages/AtelierBotaniqueAdulteHautsDeSeine";
+import AtelierBotaniqueAdulteValDOise from "./pages/AtelierBotaniqueAdulteValDOise";
 
 const queryClient = new QueryClient();
 
@@ -132,8 +147,23 @@ const App = () => (
               <Route path="/animatrice-botanique-yvelines" element={<AnimatriceBotaniqueYvelines />} />
               <Route path="/animatrice-nature-paris" element={<AnimatriceNatureParis />} />
               <Route path="/animatrice-nature-hauts-de-seine" element={<AnimatriceNatureHautsDeSeine />} />
-              <Route path="/animatrice-botanique-val-d-oise" element={<AnimatriceBotaniqueValDOise />} />
-              {/* Redirects for existing pages with alternate URLs */}
+               <Route path="/animatrice-botanique-val-d-oise" element={<AnimatriceBotaniqueValDOise />} />
+               <Route path="/intervenant-scientifique-ile-de-france" element={<IntervenantScientifiqueIDF />} />
+               <Route path="/intervenant-scientifique-paris" element={<IntervenantScientifiqueParis />} />
+               <Route path="/intervenant-scientifique-yvelines" element={<IntervenantScientifiqueYvelines />} />
+               <Route path="/intervenant-scientifique-hauts-de-seine" element={<IntervenantScientifiqueHautsDeSeine />} />
+               <Route path="/intervenant-scientifique-val-d-oise" element={<IntervenantScientifiqueValDOise />} />
+               <Route path="/atelier-botanique-enfant-ile-de-france" element={<AtelierBotaniqueEnfantIDF />} />
+               <Route path="/atelier-botanique-enfant-paris" element={<AtelierBotaniqueEnfantParis />} />
+               <Route path="/atelier-botanique-enfant-yvelines" element={<AtelierBotaniqueEnfantYvelines />} />
+               <Route path="/atelier-botanique-enfant-hauts-de-seine" element={<AtelierBotaniqueEnfantHautsDeSeine />} />
+               <Route path="/atelier-botanique-enfant-val-d-oise" element={<AtelierBotaniqueEnfantValDOise />} />
+               <Route path="/atelier-botanique-adulte-ile-de-france" element={<AtelierBotaniqueAdulteIDF />} />
+               <Route path="/atelier-botanique-adulte-paris" element={<AtelierBotaniqueAdulteParis />} />
+               <Route path="/atelier-botanique-adulte-yvelines" element={<AtelierBotaniqueAdulteYvelines />} />
+               <Route path="/atelier-botanique-adulte-hauts-de-seine" element={<AtelierBotaniqueAdulteHautsDeSeine />} />
+               <Route path="/atelier-botanique-adulte-val-d-oise" element={<AtelierBotaniqueAdulteValDOise />} />
+               {/* Redirects for existing pages with alternate URLs */}
              <Route path="/atelier-botanique-ehpad" element={<Navigate to="/animation-seniors-ehpad" replace />} />
              <Route path="/atelier-botanique-ecole" element={<Navigate to="/animation-scolaire-nature" replace />} />
            <Route path="/mentions-legales" element={<LegalNotice />} />
