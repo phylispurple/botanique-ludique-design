@@ -164,7 +164,8 @@ const App = () => (
                <Route path="/atelier-botanique-adulte-yvelines" element={<AtelierBotaniqueAdulteYvelines />} />
                <Route path="/atelier-botanique-adulte-hauts-de-seine" element={<AtelierBotaniqueAdulteHautsDeSeine />} />
                <Route path="/atelier-botanique-adulte-val-d-oise" element={<AtelierBotaniqueAdulteValDOise />} />
-               {/* Redirects for existing pages with alternate URLs */}
+                <Route path="/demo-creative" element={<DemoCreative />} />
+                {/* Redirects for existing pages with alternate URLs */}
              <Route path="/atelier-botanique-ehpad" element={<Navigate to="/animation-seniors-ehpad" replace />} />
              <Route path="/atelier-botanique-ecole" element={<Navigate to="/animation-scolaire-nature" replace />} />
            <Route path="/mentions-legales" element={<LegalNotice />} />
