@@ -78,6 +78,7 @@ import AtelierBotaniqueAdulteYvelines from "./pages/AtelierBotaniqueAdulteYvelin
 import AtelierBotaniqueAdulteHautsDeSeine from "./pages/AtelierBotaniqueAdulteHautsDeSeine";
 import AtelierBotaniqueAdulteValDOise from "./pages/AtelierBotaniqueAdulteValDOise";
 import DemoCreative from "./pages/DemoCreative";
+import DemoManus from "./pages/DemoManus";
 
 const queryClient = new QueryClient();
 
