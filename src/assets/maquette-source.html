@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botanique Ludique</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+  :root {
+    --cream: #F5F0E8;
+    --cream-dark: #EDE7DA;
+    --black: #1a1a1a;
+    --green: #2D6A4F;
+    --green-bright: #40916C;
+    --green-light: #95D5B2;
+    --green-pale: #D8F3DC;
+    --olive: #8B9A46;
+    --olive-light: #C5D086;
+    --orange: #E76F51;
+    --orange-light: #F4A261;
+    --pink: #E8A0BF;
+    --pink-bg: #F5D0E0;
+    --yellow: #E9C46A;
+    --yellow-bright: #F2CC0F;
+    --blue: #264653;
+    --purple: #6C3D7A;
+    --purple-bg: #D4B8E0;
+    --red: #E63946;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--black);
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9998;
+  }
+
+  /* ===== FLOATING NAV ===== */
+  .float-nav {
+    position: fixed; left: 28px; top: 50%; transform: translateY(-50%);
+    z-index: 1000; display: flex; flex-direction: column; gap: 12px;
+  }
+  .float-nav a {
+    display: flex; align-items: center; justify-content: center;
+    padding: 10px 18px; background: var(--cream); border: 2px solid var(--black);
+    border-radius: 50px; font-family: 'Archivo Black', sans-serif;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+    color: var(--black); text-decoration: none; transition: all 0.25s cubic-bezier(.4,0,.2,1);
+  }
+  .float-nav a:hover { background: var(--black); color: var(--cream); transform: scale(1.08); }
+  .float-nav a.nav-asso { background: var(--purple); color: white; border-color: var(--purple); }
+  .float-nav a.nav-asso:hover { background: var(--black); border-color: var(--black); }
+
+  /* ===== MARQUEE ===== */
+  .marquee { padding: 14px 0; overflow: hidden; white-space: nowrap; }
+  .marquee.green { background: var(--green); color: var(--cream); }
+  .marquee.black { background: var(--black); color: var(--cream); }
+  .marquee.purple { background: var(--purple); color: var(--cream); }
+  .marquee.orange { background: var(--orange); color: var(--cream); }
+  .marquee.olive { background: var(--olive); color: var(--cream); }
+  .marquee-track {
+    display: inline-block; animation: marquee 25s linear infinite;
+  }
+  .marquee-track span {
+    font-family: 'Archivo Black', sans-serif; font-size: 18px;
+    text-transform: uppercase; letter-spacing: 2px; padding: 0 24px;
+  }
+  .marquee-track .star { font-size: 14px; vertical-align: middle; padding: 0 8px; }
+  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh; position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: url('https://botaniqueludique.com/assets/hero-background-new-Dbt7Fxqd.webp') center/cover;
+  }
+  .hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(26,26,26,0.3) 0%, rgba(26,26,26,0.65) 100%);
+  }
+  .hero-content { position: relative; z-index: 1; padding: 60px; max-width: 900px; }
+  .hero h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(60px, 10vw, 130px); line-height: 0.9;
+    text-transform: uppercase; letter-spacing: -3px;
+    color: var(--cream); margin-bottom: 24px;
+  }
+  .hero h1 .olive { color: var(--olive-light); }
+  .hero-tagline {
+    font-family: 'DM Sans', sans-serif; font-size: 22px; font-style: italic;
+    color: var(--cream); opacity: 0.9; max-width: 650px; margin: 0 auto 16px;
+    line-height: 1.4;
+  }
+  .hero-sub {
+    font-family: 'Space Mono', monospace; font-size: 13px;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--olive-light); margin-bottom: 40px;
+  }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 36px; font-family: 'Archivo Black', sans-serif;
+    font-size: 14px; text-transform: uppercase; letter-spacing: 2px;
+    text-decoration: none; border: 3px solid var(--cream); transition: all 0.2s;
+  }
+  .btn-fill { background: var(--orange); color: var(--cream); border-color: var(--orange); }
+  .btn-fill:hover { background: var(--cream); color: var(--black); transform: translate(-3px,-3px); box-shadow: 6px 6px 0 var(--orange); }
+  .btn-outline { background: transparent; color: var(--cream); }
+  .btn-outline:hover { background: var(--cream); color: var(--black); }
+
+  /* ===== ABOUT ===== */
+  .about {
+    display: grid; grid-template-columns: 1fr 1fr; min-height: 500px;
+  }
+  .about-text { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
+  .about-text h2 {
+    font-family: 'Archivo Black', sans-serif; font-size: 48px;
+    text-transform: uppercase; line-height: 0.95; margin-bottom: 24px; letter-spacing: -1px;
+  }
+  .about-text p { font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 16px; }
+  .about-text p strong { color: var(--black); }
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  }
+  .stat-box {
+    padding: 40px; border: 2px solid var(--black); margin: -1px;
+    text-align: center; transition: background 0.3s;
+  }
+  .stat-box:hover { background: var(--green-pale); }
+  .stat-num {
+    font-family: 'Archivo Black', sans-serif; font-size: 56px; line-height: 1;
+    color: var(--green); margin-bottom: 6px;
+  }
+  .stat-label {
+    font-family: 'Space Mono', monospace; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 2px; color: #888;
+  }
+
+  /* ===== GALLERY STRIP ===== */
+  .gallery-strip {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
+    height: 350px; overflow: hidden;
+  }
+  .gallery-strip img {
+    width: 100%; height: 100%; object-fit: cover;
+    border: 2px solid var(--black); margin: -1px;
+    transition: transform 0.4s; cursor: pointer;
+  }
+  .gallery-strip img:hover { transform: scale(1.05); z-index: 2; }
+
+  /* ===== ATELIERS ===== */
+  .ateliers-section { padding: 80px 120px; background: var(--cream); }
+  .section-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(48px, 7vw, 90px);
+    text-transform: uppercase; line-height: 0.95;
+    margin-bottom: 50px; letter-spacing: -2px;
+  }
+  .ateliers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .atelier-card {
+    padding: 36px 28px; border: 2px solid var(--black); margin: -1px;
+    transition: all 0.3s; cursor: pointer; position: relative; overflow: hidden;
+    background: var(--cream);
+  }
+  .atelier-card:hover { transform: scale(1.02); z-index: 2; box-shadow: 8px 8px 0 var(--black); }
+  .atelier-card .card-img {
+    width: 100%; height: 160px; object-fit: cover;
+    border: 2px solid var(--black); margin-bottom: 16px;
+    filter: grayscale(30%); transition: filter 0.3s;
+  }
+  .atelier-card:hover .card-img { filter: grayscale(0%); }
+  .atelier-num {
+    font-family: 'Archivo Black', sans-serif; font-size: 56px; line-height: 1;
+    color: var(--black); opacity: 0.08; position: absolute; top: 10px; right: 14px;
+  }
+  .atelier-card h3 {
+    font-family: 'Archivo Black', sans-serif; font-size: 18px;
+    text-transform: uppercase; margin-bottom: 8px; line-height: 1.15;
+  }
+  .atelier-card .cat-label {
+    display: inline-block; font-family: 'Space Mono', monospace; font-size: 10px;
+    text-transform: uppercase; letter-spacing: 2px; padding: 4px 12px;
+    border: 1.5px solid currentColor; border-radius: 50px; margin-bottom: 12px;
+  }
+  .cat-textile { color: var(--purple); }
+  .cat-jardin { color: var(--green); }
+  .cat-art { color: var(--orange); }
+  .cat-bien { color: var(--pink); }
+  .cat-artisanat { color: var(--blue); }
+  .atelier-card p { font-size: 13px; line-height: 1.5; color: #666; }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonials { padding: 80px 120px; background: white; }
+  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .testi-card {
+    padding: 40px; border: 2px solid var(--black); margin: -1px;
+    position: relative;
+  }
+  .testi-card:hover { background: var(--green-pale); }
+  .testi-quote {
+    font-family: 'Archivo Black', sans-serif; font-size: 72px;
+    color: var(--olive); opacity: 0.3; line-height: 1; margin-bottom: 12px;
+  }
+  .testi-card blockquote {
+    font-size: 15px; font-style: italic; line-height: 1.6;
+    color: #444; margin-bottom: 20px;
+  }
+  .testi-author { font-family: 'Archivo Black', sans-serif; font-size: 14px; text-transform: uppercase; }
+  .testi-role { font-size: 12px; color: #888; margin-top: 2px; }
+  .testi-stars { color: var(--olive); font-size: 14px; margin-bottom: 12px; }
+
+  /* ===== TRUST BAR ===== */
+  .trust-bar {
+    padding: 50px 120px; background: var(--cream-dark);
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px;
+    text-align: center;
+  }
+  .trust-item .trust-icon {
+    font-size: 28px; margin-bottom: 8px; display: block; color: var(--green);
+  }
+  .trust-item strong {
+    font-family: 'Archivo Black', sans-serif; font-size: 14px;
+    text-transform: uppercase; display: block; margin-bottom: 4px;
+  }
+  .trust-item span { font-size: 12px; color: #888; }
+
+  /* ===== PARTNERS ===== */
+  .partners {
+    padding: 40px 120px; background: var(--cream);
+    text-align: center;
+  }
+  .partners h3 {
+    font-family: 'Space Mono', monospace; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 3px; color: #aaa;
+    margin-bottom: 30px;
+  }
+  .partners-logos {
+    display: flex; align-items: center; justify-content: center;
+    gap: 40px; flex-wrap: wrap; opacity: 0.5;
+    filter: grayscale(100%); transition: all 0.3s;
+  }
+  .partners-logos:hover { opacity: 0.8; filter: grayscale(50%); }
+  .partners-logos img { height: 50px; object-fit: contain; }
+
+  /* ===== ASSOCIATION ===== */
+  .asso-section { position: relative; overflow: hidden; }
+  .asso-top {
+    background: var(--purple); padding: 80px 120px 60px;
+    color: white; position: relative;
+  }
+  .asso-top .section-title { color: white; }
+  .asso-top .asso-subtitle {
+    font-family: 'Space Mono', monospace; font-size: 16px;
+    max-width: 500px; opacity: 0.8; line-height: 1.6;
+  }
+  .asso-top::after {
+    content: ''; position: absolute; top: -80px; right: -60px;
+    width: 400px; height: 400px; background: rgba(255,255,255,0.06); border-radius: 50%;
+  }
+  .asso-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; margin-top: 50px; }
+  .asso-card {
+    padding: 50px 40px; border: 2px solid rgba(255,255,255,0.12); margin: -1px;
+    transition: all 0.3s; cursor: pointer;
+  }
+  .asso-card:hover { background: rgba(255,255,255,0.08); }
+  .asso-card-icon { font-size: 36px; margin-bottom: 20px; display: block; }
+  .asso-card h3 {
+    font-family: 'Archivo Black', sans-serif; font-size: 22px;
+    text-transform: uppercase; margin-bottom: 12px; color: white;
+  }
+  .asso-card p { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.6); }
+  .asso-card .asso-arrow {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
+    font-family: 'Archivo Black', sans-serif; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 2px; color: var(--yellow);
+    text-decoration: none; transition: gap 0.3s;
+  }
+  .asso-card:hover .asso-arrow { gap: 16px; }
+  .asso-cta-bar {
+    background: var(--yellow-bright); padding: 30px 120px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .asso-cta-bar h3 {
+    font-family: 'Archivo Black', sans-serif; font-size: 26px;
+    text-transform: uppercase; color: var(--black);
+  }
+  .asso-cta-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 36px; background: var(--purple); color: white;
+    font-family: 'Archivo Black', sans-serif; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 2px; text-decoration: none;
+    border: 3px solid var(--black); transition: all 0.2s;
+  }
+  .asso-cta-btn:hover { background: var(--black); transform: translate(-3px,-3px); box-shadow: 6px 6px 0 var(--purple); }
+
+  /* ===== CONTACT ===== */
+  .contact-section { display: grid; grid-template-columns: 1fr 1fr; }
+  .contact-left {
+    background: var(--green); color: white; padding: 80px 60px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .contact-left::after {
+    content: ''; position: absolute; bottom: -60px; right: -60px;
+    width: 300px; height: 300px; background: rgba(255,255,255,0.06); border-radius: 50%;
+  }
+  .contact-left h2 {
+    font-family: 'Archivo Black', sans-serif; font-size: 52px;
+    text-transform: uppercase; line-height: 0.95; margin-bottom: 24px;
+  }
+  .contact-left > p { font-size: 16px; opacity: 0.8; line-height: 1.7; margin-bottom: 30px; max-width: 400px; }
+  .contact-detail { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; font-size: 15px; }
+  .contact-detail i {
+    width: 40px; height: 40px; border: 2px solid rgba(255,255,255,0.25);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;
+  }
+  .contact-right {
+    background: var(--cream-dark); padding: 80px 60px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .contact-right h3 {
+    font-family: 'Archivo Black', sans-serif; font-size: 28px;
+    text-transform: uppercase; margin-bottom: 30px;
+  }
+  .form-group { margin-bottom: 20px; }
+  .form-group label {
+    display: block; font-family: 'Space Mono', monospace; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 14px 16px; background: var(--cream);
+    border: 2px solid var(--black); font-family: 'DM Sans', sans-serif;
+    font-size: 15px; transition: all 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none; box-shadow: 4px 4px 0 var(--green); transform: translate(-2px,-2px);
+  }
+  .form-group textarea { min-height: 100px; resize: vertical; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-submit {
+    width: 100%; padding: 16px; background: var(--orange); color: var(--cream);
+    border: 3px solid var(--black); font-family: 'Archivo Black', sans-serif;
+    font-size: 15px; text-transform: uppercase; letter-spacing: 3px;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .form-submit:hover { background: var(--black); transform: translate(-3px,-3px); box-shadow: 6px 6px 0 var(--orange); }
+
+  /* ===== NEWSLETTER ===== */
+  .newsletter {
+    background: var(--black); color: var(--cream); padding: 50px 120px;
+    display: flex; align-items: center; justify-content: space-between; gap: 40px;
+  }
+  .newsletter h3 {
+    font-family: 'Archivo Black', sans-serif; font-size: 28px;
+    text-transform: uppercase; flex-shrink: 0;
+  }
+  .newsletter-form { display: flex; gap: 0; flex: 1; max-width: 500px; }
+  .newsletter-form input {
+    flex: 1; padding: 14px 18px; border: 2px solid var(--cream);
+    background: transparent; color: var(--cream); font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+  }
+  .newsletter-form input::placeholder { color: rgba(255,255,255,0.4); }
+  .newsletter-form button {
+    padding: 14px 28px; background: var(--olive); color: var(--cream);
+    border: 2px solid var(--cream); font-family: 'Archivo Black', sans-serif;
+    font-size: 13px; text-transform: uppercase; letter-spacing: 2px; cursor: pointer;
+    transition: background 0.2s;
+  }
+  .newsletter-form button:hover { background: var(--orange); }
+
+  /* ===== FOOTER ===== */
+  footer { background: var(--black); color: var(--cream); padding: 60px 120px 30px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer-brand h3 { font-family: 'Archivo Black', sans-serif; font-size: 24px; text-transform: uppercase; margin-bottom: 12px; }
+  .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.7; }
+  footer h4 { font-family: 'Archivo Black', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.3); margin-bottom: 16px; }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 10px; }
+  footer ul a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+  footer ul a:hover { color: var(--olive-light); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; }
+  .footer-bottom p { font-family: 'Space Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; }
+  .footer-social { display: flex; gap: 10px; }
+  .footer-social a { width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); text-decoration: none; transition: all 0.2s; }
+  .footer-social a:hover { background: var(--green); border-color: var(--green); color: white; }
+
+  .watermark { position: fixed; bottom: 20px; right: 20px; background: var(--black); color: var(--cream); padding: 8px 18px; font-family: 'Space Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; z-index: 9999; border: 2px solid var(--cream); }
+  html { scroll-behavior: smooth; }
+
+  @media (max-width: 1100px) {
+    .ateliers-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-strip { grid-template-columns: repeat(3, 1fr); }
+    .gallery-strip img:nth-child(4), .gallery-strip img:nth-child(5) { display: none; }
+    .hero { padding: 60px; }
+    .ateliers-section, .testimonials, footer, .partners { padding-left: 60px; padding-right: 60px; }
+    .asso-top, .asso-cta-bar, .newsletter, .trust-bar { padding-left: 60px; padding-right: 60px; }
+    .about { grid-template-columns: 1fr; }
+    .float-nav { display: none; }
+  }
+  @media (max-width: 700px) {
+    .ateliers-grid, .asso-grid, .testi-grid { grid-template-columns: 1fr; }
+    .gallery-strip { grid-template-columns: repeat(2, 1fr); height: 250px; }
+    .gallery-strip img:nth-child(3), .gallery-strip img:nth-child(4), .gallery-strip img:nth-child(5) { display: none; }
+    .contact-section { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .about-stats { grid-template-columns: 1fr 1fr; }
+    .trust-bar { grid-template-columns: repeat(3, 1fr); }
+    .hero-content { padding: 30px; }
+    .ateliers-section, .testimonials, footer, .partners { padding: 40px 24px; }
+    .asso-top, .asso-cta-bar, .newsletter, .trust-bar { padding: 40px 24px; }
+    .contact-left, .contact-right { padding: 40px 24px; }
+    .asso-cta-bar, .newsletter { flex-direction: column; gap: 20px; text-align: center; }
+    .section-title { font-size: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="watermark">Maquette &mdash; Botanique Ludique</div>
+
+<!-- FLOATING NAV -->
+<nav class="float-nav">
+  <a href="#accueil">Accueil</a>
+  <a href="#ateliers">Ateliers</a>
+  <a href="#temoignages">Avis</a>
+  <a href="#association" class="nav-asso">Asso</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="accueil">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1><span class="olive">Botanique</span><br>Ludique</h1>
+    <p class="hero-tagline">Quand l'atelier cr&eacute;atif rencontre l'anthropologie de la nature</p>
+    <p class="hero-sub">Paris &bull; Yvelines (78) &bull; Hauts-de-Seine (92) &bull; Val-d'Oise (95)</p>
+    <div class="hero-buttons">
+      <a href="#ateliers" class="btn btn-fill">D&eacute;couvrir les ateliers &rarr;</a>
+      <a href="#contact" class="btn btn-outline">Organiser un Team Building</a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee olive">
+  <div class="marquee-track">
+    <span>Ethnobotanique</span><span class="star">&#10044;</span>
+    <span>Teinture v&eacute;g&eacute;tale</span><span class="star">&#10044;</span>
+    <span>Kokedama</span><span class="star">&#10044;</span>
+    <span>Terrarium</span><span class="star">&#10044;</span>
+    <span>Bombes de graines</span><span class="star">&#10044;</span>
+    <span>Couronnes de fleurs</span><span class="star">&#10044;</span>
+    <span>Herbier</span><span class="star">&#10044;</span>
+    <span>Vannerie</span><span class="star">&#10044;</span>
+    <span>Ethnobotanique</span><span class="star">&#10044;</span>
+    <span>Teinture v&eacute;g&eacute;tale</span><span class="star">&#10044;</span>
+    <span>Kokedama</span><span class="star">&#10044;</span>
+    <span>Terrarium</span><span class="star">&#10044;</span>
+    <span>Bombes de graines</span><span class="star">&#10044;</span>
+    <span>Couronnes de fleurs</span><span class="star">&#10044;</span>
+    <span>Herbier</span><span class="star">&#10044;</span>
+    <span>Vannerie</span><span class="star">&#10044;</span>
+  </div>
+</div>
+
+<!-- ===== ABOUT + STATS ===== -->
+<section class="about">
+  <div class="about-text">
+    <h2>Vanessa Charlery</h2>
+    <p>Cr&eacute;&eacute;e par <strong>Vanessa Charlery</strong>, ethnobotaniste et anthropologue, l'association Botanique Ludique propose des ateliers qui allient <strong>cr&eacute;ativit&eacute; artistique</strong> et transmission des <strong>savoirs ethnobotaniques</strong>.</p>
+    <p>Nos ateliers s'adressent &agrave; <strong>tous les publics</strong> : enfants d&egrave;s 4 ans, adultes, seniors en r&eacute;sidence ou EHPAD, &eacute;coles et centres de loisirs, MJC, centres sociaux, associations, entreprises et collectivit&eacute;s.</p>
+    <p>Chaque pratique explore les <strong>relations culturelles entre humains et plantes</strong>, de l'Asie &agrave; l'Europe.</p>
+  </div>
+  <div class="about-stats">
+    <div class="stat-box">
+      <div class="stat-num">50+</div>
+      <div class="stat-label">Ateliers r&eacute;alis&eacute;s</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">400+</div>
+      <div class="stat-label">Participants</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">15+</div>
+      <div class="stat-label">Partenaires</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">2023</div>
+      <div class="stat-label">Ann&eacute;e de cr&eacute;ation</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY STRIP -->
+<div class="gallery-strip">
+  <img src="https://botaniqueludique.com/assets/gallery-terrarium-DJheKBgz.webp" alt="Terrarium">
+  <img src="https://botaniqueludique.com/assets/gallery-teinture-1-CUCpXPXV.webp" alt="Teinture v&eacute;g&eacute;tale">
+  <img src="https://botaniqueludique.com/assets/gallery-flower-crown-LZ3a5HXh.webp" alt="Couronne de fleurs">
+  <img src="https://botaniqueludique.com/assets/gallery-kokedama-garden-LZjSNKeV.webp" alt="Kokedama">
+  <img src="https://botaniqueludique.com/assets/gallery-sachet-senteur-DThS1hh0.webp" alt="Sachets senteurs">
+</div>
+
+<!-- ===== ATELIERS ===== -->
+<section class="ateliers-section" id="ateliers">
+  <h2 class="section-title">Nos<br>Ateliers</h2>
+  <div class="ateliers-grid">
+    <div class="atelier-card">
+      <div class="atelier-num">01</div>
+      <img class="card-img" src="https://botaniqueludique.com/assets/gallery-teinture-1-CUCpXPXV.webp" alt="Teinture">
+      <span class="cat-label cat-textile">Cr&eacute;ations textiles</span>
+      <h3>Teinture V&eacute;g&eacute;tale</h3>
+      <p>D&eacute;couverte des pigments naturels et cr&eacute;ation de tissus teints &agrave; partir de plantes tinctoriales.</p>
+    </div>
+    <div class="atelier-card">
+      <div class="atelier-num">02</div>
+      <img class="card-img" src="https://botaniqueludique.com/assets/gallery-kokedama-garden-LZjSNKeV.webp" alt="Kokedama">
+      <span class="cat-label cat-jardin">Jardinage</span>
+      <h3>Kokedama</h3>
+      <p>Art japonais de la boule de mousse. Cr&eacute;ez votre propre composition v&eacute;g&eacute;tale suspendue.</p>
+    </div>
+    <div class="atelier-card">
+      <div class="atelier-num">03</div>
+      <img class="card-img" src="https://botaniqueludique.com/assets/gallery-terrarium-DJheKBgz.webp" alt="Terrarium">
+      <span class="cat-label cat-jardin">Jardinage</span>
+      <h3>Terrariums</h3>
+      <p>Cr&eacute;ez un &eacute;cosyst&egrave;me miniature dans un bocal en verre. Un jardin autonome &agrave; emporter.</p>
+    </div>
+    <div class="atelier-card">
+      <div class="atelier-num">04</div>
+      <img class="card-img" src="https://botaniqueludique.com/assets/gallery-flower-crown-LZ3a5HXh.webp" alt="Couronne">
+      <span class="cat-label cat-art">Art floral</span>
+      <h3>Couronnes de Fleurs</h3>
+      <p>Compositions florales fra&icirc;ches ou s&eacute;ch&eacute;es. Apprenez l'art de tresser la nature.</p>
+    </div>
+    <div class="atelier-card">
+      <div class="atelier-num">05</div>
+      <span class="cat-label cat-jardin">Jardinage</span>
+      <h3>Bombes de Graines</h3>
+      <p>Fabriquez des bombes de graines pour reverdir la ville. Id&eacute;al en atelier scolaire.</p>
+    </div>
+    <div class="atelier-card">
+      <div class="atelier-num">06</div>
+      <span class="cat-label cat-art">Art floral</span>
+      <h3>Herbier</h3>
+      <p>Collecte, pressage et mise en valeur de sp&eacute;cimens botaniques. Entre science et art.</p>
+    </div>
+    <div class="atelier-card">
+      <div class="atelier-num">07</div>
+      <span class="cat-label cat-artisanat">Artisanat</span>
+      <h3>Vannerie</h3>
+      <p>Techniques ancestrales de tressage v&eacute;g&eacute;tal. Cr&eacute;ez paniers et objets en fibres naturelles.</p>
+    </div>
+    <div class="atelier-card">
+      <div class="atelier-num">08</div>
+      <img class="card-img" src="https://botaniqueludique.com/assets/gallery-sachet-senteur-DThS1hh0.webp" alt="Sachets">
+      <span class="cat-label cat-bien">Bien-&ecirc;tre</span>
+      <h3>Sachets Senteur &amp; Eaux Florales</h3>
+      <p>Cr&eacute;ation de sachets parfum&eacute;s et d'eaux florales &agrave; partir de plantes aromatiques.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee black">
+  <div class="marquee-track">
+    <span>Enfants</span><span class="star">&#10044;</span>
+    <span>Adultes</span><span class="star">&#10044;</span>
+    <span>Seniors</span><span class="star">&#10044;</span>
+    <span>&Eacute;coles</span><span class="star">&#10044;</span>
+    <span>EHPAD</span><span class="star">&#10044;</span>
+    <span>Entreprises</span><span class="star">&#10044;</span>
+    <span>Team Building</span><span class="star">&#10044;</span>
+    <span>Collectivit&eacute;s</span><span class="star">&#10044;</span>
+    <span>MJC</span><span class="star">&#10044;</span>
+    <span>Enfants</span><span class="star">&#10044;</span>
+    <span>Adultes</span><span class="star">&#10044;</span>
+    <span>Seniors</span><span class="star">&#10044;</span>
+    <span>&Eacute;coles</span><span class="star">&#10044;</span>
+    <span>EHPAD</span><span class="star">&#10044;</span>
+    <span>Entreprises</span><span class="star">&#10044;</span>
+    <span>Team Building</span><span class="star">&#10044;</span>
+    <span>Collectivit&eacute;s</span><span class="star">&#10044;</span>
+    <span>MJC</span><span class="star">&#10044;</span>
+  </div>
+</div>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials" id="temoignages">
+  <h2 class="section-title">Ce qu'ils<br>en disent</h2>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-quote">&ldquo;</div>
+      <div class="testi-stars">&starf;&starf;&starf;&starf;&starf;</div>
+      <blockquote>Les ateliers de Vanessa ont transform&eacute; notre approche p&eacute;dagogique. Mes &eacute;l&egrave;ves ont d&eacute;couvert l'ethnobotanique de mani&egrave;re ludique et cr&eacute;ative. Un vrai succ&egrave;s !</blockquote>
+      <div class="testi-author">Sophie M.</div>
+      <div class="testi-role">Professeure des &eacute;coles &mdash; Bombes de graines</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">&ldquo;</div>
+      <div class="testi-stars">&starf;&starf;&starf;&starf;&starf;</div>
+      <blockquote>Une approche professionnelle et passionnante. Vanessa sait transmettre son savoir avec p&eacute;dagogie. Les participants repartent enrichis culturellement et cr&eacute;ativement.</blockquote>
+      <div class="testi-author">Camille D.</div>
+      <div class="testi-role">Animatrice MJC &mdash; Teinture v&eacute;g&eacute;tale</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">&ldquo;</div>
+      <div class="testi-stars">&starf;&starf;&starf;&starf;&starf;</div>
+      <blockquote>Nous avons organis&eacute; plusieurs ateliers pour nos &eacute;quipes. L'alliance entre art et botanique a cr&eacute;&eacute; une dynamique formidable. Une exp&eacute;rience m&eacute;morable !</blockquote>
+      <div class="testi-author">Jean-Marc L.</div>
+      <div class="testi-role">Responsable RSE &mdash; Kokedama</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon"><i class="fas fa-box-open"></i></span><strong>Cl&eacute; en main</strong><span>Mat&eacute;riel fourni</span></div>
+  <div class="trust-item"><span class="trust-icon"><i class="fas fa-leaf"></i></span><strong>&Eacute;co-responsable</strong><span>Mat&eacute;riaux naturels</span></div>
+  <div class="trust-item"><span class="trust-icon"><i class="fas fa-users"></i></span><strong>400+ participants</strong><span>Accompagn&eacute;s</span></div>
+  <div class="trust-item"><span class="trust-icon"><i class="fas fa-shield-halved"></i></span><strong>Assurance RC Pro</strong><span>Intervenant assur&eacute;</span></div>
+  <div class="trust-item"><span class="trust-icon"><i class="fas fa-map-pin"></i></span><strong>Paris, 78, 92, 95</strong><span>&Icirc;le-de-France</span></div>
+  <div class="trust-item"><span class="trust-icon"><i class="fas fa-star"></i></span><strong>5/5 &eacute;toiles</strong><span>Satisfaction client</span></div>
+</div>
+
+<!-- PARTNERS -->
+<div class="partners">
+  <h3>Ils nous font confiance</h3>
+  <div class="partners-logos">
+    <img src="https://botaniqueludique.com/logos/region-idf.webp" alt="R&eacute;gion IDF">
+    <img src="https://botaniqueludique.com/logos/mjc-vesinet.jpg" alt="MJC V&eacute;sinet">
+    <img src="https://botaniqueludique.com/logos/mjc-chatou.jpeg" alt="MJC Chatou">
+    <img src="https://botaniqueludique.com/logos/publicis.jpg" alt="Publicis">
+    <img src="https://botaniqueludique.com/logos/f93.jpg" alt="F93">
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee purple">
+  <div class="marquee-track">
+    <span>Rejoignez l'association</span><span class="star">&#10044;</span>
+    <span>Adh&eacute;rez</span><span class="star">&#10044;</span>
+    <span>&Eacute;v&eacute;nements</span><span class="star">&#10044;</span>
+    <span>Balades botaniques</span><span class="star">&#10044;</span>
+    <span>Communaut&eacute;</span><span class="star">&#10044;</span>
+    <span>Espace membres</span><span class="star">&#10044;</span>
+    <span>Rejoignez l'association</span><span class="star">&#10044;</span>
+    <span>Adh&eacute;rez</span><span class="star">&#10044;</span>
+    <span>&Eacute;v&eacute;nements</span><span class="star">&#10044;</span>
+    <span>Balades botaniques</span><span class="star">&#10044;</span>
+    <span>Communaut&eacute;</span><span class="star">&#10044;</span>
+    <span>Espace membres</span><span class="star">&#10044;</span>
+  </div>
+</div>
+
+<!-- ===== ASSOCIATION ===== -->
+<section class="asso-section" id="association">
+  <div class="asso-top">
+    <h2 class="section-title">L'Asso&shy;ciation</h2>
+    <p class="asso-subtitle">Un espace d&eacute;di&eacute; &agrave; notre communaut&eacute; de passionn&eacute;s du monde v&eacute;g&eacute;tal. Adh&eacute;rer, participer, partager.</p>
+    <div class="asso-grid">
+      <div class="asso-card">
+        <span class="asso-card-icon">&#9997;&#65039;</span>
+        <h3>Adh&eacute;sion en ligne</h3>
+        <p>Rejoignez l'asso en quelques clics. Adh&eacute;sion &agrave; prix libre, acc&egrave;s aux &eacute;v&eacute;nements et &agrave; l'espace membres.</p>
+        <a href="#" class="asso-arrow">Adh&eacute;rer &rarr;</a>
+      </div>
+      <div class="asso-card">
+        <span class="asso-card-icon">&#128197;</span>
+        <h3>Agenda</h3>
+        <p>Balades botaniques, sorties nature, ateliers ouverts, assembl&eacute;e g&eacute;n&eacute;rale... Tous nos &eacute;v&eacute;nements.</p>
+        <a href="#" class="asso-arrow">Voir l'agenda &rarr;</a>
+      </div>
+      <div class="asso-card">
+        <span class="asso-card-icon">&#128274;</span>
+        <h3>Espace membres</h3>
+        <p>Ressources r&eacute;serv&eacute;es : comptes-rendus, photos des sorties, fiches botaniques, documents de l'asso.</p>
+        <a href="#" class="asso-arrow">Se connecter &rarr;</a>
+      </div>
+      <div class="asso-card">
+        <span class="asso-card-icon">&#129309;</span>
+        <h3>L'&eacute;quipe</h3>
+        <p>Les membres du bureau, les b&eacute;n&eacute;voles et intervenants qui font vivre Botanique Ludique.</p>
+        <a href="#" class="asso-arrow">D&eacute;couvrir &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <div class="asso-cta-bar">
+    <h3>Envie de nous rejoindre ?</h3>
+    <a href="#" class="asso-cta-btn">Adh&eacute;rer maintenant &rarr;</a>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact-section" id="contact">
+  <div class="contact-left">
+    <h2>Pr&ecirc;t&middot;e &agrave; explorer le monde v&eacute;g&eacute;tal ?</h2>
+    <p>Rejoignez-nous pour un atelier &agrave; Paris, Yvelines, Hauts-de-Seine ou Val-d'Oise.</p>
+    <div class="contact-detail"><i class="fas fa-envelope"></i><span>contact@botaniqueludique.com</span></div>
+    <div class="contact-detail"><i class="fas fa-phone"></i><span>06 09 83 16 06</span></div>
+    <div class="contact-detail"><i class="fab fa-instagram"></i><span>@botanique.ludique</span></div>
+    <div class="contact-detail"><i class="fas fa-map-pin"></i><span>&Icirc;le-de-France</span></div>
+  </div>
+  <div class="contact-right">
+    <h3>Demande de devis</h3>
+    <div class="form-row">
+      <div class="form-group"><label>Nom</label><input type="text" placeholder="Votre nom"></div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="votre@email.fr"></div>
+    </div>
+    <div class="form-group">
+      <label>Vous &ecirc;tes</label>
+      <select>
+        <option>Particulier</option>
+        <option>Enseignant(e)</option>
+        <option>Entreprise / Team Building</option>
+        <option>Collectivit&eacute; / Association</option>
+        <option>EHPAD / Sant&eacute;</option>
+        <option>MJC / Centre de loisirs</option>
+      </select>
+    </div>
+    <div class="form-group"><label>Votre projet</label><textarea placeholder="Type d'atelier, nombre de participants, dates envisag&eacute;es..."></textarea></div>
+    <button class="form-submit">Envoyer &rarr;</button>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <h3>Restez inform&eacute;&middot;e</h3>
+  <div class="newsletter-form">
+    <input type="email" placeholder="Votre email">
+    <button>S'inscrire</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Botanique Ludique</h3>
+      <p>Ateliers cr&eacute;atifs pour reconnecter l'humain au v&eacute;g&eacute;tal. Cr&eacute;&eacute; avec amour et nature.</p>
+    </div>
+    <div>
+      <h4>Ateliers</h4>
+      <ul>
+        <li><a href="#">Teinture v&eacute;g&eacute;tale</a></li>
+        <li><a href="#">Kokedama</a></li>
+        <li><a href="#">Terrariums</a></li>
+        <li><a href="#">Couronnes de fleurs</a></li>
+        <li><a href="#">Herbier</a></li>
+        <li><a href="#">Vannerie</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Pro</h4>
+      <ul>
+        <li><a href="#">Team Building</a></li>
+        <li><a href="#">&Eacute;tablissements scolaires</a></li>
+        <li><a href="#">Collectivit&eacute;s</a></li>
+        <li><a href="#">EHPAD &amp; Sant&eacute;</a></li>
+        <li><a href="#">&Eacute;v&eacute;nementiel</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Infos</h4>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Galerie</a></li>
+        <li><a href="#">Agenda</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Mentions l&eacute;gales</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Botanique Ludique &bull; Cr&eacute;&eacute; avec amour et nature</p>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
