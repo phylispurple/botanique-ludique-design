@@ -190,6 +190,26 @@ const workshops: Workshop[] = [
     icon: Droplets,
     category: "bien-etre",
   },
+  {
+    title: "Cueillette Sauvage & Cuisine de Plantes Comestibles",
+    description: "Partez en exploration botanique pour identifier et cueillir des plantes sauvages comestibles selon les savoirs ethnobotaniques traditionnels. De la cueillette à l'assiette, apprenez à reconnaître, récolter et préparer des plantes locales : pestos d'ortie, beignets de fleurs de sureau, salades de plantes des chemins. Une immersion entre nature, culture et gastronomie.",
+    duration: "3h",
+    public: "Adultes, adolescents",
+    image: sharedGardenImage,
+    icon: Leaf,
+    category: "bien-etre",
+    tag: "nouveau",
+  },
+  {
+    title: "Tisanes, Sirops & Élixirs Botaniques",
+    description: "Composez vos propres mélanges de tisanes thérapeutiques, sirops floraux et élixirs botaniques en puisant dans les traditions herboristes du monde entier. Explorez les propriétés des plantes médicinales et aromatiques locales pour créer des préparations personnalisées : sirop de lavande, tisane digestive, élixir de sureau.",
+    duration: "2h30",
+    public: "Tout public",
+    image: floralWatersImage,
+    icon: Droplets,
+    category: "bien-etre",
+    tag: "nouveau",
+  },
 
   {
     title: "Papier Recyclé & Carnets",
