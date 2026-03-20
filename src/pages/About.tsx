@@ -34,16 +34,22 @@ const About = () => {
       icon: BookOpen,
     },
     {
+      year: "2024",
+      title: "Ateliers en indépendante",
+      description: "Lancement des premiers ateliers d'ethnobotanique en tant qu'indépendante. Entreprises, EHPAD, écoles, centres sociaux : les publics se diversifient.",
+      icon: Users,
+    },
+    {
       year: "2026",
       title: "Botanique Ludique",
-      description: "Création de l'association loi 1901. Premiers ateliers à Paris et en Île-de-France. Le projet prend racine.",
+      description: "Création de l'association loi 1901 pour mettre en avant artistes et chercheurs et rendre ces savoirs accessibles au plus grand nombre.",
       icon: Heart,
     },
     {
       year: "Auj.",
       title: "+400 participants · 50+ ateliers",
-      description: "Entreprises, EHPAD, écoles, centres sociaux, particuliers. Les ateliers se déploient dans les départements 75, 78, 92 et 95.",
-      icon: Users,
+      description: "Île-de-France : départements 75, 78, 92 et 95. Ateliers, conférences et balades botaniques pour tous les publics.",
+      icon: Sprout,
     },
   ];
 
