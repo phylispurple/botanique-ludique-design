@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
-import { GraduationCap, Sprout, Microscope, Landmark, Users } from "lucide-react";
+import { GraduationCap, Sprout, Microscope, Landmark, Users, Building2, Leaf, Globe } from "lucide-react";
 
 const conferences = [
   {
@@ -31,19 +31,19 @@ const conferences = [
 
 const balades = [
   {
-    icon: "🏙️",
+    icon: Building2,
     title: "Botanique Urbaine",
     desc: "Découvrir les plantes qui poussent dans les interstices de la ville — trottoirs, friches, jardins partagés. Une exploration du vivant à deux pas de chez soi.",
     season: "Toute l'année · 2h · Tous publics",
   },
   {
-    icon: "🍃",
+    icon: Leaf,
     title: "Plantes Sauvages & Usages",
     desc: "Identifier les plantes comestibles, médicinales et tinctoriales dans la nature. Un regard ethnobotanique sur les savoirs populaires liés aux plantes sauvages.",
     season: "Printemps · Été · Demi-journée",
   },
   {
-    icon: "🌎",
+    icon: Globe,
     title: "Ethnobotanique de Terrain",
     desc: "Une balade pour comprendre les relations culturelles entre une société et ses plantes locales — histoire, usages, symboliques. Idéal pour les groupes curieux de sciences humaines.",
     season: "Sur demande · Adapté au groupe",
@@ -123,7 +123,7 @@ const ConferencesSavoirs = () => {
             {balades.map((balade, idx) => (
               <AnimatedSection key={idx} delay={idx * 120}>
                 <div className="p-9 border border-white/10 -mt-px -ml-px transition-colors duration-300 hover:bg-white/[0.06]">
-                  <span className="text-[30px] mb-4 block">{balade.icon}</span>
+                  <balade.icon className="w-7 h-7 text-[hsl(73_44%_67%)] mb-4" strokeWidth={1.5} />
                   <h3 className="font-display text-lg uppercase mb-2.5 text-white leading-[1.15]">
                     {balade.title}
                   </h3>
