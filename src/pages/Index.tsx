@@ -131,8 +131,6 @@ const Index = () => {
         speed={25}
       />
 
-      {/* ===== DUAL ENTRY: ASSOCIATION vs PRESTATIONS ===== */}
-      <DualEntrySection />
 
       {/* ===== PRÉSENTATION + STATS ===== */}
       <section className="py-24 px-6">
