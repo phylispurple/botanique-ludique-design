@@ -71,34 +71,6 @@ const Association = () => {
       {/* Association Section from homepage */}
       <AssociationSection />
 
-      {/* CTA */}
-      <section className="py-20 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <AnimatedSection>
-            <h2 className="font-display text-3xl md:text-4xl mb-6">Envie de nous rejoindre ?</h2>
-            <p className="text-lg font-body mb-8" style={{ color: 'hsl(0 0% 40%)' }}>
-              Que vous soyez bénévole, partenaire institutionnel, entreprise ou simplement curieux·se : nous serions ravis d'échanger avec vous.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="btn-brutal inline-block"
-                style={{ background: 'hsl(73 37% 44%)', color: 'hsl(36 33% 93%)' }}
-              >
-                Nous contacter
-              </Link>
-              <Link
-                to="/workshops"
-                className="btn-brutal inline-block"
-                style={{ background: 'hsl(36 33% 93%)', color: 'hsl(0 0% 10%)' }}
-              >
-                Voir les ateliers
-              </Link>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
