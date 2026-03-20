@@ -29,7 +29,7 @@ const CustomCursor = () => {
     const style = document.createElement('style');
     style.id = 'custom-cursor-style';
     style.textContent = `
-      @media (min-width: 1301px) and (pointer: fine) {
+      @media (min-width: 1024px) and (pointer: fine) {
         * { cursor: none !important; }
         a, button, [role="button"], label, select { cursor: none !important; }
         input[type="text"], input[type="email"], textarea { cursor: none !important; }
