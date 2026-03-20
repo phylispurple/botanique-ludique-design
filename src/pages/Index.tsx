@@ -324,7 +324,16 @@ const Index = () => {
       />
 
       {/* ===== CTA + NEWSLETTER ===== */}
-      <section className="py-20 px-6 bg-[hsl(var(--black))] text-[hsl(var(--cream))]">
+      <section className="py-20 px-6 text-[hsl(var(--cream))] relative overflow-hidden">
+        <div className="absolute inset-0 bg-[hsl(var(--black))]">
+          <img
+            src={galleryKokedamaGarden}
+            alt=""
+            className="w-full h-full object-cover opacity-25"
+            loading="lazy"
+          />
+        </div>
+        <div className="absolute inset-0 bg-[hsl(var(--black))]/60" />
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <AnimatedSection direction="left">
             <div className="space-y-5">
