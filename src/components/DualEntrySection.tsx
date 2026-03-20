@@ -19,7 +19,7 @@ const DualEntrySection = () => {
               <div>
                 <span className="font-mono text-[9px] uppercase tracking-[3px] text-[hsl(var(--olive))]">Association loi 1901</span>
                 <h2 className="font-display text-[clamp(1.5rem,4vw,2.5rem)] uppercase leading-[0.95] tracking-[-1px] text-[hsl(var(--black))]">
-                  Botanique<br/>Ludique
+                  L'association
                 </h2>
               </div>
             </div>
@@ -40,10 +40,10 @@ const DualEntrySection = () => {
           </AnimatedSection>
         </Link>
 
-        {/* PRESTATIONS INDÉPENDANTES */}
+        {/* PRO & ENTREPRISES */}
         <Link
           to="/pro"
-          className="group relative p-12 md:p-16 bg-[hsl(var(--cream))] no-underline transition-colors duration-300 hover:bg-[hsl(13,76%,61%)]/8"
+          className="group relative p-12 md:p-16 bg-[hsl(var(--cream))] no-underline transition-colors duration-300 hover:bg-[hsl(var(--orange))]/5"
         >
           <AnimatedSection direction="right" delay={150}>
             <div className="flex items-start gap-4 mb-6">
@@ -51,15 +51,15 @@ const DualEntrySection = () => {
                 <Briefcase className="w-5 h-5 text-[hsl(var(--orange))]" />
               </div>
               <div>
-                <span className="font-mono text-[9px] uppercase tracking-[3px] text-[hsl(var(--orange))]">Vanessa Charlery · Indépendante</span>
+                <span className="font-mono text-[9px] uppercase tracking-[3px] text-[hsl(var(--orange))]">Entreprises & Événements</span>
                 <h2 className="font-display text-[clamp(1.5rem,4vw,2.5rem)] uppercase leading-[0.95] tracking-[-1px] text-[hsl(var(--black))]">
-                  Prestations<br/>Sur Mesure
+                  Pro &<br/>Sur Mesure
                 </h2>
               </div>
             </div>
             <p className="text-base leading-[1.8] text-[hsl(var(--black))]/70 mb-6 max-w-md">
-              Ateliers nature pour entreprises, team building RSE, événements privés (EVJF, mariages), 
-              conférences et interventions en tant qu'ethnobotaniste.
+              Ateliers nature pour entreprises, team building RSE, séminaires,
+              événements privés (EVJF, mariages) et conférences sur mesure.
             </p>
             <div className="flex flex-wrap gap-2 mb-6">
               {["Team Building", "Séminaires", "EVJF", "Mariages", "Conférences"].map(tag => (

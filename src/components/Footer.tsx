@@ -74,7 +74,7 @@ const Footer = () => {
 
           {/* Prestations */}
           <div className="space-y-4">
-            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(13 76% 61%)' }}>💼 Prestations</h4>
+            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(73 44% 67%)' }}>Pro & Entreprises</h4>
             <div className="flex flex-col space-y-2">
               {[
                 { name: "Pro & Entreprises", path: "/pro" },
