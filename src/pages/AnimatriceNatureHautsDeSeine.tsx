@@ -121,7 +121,7 @@ const AnimatriceNatureHautsDeSeine = () => {
               <h2 className="text-2xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Pourquoi nous choisir dans le 92 ?</h2>
               <div className="grid sm:grid-cols-2 gap-3">
                 {[
-                  "Ethnobotaniste diplômée de l'EHESS",
+                  "Formée à l'EHESS en ethnobotanique",
                   "Déplacement dans tout le 92",
                   "Matériel fourni, installation rapide",
                   "Ateliers adaptés entreprises & collectivités",

@@ -125,7 +125,7 @@ const AnimatriceBotaniqueYvelines = () => {
                 </h2>
                 <ul className="space-y-3">
                   {[
-                    "Ethnobotaniste diplômée de l'EHESS",
+                    "Formée à l'EHESS en ethnobotanique",
                     "Ateliers adaptés à chaque public et chaque âge",
                     "Déplacement dans tout le 78 avec matériel fourni",
                     "Approche mêlant science, culture et créativité",

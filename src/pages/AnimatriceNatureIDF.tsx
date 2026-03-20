@@ -46,7 +46,7 @@ const AnimatriceNatureIDF = () => {
   ];
 
   const faqQuestions = [
-    { question: "Qu'est-ce qu'une animatrice nature ethnobotaniste ?", answer: "Une animatrice nature ethnobotaniste combine les connaissances scientifiques sur les plantes avec une approche anthropologique et culturelle. Vanessa Charlery, diplômée de l'EHESS, explore les relations entre les sociétés humaines et le monde végétal pour proposer des ateliers qui vont au-delà de la simple botanique." },
+    { question: "Qu'est-ce qu'une animatrice nature ethnobotaniste ?", answer: "Une animatrice nature ethnobotaniste combine les connaissances scientifiques sur les plantes avec une approche anthropologique et culturelle. Vanessa Charlery, formée à l'EHESS, explore les relations entre les sociétés humaines et le monde végétal pour proposer des ateliers qui vont au-delà de la simple botanique." },
     { question: "Quels types d'ateliers propose une animatrice botanique ?", answer: "Nos ateliers couvrent la création de kokedamas, la teinture végétale, les terrariums, la vannerie sauvage, les sachets de senteurs, la reconnaissance de plantes et bien plus. Chaque atelier est adapté au public et au contexte (entreprise, école, EHPAD, événement)." },
     { question: "Dans quels départements intervenez-vous ?", answer: "Nous intervenons dans toute l'Île-de-France, principalement à Paris (75), dans les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95). Nous nous déplaçons dans vos locaux ou organisons les ateliers dans nos espaces partenaires." },
     { question: "Quelle est la différence entre animatrice nature et animatrice scientifique ?", answer: "L'animatrice nature se concentre sur la connexion sensorielle avec l'environnement. L'animatrice scientifique apporte une rigueur académique. Chez Botanique Ludique, nous combinons les deux approches grâce à notre formation en ethnobotanique et anthropologie de la nature." },
@@ -81,7 +81,7 @@ const AnimatriceNatureIDF = () => {
                 Animatrice Nature & Botanique en Île-de-France
               </h1>
               <p className="subtitle-italic text-lg mb-6">
-                Ethnobotaniste diplômée · Ateliers pour tous les publics · Paris, 78, 92, 95
+                Animatrice ethnobotaniste · Ateliers pour tous les publics · Paris, 78, 92, 95
               </p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
                 Vanessa Charlery, ethnobotaniste formée à l'EHESS (École des Hautes Études en Sciences Sociales), 

@@ -125,7 +125,7 @@ const AnimatriceBotaniqueValDOise = () => {
                 <h2 className="text-2xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Pourquoi nous choisir ?</h2>
                 <ul className="space-y-3">
                   {[
-                    "Ethnobotaniste diplômée de l'EHESS",
+                    "Formée à l'EHESS en ethnobotanique",
                     "Interventions dans tout le Val-d'Oise",
                     "Approche interculturelle et inclusive",
                     "Matériel fourni, déplacement compris",
