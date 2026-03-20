@@ -282,7 +282,8 @@ const Index = () => {
             </h3>
           </AnimatedSection>
           <AnimatedSection delay={100}>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 items-center">
+            {/* Horizontal scroll on mobile, grid on desktop */}
+            <div className="flex md:grid md:grid-cols-6 gap-4 items-center overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
               {[
                 { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
                 { src: "/logos/mjc-vesinet.jpg", alt: "MJC du Vésinet" },
@@ -293,7 +294,7 @@ const Index = () => {
               ].map((logo, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center p-4 border-brutal hover:-translate-y-1 hover:shadow-brutal transition-all duration-200"
+                  className="flex-shrink-0 w-[120px] md:w-auto snap-center flex items-center justify-center p-4 border-brutal hover:-translate-y-1 hover:shadow-brutal transition-all duration-200"
                 >
                   <img src={logo.src} alt={logo.alt} className="max-h-12 w-auto object-contain" loading="lazy" />
                 </div>
