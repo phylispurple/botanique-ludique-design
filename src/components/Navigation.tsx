@@ -208,6 +208,13 @@ const Navigation = () => {
             </Link>
           </li>
           <li>
+            <Link to="/agenda"
+              className={`font-mono text-[11px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/agenda') ? 'border-b border-olive-light' : ''}`}
+              style={{ color: isActive('/agenda') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Agenda
+            </Link>
+          </li>
+          <li>
             <Link to="/blog"
               className={`font-mono text-[11px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/blog') ? 'border-b border-olive-light' : ''}`}
               style={{ color: isActive('/blog') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
@@ -311,6 +318,11 @@ const Navigation = () => {
               className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
               style={{ color: isActive('/gallery') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
               Galerie
+            </Link>
+            <Link to="/agenda" onClick={() => setIsOpen(false)}
+              className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
+              style={{ color: isActive('/agenda') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Agenda
             </Link>
             <Link to="/blog" onClick={() => setIsOpen(false)}
               className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
