@@ -96,17 +96,6 @@ const FloatingContactButton = () => {
               </div>
             </Link>
             
-            {/* Devis Pro */}
-            <Link
-              to="/pro"
-              className="flex items-center gap-3 p-3 border-brutal hover:bg-[hsl(var(--olive))]/10 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              <div className="text-center w-full">
-                <p className="text-sm font-semibold text-[hsl(var(--olive))]">Devis Entreprise</p>
-                <p className="text-xs text-muted-foreground">Réponse sous 24h</p>
-              </div>
-            </Link>
           </div>
         </div>
       )}
