@@ -7,52 +7,6 @@ import { Heart, Globe, Users, Sprout, ArrowRight } from "lucide-react";
 import aboutImage from "@/assets/portrait-vanessa.webp";
 
 const About = () => {
-  const timeline = [
-  {
-    year: "2014",
-    title: "Photographe",
-    description: "Début de l'aventure artistique. Le végétal devient sujet, médium et obsession photographique.",
-    icon: Camera
-  },
-  {
-    year: "2016",
-    title: "Kosovo · Gaia Kosovo",
-    description: "Service Volontaire Européen. Permaculture, écoconstruction, autonomie. Certification Youthpath.",
-    icon: Globe,
-    link: { url: "https://www.gaiakosovo.org", label: "gaiakosovo.org" }
-  },
-  {
-    year: "2018",
-    title: "Japon · Techniques ancestrales",
-    description: "Apprentissage du jardinage japonais et de l'aquaponie. Découverte du kokedama et des arts botaniques nippons.",
-    icon: Sprout
-  },
-  {
-    year: "2019",
-    title: "EHESS · Anthropologie & Ethnobotanique",
-    description: "Master 1 sous la direction de Florence Brunois-Pasina. Recherche sur les interactions citadins-plantes dans le Grand Paris.",
-    icon: BookOpen
-  },
-  {
-    year: "2024",
-    title: "Ateliers en indépendante",
-    description: "Lancement des premiers ateliers d'ethnobotanique en tant qu'indépendante. Entreprises, EHPAD, écoles, centres sociaux : les publics se diversifient.",
-    icon: Users
-  },
-  {
-    year: "2026",
-    title: "Botanique Ludique",
-    description: "Création de l'association loi 1901 pour mettre en avant artistes et chercheurs et rendre ces savoirs accessibles au plus grand nombre.",
-    icon: Heart
-  },
-  {
-    year: "Auj.",
-    title: "+400 participants · 50+ ateliers",
-    description: "Île-de-France : départements 75, 78, 92 et 95. Ateliers, conférences et balades botaniques pour tous les publics.",
-    icon: Sprout
-  }];
-
-
   const values = [
   {
     title: "Transmission",
