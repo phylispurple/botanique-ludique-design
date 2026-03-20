@@ -1,30 +1,31 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
+import { PenLine, CalendarDays, Lock, Sprout } from "lucide-react";
 
 const cards = [
   {
-    icon: "✍️",
+    icon: PenLine,
     title: "Adhésion en ligne",
     desc: "L'adhésion est incluse dans le tarif de votre première activité, ou gratuite sur simple inscription. Elle vous donne accès aux tarifs préférentiels, à la programmation en avant-première, aux événements réservés aux membres et à l'espace communautaire.",
     link: "/contact",
     linkText: "Adhérer →",
   },
   {
-    icon: "📅",
+    icon: CalendarDays,
     title: "Agenda & Événements",
     desc: "Balades botaniques, sorties nature, ateliers ouverts, conférences, projections, concerts autour des musiques et pratiques culturelles liés au monde végétal et aux savoirs autochtones.",
     link: "/workshops",
     linkText: "Voir l'agenda →",
   },
   {
-    icon: "🔒",
+    icon: Lock,
     title: "Espace Membres",
     desc: "Ressources réservées : comptes-rendus, photos des sorties, fiches botaniques, documents de l'association. Accès à un espace d'échange pour proposer des projets et s'impliquer dans la vie associative.",
     link: "/association",
     linkText: "Se connecter →",
   },
   {
-    icon: "🍃",
+    icon: Sprout,
     title: "Notre Mission",
     desc: "Concevoir et animer des ateliers pédagogiques, organiser des événements culturels et scientifiques, intervenir en milieu scolaire et social, développer des partenariats institutionnels, produire des contenus de sensibilisation.",
     link: "/about",
