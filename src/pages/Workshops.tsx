@@ -242,7 +242,7 @@ const categoryTitles: Record<WorkshopCategory, string> = {
 
 const categoryColors: Record<WorkshopCategory, { bg: string; text: string; border: string }> = {
   all: { bg: "bg-sage/20", text: "text-sage-dark", border: "border-sage/30" },
-  textiles: { bg: "bg-purple-100", text: "text-purple-700", border: "border-purple-300" },
+  textiles: { bg: "bg-purple-600/90", text: "text-white", border: "border-purple-400" },
   jardinage: { bg: "bg-emerald-100", text: "text-emerald-700", border: "border-emerald-300" },
   floral: { bg: "bg-pink-100", text: "text-pink-700", border: "border-pink-300" },
   artisanat: { bg: "bg-amber-100", text: "text-amber-700", border: "border-amber-300" },
