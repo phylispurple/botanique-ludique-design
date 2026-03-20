@@ -57,17 +57,35 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Navigation */}
+          {/* Association */}
           <div className="space-y-4">
-            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(73 44% 67%)' }}>Navigation</h4>
+            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(73 44% 67%)' }}>🌿 Association</h4>
             <div className="flex flex-col space-y-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="text-sm font-body transition-colors hover:text-white/90"
-                  style={{ color: 'rgba(255,255,255,0.5)' }}
-                >
+              {[
+                { name: "L'association", path: "/association" },
+                { name: "Ateliers", path: "/workshops" },
+                { name: "Galerie", path: "/gallery" },
+                { name: "Blog", path: "/blog" },
+                { name: "FAQ", path: "/faq" },
+              ].map((link) => (
+                <Link key={link.path} to={link.path} className="text-sm font-body transition-colors hover:text-white/90" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Prestations */}
+          <div className="space-y-4">
+            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(13 76% 61%)' }}>💼 Prestations</h4>
+            <div className="flex flex-col space-y-2">
+              {[
+                { name: "Pro & Entreprises", path: "/pro" },
+                { name: "À propos", path: "/about" },
+                { name: "Contact & Devis", path: "/contact" },
+                { name: "Agenda", path: "/agenda" },
+              ].map((link) => (
+                <Link key={link.path} to={link.path} className="text-sm font-body transition-colors hover:text-white/90" style={{ color: 'rgba(255,255,255,0.5)' }}>
                   {link.name}
                 </Link>
               ))}
