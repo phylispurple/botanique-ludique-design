@@ -64,7 +64,7 @@ const AnimatriceNatureIDF = () => {
       <SchemaOrg type="Service" data={{
         serviceType: "Animation nature et botanique",
         name: "Animatrice Nature Ethnobotaniste - Île-de-France",
-        description: "Animations nature et ateliers botaniques pour tous publics en Île-de-France par une ethnobotaniste diplômée de l'EHESS.",
+        description: "Animations nature et ateliers botaniques pour tous publics en Île-de-France par une animatrice ethnobotaniste formée à l'EHESS.",
         areaServed: ["Paris", "Yvelines", "Hauts-de-Seine", "Val-d'Oise"]
       }} />
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />

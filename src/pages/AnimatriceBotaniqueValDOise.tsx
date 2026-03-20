@@ -39,7 +39,7 @@ const AnimatriceBotaniqueValDOise = () => {
       <SchemaOrg type="Service" data={{
         serviceType: "Animation botanique",
         name: "Animatrice Botanique Val-d'Oise (95)",
-        description: "Animations botaniques et ateliers nature dans le Val-d'Oise par une ethnobotaniste diplômée."
+        description: "Animations botaniques et ateliers nature dans le Val-d'Oise par une animatrice ethnobotaniste diplômée."
       }} />
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
@@ -54,7 +54,7 @@ const AnimatriceBotaniqueValDOise = () => {
                 Animatrice Botanique dans le Val-d'Oise (95)
               </h1>
               <p className="subtitle-italic text-lg mb-6">
-                Ethnobotaniste · De Cergy à Argenteuil · Entreprises, écoles, collectivités
+                Animatrice ethnobotaniste · De Cergy à Argenteuil · Entreprises, écoles, collectivités
               </p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
                 Le Val-d'Oise offre une <strong>mosaïque de paysages</strong> — forêt de Montmorency, vallée de l'Oise, 

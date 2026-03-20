@@ -39,7 +39,7 @@ const AnimatriceNatureHautsDeSeine = () => {
       <SchemaOrg type="Service" data={{
         serviceType: "Animation nature et botanique",
         name: "Animatrice Nature Hauts-de-Seine (92)",
-        description: "Animations botaniques dans les Hauts-de-Seine par une ethnobotaniste diplômée."
+        description: "Animations botaniques dans les Hauts-de-Seine par une animatrice ethnobotaniste diplômée."
       }} />
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
@@ -54,7 +54,7 @@ const AnimatriceNatureHautsDeSeine = () => {
                 Animatrice Nature dans les Hauts-de-Seine (92)
               </h1>
               <p className="subtitle-italic text-lg mb-6">
-                Ethnobotaniste · De Boulogne-Billancourt à Nanterre · Tous publics
+                Animatrice ethnobotaniste · De Boulogne-Billancourt à Nanterre · Tous publics
               </p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
                 Les Hauts-de-Seine, département le plus dense après Paris, ont un <strong>besoin croissant de reconnexion à la nature</strong>. 

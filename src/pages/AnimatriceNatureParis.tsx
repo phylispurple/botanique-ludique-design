@@ -28,7 +28,7 @@ const AnimatriceNatureParis = () => {
       <SchemaOrg type="Service" data={{
         serviceType: "Animation nature et botanique à Paris",
         name: "Animatrice Nature Paris (75)",
-        description: "Animations nature et ateliers botaniques à Paris par une ethnobotaniste diplômée. Tous publics."
+        description: "Animations nature et ateliers botaniques à Paris par une animatrice ethnobotaniste diplômée. Tous publics."
       }} />
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
@@ -43,7 +43,7 @@ const AnimatriceNatureParis = () => {
                 Animatrice Nature à Paris
               </h1>
               <p className="subtitle-italic text-lg mb-6">
-                Ethnobotaniste · Animatrice scientifique plantes · Tous arrondissements
+                Animatrice ethnobotaniste · Animatrice scientifique plantes · Tous arrondissements
               </p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
                 À Paris, la nature s'invite partout — jardins partagés, cours d'écoles, salles de séminaire, maisons de retraite. 
@@ -123,7 +123,7 @@ const AnimatriceNatureParis = () => {
               <h2 className="text-2xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Pourquoi choisir Botanique Ludique à Paris ?</h2>
               <div className="grid sm:grid-cols-2 gap-3">
                 {[
-                  "Ethnobotaniste diplômée EHESS",
+                  "Animatrice ethnobotaniste formée à l'EHESS",
                   "Interventions dans tous les arrondissements",
                   "Matériel fourni, rien à prévoir",
                   "Ateliers de 1h à une journée",

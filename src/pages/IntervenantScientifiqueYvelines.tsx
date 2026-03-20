@@ -49,7 +49,7 @@ const IntervenantScientifiqueYvelines = () => {
               <h1 className="page-title text-[2.2rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
                 Intervenant Scientifique dans les Yvelines (78)
               </h1>
-              <p className="subtitle-italic text-lg mb-6">Ethnobotaniste · Interventions scientifiques · De Saint-Germain à Versailles</p>
+              <p className="subtitle-italic text-lg mb-6">Animatrice ethnobotaniste · Interventions scientifiques · De Saint-Germain à Versailles</p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
                 Les Yvelines possèdent un <strong>patrimoine botanique exceptionnel</strong>. Notre intervenant scientifique exploite cette richesse
                 pour proposer des ateliers mêlant <strong>science, histoire et créativité</strong> dans tout le département.
@@ -104,7 +104,7 @@ const IntervenantScientifiqueYvelines = () => {
             <div className="bg-sand rounded-lg p-8 mb-16">
               <h2 className="text-2xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Pourquoi nous choisir ?</h2>
               <div className="grid sm:grid-cols-2 gap-3">
-                {["Ethnobotaniste diplômée EHESS", "Déplacement dans tout le 78", "Matériel fourni intégralement", "Approche scientifique et culturelle", "Adaptée à tout public", "Devis gratuit sous 24h"].map((b, i) => (
+                {["Animatrice ethnobotaniste formée à l'EHESS", "Déplacement dans tout le 78", "Matériel fourni intégralement", "Approche scientifique et culturelle", "Adaptée à tout public", "Devis gratuit sous 24h"].map((b, i) => (
                   <div key={i} className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" />
                     <span className="text-charcoal/80 text-sm">{b}</span>

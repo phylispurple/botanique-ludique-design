@@ -213,7 +213,7 @@ const DemoManus = () => {
           <div className="p-10 md:p-20 flex flex-col justify-center">
             <h2 className="text-[48px] uppercase leading-[0.95] mb-6 tracking-[-1px]" style={{ fontFamily: "Archivo Black, sans-serif" }}>Vanessa Charlery</h2>
             <p className="text-[16px] leading-[1.8] text-[#555] mb-4">
-              Créée par <strong className="text-[#1a1a1a]">Vanessa Charlery</strong>, ethnobotaniste et anthropologue, l'association Botanique Ludique propose des ateliers qui allient <strong className="text-[#1a1a1a]">créativité artistique</strong> et transmission des <strong className="text-[#1a1a1a]">savoirs ethnobotaniques</strong>.
+              Créée par <strong className="text-[#1a1a1a]">Vanessa Charlery</strong>, animatrice ethnobotaniste, l'association Botanique Ludique propose des ateliers qui allient <strong className="text-[#1a1a1a]">créativité artistique</strong> et transmission des <strong className="text-[#1a1a1a]">savoirs ethnobotaniques</strong>.
             </p>
             <p className="text-[16px] leading-[1.8] text-[#555] mb-4">
               Nos ateliers s'adressent à <strong className="text-[#1a1a1a]">tous les publics</strong> : enfants dès 4 ans, adultes, seniors en résidence ou EHPAD, écoles et centres de loisirs, MJC, centres sociaux, associations, entreprises et collectivités.
