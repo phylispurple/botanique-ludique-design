@@ -22,7 +22,7 @@ const LandingEcoles = () => {
         <div className="container mx-auto max-w-6xl text-center space-y-6">
           <div className="inline-flex items-center gap-2 bg-sage/20 text-sage-dark px-4 py-2 rounded-full text-sm font-medium"><GraduationCap className="w-4 h-4" />Interventions pédagogiques</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-charcoal">Ateliers Nature pour <span className="text-sage">Écoles</span></h1>
-          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">Des interventions pédagogiques en lien avec les programmes scolaires.</p>
+          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">Des interventions qui allient création artistique et anthropologie de la nature : vos élèves explorent les savoirs botaniques et les relations humains-plantes à travers la pratique.</p>
           <Button asChild size="lg" className="bg-sage hover:bg-sage-dark text-white"><Link to="/contact">Demander un devis<ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
         </div>
       </section>

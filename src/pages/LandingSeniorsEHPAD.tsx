@@ -30,7 +30,7 @@ const LandingSeniorsEHPAD = () => {
         <div className="container mx-auto max-w-6xl text-center space-y-6">
           <div className="inline-flex items-center gap-2 bg-sage/20 text-sage-dark px-4 py-2 rounded-full text-sm font-medium"><Heart className="w-4 h-4" />Ateliers adaptés aux personnes âgées</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-charcoal">Animations Botaniques pour <span className="text-sage">EHPAD & Seniors</span></h1>
-          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">Des ateliers nature spécialement conçus pour le bien-être des personnes âgées.</p>
+          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">Une approche ethnobotanique unique : nos ateliers éveillent les sens et la mémoire en explorant les liens culturels entre les plantes et les sociétés humaines, adaptés au bien-être des personnes âgées.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button asChild size="lg" className="bg-sage hover:bg-sage-dark text-white"><Link to="/contact">Demander un devis gratuit<ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
           </div>

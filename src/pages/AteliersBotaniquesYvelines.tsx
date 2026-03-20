@@ -68,12 +68,12 @@ const AteliersBotaniquesYvelines = () => {
                 Ateliers Botaniques dans les Yvelines (78)
               </h1>
               <p className="subtitle-italic text-lg mb-6">
-                Reconnectez-vous à la nature près de chez vous : Chatou, Le Pecq, Le Vésinet
+                Quand l'atelier créatif rencontre l'anthropologie de la nature
               </p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
-                Botanique Ludique propose des ateliers créatifs et pédagogiques dans tout le département des Yvelines. 
-                Découvrez nos ateliers de kokedama, teinture végétale, vannerie et plus encore dans un cadre convivial 
-                à proximité de Paris.
+                Botanique Ludique propose des ateliers qui tissent des ponts entre création artistique, savoirs botaniques 
+                et histoire des relations humains-plantes dans tout le département des Yvelines. Animés par une ethnobotaniste 
+                formée à l'EHESS, nos ateliers de kokedama, teinture végétale et vannerie vont bien au-delà du simple loisir créatif.
               </p>
             </div>
 
