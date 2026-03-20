@@ -77,7 +77,7 @@ const FloatingContactButton = () => {
                 <Phone className="w-4 h-4 text-[hsl(var(--olive))]" />
               </div>
               <div>
-                <p className="text-sm font-medium text-charcoal">06 09 83 16 06</p>
+                <p className="text-sm font-medium text-[hsl(var(--black))]">06 09 83 16 06</p>
                 <p className="text-xs text-muted-foreground">Du lundi au vendredi</p>
               </div>
             </a>
