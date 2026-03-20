@@ -225,16 +225,6 @@ const Navigation = () => {
             </Link>
           </li>
 
-          {/* CTA */}
-          <li>
-            <Link
-              to="/contact"
-              className="font-mono text-[10px] uppercase tracking-[2px] no-underline px-[18px] py-[7px] transition-all border hover:bg-olive hover:text-white hover:border-olive"
-              style={{ color: 'hsl(73 44% 67%)', borderColor: 'rgba(197,208,134,0.4)' }}
-            >
-              Devis gratuit
-            </Link>
-          </li>
         </ul>
 
         {/* Mobile burger */}
