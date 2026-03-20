@@ -55,10 +55,10 @@ const Association = () => {
           <AnimatedSection delay={100}>
             <div className="space-y-6 text-base md:text-lg font-body leading-relaxed" style={{ color: 'hsl(0 0% 35%)' }}>
               <p className="text-justify">
-                L'objectif principal de Botanique Ludique est de financer et organiser l'intervention de chercheurs, artistes et praticiens — parfois méconnus du grand public — afin de mettre en avant leurs savoirs et leurs disciplines. Ethnobotanistes, anthropologues, teinturiers, musiciens, artisans du végétal : autant de voix que nous souhaitons faire entendre.
+                L'objectif principal de Botanique Ludique est de financer et organiser l'intervention de chercheurs, artistes et praticiens, parfois méconnus du grand public, afin de mettre en avant leurs savoirs et leurs disciplines. Ethnobotanistes, anthropologues, teinturiers, musiciens, artisans du végétal : autant de voix que nous souhaitons faire entendre.
               </p>
               <p className="text-justify">
-                Pour cela, l'association organise des ateliers, des conférences, des événements culturels et artistiques ouverts à tous. Chaque rendez-vous est une occasion de croiser les regards entre sciences du vivant, sciences humaines et pratiques créatives — et de rendre ces savoirs accessibles au plus grand nombre.
+                Pour cela, l'association organise des ateliers, des conférences, des événements culturels et artistiques ouverts à tous. Chaque rendez-vous est une occasion de croiser les regards entre sciences du vivant, sciences humaines et pratiques créatives, et de rendre ces savoirs accessibles au plus grand nombre.
               </p>
               <p className="text-justify">
                 En soutenant ces intervenants, nous contribuons à la reconnaissance de disciplines souvent invisibilisées et à la transmission de connaissances précieuses sur les relations entre les humains et le monde végétal, d'ici et d'ailleurs.
