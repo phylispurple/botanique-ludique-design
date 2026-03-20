@@ -281,7 +281,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ===== PARTENAIRES ===== */}
+      {/* ===== PARTENAIRES — Défilement continu ===== */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
@@ -289,9 +289,8 @@ const Index = () => {
               Ils nous font confiance
             </h3>
           </AnimatedSection>
-          <AnimatedSection delay={100}>
-            {/* Horizontal scroll on mobile, grid on desktop */}
-            <div className="flex md:grid md:grid-cols-6 gap-4 items-center overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
+          <div className="overflow-hidden">
+            <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '20s' }}>
               {[
                 { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
                 { src: "/logos/mjc-vesinet.jpg", alt: "MJC du Vésinet" },
@@ -300,15 +299,25 @@ const Index = () => {
                 { src: "/logos/publicis.jpg", alt: "Publicis" },
                 { src: "/logos/f93.jpg", alt: "F93" },
               ].map((logo, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 w-[120px] md:w-auto snap-center flex items-center justify-center p-4 border-brutal hover:-translate-y-1 hover:shadow-brutal transition-all duration-200"
-                >
+                <div key={`a-${index}`} className="flex-shrink-0 flex items-center justify-center p-4 border-brutal hover:-translate-y-1 hover:shadow-brutal transition-all duration-200" style={{ width: 140 }}>
                   <img src={logo.src} alt={logo.alt} className="max-h-12 w-auto object-contain" loading="lazy" />
                 </div>
-              ))}
+              )).concat(
+                [
+                  { src: "/logos/region-idf.webp", alt: "" },
+                  { src: "/logos/mjc-vesinet.jpg", alt: "" },
+                  { src: "/logos/jappy-senior.svg", alt: "" },
+                  { src: "/logos/mjc-chatou.jpeg", alt: "" },
+                  { src: "/logos/publicis.jpg", alt: "" },
+                  { src: "/logos/f93.jpg", alt: "" },
+                ].map((logo, index) => (
+                  <div key={`b-${index}`} className="flex-shrink-0 flex items-center justify-center p-4 border-brutal" style={{ width: 140 }} aria-hidden="true">
+                    <img src={logo.src} alt="" className="max-h-12 w-auto object-contain" loading="lazy" />
+                  </div>
+                ))
+              )}
             </div>
-          </AnimatedSection>
+          </div>
         </div>
       </section>
 
