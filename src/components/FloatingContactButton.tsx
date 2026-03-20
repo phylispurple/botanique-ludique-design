@@ -73,8 +73,8 @@ const FloatingContactButton = () => {
               href="tel:+33609831606"
               className="flex items-center gap-3 p-3 hover:bg-[hsl(var(--green-pale))] transition-colors group"
             >
-              <div className="p-2 bg-sage/20 rounded-full group-hover:bg-sage/30 transition-colors">
-                <Phone className="w-4 h-4 text-sage" />
+              <div className="p-2 bg-[hsl(var(--olive))]/20 rounded-full group-hover:bg-[hsl(var(--olive))]/30 transition-colors">
+                <Phone className="w-4 h-4 text-[hsl(var(--olive))]" />
               </div>
               <div>
                 <p className="text-sm font-medium text-charcoal">06 09 83 16 06</p>
