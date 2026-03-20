@@ -4,25 +4,25 @@ import { GraduationCap, Sprout, Microscope, Landmark, Users, Building2, Leaf, Gl
 
 const conferences = [
   {
-    num: "01 — CONFÉRENCE",
+    num: "CONFÉRENCE",
     title: "Ethnobotanique & Anthropologie des plantes",
     desc: "Voyage au cœur des relations millénaires entre les humains et le monde végétal. Comment les cultures, de l'Asie à l'Europe, ont-elles utilisé, nommé et sacré les plantes ? Une lecture croisée entre sciences du vivant et sciences humaines.",
     tags: ["Musées", "Médiathèques", "Centres culturels", "Grand public"],
   },
   {
-    num: "02 — COURS & INTERVENTION",
+    num: "COURS & INTERVENTION",
     title: "Espèces Exotiques Envahissantes",
     desc: "Comprendre les dynamiques écologiques des plantes invasives et leurs enjeux pour la biodiversité locale. Un contenu pédagogique déjà expérimenté en milieu scolaire (collège), adaptable à différents niveaux et formats.",
     tags: ["Collèges & Lycées", "Associations environnementales", "Collectivités"],
   },
   {
-    num: "03 — CONFÉRENCE",
+    num: "ETHNOBOTANIQUE",
     title: "Plantes & Cultures du Monde",
     desc: "Un voyage ethnobotanique à travers les usages culturels, médicinaux et symboliques des plantes dans différentes sociétés. Instruments de musique végétaux, teintures ancestrales, pharmacopées traditionnelles — la diversité des savoirs autochtones liés au végétal.",
     tags: ["Universités", "Festivals scientifiques", "Institutions culturelles"],
   },
   {
-    num: "04 — VULGARISATION",
+    num: "VULGARISATION",
     title: "Rendre la Science Accessible",
     desc: "Médiation scientifique et vulgarisation de la botanique, de l'écologie et de l'ethnobotanique pour tous les publics. Une approche pratiquée sur les réseaux sociaux et adaptable en format conférence, atelier ou intervention media.",
     tags: ["Grand public", "Événements", "Médias", "Structures éducatives"],
