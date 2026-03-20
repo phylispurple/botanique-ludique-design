@@ -97,7 +97,7 @@ const About = () => {
                   />
                 </div>
                 <span className="font-mono text-[9px] uppercase tracking-[2px] text-[hsl(var(--olive))]">
-                  Fondatrice · Animatrice ethnobotaniste
+                  Présidente & Fondatrice · Animatrice ethnobotaniste
                 </span>
               </div>
 
@@ -249,17 +249,6 @@ const About = () => {
               d'attention au vivant sont précieux — ils nous sortent de notre rapport utilitariste 
               au monde. C'est là que quelque chose se transforme.
             </p>
-          </AnimatedSection>
-
-          <AnimatedSection delay={400}>
-            <blockquote className="border-l-[3px] border-[hsl(var(--olive-light))] pl-8 py-4">
-              <p className="font-editorial text-2xl md:text-3xl italic text-[hsl(var(--cream))] leading-[1.3] mb-4">
-                "Je ne cherche pas à divertir, mais à éveiller."
-              </p>
-              <footer className="font-mono text-[10px] uppercase tracking-[2px] text-[hsl(var(--olive-light))]">
-                Vanessa Charlery
-              </footer>
-            </blockquote>
           </AnimatedSection>
         </div>
       </section>
