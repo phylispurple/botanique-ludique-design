@@ -58,7 +58,7 @@ const Index = () => {
       <SchemaOrg
         type="LocalBusiness"
         data={{
-          founder: { "@type": "Person", name: "Vanessa Charlery", jobTitle: "Ethnobotaniste et Artiste Photographe" },
+          founder: { "@type": "Person", name: "Vanessa Charlery", jobTitle: "Animatrice ethnobotaniste et Artiste Photographe" },
           makesOffer: [
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ateliers Kokedama", description: "Art japonais du jardinage en boule de mousse" } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Teinture Végétale", description: "Techniques de teinture naturelle avec des plantes" } },
