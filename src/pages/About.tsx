@@ -57,7 +57,7 @@ const About = () => {
                   
                 </div>
                 <span className="font-mono text-[9px] uppercase tracking-[2px] text-[hsl(var(--olive))]">
-                  Présidente & Fondatrice · Animatrice ethnobotaniste
+                  Animatrice ethnobotaniste et Présidente & Fondatrice de Botanique Ludique
                 </span>
               </div>
 
