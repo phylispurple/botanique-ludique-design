@@ -348,21 +348,24 @@ const Workshops = () => {
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
                       <div className={`${index % 2 === 1 ? "md:order-2" : ""} group relative img-zoom-container rounded-xl`}>
-                        {/* Category Badge */}
-                        <div className={`absolute top-4 left-4 z-10 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide border backdrop-blur-sm ${categoryColors[workshop.category].bg} ${categoryColors[workshop.category].text} ${categoryColors[workshop.category].border}`}>
-                          {categoryLabels[workshop.category]}
-                        </div>
-                        
-                        {/* Tag Badge (Populaire / Nouveau) */}
-                        {workshop.tag && (
-                          <div className={`absolute top-4 right-4 z-10 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide shadow-lg ${
-                            workshop.tag === "populaire" 
-                              ? "bg-gradient-to-r from-orange-500 to-red-500 text-white" 
-                              : "bg-gradient-to-r from-blue-500 to-indigo-500 text-white"
-                          }`}>
-                            {workshop.tag === "populaire" ? "⭐ Populaire" : "✨ Nouveau"}
+                        {/* Badges container */}
+                        <div className="absolute top-3 left-3 right-3 z-10 flex flex-wrap gap-2">
+                          {/* Category Badge */}
+                          <div className={`px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide border backdrop-blur-sm ${categoryColors[workshop.category].bg} ${categoryColors[workshop.category].text} ${categoryColors[workshop.category].border}`}>
+                            {categoryLabels[workshop.category]}
                           </div>
-                        )}
+                          
+                          {/* Tag Badge (Populaire / Nouveau) */}
+                          {workshop.tag && (
+                            <div className={`px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide shadow-lg ${
+                              workshop.tag === "populaire" 
+                                ? "bg-gradient-to-r from-orange-500 to-red-500 text-white" 
+                                : "bg-gradient-to-r from-blue-500 to-indigo-500 text-white"
+                            }`}>
+                              {workshop.tag === "populaire" ? "⭐ Populaire" : "✨ Nouveau"}
+                            </div>
+                          )}
+                        </div>
                         {workshop.video && workshop.type !== "video" ? (
                           <Carousel className="w-full">
                             <CarouselContent>
