@@ -30,7 +30,7 @@ const About = () => {
             <div className="max-w-4xl mx-auto mb-20">
               <div className="bg-sand rounded-lg p-8 md:p-12 animate-fade-in mb-12">
                 <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Botanique Ludique a été fondée en 2022 par Vanessa Charlery, ethnobotaniste diplômée de l'EHESS. Ma mission : rendre la botanique accessible, ludique et enrichissante pour tous, en transmettant des savoirs ancestraux avec une approche contemporaine. Selon les projets et les besoins, je collabore avec un réseau d'artisans, d'artistes et de professionnels de la nature pour enrichir les expériences proposées.
+                  Botanique Ludique a été fondée en 2022 par Vanessa Charlery, animatrice ethnobotaniste formée à l'EHESS. Ma mission : rendre la botanique accessible, ludique et enrichissante pour tous, en transmettant des savoirs ancestraux avec une approche contemporaine. Selon les projets et les besoins, je collabore avec un réseau d'artisans, d'artistes et de professionnels de la nature pour enrichir les expériences proposées.
                 </p>
               </div>
 
