@@ -40,7 +40,7 @@ const About = () => {
                   <img
                     src={aboutImage}
                     loading="lazy"
-                    alt="Vanessa Charlery, ethnobotaniste et fondatrice de Botanique Ludique"
+                    alt="Vanessa Charlery, animatrice ethnobotaniste et fondatrice de Botanique Ludique"
                     className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-lg relative z-10"
                   />
                 </div>
