@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
-import { GraduationCap, Sprout, Microscope, Landmark, Users } from "lucide-react";
+import { GraduationCap, Sprout, Microscope, Landmark, Users, Building2, Leaf, Globe } from "lucide-react";
 
 const conferences = [
   {
@@ -31,19 +31,19 @@ const conferences = [
 
 const balades = [
   {
-    icon: "🏙️",
+    icon: Building2,
     title: "Botanique Urbaine",
     desc: "Découvrir les plantes qui poussent dans les interstices de la ville — trottoirs, friches, jardins partagés. Une exploration du vivant à deux pas de chez soi.",
     season: "Toute l'année · 2h · Tous publics",
   },
   {
-    icon: "🍃",
+    icon: Leaf,
     title: "Plantes Sauvages & Usages",
     desc: "Identifier les plantes comestibles, médicinales et tinctoriales dans la nature. Un regard ethnobotanique sur les savoirs populaires liés aux plantes sauvages.",
     season: "Printemps · Été · Demi-journée",
   },
   {
-    icon: "🌎",
+    icon: Globe,
     title: "Ethnobotanique de Terrain",
     desc: "Une balade pour comprendre les relations culturelles entre une société et ses plantes locales — histoire, usages, symboliques. Idéal pour les groupes curieux de sciences humaines.",
     season: "Sur demande · Adapté au groupe",
