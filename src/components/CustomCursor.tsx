@@ -23,7 +23,7 @@ const CustomCursor = () => {
   }, []);
 
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 1301px) and (pointer: fine)');
+    const mq = window.matchMedia('(min-width: 1024px) and (pointer: fine)');
     if (!mq.matches) return;
 
     const style = document.createElement('style');
