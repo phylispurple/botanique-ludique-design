@@ -98,7 +98,7 @@ const Navigation = () => {
           <li>
             <Link
               to="/association"
-              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${
+              className={`font-mono text-[11px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${
                 isActive('/association') ? 'border-b border-olive-light' : ''
               }`}
               style={{ color: isActive('/association') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
