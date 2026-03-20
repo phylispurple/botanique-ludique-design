@@ -152,7 +152,7 @@ const Index = () => {
                 de l'Asie à l'Europe.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {["Kokedama", "Teinture végétale", "Vannerie", "Terrarium", "Ethnobotanique", "Anthropologie"].map(tag => (
+                {["Kokedama", "Teinture végétale", "Vannerie", "Terrarium", "Ethnobotanique"].map(tag => (
                   <span
                     key={tag}
                     className="font-mono-brand text-[10px] uppercase tracking-[1.5px] px-3.5 py-1.5 border-brutal-thin rounded-full hover:bg-[hsl(var(--black))] hover:text-[hsl(var(--cream))] transition-colors cursor-default"
