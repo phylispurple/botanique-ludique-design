@@ -8,7 +8,8 @@ const cards = [
     title: "Adhésion en ligne",
     desc: "L'adhésion est incluse dans le tarif de votre première activité, ou gratuite sur simple inscription. Elle vous donne accès aux tarifs préférentiels, à la programmation en avant-première, aux événements réservés aux membres et à l'espace communautaire.",
     link: "/contact",
-    linkText: "Adhérer →",
+    linkText: "À venir",
+    disabled: true,
   },
   {
     icon: CalendarDays,
@@ -16,13 +17,15 @@ const cards = [
     desc: "Balades botaniques, sorties nature, ateliers ouverts, conférences, projections, concerts autour des musiques et pratiques culturelles liés au monde végétal et aux savoirs autochtones.",
     link: "/workshops",
     linkText: "Voir l'agenda →",
+    disabled: false,
   },
   {
     icon: Lock,
     title: "Espace Membres",
     desc: "Ressources réservées : comptes-rendus, photos des sorties, fiches botaniques, documents de l'association. Accès à un espace d'échange pour proposer des projets et s'impliquer dans la vie associative.",
     link: "/association",
-    linkText: "Se connecter →",
+    linkText: "À venir",
+    disabled: true,
   },
   {
     icon: Sprout,
@@ -30,6 +33,7 @@ const cards = [
     desc: "Concevoir et animer des ateliers pédagogiques, organiser des événements culturels et scientifiques, intervenir en milieu scolaire et social, développer des partenariats institutionnels, produire des contenus de sensibilisation.",
     link: "/about",
     linkText: "En savoir plus →",
+    disabled: false,
   },
 ];
 
@@ -61,21 +65,27 @@ const AssociationSection = () => {
         {/* Cards grid */}
         <div className="grid md:grid-cols-2 gap-0 relative z-10">
           {cards.map((card, idx) => (
-            <AnimatedSection key={idx} delay={idx * 100}>
-              <div className="p-12 border-2 border-white/15 -mt-px -ml-px transition-all duration-300 hover:bg-white/[0.08] group">
+            <AnimatedSection key={idx} delay={idx * 100} className="h-full">
+              <div className="h-full p-12 border-2 border-white/15 -mt-px -ml-px transition-all duration-300 hover:bg-white/[0.08] group flex flex-col">
                 <card.icon className="w-8 h-8 text-[hsl(48_76%_65%)] mb-5" strokeWidth={1.5} />
                 <h3 className="font-display text-[22px] uppercase mb-3 text-white">
                   {card.title}
                 </h3>
-                <p className="text-sm leading-[1.7] text-white/75 text-justify">
+                <p className="text-sm leading-[1.7] text-white/75 text-justify flex-1">
                   {card.desc}
                 </p>
-                <Link
-                  to={card.link}
-                  className="inline-flex items-center gap-2 mt-4 font-display text-xs uppercase tracking-[2px] text-[hsl(48_76%_65%)] no-underline group-hover:gap-4 transition-all duration-300"
-                >
-                  {card.linkText}
-                </Link>
+                {card.disabled ? (
+                  <span className="inline-flex items-center gap-2 mt-4 font-display text-xs uppercase tracking-[2px] text-white/40">
+                    {card.linkText}
+                  </span>
+                ) : (
+                  <Link
+                    to={card.link}
+                    className="inline-flex items-center gap-2 mt-4 font-display text-xs uppercase tracking-[2px] text-[hsl(48_76%_65%)] no-underline group-hover:gap-4 transition-all duration-300"
+                  >
+                    {card.linkText}
+                  </Link>
+                )}
               </div>
             </AnimatedSection>
           ))}
