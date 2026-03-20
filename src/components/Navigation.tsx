@@ -325,12 +325,6 @@ const Navigation = () => {
               style={{ color: isActive('/contact') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
               Contact
             </Link>
-
-            <Link to="/contact" onClick={() => setIsOpen(false)}
-              className="inline-block font-mono text-[10px] uppercase tracking-[2px] px-[18px] py-[7px] mt-2 border transition-all"
-              style={{ color: 'hsl(73 44% 67%)', borderColor: 'rgba(197,208,134,0.4)' }}>
-              Devis gratuit
-            </Link>
           </div>
         </div>
       )}
