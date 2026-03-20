@@ -92,7 +92,7 @@ const FloatingContactButton = () => {
                 <Calendar className="w-4 h-4 text-[hsl(var(--cream))]" />
               </div>
               <div>
-                <p className="text-sm font-medium text-charcoal">Réserver</p>
+                <p className="text-sm font-medium text-[hsl(var(--black))]">Réserver</p>
                 <p className="text-xs text-muted-foreground">Voir les ateliers</p>
               </div>
             </Link>
