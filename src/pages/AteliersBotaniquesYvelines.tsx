@@ -68,7 +68,7 @@ const AteliersBotaniquesYvelines = () => {
                 Ateliers Botaniques dans les Yvelines (78)
               </h1>
               <p className="subtitle-italic text-lg mb-6">
-                Quand l'atelier créatif rencontre l'anthropologie de la nature
+                Quand l'atelier créatif accessible rencontre l'anthropologie de la nature
               </p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
                 Botanique Ludique propose des ateliers qui tissent des ponts entre création artistique, savoirs botaniques 

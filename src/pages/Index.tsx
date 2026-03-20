@@ -79,7 +79,7 @@ const Index = () => {
 
           <AnimatedSection delay={150}>
             <p className="font-body text-xl md:text-[22px] italic text-[hsl(var(--cream))]/90 max-w-[650px] mx-auto mb-3 leading-relaxed">
-              Quand l'atelier créatif rencontre l'anthropologie de la nature
+              Quand l'atelier créatif accessible rencontre l'anthropologie de la nature
             </p>
             <p className="font-body text-[15px] md:text-base text-[hsl(var(--cream))]/70 max-w-[580px] mx-auto mb-4 leading-relaxed">
               Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes.
