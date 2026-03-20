@@ -330,11 +330,11 @@ const Index = () => {
           <img
             src={ctaWorkshopGroup}
             alt=""
-            className="w-full h-full object-cover opacity-25"
+            className="w-full h-full object-cover opacity-35"
             loading="lazy"
           />
         </div>
-        <div className="absolute inset-0 bg-[hsl(var(--black))]/60" />
+        <div className="absolute inset-0 bg-[hsl(var(--black))]/40" />
         <div className="relative z-10 max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <AnimatedSection direction="left">
             <div className="space-y-5">
