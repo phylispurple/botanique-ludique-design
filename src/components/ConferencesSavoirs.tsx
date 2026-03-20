@@ -123,7 +123,7 @@ const ConferencesSavoirs = () => {
             {balades.map((balade, idx) => (
               <AnimatedSection key={idx} delay={idx * 120}>
                 <div className="p-9 border border-white/10 -mt-px -ml-px transition-colors duration-300 hover:bg-white/[0.06]">
-                  <span className="text-[30px] mb-4 block">{balade.icon}</span>
+                  <balade.icon className="w-7 h-7 text-[hsl(73_44%_67%)] mb-4" strokeWidth={1.5} />
                   <h3 className="font-display text-lg uppercase mb-2.5 text-white leading-[1.15]">
                     {balade.title}
                   </h3>

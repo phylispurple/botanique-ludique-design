@@ -64,7 +64,7 @@ const AssociationSection = () => {
           {cards.map((card, idx) => (
             <AnimatedSection key={idx} delay={idx * 100}>
               <div className="p-12 border-2 border-white/15 -mt-px -ml-px transition-all duration-300 hover:bg-white/[0.08] group">
-                <span className="text-4xl mb-5 block">{card.icon}</span>
+                <card.icon className="w-8 h-8 text-[hsl(48_76%_65%)] mb-5" strokeWidth={1.5} />
                 <h3 className="font-display text-[22px] uppercase mb-3 text-white">
                   {card.title}
                 </h3>
