@@ -210,7 +210,7 @@ const Index = () => {
         separator="◆"
       />
 
-      {/* ===== GALERIE ===== */}
+      {/* ===== GALERIE — Défilement continu ===== */}
       <section className="py-24 px-6 bg-[hsl(var(--cream-dark))]">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-12">
@@ -220,30 +220,37 @@ const Index = () => {
             </h2>
           </AnimatedSection>
 
-          {/* Horizontal scroll on mobile, grid on desktop */}
-          <div className="flex md:grid md:grid-cols-3 gap-3 md:gap-4 mb-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
-            {[
-              { src: galleryTerrarium, alt: "Atelier terrarium botanique" },
-              { src: galleryTeinture, alt: "Atelier teinture végétale" },
-              { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs" },
-              { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin" },
-              { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama" },
-              { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" },
-            ].map((image, index) => (
-              <AnimatedSection key={index} delay={index * 80}>
-                <div className="flex-shrink-0 w-[70vw] sm:w-[45vw] md:w-auto snap-center aspect-square overflow-hidden border-brutal card-brutal">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
+          <div className="overflow-hidden mb-8">
+            <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
+              {[
+                { src: galleryTerrarium, alt: "Atelier terrarium botanique" },
+                { src: galleryTeinture, alt: "Atelier teinture végétale" },
+                { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs" },
+                { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin" },
+                { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama" },
+                { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" },
+              ].map((image, index) => (
+                <div key={`a-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal">
+                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
-              </AnimatedSection>
-            ))}
+              )).concat(
+                [
+                  { src: galleryTerrarium, alt: "" },
+                  { src: galleryTeinture, alt: "" },
+                  { src: galleryFlowerCrown, alt: "" },
+                  { src: galleryKokedamaGarden, alt: "" },
+                  { src: galleryWorkshopGroup, alt: "" },
+                  { src: gallerySachetSenteur, alt: "" },
+                ].map((image, index) => (
+                  <div key={`b-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal" aria-hidden="true">
+                    <img src={image.src} alt="" className="w-full h-full object-cover" loading="lazy" />
+                  </div>
+                ))
+              )}
+            </div>
           </div>
 
-          <AnimatedSection delay={500} className="text-center">
+          <AnimatedSection delay={300} className="text-center">
             <Link
               to="/gallery"
               className="btn-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-[hsl(var(--black))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-8 py-3 inline-block"
