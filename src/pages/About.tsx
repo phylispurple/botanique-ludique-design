@@ -97,7 +97,7 @@ const About = () => {
                   />
                 </div>
                 <span className="font-mono text-[9px] uppercase tracking-[2px] text-[hsl(var(--olive))]">
-                  Fondatrice · Animatrice ethnobotaniste
+                  Présidente & Fondatrice · Animatrice ethnobotaniste
                 </span>
               </div>
 
