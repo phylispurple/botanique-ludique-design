@@ -251,8 +251,29 @@ const Index = () => {
         separator="●"
       />
 
+      {/* ===== CONFÉRENCES & SAVOIRS ===== */}
+      <ConferencesSavoirs />
+
+      {/* ===== MARQUEE — Savoirs ===== */}
+      <Marquee
+        items={["Anthropologie", "Biodiversité", "Médiation scientifique", "Savoirs botaniques", "Cultures du vivant"]}
+        color="green"
+        speed={28}
+      />
+
       {/* ===== TESTIMONIALS ===== */}
       <Testimonials />
+
+      {/* ===== VIDEO SECTION ===== */}
+      <VideoSection />
+
+      {/* ===== MARQUEE — Association ===== */}
+      <Marquee
+        items={["Rejoignez l'association", "Adhérez", "Événements", "Balades botaniques", "Communauté"]}
+        color="purple"
+        speed={25}
+        separator="◆"
+      />
 
       {/* ===== TRUST BADGES ===== */}
       <section className="py-10 px-6 border-y-[3px] border-[hsl(var(--black))]">
@@ -262,6 +283,9 @@ const Index = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* ===== ASSOCIATION ===== */}
+      <AssociationSection />
 
       {/* ===== PARTENAIRES — Défilement continu ===== */}
       <section className="py-20 px-6">
