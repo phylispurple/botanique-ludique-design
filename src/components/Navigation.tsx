@@ -94,18 +94,6 @@ const Navigation = () => {
 
         {/* Desktop Nav */}
         <ul className="hidden lg:flex items-baseline gap-6 list-none m-0 p-0">
-          {/* Association — visuellement séparé */}
-          <li>
-            <Link
-              to="/association"
-              className={`font-mono text-[11px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${
-                isActive('/association') ? 'border-b border-olive-light' : ''
-              }`}
-              style={{ color: isActive('/association') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
-            >
-              Association
-            </Link>
-          </li>
           <li>
             <Link
               to="/about"
@@ -117,8 +105,6 @@ const Navigation = () => {
               À propos
             </Link>
           </li>
-
-          <li className="text-white/15 text-[6px] leading-none">●</li>
 
           {/* Ateliers dropdown */}
           <li
@@ -233,6 +219,20 @@ const Navigation = () => {
             </Link>
           </li>
 
+          <li className="text-white/15 text-[6px] leading-none">●</li>
+
+          {/* Association — tout à droite */}
+          <li>
+            <Link
+              to="/association"
+              className={`font-mono text-[11px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${
+                isActive('/association') ? 'border-b border-olive-light' : ''
+              }`}
+              style={{ color: isActive('/association') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
+            >
+              Association
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile burger */}
