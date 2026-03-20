@@ -106,6 +106,17 @@ const Navigation = () => {
               Association
             </Link>
           </li>
+          <li>
+            <Link
+              to="/about"
+              className={`font-mono text-[11px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${
+                isActive('/about') ? 'border-b border-olive-light' : ''
+              }`}
+              style={{ color: isActive('/about') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
+            >
+              À propos
+            </Link>
+          </li>
 
           <li className="text-white/15 text-[6px] leading-none">●</li>
 
