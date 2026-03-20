@@ -220,7 +220,8 @@ const Index = () => {
             </h2>
           </AnimatedSection>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+          {/* Horizontal scroll on mobile, grid on desktop */}
+          <div className="flex md:grid md:grid-cols-3 gap-3 md:gap-4 mb-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
             {[
               { src: galleryTerrarium, alt: "Atelier terrarium botanique" },
               { src: galleryTeinture, alt: "Atelier teinture végétale" },
@@ -230,7 +231,7 @@ const Index = () => {
               { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" },
             ].map((image, index) => (
               <AnimatedSection key={index} delay={index * 80}>
-                <div className="aspect-square overflow-hidden border-brutal card-brutal">
+                <div className="flex-shrink-0 w-[70vw] sm:w-[45vw] md:w-auto snap-center aspect-square overflow-hidden border-brutal card-brutal">
                   <img
                     src={image.src}
                     alt={image.alt}
@@ -282,7 +283,8 @@ const Index = () => {
             </h3>
           </AnimatedSection>
           <AnimatedSection delay={100}>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 items-center">
+            {/* Horizontal scroll on mobile, grid on desktop */}
+            <div className="flex md:grid md:grid-cols-6 gap-4 items-center overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
               {[
                 { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
                 { src: "/logos/mjc-vesinet.jpg", alt: "MJC du Vésinet" },
@@ -293,7 +295,7 @@ const Index = () => {
               ].map((logo, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center p-4 border-brutal hover:-translate-y-1 hover:shadow-brutal transition-all duration-200"
+                  className="flex-shrink-0 w-[120px] md:w-auto snap-center flex items-center justify-center p-4 border-brutal hover:-translate-y-1 hover:shadow-brutal transition-all duration-200"
                 >
                   <img src={logo.src} alt={logo.alt} className="max-h-12 w-auto object-contain" loading="lazy" />
                 </div>
