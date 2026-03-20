@@ -13,96 +13,123 @@ const Footer = () => {
   const checkAdminStatus = async () => {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return;
-
     const { data: roles } = await supabase
       .from('user_roles')
       .select('role')
       .eq('user_id', user.id)
       .eq('role', 'admin')
       .maybeSingle();
-
     setIsAdmin(!!roles);
   };
+
+  const navLinks = [
+    { name: "Accueil", path: "/" },
+    { name: "À propos", path: "/about" },
+    { name: "Association", path: "/association" },
+    { name: "Ateliers", path: "/workshops" },
+    { name: "Pro & Entreprises", path: "/pro" },
+    { name: "Galerie", path: "/gallery" },
+    { name: "Blog", path: "/blog" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
-    <footer className="border-t" style={{ borderColor: '#E2E7D1', backgroundColor: '#F7F7EB' }}>
-      <div className="container mx-auto px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+    <footer className="border-t-2 border-olive" style={{ background: 'hsl(0 0% 10%)' }}>
+      <div className="px-6 md:px-[60px] py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          {/* Brand */}
           <div className="space-y-4">
-            <h3 className="font-serif text-2xl font-light" style={{ color: '#5D653A' }}>Botanique Ludique</h3>
-            <p className="text-sm leading-relaxed" style={{ color: '#5D653A', opacity: 0.7 }}>
-              Ateliers créatifs pour reconnecter l'humain au végétal.
+            <Link to="/" className="flex items-center gap-3 no-underline">
+              <svg width="28" height="36" viewBox="0 0 28 36" fill="none">
+                <path d="M14 0C14 0 0 12 0 22C0 29.732 6.268 36 14 36C21.732 36 28 29.732 28 22C28 12 14 0 14 0Z" fill="hsl(73 44% 67%)"/>
+                <path d="M14 8V30M14 14L8 20M14 18L20 24" stroke="hsl(0 0% 10%)" strokeWidth="1.5"/>
+              </svg>
+              <div className="font-display text-[12px] uppercase tracking-[2.5px] leading-tight" style={{ color: 'hsl(36 33% 93%)' }}>
+                Botanique<br/><span style={{ color: 'hsl(73 44% 67%)' }}>Ludique</span>
+              </div>
+            </Link>
+            <p className="text-sm font-body leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
+              Ateliers créatifs pour reconnecter l'humain au végétal. Association loi 1901 de médiation culturelle et scientifique.
             </p>
           </div>
 
+          {/* Navigation */}
           <div className="space-y-4">
-            <h4 className="font-sans text-sm uppercase tracking-wider" style={{ color: '#5D653A', opacity: 0.7 }}>Suivez-nous</h4>
+            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(73 44% 67%)' }}>Navigation</h4>
+            <div className="flex flex-col space-y-2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="text-sm font-body transition-colors hover:text-white/90"
+                  style={{ color: 'rgba(255,255,255,0.5)' }}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-4">
+            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(73 44% 67%)' }}>Contact</h4>
+            <div className="flex flex-col space-y-3">
+              <a href="mailto:contact@botaniqueludique.com" className="flex items-center gap-2 text-sm font-body transition-colors hover:text-white/90" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                <Mail size={16} />
+                contact@botaniqueludique.com
+              </a>
+              <a href="tel:+33609831606" className="flex items-center gap-2 text-sm font-body transition-colors hover:text-white/90" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                <Phone size={16} />
+                06 09 83 16 06
+              </a>
+              <div className="flex items-start gap-2 text-sm font-body" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                <MapPin size={16} className="mt-0.5 flex-shrink-0" />
+                <span>Le Pecq (78) · Paris · Île-de-France</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Social */}
+          <div className="space-y-4">
+            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(73 44% 67%)' }}>Suivez-nous</h4>
             <div className="flex flex-col space-y-3">
               <a
                 href="https://www.instagram.com/botanique.ludique/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 transition-colors"
-                style={{ color: '#5D653A', opacity: 0.7 }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
+                className="flex items-center gap-2 text-sm font-body transition-colors hover:text-white/90"
+                style={{ color: 'rgba(255,255,255,0.5)' }}
               >
-                <Instagram size={18} />
-                <span className="text-sm">@botanique.ludique</span>
+                <Instagram size={16} />
+                @botanique.ludique
               </a>
               <a
                 href="https://www.linkedin.com/in/vanessa-charlery-a988a8319/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 transition-colors"
-                style={{ color: '#5D653A', opacity: 0.7 }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
+                className="flex items-center gap-2 text-sm font-body transition-colors hover:text-white/90"
+                style={{ color: 'rgba(255,255,255,0.5)' }}
               >
-                <Linkedin size={18} />
-                <span className="text-sm">Botanique Ludique</span>
+                <Linkedin size={16} />
+                Botanique Ludique
               </a>
-              <a
-                href="mailto:contact@botaniqueludique.com"
-                className="flex items-center gap-2 transition-colors"
-                style={{ color: '#5D653A', opacity: 0.7 }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
-              >
-                <Mail size={18} />
-                <span className="text-sm">contact@botaniqueludique.com</span>
-              </a>
-              <a
-                href="tel:+33609831606"
-                className="flex items-center gap-2 transition-colors"
-                style={{ color: '#5D653A', opacity: 0.7 }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
-              >
-                <Phone size={18} />
-                <span className="text-sm">06 09 83 16 06</span>
-              </a>
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="font-sans text-sm uppercase tracking-wider" style={{ color: '#5D653A', opacity: 0.7 }}>Localisation</h4>
-            <div className="flex items-start gap-2" style={{ color: '#5D653A', opacity: 0.7 }}>
-              <MapPin size={18} className="mt-1 flex-shrink-0" />
-              <div className="text-sm">
-                <p>Île-de-France</p>
-                <p className="mt-2 text-xs">Ateliers disponibles pour particuliers, entreprises et institutions</p>
-              </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 text-center" style={{ borderTop: '1px solid #E2E7D1' }}>
-          <p className="text-sm" style={{ color: '#5D653A', opacity: 0.6 }}>
-            © Botanique Ludique 2026 | Créé avec amour et nature | <Link to="/mentions-legales" className="hover:underline">Mentions légales</Link> | <Link to="/conditions-de-vente" className="hover:underline">Conditions de vente</Link>
-            {isAdmin && (
-              <> | <Link to="/admin/testimonials" className="hover:underline font-medium">Administration</Link></>
-            )}
+        {/* Bottom bar */}
+        <div className="mt-16 pt-8 border-t border-olive/30 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs font-mono uppercase tracking-[1.5px]" style={{ color: 'rgba(255,255,255,0.3)' }}>
+            © Botanique Ludique 2026
           </p>
+          <div className="flex items-center gap-6 text-xs font-body" style={{ color: 'rgba(255,255,255,0.4)' }}>
+            <Link to="/mentions-legales" className="hover:text-white/70 transition-colors">Mentions légales</Link>
+            <Link to="/conditions-de-vente" className="hover:text-white/70 transition-colors">CGV</Link>
+            {isAdmin && (
+              <Link to="/admin/testimonials" className="hover:text-white/70 transition-colors font-medium">Admin</Link>
+            )}
+          </div>
         </div>
       </div>
     </footer>
