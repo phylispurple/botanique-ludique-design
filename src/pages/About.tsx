@@ -8,82 +8,82 @@ import aboutImage from "@/assets/portrait-vanessa.webp";
 
 const About = () => {
   const timeline = [
-    {
-      year: "2014",
-      title: "Photographe botanique",
-      description: "Début de l'aventure artistique. Le végétal devient sujet, médium et obsession photographique.",
-      icon: Camera,
-    },
-    {
-      year: "2016",
-      title: "Kosovo · Gaia Kosovo",
-      description: "Service Volontaire Européen. Permaculture, écoconstruction, autonomie. Certification Youthpath.",
-      icon: Globe,
-      link: { url: "https://www.gaiakosovo.org", label: "gaiakosovo.org" },
-    },
-    {
-      year: "2018",
-      title: "Japon · Techniques ancestrales",
-      description: "Apprentissage du jardinage japonais et de l'aquaponie. Découverte du kokedama et des arts botaniques nippons.",
-      icon: Sprout,
-    },
-    {
-      year: "2019",
-      title: "EHESS · Anthropologie & Ethnobotanique",
-      description: "Master 1 sous la direction de Florence Brunois-Pasina. Recherche sur les interactions citadins-plantes dans le Grand Paris.",
-      icon: BookOpen,
-    },
-    {
-      year: "2024",
-      title: "Ateliers en indépendante",
-      description: "Lancement des premiers ateliers d'ethnobotanique en tant qu'indépendante. Entreprises, EHPAD, écoles, centres sociaux : les publics se diversifient.",
-      icon: Users,
-    },
-    {
-      year: "2026",
-      title: "Botanique Ludique",
-      description: "Création de l'association loi 1901 pour mettre en avant artistes et chercheurs et rendre ces savoirs accessibles au plus grand nombre.",
-      icon: Heart,
-    },
-    {
-      year: "Auj.",
-      title: "+400 participants · 50+ ateliers",
-      description: "Île-de-France : départements 75, 78, 92 et 95. Ateliers, conférences et balades botaniques pour tous les publics.",
-      icon: Sprout,
-    },
-  ];
+  {
+    year: "2014",
+    title: "Photographe botanique",
+    description: "Début de l'aventure artistique. Le végétal devient sujet, médium et obsession photographique.",
+    icon: Camera
+  },
+  {
+    year: "2016",
+    title: "Kosovo · Gaia Kosovo",
+    description: "Service Volontaire Européen. Permaculture, écoconstruction, autonomie. Certification Youthpath.",
+    icon: Globe,
+    link: { url: "https://www.gaiakosovo.org", label: "gaiakosovo.org" }
+  },
+  {
+    year: "2018",
+    title: "Japon · Techniques ancestrales",
+    description: "Apprentissage du jardinage japonais et de l'aquaponie. Découverte du kokedama et des arts botaniques nippons.",
+    icon: Sprout
+  },
+  {
+    year: "2019",
+    title: "EHESS · Anthropologie & Ethnobotanique",
+    description: "Master 1 sous la direction de Florence Brunois-Pasina. Recherche sur les interactions citadins-plantes dans le Grand Paris.",
+    icon: BookOpen
+  },
+  {
+    year: "2024",
+    title: "Ateliers en indépendante",
+    description: "Lancement des premiers ateliers d'ethnobotanique en tant qu'indépendante. Entreprises, EHPAD, écoles, centres sociaux : les publics se diversifient.",
+    icon: Users
+  },
+  {
+    year: "2026",
+    title: "Botanique Ludique",
+    description: "Création de l'association loi 1901 pour mettre en avant artistes et chercheurs et rendre ces savoirs accessibles au plus grand nombre.",
+    icon: Heart
+  },
+  {
+    year: "Auj.",
+    title: "+400 participants · 50+ ateliers",
+    description: "Île-de-France : départements 75, 78, 92 et 95. Ateliers, conférences et balades botaniques pour tous les publics.",
+    icon: Sprout
+  }];
+
 
   const values = [
-    {
-      title: "Transmission",
-      text: "Chaque atelier porte en lui une histoire. Je ne transmets pas une technique vide de sens — je partage le contexte culturel, l'origine, le pourquoi derrière chaque geste.",
-      accent: "hsl(var(--olive))",
-    },
-    {
-      title: "Accessibilité",
-      text: "Du senior en EHPAD à l'enfant de 4 ans, de l'entreprise au centre social. La botanique n'a pas de public cible, elle est pour tout le monde.",
-      accent: "hsl(var(--orange))",
-    },
-    {
-      title: "Reconnexion au vivant",
-      text: "Nous avons perdu les gestes et les mots qui nous reliaient aux plantes. Mes ateliers sont une invitation à réactiver cette sensibilité, à toucher la mousse, sentir la garance, observer une feuille.",
-      accent: "hsl(var(--green))",
-    },
-    {
-      title: "Éthique & sens",
-      text: "Ce n'est pas du folklore. Comprendre que la teinture végétale était un acte sacré, que le tressage accompagnait les rites de passage — c'est ça qui donne sa profondeur à l'expérience.",
-      accent: "hsl(var(--blue))",
-    },
-  ];
+  {
+    title: "Transmission",
+    text: "Chaque atelier porte en lui une histoire. Je ne transmets pas une technique vide de sens — je partage le contexte culturel, l'origine, le pourquoi derrière chaque geste.",
+    accent: "hsl(var(--olive))"
+  },
+  {
+    title: "Accessibilité",
+    text: "Du senior en EHPAD à l'enfant de 4 ans, de l'entreprise au centre social. La botanique n'a pas de public cible, elle est pour tout le monde.",
+    accent: "hsl(var(--orange))"
+  },
+  {
+    title: "Reconnexion au vivant",
+    text: "Nous avons perdu les gestes et les mots qui nous reliaient aux plantes. Mes ateliers sont une invitation à réactiver cette sensibilité, à toucher la mousse, sentir la garance, observer une feuille.",
+    accent: "hsl(var(--green))"
+  },
+  {
+    title: "Éthique & sens",
+    text: "Ce n'est pas du folklore. Comprendre que la teinture végétale était un acte sacré, que le tressage accompagnait les rites de passage — c'est ça qui donne sa profondeur à l'expérience.",
+    accent: "hsl(var(--blue))"
+  }];
+
 
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
-      <SEO 
+      <SEO
         title="Vanessa Charlery, Animatrice Ethnobotaniste | À Propos ✦ Ma Démarche"
         description="🌿 Découvrez Vanessa Charlery, animatrice ethnobotaniste formée à l'EHESS. Reconnecter l'humain au végétal par des ateliers créatifs uniques. Approche anthropologique et sensorielle."
         keywords="Vanessa Charlery, animatrice ethnobotaniste, EHESS, photographe botanique, éducation environnement, ethnobotanique, philosophie nature, reconnexion vivant"
-        canonical="/about"
-      />
+        canonical="/about" />
+      
       <Navigation />
 
       {/* ===== HERO ===== */}
@@ -99,8 +99,8 @@ const About = () => {
                     src={aboutImage}
                     loading="lazy"
                     alt="Vanessa Charlery, animatrice ethnobotaniste et fondatrice de Botanique Ludique"
-                    className="w-56 h-56 md:w-64 md:h-64 object-cover border-brutal relative z-10"
-                  />
+                    className="w-56 h-56 md:w-64 md:h-64 object-cover border-brutal relative z-10" />
+                  
                 </div>
                 <span className="font-mono text-[9px] uppercase tracking-[2px] text-[hsl(var(--olive))]">
                   Présidente & Fondatrice · Animatrice ethnobotaniste
@@ -133,9 +133,9 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           <AnimatedSection className="text-center mb-16">
             <span className="font-mono text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))]">Parcours</span>
-            <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mt-2">
-              De Toulouse au Grand Paris
-            </h2>
+            
+
+            
           </AnimatedSection>
 
           <div className="relative">
@@ -151,9 +151,9 @@ const About = () => {
                   delay={i * 100}
                   direction={isLeft ? "left" : "right"}
                   className={`relative flex items-start mb-12 last:mb-0 ${
-                    isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
-                >
+                  isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`
+                  }>
+                  
                   {/* Dot on timeline */}
                   <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-12 h-12 border-brutal bg-[hsl(var(--cream))] flex items-center justify-center z-10">
                     <IconComponent className="w-5 h-5 text-[hsl(var(--olive))]" />
@@ -168,19 +168,19 @@ const About = () => {
                     <p className="text-sm leading-relaxed text-[hsl(var(--black))]/60">
                       {item.description}
                     </p>
-                    {item.link && (
-                      <a
-                        href={item.link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block mt-2 font-mono text-[9px] uppercase tracking-[2px] text-[hsl(var(--olive))] hover:text-[hsl(var(--black))] transition-colors underline"
-                      >
+                    {item.link &&
+                    <a
+                      href={item.link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-2 font-mono text-[9px] uppercase tracking-[2px] text-[hsl(var(--olive))] hover:text-[hsl(var(--black))] transition-colors underline">
+                      
                         {item.link.label}
                       </a>
-                    )}
+                    }
                   </div>
-                </AnimatedSection>
-              );
+                </AnimatedSection>);
+
             })}
           </div>
         </div>
@@ -197,13 +197,13 @@ const About = () => {
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 gap-0">
-            {values.map((value, i) => (
-              <AnimatedSection key={i} delay={i * 100}>
+            {values.map((value, i) =>
+            <AnimatedSection key={i} delay={i * 100}>
                 <div className="p-10 border-brutal -mt-[3px] -ml-[3px] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300 h-full">
                   <div
-                    className="w-1 h-8 mb-4"
-                    style={{ backgroundColor: value.accent }}
-                  />
+                  className="w-1 h-8 mb-4"
+                  style={{ backgroundColor: value.accent }} />
+                
                   <h3 className="font-display text-lg uppercase tracking-[-0.5px] mb-3 text-[hsl(var(--black))]">
                     {value.title}
                   </h3>
@@ -212,7 +212,7 @@ const About = () => {
                   </p>
                 </div>
               </AnimatedSection>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -269,14 +269,14 @@ const About = () => {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 to="/workshops"
-                className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3 inline-flex items-center gap-2"
-              >
+                className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3 inline-flex items-center gap-2">
+                
                 Voir les ateliers <ArrowRight size={14} />
               </Link>
               <Link
                 to="/association"
-                className="btn-brutal bg-transparent text-[hsl(var(--black))] border-[hsl(var(--black))] hover:bg-[hsl(var(--black))] hover:text-[hsl(var(--cream))] text-xs px-7 py-3 inline-flex items-center gap-2"
-              >
+                className="btn-brutal bg-transparent text-[hsl(var(--black))] border-[hsl(var(--black))] hover:bg-[hsl(var(--black))] hover:text-[hsl(var(--cream))] text-xs px-7 py-3 inline-flex items-center gap-2">
+                
                 L'association <ArrowRight size={14} />
               </Link>
             </div>
@@ -285,8 +285,8 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default About;
