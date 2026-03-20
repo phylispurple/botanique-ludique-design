@@ -10,7 +10,7 @@ const About = () => {
   const timeline = [
   {
     year: "2014",
-    title: "Photographe botanique",
+    title: "Photographe",
     description: "Début de l'aventure artistique. Le végétal devient sujet, médium et obsession photographique.",
     icon: Camera
   },
