@@ -183,7 +183,7 @@ const DemoManus = () => {
               <span style={{ color: C.oliveLight }}>BOTANIQUE</span><br />LUDIQUE
             </h1>
             <p className="text-[22px] italic opacity-90 max-w-[650px] mx-auto mb-4 leading-[1.4]" style={{ color: C.cream }}>
-              Quand l'atelier créatif rencontre l'anthropologie de la nature
+              Quand l'atelier créatif accessible rencontre l'anthropologie de la nature
             </p>
             <p className="text-[13px] tracking-[3px] uppercase mb-10" style={{ fontFamily: "Space Mono, monospace", color: C.oliveLight }}>
               Paris • Yvelines (78) • Hauts-de-Seine (92) • Val-d'Oise (95)
