@@ -26,7 +26,7 @@ const SimpleLeaf = ({ className }: { className?: string }) => (
     {/* Nervure centrale */}
     <path 
       d="M32 14C32 14 32 44 32 48" 
-      stroke="hsl(var(--sage))" 
+      stroke="hsl(var(--cream))" 
       strokeWidth="1.5" 
       strokeLinecap="round"
       opacity="0.5"
