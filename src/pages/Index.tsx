@@ -267,25 +267,6 @@ const Index = () => {
       {/* ===== VIDEO SECTION ===== */}
       <VideoSection />
 
-      {/* ===== MARQUEE — Association ===== */}
-      <Marquee
-        items={["Rejoignez l'association", "Adhérez", "Événements", "Balades botaniques", "Communauté"]}
-        color="purple"
-        speed={25}
-        separator="◆"
-      />
-
-      {/* ===== TRUST BADGES ===== */}
-      <section className="py-10 px-6 border-y-[3px] border-[hsl(var(--black))]">
-        <div className="max-w-6xl mx-auto">
-          <AnimatedSection>
-            <TrustBadges variant="premium" showAll={true} />
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* ===== ASSOCIATION ===== */}
-      <AssociationSection />
 
       {/* ===== PARTENAIRES — Défilement continu ===== */}
       <section className="py-20 px-6">

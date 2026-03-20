@@ -36,7 +36,6 @@ const cards = [
 const bureau = [
   { name: "Vanessa Charlery", role: "Présidente" },
   { name: "Benjamin Riou", role: "Secrétaire" },
-  { name: "Nicolas Antoine", role: "Trésorier" },
 ];
 
 const AssociationSection = () => {

@@ -140,7 +140,7 @@ const ConferencesSavoirs = () => {
         </div>
 
         {/* Modules pédagogiques */}
-        <div className="border-t border-white/[0.12] pt-14 mt-0 grid md:grid-cols-2 gap-0 items-center pb-14">
+        <div className="border-t border-white/[0.12] pt-14 mt-0 grid md:grid-cols-2 gap-12 items-center pb-14">
           <AnimatedSection direction="left">
             <div>
               <span className="section-label block mb-3" style={{ color: 'hsl(73 44% 67%)' }}>
