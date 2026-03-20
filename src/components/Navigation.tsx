@@ -262,6 +262,11 @@ const Navigation = () => {
             style={{ color: isActive('/association') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
             🌿 Association
           </Link>
+          <Link to="/about" onClick={() => setIsOpen(false)}
+            className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
+            style={{ color: isActive('/about') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+            À propos
+          </Link>
 
           <div className="border-t border-white/10 pt-4 space-y-4">
             {/* Ateliers accordion */}
