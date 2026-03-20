@@ -50,21 +50,42 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-sm font-body leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              Ateliers créatifs pour reconnecter l'humain au végétal. Association loi 1901 de médiation culturelle et scientifique.
+              Association loi 1901 de médiation culturelle et scientifique autour du végétal.
+            </p>
+            <p className="text-xs font-body leading-relaxed mt-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
+              Prestations indépendantes par Vanessa Charlery, ethnobotaniste.
             </p>
           </div>
 
-          {/* Navigation */}
+          {/* Association */}
           <div className="space-y-4">
-            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(73 44% 67%)' }}>Navigation</h4>
+            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(73 44% 67%)' }}>🌿 Association</h4>
             <div className="flex flex-col space-y-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="text-sm font-body transition-colors hover:text-white/90"
-                  style={{ color: 'rgba(255,255,255,0.5)' }}
-                >
+              {[
+                { name: "L'association", path: "/association" },
+                { name: "Ateliers", path: "/workshops" },
+                { name: "Galerie", path: "/gallery" },
+                { name: "Blog", path: "/blog" },
+                { name: "FAQ", path: "/faq" },
+              ].map((link) => (
+                <Link key={link.path} to={link.path} className="text-sm font-body transition-colors hover:text-white/90" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Prestations */}
+          <div className="space-y-4">
+            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(13 76% 61%)' }}>💼 Prestations</h4>
+            <div className="flex flex-col space-y-2">
+              {[
+                { name: "Pro & Entreprises", path: "/pro" },
+                { name: "À propos", path: "/about" },
+                { name: "Contact & Devis", path: "/contact" },
+                { name: "Agenda", path: "/agenda" },
+              ].map((link) => (
+                <Link key={link.path} to={link.path} className="text-sm font-body transition-colors hover:text-white/90" style={{ color: 'rgba(255,255,255,0.5)' }}>
                   {link.name}
                 </Link>
               ))}

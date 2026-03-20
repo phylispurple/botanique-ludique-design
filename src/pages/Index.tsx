@@ -12,6 +12,7 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
 import { Calendar, Users, Building2, Award } from "lucide-react";
+import DualEntrySection from "@/components/DualEntrySection";
 import galleryTerrarium from "@/assets/gallery-terrarium.webp";
 import galleryTeinture from "@/assets/gallery-teinture-1.webp";
 import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
@@ -130,6 +131,9 @@ const Index = () => {
         color="green"
         speed={25}
       />
+
+      {/* ===== DUAL ENTRY: ASSOCIATION vs PRESTATIONS ===== */}
+      <DualEntrySection />
 
       {/* ===== PRÉSENTATION + STATS ===== */}
       <section className="py-24 px-6">
