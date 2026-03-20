@@ -95,12 +95,18 @@ const Index = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={150}>
-            <p className="font-body text-xl md:text-[22px] italic text-[hsl(var(--cream))]/90 max-w-[650px] mx-auto mb-4 leading-relaxed">
+            <p className="font-body text-xl md:text-[22px] italic text-[hsl(var(--cream))]/90 max-w-[650px] mx-auto mb-3 leading-relaxed">
               Quand l'atelier créatif rencontre l'anthropologie de la nature
+            </p>
+            <p className="font-body text-[15px] md:text-base text-[hsl(var(--cream))]/70 max-w-[580px] mx-auto mb-4 leading-relaxed">
+              Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={250}>
+            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[2px] text-[hsl(var(--olive-light))]/80 mb-2">
+              Enfants · Adultes · Seniors · Écoles · EHPAD · Entreprises
+            </p>
             <p className="font-mono-brand text-[13px] uppercase tracking-[3px] text-[hsl(var(--olive-light))] mb-10">
               Paris · Yvelines (78) · Hauts-de-Seine (92) · Val-d'Oise (95)
             </p>
