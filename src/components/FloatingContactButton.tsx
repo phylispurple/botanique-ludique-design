@@ -48,7 +48,7 @@ const FloatingContactButton = () => {
     <div className="fixed bottom-6 right-6 z-50">
       {/* Menu ouvert */}
       {isOpen && (
-        <div className="absolute bottom-20 right-0 bg-white rounded-2xl shadow-2xl p-4 mb-4 animate-scale-in min-w-[220px]">
+        <div className="absolute bottom-20 right-0 bg-[hsl(var(--cream))] border-brutal shadow-brutal-lg p-4 mb-4 animate-scale-in min-w-[220px]">
           <div className="space-y-3">
             <p className="text-sm font-semibold text-charcoal border-b pb-2 mb-3">
               Contactez-nous
