@@ -34,9 +34,9 @@ const About = () => {
       icon: BookOpen,
     },
     {
-      year: "2022",
+      year: "2026",
       title: "Botanique Ludique",
-      description: "Création de l'association. Premiers ateliers à Paris et en Île-de-France. Le projet prend racine.",
+      description: "Création de l'association loi 1901. Premiers ateliers à Paris et en Île-de-France. Le projet prend racine.",
       icon: Heart,
     },
     {
