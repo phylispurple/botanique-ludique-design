@@ -98,10 +98,8 @@ const Navigation = () => {
           <li>
             <Link
               to="/association"
-              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] px-3 py-1 border transition-colors ${
-                isActive('/association')
-                  ? 'border-olive-light text-olive-light'
-                  : 'border-white/15 hover:border-olive-light/50 hover:text-white/90'
+              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${
+                isActive('/association') ? 'border-b border-olive-light' : ''
               }`}
               style={{ color: isActive('/association') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
             >
@@ -109,8 +107,7 @@ const Navigation = () => {
             </Link>
           </li>
 
-          {/* Separator dot */}
-          <li className="text-white/15 text-[6px]">●</li>
+          <li className="text-white/15 text-[6px] leading-none">●</li>
 
           {/* Ateliers dropdown */}
           <li
