@@ -334,7 +334,7 @@ const Index = () => {
           />
         </div>
         <div className="absolute inset-0 bg-[hsl(var(--black))]/60" />
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <AnimatedSection direction="left">
             <div className="space-y-5">
               <h2 className="font-display text-3xl md:text-4xl uppercase leading-[0.95]">
