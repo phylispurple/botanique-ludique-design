@@ -4,7 +4,7 @@ const CustomCursor = () => {
   const dotRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
   const mousePos = useRef({ x: -100, y: -100 });
-  const ringPos = useRef({ x: -100, y: -100 });
+  const dotPos = useRef({ x: -100, y: -100 });
   const isHovering = useRef(false);
 
   const updateCursorStyle = useCallback((hovering: boolean) => {
@@ -23,11 +23,9 @@ const CustomCursor = () => {
   }, []);
 
   useEffect(() => {
-    // Only on desktop with pointer
     const mq = window.matchMedia('(min-width: 1301px) and (pointer: fine)');
     if (!mq.matches) return;
 
-    // Hide native cursor globally
     const style = document.createElement('style');
     style.id = 'custom-cursor-style';
     style.textContent = `
@@ -39,29 +37,30 @@ const CustomCursor = () => {
     `;
     document.head.appendChild(style);
 
-    // Show cursor elements
     if (dotRef.current) dotRef.current.style.opacity = '1';
     if (ringRef.current) ringRef.current.style.opacity = '1';
 
     const onMouseMove = (e: MouseEvent) => {
       mousePos.current = { x: e.clientX, y: e.clientY };
-      if (dotRef.current) {
-        dotRef.current.style.left = `${e.clientX}px`;
-        dotRef.current.style.top = `${e.clientY}px`;
+      // Ring follows mouse instantly
+      if (ringRef.current) {
+        ringRef.current.style.left = `${e.clientX}px`;
+        ringRef.current.style.top = `${e.clientY}px`;
       }
     };
 
+    // Dot lags behind inside the ring
     let rafId: number;
-    const animateRing = () => {
-      ringPos.current.x += (mousePos.current.x - ringPos.current.x) * 0.15;
-      ringPos.current.y += (mousePos.current.y - ringPos.current.y) * 0.15;
-      if (ringRef.current) {
-        ringRef.current.style.left = `${ringPos.current.x}px`;
-        ringRef.current.style.top = `${ringPos.current.y}px`;
+    const animateDot = () => {
+      dotPos.current.x += (mousePos.current.x - dotPos.current.x) * 0.15;
+      dotPos.current.y += (mousePos.current.y - dotPos.current.y) * 0.15;
+      if (dotRef.current) {
+        dotRef.current.style.left = `${dotPos.current.x}px`;
+        dotRef.current.style.top = `${dotPos.current.y}px`;
       }
-      rafId = requestAnimationFrame(animateRing);
+      rafId = requestAnimationFrame(animateDot);
     };
-    rafId = requestAnimationFrame(animateRing);
+    rafId = requestAnimationFrame(animateDot);
 
     document.addEventListener('mousemove', onMouseMove);
 
@@ -81,7 +80,6 @@ const CustomCursor = () => {
     const observer = new MutationObserver(() => addHoverListeners());
     observer.observe(document.body, { childList: true, subtree: true });
 
-    // Hide cursor when it leaves the window
     const onLeave = () => {
       if (dotRef.current) dotRef.current.style.opacity = '0';
       if (ringRef.current) ringRef.current.style.opacity = '0';
