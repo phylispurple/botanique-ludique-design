@@ -25,7 +25,7 @@ const IntervenantScientifiqueParis = () => {
         canonical="/intervenant-scientifique-paris"
         city="Paris"
       />
-      <SchemaOrg type="Service" data={{ serviceType: "Intervention scientifique nature", name: "Intervenant Scientifique Nature Paris", description: "Interventions scientifiques botaniques à Paris par une animatrice ethnobotaniste diplômée." }} />
+      <SchemaOrg type="Service" data={{ serviceType: "Intervention scientifique nature", name: "Intervenant Scientifique Nature Paris", description: "Interventions scientifiques botaniques à Paris par une animatrice ethnobotaniste formée à l'EHESS." }} />
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
       <Navigation />

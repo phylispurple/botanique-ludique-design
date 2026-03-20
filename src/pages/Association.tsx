@@ -95,7 +95,7 @@ const Association = () => {
               autour du vivant
             </h1>
             <p className="text-lg md:text-xl font-body leading-relaxed max-w-2xl" style={{ color: 'rgba(255,255,255,0.7)' }}>
-              Botanique Ludique est une association loi 1901 fondée par Vanessa Charlery, animatrice ethnobotaniste diplômée de l'EHESS. 
+              Botanique Ludique est une association loi 1901 fondée par Vanessa Charlery, animatrice ethnobotaniste formée à l'EHESS. 
               Basée au Pecq (78), elle intervient dans toute l'Île-de-France pour transmettre les savoirs sur les relations humains-plantes.
             </p>
           </AnimatedSection>

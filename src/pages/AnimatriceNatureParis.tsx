@@ -28,7 +28,7 @@ const AnimatriceNatureParis = () => {
       <SchemaOrg type="Service" data={{
         serviceType: "Animation nature et botanique à Paris",
         name: "Animatrice Nature Paris (75)",
-        description: "Animations nature et ateliers botaniques à Paris par une animatrice ethnobotaniste diplômée. Tous publics."
+        description: "Animations nature et ateliers botaniques à Paris par une animatrice ethnobotaniste formée à l'EHESS. Tous publics."
       }} />
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
