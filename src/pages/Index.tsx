@@ -113,12 +113,6 @@ const Index = () => {
               >
                 Découvrir les ateliers →
               </button>
-              <button
-                onClick={() => navigate('/b2b')}
-                className="btn-brutal bg-transparent text-[hsl(var(--cream))] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_rgba(255,255,255,0.3)] text-sm px-9 py-4"
-              >
-                Team Building
-              </button>
             </div>
           </AnimatedSection>
         </div>
