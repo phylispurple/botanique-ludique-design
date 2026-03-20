@@ -116,11 +116,11 @@ const FloatingContactButton = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`
-          w-16 h-16 rounded-full shadow-xl flex items-center justify-center
-          transition-all duration-300 hover:scale-110 hover:shadow-2xl
+          w-16 h-16 rounded-full shadow-brutal flex items-center justify-center
+          transition-all duration-300 hover:scale-110 hover:shadow-brutal-lg border-brutal
           ${isOpen 
-            ? 'bg-charcoal text-white rotate-0' 
-            : 'bg-gradient-to-br from-sage via-sage to-sage-dark text-white hover:rotate-12'
+            ? 'bg-[hsl(var(--black))] text-[hsl(var(--cream))] rotate-0' 
+            : 'bg-[hsl(var(--olive))] text-[hsl(var(--cream))] hover:rotate-12'
           }
         `}
         aria-label={isOpen ? "Fermer le menu contact" : "Ouvrir le menu contact"}
