@@ -78,8 +78,8 @@ const ConferencesSavoirs = () => {
         {/* Conference cards grid */}
         <div className="grid md:grid-cols-2 gap-0">
           {conferences.map((conf, idx) => (
-            <AnimatedSection key={idx} delay={idx * 100}>
-              <div className="p-10 md:p-11 border border-white/[0.12] -mt-px -ml-px relative overflow-hidden group transition-colors duration-300 hover:bg-white/5">
+            <AnimatedSection key={idx} delay={idx * 100} className="h-full">
+              <div className="h-full p-10 md:p-11 border border-white/[0.12] -mt-px -ml-px relative overflow-hidden group transition-colors duration-300 hover:bg-white/5 flex flex-col">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-[hsl(73_44%_67%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="font-mono-brand text-[10px] tracking-[3px] text-[hsl(73_44%_67%)] mb-4 block">
                   {conf.num}
@@ -87,7 +87,7 @@ const ConferencesSavoirs = () => {
                 <h3 className="font-display text-xl md:text-[22px] uppercase leading-[1.05] mb-3.5 text-white">
                   {conf.title}
                 </h3>
-                <p className="text-sm leading-[1.7] text-white/70 mb-5 text-justify">
+                <p className="text-sm leading-[1.7] text-white/70 mb-5 text-justify flex-1">
                   {conf.desc}
                 </p>
                 <div className="flex flex-wrap gap-1.5">
