@@ -27,11 +27,11 @@ const Index = () => {
   const navigate = useNavigate();
 
   const stats = [
-    { value: "50+", label: "Ateliers réalisés", icon: Calendar },
-    { value: "400+", label: "Participants accompagnés", icon: Users },
-    { value: "15+", label: "Partenaires de confiance", icon: Building2 },
-    { value: "2023", label: "Année de création", icon: Award },
-  ];
+  { value: "50+", label: "Ateliers réalisés", icon: Calendar },
+  { value: "400+", label: "Participants accompagnés", icon: Users },
+  { value: "15+", label: "Partenaires de confiance", icon: Building2 },
+  { value: "2023", label: "Année de création", icon: Award }];
+
 
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
@@ -39,19 +39,19 @@ const Index = () => {
         title="Ateliers Botaniques Paris & IDF | Kokedama, Teinture ✦ Réservez"
         description="🌿 Ateliers créatifs nature à Paris, Yvelines (78), Hauts-de-Seine (92) & Val-d'Oise (95). Kokedama, teinture végétale, terrarium. +400 participants. Réservez votre atelier !"
         keywords="ateliers botaniques Paris, ateliers nature Yvelines 78, ateliers Hauts-de-Seine 92, ateliers Val-d'Oise 95, kokedama Paris, teinture végétale Yvelines, vannerie Hauts-de-Seine, team building nature Paris, atelier botanique Chatou, atelier végétal Saint-Germain-en-Laye"
-        canonical="/"
-      />
+        canonical="/" />
+      
       <SchemaOrg
         type="LocalBusiness"
         data={{
           founder: { "@type": "Person", name: "Vanessa Charlery", jobTitle: "Animatrice ethnobotaniste et Artiste Photographe" },
           makesOffer: [
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ateliers Kokedama", description: "Art japonais du jardinage en boule de mousse" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Teinture Végétale", description: "Techniques de teinture naturelle avec des plantes" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vannerie", description: "Tressage d'osier et fibres naturelles" } },
-          ],
-        }}
-      />
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ateliers Kokedama", description: "Art japonais du jardinage en boule de mousse" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Teinture Végétale", description: "Techniques de teinture naturelle avec des plantes" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vannerie", description: "Tressage d'osier et fibres naturelles" } }]
+
+        }} />
+      
 
       <CustomCursor />
       <Navigation />
@@ -65,24 +65,24 @@ const Index = () => {
             muted
             playsInline
             className="w-full h-full object-cover opacity-60"
-            src="/videos/hero-bg.mp4"
-          />
+            src="/videos/hero-bg.mp4" />
+          
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--black))]/20 to-[hsl(var(--black))]/55" />
 
         <div className="relative z-10 text-center px-6 max-w-[900px]">
           <AnimatedSection>
             <h1
-              className="font-display text-[clamp(3rem,10vw,8rem)] uppercase leading-[0.9] tracking-[-3px] text-[hsl(var(--cream))] mb-6"
-            >
+              className="font-display text-[clamp(3rem,10vw,8rem)] uppercase leading-[0.9] tracking-[-3px] text-[hsl(var(--cream))] mb-6">
+              
               Botanique<br />
               <span className="text-[hsl(var(--olive-light))]">Ludique</span>
             </h1>
           </AnimatedSection>
 
           <AnimatedSection delay={150}>
-            <p className="font-body text-xl md:text-[22px] italic text-[hsl(var(--cream))]/90 max-w-[650px] mx-auto mb-3 leading-relaxed">
-              Quand l'atelier créatif accessible rencontre l'anthropologie de la nature
+            <p className="font-body text-xl md:text-[22px] italic text-[hsl(var(--cream))]/90 max-w-[650px] mx-auto mb-3 leading-relaxed">Quand l'atelier créatif rencontre l'anthropologie de la nature
+
             </p>
             <p className="font-body text-[15px] md:text-base text-[hsl(var(--cream))]/70 max-w-[580px] mx-auto mb-4 leading-relaxed">
               Des ateliers accessibles qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes.
@@ -102,8 +102,8 @@ const Index = () => {
             <div className="flex flex-wrap gap-4 justify-center">
               <button
                 onClick={() => navigate('/workshops')}
-                className="btn-brutal bg-[hsl(var(--orange))] text-[hsl(var(--cream))] border-[hsl(var(--orange))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--orange))] text-sm px-9 py-4"
-              >
+                className="btn-brutal bg-[hsl(var(--orange))] text-[hsl(var(--cream))] border-[hsl(var(--orange))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--orange))] text-sm px-9 py-4">
+                
                 Découvrir les ateliers →
               </button>
             </div>
@@ -115,8 +115,8 @@ const Index = () => {
       <Marquee
         items={["Kokedama", "Teinture végétale", "Terrarium", "Vannerie", "Couronne de fleurs", "Sachet de senteurs"]}
         color="green"
-        speed={25}
-      />
+        speed={25} />
+      
 
 
       {/* ===== PRÉSENTATION + STATS ===== */}
@@ -144,14 +144,14 @@ const Index = () => {
                 de l'Asie à l'Europe.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {["Kokedama", "Teinture végétale", "Vannerie", "Terrarium", "Ethnobotanique"].map(tag => (
-                  <span
-                    key={tag}
-                    className="font-mono-brand text-[10px] uppercase tracking-[1.5px] px-3.5 py-1.5 border-brutal-thin rounded-full hover:bg-[hsl(var(--black))] hover:text-[hsl(var(--cream))] transition-colors cursor-default"
-                  >
+                {["Kokedama", "Teinture végétale", "Vannerie", "Terrarium", "Ethnobotanique"].map((tag) =>
+                <span
+                  key={tag}
+                  className="font-mono-brand text-[10px] uppercase tracking-[1.5px] px-3.5 py-1.5 border-brutal-thin rounded-full hover:bg-[hsl(var(--black))] hover:text-[hsl(var(--cream))] transition-colors cursor-default">
+                  
                     {tag}
                   </span>
-                ))}
+                )}
               </div>
             </div>
           </AnimatedSection>
@@ -164,20 +164,20 @@ const Index = () => {
                 return (
                   <div
                     key={index}
-                    className="p-10 border-brutal text-center -mt-[3px] -ml-[3px] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300"
-                  >
+                    className="p-10 border-brutal text-center -mt-[3px] -ml-[3px] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300">
+                    
                     <div className="flex justify-center mb-3">
                       <IconComponent className="w-5 h-5 text-[hsl(var(--olive))]" />
                     </div>
                     <AnimatedCounter
                       value={stat.value}
-                      className="font-display text-3xl md:text-4xl text-[hsl(var(--black))] mb-1"
-                    />
+                      className="font-display text-3xl md:text-4xl text-[hsl(var(--black))] mb-1" />
+                    
                     <div className="font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/50">
                       {stat.label}
                     </div>
-                  </div>
-                );
+                  </div>);
+
               })}
             </div>
           </AnimatedSection>
@@ -189,8 +189,8 @@ const Index = () => {
         items={["Paris", "Yvelines 78", "Hauts-de-Seine 92", "Val-d'Oise 95", "Île-de-France"]}
         color="purple"
         speed={35}
-        separator="◆"
-      />
+        separator="◆" />
+      
 
       {/* ===== GALERIE — Défilement continu ===== */}
       <section className="py-24 px-6 bg-[hsl(var(--cream-dark))]">
@@ -205,29 +205,29 @@ const Index = () => {
           <div className="overflow-hidden mb-8">
             <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
               {[
-                { src: galleryTerrarium, alt: "Atelier terrarium botanique" },
-                { src: galleryTeinture, alt: "Atelier teinture végétale" },
-                { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs" },
-                { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin" },
-                { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama" },
-                { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" },
-              ].map((image, index) => (
-                <div key={`a-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal">
+              { src: galleryTerrarium, alt: "Atelier terrarium botanique" },
+              { src: galleryTeinture, alt: "Atelier teinture végétale" },
+              { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs" },
+              { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin" },
+              { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama" },
+              { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" }].
+              map((image, index) =>
+              <div key={`a-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal">
                   <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
-              )).concat(
+              ).concat(
                 [
-                  { src: galleryTerrarium, alt: "" },
-                  { src: galleryTeinture, alt: "" },
-                  { src: galleryFlowerCrown, alt: "" },
-                  { src: galleryKokedamaGarden, alt: "" },
-                  { src: galleryWorkshopGroup, alt: "" },
-                  { src: gallerySachetSenteur, alt: "" },
-                ].map((image, index) => (
-                  <div key={`b-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal" aria-hidden="true">
+                { src: galleryTerrarium, alt: "" },
+                { src: galleryTeinture, alt: "" },
+                { src: galleryFlowerCrown, alt: "" },
+                { src: galleryKokedamaGarden, alt: "" },
+                { src: galleryWorkshopGroup, alt: "" },
+                { src: gallerySachetSenteur, alt: "" }].
+                map((image, index) =>
+                <div key={`b-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal" aria-hidden="true">
                     <img src={image.src} alt="" className="w-full h-full object-cover" loading="lazy" />
                   </div>
-                ))
+                )
               )}
             </div>
           </div>
@@ -235,8 +235,8 @@ const Index = () => {
           <AnimatedSection delay={300} className="text-center">
             <Link
               to="/gallery"
-              className="btn-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-[hsl(var(--black))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-8 py-3 inline-block"
-            >
+              className="btn-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-[hsl(var(--black))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-8 py-3 inline-block">
+              
               Voir toute la galerie →
             </Link>
           </AnimatedSection>
@@ -248,8 +248,8 @@ const Index = () => {
         items={["Enfants", "Adultes", "Seniors", "Écoles", "Entreprises", "EHPAD", "Associations", "Collectivités"]}
         color="orange"
         speed={20}
-        separator="●"
-      />
+        separator="●" />
+      
 
       {/* ===== CONFÉRENCES & SAVOIRS ===== */}
       <ConferencesSavoirs />
@@ -258,8 +258,8 @@ const Index = () => {
       <Marquee
         items={["Anthropologie", "Biodiversité", "Médiation scientifique", "Savoirs botaniques", "Cultures du vivant"]}
         color="green"
-        speed={28}
-      />
+        speed={28} />
+      
 
       {/* ===== TESTIMONIALS ===== */}
       <Testimonials />
@@ -279,29 +279,29 @@ const Index = () => {
           <div className="overflow-hidden">
             <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '20s' }}>
               {[
-                { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
-                { src: "/logos/mjc-vesinet.jpg", alt: "MJC du Vésinet" },
-                { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
-                { src: "/logos/mjc-chatou.jpeg", alt: "MJC Chatou" },
-                { src: "/logos/publicis.jpg", alt: "Publicis" },
-                { src: "/logos/f93.jpg", alt: "F93" },
-              ].map((logo, index) => (
-                <div key={`a-${index}`} className="flex-shrink-0 flex items-center justify-center p-4 border-brutal hover:-translate-y-1 hover:shadow-brutal transition-all duration-200" style={{ width: 140 }}>
+              { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
+              { src: "/logos/mjc-vesinet.jpg", alt: "MJC du Vésinet" },
+              { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
+              { src: "/logos/mjc-chatou.jpeg", alt: "MJC Chatou" },
+              { src: "/logos/publicis.jpg", alt: "Publicis" },
+              { src: "/logos/f93.jpg", alt: "F93" }].
+              map((logo, index) =>
+              <div key={`a-${index}`} className="flex-shrink-0 flex items-center justify-center p-4 border-brutal hover:-translate-y-1 hover:shadow-brutal transition-all duration-200" style={{ width: 140 }}>
                   <img src={logo.src} alt={logo.alt} className="max-h-12 w-auto object-contain" loading="lazy" />
                 </div>
-              )).concat(
+              ).concat(
                 [
-                  { src: "/logos/region-idf.webp", alt: "" },
-                  { src: "/logos/mjc-vesinet.jpg", alt: "" },
-                  { src: "/logos/jappy-senior.svg", alt: "" },
-                  { src: "/logos/mjc-chatou.jpeg", alt: "" },
-                  { src: "/logos/publicis.jpg", alt: "" },
-                  { src: "/logos/f93.jpg", alt: "" },
-                ].map((logo, index) => (
-                  <div key={`b-${index}`} className="flex-shrink-0 flex items-center justify-center p-4 border-brutal" style={{ width: 140 }} aria-hidden="true">
+                { src: "/logos/region-idf.webp", alt: "" },
+                { src: "/logos/mjc-vesinet.jpg", alt: "" },
+                { src: "/logos/jappy-senior.svg", alt: "" },
+                { src: "/logos/mjc-chatou.jpeg", alt: "" },
+                { src: "/logos/publicis.jpg", alt: "" },
+                { src: "/logos/f93.jpg", alt: "" }].
+                map((logo, index) =>
+                <div key={`b-${index}`} className="flex-shrink-0 flex items-center justify-center p-4 border-brutal" style={{ width: 140 }} aria-hidden="true">
                     <img src={logo.src} alt="" className="max-h-12 w-auto object-contain" loading="lazy" />
                   </div>
-                ))
+                )
               )}
             </div>
           </div>
@@ -312,8 +312,8 @@ const Index = () => {
       <Marquee
         items={["Ateliers", "Conférences", "Balades botaniques", "Team building", "Médiation"]}
         color="olive"
-        speed={28}
-      />
+        speed={28} />
+      
 
       {/* ===== CTA + NEWSLETTER ===== */}
       <section className="py-20 px-6 text-[hsl(var(--cream))] relative overflow-hidden">
@@ -322,8 +322,8 @@ const Index = () => {
             src={ctaWorkshopGroup}
             alt=""
             className="w-full h-full object-cover opacity-35"
-            loading="lazy"
-          />
+            loading="lazy" />
+          
         </div>
         <div className="absolute inset-0 bg-[hsl(var(--black))]/40" />
         <div className="relative z-10 max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -338,14 +338,14 @@ const Index = () => {
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   to="/workshops"
-                  className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3"
-                >
+                  className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3">
+                  
                   Voir les ateliers →
                 </Link>
                 <Link
                   to="/contact"
-                  className="btn-brutal bg-transparent text-[hsl(var(--cream))] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3"
-                >
+                  className="btn-brutal bg-transparent text-[hsl(var(--cream))] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3">
+                  
                   Nous contacter
                 </Link>
               </div>
@@ -366,8 +366,8 @@ const Index = () => {
 
       <Footer />
       <CookieConsent />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
