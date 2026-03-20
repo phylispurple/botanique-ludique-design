@@ -154,17 +154,12 @@ const Association = () => {
                   {card.desc}
                 </p>
                 {card.disabled ? (
-                  <span className="inline-flex items-center mt-5 font-mono-brand text-[10px] uppercase tracking-[2px] text-white/30">
-                    {card.linkText}
-                  </span>
-                ) : (
-                  <Link
-                    to={card.link!}
-                    className="inline-flex items-center gap-2 mt-5 font-display text-xs uppercase tracking-[2px] text-[hsl(73_44%_67%)] no-underline group-hover:gap-4 transition-all duration-300"
-                  >
-                    {card.linkText}
-                  </Link>
-                )}
+                  card.linkText && (
+                    <span className="inline-flex items-center mt-5 font-mono-brand text-[10px] uppercase tracking-[2px] text-white/30">
+                      {card.linkText}
+                    </span>
+                  )
+                ) : null}
               </div>
             </AnimatedSection>
           ))}
