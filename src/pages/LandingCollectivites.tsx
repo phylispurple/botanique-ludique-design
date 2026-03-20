@@ -63,7 +63,7 @@ const LandingCollectivites = () => {
             Animations <span className="text-sage">Botaniques</span> pour vos Événements Municipaux
           </h1>
           <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-            Des ateliers nature clé en main pour animer vos fêtes de quartier, journées du patrimoine et événements citoyens. Créons ensemble du lien social autour du végétal.
+            Bien plus que des ateliers créatifs : une approche ethnobotanique qui tisse des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes. Animations clé en main pour vos événements municipaux.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-sage hover:bg-sage-dark text-white">

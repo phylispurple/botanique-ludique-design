@@ -30,7 +30,7 @@ const LandingCSE = () => {
         <div className="container mx-auto max-w-6xl text-center space-y-6">
           <div className="inline-flex items-center gap-2 bg-sage/20 text-sage-dark px-4 py-2 rounded-full text-sm font-medium"><Building2 className="w-4 h-4" />Activités pour Comités d'Entreprise</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-charcoal">Animations Nature pour <span className="text-sage">CSE & CE</span></h1>
-          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">Proposez à vos salariés des ateliers botaniques originaux et éco-responsables.</p>
+          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">Plus qu'un atelier créatif : une approche ethnobotanique qui explore les relations humains-plantes à travers la création artistique. Des ateliers originaux et porteurs de sens pour vos salariés.</p>
           <Button asChild size="lg" className="bg-sage hover:bg-sage-dark text-white"><Link to="/contact">Devis gratuit sous 24h<ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
         </div>
       </section>
