@@ -13,7 +13,7 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
 import ConferencesSavoirs from "@/components/ConferencesSavoirs";
 import VideoSection from "@/components/VideoSection";
-import AssociationSection from "@/components/AssociationSection";
+
 import { Calendar, Users, Building2, Award } from "lucide-react";
 import galleryTerrarium from "@/assets/gallery-terrarium.webp";
 import ctaWorkshopGroup from "@/assets/cta-workshop-group.jpg";
@@ -267,25 +267,6 @@ const Index = () => {
       {/* ===== VIDEO SECTION ===== */}
       <VideoSection />
 
-      {/* ===== MARQUEE — Association ===== */}
-      <Marquee
-        items={["Rejoignez l'association", "Adhérez", "Événements", "Balades botaniques", "Communauté"]}
-        color="purple"
-        speed={25}
-        separator="◆"
-      />
-
-      {/* ===== TRUST BADGES ===== */}
-      <section className="py-10 px-6 border-y-[3px] border-[hsl(var(--black))]">
-        <div className="max-w-6xl mx-auto">
-          <AnimatedSection>
-            <TrustBadges variant="premium" showAll={true} />
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* ===== ASSOCIATION ===== */}
-      <AssociationSection />
 
       {/* ===== PARTENAIRES — Défilement continu ===== */}
       <section className="py-20 px-6">

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
+import AssociationSection from "@/components/AssociationSection";
 import { Link } from "react-router-dom";
 import { Users, BookOpen, Mic, TreePine, Camera, Heart } from "lucide-react";
 
@@ -160,6 +161,9 @@ const Association = () => {
           </div>
         </div>
       </section>
+
+      {/* Association Section from homepage */}
+      <AssociationSection />
 
       {/* CTA */}
       <section className="py-20 px-6">
