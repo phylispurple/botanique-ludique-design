@@ -78,18 +78,6 @@ const Navigation = () => {
     setTimeout(() => tryScroll(), 150);
   };
 
-  const NavLink = ({ to, children, active }: { to: string; children: React.ReactNode; active?: boolean }) => (
-    <Link
-      to={to}
-      className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${
-        active ? 'border-b border-olive-light' : ''
-      }`}
-      style={{ color: active ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
-    >
-      {children}
-    </Link>
-  );
-
   return (
     <nav className="sticky top-0 z-[999] border-b-2 border-olive" style={{ background: 'hsl(0 0% 10%)' }}>
       <div className="px-6 md:px-[60px] h-16 flex items-center justify-between">
@@ -105,120 +93,144 @@ const Navigation = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden lg:flex items-center gap-0 list-none m-0 p-0">
-          {/* === ASSOCIATION === */}
-          <li className="flex items-center gap-5 pr-5 mr-5 border-r border-white/15">
-            <span className="font-mono text-[8px] uppercase tracking-[2px] text-white/25 hidden xl:block">Asso</span>
-            <NavLink to="/association" active={isActive('/association')}>Association</NavLink>
-
-            {/* Ateliers dropdown */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setWorkshopsOpen(true)}
-              onMouseLeave={() => setWorkshopsOpen(false)}
+        <ul className="hidden lg:flex items-center gap-6 list-none m-0 p-0">
+          {/* Association — visuellement séparé */}
+          <li>
+            <Link
+              to="/association"
+              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] px-3 py-1 border transition-colors ${
+                isActive('/association')
+                  ? 'border-olive-light text-olive-light'
+                  : 'border-white/15 hover:border-olive-light/50 hover:text-white/90'
+              }`}
+              style={{ color: isActive('/association') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
             >
-              <Link
-                to="/workshops"
-                onClick={() => { setWorkshopsOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] flex items-center gap-1 transition-colors ${
-                  isActive('/workshops') ? 'border-b border-olive-light' : ''
-                }`}
-                style={{ color: isActive('/workshops') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
-              >
-                Ateliers
-                <ChevronDown size={12} className="transition-transform duration-200 group-hover:rotate-180" />
-              </Link>
-
-              <div className={`absolute top-full left-0 mt-0 w-72 border-brutal-thin bg-cream shadow-brutal-lg overflow-hidden transition-all duration-200 max-h-[80vh] overflow-y-auto ${
-                workshopsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-              }`} style={{ zIndex: 100 }}>
-                <div className="py-2">
-                  {workshopCategories.map((cat, idx) => (
-                    <div key={cat.category}>
-                      {idx > 0 && <div className="border-t border-foreground/10 my-2" />}
-                      <div className="px-4 py-1 font-mono text-[9px] uppercase tracking-[2px] font-bold" style={{ color: 'hsl(73 37% 44%)' }}>
-                        {cat.category}
-                      </div>
-                      {cat.workshops.map((w) => (
-                        <Link
-                          key={w.id}
-                          to={`/workshops?reset=true#${w.id}`}
-                          className="block px-6 py-2 text-sm font-body hover:bg-olive/10 transition-colors"
-                          style={{ color: 'hsl(0 0% 10%)' }}
-                          onClick={() => { setWorkshopsOpen(false); scrollToWorkshop(w.id); }}
-                        >
-                          {w.name}
-                        </Link>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <NavLink to="/gallery" active={isActive('/gallery')}>Galerie</NavLink>
-            <NavLink to="/blog" active={isActive('/blog')}>Blog</NavLink>
+              Association
+            </Link>
           </li>
 
-          {/* === PRESTATIONS INDÉPENDANTES === */}
-          <li className="flex items-center gap-5 pl-0">
-            <span className="font-mono text-[8px] uppercase tracking-[2px] text-[hsl(13,76%,61%)]/50 hidden xl:block">Prestations</span>
+          {/* Separator dot */}
+          <li className="text-white/15 text-[6px]">●</li>
 
-            {/* Pro dropdown */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setProOpen(true)}
-              onMouseLeave={() => setProOpen(false)}
+          {/* Ateliers dropdown */}
+          <li
+            className="relative group"
+            onMouseEnter={() => setWorkshopsOpen(true)}
+            onMouseLeave={() => setWorkshopsOpen(false)}
+          >
+            <Link
+              to="/workshops"
+              onClick={() => { setWorkshopsOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] flex items-center gap-1 transition-colors ${
+                isActive('/workshops') ? 'border-b border-olive-light' : ''
+              }`}
+              style={{ color: isActive('/workshops') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
             >
-              <Link
-                to="/pro"
-                className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] flex items-center gap-1 transition-colors ${
-                  isActive('/pro') ? 'border-b border-orange-light' : ''
-                }`}
-                style={{ color: isActive('/pro') ? 'hsl(13 76% 61%)' : 'rgba(255,255,255,0.55)' }}
-              >
-                Pro & Entreprises
-                <ChevronDown size={12} className="transition-transform duration-200 group-hover:rotate-180" />
-              </Link>
+              Ateliers
+              <ChevronDown size={12} className="transition-transform duration-200 group-hover:rotate-180" />
+            </Link>
 
-              <div className={`absolute top-full left-0 mt-0 w-64 border-brutal-thin bg-cream shadow-brutal-lg overflow-hidden transition-all duration-200 ${
-                proOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-              }`} style={{ zIndex: 100 }}>
-                <div className="py-2">
-                  {proCategories.map((cat) => (
-                    <Link
-                      key={cat.id}
-                      to={`/pro#${cat.id}`}
-                      className="block px-4 py-2 text-sm font-body hover:bg-olive/10 transition-colors"
-                      style={{ color: 'hsl(0 0% 10%)' }}
-                      onClick={() => {
-                        setProOpen(false);
-                        setTimeout(() => {
-                          const el = document.getElementById(cat.id);
-                          if (el) {
-                            const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
-                            window.scrollTo({ top: pos, behavior: 'smooth' });
-                          }
-                        }, 100);
-                      }}
-                    >
-                      {cat.name}
-                    </Link>
-                  ))}
-                </div>
+            <div className={`absolute top-full left-0 mt-0 w-72 border-brutal-thin bg-cream shadow-brutal-lg overflow-hidden transition-all duration-200 max-h-[80vh] overflow-y-auto ${
+              workshopsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+            }`} style={{ zIndex: 100 }}>
+              <div className="py-2">
+                {workshopCategories.map((cat, idx) => (
+                  <div key={cat.category}>
+                    {idx > 0 && <div className="border-t border-foreground/10 my-2" />}
+                    <div className="px-4 py-1 font-mono text-[9px] uppercase tracking-[2px] font-bold" style={{ color: 'hsl(73 37% 44%)' }}>
+                      {cat.category}
+                    </div>
+                    {cat.workshops.map((w) => (
+                      <Link
+                        key={w.id}
+                        to={`/workshops?reset=true#${w.id}`}
+                        className="block px-6 py-2 text-sm font-body hover:bg-olive/10 transition-colors"
+                        style={{ color: 'hsl(0 0% 10%)' }}
+                        onClick={() => { setWorkshopsOpen(false); scrollToWorkshop(w.id); }}
+                      >
+                        {w.name}
+                      </Link>
+                    ))}
+                  </div>
+                ))}
               </div>
             </div>
+          </li>
 
-            <NavLink to="/about" active={isActive('/about')}>À propos</NavLink>
-            <NavLink to="/contact" active={isActive('/contact')}>Contact</NavLink>
+          {/* Pro dropdown */}
+          <li
+            className="relative group"
+            onMouseEnter={() => setProOpen(true)}
+            onMouseLeave={() => setProOpen(false)}
+          >
+            <Link
+              to="/pro"
+              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] flex items-center gap-1 transition-colors ${
+                isActive('/pro') ? 'border-b border-olive-light' : ''
+              }`}
+              style={{ color: isActive('/pro') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
+            >
+              Pro
+              <ChevronDown size={12} className="transition-transform duration-200 group-hover:rotate-180" />
+            </Link>
+
+            <div className={`absolute top-full left-0 mt-0 w-64 border-brutal-thin bg-cream shadow-brutal-lg overflow-hidden transition-all duration-200 ${
+              proOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+            }`} style={{ zIndex: 100 }}>
+              <div className="py-2">
+                {proCategories.map((cat) => (
+                  <Link
+                    key={cat.id}
+                    to={`/pro#${cat.id}`}
+                    className="block px-4 py-2 text-sm font-body hover:bg-olive/10 transition-colors"
+                    style={{ color: 'hsl(0 0% 10%)' }}
+                    onClick={() => {
+                      setProOpen(false);
+                      setTimeout(() => {
+                        const el = document.getElementById(cat.id);
+                        if (el) {
+                          const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                          window.scrollTo({ top: pos, behavior: 'smooth' });
+                        }
+                      }, 100);
+                    }}
+                  >
+                    {cat.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </li>
+
+          {/* Regular links */}
+          <li>
+            <Link to="/gallery"
+              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/gallery') ? 'border-b border-olive-light' : ''}`}
+              style={{ color: isActive('/gallery') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Galerie
+            </Link>
+          </li>
+          <li>
+            <Link to="/blog"
+              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/blog') ? 'border-b border-olive-light' : ''}`}
+              style={{ color: isActive('/blog') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact"
+              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/contact') ? 'border-b border-olive-light' : ''}`}
+              style={{ color: isActive('/contact') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Contact
+            </Link>
           </li>
 
           {/* CTA */}
-          <li className="ml-5">
+          <li>
             <Link
               to="/contact"
-              className="font-mono text-[10px] uppercase tracking-[2px] no-underline px-[18px] py-[7px] transition-all border hover:bg-orange hover:text-white hover:border-orange"
-              style={{ color: 'hsl(13 76% 61%)', borderColor: 'rgba(220,110,80,0.4)' }}
+              className="font-mono text-[10px] uppercase tracking-[2px] no-underline px-[18px] py-[7px] transition-all border hover:bg-olive hover:text-white hover:border-olive"
+              style={{ color: 'hsl(73 44% 67%)', borderColor: 'rgba(197,208,134,0.4)' }}
             >
               Devis gratuit
             </Link>
@@ -238,18 +250,15 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden border-t border-olive/30 px-6 py-6 space-y-6" style={{ background: 'hsl(0 0% 10%)' }}>
-          {/* ASSOCIATION BLOCK */}
-          <div className="space-y-3">
-            <div className="font-mono text-[8px] uppercase tracking-[3px] text-[hsl(73,44%,67%)]/60 border-b border-white/10 pb-2">
-              🌿 Association Botanique Ludique
-            </div>
-            <Link to="/association" onClick={() => setIsOpen(false)}
-              className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
-              style={{ color: isActive('/association') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
-              Association
-            </Link>
+        <div className="lg:hidden border-t border-olive/30 px-6 py-6 space-y-4" style={{ background: 'hsl(0 0% 10%)' }}>
+          {/* Association — highlighted */}
+          <Link to="/association" onClick={() => setIsOpen(false)}
+            className="block font-mono text-[10px] uppercase tracking-[2px] px-3 py-2 border border-white/15 transition-colors w-fit"
+            style={{ color: isActive('/association') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+            🌿 Association
+          </Link>
 
+          <div className="border-t border-white/10 pt-4 space-y-4">
             {/* Ateliers accordion */}
             <div>
               <button
@@ -284,37 +293,19 @@ const Navigation = () => {
               )}
             </div>
 
-            <Link to="/gallery" onClick={() => setIsOpen(false)}
-              className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
-              style={{ color: isActive('/gallery') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
-              Galerie
-            </Link>
-            <Link to="/blog" onClick={() => setIsOpen(false)}
-              className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
-              style={{ color: isActive('/blog') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
-              Blog
-            </Link>
-          </div>
-
-          {/* PRESTATIONS BLOCK */}
-          <div className="space-y-3">
-            <div className="font-mono text-[8px] uppercase tracking-[3px] text-[hsl(13,76%,61%)]/60 border-b border-white/10 pb-2">
-              💼 Prestations Indépendantes
-            </div>
-
             {/* Pro accordion */}
             <div>
               <button
                 onClick={() => setProOpen(!proOpen)}
                 className="flex items-center gap-1 font-mono text-[10px] uppercase tracking-[2px] w-full transition-colors"
-                style={{ color: isActive('/pro') ? 'hsl(13 76% 61%)' : 'rgba(255,255,255,0.55)' }}
+                style={{ color: isActive('/pro') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
               >
-                Pro & Entreprises
+                Pro
                 <ChevronDown size={12} className={`transition-transform ${proOpen ? 'rotate-180' : ''}`} />
               </button>
               {proOpen && (
                 <div className="ml-4 mt-2 space-y-2">
-                  <Link to="/pro" className="block text-sm font-body font-medium mb-2" style={{ color: 'hsl(13 76% 61%)' }}
+                  <Link to="/pro" className="block text-sm font-body font-medium mb-2" style={{ color: 'hsl(73 44% 67%)' }}
                     onClick={() => { setIsOpen(false); setProOpen(false); }}>
                     → Toutes nos offres pro
                   </Link>
@@ -329,20 +320,25 @@ const Navigation = () => {
               )}
             </div>
 
-            <Link to="/about" onClick={() => setIsOpen(false)}
+            <Link to="/gallery" onClick={() => setIsOpen(false)}
               className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
-              style={{ color: isActive('/about') ? 'hsl(13 76% 61%)' : 'rgba(255,255,255,0.55)' }}>
-              À propos
+              style={{ color: isActive('/gallery') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Galerie
+            </Link>
+            <Link to="/blog" onClick={() => setIsOpen(false)}
+              className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
+              style={{ color: isActive('/blog') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Blog
             </Link>
             <Link to="/contact" onClick={() => setIsOpen(false)}
               className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
-              style={{ color: isActive('/contact') ? 'hsl(13 76% 61%)' : 'rgba(255,255,255,0.55)' }}>
+              style={{ color: isActive('/contact') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
               Contact
             </Link>
 
             <Link to="/contact" onClick={() => setIsOpen(false)}
               className="inline-block font-mono text-[10px] uppercase tracking-[2px] px-[18px] py-[7px] mt-2 border transition-all"
-              style={{ color: 'hsl(13 76% 61%)', borderColor: 'rgba(220,110,80,0.4)' }}>
+              style={{ color: 'hsl(73 44% 67%)', borderColor: 'rgba(197,208,134,0.4)' }}>
               Devis gratuit
             </Link>
           </div>

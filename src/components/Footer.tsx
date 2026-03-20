@@ -50,16 +50,13 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-sm font-body leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              Association loi 1901 de médiation culturelle et scientifique autour du végétal.
-            </p>
-            <p className="text-xs font-body leading-relaxed mt-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
-              Prestations indépendantes par Vanessa Charlery, ethnobotaniste.
+              Ateliers créatifs pour reconnecter l'humain au végétal. Association loi 1901 de médiation culturelle et scientifique.
             </p>
           </div>
 
           {/* Association */}
           <div className="space-y-4">
-            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(73 44% 67%)' }}>🌿 Association</h4>
+            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(73 44% 67%)' }}>Association</h4>
             <div className="flex flex-col space-y-2">
               {[
                 { name: "L'association", path: "/association" },
@@ -77,7 +74,7 @@ const Footer = () => {
 
           {/* Prestations */}
           <div className="space-y-4">
-            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(13 76% 61%)' }}>💼 Prestations</h4>
+            <h4 className="font-mono text-[10px] uppercase tracking-[2px]" style={{ color: 'hsl(73 44% 67%)' }}>Pro & Entreprises</h4>
             <div className="flex flex-col space-y-2">
               {[
                 { name: "Pro & Entreprises", path: "/pro" },
