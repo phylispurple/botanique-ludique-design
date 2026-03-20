@@ -351,7 +351,7 @@ const Workshops = () => {
                         {/* Badges container */}
                         <div className="absolute top-3 left-3 right-3 z-10 flex flex-wrap gap-2">
                           {/* Category Badge */}
-                          <div className={`px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide border backdrop-blur-sm ${categoryColors[workshop.category].bg} ${categoryColors[workshop.category].text} ${categoryColors[workshop.category].border}`}>
+                          <div className={`px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide border shadow-md ${categoryColors[workshop.category].bg} ${categoryColors[workshop.category].text} ${categoryColors[workshop.category].border}`}>
                             {categoryLabels[workshop.category]}
                           </div>
                           
