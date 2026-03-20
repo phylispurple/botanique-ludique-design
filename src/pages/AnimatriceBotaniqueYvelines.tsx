@@ -39,7 +39,7 @@ const AnimatriceBotaniqueYvelines = () => {
       <SchemaOrg type="Service" data={{
         serviceType: "Animation botanique",
         name: "Animatrice Botanique Yvelines (78)",
-        description: "Animations botaniques et ateliers nature dans les Yvelines par une ethnobotaniste diplômée de l'EHESS."
+        description: "Animations botaniques et ateliers nature dans les Yvelines par une animatrice ethnobotaniste formée à l'EHESS."
       }} />
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
@@ -54,7 +54,7 @@ const AnimatriceBotaniqueYvelines = () => {
                 Animatrice Botanique dans les Yvelines (78)
               </h1>
               <p className="subtitle-italic text-lg mb-6">
-                Ethnobotaniste · Ateliers nature pour tous · De Saint-Germain à Versailles
+                Animatrice ethnobotaniste · Ateliers nature pour tous · De Saint-Germain à Versailles
               </p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
                 Botanique Ludique propose des <strong>animations botaniques</strong> dans tout le département des Yvelines. 
@@ -125,7 +125,7 @@ const AnimatriceBotaniqueYvelines = () => {
                 </h2>
                 <ul className="space-y-3">
                   {[
-                    "Ethnobotaniste diplômée de l'EHESS",
+                    "Formée à l'EHESS en ethnobotanique",
                     "Ateliers adaptés à chaque public et chaque âge",
                     "Déplacement dans tout le 78 avec matériel fourni",
                     "Approche mêlant science, culture et créativité",

@@ -287,7 +287,7 @@ const AtelierBotaniqueVersailles = () => {
                     <Leaf className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">Expertise EHESS</h3>
-                  <p className="text-sm text-charcoal/70">Fondatrice ethnobotaniste diplômée de l'École des Hautes Études</p>
+                  <p className="text-sm text-charcoal/70">Fondatrice, animatrice ethnobotaniste formée de l'École des Hautes Études</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">

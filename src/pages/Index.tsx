@@ -58,7 +58,7 @@ const Index = () => {
       <SchemaOrg
         type="LocalBusiness"
         data={{
-          founder: { "@type": "Person", name: "Vanessa Charlery", jobTitle: "Ethnobotaniste et Artiste Photographe" },
+          founder: { "@type": "Person", name: "Vanessa Charlery", jobTitle: "Animatrice ethnobotaniste et Artiste Photographe" },
           makesOffer: [
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ateliers Kokedama", description: "Art japonais du jardinage en boule de mousse" } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Teinture Végétale", description: "Techniques de teinture naturelle avec des plantes" } },
@@ -138,10 +138,10 @@ const Index = () => {
                 Vanessa<br />Charlery
               </h2>
               <p className="font-display text-[15px] uppercase tracking-[2px] text-[hsl(var(--olive))] mb-6">
-                Ethnobotaniste & Anthropologue
+                Animatrice ethnobotaniste · Formée à l'EHESS
               </p>
               <p className="text-base leading-[1.8] text-[hsl(var(--black))]/70 mb-4 text-justify">
-                Créée par <strong className="text-[hsl(var(--black))]">Vanessa Charlery</strong>, ethnobotaniste et anthropologue,
+                Créée par <strong className="text-[hsl(var(--black))]">Vanessa Charlery</strong>, animatrice ethnobotaniste formée à l'EHESS,
                 l'association Botanique Ludique propose des ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95)
                 qui allient créativité artistique et transmission des savoirs ethnobotaniques.
               </p>
@@ -152,7 +152,7 @@ const Index = () => {
                 de l'Asie à l'Europe.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {["Kokedama", "Teinture végétale", "Vannerie", "Terrarium", "Ethnobotanique", "Anthropologie"].map(tag => (
+                {["Kokedama", "Teinture végétale", "Vannerie", "Terrarium", "Ethnobotanique"].map(tag => (
                   <span
                     key={tag}
                     className="font-mono-brand text-[10px] uppercase tracking-[1.5px] px-3.5 py-1.5 border-brutal-thin rounded-full hover:bg-[hsl(var(--black))] hover:text-[hsl(var(--cream))] transition-colors cursor-default"

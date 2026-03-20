@@ -9,9 +9,9 @@ const About = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="Vanessa Charlery, Ethnobotaniste EHESS | À Propos ✦ Ma Démarche"
-        description="🌿 Découvrez Vanessa Charlery, ethnobotaniste diplômée EHESS. Reconnecter l'humain au végétal par des ateliers créatifs uniques. Approche anthropologique et sensorielle."
-        keywords="Vanessa Charlery, ethnobotaniste, anthropologie botanique, EHESS, photographe botanique, éducation environnement, ethnobotanique, philosophie nature, reconnexion vivant"
+        title="Vanessa Charlery, Animatrice Ethnobotaniste | À Propos ✦ Ma Démarche"
+        description="🌿 Découvrez Vanessa Charlery, animatrice ethnobotaniste formée à l'EHESS. Reconnecter l'humain au végétal par des ateliers créatifs uniques. Approche anthropologique et sensorielle."
+        keywords="Vanessa Charlery, animatrice ethnobotaniste, EHESS, photographe botanique, éducation environnement, ethnobotanique, philosophie nature, reconnexion vivant"
         canonical="/about"
       />
       <FloatingIllustrations />
@@ -30,7 +30,7 @@ const About = () => {
             <div className="max-w-4xl mx-auto mb-20">
               <div className="bg-sand rounded-lg p-8 md:p-12 animate-fade-in mb-12">
                 <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Botanique Ludique a été fondée en 2022 par Vanessa Charlery, ethnobotaniste diplômée de l'EHESS. Ma mission : rendre la botanique accessible, ludique et enrichissante pour tous, en transmettant des savoirs ancestraux avec une approche contemporaine. Selon les projets et les besoins, je collabore avec un réseau d'artisans, d'artistes et de professionnels de la nature pour enrichir les expériences proposées.
+                  Botanique Ludique a été fondée en 2022 par Vanessa Charlery, animatrice ethnobotaniste formée à l'EHESS. Ma mission : rendre la botanique accessible, ludique et enrichissante pour tous, en transmettant des savoirs ancestraux avec une approche contemporaine. Selon les projets et les besoins, je collabore avec un réseau d'artisans, d'artistes et de professionnels de la nature pour enrichir les expériences proposées.
                 </p>
               </div>
 
@@ -40,7 +40,7 @@ const About = () => {
                   <img
                     src={aboutImage}
                     loading="lazy"
-                    alt="Vanessa Charlery, ethnobotaniste et fondatrice de Botanique Ludique"
+                    alt="Vanessa Charlery, animatrice ethnobotaniste et fondatrice de Botanique Ludique"
                     className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-lg relative z-10"
                   />
                 </div>
@@ -51,7 +51,7 @@ const About = () => {
                   Vanessa Charlery
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Vanessa Charlery a étudié à l'EHESS en anthropologie avec une spécialisation en ethnobotanique. Elle a également obtenu une licence en sociologie de l'Université Toulouse 2.
+                  Vanessa Charlery a étudié l'anthropologie à l'EHESS avec une spécialisation en ethnobotanique, où elle a obtenu son Master 1. Elle a également obtenu une licence en sociologie de l'Université Toulouse 2.
                 </p>
                 <p className="text-lg text-charcoal/80 leading-relaxed">
                   Sa recherche, menée sous la direction de Florence Brunois-Pasina à l'EHESS, se concentre sur les interactions entre les citadins et les plantes dans les espaces verts urbains du Grand Paris, explorant les liens entre nature et culture. Vanessa a également suivi des cours sur la "Nature en ville" dispensés par Michel Auduy de l'ENSP.

@@ -68,7 +68,7 @@ const AtelierBotaniqueAdulteIDF = () => {
                     des kokedamas ? Comment les sociétés traditionnelles utilisaient-elles la vannerie ?
                   </p>
                   <p className="text-charcoal/80 leading-relaxed">
-                    Cette dimension culturelle et scientifique, portée par une <strong>ethnobotaniste diplômée de l'EHESS</strong>,
+                    Cette dimension culturelle et scientifique, portée par une <strong>animatrice ethnobotaniste formée à l'EHESS</strong>,
                     transforme chaque atelier en une expérience riche et mémorable.
                   </p>
                 </div>

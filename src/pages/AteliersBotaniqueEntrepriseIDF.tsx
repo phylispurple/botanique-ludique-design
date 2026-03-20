@@ -72,7 +72,7 @@ const AteliersBotaniqueEntrepriseIDF = () => {
   const advantages = [
     "Intervention dans vos locaux ou lieu de votre choix",
     "Tout le matériel fourni et installé",
-    "Animation par ethnobotaniste diplômée EHESS",
+    "Animation par animatrice ethnobotaniste formée à l'EHESS",
     "Ateliers adaptés à tous les niveaux",
     "Devis sur-mesure sous 48h",
     "Facturation entreprise simplifiée",

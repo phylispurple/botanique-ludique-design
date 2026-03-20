@@ -39,7 +39,7 @@ const AteliersBotaniquesYvelines = () => {
   const benefits = [
     "Ateliers en petits groupes (8-12 personnes)",
     "Matériel fourni et produits naturels",
-    "Encadrement par une ethnobotaniste diplômée",
+    "Encadrement par une animatrice ethnobotaniste formée à l'EHESS",
     "Accessible en transports (RER A, Transilien L)",
     "Parking disponible sur place",
     "Ateliers adaptés à tous les niveaux"

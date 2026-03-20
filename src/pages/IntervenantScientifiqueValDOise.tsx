@@ -40,7 +40,7 @@ const IntervenantScientifiqueValDOise = () => {
               <h1 className="page-title text-[2.2rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
                 Intervenant Scientifique dans le Val-d'Oise (95)
               </h1>
-              <p className="subtitle-italic text-lg mb-6">Ethnobotaniste · Interventions scientifiques · Cergy, Pontoise, Argenteuil</p>
+              <p className="subtitle-italic text-lg mb-6">Animatrice ethnobotaniste · Interventions scientifiques · Cergy, Pontoise, Argenteuil</p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
                 Le Val-d'Oise, entre <strong>plaines agricoles et forêts</strong>, offre un cadre idéal pour des interventions scientifiques
                 autour du végétal. Notre ethnobotaniste propose des ateliers qui mêlent <strong>science, histoire et créativité</strong>.
@@ -93,7 +93,7 @@ const IntervenantScientifiqueValDOise = () => {
             <div className="bg-sand rounded-lg p-8 mb-16">
               <h2 className="text-2xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Pourquoi nous choisir ?</h2>
               <div className="grid sm:grid-cols-2 gap-3">
-                {["Ethnobotaniste diplômée EHESS", "Interventions dans tout le 95", "Matériel fourni", "Approche scientifique unique", "Tous publics, tous âges", "Devis gratuit sous 24h"].map((b, i) => (
+                {["Animatrice ethnobotaniste formée à l'EHESS", "Interventions dans tout le 95", "Matériel fourni", "Approche scientifique unique", "Tous publics, tous âges", "Devis gratuit sous 24h"].map((b, i) => (
                   <div key={i} className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" />
                     <span className="text-charcoal/80 text-sm">{b}</span>
