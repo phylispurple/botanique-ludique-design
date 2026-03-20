@@ -16,22 +16,22 @@ const colorMap: Record<string, string> = {
 
 const Marquee = ({ items, color = 'green', speed = 30, separator = '✦' }: MarqueeProps) => {
   const bgClass = colorMap[color] || colorMap.green;
-  
+
   const content = items.map((item, i) => (
-    <span key={i} className="inline-flex items-center gap-8 px-8">
-      <span className="font-display text-2xl md:text-[32px] uppercase tracking-[3px]">
+    <span key={i} className="inline-flex items-center gap-4 md:gap-8 px-4 md:px-8">
+      <span className="font-display text-base sm:text-xl md:text-[32px] uppercase tracking-[2px] md:tracking-[3px]">
         {item}
       </span>
-      <span className="text-xl opacity-70">{separator}</span>
+      <span className="text-sm md:text-xl opacity-70">{separator}</span>
     </span>
   ));
 
   return (
-    <div 
-      className={`${bgClass} text-[hsl(var(--cream))] py-5 overflow-hidden whitespace-nowrap select-none`}
+    <div
+      className={`${bgClass} text-[hsl(var(--cream))] py-3 md:py-5 overflow-hidden whitespace-nowrap select-none`}
       aria-hidden="true"
     >
-      <div 
+      <div
         className="inline-block animate-marquee"
         style={{ animationDuration: `${speed}s` }}
       >

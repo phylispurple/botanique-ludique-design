@@ -1,20 +1,47 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 
 const CustomCursor = () => {
   const dotRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
-  const [isHovering, setIsHovering] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const mousePos = useRef({ x: 0, y: 0 });
-  const ringPos = useRef({ x: 0, y: 0 });
+  const mousePos = useRef({ x: -100, y: -100 });
+  const ringPos = useRef({ x: -100, y: -100 });
+  const isHovering = useRef(false);
+
+  const updateCursorStyle = useCallback((hovering: boolean) => {
+    isHovering.current = hovering;
+    if (dotRef.current) {
+      dotRef.current.style.width = hovering ? '4px' : '8px';
+      dotRef.current.style.height = hovering ? '4px' : '8px';
+      dotRef.current.style.background = hovering ? 'hsl(287, 33%, 36%)' : 'hsl(0, 0%, 10%)';
+    }
+    if (ringRef.current) {
+      ringRef.current.style.width = hovering ? '60px' : '40px';
+      ringRef.current.style.height = hovering ? '60px' : '40px';
+      ringRef.current.style.borderColor = hovering ? 'hsl(287, 33%, 36%)' : 'hsl(0, 0%, 10%)';
+      ringRef.current.style.background = hovering ? 'hsla(287, 33%, 36%, 0.1)' : 'transparent';
+    }
+  }, []);
 
   useEffect(() => {
-    // Only on desktop
-    if (window.innerWidth <= 1300) return;
-    if ('ontouchstart' in window) return;
+    // Only on desktop with pointer
+    const mq = window.matchMedia('(min-width: 1301px) and (pointer: fine)');
+    if (!mq.matches) return;
 
-    setIsVisible(true);
-    document.body.style.cursor = 'none';
+    // Hide native cursor globally
+    const style = document.createElement('style');
+    style.id = 'custom-cursor-style';
+    style.textContent = `
+      @media (min-width: 1301px) and (pointer: fine) {
+        * { cursor: none !important; }
+        a, button, [role="button"], label, select { cursor: none !important; }
+        input[type="text"], input[type="email"], textarea { cursor: none !important; }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Show cursor elements
+    if (dotRef.current) dotRef.current.style.opacity = '1';
+    if (ringRef.current) ringRef.current.style.opacity = '1';
 
     const onMouseMove = (e: MouseEvent) => {
       mousePos.current = { x: e.clientX, y: e.clientY };
@@ -38,57 +65,74 @@ const CustomCursor = () => {
 
     document.addEventListener('mousemove', onMouseMove);
 
-    const onOver = () => setIsHovering(true);
-    const onOut = () => setIsHovering(false);
+    const onOver = () => updateCursorStyle(true);
+    const onOut = () => updateCursorStyle(false);
+
+    const selector = 'a, button, [role="button"], input, select, textarea, .card-brutal, .btn-brutal';
 
     const addHoverListeners = () => {
-      const targets = document.querySelectorAll('a, button, [role="button"], input, select, textarea, .card-brutal');
-      targets.forEach(el => {
+      document.querySelectorAll(selector).forEach(el => {
         el.addEventListener('mouseenter', onOver);
         el.addEventListener('mouseleave', onOut);
       });
-      return targets;
     };
 
-    const targets = addHoverListeners();
+    addHoverListeners();
     const observer = new MutationObserver(() => addHoverListeners());
     observer.observe(document.body, { childList: true, subtree: true });
 
+    // Hide cursor when it leaves the window
+    const onLeave = () => {
+      if (dotRef.current) dotRef.current.style.opacity = '0';
+      if (ringRef.current) ringRef.current.style.opacity = '0';
+    };
+    const onEnter = () => {
+      if (dotRef.current) dotRef.current.style.opacity = '1';
+      if (ringRef.current) ringRef.current.style.opacity = '1';
+    };
+    document.addEventListener('mouseleave', onLeave);
+    document.addEventListener('mouseenter', onEnter);
+
     return () => {
       document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseleave', onLeave);
+      document.removeEventListener('mouseenter', onEnter);
       cancelAnimationFrame(rafId);
       observer.disconnect();
-      targets.forEach(el => {
-        el.removeEventListener('mouseenter', onOver);
-        el.removeEventListener('mouseleave', onOut);
-      });
-      document.body.style.cursor = '';
+      const el = document.getElementById('custom-cursor-style');
+      if (el) el.remove();
     };
-  }, []);
-
-  if (!isVisible) return null;
+  }, [updateCursorStyle]);
 
   return (
     <>
       <div
         ref={dotRef}
-        className="fixed pointer-events-none z-[99999] -translate-x-1/2 -translate-y-1/2 rounded-full"
+        className="fixed pointer-events-none z-[99999] rounded-full"
         style={{
-          width: isHovering ? 4 : 8,
-          height: isHovering ? 4 : 8,
-          background: isHovering ? 'hsl(var(--purple))' : 'hsl(var(--black))',
-          transition: 'width 0.15s, height 0.15s, background 0.15s',
+          width: 8,
+          height: 8,
+          background: 'hsl(0, 0%, 10%)',
+          transform: 'translate(-50%, -50%)',
+          transition: 'width 0.15s, height 0.15s, background 0.15s, opacity 0.2s',
+          opacity: 0,
+          left: -100,
+          top: -100,
         }}
       />
       <div
         ref={ringRef}
-        className="fixed pointer-events-none z-[99998] -translate-x-1/2 -translate-y-1/2 rounded-full"
+        className="fixed pointer-events-none z-[99998] rounded-full"
         style={{
-          width: isHovering ? 60 : 40,
-          height: isHovering ? 60 : 40,
-          border: `2px solid ${isHovering ? 'hsl(var(--purple))' : 'hsl(var(--black))'}`,
-          background: isHovering ? 'hsla(287, 33%, 36%, 0.1)' : 'transparent',
-          transition: 'width 0.25s ease-out, height 0.25s ease-out, border-color 0.25s, background 0.2s',
+          width: 40,
+          height: 40,
+          border: '2px solid hsl(0, 0%, 10%)',
+          background: 'transparent',
+          transform: 'translate(-50%, -50%)',
+          transition: 'width 0.25s ease-out, height 0.25s ease-out, border-color 0.25s, background 0.2s, opacity 0.2s',
+          opacity: 0,
+          left: -100,
+          top: -100,
         }}
       />
     </>

@@ -220,7 +220,8 @@ const Index = () => {
             </h2>
           </AnimatedSection>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+          {/* Horizontal scroll on mobile, grid on desktop */}
+          <div className="flex md:grid md:grid-cols-3 gap-3 md:gap-4 mb-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
             {[
               { src: galleryTerrarium, alt: "Atelier terrarium botanique" },
               { src: galleryTeinture, alt: "Atelier teinture végétale" },
@@ -230,7 +231,7 @@ const Index = () => {
               { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" },
             ].map((image, index) => (
               <AnimatedSection key={index} delay={index * 80}>
-                <div className="aspect-square overflow-hidden border-brutal card-brutal">
+                <div className="flex-shrink-0 w-[70vw] sm:w-[45vw] md:w-auto snap-center aspect-square overflow-hidden border-brutal card-brutal">
                   <img
                     src={image.src}
                     alt={image.alt}
