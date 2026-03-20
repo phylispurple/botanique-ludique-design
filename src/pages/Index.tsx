@@ -161,12 +161,6 @@ const Index = () => {
                   </span>
                 ))}
               </div>
-              <button
-                onClick={handleDownloadBrochure}
-                className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3"
-              >
-                Télécharger la plaquette →
-              </button>
             </div>
           </AnimatedSection>
 
