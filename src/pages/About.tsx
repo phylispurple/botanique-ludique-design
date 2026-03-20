@@ -1,152 +1,293 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
-import { Leaf, Sprout, Sparkles } from "lucide-react";
+import AnimatedSection from "@/components/AnimatedSection";
+import { Link } from "react-router-dom";
+import { Heart, Globe, Users, Sprout, Camera, BookOpen, ArrowRight } from "lucide-react";
 import aboutImage from "@/assets/portrait-vanessa.webp";
 
 const About = () => {
+  const timeline = [
+    {
+      year: "2014",
+      title: "Photographe botanique",
+      description: "Début de l'aventure artistique. Le végétal devient sujet, médium et obsession photographique.",
+      icon: Camera,
+    },
+    {
+      year: "2016",
+      title: "Kosovo · Gaia Kosovo",
+      description: "Service Volontaire Européen. Permaculture, écoconstruction, autonomie. Certification Youthpath.",
+      icon: Globe,
+      link: { url: "https://www.gaiakosovo.org", label: "gaiakosovo.org" },
+    },
+    {
+      year: "2018",
+      title: "Japon · Techniques ancestrales",
+      description: "Apprentissage du jardinage japonais et de l'aquaponie. Découverte du kokedama et des arts botaniques nippons.",
+      icon: Sprout,
+    },
+    {
+      year: "2019",
+      title: "EHESS · Anthropologie & Ethnobotanique",
+      description: "Master 1 sous la direction de Florence Brunois-Pasina. Recherche sur les interactions citadins-plantes dans le Grand Paris.",
+      icon: BookOpen,
+    },
+    {
+      year: "2022",
+      title: "Botanique Ludique",
+      description: "Création de l'association. Premiers ateliers à Paris et en Île-de-France. Le projet prend racine.",
+      icon: Heart,
+    },
+    {
+      year: "Auj.",
+      title: "+400 participants · 50+ ateliers",
+      description: "Entreprises, EHPAD, écoles, centres sociaux, particuliers. Les ateliers se déploient dans les départements 75, 78, 92 et 95.",
+      icon: Users,
+    },
+  ];
+
+  const values = [
+    {
+      title: "Transmission",
+      text: "Chaque atelier porte en lui une histoire. Je ne transmets pas une technique vide de sens — je partage le contexte culturel, l'origine, le pourquoi derrière chaque geste.",
+      accent: "hsl(var(--olive))",
+    },
+    {
+      title: "Accessibilité",
+      text: "Du senior en EHPAD à l'enfant de 4 ans, de l'entreprise au centre social. La botanique n'a pas de public cible, elle est pour tout le monde.",
+      accent: "hsl(var(--orange))",
+    },
+    {
+      title: "Reconnexion au vivant",
+      text: "Nous avons perdu les gestes et les mots qui nous reliaient aux plantes. Mes ateliers sont une invitation à réactiver cette sensibilité, à toucher la mousse, sentir la garance, observer une feuille.",
+      accent: "hsl(var(--green))",
+    },
+    {
+      title: "Éthique & sens",
+      text: "Ce n'est pas du folklore. Comprendre que la teinture végétale était un acte sacré, que le tressage accompagnait les rites de passage — c'est ça qui donne sa profondeur à l'expérience.",
+      accent: "hsl(var(--blue))",
+    },
+  ];
+
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO 
         title="Vanessa Charlery, Animatrice Ethnobotaniste | À Propos ✦ Ma Démarche"
         description="🌿 Découvrez Vanessa Charlery, animatrice ethnobotaniste formée à l'EHESS. Reconnecter l'humain au végétal par des ateliers créatifs uniques. Approche anthropologique et sensorielle."
         keywords="Vanessa Charlery, animatrice ethnobotaniste, EHESS, photographe botanique, éducation environnement, ethnobotanique, philosophie nature, reconnexion vivant"
         canonical="/about"
       />
-      <FloatingIllustrations />
       <Navigation />
 
-      <main className="pt-40 pb-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6 text-center">
-              À Propos de Botanique Ludique
-            </h1>
-            <p className="subtitle-italic text-lg text-center mb-16">
-              Reconnecter l'humain au végétal par la création et le savoir
-            </p>
-
-            <div className="max-w-4xl mx-auto mb-20">
-              <div className="bg-sand rounded-lg p-8 md:p-12 animate-fade-in mb-12">
-                <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Botanique Ludique a été fondée en 2022 par Vanessa Charlery, animatrice ethnobotaniste formée à l'EHESS. Ma mission : rendre la botanique accessible, ludique et enrichissante pour tous, en transmettant des savoirs ancestraux avec une approche contemporaine. Selon les projets et les besoins, je collabore avec un réseau d'artisans, d'artistes et de professionnels de la nature pour enrichir les expériences proposées.
-                </p>
-              </div>
-
-              <div className="flex justify-center mb-12">
-                <div className="relative">
-                  <div className="absolute inset-0 rounded-full" style={{ border: '3px solid #C9D2B5', transform: 'translate(4px, 4px)' }}></div>
+      {/* ===== HERO ===== */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection>
+            <div className="grid md:grid-cols-[280px_1fr] gap-12 items-start">
+              {/* Portrait */}
+              <div className="flex flex-col items-center md:items-start">
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 border-brutal translate-x-2 translate-y-2" />
                   <img
                     src={aboutImage}
                     loading="lazy"
                     alt="Vanessa Charlery, animatrice ethnobotaniste et fondatrice de Botanique Ludique"
-                    className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-lg relative z-10"
+                    className="w-56 h-56 md:w-64 md:h-64 object-cover border-brutal relative z-10"
                   />
                 </div>
+                <span className="font-mono text-[9px] uppercase tracking-[2px] text-[hsl(var(--olive))]">
+                  Fondatrice · Animatrice ethnobotaniste
+                </span>
               </div>
 
-              <div className="space-y-6 animate-fade-in">
-                <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Vanessa Charlery
-                </h2>
-                <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Vanessa Charlery a étudié l'anthropologie à l'EHESS avec une spécialisation en ethnobotanique, où elle a obtenu son Master 1. Elle a également obtenu une licence en sociologie de l'Université Toulouse 2.
+              {/* Intro text */}
+              <div>
+                <h1 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] uppercase leading-[0.9] tracking-[-2px] mb-6 text-[hsl(var(--black))]">
+                  Vanessa<br />Charlery
+                </h1>
+                <p className="text-lg leading-[1.8] text-[hsl(var(--black))]/70 mb-4 max-w-xl">
+                  Formée en anthropologie à l'EHESS avec une spécialisation en ethnobotanique, 
+                  artiste photographe depuis 2014, j'ai créé Botanique Ludique pour transmettre 
+                  autrement les savoirs qui lient l'humain au végétal.
                 </p>
-                <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Sa recherche, menée sous la direction de Florence Brunois-Pasina à l'EHESS, se concentre sur les interactions entre les citadins et les plantes dans les espaces verts urbains du Grand Paris, explorant les liens entre nature et culture. Vanessa a également suivi des cours sur la "Nature en ville" dispensés par Michel Auduy de l'ENSP.
-                </p>
-                <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Artiste photographe depuis 2014, elle documente à travers son objectif la beauté et la complexité des relations entre l'humain et le végétal, créant des ponts entre science, art et éducation.
-                </p>
-                <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Elle a voyagé pour découvrir diverses pratiques botaniques. Au Japon, elle a appris des techniques de jardinage et d'aquaponie. Au Kosovo, dans le cadre d'un Service Volontaire Européen avec l'association{' '}
-                  <a 
-                    href="https://www.gaiakosovo.org" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-sage hover:text-sage-dark underline transition-colors"
-                  >
-                    Gaia Kosovo
-                  </a>, elle a participé à des projets d'autonomie, de permaculture et d'écoconstruction, obtenant une certification Youthpath en permaculture et écoconstruction.
+                <p className="text-lg leading-[1.8] text-[hsl(var(--black))]/70 max-w-xl">
+                  Ma recherche, menée sous la direction de Florence Brunois-Pasina, explore 
+                  les interactions entre les citadins et les plantes dans les espaces verts urbains 
+                  du Grand Paris — comment nous percevons, nommons et interagissons avec le monde végétal.
                 </p>
               </div>
             </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
-            {/* Philosophy Section */}
-            <div className="max-w-4xl mx-auto mb-20">
-              <div className="mb-12">
-                <h2 className="text-3xl md:text-4xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Ma Démarche
-                </h2>
-                <p className="subtitle-italic text-lg text-center mb-12">
-                  Une approche anthropologique du végétal
-                </p>
-              </div>
+      {/* ===== TIMELINE ===== */}
+      <section className="py-20 px-6 bg-[hsl(var(--cream-dark))] border-y-[3px] border-[hsl(var(--black))]">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection className="text-center mb-16">
+            <span className="font-mono text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))]">Parcours</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mt-2">
+              De Toulouse au Grand Paris
+            </h2>
+          </AnimatedSection>
 
-              <div className="bg-sand rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
-                <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
-                  Ce que je propose n'est pas du folklore. Ce n'est pas une activité vide de sens où l'on fabrique un objet joli pour l'oublier le lendemain. <strong>C'est une invitation à comprendre d'où viennent ces pratiques</strong>, à saisir leur profondeur historique et culturelle, et à travers cette compréhension, à développer notre propre sensibilité au vivant.
-                </p>
-                <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Ma formation en anthropologie à l'EHESS, sous la direction de Florence Brunois-Pasina, m'a appris que chaque geste technique porte en lui une vision du monde. Créer un kokedama, teindre un tissu avec des plantes, tresser de l'osier, ces pratiques ancestrales racontent des histoires de cohabitation entre humains et végétaux.
-                </p>
-              </div>
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[3px] bg-[hsl(var(--black))]/10 -translate-x-1/2" />
 
-              <div className="mb-16 animate-fade-in">
-                <Leaf size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
-                <h3 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Une dimension anthropologique
-                </h3>
-                <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-6">
-                  Dans mes recherches sur les interactions entre citadins et végétaux dans le Grand Paris, j'ai exploré comment les urbains perçoivent, nomment et interagissent avec les plantes qui les entourent. Ce qui m'a frappée, c'est à quel point nous avons perdu le vocabulaire, les gestes et les savoirs qui reliaient autrefois l'humain au monde végétal.
-                </p>
-                <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
-                  Mes ateliers sont une tentative de <em>réactiver ces savoirs</em>. Non pas pour reproduire le passé de manière nostalgique, mais pour comprendre ce que ces pratiques révèlent de notre rapport au monde, et ce qu'elles peuvent nous apprendre aujourd'hui.
-                </p>
-                <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
-              </div>
+            {timeline.map((item, i) => {
+              const IconComponent = item.icon;
+              const isLeft = i % 2 === 0;
+              return (
+                <AnimatedSection
+                  key={i}
+                  delay={i * 100}
+                  direction={isLeft ? "left" : "right"}
+                  className={`relative flex items-start mb-12 last:mb-0 ${
+                    isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
+                >
+                  {/* Dot on timeline */}
+                  <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-12 h-12 border-brutal bg-[hsl(var(--cream))] flex items-center justify-center z-10">
+                    <IconComponent className="w-5 h-5 text-[hsl(var(--olive))]" />
+                  </div>
 
-              <div className="mb-16 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <Sprout size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
-                <h3 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Comprendre pour ressentir
-                </h3>
-                <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-6">
-                  L'ethnobotanique nous enseigne que les plantes ne sont jamais de simples ressources. Dans de nombreuses cultures, elles sont des partenaires, des enseignantes, des êtres avec lesquels on dialogue. Cette vision, que Philippe Descola appelle le "naturalisme" occidental, n'est qu'une cosmologie parmi d'autres.
-                </p>
-                <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
-                  Quand on comprend que la teinture végétale était un acte sacré dans certaines sociétés, que le tressage de l'osier accompagnait les rites de passage, ou que le jardin japonais incarne une philosophie du vide et de l'impermanence, alors le geste créatif prend une tout autre dimension. <strong>On ne fait plus "juste" un atelier : on s'inscrit dans une lignée de pratiques millénaires.</strong>
-                </p>
-                <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
-              </div>
-
-              <div className="mb-16 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                <Sparkles size={36} className="mx-auto mb-4" style={{ color: '#A7B795' }} />
-                <h3 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                  Développer sa sensibilité
-                </h3>
-                <p className="text-lg text-charcoal/80 leading-relaxed text-center mb-8">
-                  Ce qui m'intéresse, c'est ce qui se passe <em>pendant</em> l'atelier : le moment où les mains touchent la mousse, où l'on sent l'odeur de la garance qui chauffe, où l'on observe les nervures d'une feuille avec un regard neuf. Ces moments de présence et d'attention au vivant sont précieux car ils nous sortent de notre rapport utilitariste au monde. C'est là que quelque chose se transforme.
-                </p>
-                <div className="h-px bg-earth/30 max-w-xs mx-auto"></div>
-              </div>
-
-              <div className="bg-sand rounded-lg p-8 md:p-12 mb-16">
-                <blockquote className="text-center">
-                  <p className="text-2xl md:text-3xl italic text-charcoal mb-6">
-                    "Je ne cherche pas à divertir, mais à éveiller, à créer des espaces où l'on peut réapprendre à regarder, à toucher, à s'émerveiller."
-                  </p>
-                  <footer className="text-sm text-charcoal/70 uppercase tracking-wider font-semibold">
-                    Vanessa Charlery
-                  </footer>
-                </blockquote>
-              </div>
-
-            </div>
+                  {/* Content card */}
+                  <div className={`ml-20 md:ml-0 md:w-[calc(50%-40px)] ${isLeft ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
+                    <span className="font-display text-2xl text-[hsl(var(--olive))]">{item.year}</span>
+                    <h3 className="font-display text-base uppercase tracking-[-0.5px] mt-1 mb-2 text-[hsl(var(--black))]">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-[hsl(var(--black))]/60">
+                      {item.description}
+                    </p>
+                    {item.link && (
+                      <a
+                        href={item.link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-2 font-mono text-[9px] uppercase tracking-[2px] text-[hsl(var(--olive))] hover:text-[hsl(var(--black))] transition-colors underline"
+                      >
+                        {item.link.label}
+                      </a>
+                    )}
+                  </div>
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
-      </main>
+      </section>
+
+      {/* ===== VALEURS ===== */}
+      <section className="py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection className="text-center mb-16">
+            <span className="font-mono text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))]">Ce en quoi je crois</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mt-2">
+              Mes Valeurs
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 gap-0">
+            {values.map((value, i) => (
+              <AnimatedSection key={i} delay={i * 100}>
+                <div className="p-10 border-brutal -mt-[3px] -ml-[3px] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300 h-full">
+                  <div
+                    className="w-1 h-8 mb-4"
+                    style={{ backgroundColor: value.accent }}
+                  />
+                  <h3 className="font-display text-lg uppercase tracking-[-0.5px] mb-3 text-[hsl(var(--black))]">
+                    {value.title}
+                  </h3>
+                  <p className="text-sm leading-[1.8] text-[hsl(var(--black))]/60">
+                    {value.text}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== MA DÉMARCHE ===== */}
+      <section className="py-20 px-6 bg-[hsl(var(--black))] text-[hsl(var(--cream))]">
+        <div className="max-w-3xl mx-auto">
+          <AnimatedSection className="text-center mb-12">
+            <span className="font-mono text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive-light))]">Philosophie</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mt-2 text-[hsl(var(--cream))]">
+              Ma Démarche
+            </h2>
+          </AnimatedSection>
+
+          <AnimatedSection delay={100}>
+            <p className="text-lg leading-[1.9] text-[hsl(var(--cream))]/80 mb-8">
+              Ce que je propose n'est pas du folklore. Ce n'est pas une activité vide de sens 
+              où l'on fabrique un objet joli pour l'oublier le lendemain. <strong className="text-[hsl(var(--cream))]">C'est une 
+              invitation à comprendre d'où viennent ces pratiques</strong>, à saisir leur profondeur 
+              historique et culturelle, et à travers cette compréhension, à développer notre 
+              propre sensibilité au vivant.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={200}>
+            <p className="text-lg leading-[1.9] text-[hsl(var(--cream))]/80 mb-8">
+              Quand on comprend que la teinture végétale était un acte sacré dans certaines sociétés, 
+              que le tressage de l'osier accompagnait les rites de passage, ou que le jardin japonais 
+              incarne une philosophie du vide et de l'impermanence, alors le geste créatif prend une 
+              tout autre dimension. <strong className="text-[hsl(var(--cream))]">On ne fait plus "juste" un atelier : 
+              on s'inscrit dans une lignée de pratiques millénaires.</strong>
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={300}>
+            <p className="text-lg leading-[1.9] text-[hsl(var(--cream))]/80 mb-12">
+              Ce qui m'intéresse, c'est ce qui se passe <em>pendant</em> l'atelier : le moment où 
+              les mains touchent la mousse, où l'on sent l'odeur de la garance qui chauffe, où l'on 
+              observe les nervures d'une feuille avec un regard neuf. Ces moments de présence et 
+              d'attention au vivant sont précieux — ils nous sortent de notre rapport utilitariste 
+              au monde. C'est là que quelque chose se transforme.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={400}>
+            <blockquote className="border-l-[3px] border-[hsl(var(--olive-light))] pl-8 py-4">
+              <p className="font-editorial text-2xl md:text-3xl italic text-[hsl(var(--cream))] leading-[1.3] mb-4">
+                "Je ne cherche pas à divertir, mais à éveiller."
+              </p>
+              <footer className="font-mono text-[10px] uppercase tracking-[2px] text-[hsl(var(--olive-light))]">
+                Vanessa Charlery
+              </footer>
+            </blockquote>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ===== CTA ===== */}
+      <section className="py-16 px-6 border-t-[3px] border-[hsl(var(--black))]">
+        <div className="max-w-3xl mx-auto text-center">
+          <AnimatedSection>
+            <h2 className="font-display text-2xl md:text-3xl uppercase tracking-[-1px] mb-6">
+              Envie de participer ?
+            </h2>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link
+                to="/workshops"
+                className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3 inline-flex items-center gap-2"
+              >
+                Voir les ateliers <ArrowRight size={14} />
+              </Link>
+              <Link
+                to="/association"
+                className="btn-brutal bg-transparent text-[hsl(var(--black))] border-[hsl(var(--black))] hover:bg-[hsl(var(--black))] hover:text-[hsl(var(--cream))] text-xs px-7 py-3 inline-flex items-center gap-2"
+              >
+                L'association <ArrowRight size={14} />
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
       <Footer />
     </div>
