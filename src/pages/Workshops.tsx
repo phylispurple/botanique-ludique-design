@@ -241,12 +241,12 @@ const categoryTitles: Record<WorkshopCategory, string> = {
 };
 
 const categoryColors: Record<WorkshopCategory, { bg: string; text: string; border: string }> = {
-  all: { bg: "bg-sage/20", text: "text-sage-dark", border: "border-sage/30" },
+  all: { bg: "bg-sage/90", text: "text-white", border: "border-sage" },
   textiles: { bg: "bg-purple-600/90", text: "text-white", border: "border-purple-400" },
-  jardinage: { bg: "bg-emerald-100", text: "text-emerald-700", border: "border-emerald-300" },
-  floral: { bg: "bg-pink-100", text: "text-pink-700", border: "border-pink-300" },
-  artisanat: { bg: "bg-amber-100", text: "text-amber-700", border: "border-amber-300" },
-  "bien-etre": { bg: "bg-teal-100", text: "text-teal-700", border: "border-teal-300" },
+  jardinage: { bg: "bg-emerald-600/90", text: "text-white", border: "border-emerald-400" },
+  floral: { bg: "bg-pink-500/90", text: "text-white", border: "border-pink-400" },
+  artisanat: { bg: "bg-amber-600/90", text: "text-white", border: "border-amber-400" },
+  "bien-etre": { bg: "bg-teal-600/90", text: "text-white", border: "border-teal-400" },
 };
 
 const categoryLabels: Record<WorkshopCategory, string> = {
@@ -347,7 +347,7 @@ const Workshops = () => {
                       }`}
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
-                      <div className={`${index % 2 === 1 ? "md:order-2" : ""} group relative img-zoom-container rounded-xl`}>
+                      <div className={`${index % 2 === 1 ? "md:order-2" : ""} group relative rounded-xl overflow-visible`}>
                         {/* Badges container */}
                         <div className="absolute top-3 left-3 right-3 z-10 flex flex-wrap gap-2">
                           {/* Category Badge */}
