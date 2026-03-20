@@ -126,7 +126,7 @@ const About = () => {
 
           <AnimatedSection delay={100}>
             <p className="text-lg leading-[1.9] text-[hsl(var(--cream))]/80 mb-8">
-              Ce que je propose n'est pas du folklore. Ce n'est pas une activité vide de sens 
+              Ce que nous proposons n'est pas du folklore. Ce n'est pas une activité vide de sens 
               où l'on fabrique un objet joli pour l'oublier le lendemain. <strong className="text-[hsl(var(--cream))]">C'est une 
               invitation à comprendre d'où viennent ces pratiques</strong>, à saisir leur profondeur 
               historique et culturelle, et à travers cette compréhension, à développer notre 
