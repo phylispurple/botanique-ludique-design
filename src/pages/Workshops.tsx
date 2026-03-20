@@ -347,7 +347,7 @@ const Workshops = () => {
                       }`}
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
-                      <div className={`${index % 2 === 1 ? "md:order-2" : ""} group relative img-zoom-container rounded-xl`}>
+                      <div className={`${index % 2 === 1 ? "md:order-2" : ""} group relative rounded-xl overflow-visible`}>
                         {/* Badges container */}
                         <div className="absolute top-3 left-3 right-3 z-10 flex flex-wrap gap-2">
                           {/* Category Badge */}
