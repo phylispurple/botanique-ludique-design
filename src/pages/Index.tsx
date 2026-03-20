@@ -328,7 +328,7 @@ const Index = () => {
       <section className="py-20 px-6 text-[hsl(var(--cream))] relative overflow-hidden">
         <div className="absolute inset-0 bg-[hsl(var(--black))]">
           <img
-            src={galleryKokedamaGarden}
+            src={ctaWorkshopGroup}
             alt=""
             className="w-full h-full object-cover opacity-25"
             loading="lazy"
