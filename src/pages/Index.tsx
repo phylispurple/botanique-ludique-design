@@ -23,23 +23,6 @@ import gallerySachetSenteur from "@/assets/gallery-sachet-senteur.webp";
 const Index = () => {
   const navigate = useNavigate();
 
-  const handleDownloadBrochure = async () => {
-    try {
-      const response = await fetch('/Plaquette_Botanique_ludique_2025-26.pdf');
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'Plaquette_Botanique_ludique_2025-26.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error('Erreur lors du téléchargement:', error);
-    }
-  };
-
   const stats = [
     { value: "50+", label: "Ateliers réalisés", icon: Calendar },
     { value: "400+", label: "Participants accompagnés", icon: Users },
