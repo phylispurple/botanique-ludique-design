@@ -104,7 +104,7 @@ const FloatingContactButton = () => {
               onClick={() => setIsOpen(false)}
             >
               <div className="text-center w-full">
-                <p className="text-sm font-semibold text-sage">Devis Entreprise</p>
+                <p className="text-sm font-semibold text-[hsl(var(--olive))]">Devis Entreprise</p>
                 <p className="text-xs text-muted-foreground">Réponse sous 24h</p>
               </div>
             </Link>
