@@ -117,10 +117,10 @@ const About = () => {
                   artiste photographe depuis 2014, j'ai créé Botanique Ludique pour transmettre 
                   autrement les savoirs qui lient l'humain au végétal.
                 </p>
-                <p className="text-lg leading-[1.8] text-[hsl(var(--black))]/70 max-w-xl">
-                  Ma recherche, menée sous la direction de Florence Brunois-Pasina, explore 
-                  les interactions entre les citadins et les plantes dans les espaces verts urbains 
-                  du Grand Paris — comment nous percevons, nommons et interagissons avec le monde végétal.
+                <p className="text-lg leading-[1.8] text-[hsl(var(--black))]/70 max-w-xl">Ma recherche, menée sous la direction de Florence Brunois-Pasina, explore les interactions entre les citadins et les plantes dans les espaces verts urbains du Grand Paris et comment nous percevons, nommons et interagissons avec le monde végétal.
+
+
+
                 </p>
               </div>
             </div>
