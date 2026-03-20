@@ -50,7 +50,7 @@ const FloatingContactButton = () => {
       {isOpen && (
         <div className="absolute bottom-20 right-0 bg-[hsl(var(--cream))] border-brutal shadow-brutal-lg p-4 mb-4 animate-scale-in min-w-[220px]">
           <div className="space-y-3">
-            <p className="text-sm font-semibold text-charcoal border-b pb-2 mb-3">
+            <p className="text-sm font-semibold text-[hsl(var(--black))] font-mono-brand uppercase tracking-[1.5px] text-[10px] border-b border-[hsl(var(--black))] pb-2 mb-3">
               Contactez-nous
             </p>
             
