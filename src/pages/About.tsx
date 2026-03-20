@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
-import { Heart, Globe, Users, Sprout, Camera, BookOpen, ArrowRight } from "lucide-react";
+import { Heart, Globe, Users, Sprout, ArrowRight } from "lucide-react";
 import aboutImage from "@/assets/portrait-vanessa.webp";
 
 const About = () => {
