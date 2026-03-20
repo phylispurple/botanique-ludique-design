@@ -4,14 +4,14 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import Testimonials from "@/components/Testimonials";
 import NewsletterSignup from "@/components/NewsletterSignup";
-
+import Marquee from "@/components/Marquee";
+import CustomCursor from "@/components/CustomCursor";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
-import { Leaf, Users, Calendar, Building2, Award, Mail } from "lucide-react";
-import heroBackground from "@/assets/hero-background-new.webp";
+import { Calendar, Users, Building2, Award } from "lucide-react";
 import galleryTerrarium from "@/assets/gallery-terrarium.webp";
 import galleryTeinture from "@/assets/gallery-teinture-1.webp";
 import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
@@ -21,7 +21,7 @@ import gallerySachetSenteur from "@/assets/gallery-sachet-senteur.webp";
 
 const Index = () => {
   const navigate = useNavigate();
-  
+
   const handleDownloadBrochure = async () => {
     try {
       const response = await fetch('/Plaquette_Botanique_ludique_2025-26.pdf');
@@ -43,291 +43,241 @@ const Index = () => {
     { value: "50+", label: "Ateliers réalisés", icon: Calendar },
     { value: "400+", label: "Participants accompagnés", icon: Users },
     { value: "15+", label: "Partenaires de confiance", icon: Building2 },
-    { value: "2023", label: "Année de création", icon: Award }
+    { value: "2023", label: "Année de création", icon: Award },
   ];
 
   return (
-    <div className="min-h-screen">
-      <SEO 
+    <div className="min-h-screen bg-[hsl(var(--cream))]">
+      <SEO
         title="Ateliers Botaniques Paris & IDF | Kokedama, Teinture ✦ Réservez"
         description="🌿 Ateliers créatifs nature à Paris, Yvelines (78), Hauts-de-Seine (92) & Val-d'Oise (95). Kokedama, teinture végétale, terrarium. +400 participants. Réservez votre atelier !"
         keywords="ateliers botaniques Paris, ateliers nature Yvelines 78, ateliers Hauts-de-Seine 92, ateliers Val-d'Oise 95, kokedama Paris, teinture végétale Yvelines, vannerie Hauts-de-Seine, team building nature Paris, atelier botanique Chatou, atelier végétal Saint-Germain-en-Laye"
         canonical="/"
       />
-      <SchemaOrg 
+      <SchemaOrg
         type="LocalBusiness"
         data={{
-          "founder": {
-            "@type": "Person",
-            "name": "Vanessa Charlery",
-            "jobTitle": "Ethnobotaniste et Artiste Photographe"
-          },
-          "makesOffer": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Ateliers Kokedama",
-                "description": "Art japonais du jardinage en boule de mousse"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Teinture Végétale",
-                "description": "Techniques de teinture naturelle avec des plantes"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Vannerie",
-                "description": "Tressage d'osier et fibres naturelles"
-              }
-            }
-          ]
+          founder: { "@type": "Person", name: "Vanessa Charlery", jobTitle: "Ethnobotaniste et Artiste Photographe" },
+          makesOffer: [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ateliers Kokedama", description: "Art japonais du jardinage en boule de mousse" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Teinture Végétale", description: "Techniques de teinture naturelle avec des plantes" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vannerie", description: "Tressage d'osier et fibres naturelles" } },
+          ],
         }}
       />
-      
+
+      <CustomCursor />
       <Navigation />
-      
-      {/* Hero Section - Centered Minimal Design */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{
-        paddingTop: '15%',
-        paddingBottom: '10%'
-      }}>
-        {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/videos/hero-bg.mp4"
-        />
-        {/* Dark overlay 60% */}
-        <div className="absolute inset-0 bg-black/60" />
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col items-center text-center space-y-6 animate-fade-up">
-            {/* Main Title - Elegant and Centered */}
-            <div className="space-y-4" style={{ fontFamily: 'Fraunces, serif' }}>
-              <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" style={{
-                color: '#F7F7EB',
-                lineHeight: '1.3',
-                fontWeight: 400,
-                textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.4)'
-              }}>
-                Quand l'atelier créatif rencontre l'anthropologie de la nature
-              </h1>
-              <h2 className="text-lg sm:text-xl md:text-2xl leading-relaxed drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]" style={{
-                color: '#F7F7EB',
-                lineHeight: '1.5',
-                fontWeight: 300,
-                opacity: 0.95,
-                textShadow: '0 1px 6px rgba(0,0,0,0.5), 0 0 2px rgba(0,0,0,0.3)'
-              }}>
-                Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes
-              </h2>
-            </div>
-            
-            {/* Description - Centered with max-width */}
-            <p className="text-base sm:text-lg max-w-[650px] mx-auto pt-2 font-semibold drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]" style={{
-              color: '#F7F7EB',
-              opacity: 0.95,
-              lineHeight: '1.6',
-              textShadow: '0 1px 4px rgba(0,0,0,0.5)'
-            }}>
-              Pour tous les publics : enfants, adultes, seniors, écoles, associations, EHPAD, entreprises et collectivités.
+
+      {/* ===== HERO ===== */}
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[hsl(var(--black))]">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-60"
+            src="/videos/hero-bg.mp4"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--black))]/20 to-[hsl(var(--black))]/55" />
+
+        <div className="relative z-10 text-center px-6 max-w-[900px]">
+          <AnimatedSection>
+            <h1
+              className="font-display text-[clamp(3rem,10vw,8rem)] uppercase leading-[0.9] tracking-[-3px] text-[hsl(var(--cream))] mb-6"
+            >
+              Botanique<br />
+              <span className="text-[hsl(var(--olive-light))]">Ludique</span>
+            </h1>
+          </AnimatedSection>
+
+          <AnimatedSection delay={150}>
+            <p className="font-body text-xl md:text-[22px] italic text-[hsl(var(--cream))]/90 max-w-[650px] mx-auto mb-4 leading-relaxed">
+              Quand l'atelier créatif rencontre l'anthropologie de la nature
             </p>
-            <p className="text-sm sm:text-base max-w-[550px] mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]" style={{
-              color: '#F7F7EB',
-              opacity: 0.8,
-              lineHeight: '1.5',
-              textShadow: '0 1px 4px rgba(0,0,0,0.4)'
-            }}>
-              À Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
+          </AnimatedSection>
+
+          <AnimatedSection delay={250}>
+            <p className="font-mono-brand text-[13px] uppercase tracking-[3px] text-[hsl(var(--olive-light))] mb-10">
+              Paris · Yvelines (78) · Hauts-de-Seine (92) · Val-d'Oise (95)
             </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+          </AnimatedSection>
+
+          <AnimatedSection delay={400}>
+            <div className="flex flex-wrap gap-4 justify-center">
               <button
                 onClick={() => navigate('/workshops')}
-                className="px-10 py-5 rounded-full text-xl font-bold transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-lg"
-                style={{
-                  background: 'linear-gradient(135deg, #F4D03F 0%, #F39C12 100%)',
-                  color: '#2A3A2E',
-                  border: '3px solid #2A3A2E'
-                }}
+                className="btn-brutal bg-[hsl(var(--orange))] text-[hsl(var(--cream))] border-[hsl(var(--orange))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--orange))] text-sm px-9 py-4"
               >
-                Découvrir les ateliers
+                Découvrir les ateliers →
               </button>
-              
               <button
                 onClick={() => navigate('/b2b')}
-                className="px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                style={{
-                  background: 'rgba(255, 255, 255, 0.9)',
-                  color: '#2A3A2E',
-                  border: '2px solid #9EB384'
-                }}
+                className="btn-brutal bg-transparent text-[hsl(var(--cream))] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_rgba(255,255,255,0.3)] text-sm px-9 py-4"
               >
-                Organiser un Team Building
+                Team Building
               </button>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
-      {/* Présentation Compacte - Philosophy + Stats Combined */}
-      <section className="py-20 px-4 bg-sand relative overflow-hidden">
-        <div className="absolute top-10 left-10 w-40 h-40 bg-sage/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-60 h-60 bg-earth/20 rounded-full blur-3xl" />
-        
-        <div className="container mx-auto max-w-6xl relative z-10">
-          {/* Logo et Titre */}
-          <AnimatedSection className="flex flex-col items-center justify-center mb-10">
-            <div className="flex items-center gap-3 mb-4">
-              <Leaf 
-                className="w-12 h-12 md:w-14 md:h-14" 
-                style={{ color: '#A7B795', strokeWidth: 1.5 }}
-              />
-              <div className="flex flex-col leading-none">
-                <span className="font-serif text-3xl md:text-4xl font-light tracking-wider" style={{ color: '#5D653A' }}>
-                  Botanique
-                </span>
-                <span className="font-serif text-3xl md:text-4xl font-light tracking-wider" style={{ color: '#5D653A' }}>
-                  Ludique
-                </span>
+      {/* ===== MARQUEE 1 ===== */}
+      <Marquee
+        items={["Kokedama", "Teinture végétale", "Terrarium", "Vannerie", "Couronne de fleurs", "Sachet de senteurs"]}
+        color="green"
+        speed={25}
+      />
+
+      {/* ===== PRÉSENTATION + STATS ===== */}
+      <section className="py-24 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+          {/* Text */}
+          <AnimatedSection direction="left">
+            <div>
+              <span className="section-label block mb-3">Ethnobotanique · Création · Transmission</span>
+              <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mb-3">
+                Vanessa<br />Charlery
+              </h2>
+              <p className="font-display text-[15px] uppercase tracking-[2px] text-[hsl(var(--olive))] mb-6">
+                Ethnobotaniste & Anthropologue
+              </p>
+              <p className="text-base leading-[1.8] text-[hsl(var(--black))]/70 mb-4 text-justify">
+                Créée par <strong className="text-[hsl(var(--black))]">Vanessa Charlery</strong>, ethnobotaniste et anthropologue,
+                l'association Botanique Ludique propose des ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95)
+                qui allient créativité artistique et transmission des savoirs ethnobotaniques.
+              </p>
+              <p className="text-base leading-[1.8] text-[hsl(var(--black))]/70 mb-6 text-justify">
+                Nos ateliers s'adressent à <strong className="text-[hsl(var(--black))]">tous les publics</strong> :
+                enfants dès 4 ans, adultes, seniors en résidence ou EHPAD, écoles et centres de loisirs, MJC, centres sociaux,
+                associations, entreprises et collectivités. Chaque pratique explore les relations culturelles entre humains et plantes,
+                de l'Asie à l'Europe.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {["Kokedama", "Teinture végétale", "Vannerie", "Terrarium", "Ethnobotanique", "Anthropologie"].map(tag => (
+                  <span
+                    key={tag}
+                    className="font-mono-brand text-[10px] uppercase tracking-[1.5px] px-3.5 py-1.5 border-brutal-thin rounded-full hover:bg-[hsl(var(--black))] hover:text-[hsl(var(--cream))] transition-colors cursor-default"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
+              <button
+                onClick={handleDownloadBrochure}
+                className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3"
+              >
+                Télécharger la plaquette →
+              </button>
             </div>
-            <div className="w-16 h-1 bg-sage" />
           </AnimatedSection>
 
-          {/* Contenu en deux colonnes sur desktop */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Texte de présentation */}
-            <AnimatedSection delay={100} direction="left">
-              <div className="space-y-5">
-                <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Créée par <strong>Vanessa Charlery</strong>, ethnobotaniste et anthropologue, 
-                  l'association Botanique Ludique propose des ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95) qui allient créativité artistique et transmission 
-                  des savoirs ethnobotaniques.
-                </p>
-                <p className="text-base text-charcoal/70 leading-relaxed">
-                  Nos ateliers s'adressent à <strong>tous les publics</strong> : enfants dès 4 ans, adultes, seniors en résidence ou EHPAD, écoles et centres de loisirs, MJC, centres sociaux, associations, entreprises et collectivités. Chaque pratique explore les relations culturelles entre humains 
-                  et plantes, de l'Asie à l'Europe.
-                </p>
-                <button 
-                  onClick={handleDownloadBrochure} 
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-off-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg text-sm"
-                >
-                  Télécharger la plaquette
-                  <span>→</span>
-                </button>
-              </div>
-            </AnimatedSection>
-
-            {/* Stats intégrées avec animation de comptage */}
-            <AnimatedSection delay={200} direction="right">
-              <div className="grid grid-cols-2 gap-6">
-                {stats.map((stat, index) => {
-                  const IconComponent = stat.icon;
-                  return (
-                    <div 
-                      key={index}
-                      className="text-center p-5 bg-white/60 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-                    >
-                      <div className="flex justify-center mb-2">
-                        <div className="p-2 rounded-full bg-sage/10 text-sage">
-                          <IconComponent className="w-5 h-5" />
-                        </div>
-                      </div>
-                      <AnimatedCounter 
-                        value={stat.value}
-                        className="text-2xl md:text-3xl font-bold text-charcoal mb-1"
-                        style={{ fontFamily: 'Fraunces, serif' }}
-                      />
-                      <div className="text-xs text-muted-foreground">
-                        {stat.label}
-                      </div>
+          {/* Stats */}
+          <AnimatedSection direction="right" delay={150}>
+            <div className="grid grid-cols-2 gap-0">
+              {stats.map((stat, index) => {
+                const IconComponent = stat.icon;
+                return (
+                  <div
+                    key={index}
+                    className="p-10 border-brutal text-center -mt-[3px] -ml-[3px] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300"
+                  >
+                    <div className="flex justify-center mb-3">
+                      <IconComponent className="w-5 h-5 text-[hsl(var(--olive))]" />
                     </div>
-                  );
-                })}
-              </div>
-            </AnimatedSection>
-          </div>
+                    <AnimatedCounter
+                      value={stat.value}
+                      className="font-display text-3xl md:text-4xl text-[hsl(var(--black))] mb-1"
+                    />
+                    <div className="font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/50">
+                      {stat.label}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
-      
-      {/* Gallery Preview Section */}
-      <section className="py-16 px-4 bg-gradient-to-b from-background to-sand/30">
-        <div className="container mx-auto max-w-6xl">
-          <AnimatedSection className="text-center mb-10">
-            <h2 
-              className="text-2xl md:text-3xl mb-3 text-charcoal"
-              style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}
-            >
-              Inspirez-vous : Les plus belles créations
+
+      {/* ===== MARQUEE 2 ===== */}
+      <Marquee
+        items={["Paris", "Yvelines 78", "Hauts-de-Seine 92", "Val-d'Oise 95", "Île-de-France"]}
+        color="purple"
+        speed={35}
+        separator="◆"
+      />
+
+      {/* ===== GALERIE ===== */}
+      <section className="py-24 px-6 bg-[hsl(var(--cream-dark))]">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection className="text-center mb-12">
+            <span className="section-label block mb-3">Portfolio</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
+              Les plus belles créations
             </h2>
-            <p className="text-sm text-muted-foreground max-w-xl mx-auto">
-              Découvrez l'ambiance de nos ateliers et les magnifiques résultats
-            </p>
           </AnimatedSection>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
             {[
               { src: galleryTerrarium, alt: "Atelier terrarium botanique" },
               { src: galleryTeinture, alt: "Atelier teinture végétale" },
               { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs" },
               { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin" },
               { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama" },
-              { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" }
+              { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" },
             ].map((image, index) => (
-              <AnimatedSection key={index} delay={index * 100}>
-                <div className="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md">
-                  <img 
+              <AnimatedSection key={index} delay={index * 80}>
+                <div className="aspect-square overflow-hidden border-brutal card-brutal">
+                  <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
                 </div>
               </AnimatedSection>
             ))}
           </div>
-          
-          <AnimatedSection delay={600} className="text-center">
-            <Link 
+
+          <AnimatedSection delay={500} className="text-center">
+            <Link
               to="/gallery"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg text-sm"
+              className="btn-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-[hsl(var(--black))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-8 py-3 inline-block"
             >
-              Voir toute la galerie
-              <span>→</span>
+              Voir toute la galerie →
             </Link>
           </AnimatedSection>
         </div>
       </section>
-      
-      {/* Testimonials Section */}
+
+      {/* ===== MARQUEE 3 ===== */}
+      <Marquee
+        items={["Enfants", "Adultes", "Seniors", "Écoles", "Entreprises", "EHPAD", "Associations", "Collectivités"]}
+        color="orange"
+        speed={20}
+        separator="●"
+      />
+
+      {/* ===== TESTIMONIALS ===== */}
       <Testimonials />
-      
-      {/* Trust Badges Section */}
-      <section className="py-8 px-4 bg-sage/5">
-        <div className="container mx-auto max-w-6xl">
+
+      {/* ===== TRUST BADGES ===== */}
+      <section className="py-10 px-6 border-y-[3px] border-[hsl(var(--black))]">
+        <div className="max-w-6xl mx-auto">
           <AnimatedSection>
             <TrustBadges variant="premium" showAll={true} />
           </AnimatedSection>
         </div>
       </section>
-      
-      {/* Partners Section - Ils nous font confiance */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#F7F7EB' }}>
-        <div className="container mx-auto max-w-5xl">
+
+      {/* ===== PARTENAIRES ===== */}
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto">
           <AnimatedSection>
-            <h3 className="text-2xl md:text-3xl text-charcoal text-center mb-8" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+            <h3 className="font-display text-2xl md:text-3xl uppercase text-center mb-10 tracking-[-1px]">
               Ils nous font confiance
             </h3>
           </AnimatedSection>
@@ -339,14 +289,11 @@ const Index = () => {
                 { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
                 { src: "/logos/mjc-chatou.jpeg", alt: "MJC Chatou" },
                 { src: "/logos/publicis.jpg", alt: "Publicis" },
-                { src: "/logos/f93.jpg", alt: "F93" }
+                { src: "/logos/f93.jpg", alt: "F93" },
               ].map((logo, index) => (
-                <div 
+                <div
                   key={index}
-                  className="flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-                  style={{
-                    animationDelay: `${index * 100}ms`
-                  }}
+                  className="flex items-center justify-center p-4 border-brutal hover:-translate-y-1 hover:shadow-brutal transition-all duration-200"
                 >
                   <img src={logo.src} alt={logo.alt} className="max-h-12 w-auto object-contain" loading="lazy" />
                 </div>
@@ -355,69 +302,54 @@ const Index = () => {
           </AnimatedSection>
         </div>
       </section>
-      
-      {/* CTA Final + Newsletter Combined */}
-      <section className="py-16 px-4 relative overflow-hidden" style={{
-        backgroundImage: `url(${heroBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
-        {/* Dark overlay 60% */}
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="container mx-auto max-w-4xl relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* CTA */}
-            <AnimatedSection direction="left">
-              <div className="text-center md:text-left space-y-4">
-                <h2 className="text-3xl md:text-4xl" style={{
-                  fontFamily: 'Fraunces, serif',
-                  fontWeight: 400,
-                  color: '#F7F7EB'
-                }}>
-                  Prêt·e à explorer le monde végétal ?
-                </h2>
-                <p className="text-base" style={{
-                  color: '#F7F7EB',
-                  opacity: 0.9
-                }}>
-                  Rejoignez-nous pour un atelier à Paris, Yvelines, Hauts-de-Seine ou Val-d'Oise.
-                </p>
-                <div className="flex flex-wrap gap-3 justify-center md:justify-start pt-2">
-                  <Link to="/workshops" className="px-6 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105 hover:shadow-lg" style={{
-                    backgroundColor: '#C9D2B5',
-                    color: '#2B2B2B'
-                  }}>
-                    Voir les ateliers
-                  </Link>
-                  <Link to="/contact" className="px-6 py-3 bg-transparent border-2 border-off-white rounded-full font-semibold text-sm transition-all hover:scale-105" style={{
-                    color: '#F7F7EB'
-                  }}>
-                    Nous contacter
-                  </Link>
-                </div>
-              </div>
-            </AnimatedSection>
 
-            {/* Newsletter Compact */}
-            <AnimatedSection delay={200} direction="right">
-              <div className="bg-white/95 rounded-2xl p-6 shadow-xl">
-                <div className="flex items-center gap-2 mb-3">
-                  <Mail className="w-5 h-5 text-sage" />
-                  <h3 className="text-lg font-semibold text-charcoal" style={{ fontFamily: 'Fraunces, serif' }}>
-                    Restez informé·e
-                  </h3>
-                </div>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Recevez nos actualités et les dates des prochains ateliers.
-                </p>
-                <NewsletterSignup compact />
+      {/* ===== MARQUEE 4 ===== */}
+      <Marquee
+        items={["Ateliers", "Conférences", "Balades botaniques", "Team building", "Médiation"]}
+        color="olive"
+        speed={28}
+      />
+
+      {/* ===== CTA + NEWSLETTER ===== */}
+      <section className="py-20 px-6 bg-[hsl(var(--black))] text-[hsl(var(--cream))]">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <AnimatedSection direction="left">
+            <div className="space-y-5">
+              <h2 className="font-display text-3xl md:text-4xl uppercase leading-[0.95]">
+                Prêt·e à explorer le monde végétal ?
+              </h2>
+              <p className="text-base text-[hsl(var(--cream))]/80 leading-relaxed">
+                Rejoignez-nous pour un atelier à Paris, Yvelines, Hauts-de-Seine ou Val-d'Oise.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-2">
+                <Link
+                  to="/workshops"
+                  className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3"
+                >
+                  Voir les ateliers →
+                </Link>
+                <Link
+                  to="/contact"
+                  className="btn-brutal bg-transparent text-[hsl(var(--cream))] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3"
+                >
+                  Nous contacter
+                </Link>
               </div>
-            </AnimatedSection>
-          </div>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={200} direction="right">
+            <div className="border-brutal bg-[hsl(var(--cream))] text-[hsl(var(--black))] p-8 shadow-brutal-lg">
+              <h3 className="font-display text-lg uppercase mb-2">Restez informé·e</h3>
+              <p className="text-sm text-[hsl(var(--black))]/60 mb-5">
+                Recevez nos actualités et les dates des prochains ateliers.
+              </p>
+              <NewsletterSignup compact />
+            </div>
+          </AnimatedSection>
         </div>
       </section>
-      
-      {/* Footer */}
+
       <Footer />
       <CookieConsent />
     </div>
