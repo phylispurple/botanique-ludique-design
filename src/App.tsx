@@ -95,6 +95,7 @@ const App = () => (
           <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/association" element={<Association />} />
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/pro" element={<Pro />} />
           {/* Redirects from old pages to new /pro page */}
