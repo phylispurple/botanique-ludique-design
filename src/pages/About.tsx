@@ -146,10 +146,10 @@ const About = () => {
 
           <AnimatedSection delay={300}>
             <p className="text-lg leading-[1.9] text-[hsl(var(--cream))]/80 mb-12">
-              Ce qui m'intéresse, c'est ce qui se passe <em>pendant</em> l'atelier : le moment où 
+              Ce qui nous intéresse, c'est ce qui se passe <em>pendant</em> l'atelier : le moment où 
               les mains touchent la mousse, où l'on sent l'odeur de la garance qui chauffe, où l'on 
               observe les nervures d'une feuille avec un regard neuf. Ces moments de présence et 
-              d'attention au vivant sont précieux — ils nous sortent de notre rapport utilitariste 
+              d'attention au vivant sont précieux. Ils nous sortent de notre rapport utilitariste 
               au monde. C'est là que quelque chose se transforme.
             </p>
           </AnimatedSection>
