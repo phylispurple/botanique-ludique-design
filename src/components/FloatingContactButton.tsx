@@ -26,7 +26,7 @@ const SimpleLeaf = ({ className }: { className?: string }) => (
     {/* Nervure centrale */}
     <path 
       d="M32 14C32 14 32 44 32 48" 
-      stroke="hsl(var(--sage))" 
+      stroke="hsl(var(--cream))" 
       strokeWidth="1.5" 
       strokeLinecap="round"
       opacity="0.5"
@@ -48,22 +48,22 @@ const FloatingContactButton = () => {
     <div className="fixed bottom-6 right-6 z-50">
       {/* Menu ouvert */}
       {isOpen && (
-        <div className="absolute bottom-20 right-0 bg-white rounded-2xl shadow-2xl p-4 mb-4 animate-scale-in min-w-[220px]">
+        <div className="absolute bottom-20 right-0 bg-[hsl(var(--cream))] border-brutal shadow-brutal-lg p-4 mb-4 animate-scale-in min-w-[220px]">
           <div className="space-y-3">
-            <p className="text-sm font-semibold text-charcoal border-b pb-2 mb-3">
+            <p className="text-sm font-semibold text-[hsl(var(--black))] font-mono-brand uppercase tracking-[1.5px] text-[10px] border-b border-[hsl(var(--black))] pb-2 mb-3">
               Contactez-nous
             </p>
             
             {/* Email */}
             <a
               href="mailto:contact@botaniqueludique.com"
-              className="flex items-center gap-3 p-3 rounded-xl hover:bg-sage/10 transition-colors group"
+              className="flex items-center gap-3 p-3 hover:bg-[hsl(var(--green-pale))] transition-colors group"
             >
-              <div className="p-2 bg-sage/20 rounded-full group-hover:bg-sage/30 transition-colors">
-                <Mail className="w-4 h-4 text-sage" />
+              <div className="p-2 bg-[hsl(var(--olive))]/20 rounded-full group-hover:bg-[hsl(var(--olive))]/30 transition-colors">
+                <Mail className="w-4 h-4 text-[hsl(var(--olive))]" />
               </div>
               <div>
-                <p className="text-sm font-medium text-charcoal">Email</p>
+                <p className="text-sm font-medium text-[hsl(var(--black))]">Email</p>
                 <p className="text-xs text-muted-foreground">Réponse sous 24h</p>
               </div>
             </a>
@@ -71,13 +71,13 @@ const FloatingContactButton = () => {
             {/* Téléphone */}
             <a
               href="tel:+33609831606"
-              className="flex items-center gap-3 p-3 rounded-xl hover:bg-sage/10 transition-colors group"
+              className="flex items-center gap-3 p-3 hover:bg-[hsl(var(--green-pale))] transition-colors group"
             >
-              <div className="p-2 bg-sage/20 rounded-full group-hover:bg-sage/30 transition-colors">
-                <Phone className="w-4 h-4 text-sage" />
+              <div className="p-2 bg-[hsl(var(--olive))]/20 rounded-full group-hover:bg-[hsl(var(--olive))]/30 transition-colors">
+                <Phone className="w-4 h-4 text-[hsl(var(--olive))]" />
               </div>
               <div>
-                <p className="text-sm font-medium text-charcoal">06 09 83 16 06</p>
+                <p className="text-sm font-medium text-[hsl(var(--black))]">06 09 83 16 06</p>
                 <p className="text-xs text-muted-foreground">Du lundi au vendredi</p>
               </div>
             </a>
@@ -85,14 +85,14 @@ const FloatingContactButton = () => {
             {/* Réserver */}
             <Link
               to="/agenda"
-              className="flex items-center gap-3 p-3 rounded-xl bg-sage/10 hover:bg-sage/20 transition-colors group"
+              className="flex items-center gap-3 p-3 bg-[hsl(var(--olive))]/10 hover:bg-[hsl(var(--olive))]/20 transition-colors group"
               onClick={() => setIsOpen(false)}
             >
-              <div className="p-2 bg-sage rounded-full">
-                <Calendar className="w-4 h-4 text-white" />
+              <div className="p-2 bg-[hsl(var(--olive))] rounded-full">
+                <Calendar className="w-4 h-4 text-[hsl(var(--cream))]" />
               </div>
               <div>
-                <p className="text-sm font-medium text-charcoal">Réserver</p>
+                <p className="text-sm font-medium text-[hsl(var(--black))]">Réserver</p>
                 <p className="text-xs text-muted-foreground">Voir les ateliers</p>
               </div>
             </Link>
@@ -100,11 +100,11 @@ const FloatingContactButton = () => {
             {/* Devis Pro */}
             <Link
               to="/pro"
-              className="flex items-center gap-3 p-3 rounded-xl border-2 border-sage hover:bg-sage/10 transition-colors"
+              className="flex items-center gap-3 p-3 border-brutal hover:bg-[hsl(var(--olive))]/10 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               <div className="text-center w-full">
-                <p className="text-sm font-semibold text-sage">Devis Entreprise</p>
+                <p className="text-sm font-semibold text-[hsl(var(--olive))]">Devis Entreprise</p>
                 <p className="text-xs text-muted-foreground">Réponse sous 24h</p>
               </div>
             </Link>
@@ -116,11 +116,11 @@ const FloatingContactButton = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`
-          w-16 h-16 rounded-full shadow-xl flex items-center justify-center
-          transition-all duration-300 hover:scale-110 hover:shadow-2xl
+          w-16 h-16 rounded-full shadow-brutal flex items-center justify-center
+          transition-all duration-300 hover:scale-110 hover:shadow-brutal-lg border-brutal
           ${isOpen 
-            ? 'bg-charcoal text-white rotate-0' 
-            : 'bg-gradient-to-br from-sage via-sage to-sage-dark text-white hover:rotate-12'
+            ? 'bg-[hsl(var(--black))] text-[hsl(var(--cream))] rotate-0' 
+            : 'bg-[hsl(var(--olive))] text-[hsl(var(--cream))] hover:rotate-12'
           }
         `}
         aria-label={isOpen ? "Fermer le menu contact" : "Ouvrir le menu contact"}
@@ -134,7 +134,7 @@ const FloatingContactButton = () => {
       
       {/* Badge notification - hidden once menu has been opened */}
       {!isOpen && !hasBeenOpened && (
-        <span className="absolute -top-1 -right-1 w-5 h-5 bg-amber-500 rounded-full flex items-center justify-center animate-pulse shadow-lg">
+        <span className="absolute -top-1 -right-1 w-5 h-5 bg-[hsl(var(--orange))] rounded-full flex items-center justify-center animate-pulse shadow-lg">
           <span className="text-[11px] text-white font-bold">1</span>
         </span>
       )}
