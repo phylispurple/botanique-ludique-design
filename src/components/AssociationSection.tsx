@@ -16,8 +16,8 @@ const cards = [
     title: "Agenda & Événements",
     desc: "Balades botaniques, sorties nature, ateliers ouverts, conférences, projections, concerts autour des musiques et pratiques culturelles liés au monde végétal et aux savoirs autochtones.",
     link: "/workshops",
-    linkText: "Voir l'agenda →",
-    disabled: false,
+    linkText: "À venir",
+    disabled: true,
   },
   {
     icon: Lock,
