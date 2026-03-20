@@ -138,10 +138,10 @@ const Index = () => {
                 Vanessa<br />Charlery
               </h2>
               <p className="font-display text-[15px] uppercase tracking-[2px] text-[hsl(var(--olive))] mb-6">
-                Ethnobotaniste & Anthropologue
+                Animatrice ethnobotaniste · Formée à l'EHESS
               </p>
               <p className="text-base leading-[1.8] text-[hsl(var(--black))]/70 mb-4 text-justify">
-                Créée par <strong className="text-[hsl(var(--black))]">Vanessa Charlery</strong>, ethnobotaniste et anthropologue,
+                Créée par <strong className="text-[hsl(var(--black))]">Vanessa Charlery</strong>, animatrice ethnobotaniste formée à l'EHESS,
                 l'association Botanique Ludique propose des ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95)
                 qui allient créativité artistique et transmission des savoirs ethnobotaniques.
               </p>
