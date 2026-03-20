@@ -88,8 +88,8 @@ const FloatingContactButton = () => {
               className="flex items-center gap-3 p-3 bg-[hsl(var(--olive))]/10 hover:bg-[hsl(var(--olive))]/20 transition-colors group"
               onClick={() => setIsOpen(false)}
             >
-              <div className="p-2 bg-sage rounded-full">
-                <Calendar className="w-4 h-4 text-white" />
+              <div className="p-2 bg-[hsl(var(--olive))] rounded-full">
+                <Calendar className="w-4 h-4 text-[hsl(var(--cream))]" />
               </div>
               <div>
                 <p className="text-sm font-medium text-charcoal">Réserver</p>
