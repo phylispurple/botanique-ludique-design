@@ -93,7 +93,7 @@ const Navigation = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden lg:flex items-center gap-6 list-none m-0 p-0">
+        <ul className="hidden lg:flex items-baseline gap-6 list-none m-0 p-0">
           {/* Association — visuellement séparé */}
           <li>
             <Link
