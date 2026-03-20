@@ -95,13 +95,19 @@ const Index = () => {
       
       {/* Hero Section - Centered Minimal Design */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{
-        backgroundImage: `url(${heroBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
         paddingTop: '15%',
         paddingBottom: '10%'
       }}>
-      {/* Dark overlay 60% */}
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/videos/hero-bg.mp4"
+        />
+        {/* Dark overlay 60% */}
         <div className="absolute inset-0 bg-black/60" />
         
         <div className="container mx-auto px-6 relative z-10">
