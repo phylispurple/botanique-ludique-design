@@ -202,23 +202,23 @@ const Navigation = () => {
           {/* Regular links */}
           <li>
             <Link to="/gallery"
-              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/gallery') ? 'border-b border-olive-light' : ''}`}
+              className={`font-mono text-[11px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/gallery') ? 'border-b border-olive-light' : ''}`}
               style={{ color: isActive('/gallery') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
               Galerie
             </Link>
           </li>
           <li>
             <Link to="/blog"
-              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/blog') ? 'border-b border-olive-light' : ''}`}
+              className={`font-mono text-[11px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/blog') ? 'border-b border-olive-light' : ''}`}
               style={{ color: isActive('/blog') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
               Blog
             </Link>
           </li>
           <li>
             <Link to="/contact"
-              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/contact') ? 'border-b border-olive-light' : ''}`}
+              className={`font-mono text-[11px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/contact') ? 'border-b border-olive-light' : ''}`}
               style={{ color: isActive('/contact') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
-              Contact
+              Nous écrire
             </Link>
           </li>
 
