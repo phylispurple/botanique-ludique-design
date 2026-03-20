@@ -128,63 +128,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* ===== TIMELINE ===== */}
-      <section className="py-20 px-6 bg-[hsl(var(--cream-dark))] border-y-[3px] border-[hsl(var(--black))]">
-        <div className="max-w-4xl mx-auto">
-          <AnimatedSection className="text-center mb-16">
-            <span className="font-mono text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))]">Parcours</span>
-            
-
-            
-          </AnimatedSection>
-
-          <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[3px] bg-[hsl(var(--black))]/10 -translate-x-1/2" />
-
-            {timeline.map((item, i) => {
-              const IconComponent = item.icon;
-              const isLeft = i % 2 === 0;
-              return (
-                <AnimatedSection
-                  key={i}
-                  delay={i * 100}
-                  direction={isLeft ? "left" : "right"}
-                  className={`relative flex items-start mb-12 last:mb-0 ${
-                  isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`
-                  }>
-                  
-                  {/* Dot on timeline */}
-                  <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-12 h-12 border-brutal bg-[hsl(var(--cream))] flex items-center justify-center z-10">
-                    <IconComponent className="w-5 h-5 text-[hsl(var(--olive))]" />
-                  </div>
-
-                  {/* Content card */}
-                  <div className={`ml-20 md:ml-0 md:w-[calc(50%-40px)] ${isLeft ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
-                    <span className="font-display text-2xl text-[hsl(var(--olive))]">{item.year}</span>
-                    <h3 className="font-display text-base uppercase tracking-[-0.5px] mt-1 mb-2 text-[hsl(var(--black))]">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-[hsl(var(--black))]/60">
-                      {item.description}
-                    </p>
-                    {item.link &&
-                    <a
-                      href={item.link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block mt-2 font-mono text-[9px] uppercase tracking-[2px] text-[hsl(var(--olive))] hover:text-[hsl(var(--black))] transition-colors underline">
-                      
-                        {item.link.label}
-                      </a>
-                    }
-                  </div>
-                </AnimatedSection>);
-
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* ===== VALEURS ===== */}
       <section className="py-24 px-6">
