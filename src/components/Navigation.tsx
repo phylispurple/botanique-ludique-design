@@ -162,7 +162,7 @@ const Navigation = () => {
           >
             <Link
               to="/pro"
-              className={`font-mono text-[10px] uppercase tracking-[2px] no-underline pb-[2px] flex items-center gap-1 transition-colors ${
+              className={`font-mono text-[11px] font-bold uppercase tracking-[2px] no-underline pb-[2px] flex items-center gap-1 transition-colors ${
                 isActive('/pro') ? 'border-b border-olive-light' : ''
               }`}
               style={{ color: isActive('/pro') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
