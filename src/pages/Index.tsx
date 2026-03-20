@@ -82,7 +82,7 @@ const Index = () => {
               Quand l'atelier créatif accessible rencontre l'anthropologie de la nature
             </p>
             <p className="font-body text-[15px] md:text-base text-[hsl(var(--cream))]/70 max-w-[580px] mx-auto mb-4 leading-relaxed">
-              Des ateliers qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes.
+              Des ateliers accessibles qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes.
             </p>
           </AnimatedSection>
 
