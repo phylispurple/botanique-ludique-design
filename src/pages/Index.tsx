@@ -13,7 +13,7 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
 import { Calendar, Users, Building2, Award } from "lucide-react";
 import galleryTerrarium from "@/assets/gallery-terrarium.webp";
-import ctaWorkshopGroup from "@/assets/cta-workshop-group.webp";
+import ctaWorkshopGroup from "@/assets/cta-workshop-group.jpg";
 import galleryTeinture from "@/assets/gallery-teinture-1.webp";
 import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
 import galleryKokedamaGarden from "@/assets/gallery-kokedama-garden.webp";
