@@ -120,7 +120,7 @@ const About = () => {
           <AnimatedSection className="text-center mb-12">
             <span className="font-mono text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive-light))]">Philosophie</span>
             <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mt-2 text-[hsl(var(--cream))]">
-              Ma Démarche
+              Notre Démarche
             </h2>
           </AnimatedSection>
 
