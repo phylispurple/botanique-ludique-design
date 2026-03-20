@@ -13,6 +13,7 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
 import { Calendar, Users, Building2, Award } from "lucide-react";
 import galleryTerrarium from "@/assets/gallery-terrarium.webp";
+import ctaWorkshopGroup from "@/assets/cta-workshop-group.webp";
 import galleryTeinture from "@/assets/gallery-teinture-1.webp";
 import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
 import galleryKokedamaGarden from "@/assets/gallery-kokedama-garden.webp";
@@ -327,7 +328,7 @@ const Index = () => {
       <section className="py-20 px-6 text-[hsl(var(--cream))] relative overflow-hidden">
         <div className="absolute inset-0 bg-[hsl(var(--black))]">
           <img
-            src={galleryKokedamaGarden}
+            src={ctaWorkshopGroup}
             alt=""
             className="w-full h-full object-cover opacity-25"
             loading="lazy"
