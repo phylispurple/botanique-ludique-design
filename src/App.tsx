@@ -80,6 +80,26 @@ import AtelierBotaniqueAdulteValDOise from "./pages/AtelierBotaniqueAdulteValDOi
 import DemoCreative from "./pages/DemoCreative";
 import DemoManus from "./pages/DemoManus";
 import Association from "./pages/Association";
+import MediationScientifiqueIDF from "./pages/MediationScientifiqueIDF";
+import MediationScientifiqueParis from "./pages/MediationScientifiqueParis";
+import MediationScientifiqueYvelines from "./pages/MediationScientifiqueYvelines";
+import MediationScientifiqueHautsDeSeine from "./pages/MediationScientifiqueHautsDeSeine";
+import MediationScientifiqueValDOise from "./pages/MediationScientifiqueValDOise";
+import MediationBotaniqueIDF from "./pages/MediationBotaniqueIDF";
+import MediationBotaniqueParis from "./pages/MediationBotaniqueParis";
+import MediationBotaniqueYvelines from "./pages/MediationBotaniqueYvelines";
+import MediationBotaniqueHautsDeSeine from "./pages/MediationBotaniqueHautsDeSeine";
+import MediationBotaniqueValDOise from "./pages/MediationBotaniqueValDOise";
+import AnimationBotaniqueIDF from "./pages/AnimationBotaniqueIDF";
+import AnimationBotaniqueParis from "./pages/AnimationBotaniqueParis";
+import AnimationBotaniqueYvelines from "./pages/AnimationBotaniqueYvelines";
+import AnimationBotaniqueHautsDeSeine from "./pages/AnimationBotaniqueHautsDeSeine";
+import AnimationBotaniqueValDOise from "./pages/AnimationBotaniqueValDOise";
+import MediationCulturelleNatureIDF from "./pages/MediationCulturelleNatureIDF";
+import MediationCulturelleNatureParis from "./pages/MediationCulturelleNatureParis";
+import MediationCulturelleNatureYvelines from "./pages/MediationCulturelleNatureYvelines";
+import MediationCulturelleNatureHautsDeSeine from "./pages/MediationCulturelleNatureHautsDeSeine";
+import MediationCulturelleNatureValDOise from "./pages/MediationCulturelleNatureValDOise";
 
 const queryClient = new QueryClient();
 
