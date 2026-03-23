@@ -63,7 +63,7 @@ const blogPosts = [
     slug: "botanique-projet-pedagogique-college",
     title: "Comment intégrer la botanique dans un projet pédagogique de collège",
     excerpt: "Guide pratique pour enseignants : formats d'intervention, liens avec les programmes SVT et EMC, exemples concrets en Île-de-France.",
-    images: [blogFilmsPoster],
+    images: [],
     date: "2026-03-20",
     category: "Ressources pédagogiques"
   },
@@ -71,7 +71,7 @@ const blogPosts = [
     slug: "plantes-sauvages-sortie-scolaire-ile-de-france",
     title: "5 plantes sauvages à identifier lors d'une sortie scolaire en Île-de-France",
     excerpt: "Plantain, ortie, lierre terrestre, pissenlit, pâquerette : cinq espèces communes avec anecdotes ethnobotaniques pour enrichir vos sorties nature.",
-    images: [blogFilmsPoster],
+    images: [],
     date: "2026-03-18",
     category: "Ressources pédagogiques"
   },
@@ -79,7 +79,7 @@ const blogPosts = [
     slug: "mediation-scientifique-definition-exemples",
     title: "Qu'est-ce que la médiation scientifique ? Définition et exemples",
     excerpt: "Définition, objectifs et exemples concrets de médiation scientifique en botanique. Conférences, ateliers, balades guidées.",
-    images: [blogFilmsPoster],
+    images: [],
     date: "2026-03-15",
     category: "Ressources pédagogiques"
   }
@@ -170,28 +170,39 @@ const Blog = () => {
               <AnimatedSection key={post.slug} delay={200 + index * 80}>
                 <Link to={`/blog/${post.slug}`} className="block group">
                   <div className="border-brutal overflow-hidden shadow-brutal hover:shadow-brutal-lg hover:-translate-y-1 transition-all duration-300 bg-[hsl(var(--cream))]">
-                    <div className="relative aspect-[16/10] overflow-hidden">
-                      <Carousel
-                        plugins={[Autoplay({ delay: 3000 + index * 500, stopOnInteraction: false })]}
-                        className="w-full h-full pointer-events-none"
-                        opts={{ loop: true }}
-                      >
-                        <CarouselContent className="h-full">
-                          {post.images.map((image, imgIndex) => (
-                            <CarouselItem key={imgIndex} className="h-full">
-                              <img 
-                                src={image} 
-                                alt={`${post.title} - Image ${imgIndex + 1}`}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                              />
-                            </CarouselItem>
-                          ))}
-                        </CarouselContent>
-                      </Carousel>
-                      <div className="absolute top-4 left-4 bg-[hsl(var(--olive))] text-[hsl(var(--cream))] px-3 py-1 text-[10px] font-mono uppercase tracking-[2px] z-10">
-                        {post.category}
+                    {post.images.length > 0 ? (
+                      <div className="relative aspect-[16/10] overflow-hidden">
+                        <Carousel
+                          plugins={[Autoplay({ delay: 3000 + index * 500, stopOnInteraction: false })]}
+                          className="w-full h-full pointer-events-none"
+                          opts={{ loop: true }}
+                        >
+                          <CarouselContent className="h-full">
+                            {post.images.map((image, imgIndex) => (
+                              <CarouselItem key={imgIndex} className="h-full">
+                                <img 
+                                  src={image} 
+                                  alt={`${post.title} - Image ${imgIndex + 1}`}
+                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                />
+                              </CarouselItem>
+                            ))}
+                          </CarouselContent>
+                        </Carousel>
+                        <div className="absolute top-4 left-4 bg-[hsl(var(--olive))] text-[hsl(var(--cream))] px-3 py-1 text-[10px] font-mono uppercase tracking-[2px] z-10">
+                          {post.category}
+                        </div>
                       </div>
-                    </div>
+                    ) : (
+                      <div className="relative aspect-[16/10] overflow-hidden bg-[hsl(var(--green-pale))] flex items-center justify-center">
+                        <span className="font-display text-4xl md:text-5xl uppercase text-[hsl(var(--olive))]/20 tracking-[-2px] text-center px-6 leading-[1.1]">
+                          {post.category}
+                        </span>
+                        <div className="absolute top-4 left-4 bg-[hsl(var(--olive))] text-[hsl(var(--cream))] px-3 py-1 text-[10px] font-mono uppercase tracking-[2px] z-10">
+                          {post.category}
+                        </div>
+                      </div>
+                    )}
                     <div className="p-6 md:p-8">
                       <div className="flex items-center gap-2 text-xs text-[hsl(var(--black))]/40 font-mono uppercase tracking-[1.5px] mb-3">
                         <Calendar className="w-3.5 h-3.5" />
