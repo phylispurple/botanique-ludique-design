@@ -199,7 +199,7 @@ const Index = () => {
       </section>
 
       {/* ===== PARTENAIRES — Défilement continu ===== */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="max-w-5xl mx-auto px-6">
           <AnimatedSection>
             <h3 className="font-display text-2xl md:text-3xl uppercase text-center mb-10 tracking-[-1px]">
