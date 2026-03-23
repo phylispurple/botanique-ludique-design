@@ -216,7 +216,7 @@ const Navigation = () => {
                 if (location.pathname === '/') {
                   const el = document.getElementById('mediation');
                   if (el) {
-                    const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                    const pos = el.getBoundingClientRect().top + window.pageYOffset - 64;
                     window.scrollTo({ top: pos, behavior: 'smooth' });
                   }
                 } else {
