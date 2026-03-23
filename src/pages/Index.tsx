@@ -284,7 +284,9 @@ const Index = () => {
               { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
               { src: "/logos/mjc-chatou.jpeg", alt: "MJC Chatou" },
               { src: "/logos/publicis.jpg", alt: "Publicis" },
-              { src: "/logos/f93.jpg", alt: "F93" }].
+              { src: "/logos/f93.jpg", alt: "F93" },
+              { src: "/logos/bezons.svg", alt: "Ville de Bezons" },
+              { src: "/logos/maurepas.png", alt: "Ville de Maurepas" }].
               map((logo, index) =>
               <div key={`a-${index}`} className="flex-shrink-0 flex items-center justify-center p-4 border-brutal hover:-translate-y-1 hover:shadow-brutal transition-all duration-200" style={{ width: 140 }}>
                   <img src={logo.src} alt={logo.alt} className="max-h-12 w-auto object-contain" loading="lazy" />
@@ -296,7 +298,9 @@ const Index = () => {
                 { src: "/logos/jappy-senior.svg", alt: "" },
                 { src: "/logos/mjc-chatou.jpeg", alt: "" },
                 { src: "/logos/publicis.jpg", alt: "" },
-                { src: "/logos/f93.jpg", alt: "" }].
+                { src: "/logos/f93.jpg", alt: "" },
+                { src: "/logos/bezons.svg", alt: "" },
+                { src: "/logos/maurepas.png", alt: "" }].
                 map((logo, index) =>
                 <div key={`b-${index}`} className="flex-shrink-0 flex items-center justify-center p-4 border-brutal" style={{ width: 140 }} aria-hidden="true">
                     <img src={logo.src} alt="" className="max-h-12 w-auto object-contain" loading="lazy" />
