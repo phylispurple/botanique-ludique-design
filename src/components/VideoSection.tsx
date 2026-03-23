@@ -14,7 +14,7 @@ const bottomVideos = [
 
 const VideoCard = ({ src, tag, title, className = "" }: { src: string; tag: string; title: string; className?: string }) => (
   <div className={`relative overflow-hidden border-[3px] border-[hsl(var(--cream))] -m-[1.5px] group transition-all duration-300 hover:z-10 hover:shadow-[8px_8px_0_hsl(var(--olive))] hover:-translate-x-[3px] hover:-translate-y-[3px] ${className}`} style={{ height: '220px' }}>
-    <video autoPlay muted loop playsInline className="w-full h-full object-cover block min-h-[220px]">
+    <video autoPlay muted loop playsInline className="w-full h-full object-cover block">
       <source src={src} type="video/mp4" />
     </video>
     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[hsl(var(--black))]/70 flex flex-col justify-end p-6">
