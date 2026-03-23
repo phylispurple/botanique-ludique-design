@@ -219,7 +219,6 @@ const Navigation = () => {
                   }
                 } else {
                   window.location.href = '/#mediation';
-                }
               }}
               className="font-mono text-[12.5px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90"
               style={{ color: 'rgba(255,255,255,0.55)' }}
