@@ -74,7 +74,7 @@ const blogPosts = [
     slug: "plantes-sauvages-sortie-scolaire-ile-de-france",
     title: "5 plantes sauvages à identifier lors d'une sortie scolaire en Île-de-France",
     excerpt: "Plantain, ortie, lierre terrestre, pissenlit, pâquerette : cinq espèces communes avec anecdotes ethnobotaniques pour enrichir vos sorties nature.",
-    images: [],
+    images: [blogPlantesSauvages],
     date: "2026-03-18",
     category: "Ressources pédagogiques"
   },
