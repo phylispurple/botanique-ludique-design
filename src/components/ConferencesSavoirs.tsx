@@ -123,9 +123,9 @@ const ConferencesSavoirs = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-0">
+          <StaggerContainer className="grid md:grid-cols-3 gap-0" staggerDelay={0.12}>
             {balades.map((balade, idx) => (
-              <AnimatedSection key={idx} delay={idx * 120} className="h-full">
+              <StaggerItem key={idx} className="h-full">
                 <div className="h-full p-9 border border-white/10 -mt-px -ml-px transition-colors duration-300 hover:bg-white/[0.06] flex flex-col">
                   <balade.icon className="w-7 h-7 text-[hsl(73_44%_67%)] mb-4" strokeWidth={1.5} />
                   <h3 className="font-display text-lg uppercase mb-2.5 text-white leading-[1.15]">
@@ -138,9 +138,9 @@ const ConferencesSavoirs = () => {
                     {balade.season}
                   </span>
                 </div>
-              </AnimatedSection>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
 
         {/* Modules pédagogiques */}
