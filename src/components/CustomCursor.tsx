@@ -12,13 +12,13 @@ const CustomCursor = () => {
     if (dotRef.current) {
       dotRef.current.style.width = hovering ? '4px' : '8px';
       dotRef.current.style.height = hovering ? '4px' : '8px';
-      dotRef.current.style.background = hovering ? 'hsl(287, 33%, 36%)' : 'hsl(0, 0%, 10%)';
+      dotRef.current.style.background = hovering ? 'hsl(73, 37%, 44%)' : 'hsl(73, 37%, 44%)';
     }
     if (ringRef.current) {
       ringRef.current.style.width = hovering ? '60px' : '40px';
       ringRef.current.style.height = hovering ? '60px' : '40px';
-      ringRef.current.style.borderColor = hovering ? 'hsl(287, 33%, 36%)' : 'hsl(0, 0%, 10%)';
-      ringRef.current.style.background = hovering ? 'hsla(287, 33%, 36%, 0.1)' : 'transparent';
+      ringRef.current.style.borderColor = hovering ? 'hsl(73, 37%, 44%)' : 'hsl(73, 37%, 44%)';
+      ringRef.current.style.background = hovering ? 'hsla(73, 37%, 44%, 0.1)' : 'transparent';
     }
   }, []);
 
@@ -110,7 +110,7 @@ const CustomCursor = () => {
         style={{
           width: 8,
           height: 8,
-          background: 'hsl(0, 0%, 10%)',
+          background: 'hsl(73, 37%, 44%)',
           transform: 'translate(-50%, -50%)',
           transition: 'width 0.15s, height 0.15s, background 0.15s, opacity 0.2s',
           opacity: 0,
@@ -124,7 +124,7 @@ const CustomCursor = () => {
         style={{
           width: 40,
           height: 40,
-          border: '2px solid hsl(0, 0%, 10%)',
+          border: '2px solid hsl(73, 37%, 44%)',
           background: 'transparent',
           transform: 'translate(-50%, -50%)',
           transition: 'width 0.25s ease-out, height 0.25s ease-out, border-color 0.25s, background 0.2s, opacity 0.2s',
