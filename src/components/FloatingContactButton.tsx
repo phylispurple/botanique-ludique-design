@@ -179,6 +179,7 @@ const FloatingContactButton = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-[hsl(var(--black))]">Email</p>
+                  <p className="text-xs text-muted-foreground">contact@botaniqueludique.com</p>
                 </div>
               </a>
               
