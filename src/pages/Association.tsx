@@ -87,7 +87,7 @@ const Association = () => {
           <AnimatedSection>
             <span className="section-label block mb-4">Notre raison d'être</span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl leading-[0.95] mb-10">
-              Rémunérer la recherche,<br />rendre les savoirs accessibles
+              Un autre paradigme<br />est possible
             </h2>
           </AnimatedSection>
 
@@ -95,10 +95,10 @@ const Association = () => {
             <AnimatedSection delay={100}>
               <div className="space-y-6 text-base font-body leading-relaxed" style={{ color: 'hsl(0 0% 35%)' }}>
                 <p className="text-justify">
-                  Le monde de la recherche — en ethnobotanique, en anthropologie, en sciences du vivant — souffre d'une précarité structurelle. Des chercheurs passionnés, des artistes-praticiens, des spécialistes de disciplines rares peinent à vivre de leur travail, et leurs savoirs restent souvent confinés au milieu académique.
+                  Des chercheurs en écologie, en sciences du vivant, en anthropologie produisent des savoirs essentiels pour comprendre notre rapport à la nature. Des artistes plasticiens, des musiciens explorent ces liens par d'autres voies — sensibles, poétiques, transformatrices. Pourtant, la plupart peinent à vivre de leur travail, et leurs connaissances restent souvent confinées au monde académique ou aux circuits confidentiels.
                 </p>
                 <p className="text-justify">
-                  L'association Botanique Ludique existe pour changer cela : nous finançons directement l'intervention de ces experts afin de les rémunérer justement et de rendre leurs connaissances accessibles à tous, en dehors des circuits universitaires.
+                  L'association Botanique Ludique existe pour leur donner un espace et une rémunération juste. Nous organisons des conférences, des événements culturels et des rencontres où ces intervenants partagent leurs recherches et leurs créations avec le grand public — sans filtre, sans simplification excessive.
                 </p>
               </div>
             </AnimatedSection>
@@ -106,7 +106,7 @@ const Association = () => {
             <AnimatedSection delay={200}>
               <div className="space-y-6 text-base font-body leading-relaxed" style={{ color: 'hsl(0 0% 35%)' }}>
                 <p className="text-justify">
-                  Conférences, ateliers spécialisés, événements culturels : chaque rendez-vous est l'occasion de rémunérer un intervenant et de partager avec le grand public des disciplines comme l'ethnobotanique, la teinture végétale, l'anthropologie des plantes ou les musiques liées au monde végétal. C'est une démarche différente et complémentaire des ateliers créatifs proposés par ailleurs.
+                  C'est une démarche collective et désintéressée, portée par la conviction que ces regards — scientifiques, artistiques, anthropologiques — peuvent nous aider à entrevoir un autre paradigme, à élargir nos connaissances et à repenser notre place dans le vivant. Une mission distincte et complémentaire des ateliers créatifs et de médiation que Vanessa propose par ailleurs dans son activité professionnelle.
                 </p>
                 {/* Bureau */}
                 <div className="pt-6 border-t border-foreground/10">
