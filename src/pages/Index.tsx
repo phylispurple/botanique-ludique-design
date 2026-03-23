@@ -206,31 +206,31 @@ const Index = () => {
 
         <div className="overflow-hidden mb-8">
           <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
-              {[
+            {[
               { src: galleryTerrarium, alt: "Atelier terrarium botanique" },
               { src: galleryTeinture, alt: "Atelier teinture végétale" },
               { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs" },
               { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin" },
               { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama" },
-              { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" }].
-              map((image, index) =>
+              { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" },
+            ].map((image, index) => (
               <div key={`a-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal">
-                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-                </div>
-              ).concat(
-                [
+                <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+            )).concat(
+              [
                 { src: galleryTerrarium, alt: "" },
                 { src: galleryTeinture, alt: "" },
                 { src: galleryFlowerCrown, alt: "" },
                 { src: galleryKokedamaGarden, alt: "" },
                 { src: galleryWorkshopGroup, alt: "" },
-                { src: gallerySachetSenteur, alt: "" }].
-                map((image, index) =>
+                { src: gallerySachetSenteur, alt: "" },
+              ].map((image, index) => (
                 <div key={`b-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal" aria-hidden="true">
-                    <img src={image.src} alt="" className="w-full h-full object-cover" loading="lazy" />
-                  </div>
-                )
-            </div>
+                  <img src={image.src} alt="" className="w-full h-full object-cover" loading="lazy" />
+                </div>
+              ))
+            )}
           </div>
         </div>
 
