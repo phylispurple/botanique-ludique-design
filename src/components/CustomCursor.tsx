@@ -124,7 +124,7 @@ const CustomCursor = () => {
         style={{
           width: 40,
           height: 40,
-          border: '2px solid hsl(0, 0%, 10%)',
+          border: '2px solid hsl(73, 37%, 44%)',
           background: 'transparent',
           transform: 'translate(-50%, -50%)',
           transition: 'width 0.25s ease-out, height 0.25s ease-out, border-color 0.25s, background 0.2s, opacity 0.2s',
