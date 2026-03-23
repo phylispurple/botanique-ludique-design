@@ -68,7 +68,6 @@ const Index = () => {
         data={{}} />
       
 
-      <CustomCursor />
       <Navigation />
 
       {/* ===== HERO ===== */}
