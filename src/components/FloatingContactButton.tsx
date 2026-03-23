@@ -34,36 +34,12 @@ const SimpleLeaf = ({ className }: { className?: string }) => (
 const FloatingContactButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasBeenOpened, setHasBeenOpened] = useState(false);
-  const [showSlidePanel, setShowSlidePanel] = useState(false);
-  const [panelDismissed, setPanelDismissed] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
 
   useEffect(() => {
     if (isOpen && !hasBeenOpened) {
       setHasBeenOpened(true);
     }
   }, [isOpen, hasBeenOpened]);
-
-  // Show slide-in panel after 8 seconds, only once
-  useEffect(() => {
-    if (panelDismissed) return;
-    const timer = setTimeout(() => {
-      if (!panelDismissed && !isOpen) {
-        setShowSlidePanel(true);
-      }
-    }, 8000);
-    return () => clearTimeout(timer);
-  }, [panelDismissed, isOpen]);
-
-  const dismissPanel = () => {
-    setIsClosing(true);
-    // After shrink animation completes, hide panel
-    setTimeout(() => {
-      setShowSlidePanel(false);
-      setPanelDismissed(true);
-      setIsClosing(false);
-    }, 600);
-  };
 
   return (
     <>
