@@ -80,7 +80,7 @@ const Navigation = () => {
 
   return (
     <nav className="sticky top-0 z-[999] border-b-2 border-olive" style={{ background: 'hsl(0 0% 10%)' }}>
-      <div className="px-6 md:px-[60px] h-20 flex items-center justify-between">
+      <div className="px-6 md:px-[60px] h-16 flex items-center justify-between">
         {/* Brand */}
         <Link 
           to="/" 
