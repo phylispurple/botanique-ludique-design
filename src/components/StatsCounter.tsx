@@ -39,7 +39,7 @@ const iconMap = {
 const StatsCounter = () => {
   return (
     <section className="py-12 px-4 bg-sage/5">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-4xl">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => {
             const IconComponent = iconMap[stat.icon];
