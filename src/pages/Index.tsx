@@ -371,6 +371,7 @@ const Index = () => {
 
       <Footer />
       <CookieConsent />
+      <BackToTop />
     </div>);
 
 };
