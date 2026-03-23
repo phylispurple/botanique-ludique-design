@@ -131,9 +131,9 @@ const Pro = () => {
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO 
-        title="Team Building Nature & RSE Paris | Devis 24h ✦ +400 Participants"
-        description="🏢 Team building botanique, animations EHPAD, interventions scolaires à Paris & IDF. +400 participants. Devis gratuit sous 24h."
-        keywords="team building RSE Paris, formation botanique entreprise, intervention collège botanique, animation EHPAD, animation MJC"
+        title="Interventions pédagogiques pour collèges, lycées & entreprises — Botanique Ludique"
+        description="Ateliers de botanique sur mesure pour établissements scolaires, collectivités et entreprises. Team building nature, animations SVT. Île-de-France."
+        keywords="team building botanique, intervention scolaire botanique 78, atelier nature entreprise, animation SVT plantes, sortie pédagogique plantes sauvages"
         canonical="/pro"
       />
       <SchemaOrg 
@@ -141,8 +141,21 @@ const Pro = () => {
         data={{
           serviceType: "Team Building et Animations Botaniques",
           name: "Ateliers Botaniques pour Professionnels",
-          description: "Team building RSE, formations scolaires, animations EHPAD et collectivités à Paris et Île-de-France",
+          description: "Team building botanique, interventions scolaires, animations EHPAD et collectivités à Paris et Île-de-France",
         }}
+      />
+      <SchemaOrg
+        type="FAQPage"
+        data={{
+          questions: faqs.map(f => ({ question: f.q, answer: f.a }))
+        }}
+      />
+      <SchemaOrg
+        type="BreadcrumbList"
+        data={{ items: [
+          { name: "Accueil", url: "https://botaniqueludique.com/" },
+          { name: "Pro", url: "https://botaniqueludique.com/pro" }
+        ]}}
       />
       <Navigation />
       
