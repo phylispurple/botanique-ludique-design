@@ -194,17 +194,18 @@ const Index = () => {
       
 
       {/* ===== GALERIE — Défilement continu ===== */}
-      <section className="py-24 px-6 bg-[hsl(var(--cream-dark))]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 bg-[hsl(var(--cream-dark))]">
+        <div className="max-w-6xl mx-auto px-6">
           <AnimatedSection className="text-center mb-12">
             <span className="section-label block mb-3">Portfolio</span>
             <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
               Les plus belles créations
             </h2>
           </AnimatedSection>
+        </div>
 
-          <div className="overflow-hidden mb-8">
-            <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
+        <div className="overflow-hidden mb-8">
+          <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
               {[
               { src: galleryTerrarium, alt: "Atelier terrarium botanique" },
               { src: galleryTeinture, alt: "Atelier teinture végétale" },
