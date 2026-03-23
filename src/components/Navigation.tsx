@@ -347,7 +347,7 @@ const Navigation = () => {
                     → Toutes nos offres pro
                   </Link>
                   {proCategories.map((cat) => (
-                    <Link key={cat.id} to={`/pro#${cat.id}`}
+                    <Link key={cat.id} to={cat.href}
                       className="block text-xs transition-colors" style={{ color: 'rgba(255,255,255,0.45)' }}
                       onClick={() => { setIsOpen(false); setProOpen(false); }}>
                       {cat.name}
