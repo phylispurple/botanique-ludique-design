@@ -1146,4 +1146,35 @@
   <url><loc>https://botaniqueludique.com/mediation-culturelle-nature-hauts-de-seine</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://botaniqueludique.com/mediation-culturelle-nature-val-d-oise</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
+  <!-- Pages manquantes ajoutées -->
+  <url>
+    <loc>https://botaniqueludique.com/association</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/etablissements-scolaires</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/blog/botanique-projet-pedagogique-college</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/blog/plantes-sauvages-sortie-scolaire-ile-de-france</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/blog/mediation-scientifique-definition-exemples</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
