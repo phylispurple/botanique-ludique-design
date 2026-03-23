@@ -30,10 +30,10 @@ const cards = [
 },
 {
   icon: Sprout,
-  title: "Notre Mission",
-  desc: "Financer l'intervention de chercheurs et artistes méconnus, organiser des événements culturels et scientifiques, produire des contenus de sensibilisation accessibles à tous.",
-  linkText: "",
-  disabled: true
+    title: "Notre Mission",
+    desc: "Financer et rémunérer des chercheurs, artistes et praticiens dont les disciplines sont méconnues ou inaccessibles, pour soutenir un secteur de la recherche trop souvent précaire.",
+    linkText: "",
+    disabled: true
 }];
 
 

@@ -30,8 +30,8 @@ const cards = [
   {
     icon: Sprout,
     title: "Notre Mission",
-    desc: "Concevoir et animer des ateliers pédagogiques, organiser des événements culturels et scientifiques, intervenir en milieu scolaire et social, développer des partenariats institutionnels, produire des contenus de sensibilisation.",
-    link: "/about",
+    desc: "Financer l'intervention de chercheurs et d'artistes méconnus, rendre accessibles des disciplines souvent réservées au milieu académique, et contribuer à une meilleure rémunération du secteur de la recherche.",
+    link: "/association",
     linkText: "En savoir plus →",
     disabled: false,
   },
