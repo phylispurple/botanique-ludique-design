@@ -154,7 +154,7 @@ const Contact = () => {
           </AnimatedSection>
           <AnimatedSection delay={100}>
             <p className="text-lg leading-[1.7] text-[hsl(var(--black))]/70 max-w-[550px]">
-              Atelier, conférence, médiation, balade botanique… Décrivez votre projet et nous vous répondons sous 24h.
+              Atelier, conférence, médiation, balade botanique… Décrivez votre projet, on vous répond au plus vite.
             </p>
           </AnimatedSection>
         </div>
