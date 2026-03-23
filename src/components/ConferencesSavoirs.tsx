@@ -70,8 +70,11 @@ const ConferencesSavoirs = () => {
           <h2 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.95] tracking-[-2px] text-white mb-5">
             Conférences<br />& Savoirs
           </h2>
-          <p className="text-lg leading-[1.7] text-white/80 max-w-[620px] mb-14 text-justify">
-            Diplômée en anthropologie et spécialiste en ethnobotanique, Vanessa Charlery intervient auprès des institutions culturelles, éducatives et scientifiques pour des conférences, cours et interventions sur mesure.
+          <p className="text-lg leading-[1.7] text-white/80 max-w-[620px] mb-6 text-justify">
+            Diplômée en anthropologie et spécialiste en ethnobotanique, Vanessa Charlery intervient auprès des institutions culturelles, éducatives et scientifiques pour des conférences, cours et interventions sur mesure. Conférence botanique en Île-de-France, balade botanique guidée dans les Yvelines, vulgarisation scientifique sur les réseaux sociaux : notre expertise couvre un large spectre de médiation.
+          </p>
+          <p className="text-sm leading-[1.7] text-white/60 max-w-[620px] mb-14 text-justify">
+            Découvrez nos <Link to="/workshops" className="underline text-[hsl(73_44%_67%)] hover:text-white transition-colors">ateliers botaniques pour tous publics</Link> ou nos <Link to="/etablissements-scolaires" className="underline text-[hsl(73_44%_67%)] hover:text-white transition-colors">interventions pédagogiques pour établissements scolaires</Link>.
           </p>
         </AnimatedSection>
 
