@@ -75,7 +75,7 @@ const Association = () => {
               notre regard
             </h1>
             <p className="text-lg md:text-xl font-body leading-relaxed max-w-2xl" style={{ color: 'rgba(255,255,255,0.7)' }}>
-              L'association Botanique Ludique ne propose pas d'ateliers créatifs, c'est l'activité professionnelle de sa fondatrice. L'association, elle, a une vocation différente : financer et rémunérer des chercheurs, artistes plasticiens et musiciens capables de nous ouvrir à d'autres façons de penser le vivant.
+              L'association Botanique Ludique a une vocation spécifique : financer et rémunérer des chercheurs, artistes plasticiens et musiciens capables de nous ouvrir à d'autres façons de penser le vivant.
             </p>
           </AnimatedSection>
         </div>
