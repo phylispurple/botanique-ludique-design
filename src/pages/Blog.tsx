@@ -66,7 +66,7 @@ const blogPosts = [
     slug: "botanique-projet-pedagogique-college",
     title: "Comment intégrer la botanique dans un projet pédagogique de collège",
     excerpt: "Guide pratique pour enseignants : formats d'intervention, liens avec les programmes SVT et EMC, exemples concrets en Île-de-France.",
-    images: [],
+    images: [blogBotaniqueCollege],
     date: "2026-03-20",
     category: "Ressources pédagogiques"
   },
