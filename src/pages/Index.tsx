@@ -6,7 +6,7 @@ import CookieConsent from "@/components/CookieConsent";
 import Testimonials from "@/components/Testimonials";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import Marquee from "@/components/Marquee";
-import CustomCursor from "@/components/CustomCursor";
+
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { SEO } from "@/components/SEO";
