@@ -271,15 +271,16 @@ const Index = () => {
 
 
       {/* ===== PARTENAIRES — Défilement continu ===== */}
-      <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimatedSection>
             <h3 className="font-display text-2xl md:text-3xl uppercase text-center mb-10 tracking-[-1px]">
               Ils nous font confiance
             </h3>
           </AnimatedSection>
-          <div className="overflow-hidden">
-            <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '20s' }}>
+        </div>
+        <div className="overflow-hidden">
+          <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '20s' }}>
               {[
               { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
               { src: "/logos/mjc-vesinet.jpg", alt: "MJC du Vésinet" },
