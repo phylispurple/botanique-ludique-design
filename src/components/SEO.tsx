@@ -21,7 +21,7 @@ export const SEO = ({
   city = "Paris",
   region = "FR-IDF"
 }: SEOProps) => {
-  const fullTitle = `${title} | Botanique Ludique`;
+  const fullTitle = title.includes('Botanique Ludique') ? title : `${title} | Botanique Ludique`;
   const siteUrl = "https://botaniqueludique.com";
   const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
 

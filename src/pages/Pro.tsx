@@ -66,7 +66,7 @@ const Pro = () => {
       icon: Building2,
       title: "Entreprises",
       subtitle: "Team building & RSE",
-      description: "Cohésion d'équipe, séminaires nature, démarche RSE concrète et bien-être au travail.",
+      description: "Cohésion d'équipe, séminaires nature, démarche RSE concrète et bien-être au travail. Nos ateliers de team building botanique sont conçus pour renforcer les liens entre collaborateurs tout en sensibilisant à l'écologie.",
       benefits: ["Kokedama d'équipe — 2h30", "Teinture végétale collaborative — 3h", "Terrarium en équipe — 2h", "Vannerie & artisanat — 3h30"],
       id: "entreprises",
       accent: "olive"
@@ -75,7 +75,7 @@ const Pro = () => {
       icon: GraduationCap,
       title: "Scolaires",
       subtitle: "Collèges, lycées, BTS",
-      description: "Parcours de sensibilisation environnementale, ethnobotanique et biodiversité.",
+      description: "Intervention scolaire botanique adaptée aux programmes SVT, EMC et géographie. Sortie pédagogique plantes sauvages et médiation scientifique scolaire pour collèges et lycées en Yvelines (78) et Île-de-France.",
       benefits: ["Espèces exotiques envahissantes", "Biodiversité urbaine et sauvage", "Ethnobotanique", "Changement climatique"],
       id: "scolaires",
       accent: "green"
@@ -131,9 +131,9 @@ const Pro = () => {
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO 
-        title="Team Building Nature & RSE Paris | Devis 24h ✦ +400 Participants"
-        description="🏢 Team building botanique, animations EHPAD, interventions scolaires à Paris & IDF. +400 participants. Devis gratuit sous 24h."
-        keywords="team building RSE Paris, formation botanique entreprise, intervention collège botanique, animation EHPAD, animation MJC"
+        title="Interventions pédagogiques pour collèges, lycées & entreprises — Botanique Ludique"
+        description="Ateliers de botanique sur mesure pour établissements scolaires, collectivités et entreprises. Team building nature, animations SVT. Île-de-France."
+        keywords="team building botanique, intervention scolaire botanique 78, atelier nature entreprise, animation SVT plantes, sortie pédagogique plantes sauvages"
         canonical="/pro"
       />
       <SchemaOrg 
@@ -141,8 +141,21 @@ const Pro = () => {
         data={{
           serviceType: "Team Building et Animations Botaniques",
           name: "Ateliers Botaniques pour Professionnels",
-          description: "Team building RSE, formations scolaires, animations EHPAD et collectivités à Paris et Île-de-France",
+          description: "Team building botanique, interventions scolaires, animations EHPAD et collectivités à Paris et Île-de-France",
         }}
+      />
+      <SchemaOrg
+        type="FAQPage"
+        data={{
+          questions: faqs.map(f => ({ question: f.q, answer: f.a }))
+        }}
+      />
+      <SchemaOrg
+        type="BreadcrumbList"
+        data={{ items: [
+          { name: "Accueil", url: "https://botaniqueludique.com/" },
+          { name: "Pro", url: "https://botaniqueludique.com/pro" }
+        ]}}
       />
       <Navigation />
       
@@ -159,9 +172,13 @@ const Pro = () => {
                 Botanique<br />
                 <span className="text-[hsl(var(--olive))]">sur mesure</span>
               </h1>
-              <p className="text-lg md:text-xl leading-relaxed text-[hsl(var(--black))]/70 mb-8 max-w-lg">
-                Team building, formations scolaires, animations pour collectivités et EHPAD. 
-                Des interventions botaniques à Paris et en Île-de-France.
+              <p className="text-lg md:text-xl leading-relaxed text-[hsl(var(--black))]/70 mb-4 max-w-lg">
+                Team building botanique, interventions scolaires, animations pour collectivités et EHPAD. 
+                Des ateliers nature pour entreprises à Paris et en Île-de-France.
+              </p>
+              <p className="text-sm leading-relaxed text-[hsl(var(--black))]/60 mb-8 max-w-lg">
+                Découvrez nos <Link to="/etablissements-scolaires" className="underline text-[hsl(var(--olive))] hover:text-[hsl(var(--black))] transition-colors">interventions pédagogiques pour collèges et lycées</Link> ou 
+                {" "}<Link to="/contact" className="underline text-[hsl(var(--olive))] hover:text-[hsl(var(--black))] transition-colors">contactez-nous pour un devis personnalisé</Link>.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-10">

@@ -58,6 +58,30 @@ const blogPosts = [
     images: [blogCarouselBocal, blogCarouselFil],
     date: "2025-12-12",
     category: "Tutoriels"
+  },
+  {
+    slug: "botanique-projet-pedagogique-college",
+    title: "Comment intégrer la botanique dans un projet pédagogique de collège",
+    excerpt: "Guide pratique pour enseignants : formats d'intervention, liens avec les programmes SVT et EMC, exemples concrets en Île-de-France.",
+    images: [blogFilmsPoster],
+    date: "2026-03-20",
+    category: "Ressources pédagogiques"
+  },
+  {
+    slug: "plantes-sauvages-sortie-scolaire-ile-de-france",
+    title: "5 plantes sauvages à identifier lors d'une sortie scolaire en Île-de-France",
+    excerpt: "Plantain, ortie, lierre terrestre, pissenlit, pâquerette : cinq espèces communes avec anecdotes ethnobotaniques pour enrichir vos sorties nature.",
+    images: [blogFilmsPoster],
+    date: "2026-03-18",
+    category: "Ressources pédagogiques"
+  },
+  {
+    slug: "mediation-scientifique-definition-exemples",
+    title: "Qu'est-ce que la médiation scientifique ? Définition et exemples",
+    excerpt: "Définition, objectifs et exemples concrets de médiation scientifique en botanique. Conférences, ateliers, balades guidées.",
+    images: [blogFilmsPoster],
+    date: "2026-03-15",
+    category: "Ressources pédagogiques"
   }
 ];
 

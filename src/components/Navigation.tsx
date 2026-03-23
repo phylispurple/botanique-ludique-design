@@ -54,11 +54,11 @@ const Navigation = () => {
   ];
 
   const proCategories = [
-    { name: "Entreprises & Team Building", id: "entreprises" },
-    { name: "Établissements Scolaires", id: "scolaires" },
-    { name: "Collectivités & Associations", id: "collectivites" },
-    { name: "EHPAD & Santé", id: "ehpad" },
-    { name: "Événementiel", id: "evenementiel" },
+    { name: "Entreprises & Team Building", id: "entreprises", href: "/pro#entreprises" },
+    { name: "Établissements Scolaires", id: "scolaires", href: "/etablissements-scolaires" },
+    { name: "Collectivités & Associations", id: "collectivites", href: "/pro#collectivites" },
+    { name: "EHPAD & Santé", id: "ehpad", href: "/pro#ehpad" },
+    { name: "Événementiel", id: "evenementiel", href: "/pro#evenementiel" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -182,25 +182,27 @@ const Navigation = () => {
             }`} style={{ zIndex: 100 }}>
               <div className="py-2">
                 {proCategories.map((cat) => (
-                  <Link
-                    key={cat.id}
-                    to={`/pro#${cat.id}`}
-                    className="block px-4 py-2 text-sm font-body hover:bg-olive/10 transition-colors"
-                    style={{ color: 'hsl(0 0% 10%)' }}
-                    onClick={() => {
-                      setProOpen(false);
-                      setTimeout(() => {
-                        const el = document.getElementById(cat.id);
-                        if (el) {
-                          const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
-                          window.scrollTo({ top: pos, behavior: 'smooth' });
+                    <Link
+                      key={cat.id}
+                      to={cat.href}
+                      className="block px-4 py-2 text-sm font-body hover:bg-olive/10 transition-colors"
+                      style={{ color: 'hsl(0 0% 10%)' }}
+                      onClick={() => {
+                        setProOpen(false);
+                        if (cat.href.includes('#')) {
+                          setTimeout(() => {
+                            const el = document.getElementById(cat.id);
+                            if (el) {
+                              const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                              window.scrollTo({ top: pos, behavior: 'smooth' });
+                            }
+                          }, 100);
                         }
-                      }, 100);
-                    }}
-                  >
-                    {cat.name}
-                  </Link>
-                ))}
+                      }}
+                    >
+                      {cat.name}
+                    </Link>
+                  ))}
               </div>
             </div>
           </li>
@@ -345,7 +347,7 @@ const Navigation = () => {
                     → Toutes nos offres pro
                   </Link>
                   {proCategories.map((cat) => (
-                    <Link key={cat.id} to={`/pro#${cat.id}`}
+                    <Link key={cat.id} to={cat.href}
                       className="block text-xs transition-colors" style={{ color: 'rgba(255,255,255,0.45)' }}
                       onClick={() => { setIsOpen(false); setProOpen(false); }}>
                       {cat.name}

@@ -28,6 +28,9 @@ import BlogMonsteraColonialisme from "./pages/BlogMonsteraColonialisme";
 import BlogPalmiersHaussmann from "./pages/BlogPalmiersHaussmann";
 import BlogTerrariumBiopiraterie from "./pages/BlogTerrariumBiopiraterie";
 import BlogFilmsNature from "./pages/BlogFilmsNature";
+import BlogBotaniqueCollege from "./pages/BlogBotaniqueCollege";
+import BlogPlantesSauvagesSortie from "./pages/BlogPlantesSauvagesSortie";
+import BlogMediationScientifique from "./pages/BlogMediationScientifique";
 import LandingSeniorsEHPAD from "./pages/LandingSeniorsEHPAD";
 import LandingCSE from "./pages/LandingCSE";
 import LandingEcoles from "./pages/LandingEcoles";
@@ -80,6 +83,7 @@ import AtelierBotaniqueAdulteValDOise from "./pages/AtelierBotaniqueAdulteValDOi
 import DemoCreative from "./pages/DemoCreative";
 import DemoManus from "./pages/DemoManus";
 import Association from "./pages/Association";
+import EtablissementsScolaires from "./pages/EtablissementsScolaires";
 import MediationScientifiqueIDF from "./pages/MediationScientifiqueIDF";
 import MediationScientifiqueParis from "./pages/MediationScientifiqueParis";
 import MediationScientifiqueYvelines from "./pages/MediationScientifiqueYvelines";
@@ -117,6 +121,7 @@ const App = () => (
           <Route path="/index.html" element={<Navigate to="/" replace />} />
           <Route path="/about" element={<About />} />
           <Route path="/association" element={<Association />} />
+          <Route path="/etablissements-scolaires" element={<EtablissementsScolaires />} />
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/pro" element={<Pro />} />
           {/* Redirects from old pages to new /pro page */}
@@ -138,6 +143,9 @@ const App = () => (
           <Route path="/blog/palmiers-architecture-haussmannienne-colonialisme" element={<BlogPalmiersHaussmann />} />
           <Route path="/blog/terrarium-biopiraterie-histoire-coloniale" element={<BlogTerrariumBiopiraterie />} />
           <Route path="/blog/10-films-nature-idees-fausses" element={<BlogFilmsNature />} />
+          <Route path="/blog/botanique-projet-pedagogique-college" element={<BlogBotaniqueCollege />} />
+          <Route path="/blog/plantes-sauvages-sortie-scolaire-ile-de-france" element={<BlogPlantesSauvagesSortie />} />
+          <Route path="/blog/mediation-scientifique-definition-exemples" element={<BlogMediationScientifique />} />
           <Route path="/actualites" element={<Blog />} />
           <Route path="/animation-seniors-ehpad" element={<LandingSeniorsEHPAD />} />
           <Route path="/animation-cse-entreprise" element={<LandingCSE />} />

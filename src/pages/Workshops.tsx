@@ -5,6 +5,7 @@ import FloatingIllustrations from "@/components/FloatingIllustrations";
 import WorkshopFilters, { WorkshopCategory } from "@/components/WorkshopFilters";
 import BackToTop from "@/components/BackToTop";
 import { SEO } from "@/components/SEO";
+import { SchemaOrg } from "@/components/SchemaOrg";
 import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link, useLocation } from "react-router-dom";
@@ -300,10 +301,17 @@ const Workshops = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="15+ Ateliers Nature à Paris & IDF | Dès 25€ ✦ Tout Public"
-        description="Découvrez nos 15 ateliers botaniques : kokedama, teinture végétale, terrarium, vannerie. Dès 25€ à Paris, Yvelines (78), Hauts-de-Seine (92) & Val-d'Oise (95). Réservez !"
-        keywords="atelier botanique Paris, atelier botanique Yvelines, atelier botanique Hauts-de-Seine, atelier botanique Val-d'Oise, kokedama Paris, teinture végétale Paris, atelier Chatou, atelier Nanterre, atelier Cergy, vannerie 92, terrarium Paris"
+        title="Ateliers de botanique pour tous — Enfants, adultes, scolaires · Botanique Ludique"
+        description="Ateliers ludiques et pédagogiques autour des plantes. Pour collèges, lycées, familles et entreprises en Île-de-France. Réservation en ligne."
+        keywords="atelier botanique Paris, atelier botanique Yvelines, atelier botanique Hauts-de-Seine, atelier botanique Val-d'Oise, kokedama Paris, teinture végétale Paris, atelier scolaire botanique"
         canonical="/workshops"
+      />
+      <SchemaOrg
+        type="BreadcrumbList"
+        data={{ items: [
+          { name: "Accueil", url: "https://botaniqueludique.com/" },
+          { name: "Ateliers", url: "https://botaniqueludique.com/workshops" }
+        ]}}
       />
       <FloatingIllustrations />
       <Navigation />
