@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import WorkshopFilters, { WorkshopCategory } from "@/components/WorkshopFilters";
+import BackToTop from "@/components/BackToTop";
 import { SEO } from "@/components/SEO";
 import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -468,6 +469,7 @@ const Workshops = () => {
         </div>
       </main>
 
+      <BackToTop />
       <Footer />
     </div>
   );

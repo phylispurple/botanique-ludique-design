@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
+import BackToTop from "@/components/BackToTop";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -248,6 +249,7 @@ const Gallery = () => {
         </DialogContent>
       </Dialog>
 
+      <BackToTop />
       <Footer />
     </div>
   );

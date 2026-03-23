@@ -1,16 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
-import { Users, Building2, Heart, Leaf, Calendar, Mail, Phone, CheckCircle, Loader2, Clock, GraduationCap, ArrowRight, ArrowUp } from "lucide-react";
+import { Users, Building2, Heart, Calendar, Mail, Phone, Loader2, Clock, GraduationCap, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
 import AnimatedSection from "@/components/AnimatedSection";
+import BackToTop from "@/components/BackToTop";
 
 const quoteSchema = z.object({
   name: z.string().trim().min(1, "Le nom est requis").max(100),
@@ -35,12 +36,6 @@ const Pro = () => {
     date: "",
     message: "",
   });
-
-  useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 400);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -543,17 +538,7 @@ const Pro = () => {
         </div>
       </section>
 
-      {/* Scroll to top */}
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className={`fixed bottom-6 right-6 z-40 w-12 h-12 border-brutal bg-[hsl(var(--cream))] text-[hsl(var(--black))] shadow-brutal flex items-center justify-center transition-all duration-300 hover:shadow-brutal-lg hover:-translate-y-1 ${
-          showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-        }`}
-        aria-label="Remonter en haut"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </button>
-
+      <BackToTop />
       <Footer />
     </div>
   );
