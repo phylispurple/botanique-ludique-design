@@ -81,7 +81,7 @@ const BlogMediationScientifique = () => {
               <p>
                 Concrètement, cela se traduit par :
               </p>
-              <ul className="list-disc pl-6 space-y-2">
+              <ul className="list-none pl-0 space-y-2">
                 <li><strong>Des conférences</strong> avec des chercheurs et artistes sur l'écologie, la biodiversité et l'anthropologie du vivant — une forme de conférence botanique en Île-de-France accessible à tous.</li>
                 <li><strong>Des ateliers pratiques</strong> où la création manuelle (kokedama, terrarium, teinture végétale) est un prétexte pour transmettre des savoirs scientifiques et culturels.</li>
                 <li><strong>Des balades botaniques guidées</strong> dans les Yvelines, à Paris et en Île-de-France, pour apprendre à identifier les plantes dans leur milieu.</li>
