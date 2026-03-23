@@ -176,7 +176,7 @@ const Index = () => {
           </AnimatedSection>
 
           {/* Stats */}
-          <AnimatedSection direction="right" delay={150}>
+          <AnimatedSection direction="right" delay={150} className="self-end">
             <div className="grid grid-cols-2 gap-0">
               {stats.map((stat, index) => {
                 const IconComponent = stat.icon;
