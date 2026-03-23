@@ -140,7 +140,7 @@ const Index = () => {
 
       {/* ===== PRÉSENTATION + STATS ===== */}
       <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-end">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           {/* Text */}
           <AnimatedSection direction="left">
             <div>
