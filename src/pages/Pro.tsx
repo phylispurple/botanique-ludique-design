@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
-import { Users, Building2, Heart, Leaf, Calendar, Mail, Phone, CheckCircle, Loader2, Clock, GraduationCap, ArrowRight, ArrowDown } from "lucide-react";
+import { Users, Building2, Heart, Leaf, Calendar, Mail, Phone, CheckCircle, Loader2, Clock, GraduationCap, ArrowRight, ArrowUp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
@@ -25,6 +25,7 @@ const quoteSchema = z.object({
 const Pro = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     organization: "",
@@ -34,6 +35,12 @@ const Pro = () => {
     date: "",
     message: "",
   });
+
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 400);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -167,7 +174,7 @@ const Pro = () => {
                   href="#devis"
                   className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--black))] inline-flex items-center gap-2 justify-center"
                 >
-                  Demander un devis <ArrowRight className="w-4 h-4" />
+                  Nous écrire <ArrowRight className="w-4 h-4" />
                 </a>
                 <a 
                   href="mailto:contact@botaniqueludique.com"
@@ -188,11 +195,6 @@ const Pro = () => {
                   alt="Interventions botaniques professionnelles"
                   className="w-full h-[400px] md:h-[500px] object-cover"
                 />
-              </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-5 -left-5 bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-brutal px-6 py-4 shadow-brutal">
-                <p className="font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--olive-light))] mb-1">Réponse</p>
-                <p className="font-display text-2xl">24H</p>
               </div>
             </div>
           </div>
@@ -260,7 +262,7 @@ const Pro = () => {
                     </ul>
 
                     <div className="flex items-center gap-2 text-[hsl(var(--olive-light))] font-mono-brand text-[10px] uppercase tracking-[2px] group-hover:gap-3 transition-all mt-auto">
-                      Demander un devis <ArrowRight className="w-3.5 h-3.5" />
+                      En savoir plus <ArrowRight className="w-3.5 h-3.5" />
                     </div>
                   </div>
                 </AnimatedSection>
@@ -363,7 +365,7 @@ const Pro = () => {
             {/* Left info */}
             <div className="lg:col-span-2">
               <AnimatedSection>
-                <span className="section-label block mb-4">Devis gratuit</span>
+                <span className="section-label block mb-4">Nous écrire</span>
                 <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.9] tracking-[-1px] text-[hsl(var(--black))] mb-6">
                   Parlons de<br />
                   <span className="text-[hsl(var(--olive))]">votre projet</span>
@@ -540,6 +542,17 @@ const Pro = () => {
           </div>
         </div>
       </section>
+
+      {/* Scroll to top */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className={`fixed bottom-6 left-6 z-50 w-12 h-12 border-brutal bg-[hsl(var(--cream))] text-[hsl(var(--black))] shadow-brutal flex items-center justify-center transition-all duration-300 hover:shadow-brutal-lg hover:-translate-y-1 ${
+          showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+        }`}
+        aria-label="Remonter en haut"
+      >
+        <ArrowUp className="w-5 h-5" />
+      </button>
 
       <Footer />
     </div>
