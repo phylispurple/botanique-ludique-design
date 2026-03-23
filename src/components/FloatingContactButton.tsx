@@ -119,9 +119,9 @@ const FloatingContactButton = () => {
 
             {/* Quick contact */}
             <div className="border-t border-[hsl(var(--cream))]/10 pt-6 space-y-3">
-              <a href="mailto:botaniqueludique@gmail.com" className="flex items-center gap-3 text-sm text-[hsl(var(--cream))]/60 hover:text-[hsl(var(--cream))] transition-colors">
+              <a href="mailto:contact@botaniqueludique.com" className="flex items-center gap-3 text-sm text-[hsl(var(--cream))]/60 hover:text-[hsl(var(--cream))] transition-colors">
                 <Mail className="w-4 h-4 text-[hsl(var(--olive-light))]" />
-                botaniqueludique@gmail.com
+                contact@botaniqueludique.com
               </a>
               <a href="tel:+33609831606" className="flex items-center gap-3 text-sm text-[hsl(var(--cream))]/60 hover:text-[hsl(var(--cream))] transition-colors">
                 <Phone className="w-4 h-4 text-[hsl(var(--olive-light))]" />
