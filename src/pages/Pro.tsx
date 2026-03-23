@@ -66,7 +66,7 @@ const Pro = () => {
       icon: Building2,
       title: "Entreprises",
       subtitle: "Team building & RSE",
-      description: "Cohésion d'équipe, séminaires nature, démarche RSE concrète et bien-être au travail.",
+      description: "Cohésion d'équipe, séminaires nature, démarche RSE concrète et bien-être au travail. Nos ateliers de team building botanique sont conçus pour renforcer les liens entre collaborateurs tout en sensibilisant à l'écologie.",
       benefits: ["Kokedama d'équipe — 2h30", "Teinture végétale collaborative — 3h", "Terrarium en équipe — 2h", "Vannerie & artisanat — 3h30"],
       id: "entreprises",
       accent: "olive"
@@ -75,7 +75,7 @@ const Pro = () => {
       icon: GraduationCap,
       title: "Scolaires",
       subtitle: "Collèges, lycées, BTS",
-      description: "Parcours de sensibilisation environnementale, ethnobotanique et biodiversité.",
+      description: "Intervention scolaire botanique adaptée aux programmes SVT, EMC et géographie. Sortie pédagogique plantes sauvages et médiation scientifique scolaire pour collèges et lycées en Yvelines (78) et Île-de-France.",
       benefits: ["Espèces exotiques envahissantes", "Biodiversité urbaine et sauvage", "Ethnobotanique", "Changement climatique"],
       id: "scolaires",
       accent: "green"
