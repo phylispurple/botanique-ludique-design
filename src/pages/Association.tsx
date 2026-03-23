@@ -87,18 +87,18 @@ const Association = () => {
           <AnimatedSection>
             <span className="section-label block mb-4">Notre raison d'être</span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl leading-[0.95] mb-10">
-              Mettre en lumière<br />des savoirs méconnus
+              Rémunérer la recherche,<br />rendre les savoirs accessibles
             </h2>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 gap-12 md:gap-16">
             <AnimatedSection delay={100}>
               <div className="space-y-6 text-base font-body leading-relaxed" style={{ color: 'hsl(0 0% 35%)' }}>
-                <p className="text-justify">L'objectif principal de l'association Botanique Ludique est de financer et organiser l'intervention de chercheurs, artistes et praticiens, parfois méconnus du grand public, afin de mettre en avant leurs savoirs et leurs disciplines. Ethnobotanistes, anthropologues, teinturiers, musiciens, artisans du végétal : autant de voix que nous souhaitons faire entendre.
-
+                <p className="text-justify">
+                  Le monde de la recherche — en ethnobotanique, en anthropologie, en sciences du vivant — souffre d'une précarité structurelle. Des chercheurs passionnés, des artistes-praticiens, des spécialistes de disciplines rares peinent à vivre de leur travail, et leurs savoirs restent souvent confinés au milieu académique.
                 </p>
                 <p className="text-justify">
-                  Pour cela, l'association organise des ateliers, des conférences, des événements culturels et artistiques ouverts à tous. Chaque rendez-vous est une occasion de croiser les regards entre sciences du vivant, sciences humaines et pratiques créatives, et de rendre ces savoirs accessibles au plus grand nombre.
+                  L'association Botanique Ludique existe pour changer cela : nous finançons directement l'intervention de ces experts afin de les rémunérer justement et de rendre leurs connaissances accessibles à tous, en dehors des circuits universitaires.
                 </p>
               </div>
             </AnimatedSection>
