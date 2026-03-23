@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
+import { StaggerContainer, StaggerItem } from "@/components/StaggerAnimation";
 import { GraduationCap, Sprout, Microscope, Landmark, Users, Building2, Leaf, Globe } from "lucide-react";
 
 const conferences = [
