@@ -94,6 +94,7 @@ const App = () => (
           <FloatingContactButton />
           <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/index.html" element={<Navigate to="/" replace />} />
           <Route path="/about" element={<About />} />
           <Route path="/association" element={<Association />} />
           <Route path="/workshops" element={<Workshops />} />
