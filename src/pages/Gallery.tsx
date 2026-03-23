@@ -249,6 +249,7 @@ const Gallery = () => {
         </DialogContent>
       </Dialog>
 
+      <BackToTop />
       <Footer />
     </div>
   );

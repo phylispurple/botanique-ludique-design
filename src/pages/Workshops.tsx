@@ -469,6 +469,7 @@ const Workshops = () => {
         </div>
       </main>
 
+      <BackToTop />
       <Footer />
     </div>
   );
