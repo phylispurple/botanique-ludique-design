@@ -80,6 +80,7 @@ import AtelierBotaniqueAdulteValDOise from "./pages/AtelierBotaniqueAdulteValDOi
 import DemoCreative from "./pages/DemoCreative";
 import DemoManus from "./pages/DemoManus";
 import Association from "./pages/Association";
+import EtablissementsScolaires from "./pages/EtablissementsScolaires";
 import MediationScientifiqueIDF from "./pages/MediationScientifiqueIDF";
 import MediationScientifiqueParis from "./pages/MediationScientifiqueParis";
 import MediationScientifiqueYvelines from "./pages/MediationScientifiqueYvelines";
