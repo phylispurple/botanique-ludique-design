@@ -31,7 +31,7 @@ const cards = [
 {
   icon: Sprout,
     title: "Notre Mission",
-    desc: "Soutenir des chercheurs, artistes plasticiens et musiciens dont les travaux en écologie et sciences du vivant nous ouvrent à d'autres paradigmes — une démarche collective et désintéressée.",
+    desc: "Soutenir des chercheurs, artistes plasticiens et musiciens dont les travaux en écologie et sciences du vivant nous ouvrent à d'autres paradigmes, une démarche collective et désintéressée.",
     linkText: "",
     disabled: true
 }];
