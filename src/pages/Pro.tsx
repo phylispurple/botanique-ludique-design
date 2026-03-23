@@ -538,17 +538,7 @@ const Pro = () => {
         </div>
       </section>
 
-      {/* Scroll to top */}
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className={`fixed bottom-6 right-6 z-40 w-12 h-12 border-brutal bg-[hsl(var(--cream))] text-[hsl(var(--black))] shadow-brutal flex items-center justify-center transition-all duration-300 hover:shadow-brutal-lg hover:-translate-y-1 ${
-          showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-        }`}
-        aria-label="Remonter en haut"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </button>
-
+      <BackToTop />
       <Footer />
     </div>
   );
