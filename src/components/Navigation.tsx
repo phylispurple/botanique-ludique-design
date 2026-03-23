@@ -54,11 +54,11 @@ const Navigation = () => {
   ];
 
   const proCategories = [
-    { name: "Entreprises & Team Building", id: "entreprises" },
-    { name: "Établissements Scolaires", id: "scolaires" },
-    { name: "Collectivités & Associations", id: "collectivites" },
-    { name: "EHPAD & Santé", id: "ehpad" },
-    { name: "Événementiel", id: "evenementiel" },
+    { name: "Entreprises & Team Building", id: "entreprises", href: "/pro#entreprises" },
+    { name: "Établissements Scolaires", id: "scolaires", href: "/etablissements-scolaires" },
+    { name: "Collectivités & Associations", id: "collectivites", href: "/pro#collectivites" },
+    { name: "EHPAD & Santé", id: "ehpad", href: "/pro#ehpad" },
+    { name: "Événementiel", id: "evenementiel", href: "/pro#evenementiel" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
