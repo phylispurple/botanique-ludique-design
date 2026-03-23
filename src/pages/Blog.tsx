@@ -17,6 +17,9 @@ import blogPalmiersAlger from "@/assets/blog-palmiers-jardin-hamma-alger.jpg";
 import blogTerrariumModerne from "@/assets/blog-terrarium-moderne.jpg";
 import blogTerrariumWardian from "@/assets/blog-terrarium-wardian-case.jpg";
 import blogFilmsPoster from "@/assets/blog-films-nature-poster.jpg";
+import blogBotaniqueCollege from "@/assets/blog-botanique-college.jpg";
+import blogPlantesSauvages from "@/assets/blog-plantes-sauvages.jpg";
+import blogMediationScientifique from "@/assets/blog-mediation-scientifique.jpg";
 
 const blogPosts = [
   {
