@@ -60,7 +60,7 @@ const modules = [
 
 const ConferencesSavoirs = () => {
   return (
-    <section className="bg-[hsl(210_41%_24%)] text-[hsl(var(--cream))]">
+    <section id="mediation" className="bg-[hsl(210_41%_24%)] text-[hsl(var(--cream))]">
       {/* Main content */}
       <div className="py-20 px-6 md:px-16 lg:px-[120px]">
         <AnimatedSection>
