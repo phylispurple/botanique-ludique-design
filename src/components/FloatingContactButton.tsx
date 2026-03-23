@@ -36,6 +36,7 @@ const FloatingContactButton = () => {
   const [hasBeenOpened, setHasBeenOpened] = useState(false);
   const [showSlidePanel, setShowSlidePanel] = useState(false);
   const [panelDismissed, setPanelDismissed] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   useEffect(() => {
     if (isOpen && !hasBeenOpened) {
@@ -55,18 +56,30 @@ const FloatingContactButton = () => {
   }, [panelDismissed, isOpen]);
 
   const dismissPanel = () => {
-    setShowSlidePanel(false);
-    setPanelDismissed(true);
+    setIsClosing(true);
+    // After shrink animation completes, hide panel
+    setTimeout(() => {
+      setShowSlidePanel(false);
+      setPanelDismissed(true);
+      setIsClosing(false);
+    }, 600);
   };
 
   return (
     <>
       {/* ===== SLIDE-IN PANEL FROM RIGHT ===== */}
       <div
-        className={`fixed top-0 right-0 h-full z-[1000] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          showSlidePanel ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-full z-[1000] transition-all origin-bottom-right ${
+          isClosing 
+            ? "scale-0 opacity-0 rounded-full duration-[600ms] ease-[cubic-bezier(0.55,0.085,0.68,0.53)]"
+            : showSlidePanel 
+              ? "translate-x-0 scale-100 opacity-100 duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" 
+              : "translate-x-full scale-100 opacity-100 duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
         }`}
-        style={{ width: 'min(420px, 85vw)' }}
+        style={{ 
+          width: 'min(420px, 85vw)',
+          transformOrigin: isClosing ? 'calc(100% - 38px) calc(100% - 38px)' : 'center center',
+        }}
       >
         <div className="h-full bg-[hsl(var(--black))] text-[hsl(var(--cream))] flex flex-col relative overflow-hidden">
           {/* Close button */}
