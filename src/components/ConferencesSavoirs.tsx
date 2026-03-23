@@ -121,13 +121,13 @@ const ConferencesSavoirs = () => {
 
           <div className="grid md:grid-cols-3 gap-0">
             {balades.map((balade, idx) => (
-              <AnimatedSection key={idx} delay={idx * 120}>
-                <div className="p-9 border border-white/10 -mt-px -ml-px transition-colors duration-300 hover:bg-white/[0.06]">
+              <AnimatedSection key={idx} delay={idx * 120} className="h-full">
+                <div className="h-full p-9 border border-white/10 -mt-px -ml-px transition-colors duration-300 hover:bg-white/[0.06] flex flex-col">
                   <balade.icon className="w-7 h-7 text-[hsl(73_44%_67%)] mb-4" strokeWidth={1.5} />
                   <h3 className="font-display text-lg uppercase mb-2.5 text-white leading-[1.15]">
                     {balade.title}
                   </h3>
-                  <p className="text-[13px] leading-[1.6] text-white/60 text-justify">
+                  <p className="text-[13px] leading-[1.6] text-white/60 text-justify flex-1">
                     {balade.desc}
                   </p>
                   <span className="inline-block mt-3.5 font-mono-brand text-[9px] uppercase tracking-[2px] text-[hsl(73_44%_67%)]">
