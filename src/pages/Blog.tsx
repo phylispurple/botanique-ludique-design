@@ -82,7 +82,7 @@ const blogPosts = [
     slug: "mediation-scientifique-definition-exemples",
     title: "Qu'est-ce que la médiation scientifique ? Définition et exemples",
     excerpt: "Définition, objectifs et exemples concrets de médiation scientifique en botanique. Conférences, ateliers, balades guidées.",
-    images: [],
+    images: [blogMediationScientifique],
     date: "2026-03-15",
     category: "Ressources pédagogiques"
   }
