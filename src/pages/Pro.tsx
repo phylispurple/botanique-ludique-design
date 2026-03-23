@@ -11,6 +11,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
 import AnimatedSection from "@/components/AnimatedSection";
+import BackToTop from "@/components/BackToTop";
 
 const quoteSchema = z.object({
   name: z.string().trim().min(1, "Le nom est requis").max(100),
