@@ -297,7 +297,7 @@ const Pro = () => {
             </h2>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-4 gap-0">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-0">
             {[
               { step: "01", title: "Accueil", duration: "10 min", desc: "Présentation du thème et des matériaux" },
               { step: "02", title: "Démonstration", duration: "15-20 min", desc: "Explication des techniques pas à pas" },

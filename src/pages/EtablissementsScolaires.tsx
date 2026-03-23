@@ -86,7 +86,7 @@ const EtablissementsScolaires = () => {
                 </a>
               </div>
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden md:block">
               <div className="grid grid-cols-2 gap-0">
                 {[
                   { value: "6e–Terminale", label: "Niveaux couverts", icon: GraduationCap },
