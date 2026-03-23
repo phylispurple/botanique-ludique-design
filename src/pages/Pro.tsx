@@ -196,11 +196,6 @@ const Pro = () => {
                   className="w-full h-[400px] md:h-[500px] object-cover"
                 />
               </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-5 -left-5 bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-brutal px-6 py-4 shadow-brutal">
-                <p className="font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--olive-light))] mb-1">Réponse</p>
-                <p className="font-display text-2xl">24H</p>
-              </div>
             </div>
           </div>
 
