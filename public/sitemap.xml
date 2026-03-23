@@ -1118,4 +1118,32 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Médiation scientifique -->
+  <url><loc>https://botaniqueludique.com/mediation-scientifique-ile-de-france</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://botaniqueludique.com/mediation-scientifique-paris</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://botaniqueludique.com/mediation-scientifique-yvelines</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://botaniqueludique.com/mediation-scientifique-hauts-de-seine</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://botaniqueludique.com/mediation-scientifique-val-d-oise</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Médiation botanique -->
+  <url><loc>https://botaniqueludique.com/mediation-botanique-ile-de-france</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://botaniqueludique.com/mediation-botanique-paris</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://botaniqueludique.com/mediation-botanique-yvelines</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://botaniqueludique.com/mediation-botanique-hauts-de-seine</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://botaniqueludique.com/mediation-botanique-val-d-oise</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Animation botanique -->
+  <url><loc>https://botaniqueludique.com/animation-botanique-ile-de-france</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://botaniqueludique.com/animation-botanique-paris</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://botaniqueludique.com/animation-botanique-yvelines</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://botaniqueludique.com/animation-botanique-hauts-de-seine</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://botaniqueludique.com/animation-botanique-val-d-oise</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Médiation culturelle nature -->
+  <url><loc>https://botaniqueludique.com/mediation-culturelle-nature-ile-de-france</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://botaniqueludique.com/mediation-culturelle-nature-paris</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://botaniqueludique.com/mediation-culturelle-nature-yvelines</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://botaniqueludique.com/mediation-culturelle-nature-hauts-de-seine</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://botaniqueludique.com/mediation-culturelle-nature-val-d-oise</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
 </urlset>

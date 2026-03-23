@@ -80,6 +80,26 @@ import AtelierBotaniqueAdulteValDOise from "./pages/AtelierBotaniqueAdulteValDOi
 import DemoCreative from "./pages/DemoCreative";
 import DemoManus from "./pages/DemoManus";
 import Association from "./pages/Association";
+import MediationScientifiqueIDF from "./pages/MediationScientifiqueIDF";
+import MediationScientifiqueParis from "./pages/MediationScientifiqueParis";
+import MediationScientifiqueYvelines from "./pages/MediationScientifiqueYvelines";
+import MediationScientifiqueHautsDeSeine from "./pages/MediationScientifiqueHautsDeSeine";
+import MediationScientifiqueValDOise from "./pages/MediationScientifiqueValDOise";
+import MediationBotaniqueIDF from "./pages/MediationBotaniqueIDF";
+import MediationBotaniqueParis from "./pages/MediationBotaniqueParis";
+import MediationBotaniqueYvelines from "./pages/MediationBotaniqueYvelines";
+import MediationBotaniqueHautsDeSeine from "./pages/MediationBotaniqueHautsDeSeine";
+import MediationBotaniqueValDOise from "./pages/MediationBotaniqueValDOise";
+import AnimationBotaniqueIDF from "./pages/AnimationBotaniqueIDF";
+import AnimationBotaniqueParis from "./pages/AnimationBotaniqueParis";
+import AnimationBotaniqueYvelines from "./pages/AnimationBotaniqueYvelines";
+import AnimationBotaniqueHautsDeSeine from "./pages/AnimationBotaniqueHautsDeSeine";
+import AnimationBotaniqueValDOise from "./pages/AnimationBotaniqueValDOise";
+import MediationCulturelleNatureIDF from "./pages/MediationCulturelleNatureIDF";
+import MediationCulturelleNatureParis from "./pages/MediationCulturelleNatureParis";
+import MediationCulturelleNatureYvelines from "./pages/MediationCulturelleNatureYvelines";
+import MediationCulturelleNatureHautsDeSeine from "./pages/MediationCulturelleNatureHautsDeSeine";
+import MediationCulturelleNatureValDOise from "./pages/MediationCulturelleNatureValDOise";
 
 const queryClient = new QueryClient();
 
@@ -168,8 +188,32 @@ const App = () => (
                <Route path="/atelier-botanique-adulte-yvelines" element={<AtelierBotaniqueAdulteYvelines />} />
                <Route path="/atelier-botanique-adulte-hauts-de-seine" element={<AtelierBotaniqueAdulteHautsDeSeine />} />
                <Route path="/atelier-botanique-adulte-val-d-oise" element={<AtelierBotaniqueAdulteValDOise />} />
-                <Route path="/demo-creative" element={<DemoCreative />} />
-                <Route path="/demo-manus" element={<DemoManus />} />
+                 <Route path="/demo-creative" element={<DemoCreative />} />
+                 <Route path="/demo-manus" element={<DemoManus />} />
+                 {/* Médiation scientifique */}
+                 <Route path="/mediation-scientifique-ile-de-france" element={<MediationScientifiqueIDF />} />
+                 <Route path="/mediation-scientifique-paris" element={<MediationScientifiqueParis />} />
+                 <Route path="/mediation-scientifique-yvelines" element={<MediationScientifiqueYvelines />} />
+                 <Route path="/mediation-scientifique-hauts-de-seine" element={<MediationScientifiqueHautsDeSeine />} />
+                 <Route path="/mediation-scientifique-val-d-oise" element={<MediationScientifiqueValDOise />} />
+                 {/* Médiation botanique */}
+                 <Route path="/mediation-botanique-ile-de-france" element={<MediationBotaniqueIDF />} />
+                 <Route path="/mediation-botanique-paris" element={<MediationBotaniqueParis />} />
+                 <Route path="/mediation-botanique-yvelines" element={<MediationBotaniqueYvelines />} />
+                 <Route path="/mediation-botanique-hauts-de-seine" element={<MediationBotaniqueHautsDeSeine />} />
+                 <Route path="/mediation-botanique-val-d-oise" element={<MediationBotaniqueValDOise />} />
+                 {/* Animation botanique */}
+                 <Route path="/animation-botanique-ile-de-france" element={<AnimationBotaniqueIDF />} />
+                 <Route path="/animation-botanique-paris" element={<AnimationBotaniqueParis />} />
+                 <Route path="/animation-botanique-yvelines" element={<AnimationBotaniqueYvelines />} />
+                 <Route path="/animation-botanique-hauts-de-seine" element={<AnimationBotaniqueHautsDeSeine />} />
+                 <Route path="/animation-botanique-val-d-oise" element={<AnimationBotaniqueValDOise />} />
+                 {/* Médiation culturelle nature */}
+                 <Route path="/mediation-culturelle-nature-ile-de-france" element={<MediationCulturelleNatureIDF />} />
+                 <Route path="/mediation-culturelle-nature-paris" element={<MediationCulturelleNatureParis />} />
+                 <Route path="/mediation-culturelle-nature-yvelines" element={<MediationCulturelleNatureYvelines />} />
+                 <Route path="/mediation-culturelle-nature-hauts-de-seine" element={<MediationCulturelleNatureHautsDeSeine />} />
+                 <Route path="/mediation-culturelle-nature-val-d-oise" element={<MediationCulturelleNatureValDOise />} />
                 {/* Redirects for existing pages with alternate URLs */}
              <Route path="/atelier-botanique-ehpad" element={<Navigate to="/animation-seniors-ehpad" replace />} />
              <Route path="/atelier-botanique-ecole" element={<Navigate to="/animation-scolaire-nature" replace />} />
