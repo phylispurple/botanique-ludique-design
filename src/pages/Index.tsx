@@ -46,68 +46,58 @@ const Index = () => {
   }, [location.hash]);
 
   const stats = [
-  { value: "50+", label: "Ateliers réalisés", icon: Calendar },
-  { value: "400+", label: "Participants accompagnés", icon: Users },
-  { value: "15+", label: "Partenaires de confiance", icon: Building2 },
-  { value: "2023", label: "Année de création", icon: Award }];
-
+    { value: "50+", label: "Ateliers réalisés", icon: Calendar },
+    { value: "400+", label: "Participants accompagnés", icon: Users },
+    { value: "15+", label: "Partenaires de confiance", icon: Building2 },
+    { value: "2023", label: "Année de création", icon: Award },
+  ];
 
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen bg-background">
       <SEO
         title="Botanique Ludique — Ateliers de botanique, conférences & balades guidées · Le Pecq (78)"
         description="Association de médiation culturelle autour du vivant. Ateliers pour scolaires, entreprises et grand public. Conférences avec chercheurs et artistes. Île-de-France."
         keywords="ateliers botaniques Paris, ateliers nature Yvelines 78, ateliers Hauts-de-Seine 92, ateliers Val-d'Oise 95, kokedama Paris, teinture végétale Yvelines, médiation scientifique, conférence botanique Île-de-France"
-        canonical="/" />
-      
-      <SchemaOrg
-        type="EducationalOrganization"
-        data={{}} />
-      <SchemaOrg
-        type="LocalBusiness"
-        data={{}} />
-      
+        canonical="/"
+      />
+      <SchemaOrg type="EducationalOrganization" data={{}} />
+      <SchemaOrg type="LocalBusiness" data={{}} />
 
       <Navigation />
 
       {/* ===== HERO ===== */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[hsl(var(--black))]">
+        <div className="absolute inset-0 bg-foreground">
           <video
-            autoPlay
-            loop
-            muted
-            playsInline
+            autoPlay loop muted playsInline
             className="w-full h-full object-cover opacity-60"
-            src="/videos/hero-bg.mp4" />
-          
+            src="/videos/hero-bg.mp4"
+          />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--black))]/20 to-[hsl(var(--black))]/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/20 to-foreground/55" />
 
         <div className="relative z-10 text-center px-6 max-w-[900px]">
           <AnimatedSection>
-            <h1
-              className="font-display text-[clamp(3rem,10vw,8rem)] uppercase leading-[0.9] tracking-[-3px] text-[hsl(var(--cream))] mb-6">
-              
+            <h1 className="font-display text-[clamp(3rem,10vw,8rem)] uppercase leading-[0.9] tracking-[-3px] text-primary-foreground mb-6">
               Botanique<br />
-              <span className="text-[hsl(var(--olive-light))]">Ludique</span>
+              <span className="text-olive-light">Ludique</span>
             </h1>
           </AnimatedSection>
 
           <AnimatedSection delay={150}>
-            <p className="font-body text-xl md:text-[22px] italic text-[hsl(var(--cream))]/90 max-w-[650px] mx-auto mb-3 leading-relaxed">Quand l'atelier créatif rencontre l'anthropologie de la nature
-
+            <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[650px] mx-auto mb-3 leading-relaxed">
+              Quand l'atelier créatif rencontre l'anthropologie de la nature
             </p>
-            <p className="font-body text-[15px] md:text-base text-[hsl(var(--cream))]/70 max-w-[580px] mx-auto mb-4 leading-relaxed">
+            <p className="font-body text-[15px] md:text-base text-primary-foreground/70 max-w-[580px] mx-auto mb-4 leading-relaxed">
               Des ateliers accessibles qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={250}>
-            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[2px] text-[hsl(var(--olive-light))]/80 mb-2">
+            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[2px] text-olive-light/80 mb-2">
               Enfants · Adultes · Seniors · Écoles · EHPAD · Entreprises
             </p>
-            <p className="font-mono-brand text-[13px] uppercase tracking-[3px] text-[hsl(var(--olive-light))] mb-10">
+            <p className="font-mono-brand text-[13px] uppercase tracking-[3px] text-olive-light mb-10">
               Paris · Yvelines (78) · Hauts-de-Seine (92) · Val-d'Oise (95)
             </p>
           </AnimatedSection>
@@ -116,8 +106,8 @@ const Index = () => {
             <div className="flex flex-wrap gap-4 justify-center">
               <button
                 onClick={() => navigate('/workshops')}
-                className="btn-brutal bg-[hsl(var(--orange))] text-[hsl(var(--cream))] border-[hsl(var(--orange))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--orange))] text-sm px-9 py-4">
-                
+                className="btn-brutal bg-accent text-accent-foreground border-accent hover:bg-primary-foreground hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--accent))] text-sm px-9 py-4"
+              >
                 Découvrir les ateliers →
               </button>
             </div>
@@ -125,17 +115,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ===== MARQUEE 1 ===== */}
+      {/* ===== MARQUEE ===== */}
       <Marquee
         items={["Kokedama", "Teinture végétale", "Terrarium", "Vannerie", "Couronne de fleurs", "Sachet de senteurs"]}
         color="green"
-        speed={25} />
-      
-
+        speed={25}
+      />
 
       {/* ===== PRÉSENTATION + STATS ===== */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <section className="py-32 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
           {/* Text */}
           <AnimatedSection direction="left">
             <div>
@@ -143,29 +132,29 @@ const Index = () => {
               <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mb-3">
                 Vanessa<br />Charlery
               </h2>
-              <p className="font-display text-[15px] uppercase tracking-[2px] text-[hsl(var(--olive))] mb-6">
+              <p className="font-display text-[15px] uppercase tracking-[2px] text-primary mb-6">
                 Animatrice ethnobotaniste · Formée à l'EHESS
               </p>
-              <p className="text-base leading-[1.8] text-[hsl(var(--black))]/70 mb-4 text-justify">
-                Créée par <strong className="text-[hsl(var(--black))]">Vanessa Charlery</strong>, animatrice ethnobotaniste formée à l'EHESS,
+              <p className="text-base leading-[1.8] text-foreground/70 mb-4 text-justify">
+                Créée par <strong className="text-foreground">Vanessa Charlery</strong>, animatrice ethnobotaniste formée à l'EHESS,
                 l'association Botanique Ludique propose des ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95)
                 qui allient créativité artistique et transmission des savoirs ethnobotaniques.
               </p>
-              <p className="text-base leading-[1.8] text-[hsl(var(--black))]/70 mb-6 text-justify">
-                Nos ateliers s'adressent à <strong className="text-[hsl(var(--black))]">tous les publics</strong> :
+              <p className="text-base leading-[1.8] text-foreground/70 mb-6 text-justify">
+                Nos ateliers s'adressent à <strong className="text-foreground">tous les publics</strong> :
                 enfants dès 4 ans, adultes, seniors en résidence ou EHPAD, écoles et centres de loisirs, MJC, centres sociaux,
                 associations, entreprises et collectivités. Chaque pratique explore les relations culturelles entre humains et plantes,
                 de l'Asie à l'Europe.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {["Kokedama", "Teinture végétale", "Vannerie", "Terrarium", "Ethnobotanique"].map((tag) =>
-                <span
-                  key={tag}
-                  className="font-mono-brand text-[10px] uppercase tracking-[1.5px] px-3.5 py-1.5 border-brutal-thin rounded-full hover:bg-[hsl(var(--black))] hover:text-[hsl(var(--cream))] transition-colors cursor-default">
-                  
+                {["Kokedama", "Teinture végétale", "Vannerie", "Terrarium", "Ethnobotanique"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="font-mono-brand text-[10px] uppercase tracking-[1.5px] px-3.5 py-1.5 border-brutal-thin rounded-full hover:bg-foreground hover:text-primary-foreground transition-colors cursor-default"
+                  >
                     {tag}
                   </span>
-                )}
+                ))}
               </div>
             </div>
           </AnimatedSection>
@@ -178,38 +167,30 @@ const Index = () => {
                 return (
                   <div
                     key={index}
-                    className="p-6 md:p-8 border-brutal text-center -mt-[3px] -ml-[3px] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300">
-                    
+                    className="p-6 md:p-8 border-brutal text-center -mt-[3px] -ml-[3px] hover:bg-green-pale transition-colors duration-300"
+                  >
                     <div className="flex justify-center mb-3">
-                      <IconComponent className="w-5 h-5 text-[hsl(var(--olive))]" />
+                      <IconComponent className="w-5 h-5 text-primary" />
                     </div>
                     <AnimatedCounter
                       value={stat.value}
-                      className="font-display text-3xl md:text-4xl text-[hsl(var(--black))] mb-1" />
-                    
-                    <div className="font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/50">
+                      className="font-display text-3xl md:text-4xl text-foreground mb-1"
+                    />
+                    <div className="font-mono-brand text-[10px] uppercase tracking-[2px] text-foreground/50">
                       {stat.label}
                     </div>
-                  </div>);
-
+                  </div>
+                );
               })}
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* ===== MARQUEE 2 ===== */}
-      <Marquee
-        items={["Paris", "Yvelines 78", "Hauts-de-Seine 92", "Val-d'Oise 95", "Île-de-France"]}
-        color="purple"
-        speed={35}
-        separator="◆" />
-      
-
       {/* ===== GALERIE — Défilement continu ===== */}
-      <section className="py-24 bg-[hsl(var(--cream-dark))]">
+      <section className="py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6">
-          <AnimatedSection className="text-center mb-12">
+          <AnimatedSection className="text-center mb-14">
             <span className="section-label block mb-3">Portfolio</span>
             <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
               Les plus belles créations
@@ -251,44 +232,36 @@ const Index = () => {
           <AnimatedSection delay={300} className="text-center mt-8">
             <Link
               to="/gallery"
-              className="btn-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-[hsl(var(--black))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-8 py-3 inline-block">
-              
+              className="btn-brutal bg-foreground text-primary-foreground border-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
+            >
               Voir toute la galerie →
             </Link>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* ===== MARQUEE 3 ===== */}
-      <Marquee
-        items={["Enfants", "Adultes", "Seniors", "Écoles", "Entreprises", "EHPAD", "Associations", "Collectivités"]}
-        color="orange"
-        speed={20}
-        separator="●" />
-      
-
       {/* ===== CONFÉRENCES & SAVOIRS ===== */}
       <ConferencesSavoirs />
-
-      {/* ===== MARQUEE — Savoirs ===== */}
-      <Marquee
-        items={["Anthropologie", "Biodiversité", "Médiation scientifique", "Savoirs botaniques", "Cultures du vivant"]}
-        color="green"
-        speed={28} />
-      
 
       {/* ===== TESTIMONIALS ===== */}
       <Testimonials />
 
+      {/* ===== MARQUEE 2 ===== */}
+      <Marquee
+        items={["Enfants", "Adultes", "Seniors", "Écoles", "Entreprises", "EHPAD", "Associations", "Collectivités"]}
+        color="olive"
+        speed={20}
+        separator="●"
+      />
+
       {/* ===== VIDEO SECTION ===== */}
       <VideoSection />
 
-
       {/* ===== PARTENAIRES — Défilement continu ===== */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="max-w-5xl mx-auto px-6">
           <AnimatedSection>
-            <h3 className="font-display text-2xl md:text-3xl uppercase text-center mb-10 tracking-[-1px]">
+            <h3 className="font-display text-2xl md:text-3xl uppercase text-center mb-12 tracking-[-1px]">
               Ils nous font confiance
             </h3>
           </AnimatedSection>
@@ -328,44 +301,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ===== MARQUEE 4 ===== */}
-      <Marquee
-        items={["Ateliers", "Conférences", "Balades botaniques", "Team building", "Médiation"]}
-        color="olive"
-        speed={28} />
-      
-
       {/* ===== CTA + NEWSLETTER ===== */}
-      <section className="py-20 px-6 text-[hsl(var(--cream))] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[hsl(var(--black))]">
+      <section className="py-24 px-6 text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 bg-foreground">
           <img
             src={ctaWorkshopGroup}
             alt=""
             className="w-full h-full object-cover opacity-35"
-            loading="lazy" />
-          
+            loading="lazy"
+          />
         </div>
-        <div className="absolute inset-0 bg-[hsl(var(--black))]/40" />
-        <div className="relative z-10 max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="absolute inset-0 bg-foreground/40" />
+        <div className="relative z-10 max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <AnimatedSection direction="left">
             <div className="space-y-5">
               <h2 className="font-display text-3xl md:text-4xl uppercase leading-[0.95]">
                 Prêt·e à explorer le monde végétal ?
               </h2>
-              <p className="text-base text-[hsl(var(--cream))]/80 leading-relaxed">
+              <p className="text-base text-primary-foreground/80 leading-relaxed">
                 Rejoignez-nous pour un atelier à Paris, Yvelines, Hauts-de-Seine ou Val-d'Oise.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   to="/workshops"
-                  className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3">
-                  
+                  className="btn-brutal bg-primary text-primary-foreground border-primary hover:bg-primary-foreground hover:text-foreground text-xs px-7 py-3"
+                >
                   Voir les ateliers →
                 </Link>
                 <Link
                   to="/contact"
-                  className="btn-brutal bg-transparent text-[hsl(var(--cream))] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3">
-                  
+                  className="btn-brutal bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-7 py-3"
+                >
                   Nous contacter
                 </Link>
               </div>
@@ -373,9 +339,9 @@ const Index = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={200} direction="right">
-            <div className="border-brutal bg-[hsl(var(--cream))] text-[hsl(var(--black))] p-8 shadow-brutal-lg">
+            <div className="border-brutal bg-primary-foreground text-foreground p-8 shadow-brutal-lg">
               <h3 className="font-display text-lg uppercase mb-2">Restez informé·e</h3>
-              <p className="text-sm text-[hsl(var(--black))]/60 mb-5">
+              <p className="text-sm text-foreground/60 mb-5">
                 Recevez nos actualités et les dates des prochains ateliers.
               </p>
               <NewsletterSignup compact />
@@ -387,8 +353,8 @@ const Index = () => {
       <Footer />
       <CookieConsent />
       <BackToTop />
-    </div>);
-
+    </div>
+  );
 };
 
 export default Index;
