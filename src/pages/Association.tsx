@@ -95,10 +95,10 @@ const Association = () => {
             <AnimatedSection delay={100}>
               <div className="space-y-6 text-base font-body leading-relaxed" style={{ color: 'hsl(0 0% 35%)' }}>
                 <p className="text-justify">
-                  Des chercheurs en écologie, en sciences du vivant, en anthropologie produisent des savoirs essentiels pour comprendre notre rapport à la nature. Des artistes plasticiens, des musiciens explorent ces liens par d'autres voies — sensibles, poétiques, transformatrices. Pourtant, la plupart peinent à vivre de leur travail, et leurs connaissances restent souvent confinées au monde académique ou aux circuits confidentiels.
+                  Des chercheurs en écologie, en sciences du vivant, en anthropologie produisent des savoirs essentiels pour comprendre notre rapport à la nature. Des artistes plasticiens, des musiciens explorent ces liens par d'autres voies, sensibles, poétiques, transformatrices. Pourtant, la plupart peinent à vivre de leur travail, et leurs connaissances restent souvent confinées au monde académique ou aux circuits confidentiels.
                 </p>
                 <p className="text-justify">
-                  L'association Botanique Ludique existe pour leur donner un espace et une rémunération juste. Nous organisons des conférences, des événements culturels et des rencontres où ces intervenants partagent leurs recherches et leurs créations avec le grand public — sans filtre, sans simplification excessive.
+                  L'association Botanique Ludique existe pour leur donner un espace et une rémunération juste. Nous organisons des conférences, des événements culturels et des rencontres où ces intervenants partagent leurs recherches et leurs créations avec le grand public, sans filtre, sans simplification excessive.
                 </p>
               </div>
             </AnimatedSection>
