@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
+import { StaggerContainer, StaggerItem } from "@/components/StaggerAnimation";
 import { GraduationCap, Sprout, Microscope, Landmark, Users, Building2, Leaf, Globe } from "lucide-react";
 
 const conferences = [
@@ -79,9 +80,9 @@ const ConferencesSavoirs = () => {
         </AnimatedSection>
 
         {/* Conference cards grid */}
-        <div className="grid md:grid-cols-2 gap-0">
+        <StaggerContainer className="grid md:grid-cols-2 gap-0" staggerDelay={0.12}>
           {conferences.map((conf, idx) => (
-            <AnimatedSection key={idx} delay={idx * 100} className="h-full">
+            <StaggerItem key={idx} className="h-full">
               <div className="h-full p-10 md:p-11 border border-white/[0.12] -mt-px -ml-px relative overflow-hidden group transition-colors duration-300 hover:bg-white/5 flex flex-col">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-[hsl(73_44%_67%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="font-mono-brand text-[10px] tracking-[3px] text-[hsl(73_44%_67%)] mb-4 block">
@@ -104,9 +105,9 @@ const ConferencesSavoirs = () => {
                   ))}
                 </div>
               </div>
-            </AnimatedSection>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
 
         {/* Balades botaniques */}
         <div className="border-t border-white/[0.12] pt-16 mt-0">
@@ -122,9 +123,9 @@ const ConferencesSavoirs = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-0">
+          <StaggerContainer className="grid md:grid-cols-3 gap-0" staggerDelay={0.12}>
             {balades.map((balade, idx) => (
-              <AnimatedSection key={idx} delay={idx * 120} className="h-full">
+              <StaggerItem key={idx} className="h-full">
                 <div className="h-full p-9 border border-white/10 -mt-px -ml-px transition-colors duration-300 hover:bg-white/[0.06] flex flex-col">
                   <balade.icon className="w-7 h-7 text-[hsl(73_44%_67%)] mb-4" strokeWidth={1.5} />
                   <h3 className="font-display text-lg uppercase mb-2.5 text-white leading-[1.15]">
@@ -137,9 +138,9 @@ const ConferencesSavoirs = () => {
                     {balade.season}
                   </span>
                 </div>
-              </AnimatedSection>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
 
         {/* Modules pédagogiques */}
