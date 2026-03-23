@@ -310,10 +310,8 @@ const Index = () => {
                     <img src={logo.src} alt="" className="max-h-12 w-auto object-contain" loading="lazy" />
                   </div>
                 )
-              )}
             </div>
           </div>
-        </div>
       </section>
 
       {/* ===== MARQUEE 4 ===== */}
