@@ -31,7 +31,7 @@ const cards = [
 {
   icon: Sprout,
     title: "Notre Mission",
-    desc: "Soutenir des chercheurs, artistes plasticiens et musiciens dont les travaux en écologie et sciences du vivant nous ouvrent à d'autres paradigmes — une démarche collective et désintéressée.",
+    desc: "Soutenir des chercheurs, artistes plasticiens et musiciens dont les travaux en écologie et sciences du vivant nous ouvrent à d'autres paradigmes, une démarche collective et désintéressée.",
     linkText: "",
     disabled: true
 }];
@@ -75,7 +75,7 @@ const Association = () => {
               notre regard
             </h1>
             <p className="text-lg md:text-xl font-body leading-relaxed max-w-2xl" style={{ color: 'rgba(255,255,255,0.7)' }}>
-              L'association Botanique Ludique ne propose pas d'ateliers créatifs — c'est l'activité professionnelle de sa fondatrice. L'association, elle, a une vocation différente : financer et rémunérer des chercheurs, artistes plasticiens et musiciens capables de nous ouvrir à d'autres façons de penser le vivant.
+              L'association Botanique Ludique ne propose pas d'ateliers créatifs, c'est l'activité professionnelle de sa fondatrice. L'association, elle, a une vocation différente : financer et rémunérer des chercheurs, artistes plasticiens et musiciens capables de nous ouvrir à d'autres façons de penser le vivant.
             </p>
           </AnimatedSection>
         </div>
@@ -95,10 +95,10 @@ const Association = () => {
             <AnimatedSection delay={100}>
               <div className="space-y-6 text-base font-body leading-relaxed" style={{ color: 'hsl(0 0% 35%)' }}>
                 <p className="text-justify">
-                  Des chercheurs en écologie, en sciences du vivant, en anthropologie produisent des savoirs essentiels pour comprendre notre rapport à la nature. Des artistes plasticiens, des musiciens explorent ces liens par d'autres voies — sensibles, poétiques, transformatrices. Pourtant, la plupart peinent à vivre de leur travail, et leurs connaissances restent souvent confinées au monde académique ou aux circuits confidentiels.
+                  Des chercheurs en écologie, en sciences du vivant, en anthropologie produisent des savoirs essentiels pour comprendre notre rapport à la nature. Des artistes plasticiens, des musiciens explorent ces liens par d'autres voies, sensibles, poétiques, transformatrices. Pourtant, la plupart peinent à vivre de leur travail, et leurs connaissances restent souvent confinées au monde académique ou aux circuits confidentiels.
                 </p>
                 <p className="text-justify">
-                  L'association Botanique Ludique existe pour leur donner un espace et une rémunération juste. Nous organisons des conférences, des événements culturels et des rencontres où ces intervenants partagent leurs recherches et leurs créations avec le grand public — sans filtre, sans simplification excessive.
+                  L'association Botanique Ludique existe pour leur donner un espace et une rémunération juste. Nous organisons des conférences, des événements culturels et des rencontres où ces intervenants partagent leurs recherches et leurs créations avec le grand public, sans filtre, sans simplification excessive.
                 </p>
               </div>
             </AnimatedSection>
@@ -106,7 +106,7 @@ const Association = () => {
             <AnimatedSection delay={200}>
               <div className="space-y-6 text-base font-body leading-relaxed" style={{ color: 'hsl(0 0% 35%)' }}>
                 <p className="text-justify">
-                  C'est une démarche collective et désintéressée, portée par la conviction que ces regards — scientifiques, artistiques, anthropologiques — peuvent nous aider à entrevoir un autre paradigme, à élargir nos connaissances et à repenser notre place dans le vivant. Une mission distincte et complémentaire des ateliers créatifs et de médiation que Vanessa propose par ailleurs dans son activité professionnelle.
+                  C'est une démarche collective et désintéressée, portée par la conviction que ces regards, scientifiques, artistiques, anthropologiques, peuvent nous aider à entrevoir un autre paradigme, à élargir nos connaissances et à repenser notre place dans le vivant. Une mission distincte et complémentaire des ateliers créatifs et de médiation que Vanessa propose par ailleurs dans son activité professionnelle.
                 </p>
                 {/* Bureau */}
                 <div className="pt-6 border-t border-foreground/10">

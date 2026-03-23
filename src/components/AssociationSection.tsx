@@ -30,7 +30,7 @@ const cards = [
   {
     icon: Sprout,
     title: "Notre Mission",
-    desc: "Soutenir des chercheurs, artistes et penseurs dont les disciplines — écologie, sciences du vivant, anthropologie — nous ouvrent à d'autres regards sur le monde. Une démarche collective, distincte des ateliers créatifs.",
+    desc: "Soutenir des chercheurs, artistes plasticiens et musiciens dont les disciplines en écologie, sciences du vivant et anthropologie nous ouvrent à d'autres regards sur le monde. Une démarche collective, distincte des ateliers créatifs.",
     link: "/association",
     linkText: "En savoir plus →",
     disabled: false,
@@ -58,7 +58,7 @@ const AssociationSection = () => {
             L'Asso­ciation
           </h2>
           <p className="font-mono-brand text-[15px] max-w-[540px] text-white/80 leading-[1.7] mb-4">
-            L'association Botanique Ludique poursuit une mission distincte des ateliers créatifs : soutenir financièrement des chercheurs, artistes plasticiens et musiciens dont les travaux — en écologie, sciences du vivant, ethnobotanique, anthropologie — restent souvent méconnus ou inaccessibles au grand public.
+            L'association Botanique Ludique poursuit une mission distincte des ateliers créatifs : soutenir financièrement des chercheurs, artistes plasticiens et musiciens dont les travaux en écologie, sciences du vivant, ethnobotanique et anthropologie restent souvent méconnus ou inaccessibles au grand public.
           </p>
           <p className="font-mono-brand text-[15px] max-w-[540px] text-white/80 leading-[1.7] mb-12">
             Ces voix nous invitent à élargir nos connaissances et à entrevoir d'autres façons de penser notre relation au vivant. L'association existe pour les rémunérer justement et leur offrir un espace de transmission.
