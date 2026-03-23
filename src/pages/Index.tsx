@@ -230,11 +230,12 @@ const Index = () => {
                     <img src={image.src} alt="" className="w-full h-full object-cover" loading="lazy" />
                   </div>
                 )
-              )}
             </div>
           </div>
+        </div>
 
-          <AnimatedSection delay={300} className="text-center">
+        <div className="max-w-6xl mx-auto px-6">
+          <AnimatedSection delay={300} className="text-center mt-8">
             <Link
               to="/gallery"
               className="btn-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-[hsl(var(--black))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-8 py-3 inline-block">
