@@ -100,8 +100,8 @@ const FloatingContactButton = () => {
             </span>
 
             <h2 className="font-display text-[clamp(1.8rem,5vw,2.8rem)] uppercase leading-[0.95] tracking-[-1px] mb-6">
-              Besoin d'une<br />
-              <span className="text-[hsl(var(--olive-light))]">médiatrice ?</span>
+              Besoin d'un·e<br />
+              <span className="text-[hsl(var(--olive-light))]">médiateur·ice ?</span>
             </h2>
 
             <p className="text-base leading-[1.7] text-[hsl(var(--cream))]/70 mb-4">
