@@ -106,7 +106,7 @@ const Association = () => {
             <AnimatedSection delay={200}>
               <div className="space-y-6 text-base font-body leading-relaxed" style={{ color: 'hsl(0 0% 35%)' }}>
                 <p className="text-justify">
-                  C'est une démarche collective et désintéressée, portée par la conviction que ces regards, scientifiques, artistiques, anthropologiques, peuvent nous aider à entrevoir un autre paradigme, à élargir nos connaissances et à repenser notre place dans le vivant. Une mission distincte et complémentaire des ateliers créatifs et de médiation que Vanessa propose par ailleurs dans son activité professionnelle.
+                  C'est une démarche collective et désintéressée, portée par la conviction que ces regards, scientifiques, artistiques, anthropologiques, peuvent nous aider à entrevoir un autre paradigme, à élargir nos connaissances et à repenser notre place dans le vivant.
                 </p>
                 {/* Bureau */}
                 <div className="pt-6 border-t border-foreground/10">
