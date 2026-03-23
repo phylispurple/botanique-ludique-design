@@ -365,7 +365,7 @@ const Pro = () => {
             {/* Left info */}
             <div className="lg:col-span-2">
               <AnimatedSection>
-                <span className="section-label block mb-4">Devis gratuit</span>
+                <span className="section-label block mb-4">Nous écrire</span>
                 <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.9] tracking-[-1px] text-[hsl(var(--black))] mb-6">
                   Parlons de<br />
                   <span className="text-[hsl(var(--olive))]">votre projet</span>
