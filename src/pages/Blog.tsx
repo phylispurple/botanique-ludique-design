@@ -1,15 +1,13 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
-import { Card, CardContent } from "@/components/ui/card";
+import AnimatedSection from "@/components/AnimatedSection";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 
-// Images pour les articles
 import blogCarouselBocal from "@/assets/blog-carousel-bocal-indigo.jpg";
 import blogCarouselFil from "@/assets/blog-carousel-fil-indigo.jpg";
 import blogMonsteraTendance from "@/assets/blog-monstera-tendance.jpg";
@@ -24,7 +22,7 @@ const blogPosts = [
   {
     slug: "10-films-nature-idees-fausses",
     title: "Les 10 Films qui Nous Ont Raconté N'importe Quoi à Propos de la « Nature »",
-    excerpt: "D'Avatar à Jurassic Park, analyse ethnobotanique de 10 films cultes qui véhiculent des idées fausses sur le vivant. La jungle hostile, les plantes tueuses, la nature « vierge » : décryptage des mythes cinématographiques.",
+    excerpt: "D'Avatar à Jurassic Park, analyse ethnobotanique de 10 films cultes qui véhiculent des idées fausses sur le vivant.",
     images: [blogFilmsPoster],
     date: "2026-02-06",
     category: "Ethnobotanique"
@@ -32,7 +30,7 @@ const blogPosts = [
   {
     slug: "terrarium-biopiraterie-histoire-coloniale",
     title: "Le Terrarium, une Arme de Biopiraterie à l'Ère Coloniale Victorienne",
-    excerpt: "Du Wardian Case victorien au vol de 70 000 graines d'hévéa : comment un simple bocal en verre est devenu l'outil de la plus grande opération de biopiraterie, entraînant esclavage par la dette et effondrement économique.",
+    excerpt: "Du Wardian Case victorien au vol de 70 000 graines d'hévéa : comment un simple bocal en verre est devenu l'outil de la plus grande opération de biopiraterie.",
     images: [blogTerrariumModerne, blogTerrariumWardian],
     date: "2026-02-06",
     category: "Ethnobotanique"
@@ -40,7 +38,7 @@ const blogPosts = [
   {
     slug: "palmiers-architecture-haussmannienne-colonialisme",
     title: "Palmiers et Architecture Haussmannienne : Quand les Boulevards Racontent l'Empire Colonial",
-    excerpt: "Comment les grands boulevards haussmanniens ont été exportés dans les colonies avec un twist botanique : les palmiers comme logo de l'empire. Références : Hélène Blais, Edward Said.",
+    excerpt: "Comment les grands boulevards haussmanniens ont été exportés dans les colonies avec un twist botanique : les palmiers comme logo de l'empire.",
     images: [blogPalmiersAvenue, blogPalmiersAlger],
     date: "2026-01-17",
     category: "Ethnobotanique"
@@ -48,7 +46,7 @@ const blogPosts = [
   {
     slug: "monstera-plante-coloniale-distinction-sociale",
     title: "La Monstera : Une Plante Déplacée. Histoire Coloniale et Distinction Sociale",
-    excerpt: "Analyse ethnobotanique : comment la Monstera est passée des forêts mexicaines aux salons bourgeois via l'histoire coloniale du XIXe siècle. Références : Guillaume Blanc, Bourdieu, jardins d'acclimatation.",
+    excerpt: "Comment la Monstera est passée des forêts mexicaines aux salons bourgeois via l'histoire coloniale du XIXe siècle.",
     images: [blogMonsteraTendance, blogMonsteraDeco],
     date: "2026-01-09",
     category: "Ethnobotanique"
@@ -56,7 +54,7 @@ const blogPosts = [
   {
     slug: "teinture-vegetale-chou-rouge-indigo-naturel",
     title: "Teinture Végétale au Chou Rouge : Guide Complet pour Obtenir un Indigo Naturel",
-    excerpt: "Découvrez comment créer une teinture indigo naturelle à partir de chou rouge fermenté. Tutoriel étape par étape : fermentation, modification du pH, mordançage à l'alun et techniques de fixation.",
+    excerpt: "Créer une teinture indigo naturelle à partir de chou rouge fermenté. Tutoriel étape par étape avec techniques de fixation.",
     images: [blogCarouselBocal, blogCarouselFil],
     date: "2025-12-12",
     category: "Tutoriels"
@@ -69,114 +67,149 @@ const Blog = () => {
   );
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO 
         title="Blog Botanique | Guides, Tutoriels & Idées Nature ✦ Actualités"
         description="📖 Articles, guides et tutoriels sur la botanique : kokedama, teinture végétale, team building nature. Conseils d'experts et idées d'activités à Paris & IDF."
         keywords="blog botanique, actualités nature, guide kokedama, teinture végétale, team building nature, ateliers botaniques Paris"
         canonical="/blog"
       />
-      <FloatingIllustrations />
       <Navigation />
 
-      <main className="pt-32 pb-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16 animate-fade-in">
-              <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
-                Blog & Actualités
-              </h1>
-              <p className="subtitle-italic text-lg mb-6">
-                Guides, conseils et actualités autour de la botanique ludique
-              </p>
-              <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
-                Retrouvez nos articles sur les ateliers botaniques, l'ethnobotanique, les plantes sauvages, 
-                et nos conseils pour organiser vos activités nature en Île-de-France.
-              </p>
-            </div>
+      <main className="pt-28 pb-24">
+        {/* Hero */}
+        <div className="px-6 md:px-16 lg:px-[120px] mb-20">
+          <AnimatedSection>
+            <span className="section-label block mb-5">Réflexions & découvertes</span>
+            <h1 className="font-display text-[clamp(3rem,8vw,7rem)] uppercase leading-[0.9] tracking-[-3px] mb-6">
+              Blog &<br />
+              <span className="text-[hsl(var(--olive))]">Actualités</span>
+            </h1>
+          </AnimatedSection>
+          <AnimatedSection delay={100}>
+            <p className="text-lg leading-[1.7] text-[hsl(var(--black))]/70 max-w-[550px]">
+              Ethnobotanique, histoire coloniale des plantes, tutoriels créatifs et regards croisés sur le vivant.
+            </p>
+          </AnimatedSection>
+        </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post, index) => (
-                <Link 
-                  key={index}
-                  to={`/blog/${post.slug}`}
-                  className="block"
-                >
-                  <Card className="hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-fade-in group overflow-hidden cursor-pointer border-transparent hover:border-sage/20" style={{ animationDelay: `${index * 100}ms` }}>
-                    <CardContent className="p-0">
-                      <div className="relative">
-                        <Carousel
-                          plugins={[autoplayPlugin.current]}
-                          className="w-full pointer-events-none"
-                          opts={{
-                            loop: true,
-                          }}
-                        >
-                          <CarouselContent>
-                            {post.images.map((image, imgIndex) => (
-                              <CarouselItem key={imgIndex}>
-                                <div className="relative aspect-[4/3] overflow-hidden rounded-t-lg">
-                                  <img 
-                                    src={image} 
-                                    alt={`${post.title} - Image ${imgIndex + 1}`}
-                                    className="w-full h-full object-contain bg-charcoal/5"
-                                    loading="lazy"
-                                  />
-                                </div>
-                              </CarouselItem>
-                            ))}
-                          </CarouselContent>
-                        </Carousel>
-                        <div className="absolute top-4 left-4 bg-sage text-white px-3 py-1 rounded-full text-xs font-semibold z-10">
-                          {post.category}
-                        </div>
-                        {/* Indicateurs de carousel */}
-                        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-                          {post.images.map((_, dotIndex) => (
-                            <div 
-                              key={dotIndex}
-                              className="w-2 h-2 rounded-full bg-white/60"
-                            />
+        <div className="px-6 md:px-16 lg:px-[120px]">
+          {/* Featured article — first post large */}
+          <AnimatedSection delay={150}>
+            <Link to={`/blog/${blogPosts[0].slug}`} className="block group mb-16">
+              <div className="grid md:grid-cols-2 gap-0 border-brutal overflow-hidden bg-[hsl(var(--black))] shadow-brutal">
+                <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden">
+                  <Carousel
+                    plugins={[autoplayPlugin.current]}
+                    className="w-full h-full pointer-events-none"
+                    opts={{ loop: true }}
+                  >
+                    <CarouselContent className="h-full">
+                      {blogPosts[0].images.map((image, imgIndex) => (
+                        <CarouselItem key={imgIndex} className="h-full">
+                          <img 
+                            src={image} 
+                            alt={`${blogPosts[0].title} - Image ${imgIndex + 1}`}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                  </Carousel>
+                  <div className="absolute top-4 left-4 bg-[hsl(var(--olive))] text-[hsl(var(--cream))] px-3 py-1 text-[10px] font-mono uppercase tracking-[2px] z-10">
+                    {blogPosts[0].category}
+                  </div>
+                </div>
+                <div className="p-8 md:p-12 flex flex-col justify-center">
+                  <div className="flex items-center gap-2 text-xs text-[hsl(var(--cream))]/40 font-mono uppercase tracking-[1.5px] mb-4">
+                    <Calendar className="w-3.5 h-3.5" />
+                    {new Date(blogPosts[0].date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
+                  </div>
+                  <h2 className="font-display text-2xl md:text-3xl uppercase leading-[1.1] tracking-[-1px] text-[hsl(var(--cream))] mb-4 group-hover:text-[hsl(var(--olive-light))] transition-colors">
+                    {blogPosts[0].title}
+                  </h2>
+                  <p className="text-sm text-[hsl(var(--cream))]/60 leading-relaxed mb-6">
+                    {blogPosts[0].excerpt}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-[hsl(var(--olive-light))] font-mono text-xs uppercase tracking-[2px] group-hover:gap-4 transition-all">
+                    Lire l'article
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </AnimatedSection>
+
+          {/* Grid of remaining articles */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {blogPosts.slice(1).map((post, index) => (
+              <AnimatedSection key={post.slug} delay={200 + index * 80}>
+                <Link to={`/blog/${post.slug}`} className="block group">
+                  <div className="border-brutal overflow-hidden shadow-brutal hover:shadow-brutal-lg hover:-translate-y-1 transition-all duration-300 bg-[hsl(var(--cream))]">
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <Carousel
+                        plugins={[Autoplay({ delay: 3000 + index * 500, stopOnInteraction: false })]}
+                        className="w-full h-full pointer-events-none"
+                        opts={{ loop: true }}
+                      >
+                        <CarouselContent className="h-full">
+                          {post.images.map((image, imgIndex) => (
+                            <CarouselItem key={imgIndex} className="h-full">
+                              <img 
+                                src={image} 
+                                alt={`${post.title} - Image ${imgIndex + 1}`}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                              />
+                            </CarouselItem>
                           ))}
-                        </div>
+                        </CarouselContent>
+                      </Carousel>
+                      <div className="absolute top-4 left-4 bg-[hsl(var(--olive))] text-[hsl(var(--cream))] px-3 py-1 text-[10px] font-mono uppercase tracking-[2px] z-10">
+                        {post.category}
                       </div>
-                      <div className="p-6 space-y-4">
-                        <div className="flex items-center gap-2 text-sm text-charcoal/60">
-                          <Calendar className="w-4 h-4" />
-                          {new Date(post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
-                        </div>
-                        <h2 className="text-xl font-semibold text-charcoal leading-tight group-hover:text-sage-dark transition-colors" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
-                          {post.title}
-                        </h2>
-                        <p className="text-charcoal/70 leading-relaxed text-sm">
-                          {post.excerpt}
-                        </p>
-                        <span className="inline-flex items-center gap-2 text-sage-dark group-hover:text-sage font-semibold text-sm group-hover:gap-3 transition-all">
-                          Lire l'article
-                          <ArrowRight className="w-4 h-4" />
-                        </span>
+                    </div>
+                    <div className="p-6 md:p-8">
+                      <div className="flex items-center gap-2 text-xs text-[hsl(var(--black))]/40 font-mono uppercase tracking-[1.5px] mb-3">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {new Date(post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
                       </div>
-                    </CardContent>
-                  </Card>
+                      <h2 className="font-display text-lg md:text-xl uppercase leading-[1.15] tracking-[-0.5px] text-[hsl(var(--black))] mb-3 group-hover:text-[hsl(var(--olive))] transition-colors">
+                        {post.title}
+                      </h2>
+                      <p className="text-sm text-[hsl(var(--black))]/60 leading-relaxed mb-4">
+                        {post.excerpt}
+                      </p>
+                      <span className="inline-flex items-center gap-2 text-[hsl(var(--olive))] font-mono text-[11px] uppercase tracking-[2px] group-hover:gap-4 transition-all">
+                        Lire
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
+                    </div>
+                  </div>
                 </Link>
-              ))}
-            </div>
+              </AnimatedSection>
+            ))}
+          </div>
 
-            <div className="mt-16 bg-sand rounded-lg p-8 md:p-12 text-center animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                Restez Informé·e
-              </h2>
-              <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-2xl mx-auto">
-                Inscrivez-vous à notre newsletter pour recevoir nos nouveaux articles, actualités et dates d'ateliers
-              </p>
+          {/* Newsletter CTA */}
+          <AnimatedSection delay={500}>
+            <div className="mt-20 border-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] p-10 md:p-16 shadow-brutal flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-1">
+                <span className="font-mono text-[10px] uppercase tracking-[2.5px] text-[hsl(var(--olive-light))] block mb-4">Newsletter</span>
+                <h2 className="font-display text-2xl md:text-3xl uppercase tracking-[-1px] mb-3">
+                  Restez Informé·e
+                </h2>
+                <p className="text-sm text-[hsl(var(--cream))]/60 leading-relaxed max-w-lg">
+                  Nouveaux articles, dates d'ateliers et actualités botaniques directement dans votre boîte mail.
+                </p>
+              </div>
               <Link 
                 to="/#newsletter"
-                className="inline-flex items-center px-6 py-3 bg-sage hover:bg-sage-dark text-off-white font-semibold uppercase tracking-wider transition-all rounded-full"
+                className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:border-[hsl(var(--cream))] text-xs px-8 py-4 flex-shrink-0"
               >
-                S'inscrire à la newsletter
+                S'inscrire
               </Link>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </main>
 
