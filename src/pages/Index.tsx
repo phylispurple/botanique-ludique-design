@@ -27,6 +27,23 @@ import gallerySachetSenteur from "@/assets/gallery-sachet-senteur.webp";
 
 const Index = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const tryScroll = (retries = 0) => {
+        const el = document.getElementById(id);
+        if (el) {
+          const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+          window.scrollTo({ top: pos, behavior: 'smooth' });
+        } else if (retries < 15) {
+          setTimeout(() => tryScroll(retries + 1), 150);
+        }
+      };
+      setTimeout(() => tryScroll(), 200);
+    }
+  }, [location.hash]);
 
   const stats = [
   { value: "50+", label: "Ateliers réalisés", icon: Calendar },
