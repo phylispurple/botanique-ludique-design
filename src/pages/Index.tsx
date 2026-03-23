@@ -13,6 +13,7 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
 import ConferencesSavoirs from "@/components/ConferencesSavoirs";
 import VideoSection from "@/components/VideoSection";
+import BackToTop from "@/components/BackToTop";
 
 import { Calendar, Users, Building2, Award } from "lucide-react";
 import galleryTerrarium from "@/assets/gallery-terrarium.webp";
