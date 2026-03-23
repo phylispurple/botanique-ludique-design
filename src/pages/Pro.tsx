@@ -262,7 +262,7 @@ const Pro = () => {
                     </ul>
 
                     <div className="flex items-center gap-2 text-[hsl(var(--olive-light))] font-mono-brand text-[10px] uppercase tracking-[2px] group-hover:gap-3 transition-all mt-auto">
-                      Demander un devis <ArrowRight className="w-3.5 h-3.5" />
+                      En savoir plus <ArrowRight className="w-3.5 h-3.5" />
                     </div>
                   </div>
                 </AnimatedSection>
