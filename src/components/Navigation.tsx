@@ -182,25 +182,27 @@ const Navigation = () => {
             }`} style={{ zIndex: 100 }}>
               <div className="py-2">
                 {proCategories.map((cat) => (
-                  <Link
-                    key={cat.id}
-                    to={`/pro#${cat.id}`}
-                    className="block px-4 py-2 text-sm font-body hover:bg-olive/10 transition-colors"
-                    style={{ color: 'hsl(0 0% 10%)' }}
-                    onClick={() => {
-                      setProOpen(false);
-                      setTimeout(() => {
-                        const el = document.getElementById(cat.id);
-                        if (el) {
-                          const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
-                          window.scrollTo({ top: pos, behavior: 'smooth' });
+                    <Link
+                      key={cat.id}
+                      to={cat.href}
+                      className="block px-4 py-2 text-sm font-body hover:bg-olive/10 transition-colors"
+                      style={{ color: 'hsl(0 0% 10%)' }}
+                      onClick={() => {
+                        setProOpen(false);
+                        if (cat.href.includes('#')) {
+                          setTimeout(() => {
+                            const el = document.getElementById(cat.id);
+                            if (el) {
+                              const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                              window.scrollTo({ top: pos, behavior: 'smooth' });
+                            }
+                          }, 100);
                         }
-                      }, 100);
-                    }}
-                  >
-                    {cat.name}
-                  </Link>
-                ))}
+                      }}
+                    >
+                      {cat.name}
+                    </Link>
+                  ))}
               </div>
             </div>
           </li>
