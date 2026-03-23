@@ -35,7 +35,7 @@ const Index = () => {
       const tryScroll = (retries = 0) => {
         const el = document.getElementById(id);
         if (el) {
-          const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+          const pos = el.getBoundingClientRect().top + window.pageYOffset - 64;
           window.scrollTo({ top: pos, behavior: 'smooth' });
         } else if (retries < 15) {
           setTimeout(() => tryScroll(retries + 1), 150);
