@@ -30,7 +30,7 @@ const cards = [
   {
     icon: Sprout,
     title: "Notre Mission",
-    desc: "Financer l'intervention de chercheurs et d'artistes méconnus, rendre accessibles des disciplines souvent réservées au milieu académique, et contribuer à une meilleure rémunération du secteur de la recherche.",
+    desc: "Soutenir des chercheurs, artistes et penseurs dont les disciplines — écologie, sciences du vivant, anthropologie — nous ouvrent à d'autres regards sur le monde. Une démarche collective, distincte des ateliers créatifs.",
     link: "/association",
     linkText: "En savoir plus →",
     disabled: false,

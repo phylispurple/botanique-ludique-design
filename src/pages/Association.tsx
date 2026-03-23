@@ -31,7 +31,7 @@ const cards = [
 {
   icon: Sprout,
     title: "Notre Mission",
-    desc: "Financer et rémunérer des chercheurs, artistes et praticiens dont les disciplines sont méconnues ou inaccessibles, pour soutenir un secteur de la recherche trop souvent précaire.",
+    desc: "Soutenir des chercheurs, artistes plasticiens et musiciens dont les travaux en écologie et sciences du vivant nous ouvrent à d'autres paradigmes — une démarche collective et désintéressée.",
     linkText: "",
     disabled: true
 }];
