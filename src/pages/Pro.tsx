@@ -174,7 +174,7 @@ const Pro = () => {
                   href="#devis"
                   className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--black))] inline-flex items-center gap-2 justify-center"
                 >
-                  Demander un devis <ArrowRight className="w-4 h-4" />
+                  Nous écrire <ArrowRight className="w-4 h-4" />
                 </a>
                 <a 
                   href="mailto:contact@botaniqueludique.com"
