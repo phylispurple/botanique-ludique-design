@@ -172,9 +172,13 @@ const Pro = () => {
                 Botanique<br />
                 <span className="text-[hsl(var(--olive))]">sur mesure</span>
               </h1>
-              <p className="text-lg md:text-xl leading-relaxed text-[hsl(var(--black))]/70 mb-8 max-w-lg">
-                Team building, formations scolaires, animations pour collectivités et EHPAD. 
-                Des interventions botaniques à Paris et en Île-de-France.
+              <p className="text-lg md:text-xl leading-relaxed text-[hsl(var(--black))]/70 mb-4 max-w-lg">
+                Team building botanique, interventions scolaires, animations pour collectivités et EHPAD. 
+                Des ateliers nature pour entreprises à Paris et en Île-de-France.
+              </p>
+              <p className="text-sm leading-relaxed text-[hsl(var(--black))]/60 mb-8 max-w-lg">
+                Découvrez nos <Link to="/etablissements-scolaires" className="underline text-[hsl(var(--olive))] hover:text-[hsl(var(--black))] transition-colors">interventions pédagogiques pour collèges et lycées</Link> ou 
+                {" "}<Link to="/contact" className="underline text-[hsl(var(--olive))] hover:text-[hsl(var(--black))] transition-colors">contactez-nous pour un devis personnalisé</Link>.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
