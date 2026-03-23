@@ -143,6 +143,9 @@ const App = () => (
           <Route path="/blog/palmiers-architecture-haussmannienne-colonialisme" element={<BlogPalmiersHaussmann />} />
           <Route path="/blog/terrarium-biopiraterie-histoire-coloniale" element={<BlogTerrariumBiopiraterie />} />
           <Route path="/blog/10-films-nature-idees-fausses" element={<BlogFilmsNature />} />
+          <Route path="/blog/botanique-projet-pedagogique-college" element={<BlogBotaniqueCollege />} />
+          <Route path="/blog/plantes-sauvages-sortie-scolaire-ile-de-france" element={<BlogPlantesSauvagesSortie />} />
+          <Route path="/blog/mediation-scientifique-definition-exemples" element={<BlogMediationScientifique />} />
           <Route path="/actualites" element={<Blog />} />
           <Route path="/animation-seniors-ehpad" element={<LandingSeniorsEHPAD />} />
           <Route path="/animation-cse-entreprise" element={<LandingCSE />} />
