@@ -106,7 +106,7 @@ const Association = () => {
             <AnimatedSection delay={200}>
               <div className="space-y-6 text-base font-body leading-relaxed" style={{ color: 'hsl(0 0% 35%)' }}>
                 <p className="text-justify">
-                  En soutenant ces intervenants, nous contribuons à la reconnaissance de disciplines souvent invisibilisées et à la transmission de connaissances précieuses sur les relations entre les humains et le monde végétal, d'ici et d'ailleurs.
+                  Conférences, ateliers spécialisés, événements culturels : chaque rendez-vous est l'occasion de rémunérer un intervenant et de partager avec le grand public des disciplines comme l'ethnobotanique, la teinture végétale, l'anthropologie des plantes ou les musiques liées au monde végétal. C'est une démarche différente et complémentaire des ateliers créatifs proposés par ailleurs.
                 </p>
                 {/* Bureau */}
                 <div className="pt-6 border-t border-foreground/10">
