@@ -176,14 +176,14 @@ const Index = () => {
           </AnimatedSection>
 
           {/* Stats */}
-          <AnimatedSection direction="right" delay={150} className="self-end">
+          <AnimatedSection direction="right" delay={150}>
             <div className="grid grid-cols-2 gap-0">
               {stats.map((stat, index) => {
                 const IconComponent = stat.icon;
                 return (
                   <div
                     key={index}
-                    className="p-10 border-brutal text-center -mt-[3px] -ml-[3px] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300">
+                    className="p-6 md:p-8 border-brutal text-center -mt-[3px] -ml-[3px] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300">
                     
                     <div className="flex justify-center mb-3">
                       <IconComponent className="w-5 h-5 text-[hsl(var(--olive))]" />
