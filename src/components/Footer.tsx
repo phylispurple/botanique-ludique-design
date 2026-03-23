@@ -37,7 +37,7 @@ const Footer = () => {
   return (
     <footer className="border-t-2 border-olive" style={{ background: 'hsl(0 0% 10%)' }}>
       <div className="px-6 md:px-[60px] py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-3 no-underline">
