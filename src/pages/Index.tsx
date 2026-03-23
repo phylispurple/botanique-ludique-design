@@ -140,7 +140,7 @@ const Index = () => {
 
       {/* ===== PRÉSENTATION + STATS ===== */}
       <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-end">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           {/* Text */}
           <AnimatedSection direction="left">
             <div>
@@ -183,7 +183,7 @@ const Index = () => {
                 return (
                   <div
                     key={index}
-                    className="p-10 border-brutal text-center -mt-[3px] -ml-[3px] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300">
+                    className="p-6 md:p-8 border-brutal text-center -mt-[3px] -ml-[3px] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300">
                     
                     <div className="flex justify-center mb-3">
                       <IconComponent className="w-5 h-5 text-[hsl(var(--olive))]" />
