@@ -30,7 +30,7 @@ const cards = [
   {
     icon: Sprout,
     title: "Notre Mission",
-    desc: "Soutenir des chercheurs, artistes et penseurs dont les disciplines — écologie, sciences du vivant, anthropologie — nous ouvrent à d'autres regards sur le monde. Une démarche collective, distincte des ateliers créatifs.",
+    desc: "Soutenir des chercheurs, artistes plasticiens et musiciens dont les disciplines en écologie, sciences du vivant et anthropologie nous ouvrent à d'autres regards sur le monde. Une démarche collective, distincte des ateliers créatifs.",
     link: "/association",
     linkText: "En savoir plus →",
     disabled: false,
