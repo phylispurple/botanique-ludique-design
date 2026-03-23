@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { X, Mail, Phone, Calendar, ArrowRight } from "lucide-react";
+import { X, Mail, Phone, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Feuille simple style logo Botanique Ludique
