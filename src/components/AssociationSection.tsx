@@ -58,10 +58,10 @@ const AssociationSection = () => {
             L'Asso­ciation
           </h2>
           <p className="font-mono-brand text-[15px] max-w-[540px] text-white/80 leading-[1.7] mb-4">
-            L'association Botanique Ludique a une mission distincte des ateliers : financer et rémunérer des chercheurs, artistes et praticiens dont les disciplines — ethnobotanique, anthropologie, teinture végétale — restent souvent méconnues ou inaccessibles au grand public.
+            L'association Botanique Ludique poursuit une mission distincte des ateliers créatifs : soutenir financièrement des chercheurs, artistes plasticiens et musiciens dont les travaux — en écologie, sciences du vivant, ethnobotanique, anthropologie — restent souvent méconnus ou inaccessibles au grand public.
           </p>
           <p className="font-mono-brand text-[15px] max-w-[540px] text-white/80 leading-[1.7] mb-12">
-            En soutenant ces intervenants, nous contribuons à la reconnaissance de savoirs précieux et à une meilleure rémunération d'un secteur de la recherche trop souvent précaire.
+            Ces voix nous invitent à élargir nos connaissances et à entrevoir d'autres façons de penser notre relation au vivant. L'association existe pour les rémunérer justement et leur offrir un espace de transmission.
           </p>
         </AnimatedSection>
 
