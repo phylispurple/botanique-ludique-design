@@ -111,7 +111,7 @@ const Contact = () => {
 
       if (error) throw error;
 
-      toast({ title: "Message envoyé !", description: "Nous vous répondrons sous 24h." });
+      toast({ title: "Merci beaucoup pour votre petit mot 🍀", description: "On vous répond au plus vite !" });
       setFormData({ name: "", email: "", phone: "", organization: "", prestation: "", profile: "", subject: "", message: "" });
     } catch (error: any) {
       console.error('Error sending email:', error);
