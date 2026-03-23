@@ -193,7 +193,7 @@ const Navigation = () => {
                           setTimeout(() => {
                             const el = document.getElementById(cat.id);
                             if (el) {
-                              const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                              const pos = el.getBoundingClientRect().top + window.pageYOffset - 64;
                               window.scrollTo({ top: pos, behavior: 'smooth' });
                             }
                           }, 100);
