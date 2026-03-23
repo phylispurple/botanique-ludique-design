@@ -196,6 +196,29 @@ const Navigation = () => {
             </div>
           </li>
 
+          {/* Médiation link */}
+          <li>
+            <Link
+              to="/#mediation"
+              onClick={(e) => {
+                e.preventDefault();
+                if (location.pathname === '/') {
+                  const el = document.getElementById('mediation');
+                  if (el) {
+                    const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                    window.scrollTo({ top: pos, behavior: 'smooth' });
+                  }
+                } else {
+                  window.location.href = '/#mediation';
+                }
+              }}
+              className="font-mono text-[12.5px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90"
+              style={{ color: 'rgba(255,255,255,0.55)' }}
+            >
+              Médiation
+            </Link>
+          </li>
+
           {/* Regular links */}
           <li>
             <Link to="/gallery"
