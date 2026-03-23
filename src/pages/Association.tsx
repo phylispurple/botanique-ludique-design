@@ -70,12 +70,12 @@ const Association = () => {
               Association loi 1901 · Le Pecq (78230)
             </span>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] mb-8" style={{ color: 'hsl(36 33% 93%)' }}>
-              Soutenir la recherche<br />
-              <span style={{ color: 'hsl(73 44% 67%)' }}>& les savoirs</span><br />
-              méconnus
+              Soutenir ceux qui<br />
+              <span style={{ color: 'hsl(73 44% 67%)' }}>élargissent</span><br />
+              notre regard
             </h1>
             <p className="text-lg md:text-xl font-body leading-relaxed max-w-2xl" style={{ color: 'rgba(255,255,255,0.7)' }}>
-              L'association Botanique Ludique a une vocation distincte des ateliers : financer et rémunérer des chercheurs, artistes et praticiens dont les disciplines restent trop souvent inaccessibles ou invisibilisées.
+              L'association Botanique Ludique ne propose pas d'ateliers créatifs — c'est l'activité professionnelle de sa fondatrice. L'association, elle, a une vocation différente : financer et rémunérer des chercheurs, artistes plasticiens et musiciens capables de nous ouvrir à d'autres façons de penser le vivant.
             </p>
           </AnimatedSection>
         </div>
