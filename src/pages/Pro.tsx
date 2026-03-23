@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
-import { Users, Building2, Heart, Leaf, Calendar, Mail, Phone, CheckCircle, Loader2, Clock, GraduationCap, ArrowRight, ArrowUp } from "lucide-react";
+import { Users, Building2, Heart, Calendar, Mail, Phone, Loader2, Clock, GraduationCap, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
