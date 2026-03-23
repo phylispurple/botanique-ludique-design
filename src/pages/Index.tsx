@@ -55,21 +55,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO
-        title="Ateliers Botaniques Paris & IDF | Kokedama, Teinture ✦ Réservez"
-        description="🌿 Ateliers créatifs nature à Paris, Yvelines (78), Hauts-de-Seine (92) & Val-d'Oise (95). Kokedama, teinture végétale, terrarium. +400 participants. Réservez votre atelier !"
-        keywords="ateliers botaniques Paris, ateliers nature Yvelines 78, ateliers Hauts-de-Seine 92, ateliers Val-d'Oise 95, kokedama Paris, teinture végétale Yvelines, vannerie Hauts-de-Seine, team building nature Paris, atelier botanique Chatou, atelier végétal Saint-Germain-en-Laye"
+        title="Botanique Ludique — Ateliers de botanique, conférences & balades guidées · Le Pecq (78)"
+        description="Association de médiation culturelle autour du vivant. Ateliers pour scolaires, entreprises et grand public. Conférences avec chercheurs et artistes. Île-de-France."
+        keywords="ateliers botaniques Paris, ateliers nature Yvelines 78, ateliers Hauts-de-Seine 92, ateliers Val-d'Oise 95, kokedama Paris, teinture végétale Yvelines, médiation scientifique, conférence botanique Île-de-France"
         canonical="/" />
       
       <SchemaOrg
+        type="EducationalOrganization"
+        data={{}} />
+      <SchemaOrg
         type="LocalBusiness"
-        data={{
-          founder: { "@type": "Person", name: "Vanessa Charlery", jobTitle: "Animatrice ethnobotaniste et Artiste Photographe" },
-          makesOffer: [
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ateliers Kokedama", description: "Art japonais du jardinage en boule de mousse" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Teinture Végétale", description: "Techniques de teinture naturelle avec des plantes" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vannerie", description: "Tressage d'osier et fibres naturelles" } }]
-
-        }} />
+        data={{}} />
       
 
       <CustomCursor />

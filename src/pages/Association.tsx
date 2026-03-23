@@ -46,10 +46,17 @@ const Association = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="L'Association — Botanique Ludique"
-        description="Botanique Ludique est une association loi 1901 de médiation culturelle et scientifique autour du vivant. Ateliers, conférences, balades botaniques. Le Pecq (78), Paris, Île-de-France."
+        title="L'Association Botanique Ludique — Loi 1901, médiation du vivant · Le Pecq (78)"
+        description="Association loi 1901 de médiation culturelle et scientifique. Ateliers, conférences, événements culturels autour de la botanique et de l'écologie."
         canonical="/association"
         keywords="association botanique, médiation scientifique, ethnobotanique, ateliers nature, Le Pecq, Paris, Île-de-France" />
+      <SchemaOrg
+        type="BreadcrumbList"
+        data={{ items: [
+          { name: "Accueil", url: "https://botaniqueludique.com/" },
+          { name: "Association", url: "https://botaniqueludique.com/association" }
+        ]}}
+      />
       
       <SchemaOrg
         type="Organization"

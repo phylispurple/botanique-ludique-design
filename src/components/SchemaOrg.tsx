@@ -1,26 +1,27 @@
 import { Helmet } from 'react-helmet-async';
 
 interface SchemaOrgProps {
-  type: 'LocalBusiness' | 'Course' | 'FAQPage' | 'Service' | 'Event' | 'Organization' | 'Person' | 'Article';
+  type: 'LocalBusiness' | 'EducationalOrganization' | 'Course' | 'FAQPage' | 'Service' | 'Event' | 'Organization' | 'Person' | 'Article' | 'BreadcrumbList';
   data: any;
 }
 
 export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
   const getSchema = () => {
     switch (type) {
-      case 'LocalBusiness':
+      case 'EducationalOrganization':
         return {
           "@context": "https://schema.org",
-          "@type": "LocalBusiness",
+          "@type": "EducationalOrganization",
           "@id": "https://botaniqueludique.com",
           "name": "Botanique Ludique",
+          "url": "https://botaniqueludique.com",
+          "logo": "https://botaniqueludique.com/favicon.png",
           "image": "https://botaniqueludique.com/hero-botanical.jpg",
-          "description": "Ateliers botaniques créatifs à Paris et en Île-de-France. Team building RSE, animations nature pour entreprises, collectivités et particuliers. Kokedama, teinture végétale, vannerie, terrarium.",
+          "description": "Association de médiation culturelle et scientifique autour du vivant. Ateliers de botanique pour scolaires, entreprises et grand public. Conférences et balades guidées en Île-de-France.",
           "founder": {
             "@type": "Person",
             "name": "Vanessa Charlery",
-            "jobTitle": "Ethnobotaniste et Fondatrice",
-            "description": "Ethnobotaniste diplômée de l'EHESS, Vanessa dirige Botanique Ludique et collabore avec un réseau d'artisans, artistes et professionnels de la nature.",
+            "jobTitle": "Animatrice ethnobotaniste et Artiste Photographe",
             "alumniOf": {
               "@type": "EducationalOrganization",
               "name": "EHESS - École des Hautes Études en Sciences Sociales"
@@ -28,70 +29,92 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           },
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Île-de-France",
-            "addressLocality": "Paris",
-            "postalCode": "75000",
-            "addressRegion": "Île-de-France",
+            "addressLocality": "Le Pecq",
+            "postalCode": "78230",
+            "addressRegion": "Yvelines",
             "addressCountry": "FR"
           },
           "areaServed": [
-            {
-              "@type": "City",
-              "name": "Paris",
-              "sameAs": "https://fr.wikipedia.org/wiki/Paris"
-            },
-            {
-              "@type": "AdministrativeArea",
-              "name": "Yvelines",
-              "sameAs": "https://fr.wikipedia.org/wiki/Yvelines"
-            },
-            {
-              "@type": "AdministrativeArea",
-              "name": "Hauts-de-Seine",
-              "sameAs": "https://fr.wikipedia.org/wiki/Hauts-de-Seine"
-            },
-            {
-              "@type": "AdministrativeArea",
-              "name": "Val-d'Oise",
-              "sameAs": "https://fr.wikipedia.org/wiki/Val-d%27Oise"
-            },
-            {
-              "@type": "City",
-              "name": "Chatou"
-            },
-            {
-              "@type": "City",
-              "name": "Saint-Germain-en-Laye"
-            },
-            {
-              "@type": "City",
-              "name": "Le Vésinet"
-            },
-            {
-              "@type": "City",
-              "name": "Le Pecq"
-            },
-            {
-              "@type": "City",
-              "name": "Versailles"
-            },
-            {
-              "@type": "City",
-              "name": "Boulogne-Billancourt"
-            },
-            {
-              "@type": "City",
-              "name": "Nanterre"
-            },
-            {
-              "@type": "City",
-              "name": "Rueil-Malmaison"
+            { "@type": "AdministrativeArea", "name": "Yvelines", "sameAs": "https://fr.wikipedia.org/wiki/Yvelines" },
+            { "@type": "AdministrativeArea", "name": "Île-de-France", "sameAs": "https://fr.wikipedia.org/wiki/%C3%8Ele-de-France" },
+            { "@type": "City", "name": "Paris", "sameAs": "https://fr.wikipedia.org/wiki/Paris" },
+            { "@type": "AdministrativeArea", "name": "Hauts-de-Seine", "sameAs": "https://fr.wikipedia.org/wiki/Hauts-de-Seine" },
+            { "@type": "AdministrativeArea", "name": "Val-d'Oise", "sameAs": "https://fr.wikipedia.org/wiki/Val-d%27Oise" },
+            { "@type": "City", "name": "Le Pecq" },
+            { "@type": "City", "name": "Chatou" },
+            { "@type": "City", "name": "Saint-Germain-en-Laye" },
+            { "@type": "City", "name": "Le Vésinet" },
+            { "@type": "City", "name": "Versailles" }
+          ],
+          "knowsAbout": [
+            "Botanique",
+            "Écologie",
+            "Médiation scientifique",
+            "Ateliers scolaires",
+            "Conférences",
+            "Ethnobotanique",
+            "Teinture végétale",
+            "Kokedama"
+          ],
+          "email": "contact@botaniqueludique.com",
+          "telephone": "+33609831606",
+          "sameAs": [
+            "https://www.instagram.com/botanique.ludique/",
+            "https://www.linkedin.com/in/vanessa-charlery-a988a8319/"
+          ],
+          ...data
+        };
+
+      case 'LocalBusiness':
+        return {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://botaniqueludique.com",
+          "name": "Botanique Ludique",
+          "image": "https://botaniqueludique.com/hero-botanical.jpg",
+          "description": "Association de médiation culturelle et scientifique autour du vivant. Ateliers de botanique, conférences et balades guidées à Paris et en Île-de-France.",
+          "founder": {
+            "@type": "Person",
+            "name": "Vanessa Charlery",
+            "jobTitle": "Animatrice ethnobotaniste et Artiste Photographe",
+            "alumniOf": {
+              "@type": "EducationalOrganization",
+              "name": "EHESS - École des Hautes Études en Sciences Sociales"
             }
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Le Pecq",
+            "postalCode": "78230",
+            "addressRegion": "Yvelines",
+            "addressCountry": "FR"
+          },
+          "areaServed": [
+            { "@type": "City", "name": "Paris", "sameAs": "https://fr.wikipedia.org/wiki/Paris" },
+            { "@type": "AdministrativeArea", "name": "Yvelines", "sameAs": "https://fr.wikipedia.org/wiki/Yvelines" },
+            { "@type": "AdministrativeArea", "name": "Hauts-de-Seine", "sameAs": "https://fr.wikipedia.org/wiki/Hauts-de-Seine" },
+            { "@type": "AdministrativeArea", "name": "Val-d'Oise", "sameAs": "https://fr.wikipedia.org/wiki/Val-d%27Oise" },
+            { "@type": "City", "name": "Chatou" },
+            { "@type": "City", "name": "Saint-Germain-en-Laye" },
+            { "@type": "City", "name": "Le Vésinet" },
+            { "@type": "City", "name": "Le Pecq" },
+            { "@type": "City", "name": "Versailles" },
+            { "@type": "City", "name": "Boulogne-Billancourt" },
+            { "@type": "City", "name": "Nanterre" },
+            { "@type": "City", "name": "Rueil-Malmaison" }
+          ],
+          "knowsAbout": [
+            "Botanique",
+            "Écologie",
+            "Médiation scientifique",
+            "Ateliers scolaires",
+            "Conférences",
+            "Ethnobotanique"
           ],
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "48.8566",
-            "longitude": "2.3522"
+            "latitude": "48.8951",
+            "longitude": "2.1052"
           },
           "url": "https://botaniqueludique.com",
           "email": "contact@botaniqueludique.com",
@@ -152,7 +175,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           "name": data.name,
           "description": data.description,
           "provider": {
-            "@type": "LocalBusiness",
+            "@type": "EducationalOrganization",
             "name": "Botanique Ludique",
             "url": "https://botaniqueludique.com"
           },
@@ -168,12 +191,20 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           "name": "Botanique Ludique",
           "url": "https://botaniqueludique.com",
           "logo": "https://botaniqueludique.com/favicon.png",
-          "description": "Ateliers botaniques créatifs et team building nature en Île-de-France",
+          "description": "Association loi 1901 de médiation culturelle et scientifique autour du vivant. Ateliers, conférences, balades botaniques en Île-de-France.",
           "founder": {
             "@type": "Person",
             "name": "Vanessa Charlery",
             "jobTitle": "Ethnobotaniste"
           },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Le Pecq",
+            "postalCode": "78230",
+            "addressRegion": "Yvelines",
+            "addressCountry": "FR"
+          },
+          "knowsAbout": ["Botanique", "Écologie", "Médiation scientifique", "Ateliers scolaires", "Conférences"],
           "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "customer service",
@@ -209,7 +240,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           "name": data.name,
           "description": data.description,
           "provider": {
-            "@type": "Organization",
+            "@type": "EducationalOrganization",
             "name": "Botanique Ludique",
             "sameAs": "https://botaniqueludique.com"
           },
@@ -230,10 +261,10 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           "@type": "FAQPage",
           "mainEntity": data.questions.map((q: any) => ({
             "@type": "Question",
-            "name": q.question,
+            "name": q.question || q.q,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": q.answer
+              "text": q.answer || q.a
             }
           }))
         };
@@ -259,7 +290,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
             }
           },
           "organizer": {
-            "@type": "Organization",
+            "@type": "EducationalOrganization",
             "name": "Botanique Ludique",
             "url": "https://botaniqueludique.com"
           },
@@ -300,6 +331,18 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           },
           "image": data.image || "https://botaniqueludique.com/og-image.jpg",
           ...data
+        };
+
+      case 'BreadcrumbList':
+        return {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": (data.items || []).map((item: { name: string; url: string }, index: number) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": item.name,
+            "item": item.url
+          }))
         };
       
       default:
