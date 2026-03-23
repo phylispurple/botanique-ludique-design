@@ -118,7 +118,7 @@ const ConferencesSavoirs = () => {
               Balades<br />Botaniques
             </h3>
             <p className="text-base text-white/70 max-w-[560px] leading-[1.7] mb-12">
-              Des sorties guidées pour observer, identifier et comprendre les plantes dans leur milieu naturel ou urbain. Chaque balade est une invitation à redécouvrir notre environnement végétal.
+              Des sorties guidées pour observer, identifier et comprendre les plantes dans leur milieu naturel ou urbain. Chaque balade botanique guidée dans les Yvelines ou en Île-de-France est une invitation à redécouvrir notre environnement végétal, idéale pour une sortie pédagogique plantes sauvages.
             </p>
           </AnimatedSection>
 

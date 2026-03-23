@@ -221,12 +221,12 @@ const Index = () => {
         <div className="overflow-hidden mb-8">
           <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
             {[
-              { src: galleryTerrarium, alt: "Atelier terrarium botanique" },
-              { src: galleryTeinture, alt: "Atelier teinture végétale" },
-              { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs" },
-              { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin" },
-              { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama" },
-              { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" },
+              { src: galleryTerrarium, alt: "Atelier terrarium botanique — Botanique Ludique, Le Pecq" },
+              { src: galleryTeinture, alt: "Atelier teinture végétale naturelle — Botanique Ludique, Île-de-France" },
+              { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs — Botanique Ludique, Paris" },
+              { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin botanique — Botanique Ludique, Yvelines" },
+              { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama — Botanique Ludique" },
+              { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs naturels — Botanique Ludique" },
             ].map((image, index) => (
               <div key={`a-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal">
                 <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
