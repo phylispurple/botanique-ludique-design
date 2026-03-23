@@ -111,7 +111,7 @@ const Contact = () => {
 
       if (error) throw error;
 
-      toast({ title: "Message envoyé !", description: "Nous vous répondrons sous 24h." });
+      toast({ title: "Merci beaucoup pour votre petit mot 🍀", description: "On vous répond au plus vite !" });
       setFormData({ name: "", email: "", phone: "", organization: "", prestation: "", profile: "", subject: "", message: "" });
     } catch (error: any) {
       console.error('Error sending email:', error);
@@ -136,8 +136,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO
-        title="Contact & Réservation | Réponse sous 24h ✦ Devis Gratuit"
-        description="✉️ Contactez Botanique Ludique pour réserver votre atelier. Réponse garantie sous 24h. Devis gratuit pour entreprises, écoles, particuliers. Paris & IDF."
+        title="Contact & Réservation ✦ Devis Gratuit"
+        description="✉️ Contactez Botanique Ludique pour réserver votre atelier. Devis gratuit pour entreprises, écoles, particuliers. Paris & IDF."
         keywords="contact atelier botanique, réserver kokedama, devis formation botanique, contact Botanique Ludique"
         canonical="/contact"
       />
@@ -155,7 +155,7 @@ const Contact = () => {
           </AnimatedSection>
           <AnimatedSection delay={100}>
             <p className="text-lg leading-[1.7] text-[hsl(var(--black))]/70 max-w-[550px]">
-              Atelier, conférence, médiation, balade botanique… Décrivez votre projet et nous vous répondons sous 24h.
+              Atelier, conférence, médiation, balade botanique… Décrivez votre projet, on vous répond au plus vite.
             </p>
           </AnimatedSection>
         </div>
@@ -317,10 +317,10 @@ const Contact = () => {
 
                 {/* Guarantee */}
                 <div className="border-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] p-8 shadow-brutal">
-                  <span className="font-display text-4xl leading-none mb-3 block">24h</span>
-                  <p className="font-mono-brand text-[10px] uppercase tracking-[2px] mb-3">Réponse garantie</p>
+                  <span className="font-display text-3xl leading-none mb-3 block">🍀</span>
+                  <p className="font-mono-brand text-[10px] uppercase tracking-[2px] mb-3">On vous répond au plus vite</p>
                   <p className="text-sm text-[hsl(var(--cream))]/70 leading-relaxed">
-                    Nous étudions chaque demande avec attention et vous recontactons sous 24 heures ouvrées.
+                    Nous étudions chaque demande avec attention et vous recontactons dans les meilleurs délais.
                   </p>
                 </div>
 
