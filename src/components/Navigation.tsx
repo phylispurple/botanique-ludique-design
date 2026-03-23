@@ -67,7 +67,7 @@ const Navigation = () => {
     const tryScroll = (retries = 0) => {
       const element = document.getElementById(workshopId);
       if (element) {
-        const offset = 80;
+        const offset = 64;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
@@ -80,7 +80,7 @@ const Navigation = () => {
 
   return (
     <nav className="sticky top-0 z-[999] border-b-2 border-olive" style={{ background: 'hsl(0 0% 10%)' }}>
-      <div className="px-6 md:px-[60px] h-20 flex items-center justify-between">
+      <div className="px-6 md:px-[60px] h-16 flex items-center justify-between">
         {/* Brand */}
         <Link 
           to="/" 
@@ -193,7 +193,7 @@ const Navigation = () => {
                           setTimeout(() => {
                             const el = document.getElementById(cat.id);
                             if (el) {
-                              const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                              const pos = el.getBoundingClientRect().top + window.pageYOffset - 64;
                               window.scrollTo({ top: pos, behavior: 'smooth' });
                             }
                           }, 100);
@@ -216,7 +216,7 @@ const Navigation = () => {
                 if (location.pathname === '/') {
                   const el = document.getElementById('mediation');
                   if (el) {
-                    const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                    const pos = el.getBoundingClientRect().top + window.pageYOffset - 64;
                     window.scrollTo({ top: pos, behavior: 'smooth' });
                   }
                 } else {
@@ -363,7 +363,7 @@ const Navigation = () => {
                 if (location.pathname === '/') {
                   const el = document.getElementById('mediation');
                   if (el) {
-                    const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                    const pos = el.getBoundingClientRect().top + window.pageYOffset - 64;
                     window.scrollTo({ top: pos, behavior: 'smooth' });
                   }
                 } else {

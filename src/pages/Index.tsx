@@ -6,7 +6,7 @@ import CookieConsent from "@/components/CookieConsent";
 import Testimonials from "@/components/Testimonials";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import Marquee from "@/components/Marquee";
-import CustomCursor from "@/components/CustomCursor";
+
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { SEO } from "@/components/SEO";
@@ -35,7 +35,7 @@ const Index = () => {
       const tryScroll = (retries = 0) => {
         const el = document.getElementById(id);
         if (el) {
-          const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+          const pos = el.getBoundingClientRect().top + window.pageYOffset - 64;
           window.scrollTo({ top: pos, behavior: 'smooth' });
         } else if (retries < 15) {
           setTimeout(() => tryScroll(retries + 1), 150);
@@ -68,7 +68,6 @@ const Index = () => {
         data={{}} />
       
 
-      <CustomCursor />
       <Navigation />
 
       {/* ===== HERO ===== */}
