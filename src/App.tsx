@@ -118,6 +118,7 @@ const App = () => (
           <Route path="/index.html" element={<Navigate to="/" replace />} />
           <Route path="/about" element={<About />} />
           <Route path="/association" element={<Association />} />
+          <Route path="/etablissements-scolaires" element={<EtablissementsScolaires />} />
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/pro" element={<Pro />} />
           {/* Redirects from old pages to new /pro page */}
