@@ -13,6 +13,7 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
 import ConferencesSavoirs from "@/components/ConferencesSavoirs";
 import VideoSection from "@/components/VideoSection";
+import BackToTop from "@/components/BackToTop";
 
 import { Calendar, Users, Building2, Award } from "lucide-react";
 import galleryTerrarium from "@/assets/gallery-terrarium.webp";
@@ -193,46 +194,48 @@ const Index = () => {
       
 
       {/* ===== GALERIE — Défilement continu ===== */}
-      <section className="py-24 px-6 bg-[hsl(var(--cream-dark))]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 bg-[hsl(var(--cream-dark))]">
+        <div className="max-w-6xl mx-auto px-6">
           <AnimatedSection className="text-center mb-12">
             <span className="section-label block mb-3">Portfolio</span>
             <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
               Les plus belles créations
             </h2>
           </AnimatedSection>
+        </div>
 
-          <div className="overflow-hidden mb-8">
-            <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
-              {[
+        <div className="overflow-hidden mb-8">
+          <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
+            {[
               { src: galleryTerrarium, alt: "Atelier terrarium botanique" },
               { src: galleryTeinture, alt: "Atelier teinture végétale" },
               { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs" },
               { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin" },
               { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama" },
-              { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" }].
-              map((image, index) =>
+              { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs" },
+            ].map((image, index) => (
               <div key={`a-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal">
-                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-                </div>
-              ).concat(
-                [
+                <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+            )).concat(
+              [
                 { src: galleryTerrarium, alt: "" },
                 { src: galleryTeinture, alt: "" },
                 { src: galleryFlowerCrown, alt: "" },
                 { src: galleryKokedamaGarden, alt: "" },
                 { src: galleryWorkshopGroup, alt: "" },
-                { src: gallerySachetSenteur, alt: "" }].
-                map((image, index) =>
+                { src: gallerySachetSenteur, alt: "" },
+              ].map((image, index) => (
                 <div key={`b-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal" aria-hidden="true">
-                    <img src={image.src} alt="" className="w-full h-full object-cover" loading="lazy" />
-                  </div>
-                )
-              )}
-            </div>
+                  <img src={image.src} alt="" className="w-full h-full object-cover" loading="lazy" />
+                </div>
+              ))
+            )}
           </div>
+        </div>
 
-          <AnimatedSection delay={300} className="text-center">
+        <div className="max-w-6xl mx-auto px-6">
+          <AnimatedSection delay={300} className="text-center mt-8">
             <Link
               to="/gallery"
               className="btn-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-[hsl(var(--black))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-8 py-3 inline-block">
@@ -269,16 +272,17 @@ const Index = () => {
 
 
       {/* ===== PARTENAIRES — Défilement continu ===== */}
-      <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimatedSection>
             <h3 className="font-display text-2xl md:text-3xl uppercase text-center mb-10 tracking-[-1px]">
               Ils nous font confiance
             </h3>
           </AnimatedSection>
-          <div className="overflow-hidden">
-            <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '20s' }}>
-              {[
+        </div>
+        <div className="overflow-hidden">
+          <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '20s' }}>
+            {[
               { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
               { src: "/logos/mjc-vesinet.jpg", alt: "MJC du Vésinet" },
               { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
@@ -286,13 +290,13 @@ const Index = () => {
               { src: "/logos/publicis.jpg", alt: "Publicis" },
               { src: "/logos/f93.jpg", alt: "F93" },
               { src: "/logos/bezons.svg", alt: "Ville de Bezons" },
-              { src: "/logos/maurepas.png", alt: "Ville de Maurepas" }].
-              map((logo, index) =>
+              { src: "/logos/maurepas.png", alt: "Ville de Maurepas" },
+            ].map((logo, index) => (
               <div key={`a-${index}`} className="flex-shrink-0 flex items-center justify-center p-4 border-brutal hover:-translate-y-1 hover:shadow-brutal transition-all duration-200" style={{ width: 140 }}>
-                  <img src={logo.src} alt={logo.alt} className="max-h-12 w-auto object-contain" loading="lazy" />
-                </div>
-              ).concat(
-                [
+                <img src={logo.src} alt={logo.alt} className="max-h-12 w-auto object-contain" loading="lazy" />
+              </div>
+            )).concat(
+              [
                 { src: "/logos/region-idf.webp", alt: "" },
                 { src: "/logos/mjc-vesinet.jpg", alt: "" },
                 { src: "/logos/jappy-senior.svg", alt: "" },
@@ -300,14 +304,13 @@ const Index = () => {
                 { src: "/logos/publicis.jpg", alt: "" },
                 { src: "/logos/f93.jpg", alt: "" },
                 { src: "/logos/bezons.svg", alt: "" },
-                { src: "/logos/maurepas.png", alt: "" }].
-                map((logo, index) =>
+                { src: "/logos/maurepas.png", alt: "" },
+              ].map((logo, index) => (
                 <div key={`b-${index}`} className="flex-shrink-0 flex items-center justify-center p-4 border-brutal" style={{ width: 140 }} aria-hidden="true">
-                    <img src={logo.src} alt="" className="max-h-12 w-auto object-contain" loading="lazy" />
-                  </div>
-                )
-              )}
-            </div>
+                  <img src={logo.src} alt="" className="max-h-12 w-auto object-contain" loading="lazy" />
+                </div>
+              ))
+            )}
           </div>
         </div>
       </section>
@@ -370,6 +373,7 @@ const Index = () => {
 
       <Footer />
       <CookieConsent />
+      <BackToTop />
     </div>);
 
 };

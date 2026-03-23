@@ -15,7 +15,7 @@ const AnimatedSection = ({
   delay = 0,
   direction = 'up' 
 }: AnimatedSectionProps) => {
-  const { ref, isInView } = useInView({ threshold: 0.1 });
+  const { ref, isInView } = useInView({ threshold: 0.1, triggerOnce: false });
 
   const getTransform = () => {
     switch (direction) {

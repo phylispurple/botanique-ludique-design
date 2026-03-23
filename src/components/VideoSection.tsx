@@ -13,8 +13,8 @@ const bottomVideos = [
 ];
 
 const VideoCard = ({ src, tag, title, className = "" }: { src: string; tag: string; title: string; className?: string }) => (
-  <div className={`relative overflow-hidden border-[3px] border-[hsl(var(--cream))] -m-[1.5px] group transition-all duration-300 hover:z-10 hover:shadow-[8px_8px_0_hsl(var(--olive))] hover:-translate-x-[3px] hover:-translate-y-[3px] ${className}`}>
-    <video autoPlay muted loop playsInline className="w-full h-full object-cover block min-h-[220px]">
+  <div className={`relative overflow-hidden border-[3px] border-[hsl(var(--cream))] -m-[1.5px] group transition-all duration-300 hover:z-10 hover:shadow-[8px_8px_0_hsl(var(--olive))] hover:-translate-x-[3px] hover:-translate-y-[3px] ${className}`} style={{ height: '220px' }}>
+    <video autoPlay muted loop playsInline className="w-full h-full object-cover block">
       <source src={src} type="video/mp4" />
     </video>
     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[hsl(var(--black))]/70 flex flex-col justify-end p-6">
@@ -47,7 +47,7 @@ const VideoSection = () => {
       <AnimatedSection delay={150}>
         {/* Top grid: 1 large + 2 stacked */}
         <div className="grid md:grid-cols-[1.2fr_0.8fr] gap-0">
-          <VideoCard src={videos[0].src} tag={videos[0].tag} title={videos[0].title} className="min-h-[280px] md:min-h-[400px]" />
+          <VideoCard src={videos[0].src} tag={videos[0].tag} title={videos[0].title} />
           <div className="flex flex-col">
             <VideoCard src={videos[1].src} tag={videos[1].tag} title={videos[1].title} className="flex-1" />
             <VideoCard src={videos[2].src} tag={videos[2].tag} title={videos[2].title} className="flex-1" />
