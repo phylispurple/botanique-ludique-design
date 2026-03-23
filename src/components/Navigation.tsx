@@ -67,7 +67,7 @@ const Navigation = () => {
     const tryScroll = (retries = 0) => {
       const element = document.getElementById(workshopId);
       if (element) {
-        const offset = 80;
+        const offset = 64;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
