@@ -5,7 +5,7 @@ import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import BackToTop from "@/components/BackToTop";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import terrariumImage from "@/assets/gallery-terrarium.webp";
 import seedBombsImage from "@/assets/gallery-seed-bombs.webp";
