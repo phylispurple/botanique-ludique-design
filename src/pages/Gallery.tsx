@@ -149,7 +149,7 @@ const Gallery = () => {
               <div
                 key={index}
                 className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer"
-                onClick={() => setSelectedItem(item)}
+                onClick={() => setSelectedIndex(index)}
                 onMouseEnter={(e) => {
                   const vid = e.currentTarget.querySelector('video');
                   vid?.play().catch(err => console.log('Video play failed:', err));
