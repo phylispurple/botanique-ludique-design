@@ -209,20 +209,42 @@ const Gallery = () => {
         </div>
       </main>
 
-      <Dialog open={!!selectedItem} onOpenChange={() => setSelectedItem(null)}>
-        <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 bg-charcoal/95 border-none">
+      <Dialog open={!!selectedItem} onOpenChange={() => setSelectedIndex(null)}>
+        <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 bg-[hsl(var(--black))]/95 border-none">
+          {/* Bouton fermer */}
           <button
-            onClick={() => setSelectedItem(null)}
-            className="absolute top-4 right-4 z-50 p-2 rounded-full bg-off-white/10 hover:bg-off-white/20 transition-colors"
+            onClick={() => setSelectedIndex(null)}
+            className="absolute top-4 right-4 z-50 p-2.5 rounded-full bg-[hsl(var(--cream))]/10 hover:bg-[hsl(var(--cream))]/25 transition-colors border border-[hsl(var(--cream))]/20"
+            aria-label="Fermer"
           >
-            <X className="w-6 h-6 text-off-white" />
+            <X className="w-5 h-5 text-[hsl(var(--cream))]" />
           </button>
+
+          {/* Flèche précédent */}
+          <button
+            onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+            className="absolute left-3 md:left-5 top-1/2 -translate-y-1/2 z-50 p-2.5 rounded-full bg-[hsl(var(--cream))]/10 hover:bg-[hsl(var(--cream))]/25 transition-colors border border-[hsl(var(--cream))]/20"
+            aria-label="Image précédente"
+          >
+            <ChevronLeft className="w-6 h-6 text-[hsl(var(--cream))]" />
+          </button>
+
+          {/* Flèche suivant */}
+          <button
+            onClick={(e) => { e.stopPropagation(); handleNext(); }}
+            className="absolute right-3 md:right-5 top-1/2 -translate-y-1/2 z-50 p-2.5 rounded-full bg-[hsl(var(--cream))]/10 hover:bg-[hsl(var(--cream))]/25 transition-colors border border-[hsl(var(--cream))]/20"
+            aria-label="Image suivante"
+          >
+            <ChevronRight className="w-6 h-6 text-[hsl(var(--cream))]" />
+          </button>
+
           {selectedItem && (
-            <div className="relative w-full h-full flex items-center justify-center p-8">
+            <div className="relative w-full h-full flex items-center justify-center p-12 md:p-16">
               {selectedItem.type === "video" ? (
                 <video
+                  key={selectedItem.src}
                   src={selectedItem.src}
-                  className="max-w-full max-h-[85vh] object-contain"
+                  className="max-w-full max-h-[80vh] object-contain"
                   controls
                   autoPlay
                   loop
@@ -230,14 +252,20 @@ const Gallery = () => {
                 />
               ) : (
                 <img
+                  key={selectedItem.src}
                   src={selectedItem.src}
                   alt={selectedItem.alt}
-                  className="max-w-full max-h-[85vh] object-contain"
+                  className="max-w-full max-h-[80vh] object-contain"
                 />
               )}
-              <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-off-white text-sm italic bg-charcoal/80 px-4 py-2 rounded-full">
-                {selectedItem.caption}
-              </p>
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3">
+                <p className="text-[hsl(var(--cream))] text-sm italic bg-[hsl(var(--black))]/80 px-4 py-2 rounded-full font-mono-brand">
+                  {selectedItem.caption}
+                </p>
+                <span className="text-[hsl(var(--cream))]/50 text-xs font-mono-brand">
+                  {(selectedIndex ?? 0) + 1}/{items.length}
+                </span>
+              </div>
             </div>
           )}
         </DialogContent>
