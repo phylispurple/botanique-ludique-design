@@ -250,12 +250,12 @@ const Gallery = () => {
           </button>
 
           {selectedItem && (
-            <div className="relative w-full h-full flex items-center justify-center p-12 md:p-16">
+            <div className="relative w-full h-full flex items-center justify-center px-14 py-16 md:p-16">
               {selectedItem.type === "video" ? (
                 <video
                   key={selectedItem.src}
                   src={selectedItem.src}
-                  className="max-w-full max-h-[80vh] object-contain"
+                  className="max-w-full max-h-[75vh] md:max-h-[80vh] object-contain"
                   controls
                   autoPlay
                   loop
@@ -266,14 +266,14 @@ const Gallery = () => {
                   key={selectedItem.src}
                   src={selectedItem.src}
                   alt={selectedItem.alt}
-                  className="max-w-full max-h-[80vh] object-contain"
+                  className="max-w-full max-h-[75vh] md:max-h-[80vh] object-contain"
                 />
               )}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3">
-                <p className="text-[hsl(var(--cream))] text-sm italic bg-[hsl(var(--black))]/80 px-4 py-2 rounded-full font-mono-brand">
+              <div className="absolute bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 flex flex-col md:flex-row items-center gap-1 md:gap-3 max-w-[90vw]">
+                <p className="text-[hsl(var(--cream))] text-xs md:text-sm italic bg-[hsl(var(--black))]/80 px-3 md:px-4 py-1.5 md:py-2 rounded-full font-mono-brand text-center line-clamp-2">
                   {selectedItem.caption}
                 </p>
-                <span className="text-[hsl(var(--cream))]/50 text-xs font-mono-brand">
+                <span className="text-[hsl(var(--cream))]/50 text-[10px] md:text-xs font-mono-brand whitespace-nowrap">
                   {(selectedIndex ?? 0) + 1}/{items.length}
                 </span>
               </div>
