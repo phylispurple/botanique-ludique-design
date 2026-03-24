@@ -132,7 +132,7 @@ const Gallery = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [selectedIndex]);
 
-
+  return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
         title="Galerie Photos & Vidéos | Nos Ateliers en Images ✦ Inspirations"
