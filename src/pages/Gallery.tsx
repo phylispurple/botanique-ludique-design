@@ -68,7 +68,20 @@ const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string
 };
 
 const Gallery = () => {
-  const [selectedItem, setSelectedItem] = useState<{ src: string; alt: string; caption: string; type: string } | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const selectedItem = selectedIndex !== null ? items[selectedIndex] ?? null : null;
+
+  const handlePrev = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex(selectedIndex === 0 ? items.length - 1 : selectedIndex - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex(selectedIndex === items.length - 1 ? 0 : selectedIndex + 1);
+    }
+  };
 
   const items = [
     // Ligne 1 : Portrait + Ateliers phares
