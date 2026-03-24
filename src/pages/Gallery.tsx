@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import BackToTop from "@/components/BackToTop";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import terrariumImage from "@/assets/gallery-terrarium.webp";
 import seedBombsImage from "@/assets/gallery-seed-bombs.webp";
@@ -68,56 +68,35 @@ const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string
 };
 
 const Gallery = () => {
-  const [selectedItem, setSelectedItem] = useState<{ src: string; alt: string; caption: string; type: string } | null>(null);
-
   const items = [
-    // Ligne 1 : Portrait + Ateliers phares
     { src: portraitVanessaImage, alt: "Vanessa Charlery, ethnobotaniste", caption: "Portrait, Vanessa Charlery, fondatrice", type: "image" },
     { src: kokedamaGardenImage, alt: "Kokedama dans un jardin", caption: "Kokedama dans un jardin naturel", type: "image" },
     { src: "/videos/workshop-demo.mp4", alt: "Immersion dans nos ateliers", caption: "Immersion dans nos ateliers", type: "video" },
-    
-    // Ligne 2 : Créations botaniques
     { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium, Atelier Botanique Ludique", type: "image" },
     { src: flowerCrownImage, alt: "Couronne de fleurs", caption: "Atelier couronne de fleurs", type: "image" },
     { src: "/videos/workshop-epoxy-floral.mp4", alt: "Création époxy floral", caption: "Atelier Époxy Floral, Plateaux et tables en résine", type: "video" },
-    
-    // Ligne 3 : Ateliers en action
     { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines, Atelier Botanique Ludique", type: "image" },
     { src: workshopGroupImage, alt: "Atelier kokedama en groupe", caption: "Atelier kokedama, Participants en création", type: "image" },
     { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier, MJC Le Vésinet", type: "image" },
     { src: teinture1Image, alt: "Atelier teinture végétale", caption: "Atelier teinture végétale, Préparation des tissus", type: "image" },
-    
-    // Ligne 4 : Teinture végétale (suite)
     { src: teinture2Image, alt: "Teinture végétale résultat", caption: "Atelier teinture végétale, Couleurs naturelles", type: "image" },
     { src: teinture3Image, alt: "Détail teinture végétale", caption: "Atelier teinture végétale, Fil teint au bleu", type: "image" },
     { src: "/videos/workshop-dyeing.mp4", alt: "Atelier teinture végétale", caption: "Atelier teinture végétale en vidéo", type: "video" },
-    
-    // Ligne 5 : Nature et créativité
     { src: forestWalkImage, alt: "Balade en forêt", caption: "Atelier sur les espèces exotiques envahissantes", type: "image" },
     { src: tatakiZomeImage, alt: "Atelier Tataki Zome", caption: "Atelier Tataki Zome, Impression végétale japonaise", type: "image" },
     { src: "/videos/workshop-demo-2.mp4", alt: "Atelier botanique", caption: "Atelier de création botanique", type: "video" },
-    
-    // Ligne 5 : Artisanat végétal
     { src: basketryImage, alt: "Atelier vannerie", caption: "Atelier vannerie et tressage", type: "image" },
     { src: succulentsImage, alt: "Atelier succulentes", caption: "Succulentes, Atelier Botanique Ludique", type: "image" },
     { src: "/videos/workshop-demo-3.mp4", alt: "Création naturelle", caption: "Création avec éléments naturels", type: "video" },
-    
-    // Ligne 6 : Bien-être et saisons
     { src: sachetSenteurImage, alt: "Sachets de senteur", caption: "Sachets de senteur aux plantes aromatiques", type: "image" },
     { src: autumnLeavesImage, alt: "Création avec feuilles d'automne", caption: "Création végétale automnale", type: "image" },
     { src: "/videos/workshop-demo-4.mp4", alt: "Atelier en groupe", caption: "Atelier participatif", type: "video" },
-    
-    // Ligne 7 : Ateliers éducatifs
     { src: atelierAdulteImage, alt: "Atelier herbier adulte", caption: "Atelier création d'herbier, Adultes", type: "image" },
     { src: fresqueVegetaleImage, alt: "Fresque végétale", caption: "Fresques Végétales", type: "image" },
     { src: collegeEee1Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
-    
-    // Ligne 8 : Interventions scolaires
     { src: collegeEee2Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
     { src: collegeEee3Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
     { src: collegeEee4Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
-    
-    // Ligne 9-11 : Éco-construction Kosovo
     { src: kosovoConstruction1, alt: "Éco-construction au Kosovo", caption: "Construction d'une structure en bois, Kosovo", type: "image" },
     { src: kosovoConstruction2, alt: "Équipe éco-construction Kosovo", caption: "Travail d'équipe en éco-construction, Kosovo", type: "image" },
     { src: kosovoConstruction3, alt: "Préparation du torchis", caption: "Préparation du torchis en groupe, Kosovo", type: "image" },
@@ -126,6 +105,32 @@ const Gallery = () => {
     { src: kosovoConstruction6, alt: "Application du torchis", caption: "Techniques ancestrales de construction, Kosovo", type: "image" },
     { src: kosovoConstruction7, alt: "Manipulation du torchis", caption: "Apprentissage éco-construction, Kosovo", type: "image" },
   ];
+
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const selectedItem = selectedIndex !== null ? items[selectedIndex] ?? null : null;
+
+  const handlePrev = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex(selectedIndex === 0 ? items.length - 1 : selectedIndex - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex(selectedIndex === items.length - 1 ? 0 : selectedIndex + 1);
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedIndex === null) return;
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "ArrowRight") handleNext();
+      if (e.key === "Escape") setSelectedIndex(null);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedIndex]);
 
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
@@ -155,7 +160,7 @@ const Gallery = () => {
               <div
                 key={index}
                 className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer"
-                onClick={() => setSelectedItem(item)}
+                onClick={() => setSelectedIndex(index)}
                 onMouseEnter={(e) => {
                   const vid = e.currentTarget.querySelector('video');
                   vid?.play().catch(err => console.log('Video play failed:', err));
@@ -215,20 +220,42 @@ const Gallery = () => {
         </div>
       </main>
 
-      <Dialog open={!!selectedItem} onOpenChange={() => setSelectedItem(null)}>
-        <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 bg-charcoal/95 border-none">
+      <Dialog open={!!selectedItem} onOpenChange={() => setSelectedIndex(null)}>
+        <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 bg-[hsl(var(--black))]/95 border-none">
+          {/* Bouton fermer */}
           <button
-            onClick={() => setSelectedItem(null)}
-            className="absolute top-4 right-4 z-50 p-2 rounded-full bg-off-white/10 hover:bg-off-white/20 transition-colors"
+            onClick={() => setSelectedIndex(null)}
+            className="absolute top-4 right-4 z-50 p-2.5 rounded-full bg-[hsl(var(--cream))]/10 hover:bg-[hsl(var(--cream))]/25 transition-colors border border-[hsl(var(--cream))]/20"
+            aria-label="Fermer"
           >
-            <X className="w-6 h-6 text-off-white" />
+            <X className="w-5 h-5 text-[hsl(var(--cream))]" />
           </button>
+
+          {/* Flèche précédent */}
+          <button
+            onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+            className="absolute left-3 md:left-5 top-1/2 -translate-y-1/2 z-50 p-2.5 rounded-full bg-[hsl(var(--cream))]/10 hover:bg-[hsl(var(--cream))]/25 transition-colors border border-[hsl(var(--cream))]/20"
+            aria-label="Image précédente"
+          >
+            <ChevronLeft className="w-6 h-6 text-[hsl(var(--cream))]" />
+          </button>
+
+          {/* Flèche suivant */}
+          <button
+            onClick={(e) => { e.stopPropagation(); handleNext(); }}
+            className="absolute right-3 md:right-5 top-1/2 -translate-y-1/2 z-50 p-2.5 rounded-full bg-[hsl(var(--cream))]/10 hover:bg-[hsl(var(--cream))]/25 transition-colors border border-[hsl(var(--cream))]/20"
+            aria-label="Image suivante"
+          >
+            <ChevronRight className="w-6 h-6 text-[hsl(var(--cream))]" />
+          </button>
+
           {selectedItem && (
-            <div className="relative w-full h-full flex items-center justify-center p-8">
+            <div className="relative w-full h-full flex items-center justify-center p-12 md:p-16">
               {selectedItem.type === "video" ? (
                 <video
+                  key={selectedItem.src}
                   src={selectedItem.src}
-                  className="max-w-full max-h-[85vh] object-contain"
+                  className="max-w-full max-h-[80vh] object-contain"
                   controls
                   autoPlay
                   loop
@@ -236,14 +263,20 @@ const Gallery = () => {
                 />
               ) : (
                 <img
+                  key={selectedItem.src}
                   src={selectedItem.src}
                   alt={selectedItem.alt}
-                  className="max-w-full max-h-[85vh] object-contain"
+                  className="max-w-full max-h-[80vh] object-contain"
                 />
               )}
-              <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-off-white text-sm italic bg-charcoal/80 px-4 py-2 rounded-full">
-                {selectedItem.caption}
-              </p>
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3">
+                <p className="text-[hsl(var(--cream))] text-sm italic bg-[hsl(var(--black))]/80 px-4 py-2 rounded-full font-mono-brand">
+                  {selectedItem.caption}
+                </p>
+                <span className="text-[hsl(var(--cream))]/50 text-xs font-mono-brand">
+                  {(selectedIndex ?? 0) + 1}/{items.length}
+                </span>
+              </div>
             </div>
           )}
         </DialogContent>
