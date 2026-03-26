@@ -576,6 +576,63 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- Pages consolidées CCAS par département -->
+  <url>
+    <loc>https://botaniqueludique.com/animation-ccas-yvelines.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/animation-ccas-hauts-de-seine.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/animation-ccas-val-d-oise.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Pages consolidées Médiathèque par département -->
+  <url>
+    <loc>https://botaniqueludique.com/animation-mediatheque-yvelines.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/animation-mediatheque-hauts-de-seine.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/animation-mediatheque-val-d-oise.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Pages consolidées Centre Social par département -->
+  <url>
+    <loc>https://botaniqueludique.com/animation-centre-social-yvelines.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/animation-centre-social-hauts-de-seine.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/animation-centre-social-val-d-oise.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://botaniqueludique.com/animation-qvct-cergy.html</loc>
     <lastmod>2026-02-11</lastmod>
