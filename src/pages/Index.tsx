@@ -85,10 +85,10 @@ const Index = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={150}>
-            <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[650px] mx-auto mb-3 leading-relaxed">
+            <p className="font-editorial text-2xl md:text-[28px] italic text-primary-foreground/90 max-w-[680px] mx-auto mb-4 leading-[1.4]">
               Quand l'atelier créatif rencontre l'anthropologie de la nature
             </p>
-            <p className="font-body text-[15px] md:text-base text-primary-foreground/70 max-w-[580px] mx-auto mb-4 leading-relaxed">
+            <p className="font-body text-[15px] md:text-base text-primary-foreground/60 max-w-[560px] mx-auto mb-4 leading-relaxed">
               Des ateliers accessibles qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes.
             </p>
           </AnimatedSection>
