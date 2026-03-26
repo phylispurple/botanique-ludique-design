@@ -633,6 +633,25 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- Pages consolidées Relais Famille par département -->
+  <url>
+    <loc>https://botaniqueludique.com/animation-relais-famille-yvelines.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/animation-relais-famille-hauts-de-seine.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://botaniqueludique.com/animation-relais-famille-val-d-oise.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://botaniqueludique.com/animation-qvct-cergy.html</loc>
     <lastmod>2026-02-11</lastmod>
