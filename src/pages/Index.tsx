@@ -85,10 +85,10 @@ const Index = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={150}>
-            <p className="font-editorial text-2xl md:text-[28px] italic text-primary-foreground/90 max-w-[680px] mx-auto mb-4 leading-[1.4]">
+            <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[650px] mx-auto mb-3 leading-relaxed">
               Quand l'atelier créatif rencontre l'anthropologie de la nature
             </p>
-            <p className="font-body text-[15px] md:text-base text-primary-foreground/60 max-w-[560px] mx-auto mb-4 leading-relaxed">
+            <p className="font-body text-[15px] md:text-base text-primary-foreground/70 max-w-[580px] mx-auto mb-4 leading-relaxed">
               Des ateliers accessibles qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes.
             </p>
           </AnimatedSection>
@@ -132,17 +132,9 @@ const Index = () => {
               <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mb-3">
                 Vanessa<br />Charlery
               </h2>
-              <p className="font-display text-[15px] uppercase tracking-[2px] text-primary mb-8">
+              <p className="font-display text-[15px] uppercase tracking-[2px] text-primary mb-6">
                 Animatrice ethnobotaniste · Formée à l'EHESS
               </p>
-
-              {/* Pull quote éditorial */}
-              <blockquote className="border-l-[4px] border-accent pl-6 mb-8">
-                <p className="font-editorial text-xl md:text-2xl italic leading-[1.5] text-foreground/80">
-                  « Explorer les liens invisibles entre les humains et les plantes, c'est redécouvrir notre propre histoire. »
-                </p>
-              </blockquote>
-
               <p className="text-base leading-[1.8] text-foreground/70 mb-4 text-justify">
                 Créée par <strong className="text-foreground">Vanessa Charlery</strong>, animatrice ethnobotaniste formée à l'EHESS,
                 l'association Botanique Ludique propose des ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95)
