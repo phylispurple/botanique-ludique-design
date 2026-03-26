@@ -132,9 +132,17 @@ const Index = () => {
               <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mb-3">
                 Vanessa<br />Charlery
               </h2>
-              <p className="font-display text-[15px] uppercase tracking-[2px] text-primary mb-6">
+              <p className="font-display text-[15px] uppercase tracking-[2px] text-primary mb-8">
                 Animatrice ethnobotaniste · Formée à l'EHESS
               </p>
+
+              {/* Pull quote éditorial */}
+              <blockquote className="border-l-[4px] border-accent pl-6 mb-8">
+                <p className="font-editorial text-xl md:text-2xl italic leading-[1.5] text-foreground/80">
+                  « Explorer les liens invisibles entre les humains et les plantes, c'est redécouvrir notre propre histoire. »
+                </p>
+              </blockquote>
+
               <p className="text-base leading-[1.8] text-foreground/70 mb-4 text-justify">
                 Créée par <strong className="text-foreground">Vanessa Charlery</strong>, animatrice ethnobotaniste formée à l'EHESS,
                 l'association Botanique Ludique propose des ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95)
