@@ -166,7 +166,7 @@ const Agenda = () => {
                   <div className="flex flex-col md:flex-row">
                     {/* Date sidebar */}
                     <div className="md:w-52 flex-shrink-0 bg-primary/10 border-b-3 md:border-b-0 md:border-r-3 border-foreground p-5 md:p-6 flex flex-col justify-center items-center text-center">
-                      <span className="text-3xl mb-2">{event.icon}</span>
+                      <Leaf className="w-5 h-5 text-primary/50 mb-2" />
                       <p className="text-xs uppercase tracking-wider font-bold text-foreground/60 mb-1" style={{ fontFamily: 'Space Mono, monospace' }}>
                         Date
                       </p>
