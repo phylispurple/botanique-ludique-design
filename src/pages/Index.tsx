@@ -24,6 +24,8 @@ import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
 import galleryKokedamaGarden from "@/assets/gallery-kokedama-garden.webp";
 import galleryWorkshopGroup from "@/assets/gallery-workshop-group.webp";
 import gallerySachetSenteur from "@/assets/gallery-sachet-senteur.webp";
+import galleryMiniTerrarium from "@/assets/gallery-mini-terrarium.jpeg";
+import PhotoCarousel from "@/components/PhotoCarousel";
 
 const Index = () => {
   const navigate = useNavigate();
