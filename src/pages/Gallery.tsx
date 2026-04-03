@@ -36,6 +36,7 @@ import teinture1Image from "@/assets/gallery-teinture-1.webp";
 import teinture2Image from "@/assets/gallery-teinture-2.webp";
 import teinture3Image from "@/assets/gallery-teinture-3.webp";
 import workshopGroupImage from "@/assets/gallery-workshop-group.webp";
+import miniTerrariumImage from "@/assets/gallery-mini-terrarium.jpeg";
 
 const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string; className?: string; style?: React.CSSProperties }) => {
   const [isLoaded, setIsLoaded] = useState(false);
