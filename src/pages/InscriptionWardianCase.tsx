@@ -44,18 +44,49 @@ const InscriptionWardianCase = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.functions.invoke('send-contact-email', {
+      const registrationId = crypto.randomUUID();
+      const fullName = `${form.prenom} ${form.nom}`;
+      const bocalLabel = form.beneficiaireAurore === "oui" 
+        ? "Sans objet" 
+        : form.bocal === "ramene" 
+          ? "Ramène son bocal (750ml–1L ou plus)" 
+          : "Bocal fourni sur place (+1,50€ par personne)";
+
+      // Send confirmation to participant
+      const { error: confirmError } = await supabase.functions.invoke('send-transactional-email', {
         body: {
-          name: `${form.prenom} ${form.nom}`,
-          email: form.email,
-          subject: `Inscription Wardian Case – 22 avril`,
-          message: `Inscription à l'atelier Wardian Case du 22 avril 2026\n\nNom : ${form.nom}\nPrénom : ${form.prenom}\nEmail : ${form.email}\nTéléphone : ${form.telephone || "Non renseigné"}\nNombre de personnes : ${form.nombrePersonnes}\nBénéficiaire Aurore : ${form.beneficiaireAurore === "oui" ? "Oui" : "Non"}\nBocal : ${form.beneficiaireAurore === "oui" ? "Sans objet" : form.bocal === "ramene" ? "Ramène son bocal (750ml–1L ou plus)" : "Bocal fourni sur place (+1,50€ par personne)"}\nTarif estimé : ${price()}\nMessage : ${form.message || "Aucun"}`,
-          sendConfirmation: true,
-          userMessage: form.message || undefined,
+          templateName: 'wardian-case-registration',
+          recipientEmail: form.email,
+          idempotencyKey: `wardian-confirm-${registrationId}`,
+          templateData: {
+            firstName: form.prenom,
+            name: fullName,
+            subject: 'Wardian Case – 22 avril',
+            userMessage: form.message || undefined,
+          },
         }
       });
 
-      if (error) throw error;
+      if (confirmError) throw confirmError;
+
+      // Send notification to admin
+      await supabase.functions.invoke('send-transactional-email', {
+        body: {
+          templateName: 'wardian-case-admin-notification',
+          recipientEmail: 'botaniqueludique@gmail.com',
+          idempotencyKey: `wardian-admin-${registrationId}`,
+          templateData: {
+            fullName,
+            email: form.email,
+            phone: form.telephone || "Non renseigné",
+            participants: form.nombrePersonnes,
+            aurore: form.beneficiaireAurore === "oui" ? "Oui" : "Non",
+            bocal: bocalLabel,
+            price: price(),
+            message: form.message || undefined,
+          },
+        }
+      });
 
       toast({
         title: "Inscription envoyée ! 🌿",

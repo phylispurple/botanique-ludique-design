@@ -85,6 +85,7 @@ import DemoCreative from "./pages/DemoCreative";
 import DemoManus from "./pages/DemoManus";
 import Association from "./pages/Association";
 import EtablissementsScolaires from "./pages/EtablissementsScolaires";
+import Unsubscribe from "./pages/Unsubscribe";
 import MediationScientifiqueIDF from "./pages/MediationScientifiqueIDF";
 import MediationScientifiqueParis from "./pages/MediationScientifiqueParis";
 import MediationScientifiqueYvelines from "./pages/MediationScientifiqueYvelines";
@@ -230,6 +231,7 @@ const App = () => (
            <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/conditions-de-vente" element={<SalesTerms />} />
           <Route path="/admin/testimonials" element={<AdminTestimonials />} />
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
