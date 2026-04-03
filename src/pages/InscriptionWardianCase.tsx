@@ -93,7 +93,7 @@ const InscriptionWardianCase = () => {
                 Wardian Case
               </h1>
               <p className="text-lg text-foreground/70 italic" style={{ fontFamily: 'Fraunces, serif' }}>
-                Plongez dans l'histoire fascinante du terrarium — de la Wardian Case victorienne aux enjeux coloniaux — puis fabriquez votre propre mini terrarium à emporter.
+                Plongez dans l'histoire fascinante du terrarium, de la Wardian Case victorienne aux enjeux coloniaux, puis fabriquez votre propre mini terrarium à emporter.
               </p>
               <p className="text-sm text-foreground/60 mt-4 leading-relaxed">
                 Atelier pensé pour les adultes, mais les parents sont les bienvenus avec leurs enfants. L'accent sera mis autant sur le récit historique, culturel et politique du terrarium que sur sa fabrication.
