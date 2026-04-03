@@ -25,8 +25,18 @@ const InscriptionWardianCase = () => {
 
   const price = () => {
     if (form.beneficiaireAurore === "oui") return "Gratuit (bénéficiaire Aurore)";
-    if (form.bocal === "surplace") return "8,50€ (7€ + 1,50€ bocal)";
-    return "7€";
+
+    const peopleCount = Number(form.nombrePersonnes) || 1;
+    const basePrice = 7 * peopleCount;
+    const jarSupplement = form.bocal === "surplace" ? 1.5 * peopleCount : 0;
+    const total = basePrice + jarSupplement;
+
+    return `${total.toLocaleString("fr-FR", {
+      minimumFractionDigits: jarSupplement > 0 ? 2 : 0,
+      maximumFractionDigits: 2,
+    })}€ pour ${peopleCount} personne${peopleCount > 1 ? "s" : ""}${
+      jarSupplement > 0 ? ` (${basePrice.toLocaleString("fr-FR")}€ + ${jarSupplement.toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}€ de bocaux)` : ""
+    }`;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -39,7 +49,7 @@ const InscriptionWardianCase = () => {
           name: `${form.prenom} ${form.nom}`,
           email: form.email,
           subject: `Inscription Wardian Case – 22 avril`,
-          message: `Inscription à l'atelier Wardian Case du 22 avril 2026\n\nNom : ${form.nom}\nPrénom : ${form.prenom}\nEmail : ${form.email}\nTéléphone : ${form.telephone || "Non renseigné"}\nNombre de personnes : ${form.nombrePersonnes}\nBénéficiaire Aurore : ${form.beneficiaireAurore === "oui" ? "Oui" : "Non"}\nBocal : ${form.bocal === "ramene" ? "Ramène son bocal (750ml–1L ou plus)" : "Bocal fourni sur place (+1,50€)"}\nTarif estimé : ${price()}\nMessage : ${form.message || "Aucun"}`,
+          message: `Inscription à l'atelier Wardian Case du 22 avril 2026\n\nNom : ${form.nom}\nPrénom : ${form.prenom}\nEmail : ${form.email}\nTéléphone : ${form.telephone || "Non renseigné"}\nNombre de personnes : ${form.nombrePersonnes}\nBénéficiaire Aurore : ${form.beneficiaireAurore === "oui" ? "Oui" : "Non"}\nBocal : ${form.beneficiaireAurore === "oui" ? "Sans objet" : form.bocal === "ramene" ? "Ramène son bocal (750ml–1L ou plus)" : "Bocal fourni sur place (+1,50€ par personne)"}\nTarif estimé : ${price()}\nMessage : ${form.message || "Aucun"}`,
           sendConfirmation: true,
         }
       });
