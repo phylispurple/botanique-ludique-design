@@ -112,7 +112,7 @@ const Index = () => {
               </button>
               <button
                 onClick={() => navigate('/agenda')}
-                className="btn-brutal bg-transparent text-foreground border-foreground hover:bg-foreground hover:text-primary-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--olive))] text-sm px-9 py-4"
+                className="btn-brutal bg-primary text-primary-foreground border-primary hover:bg-primary/80 hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--olive))] text-sm px-9 py-4"
               >
                 Agenda & Inscriptions →
               </button>
