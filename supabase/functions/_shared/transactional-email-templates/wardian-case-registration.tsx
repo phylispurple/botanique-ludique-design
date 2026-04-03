@@ -37,12 +37,12 @@ const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianC
           </Text>
 
           <Text style={text}>
-            N'hésite pas à en parler autour de toi — si des amis seraient intéressés par le sujet, ils sont les bienvenus !
+            N'hésite pas à en parler autour de toi, si des amis seraient intéressés par le sujet, ils sont les bienvenus !
           </Text>
 
           {userMessage ? (
             <Text style={text}>
-              Tu m'as laissé ce message : « {userMessage} » — je te réponds au plus vite !
+              Tu m'as laissé ce message : « {userMessage} », je te réponds au plus vite !
             </Text>
           ) : null}
 
@@ -77,7 +77,7 @@ export const template = {
   displayName: 'Confirmation inscription Wardian Case',
   previewData: {
     firstName: 'Marie',
-    subject: 'Wardian Case – 22 avril',
+    subject: 'Wardian Case, 22 avril',
     userMessage: 'Est-ce adapté aux enfants ?',
   },
 } satisfies TemplateEntry
