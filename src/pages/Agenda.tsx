@@ -14,7 +14,7 @@ const upcomingEvents = [
     date: "Mardi 22 avril 2025",
     time: "17h00 – 18h30",
     location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
-    price: "7€ (+1,50€ si bocal fourni sur place)",
+    price: "",
     audience: "Tout public",
     spots: "12 participant·es max",
     description: "Découvrez l'histoire fascinante de la Wardian Case et fabriquez votre propre terrarium. Plantes, substrat et matériel fournis. Gratuité pour les bénéficiaires d'Aurore.",
