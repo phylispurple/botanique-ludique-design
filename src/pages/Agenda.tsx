@@ -27,12 +27,25 @@ const upcomingEvents = [
     date: "Du lundi 20 au vendredi 24 avril 2025",
     time: "10h30 – 12h00",
     location: "MJC de Chatou",
-    price: "80€ la semaine",
+    price: "",
     audience: "8–15 ans",
     spots: "Places limitées",
     description: "Une semaine de découverte botanique pendant les vacances de printemps ! Activités créatives et scientifiques autour des plantes.",
     linkType: "external" as const,
     externalUrl: "https://chatou.goasso.org/activites?q%5Bid_eq%5D=18219&with-scroll-to=true",
+  },
+  {
+    id: "stage-botanique-bezons",
+    name: "Stage Botanique – Adolescents",
+    date: "Vacances de Printemps 2025",
+    time: "Horaires à confirmer",
+    location: "Espace Elsa Triolet-Aragon, Bezons",
+    price: "",
+    audience: "13–17 ans",
+    spots: "",
+    description: "Un stage botanique dédié aux adolescents pour découvrir le monde des plantes à travers des activités scientifiques et créatives.",
+    linkType: "external" as const,
+    externalUrl: "https://www.ville-bezons.fr/annuaire/tiers-lieu-de-la-jeunesse/",
   },
   {
     id: "balade-ecole-du-breuil",
@@ -157,9 +170,11 @@ const Agenda = () => {
                       </div>
 
                       <div className="flex flex-wrap items-center gap-3 pt-2">
-                        <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/15 text-xs font-semibold">
-                          {event.price}
-                        </Badge>
+                        {event.price && (
+                          <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/15 text-xs font-semibold">
+                            {event.price}
+                          </Badge>
+                        )}
                         <Badge variant="outline" className="text-foreground/50 border-border text-xs">
                           {event.audience}
                         </Badge>
