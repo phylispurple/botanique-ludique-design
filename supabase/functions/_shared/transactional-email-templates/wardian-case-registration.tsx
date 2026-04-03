@@ -43,38 +43,31 @@ const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianC
             On va passer un super moment ensemble à plonger dans l'histoire fascinante des Wardian Cases victoriens, et tu repartiras avec ton propre mini terrarium.
           </Text>
 
-          <Section style={infoSection}>
-            <Text style={infoLabel}>RENDEZ-VOUS</Text>
-            <Hr style={thinRule} />
-            <Text style={infoContent}>
-              Mardi 22 avril 2026, 16h00 – 17h30{'\n'}
-              La Rochefoucauld, Paris 14e (Denfert-Rochereau)
-            </Text>
-          </Section>
+          <Text style={textBold}>Rendez-vous :</Text>
+          <Text style={text}>
+            Mardi 22 avril 2026, 16h00 – 17h30{'\n'}
+            La Rochefoucauld, Paris 14e (Denfert-Rochereau)
+          </Text>
 
-          <Section style={infoSection}>
-            <Text style={infoLabel}>RÈGLEMENT</Text>
-            <Hr style={thinRule} />
-            <Text style={infoContent}>
-              Tu peux régler via PayPal 48h avant l'atelier pour confirmer ta place, ou en espèces sur place 10 à 15 minutes avant le début.
-            </Text>
-          </Section>
+          <Text style={textBold}>Règlement :</Text>
+          <Text style={text}>
+            Tu peux régler via PayPal 48h avant l'atelier pour confirmer ta place, ou en espèces sur place 10 à 15 minutes avant le début.
+          </Text>
 
           <Text style={text}>
             N'hésite pas à en parler autour de toi, si des amis sont intéressés par le sujet, ils sont les bienvenus !
           </Text>
 
           {userMessage ? (
-            <Section style={messageSection}>
-              <Text style={messageLabel}>TON MESSAGE</Text>
-              <Hr style={thinRule} />
+            <>
+              <Text style={textBold}>Ton message :</Text>
               <Text style={messageContent}>
                 « {userMessage} »
               </Text>
               <Text style={messageReply}>
                 Je te réponds au plus vite !
               </Text>
-            </Section>
+            </>
           ) : null}
 
           <Text style={text}>
@@ -163,41 +156,7 @@ const thinRule = { borderColor: olive, borderWidth: '1px', margin: '12px 0 20px'
 
 const text = { color: '#2a2a2a', fontSize: '15px', lineHeight: '1.75', margin: '0 0 16px' }
 
-const infoSection = {
-  backgroundColor: '#ffffff',
-  padding: '20px 22px',
-  margin: '20px 0',
-  borderLeft: `4px solid ${olive}`,
-}
-const infoLabel = {
-  color: darkGreen,
-  fontSize: '10px',
-  letterSpacing: '3px',
-  fontWeight: '700' as const,
-  margin: '0',
-  textTransform: 'uppercase' as const,
-}
-const infoContent = {
-  color: '#2a2a2a',
-  fontSize: '14px',
-  lineHeight: '1.7',
-  margin: '0',
-}
-
-const messageSection = {
-  backgroundColor: '#ffffff',
-  padding: '20px 22px',
-  margin: '20px 0',
-  borderLeft: `4px solid ${coral}`,
-}
-const messageLabel = {
-  color: darkGreen,
-  fontSize: '10px',
-  letterSpacing: '3px',
-  fontWeight: '700' as const,
-  margin: '0',
-  textTransform: 'uppercase' as const,
-}
+const textBold = { color: darkGreen, fontSize: '15px', lineHeight: '1.75', margin: '16px 0 4px', fontWeight: '700' as const }
 const messageContent = {
   color: '#2a2a2a',
   fontSize: '14px',
