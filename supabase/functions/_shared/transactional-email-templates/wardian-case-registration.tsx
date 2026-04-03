@@ -13,10 +13,10 @@ interface WardianCaseRegistrationProps {
   userMessage?: string
 }
 
-const WardianCaseRegistrationEmail = ({ firstName, name, subject, userMessage }: WardianCaseRegistrationProps) => (
+const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianCaseRegistrationProps) => (
   <Html lang="fr" dir="ltr">
     <Head />
-    <Preview>Confirmation de ton inscription – {subject || 'Atelier Wardian Case'} 🌿</Preview>
+    <Preview>Confirmation de ton inscription – Atelier Wardian Case 🌿</Preview>
     <Body style={main}>
       <Container style={container}>
         <Section style={header}>
@@ -29,46 +29,32 @@ const WardianCaseRegistrationEmail = ({ firstName, name, subject, userMessage }:
           </Heading>
 
           <Text style={text}>
-            Merci beaucoup pour ton inscription 🌿
+            Merci beaucoup pour ton inscription à l'atelier Wardian Case ! 🌿
           </Text>
 
           <Text style={text}>
-            Je te promets que l'on passera un bon moment à parler de l'histoire des terrariums, et que la création te plaira.
+            Je te promets qu'on passera un super moment à parler de l'histoire fascinante des terrariums, et que la création de ton mini terrarium te plaira.
           </Text>
 
-          <Section style={infoBox}>
-            <Text style={infoText}>
-              <strong>🪴 Atelier :</strong> {subject || 'Inscription'}
-            </Text>
-            <Text style={infoText}>
-              Il te suffira de me régler directement en liquide le jour de l'atelier, ou via PayPal avant.
-            </Text>
-          </Section>
-
           <Text style={text}>
-            N'hésite pas à proposer l'atelier à d'autres amis qui pourraient être intéressés par ce sujet.
+            N'hésite pas à en parler autour de toi — si des amis seraient intéressés par le sujet, ils sont les bienvenus !
           </Text>
 
           {userMessage ? (
-            <Section style={messageBox}>
-              <Text style={messageText}>
-                Ton message : « {userMessage} »
-              </Text>
-              <Text style={messageReply}>
-                Merci beaucoup pour ton message, je te réponds au plus vite !
-              </Text>
-            </Section>
+            <Text style={text}>
+              Tu m'as laissé ce message : « {userMessage} » — je te réponds au plus vite !
+            </Text>
           ) : null}
 
           <Text style={text}>
-            Si tu as des questions, n'hésite pas à me répondre directement à ce mail.
+            Si tu as la moindre question d'ici là, réponds simplement à cet email.
           </Text>
 
           <Text style={text}>
-            À très bientôt,
+            À très bientôt !
           </Text>
           <Text style={signature}>
-            Vanessa — {SITE_NAME} 🍀
+            Vanessa de {SITE_NAME} 🍀
           </Text>
         </Section>
 
@@ -96,7 +82,6 @@ export const template = {
   },
 } satisfies TemplateEntry
 
-// Styles — Brutaliste Botanical palette from Botanique Ludique
 const main = { backgroundColor: '#ffffff', fontFamily: "'DM Sans', 'Arial', sans-serif" }
 const container = { maxWidth: '600px', margin: '0 auto', border: '3px solid #1a1a1a' }
 const header = {
@@ -121,23 +106,6 @@ const h1 = {
   paddingBottom: '10px',
 }
 const text = { color: '#1a1a1a', fontSize: '15px', lineHeight: '1.7', margin: '0 0 16px' }
-const infoBox = {
-  backgroundColor: '#ffffff',
-  padding: '18px 20px',
-  margin: '25px 0',
-  border: '2px solid #7a8a3e',
-  borderLeft: '6px solid #2e7a5e',
-}
-const infoText = { color: '#1a1a1a', fontSize: '14px', lineHeight: '1.6', margin: '0 0 10px' }
-const messageBox = {
-  backgroundColor: '#ffffff',
-  padding: '18px 20px',
-  margin: '25px 0',
-  border: '2px solid #e06a3a',
-  borderLeft: '6px solid #e06a3a',
-}
-const messageText = { color: '#1a1a1a', fontSize: '14px', fontStyle: 'italic' as const, margin: '0 0 8px' }
-const messageReply = { color: '#555555', fontSize: '14px', margin: '0' }
 const signature = {
   color: '#2e7a5e',
   fontSize: '16px',
