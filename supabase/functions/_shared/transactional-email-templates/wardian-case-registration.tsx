@@ -38,7 +38,7 @@ const WardianCaseRegistrationEmail = ({ firstName, name, subject, userMessage }:
 
           <Section style={infoBox}>
             <Text style={infoText}>
-              <strong>Atelier :</strong> {subject || 'Inscription'}
+              <strong>🪴 Atelier :</strong> {subject || 'Inscription'}
             </Text>
             <Text style={infoText}>
               Il te suffira de me régler directement en liquide le jour de l'atelier, ou via PayPal avant.
@@ -68,7 +68,7 @@ const WardianCaseRegistrationEmail = ({ firstName, name, subject, userMessage }:
             À très bientôt,
           </Text>
           <Text style={signature}>
-            Vanessa — {SITE_NAME}
+            Vanessa — {SITE_NAME} 🍀
           </Text>
         </Section>
 
@@ -96,30 +96,54 @@ export const template = {
   },
 } satisfies TemplateEntry
 
-// Styles — brand colors from Botanique Ludique
-const main = { backgroundColor: '#ffffff', fontFamily: "'Arial', sans-serif" }
-const container = { maxWidth: '600px', margin: '0 auto' }
-const header = { backgroundColor: '#F7F7EB', padding: '30px 20px', textAlign: 'center' as const }
-const headerTitle = { color: '#3D3D2E', fontSize: '24px', margin: '0', fontWeight: '400' as const }
-const content = { padding: '30px 20px' }
-const h1 = { color: '#3D3D2E', fontSize: '20px', fontWeight: '400' as const, margin: '0 0 20px' }
-const text = { color: '#555555', fontSize: '15px', lineHeight: '1.6', margin: '0 0 16px' }
+// Styles — Brutaliste Botanical palette from Botanique Ludique
+const main = { backgroundColor: '#ffffff', fontFamily: "'DM Sans', 'Arial', sans-serif" }
+const container = { maxWidth: '600px', margin: '0 auto', border: '3px solid #1a1a1a' }
+const header = {
+  backgroundColor: '#2e7a5e',
+  padding: '30px 20px',
+  textAlign: 'center' as const,
+}
+const headerTitle = {
+  color: '#f3efe6',
+  fontSize: '26px',
+  margin: '0',
+  fontWeight: '700' as const,
+  letterSpacing: '1px',
+}
+const content = { padding: '30px 25px', backgroundColor: '#f3efe6' }
+const h1 = {
+  color: '#1a1a1a',
+  fontSize: '22px',
+  fontWeight: '700' as const,
+  margin: '0 0 20px',
+  borderBottom: '3px solid #7a8a3e',
+  paddingBottom: '10px',
+}
+const text = { color: '#1a1a1a', fontSize: '15px', lineHeight: '1.7', margin: '0 0 16px' }
 const infoBox = {
-  backgroundColor: '#F7F7EB',
-  padding: '15px 20px',
+  backgroundColor: '#ffffff',
+  padding: '18px 20px',
   margin: '25px 0',
-  borderLeft: '4px solid #A7B795',
+  border: '2px solid #7a8a3e',
+  borderLeft: '6px solid #2e7a5e',
 }
-const infoText = { color: '#3D3D2E', fontSize: '14px', lineHeight: '1.6', margin: '0 0 10px' }
+const infoText = { color: '#1a1a1a', fontSize: '14px', lineHeight: '1.6', margin: '0 0 10px' }
 const messageBox = {
-  backgroundColor: '#fff8e1',
-  padding: '15px 20px',
+  backgroundColor: '#ffffff',
+  padding: '18px 20px',
   margin: '25px 0',
-  borderLeft: '4px solid #f0c040',
+  border: '2px solid #e06a3a',
+  borderLeft: '6px solid #e06a3a',
 }
-const messageText = { color: '#3D3D2E', fontSize: '14px', fontStyle: 'italic' as const, margin: '0 0 8px' }
+const messageText = { color: '#1a1a1a', fontSize: '14px', fontStyle: 'italic' as const, margin: '0 0 8px' }
 const messageReply = { color: '#555555', fontSize: '14px', margin: '0' }
-const signature = { color: '#3D3D2E', fontSize: '15px', fontWeight: 'bold' as const, margin: '0 0 16px' }
-const hr = { borderColor: '#C9D2B5', margin: '30px 0' }
-const footer = { padding: '0 20px 20px', textAlign: 'center' as const }
-const footerText = { color: '#888888', fontSize: '12px', margin: '0' }
+const signature = {
+  color: '#2e7a5e',
+  fontSize: '16px',
+  fontWeight: 'bold' as const,
+  margin: '0 0 16px',
+}
+const hr = { borderColor: '#7a8a3e', margin: '0', borderWidth: '2px' }
+const footer = { padding: '15px 20px', textAlign: 'center' as const, backgroundColor: '#1a1a1a' }
+const footerText = { color: '#f3efe6', fontSize: '12px', margin: '0' }
