@@ -239,6 +239,13 @@ const Navigation = () => {
             </Link>
           </li>
           <li>
+            <Link to="/agenda"
+              className={`font-mono text-[12.5px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/agenda') ? 'border-b border-olive-light' : ''}`}
+              style={{ color: isActive('/agenda') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Agenda
+            </Link>
+          </li>
+          <li>
             <Link to="/blog"
               className={`font-mono text-[12.5px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/blog') ? 'border-b border-olive-light' : ''}`}
               style={{ color: isActive('/blog') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
