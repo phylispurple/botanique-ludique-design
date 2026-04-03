@@ -206,35 +206,17 @@ const Index = () => {
           </AnimatedSection>
         </div>
 
-        <div className="overflow-hidden mb-8">
-          <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
-            {[
-              { src: galleryTerrarium, alt: "Atelier terrarium botanique — Botanique Ludique, Le Pecq" },
-              { src: galleryTeinture, alt: "Atelier teinture végétale naturelle — Botanique Ludique, Île-de-France" },
-              { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs — Botanique Ludique, Paris" },
-              { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin botanique — Botanique Ludique, Yvelines" },
-              { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama — Botanique Ludique" },
-              { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs naturels — Botanique Ludique" },
-            ].map((image, index) => (
-              <div key={`a-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal">
-                <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-              </div>
-            )).concat(
-              [
-                { src: galleryTerrarium, alt: "" },
-                { src: galleryTeinture, alt: "" },
-                { src: galleryFlowerCrown, alt: "" },
-                { src: galleryKokedamaGarden, alt: "" },
-                { src: galleryWorkshopGroup, alt: "" },
-                { src: gallerySachetSenteur, alt: "" },
-              ].map((image, index) => (
-                <div key={`b-${index}`} className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal" aria-hidden="true">
-                  <img src={image.src} alt="" className="w-full h-full object-cover" loading="lazy" />
-                </div>
-              ))
-            )}
-          </div>
-        </div>
+        <PhotoCarousel
+          images={[
+            { src: galleryTerrarium, alt: "Atelier terrarium botanique — Botanique Ludique, Le Pecq" },
+            { src: galleryTeinture, alt: "Atelier teinture végétale naturelle — Botanique Ludique, Île-de-France" },
+            { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs — Botanique Ludique, Paris" },
+            { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin botanique — Botanique Ludique, Yvelines" },
+            { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama — Botanique Ludique" },
+            { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs naturels — Botanique Ludique" },
+            { src: galleryMiniTerrarium, alt: "Mini terrarium en bocal — Botanique Ludique" },
+          ]}
+        />
 
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedSection delay={300} className="text-center mt-8">
