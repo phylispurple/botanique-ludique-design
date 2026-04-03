@@ -77,7 +77,7 @@ export const template = {
   displayName: 'Confirmation inscription Wardian Case',
   previewData: {
     firstName: 'Marie',
-    subject: 'Wardian Case – 22 avril',
+    subject: 'Wardian Case, 22 avril',
     userMessage: 'Est-ce adapté aux enfants ?',
   },
 } satisfies TemplateEntry
