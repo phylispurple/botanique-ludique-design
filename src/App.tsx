@@ -85,6 +85,7 @@ import DemoCreative from "./pages/DemoCreative";
 import DemoManus from "./pages/DemoManus";
 import Association from "./pages/Association";
 import EtablissementsScolaires from "./pages/EtablissementsScolaires";
+import Unsubscribe from "./pages/Unsubscribe";
 import MediationScientifiqueIDF from "./pages/MediationScientifiqueIDF";
 import MediationScientifiqueParis from "./pages/MediationScientifiqueParis";
 import MediationScientifiqueYvelines from "./pages/MediationScientifiqueYvelines";
