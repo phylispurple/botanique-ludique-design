@@ -16,17 +16,29 @@ interface WardianCaseRegistrationProps {
 const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianCaseRegistrationProps) => (
   <Html lang="fr" dir="ltr">
     <Head />
-    <Preview>Confirmation de ton inscription – Atelier Wardian Case 🌿</Preview>
+    <Preview>Confirmation de ton inscription, Atelier Wardian Case 🌿</Preview>
     <Body style={main}>
       <Container style={container}>
+        {/* Top green band */}
+        <Section style={topBand} />
+
+        {/* Header */}
         <Section style={header}>
-          <Heading style={headerTitle}>🌿 {SITE_NAME}</Heading>
+          <Text style={headerLabel}>ATELIER TERRARIUM</Text>
+          <Heading style={headerTitle}>BOTANIQUE{'\n'}LUDIQUE</Heading>
+          <Text style={headerEmoji}>🌿</Text>
         </Section>
 
+        {/* Pink accent divider */}
+        <Section style={pinkDivider} />
+
+        {/* Content */}
         <Section style={content}>
-          <Heading style={h1}>
+          <Heading style={greeting}>
             Bonjour {firstName || name || ''} !
           </Heading>
+
+          <Hr style={thinRule} />
 
           <Text style={text}>
             Merci beaucoup pour ton inscription à l'atelier Wardian Case ! 🌿
@@ -41,28 +53,37 @@ const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianC
           </Text>
 
           {userMessage ? (
-            <Text style={text}>
-              Tu m'as laissé ce message : « {userMessage} », je te réponds au plus vite !
-            </Text>
+            <Section style={messageSection}>
+              <Text style={messageLabel}>TON MESSAGE</Text>
+              <Hr style={thinRule} />
+              <Text style={messageContent}>
+                « {userMessage} »
+              </Text>
+              <Text style={messageReply}>
+                Je te réponds au plus vite !
+              </Text>
+            </Section>
           ) : null}
 
           <Text style={text}>
             Si tu as la moindre question d'ici là, réponds simplement à cet email.
           </Text>
 
-          <Text style={text}>
+          <Text style={closingText}>
             À très bientôt !
-          </Text>
-          <Text style={signature}>
-            Vanessa de {SITE_NAME} 🍀
           </Text>
         </Section>
 
-        <Hr style={hr} />
+        {/* Signature band */}
+        <Section style={signatureBand}>
+          <Text style={signatureName}>VANESSA</Text>
+          <Text style={signatureSub}>{SITE_NAME} 🍀</Text>
+        </Section>
 
+        {/* Bottom green band */}
         <Section style={footer}>
           <Text style={footerText}>
-            {SITE_NAME} · Ateliers botaniques en Île-de-France
+            {SITE_NAME} · Ateliers botaniques · Île-de-France
           </Text>
         </Section>
       </Container>
@@ -73,7 +94,7 @@ const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianC
 export const template = {
   component: WardianCaseRegistrationEmail,
   subject: (data: Record<string, any>) =>
-    `Confirmation de ton inscription – ${data.subject || 'Atelier Wardian Case'} 🌿`,
+    `Confirmation de ton inscription, ${data.subject || 'Atelier Wardian Case'} 🌿`,
   displayName: 'Confirmation inscription Wardian Case',
   previewData: {
     firstName: 'Marie',
@@ -82,36 +103,104 @@ export const template = {
   },
 } satisfies TemplateEntry
 
-const main = { backgroundColor: '#ffffff', fontFamily: "'DM Sans', 'Arial', sans-serif" }
-const container = { maxWidth: '600px', margin: '0 auto', border: '3px solid #1a1a1a' }
+// ── Styles ── Botanical Editorial palette inspired by plant cards
+const darkGreen = '#2e4a3e'
+const cream = '#f5f0e8'
+const coral = '#e0917e'
+const olive = '#7a8a3e'
+
+const main = { backgroundColor: '#ffffff', fontFamily: "'DM Sans', 'Helvetica Neue', Arial, sans-serif" }
+const container = { maxWidth: '600px', margin: '0 auto', border: `4px solid ${darkGreen}` }
+
+const topBand = { backgroundColor: darkGreen, height: '8px' }
+
 const header = {
-  backgroundColor: '#2e7a5e',
-  padding: '30px 20px',
+  backgroundColor: darkGreen,
+  padding: '35px 30px 30px',
   textAlign: 'center' as const,
 }
+const headerLabel = {
+  color: coral,
+  fontSize: '11px',
+  letterSpacing: '4px',
+  margin: '0 0 12px',
+  fontWeight: '500' as const,
+  textTransform: 'uppercase' as const,
+}
 const headerTitle = {
-  color: '#f3efe6',
-  fontSize: '26px',
+  color: cream,
+  fontSize: '32px',
   margin: '0',
-  fontWeight: '700' as const,
+  fontWeight: '900' as const,
+  letterSpacing: '3px',
+  lineHeight: '1.1',
+  textTransform: 'uppercase' as const,
+}
+const headerEmoji = {
+  fontSize: '28px',
+  margin: '14px 0 0',
+}
+
+const pinkDivider = { backgroundColor: coral, height: '5px' }
+
+const content = { padding: '32px 30px 20px', backgroundColor: cream }
+
+const greeting = {
+  color: darkGreen,
+  fontSize: '20px',
+  fontWeight: '800' as const,
+  margin: '0 0 8px',
+  textTransform: 'uppercase' as const,
   letterSpacing: '1px',
 }
-const content = { padding: '30px 25px', backgroundColor: '#f3efe6' }
-const h1 = {
-  color: '#1a1a1a',
-  fontSize: '22px',
+const thinRule = { borderColor: olive, borderWidth: '1px', margin: '12px 0 20px' }
+
+const text = { color: '#2a2a2a', fontSize: '15px', lineHeight: '1.75', margin: '0 0 16px' }
+
+const messageSection = {
+  backgroundColor: '#ffffff',
+  padding: '20px 22px',
+  margin: '20px 0',
+  borderLeft: `4px solid ${coral}`,
+}
+const messageLabel = {
+  color: darkGreen,
+  fontSize: '10px',
+  letterSpacing: '3px',
   fontWeight: '700' as const,
-  margin: '0 0 20px',
-  borderBottom: '3px solid #7a8a3e',
-  paddingBottom: '10px',
+  margin: '0',
+  textTransform: 'uppercase' as const,
 }
-const text = { color: '#1a1a1a', fontSize: '15px', lineHeight: '1.7', margin: '0 0 16px' }
-const signature = {
-  color: '#2e7a5e',
-  fontSize: '16px',
-  fontWeight: 'bold' as const,
-  margin: '0 0 16px',
+const messageContent = {
+  color: '#2a2a2a',
+  fontSize: '14px',
+  fontStyle: 'italic' as const,
+  lineHeight: '1.7',
+  margin: '0 0 8px',
 }
-const hr = { borderColor: '#7a8a3e', margin: '0', borderWidth: '2px' }
-const footer = { padding: '15px 20px', textAlign: 'center' as const, backgroundColor: '#1a1a1a' }
-const footerText = { color: '#f3efe6', fontSize: '12px', margin: '0' }
+const messageReply = { color: olive, fontSize: '14px', margin: '0', fontWeight: '500' as const }
+
+const closingText = { color: '#2a2a2a', fontSize: '15px', lineHeight: '1.75', margin: '10px 0 0' }
+
+const signatureBand = {
+  backgroundColor: coral,
+  padding: '18px 30px',
+  textAlign: 'right' as const,
+}
+const signatureName = {
+  color: '#ffffff',
+  fontSize: '18px',
+  fontWeight: '900' as const,
+  letterSpacing: '2px',
+  margin: '0',
+  textTransform: 'uppercase' as const,
+}
+const signatureSub = {
+  color: darkGreen,
+  fontSize: '12px',
+  margin: '4px 0 0',
+  fontWeight: '500' as const,
+}
+
+const footer = { padding: '16px 30px', textAlign: 'center' as const, backgroundColor: darkGreen }
+const footerText = { color: cream, fontSize: '11px', margin: '0', letterSpacing: '1px' }
