@@ -37,8 +37,8 @@ const upcomingEvents = [
   {
     id: "stage-botanique-bezons",
     name: "Stage Botanique – Adolescents",
-    date: "Vacances de Printemps 2025",
-    time: "Horaires à confirmer",
+    date: "Du lundi 20 au vendredi 24 avril 2025",
+    time: "",
     location: "Espace Elsa Triolet-Aragon, Bezons",
     price: "",
     audience: "13–17 ans",
