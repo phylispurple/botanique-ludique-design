@@ -65,7 +65,7 @@ const upcomingEvents = [
     date: "Samedi 5 juillet 2025",
     time: "10h30 – 12h30",
     location: "Buttes du Parisis, Franconville",
-    price: "Gratuit",
+    price: "",
     audience: "Tout public",
     spots: "",
     description: "Atelier en partenariat avec la Région Île-de-France Nature. Créez votre propre kokedama dans un cadre naturel exceptionnel.",
