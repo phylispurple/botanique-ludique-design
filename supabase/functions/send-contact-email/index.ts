@@ -18,6 +18,7 @@ const contactEmailSchema = z.object({
   subject: z.string().trim().max(200, "Subject must be less than 200 characters").optional(),
   message: z.string().trim().min(1, "Message is required").max(2000, "Message must be less than 2000 characters"),
   sendConfirmation: z.boolean().optional(),
+  userMessage: z.string().trim().max(500).optional(),
 });
 
 const extractFirstName = (fullName: string): string => {
@@ -194,6 +195,17 @@ const handler = async (req: Request): Promise<Response> => {
                 <p style="color: #555; line-height: 1.6; font-size: 15px;">
                   N'hésite pas à proposer l'atelier à d'autres amis qui pourraient être intéressés par ce sujet.
                 </p>
+
+                ${validationResult.data.userMessage ? `
+                <div style="background-color: #fff8e1; padding: 15px 20px; margin: 25px 0; border-left: 4px solid #f0c040;">
+                  <p style="color: #3D3D2E; margin: 0 0 8px; font-size: 14px; font-style: italic;">
+                    Ton message : « ${escapeHtml(validationResult.data.userMessage)} »
+                  </p>
+                  <p style="color: #555; margin: 0; font-size: 14px;">
+                    Merci beaucoup pour ton message, je te réponds au plus vite !
+                  </p>
+                </div>
+                ` : ''}
                 
                 <p style="color: #555; line-height: 1.6; font-size: 15px;">
                   Si tu as des questions, n'hésite pas à me répondre directement à ce mail.

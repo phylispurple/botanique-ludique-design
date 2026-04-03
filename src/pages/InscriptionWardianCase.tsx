@@ -51,6 +51,7 @@ const InscriptionWardianCase = () => {
           subject: `Inscription Wardian Case – 22 avril`,
           message: `Inscription à l'atelier Wardian Case du 22 avril 2026\n\nNom : ${form.nom}\nPrénom : ${form.prenom}\nEmail : ${form.email}\nTéléphone : ${form.telephone || "Non renseigné"}\nNombre de personnes : ${form.nombrePersonnes}\nBénéficiaire Aurore : ${form.beneficiaireAurore === "oui" ? "Oui" : "Non"}\nBocal : ${form.beneficiaireAurore === "oui" ? "Sans objet" : form.bocal === "ramene" ? "Ramène son bocal (750ml–1L ou plus)" : "Bocal fourni sur place (+1,50€ par personne)"}\nTarif estimé : ${price()}\nMessage : ${form.message || "Aucun"}`,
           sendConfirmation: true,
+          userMessage: form.message || undefined,
         }
       });
 
