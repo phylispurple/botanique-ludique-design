@@ -20,6 +20,13 @@ const contactEmailSchema = z.object({
   sendConfirmation: z.boolean().optional(),
 });
 
+const extractFirstName = (fullName: string): string => {
+  const trimmedName = fullName.trim();
+  if (!trimmedName) return "";
+
+  return trimmedName.split(/\s+/)[0] || trimmedName;
+};
+
 const escapeHtml = (text: string): string => {
   return text.replace(/[&<>"']/g, (char) => {
     const entities: Record<string, string> = {
@@ -114,6 +121,7 @@ const handler = async (req: Request): Promise<Response> => {
     }
     
     const { name, email, subject, message, sendConfirmation } = validationResult.data;
+    const firstName = extractFirstName(name);
 
     console.log("Sending contact email from:", email);
 
@@ -155,7 +163,8 @@ const handler = async (req: Request): Promise<Response> => {
         await resend.emails.send({
           from: "Botanique Ludique <onboarding@resend.dev>",
           to: [email],
-          subject: "Confirmation de votre inscription – Botanique Ludique 🌿",
+          replyTo: "contact@botaniqueludique.com",
+          subject: "Confirmation de ton inscription – Atelier Wardian Case 🌿",
           html: `
             <div style="font-family: 'Arial', sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff;">
               <div style="background-color: #F7F7EB; padding: 30px 20px; text-align: center;">
@@ -163,29 +172,36 @@ const handler = async (req: Request): Promise<Response> => {
               </div>
               
               <div style="padding: 30px 20px;">
-                <h2 style="color: #3D3D2E; font-size: 20px;">Bonjour ${escapeHtml(name)} !</h2>
+                <h2 style="color: #3D3D2E; font-size: 20px;">Bonjour ${escapeHtml(firstName || name)} !</h2>
                 
                 <p style="color: #555; line-height: 1.6; font-size: 15px;">
-                  Nous avons bien reçu votre inscription. Merci pour votre intérêt !
+                  Merci beaucoup pour ton inscription 🌿
                 </p>
                 
                 <p style="color: #555; line-height: 1.6; font-size: 15px;">
-                  Nous reviendrons vers vous au plus vite pour confirmer votre place et vous donner toutes les informations pratiques.
+                  Je te promets que l'on passera un bon moment à parler de l'histoire des terrariums, et que la création te plaira.
                 </p>
-                
+
                 <div style="background-color: #F7F7EB; padding: 15px 20px; margin: 25px 0; border-left: 4px solid #A7B795;">
-                  <p style="color: #3D3D2E; margin: 0; font-size: 14px;">
-                    <strong>Objet :</strong> ${escapeHtml(subject || "Inscription")}
+                  <p style="color: #3D3D2E; margin: 0 0 10px; font-size: 14px;">
+                    <strong>Atelier :</strong> ${escapeHtml(subject || "Inscription")}
+                  </p>
+                  <p style="color: #3D3D2E; margin: 0; font-size: 14px; line-height: 1.6;">
+                    Il te suffira de me régler directement en liquide le jour de l'atelier, ou via PayPal avant.
                   </p>
                 </div>
-                
+
                 <p style="color: #555; line-height: 1.6; font-size: 15px;">
-                  Si vous avez des questions d'ici là, n'hésitez pas à nous répondre directement à cet email.
+                  N'hésite pas à proposer l'atelier à d'autres amis qui pourraient être intéressés par ce sujet.
                 </p>
                 
                 <p style="color: #555; line-height: 1.6; font-size: 15px;">
-                  À très bientôt !<br/>
-                  <strong style="color: #3D3D2E;">L'équipe Botanique Ludique</strong>
+                  Si tu as des questions, n'hésite pas à me répondre directement à ce mail.
+                </p>
+                
+                <p style="color: #555; line-height: 1.6; font-size: 15px;">
+                  À très bientôt,<br/>
+                  <strong style="color: #3D3D2E;">Vanessa — Botanique Ludique</strong>
                 </p>
               </div>
               
