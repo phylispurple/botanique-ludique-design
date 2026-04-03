@@ -17,6 +17,7 @@ const contactEmailSchema = z.object({
   email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
   subject: z.string().trim().max(200, "Subject must be less than 200 characters").optional(),
   message: z.string().trim().min(1, "Message is required").max(2000, "Message must be less than 2000 characters"),
+  sendConfirmation: z.boolean().optional(),
 });
 
 const escapeHtml = (text: string): string => {
@@ -46,7 +47,7 @@ const checkRateLimit = async (ip: string, endpoint: string): Promise<boolean> =>
     
     if (!supabaseUrl || !supabaseServiceKey) {
       console.error("Missing Supabase credentials for rate limiting");
-      return true; // Allow if we can't check
+      return true;
     }
     
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
@@ -60,24 +61,22 @@ const checkRateLimit = async (ip: string, endpoint: string): Promise<boolean> =>
     
     if (error) {
       console.error("Rate limit check error:", error);
-      return true; // Allow if check fails
+      return true;
     }
     
     return data === true;
   } catch (error) {
     console.error("Rate limit exception:", error);
-    return true; // Allow if check fails
+    return true;
   }
 };
 
 const handler = async (req: Request): Promise<Response> => {
-  // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    // Check rate limit
     const clientIp = getClientIp(req);
     const isAllowed = await checkRateLimit(clientIp, "send-contact-email");
     
@@ -97,7 +96,6 @@ const handler = async (req: Request): Promise<Response> => {
 
     const body = await req.json();
     
-    // Validate input with Zod
     const validationResult = contactEmailSchema.safeParse(body);
     
     if (!validationResult.success) {
@@ -115,11 +113,11 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
     
-    const { name, email, subject, message } = validationResult.data;
+    const { name, email, subject, message, sendConfirmation } = validationResult.data;
 
     console.log("Sending contact email from:", email);
 
-    // Send email to contact@botaniqueludique.com
+    // Send email to admin
     const emailResponse = await resend.emails.send({
       from: "Botanique Ludique <onboarding@resend.dev>",
       replyTo: email,
@@ -150,6 +148,62 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     console.log("Email sent successfully:", emailResponse);
+
+    // Send confirmation email to the sender if requested
+    if (sendConfirmation) {
+      try {
+        await resend.emails.send({
+          from: "Botanique Ludique <onboarding@resend.dev>",
+          to: [email],
+          subject: "Confirmation de votre inscription – Botanique Ludique 🌿",
+          html: `
+            <div style="font-family: 'Arial', sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff;">
+              <div style="background-color: #F7F7EB; padding: 30px 20px; text-align: center;">
+                <h1 style="color: #3D3D2E; font-size: 24px; margin: 0;">🌿 Botanique Ludique</h1>
+              </div>
+              
+              <div style="padding: 30px 20px;">
+                <h2 style="color: #3D3D2E; font-size: 20px;">Bonjour ${escapeHtml(name)} !</h2>
+                
+                <p style="color: #555; line-height: 1.6; font-size: 15px;">
+                  Nous avons bien reçu votre inscription. Merci pour votre intérêt !
+                </p>
+                
+                <p style="color: #555; line-height: 1.6; font-size: 15px;">
+                  Nous reviendrons vers vous au plus vite pour confirmer votre place et vous donner toutes les informations pratiques.
+                </p>
+                
+                <div style="background-color: #F7F7EB; padding: 15px 20px; margin: 25px 0; border-left: 4px solid #A7B795;">
+                  <p style="color: #3D3D2E; margin: 0; font-size: 14px;">
+                    <strong>Objet :</strong> ${escapeHtml(subject || "Inscription")}
+                  </p>
+                </div>
+                
+                <p style="color: #555; line-height: 1.6; font-size: 15px;">
+                  Si vous avez des questions d'ici là, n'hésitez pas à nous répondre directement à cet email.
+                </p>
+                
+                <p style="color: #555; line-height: 1.6; font-size: 15px;">
+                  À très bientôt !<br/>
+                  <strong style="color: #3D3D2E;">L'équipe Botanique Ludique</strong>
+                </p>
+              </div>
+              
+              <div style="background-color: #F7F7EB; padding: 15px 20px; text-align: center;">
+                <p style="color: #888; font-size: 12px; margin: 0;">
+                  Botanique Ludique · Ateliers botaniques en Île-de-France<br/>
+                  <a href="https://botaniqueludique.com" style="color: #A7B795;">botaniqueludique.com</a>
+                </p>
+              </div>
+            </div>
+          `,
+        });
+        console.log("Confirmation email sent to:", email);
+      } catch (confirmError) {
+        console.error("Failed to send confirmation email:", confirmError);
+        // Don't fail the whole request if confirmation fails
+      }
+    }
 
     return new Response(JSON.stringify({ success: true, data: emailResponse }), {
       status: 200,
