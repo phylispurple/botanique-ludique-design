@@ -39,7 +39,7 @@ const InscriptionWardianCase = () => {
           name: `${form.prenom} ${form.nom}`,
           email: form.email,
           subject: `Inscription Wardian Case – 22 avril`,
-          message: `Inscription à l'atelier Wardian Case du 22 avril 2025\n\nNom : ${form.nom}\nPrénom : ${form.prenom}\nEmail : ${form.email}\nTéléphone : ${form.telephone || "Non renseigné"}\nNombre de personnes : ${form.nombrePersonnes}\nBénéficiaire Aurore : ${form.beneficiaireAurore === "oui" ? "Oui" : "Non"}\nBocal : ${form.bocal === "ramene" ? "Ramène son bocal (750ml–1L ou plus)" : "Bocal fourni sur place (+1,50€)"}\nTarif estimé : ${price()}\nMessage : ${form.message || "Aucun"}`,
+          message: `Inscription à l'atelier Wardian Case du 22 avril 2026\n\nNom : ${form.nom}\nPrénom : ${form.prenom}\nEmail : ${form.email}\nTéléphone : ${form.telephone || "Non renseigné"}\nNombre de personnes : ${form.nombrePersonnes}\nBénéficiaire Aurore : ${form.beneficiaireAurore === "oui" ? "Oui" : "Non"}\nBocal : ${form.bocal === "ramene" ? "Ramène son bocal (750ml–1L ou plus)" : "Bocal fourni sur place (+1,50€)"}\nTarif estimé : ${price()}\nMessage : ${form.message || "Aucun"}`,
           sendConfirmation: true,
         }
       });
@@ -66,7 +66,7 @@ const InscriptionWardianCase = () => {
   return (
     <div className="min-h-screen relative bg-background">
       <SEO
-        title="Inscription Atelier Wardian Case – 22 avril 2025 | Botanique Ludique"
+        title="Inscription Atelier Wardian Case – 22 avril 2026 | Botanique Ludique"
         description="Inscrivez-vous à l'atelier Wardian Case : histoire culturelle et politique du terrarium + fabrication. 22 avril, Paris 14e. 7€."
         canonical="/inscription/wardian-case"
       />
@@ -106,14 +106,14 @@ const InscriptionWardianCase = () => {
                 <CalendarIcon className="w-5 h-5 text-primary mt-0.5" />
                 <div>
                   <p className="text-xs uppercase tracking-wider text-foreground/50 mb-1">Date</p>
-                  <p className="text-sm font-medium text-foreground">Mardi 22 avril 2025</p>
+                  <p className="text-sm font-medium text-foreground">Mardi 22 avril 2026</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-primary mt-0.5" />
                 <div>
                   <p className="text-xs uppercase tracking-wider text-foreground/50 mb-1">Horaires</p>
-                  <p className="text-sm font-medium text-foreground">17h00 – 18h30</p>
+                  <p className="text-sm font-medium text-foreground">16h00 – 17h30</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
