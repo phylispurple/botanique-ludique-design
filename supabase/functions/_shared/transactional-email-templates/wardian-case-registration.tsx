@@ -16,23 +16,18 @@ interface WardianCaseRegistrationProps {
 const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianCaseRegistrationProps) => (
   <Html lang="fr" dir="ltr">
     <Head />
-    <Preview>Confirmation de ton inscription, Atelier Wardian Case 🌿</Preview>
+    <Preview>Confirmation de ton inscription, Atelier Wardian Case</Preview>
     <Body style={main}>
       <Container style={container}>
-        {/* Top green band */}
         <Section style={topBand} />
 
-        {/* Header */}
         <Section style={header}>
-          <Text style={headerLabel}>ATELIER TERRARIUM</Text>
+          <Text style={headerLabel}>ATELIER WARDIAN CASE</Text>
           <Heading style={headerTitle}>BOTANIQUE{'\n'}LUDIQUE</Heading>
-          <Text style={headerEmoji}>🌿</Text>
         </Section>
 
-        {/* Pink accent divider */}
         <Section style={pinkDivider} />
 
-        {/* Content */}
         <Section style={content}>
           <Heading style={greeting}>
             Bonjour {firstName || name || ''} !
@@ -41,15 +36,32 @@ const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianC
           <Hr style={thinRule} />
 
           <Text style={text}>
-            Merci beaucoup pour ton inscription à l'atelier Wardian Case ! 🌿
+            Merci pour ton inscription à l'atelier Wardian Case, j'ai hâte de t'y retrouver !
           </Text>
 
           <Text style={text}>
-            Je te promets qu'on passera un super moment à parler de l'histoire fascinante des terrariums, et que la création de ton mini terrarium te plaira.
+            On va passer un super moment ensemble à plonger dans l'histoire fascinante des Wardian Cases victoriens, et tu repartiras avec ton propre mini terrarium.
           </Text>
 
+          <Section style={infoSection}>
+            <Text style={infoLabel}>RENDEZ-VOUS</Text>
+            <Hr style={thinRule} />
+            <Text style={infoContent}>
+              Mardi 22 avril 2026, 16h00 – 17h30{'\n'}
+              La Rochefoucauld, Paris 14e (Denfert-Rochereau)
+            </Text>
+          </Section>
+
+          <Section style={infoSection}>
+            <Text style={infoLabel}>RÈGLEMENT</Text>
+            <Hr style={thinRule} />
+            <Text style={infoContent}>
+              Tu peux régler via PayPal 48h avant l'atelier pour confirmer ta place, ou en espèces sur place 10 à 15 minutes avant le début.
+            </Text>
+          </Section>
+
           <Text style={text}>
-            N'hésite pas à en parler autour de toi, si des amis seraient intéressés par le sujet, ils sont les bienvenus !
+            N'hésite pas à en parler autour de toi, si des amis sont intéressés par le sujet, ils sont les bienvenus !
           </Text>
 
           {userMessage ? (
@@ -74,13 +86,11 @@ const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianC
           </Text>
         </Section>
 
-        {/* Signature band */}
         <Section style={signatureBand}>
           <Text style={signatureName}>VANESSA</Text>
           <Text style={signatureSub}>{SITE_NAME} 🍀</Text>
         </Section>
 
-        {/* Bottom green band */}
         <Section style={footer}>
           <Text style={footerText}>
             {SITE_NAME} · Ateliers botaniques · Île-de-France
@@ -94,7 +104,7 @@ const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianC
 export const template = {
   component: WardianCaseRegistrationEmail,
   subject: (data: Record<string, any>) =>
-    `Confirmation de ton inscription, ${data.subject || 'Atelier Wardian Case'} 🌿`,
+    `Confirmation de ton inscription, ${data.subject || 'Atelier Wardian Case'}`,
   displayName: 'Confirmation inscription Wardian Case',
   previewData: {
     firstName: 'Marie',
@@ -103,7 +113,7 @@ export const template = {
   },
 } satisfies TemplateEntry
 
-// ── Styles ── Botanical Editorial palette inspired by plant cards
+// ── Styles ──
 const darkGreen = '#2e4a3e'
 const cream = '#f5f0e8'
 const coral = '#e0917e'
@@ -136,10 +146,6 @@ const headerTitle = {
   lineHeight: '1.1',
   textTransform: 'uppercase' as const,
 }
-const headerEmoji = {
-  fontSize: '28px',
-  margin: '14px 0 0',
-}
 
 const pinkDivider = { backgroundColor: coral, height: '5px' }
 
@@ -156,6 +162,27 @@ const greeting = {
 const thinRule = { borderColor: olive, borderWidth: '1px', margin: '12px 0 20px' }
 
 const text = { color: '#2a2a2a', fontSize: '15px', lineHeight: '1.75', margin: '0 0 16px' }
+
+const infoSection = {
+  backgroundColor: '#ffffff',
+  padding: '20px 22px',
+  margin: '20px 0',
+  borderLeft: `4px solid ${olive}`,
+}
+const infoLabel = {
+  color: darkGreen,
+  fontSize: '10px',
+  letterSpacing: '3px',
+  fontWeight: '700' as const,
+  margin: '0',
+  textTransform: 'uppercase' as const,
+}
+const infoContent = {
+  color: '#2a2a2a',
+  fontSize: '14px',
+  lineHeight: '1.7',
+  margin: '0',
+}
 
 const messageSection = {
   backgroundColor: '#ffffff',
