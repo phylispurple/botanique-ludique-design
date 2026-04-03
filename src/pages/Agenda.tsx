@@ -78,7 +78,7 @@ const upcomingEvents = [
     date: "Courant septembre 2025",
     time: "À confirmer",
     location: "Saint-Quentin-en-Yvelines (78)",
-    price: "À confirmer",
+    price: "",
     audience: "Tout public",
     spots: "",
     description: "Une balade botanique à la découverte de la flore locale. Plus d'informations à venir.",
