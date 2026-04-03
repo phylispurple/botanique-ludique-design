@@ -42,7 +42,7 @@ const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianC
 
           {userMessage ? (
             <Text style={text}>
-              Tu m'as laissé ce message : « {userMessage} » — je te réponds au plus vite !
+              Tu m'as laissé ce message : « {userMessage} », je te réponds au plus vite !
             </Text>
           ) : null}
 
