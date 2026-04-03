@@ -1,33 +1,56 @@
 
 
-## Plan : Simplifier le mail de confirmation Wardian Case
+## Refonte complète du mail de confirmation Wardian Case
 
-### Objectif
-Réécrire le contenu du template email pour qu'il soit simple, chaleureux et sans encadrés (les `infoBox` et `messageBox` sur fond blanc avec bordures). Le texte suit exactement ce que tu as demandé.
+### Résumé des changements
 
-### Changements sur `wardian-case-registration.tsx`
+Réécriture du contenu du template `wardian-case-registration.tsx` pour un ton plus chaleureux, avec toutes les infos pratiques demandées.
 
-**Contenu du mail :**
-- "Bonjour {prénom} !"
-- "Merci beaucoup pour ton inscription à l'atelier Wardian Case ! 🌿"
-- "Je te promets qu'on passera un super moment à parler de l'histoire fascinante des terrariums, et que la création de ton mini terrarium te plaira."
-- "N'hésite pas à en parler autour de toi — si des amis seraient intéressés par le sujet, ils sont les bienvenus !"
-- Si `userMessage` est présent : "Tu m'as laissé ce message : « {message} » — je te réponds au plus vite !"
-- "Si tu as la moindre question d'ici là, réponds simplement à cet email."
-- "À très bientôt !"
-- "Vanessa de Botanique Ludique 🍀"
+### Modifications du fichier `wardian-case-registration.tsx`
 
-**Suppressions :**
-- Retrait des `Section` encadrées (`infoBox`, `messageBox`) — tout devient du texte simple avec le même style `text`
-- Retrait des styles `infoBox`, `infoText`, `messageBox`, `messageText`, `messageReply`
-- Le message utilisateur s'intègre naturellement dans le flux du texte (pas d'encadré séparé)
+**Header :**
+- "ATELIER TERRARIUM" → "ATELIER WARDIAN CASE"
+- Suppression de l'emoji 🌿 (ligne `headerEmoji`)
 
-**Conservation :**
-- Header vert avec "🌿 Botanique Ludique"
-- Fond crème pour le contenu
-- Footer noir
-- Palette de couleurs botanique existante
+**Objet du mail :** Retirer le 🌿
+- `Confirmation de ton inscription, Atelier Wardian Case`
 
-### Redéploiement
-- Déployer `send-transactional-email` après la modification pour que le nouveau contenu soit actif
+**Preview text :** Retirer le 🌿
+
+**Nouveau corps du mail :**
+
+> **BONJOUR {prénom} !**
+>
+> Merci pour ton inscription à l'atelier Wardian Case, j'ai hâte de t'y retrouver !
+>
+> On va passer un super moment ensemble à plonger dans l'histoire fascinante des Wardian Cases victoriens, et tu repartiras avec ton propre mini terrarium.
+>
+> **RENDEZ-VOUS**
+> *(section encadrée, bordure olive à gauche)*
+> Mardi 22 avril 2026, 16h00 – 17h30
+> La Rochefoucauld, Paris 14e (Denfert-Rochereau)
+>
+> **RÈGLEMENT**
+> *(section encadrée, bordure olive à gauche)*
+> Tu peux régler via PayPal 48h avant l'atelier pour confirmer ta place, ou en espèces sur place 10 à 15 minutes avant le début.
+>
+> N'hésite pas à en parler autour de toi, si des amis sont intéressés, ils sont les bienvenus !
+>
+> *(Si message utilisateur :)*
+> « {message} »
+> Je te réponds au plus vite !
+>
+> Si tu as la moindre question d'ici là, réponds simplement à cet email.
+>
+> À très bientôt !
+
+**Signature et footer :** Inchangés (Vanessa, Botanique Ludique 🍀)
+
+### Design
+
+Pas de changement de palette ni de structure visuelle. Ajout de deux petites sections "Rendez-vous" et "Règlement" stylées comme la section message (fond blanc, bordure olive à gauche) pour que les infos pratiques ressortent bien.
+
+### Après modification
+
+Redéploiement de la Edge Function `send-transactional-email`.
 
