@@ -210,7 +210,7 @@ const Agenda = () => {
                             className="ml-auto inline-flex items-center gap-2 px-5 py-2.5 border-2 border-foreground bg-foreground text-background hover:bg-primary hover:border-primary hover:text-primary-foreground text-xs uppercase tracking-wider font-bold transition-all duration-300"
                             style={{ boxShadow: '3px 3px 0 hsl(var(--primary))' }}
                           >
-                            S'inscrire <ExternalLink className="w-3.5 h-3.5" />
+                            {(event as any).buttonLabel || "S'inscrire"} <ExternalLink className="w-3.5 h-3.5" />
                           </a>
                         )}
                         {event.linkType === "internal" && (event as any).internalUrl && (
