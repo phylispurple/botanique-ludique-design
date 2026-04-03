@@ -11,7 +11,7 @@ const upcomingEvents = [
   {
     id: "wardian-case-22-avril",
     name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
-    date: "Mardi 22 avril 2025",
+    date: "Mardi 22 avril 2026",
     time: "16h00 – 17h30",
     location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
     audience: "Tout public",
@@ -23,7 +23,7 @@ const upcomingEvents = [
   {
     id: "stage-botanique-chatou",
     name: "Stage Botanique – Vacances de Printemps",
-    date: "Du lundi 20 au vendredi 24 avril 2025",
+    date: "Du lundi 20 au vendredi 24 avril 2026",
     time: "10h30 – 12h00",
     location: "MJC de Chatou",
     audience: "8–15 ans",
@@ -35,7 +35,7 @@ const upcomingEvents = [
   {
     id: "stage-botanique-bezons",
     name: "Stage Botanique – Adolescents",
-    date: "Du lundi 20 au vendredi 24 avril 2025",
+    date: "Du lundi 20 au vendredi 24 avril 2026",
     time: "",
     location: "Espace Elsa Triolet-Aragon, Bezons",
     audience: "13–17 ans",
@@ -47,7 +47,7 @@ const upcomingEvents = [
   {
     id: "kokedama-maurepas",
     name: "Atelier Kokedama – Parent-Enfant",
-    date: "Mardi 20 mai 2025",
+    date: "Mardi 20 mai 2026",
     time: "15h30 – 17h00",
     location: "Relais Marianne, Maurepas (78)",
     audience: "Maurepasien·nes uniquement – Parent-Enfant",
@@ -59,7 +59,7 @@ const upcomingEvents = [
   {
     id: "balade-ecole-du-breuil",
     name: "Balade Botanique : Histoire politique et culturelle des jardins",
-    date: "Samedi 31 mai 2025",
+    date: "Samedi 31 mai 2026",
     time: "Horaires à confirmer",
     location: "École Du Breuil, Paris – Fête de l'École",
     audience: "Tout public",
@@ -70,7 +70,7 @@ const upcomingEvents = [
   {
     id: "kokedama-franconville",
     name: "Atelier Kokedama – Les Jardins Suspendus",
-    date: "Samedi 5 juillet 2025",
+    date: "Samedi 5 juillet 2026",
     time: "10h30 – 12h30",
     location: "Buttes du Parisis, Franconville",
     audience: "Tout public",
@@ -82,7 +82,7 @@ const upcomingEvents = [
   {
     id: "balade-st-quentin",
     name: "Balade Botanique – Agglomération de Saint-Quentin-en-Yvelines",
-    date: "Courant septembre 2025",
+    date: "Courant septembre 2026",
     time: "À confirmer",
     location: "Saint-Quentin-en-Yvelines (78)",
     audience: "Tout public",
@@ -136,7 +136,7 @@ const Agenda = () => {
               <div className="inline-flex items-center gap-2 px-4 py-1.5 border-2 border-foreground bg-accent/30 mb-6" style={{ boxShadow: '3px 3px 0 hsl(var(--foreground))' }}>
                 <CalendarIcon className="w-4 h-4 text-foreground" />
                 <span className="text-xs uppercase tracking-[0.2em] font-bold text-foreground" style={{ fontFamily: 'Space Mono, monospace' }}>
-                  Agenda 2025
+                  Agenda 2026
                 </span>
               </div>
               <h1 className="text-[2.4rem] sm:text-5xl md:text-6xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: 'hsl(var(--foreground))' }}>
