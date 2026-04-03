@@ -16,7 +16,7 @@ const upcomingEvents = [
     location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
     audience: "Tout public",
     spots: "12 participant·es max",
-    description: "Découvrez l'histoire fascinante de la Wardian Case et fabriquez votre propre terrarium. Plantes, substrat et matériel fournis. Gratuité pour les bénéficiaires d'Aurore.",
+    description: "Découvrez l'histoire fascinante de la Wardian Case, puis fabriquez votre propre mini terrarium à emporter. Plantes, substrat et matériel fournis. Gratuité pour les bénéficiaires d'Aurore.",
     linkType: "internal" as const,
     internalUrl: "/inscription/wardian-case",
   },
