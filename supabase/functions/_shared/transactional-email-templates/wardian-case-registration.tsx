@@ -156,41 +156,7 @@ const thinRule = { borderColor: olive, borderWidth: '1px', margin: '12px 0 20px'
 
 const text = { color: '#2a2a2a', fontSize: '15px', lineHeight: '1.75', margin: '0 0 16px' }
 
-const infoSection = {
-  backgroundColor: '#ffffff',
-  padding: '20px 22px',
-  margin: '20px 0',
-  borderLeft: `4px solid ${olive}`,
-}
-const infoLabel = {
-  color: darkGreen,
-  fontSize: '10px',
-  letterSpacing: '3px',
-  fontWeight: '700' as const,
-  margin: '0',
-  textTransform: 'uppercase' as const,
-}
-const infoContent = {
-  color: '#2a2a2a',
-  fontSize: '14px',
-  lineHeight: '1.7',
-  margin: '0',
-}
-
-const messageSection = {
-  backgroundColor: '#ffffff',
-  padding: '20px 22px',
-  margin: '20px 0',
-  borderLeft: `4px solid ${coral}`,
-}
-const messageLabel = {
-  color: darkGreen,
-  fontSize: '10px',
-  letterSpacing: '3px',
-  fontWeight: '700' as const,
-  margin: '0',
-  textTransform: 'uppercase' as const,
-}
+const textBold = { color: darkGreen, fontSize: '15px', lineHeight: '1.75', margin: '16px 0 4px', fontWeight: '700' as const }
 const messageContent = {
   color: '#2a2a2a',
   fontSize: '14px',
