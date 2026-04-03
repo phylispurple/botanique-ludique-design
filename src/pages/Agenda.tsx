@@ -78,6 +78,7 @@ const upcomingEvents = [
     description: "Atelier en partenariat avec la Région Île-de-France Nature. Créez votre propre kokedama dans un cadre naturel exceptionnel. Inscriptions ouvertes à partir du 5 juin.",
     linkType: "external" as const,
     externalUrl: "https://openagenda.com/fr/ile-de-france/events/atelier-creation-dun-kokedama",
+    buttonLabel: "En savoir plus",
   },
   {
     id: "balade-st-quentin",
