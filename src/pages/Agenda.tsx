@@ -53,7 +53,7 @@ const upcomingEvents = [
     date: "Samedi 31 mai 2025",
     time: "Horaires à confirmer",
     location: "École Du Breuil, Paris – Fête de l'École",
-    price: "Gratuit",
+    price: "",
     audience: "Tout public",
     spots: "",
     description: "Dans le cadre de la Fête de l'École Du Breuil, participez à une balade botanique passionnante sur l'histoire politique et culturelle des jardins.",
