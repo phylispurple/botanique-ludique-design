@@ -19,7 +19,6 @@ const upcomingEvents = [
     description: "Découvrez l'histoire fascinante de la Wardian Case et fabriquez votre propre terrarium. Plantes, substrat et matériel fournis. Gratuité pour les bénéficiaires d'Aurore.",
     linkType: "internal" as const,
     internalUrl: "/inscription/wardian-case",
-    icon: "🪴",
   },
   {
     id: "stage-botanique-chatou",
@@ -32,7 +31,6 @@ const upcomingEvents = [
     description: "Une semaine de découverte botanique pendant les vacances de printemps ! Activités créatives et scientifiques autour des plantes.",
     linkType: "external" as const,
     externalUrl: "https://chatou.goasso.org/activites?q%5Bid_eq%5D=18219&with-scroll-to=true",
-    icon: "🌱",
   },
   {
     id: "stage-botanique-bezons",
@@ -45,7 +43,18 @@ const upcomingEvents = [
     description: "Un stage botanique dédié aux adolescents pour découvrir le monde des plantes à travers des activités scientifiques et créatives.",
     linkType: "external" as const,
     externalUrl: "https://www.ville-bezons.fr/annuaire/tiers-lieu-de-la-jeunesse/",
-    icon: "🌿",
+  },
+  {
+    id: "kokedama-maurepas",
+    name: "Atelier Kokedama – Parent-Enfant",
+    date: "Mardi 20 mai 2025",
+    time: "15h30 – 17h00",
+    location: "Relais Marianne, Maurepas (78)",
+    audience: "Maurepasien·nes uniquement – Parent-Enfant",
+    spots: "",
+    description: "Atelier parent-enfant pour créer ensemble votre propre kokedama. Réservé aux habitants de Maurepas.",
+    linkType: "external" as const,
+    externalUrl: "https://www.maurepas.fr/index.php/Actualit%26eacute%3Bs?idpage=15021&idmetacontenu=18619&iddossiercontenu=565&positioncontenu=A1",
   },
   {
     id: "balade-ecole-du-breuil",
@@ -57,7 +66,6 @@ const upcomingEvents = [
     spots: "",
     description: "Dans le cadre de la Fête de l'École Du Breuil, participez à une balade botanique passionnante sur l'histoire politique et culturelle des jardins.",
     linkType: "coming" as const,
-    icon: "🌳",
   },
   {
     id: "kokedama-franconville",
@@ -70,20 +78,6 @@ const upcomingEvents = [
     description: "Atelier en partenariat avec la Région Île-de-France Nature. Créez votre propre kokedama dans un cadre naturel exceptionnel.",
     linkType: "external" as const,
     externalUrl: "https://openagenda.com/fr/ile-de-france/events/atelier-creation-dun-kokedama",
-    icon: "🪸",
-  },
-  {
-    id: "kokedama-maurepas",
-    name: "Atelier Kokedama – Parent-Enfant",
-    date: "Date à confirmer",
-    time: "15h30 – 17h00",
-    location: "Maurepas (78)",
-    audience: "Maurepasien·nes uniquement – Parent-Enfant",
-    spots: "",
-    description: "Atelier parent-enfant pour créer ensemble votre propre kokedama. Réservé aux habitants de Maurepas.",
-    linkType: "external" as const,
-    externalUrl: "https://www.maurepas.fr/index.php/Actualit%26eacute%3Bs?idpage=15021&idmetacontenu=18619&iddossiercontenu=565&positioncontenu=A1",
-    icon: "👨‍👧",
   },
   {
     id: "balade-st-quentin",
@@ -95,7 +89,6 @@ const upcomingEvents = [
     spots: "",
     description: "Une balade botanique à la découverte de la flore locale. Plus d'informations à venir.",
     linkType: "coming" as const,
-    icon: "🍃",
   },
 ];
 
@@ -173,7 +166,7 @@ const Agenda = () => {
                   <div className="flex flex-col md:flex-row">
                     {/* Date sidebar */}
                     <div className="md:w-52 flex-shrink-0 bg-primary/10 border-b-3 md:border-b-0 md:border-r-3 border-foreground p-5 md:p-6 flex flex-col justify-center items-center text-center">
-                      <span className="text-3xl mb-2">{event.icon}</span>
+                      <Leaf className="w-5 h-5 text-primary/50 mb-2" />
                       <p className="text-xs uppercase tracking-wider font-bold text-foreground/60 mb-1" style={{ fontFamily: 'Space Mono, monospace' }}>
                         Date
                       </p>
