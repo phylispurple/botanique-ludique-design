@@ -1,56 +1,32 @@
 
 
-## Refonte complète du mail de confirmation Wardian Case
+## Plan : Ajouter la photo + bande photo interactive
 
-### Résumé des changements
+### 1. Ajouter la photo du mini terrarium
 
-Réécriture du contenu du template `wardian-case-registration.tsx` pour un ton plus chaleureux, avec toutes les infos pratiques demandées.
+- Copier `user-uploads://mini_terrarium.jpeg` → `src/assets/gallery-mini-terrarium.webp`
+- L'ajouter dans la liste `items` de `Gallery.tsx` (avec caption "Mini terrarium en bocal")
+- L'ajouter aussi dans le tableau d'images de la bande défilante sur `Index.tsx`
 
-### Modifications du fichier `wardian-case-registration.tsx`
+### 2. Refondre la bande photo de la page d'accueil
 
-**Header :**
-- "ATELIER TERRARIUM" → "ATELIER WARDIAN CASE"
-- Suppression de l'emoji 🌿 (ligne `headerEmoji`)
+Remplacer l'animation CSS `animate-marquee` par un composant interactif `PhotoCarousel` qui :
 
-**Objet du mail :** Retirer le 🌿
-- `Confirmation de ton inscription, Atelier Wardian Case`
+- **Défilement continu automatique** : les photos défilent en boucle infinie (comme actuellement)
+- **Mélange aléatoire** : à chaque chargement, l'ordre des photos est randomisé
+- **Interactions utilisateur** :
+  - **Drag / swipe** : glisser à la souris (desktop) ou au doigt (mobile) pour déplacer les photos dans un sens ou l'autre
+  - **Pause au survol** : le défilement s'arrête quand la souris est sur la bande
+  - **Scroll horizontal** : la molette (ou trackpad) contrôle le défilement quand le curseur est sur la bande
+  - Quand l'utilisateur lâche, le défilement automatique reprend doucement
 
-**Preview text :** Retirer le 🌿
+### Détails techniques
 
-**Nouveau corps du mail :**
-
-> **BONJOUR {prénom} !**
->
-> Merci pour ton inscription à l'atelier Wardian Case, j'ai hâte de t'y retrouver !
->
-> On va passer un super moment ensemble à plonger dans l'histoire fascinante des Wardian Cases victoriens, et tu repartiras avec ton propre mini terrarium.
->
-> **RENDEZ-VOUS**
-> *(section encadrée, bordure olive à gauche)*
-> Mardi 22 avril 2026, 16h00 – 17h30
-> La Rochefoucauld, Paris 14e (Denfert-Rochereau)
->
-> **RÈGLEMENT**
-> *(section encadrée, bordure olive à gauche)*
-> Tu peux régler via PayPal 48h avant l'atelier pour confirmer ta place, ou en espèces sur place 10 à 15 minutes avant le début.
->
-> N'hésite pas à en parler autour de toi, si des amis sont intéressés, ils sont les bienvenus !
->
-> *(Si message utilisateur :)*
-> « {message} »
-> Je te réponds au plus vite !
->
-> Si tu as la moindre question d'ici là, réponds simplement à cet email.
->
-> À très bientôt !
-
-**Signature et footer :** Inchangés (Vanessa, Botanique Ludique 🍀)
-
-### Design
-
-Pas de changement de palette ni de structure visuelle. Ajout de deux petites sections "Rendez-vous" et "Règlement" stylées comme la section message (fond blanc, bordure olive à gauche) pour que les infos pratiques ressortent bien.
-
-### Après modification
-
-Redéploiement de la Edge Function `send-transactional-email`.
+- Nouveau composant `src/components/PhotoCarousel.tsx` utilisant `useRef` + `requestAnimationFrame` pour un défilement fluide sans dépendance externe
+- Gestion des événements `mousedown/mousemove/mouseup` + `touchstart/touchmove/touchend` pour le drag
+- `onWheel` pour le scroll horizontal
+- `onMouseEnter/Leave` pour la pause
+- Boucle infinie : dupliquer les images et repositionner silencieusement quand on atteint la fin
+- Fisher-Yates shuffle au montage du composant pour l'ordre aléatoire
+- Remplace le `<div className="flex gap-4 animate-marquee">` dans `Index.tsx` par `<PhotoCarousel />`
 
