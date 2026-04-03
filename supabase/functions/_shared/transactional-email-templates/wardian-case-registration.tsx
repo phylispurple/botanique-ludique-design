@@ -59,16 +59,15 @@ const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianC
           </Text>
 
           {userMessage ? (
-            <Section style={messageSection}>
-              <Text style={messageLabel}>TON MESSAGE</Text>
-              <Hr style={thinRule} />
+            <>
+              <Text style={textBold}>Ton message :</Text>
               <Text style={messageContent}>
                 « {userMessage} »
               </Text>
               <Text style={messageReply}>
                 Je te réponds au plus vite !
               </Text>
-            </Section>
+            </>
           ) : null}
 
           <Text style={text}>
