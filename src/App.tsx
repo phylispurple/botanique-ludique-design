@@ -18,6 +18,7 @@ import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import AdminTestimonials from "./pages/AdminTestimonials";
 import Agenda from "./pages/Agenda";
+import InscriptionWardianCase from "./pages/InscriptionWardianCase";
 import AteliersBotaniquesYvelines from "./pages/AteliersBotaniquesYvelines";
 import TeamBuildingRSEParis from "./pages/TeamBuildingRSEParis";
 import AteliersBotaniqueEntrepriseIDF from "./pages/AteliersBotaniqueEntrepriseIDF";
