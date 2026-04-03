@@ -37,7 +37,7 @@ const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianC
           </Text>
 
           <Text style={text}>
-            N'hésite pas à en parler autour de toi — si des amis seraient intéressés par le sujet, ils sont les bienvenus !
+            N'hésite pas à en parler autour de toi, si des amis seraient intéressés par le sujet, ils sont les bienvenus !
           </Text>
 
           {userMessage ? (
