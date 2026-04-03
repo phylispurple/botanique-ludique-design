@@ -170,9 +170,11 @@ const Agenda = () => {
                       </div>
 
                       <div className="flex flex-wrap items-center gap-3 pt-2">
-                        <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/15 text-xs font-semibold">
-                          {event.price}
-                        </Badge>
+                        {event.price && (
+                          <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/15 text-xs font-semibold">
+                            {event.price}
+                          </Badge>
+                        )}
                         <Badge variant="outline" className="text-foreground/50 border-border text-xs">
                           {event.audience}
                         </Badge>
