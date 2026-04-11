@@ -1,61 +1,61 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
-import { GraduationCap, Sprout, Microscope, Landmark, Users, Building2, Leaf, Globe } from "lucide-react";
+import { GraduationCap, Sprout, Microscope, Landmark, Users, BookOpen, Compass, TreePine } from "lucide-react";
 
 const conferences = [
   {
-    num: "CONFÉRENCE",
-    title: "Ethnobotanique & Anthropologie des plantes",
-    desc: "Voyage au cœur des relations millénaires entre les humains et le monde végétal. Comment les cultures, de l'Asie à l'Europe, ont-elles utilisé, nommé et sacré les plantes ? Une lecture croisée entre sciences du vivant et sciences humaines.",
-    tags: ["Musées", "Médiathèques", "Centres culturels", "Grand public"],
+    num: "ANGLE SIGNATURE",
+    title: "Plantes Voyageuses, Histoires Oubliées",
+    desc: "Le café que vous buvez, le palmier de votre quartier, la fougère dans votre salon : chaque plante porte une histoire de circulation, de pouvoir et de savoirs effacés. Une lecture décoloniale et anthropologique du végétal qui croise Hélène Blais, Anna Tsing et Samir Boumediene. Conçue pour les institutions qui veulent proposer un récit complémentaire, exigeant et accessible.",
+    tags: ["Musées", "Jardins botaniques", "Médiathèques", "Universités"],
   },
   {
-    num: "COURS & INTERVENTION",
-    title: "Espèces Exotiques Envahissantes",
-    desc: "Comprendre les dynamiques écologiques des plantes invasives et leurs enjeux pour la biodiversité locale. Un contenu pédagogique déjà expérimenté en milieu scolaire (collège), adaptable à différents niveaux et formats.",
-    tags: ["Collèges & Lycées", "Associations environnementales", "Collectivités"],
+    num: "HISTOIRE & GENRE",
+    title: "Femmes, Fougères & Pouvoir",
+    desc: "Comment la Pteridomanie victorienne a ouvert aux femmes leur seul accès à la science, avant d'être pathologisée par les hommes en « manie ». Une plongée dans l'histoire genrée de la botanique, des chasseuses de plantes oubliées à Jeanne Barret, première femme circumnavigatrice. Une conférence qui éclaire comment les savoirs scientifiques ont été genrés et invisibilisés.",
+    tags: ["Musées", "Festivals d'idées", "Universités", "Médiathèques"],
   },
   {
-    num: "ETHNOBOTANIQUE",
-    title: "Plantes & Cultures du Monde",
-    desc: "Un voyage ethnobotanique à travers les usages culturels, médicinaux et symboliques des plantes dans différentes sociétés. Instruments de musique végétaux, teintures ancestrales, pharmacopées traditionnelles — la diversité des savoirs autochtones liés au végétal.",
-    tags: ["Universités", "Festivals scientifiques", "Institutions culturelles"],
+    num: "ANTHROPOLOGIE",
+    title: "Penser Avec les Plantes",
+    desc: "Et si on pensait les plantes autrement ? À partir des travaux de Philippe Descola sur le naturalisme et l'animisme, une réflexion sur les manières non occidentales de concevoir le vivant. Comment les savoirs autochtones, des Kanaks de Nouvelle-Calédonie aux peuples amazoniens, nous invitent à reconsidérer notre rapport aux plantes à l'heure de l'effondrement de la biodiversité.",
+    tags: ["Institutions culturelles", "Universités", "Festivals scientifiques"],
   },
   {
-    num: "VULGARISATION",
-    title: "Rendre la Science Accessible",
-    desc: "Médiation scientifique et vulgarisation de la botanique, de l'écologie et de l'ethnobotanique pour tous les publics. Une approche pratiquée sur les réseaux sociaux et adaptable en format conférence, atelier ou intervention media.",
-    tags: ["Grand public", "Événements", "Médias", "Structures éducatives"],
+    num: "JARDINS BOTANIQUES",
+    title: "Lire un Jardin Comme une Archive",
+    desc: "Visites guidées et balades ethnobotaniques dans les jardins botaniques, parcs historiques et serres patrimoniales d'Île-de-France. Chaque collection devient une entrée dans l'histoire coloniale, sociale et culturelle des plantes. Une médiation conçue en complément du discours botanique habituel, jamais en concurrence avec lui.",
+    tags: ["Jardins remarquables", "Musées", "Parcs patrimoniaux", "Collectivités"],
   },
 ];
 
 const balades = [
   {
-    icon: Building2,
-    title: "Botanique Urbaine",
-    desc: "Découvrir les plantes qui poussent dans les interstices de la ville — trottoirs, friches, jardins partagés. Une exploration du vivant à deux pas de chez soi.",
-    season: "Toute l'année · 2h · Tous publics",
+    icon: TreePine,
+    title: "Jardins Botaniques & Serres Patrimoniales",
+    desc: "Une lecture historique et politique des grandes collections franciliennes : Serres d'Auteuil, Jardin des Plantes, École Du Breuil, Jardin d'agronomie tropicale de Vincennes. Chaque plante devient une archive vivante.",
+    season: "Toute l'année · 1h à 2h · Sur réservation",
   },
   {
-    icon: Leaf,
-    title: "Plantes Sauvages & Usages",
-    desc: "Identifier les plantes comestibles, médicinales et tinctoriales dans la nature. Un regard ethnobotanique sur les savoirs populaires liés aux plantes sauvages.",
-    season: "Printemps · Été · Demi-journée",
+    icon: Compass,
+    title: "Botanique Coloniale Urbaine",
+    desc: "Une déambulation dans Paris pour décrypter ce que les palmiers, platanes, ginkgos et autres espèces plantées sous Haussmann racontent de l'histoire impériale française. Le végétal urbain comme document historique.",
+    season: "Printemps · Été · Automne · 2h",
   },
   {
-    icon: Globe,
-    title: "Ethnobotanique de Terrain",
-    desc: "Une balade pour comprendre les relations culturelles entre une société et ses plantes locales — histoire, usages, symboliques. Idéal pour les groupes curieux de sciences humaines.",
-    season: "Sur demande · Adapté au groupe",
+    icon: BookOpen,
+    title: "Ethnobotanique & Savoirs Effacés",
+    desc: "Une balade pensée comme une conférence en mouvement. Croiser anthropologie, histoire des sciences et études postcoloniales pour redonner voix aux savoirs autochtones et aux figures invisibilisées de la botanique mondiale.",
+    season: "Sur demande · Adapté au groupe et au lieu",
   },
 ];
 
 const modules = [
-  { icon: GraduationCap, label: "Intervention en classe", duration: "1h – 2h" },
-  { icon: Sprout, label: "Journée pédagogique", duration: "Demi-journée ou journée" },
-  { icon: Microscope, label: "Module pluridisciplinaire", duration: "Plusieurs séances" },
-  { icon: Landmark, label: "Conférence institutionnelle", duration: "Sur mesure" },
-  { icon: Users, label: "Atelier de médiation", duration: "Musées, médiathèques" },
+  { icon: Landmark, label: "Conférence pour institutions", duration: "1h à 1h30" },
+  { icon: Compass, label: "Balade ethnobotanique guidée", duration: "1h à 2h" },
+  { icon: BookOpen, label: "Cycle thématique", duration: "Plusieurs séances" },
+  { icon: GraduationCap, label: "Intervention universitaire", duration: "Sur mesure" },
+  { icon: Users, label: "Atelier de médiation pour équipes", duration: "Musées, médiathèques" },
 ];
 
 const ConferencesSavoirs = () => {
@@ -65,15 +65,18 @@ const ConferencesSavoirs = () => {
       <div className="py-20 px-6 md:px-16 lg:px-[120px]">
         <AnimatedSection>
           <span className="section-label block mb-5" style={{ color: 'hsl(73 44% 67%)' }}>
-            Expertise académique & médiation scientifique
+            Médiation ethnobotanique pour institutions
           </span>
           <h2 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.95] tracking-[-2px] text-white mb-5">
             Conférences<br />& Savoirs
           </h2>
-          <p className="text-lg leading-[1.7] text-white/80 max-w-[620px] mb-6 text-justify">
-            Diplômée en anthropologie et spécialiste en ethnobotanique, Vanessa Charlery intervient auprès des institutions culturelles, éducatives et scientifiques pour des conférences, cours et interventions sur mesure. Conférence botanique en Île-de-France, balade botanique guidée dans les Yvelines, vulgarisation scientifique sur les réseaux sociaux : notre expertise couvre un large spectre de médiation.
+          <p className="text-lg leading-[1.7] text-white/80 max-w-[680px] mb-6 text-justify">
+            Formée en anthropologie de la nature à l'EHESS sous la direction de Florence Brunois-Pasina, Vanessa Charlery propose aux institutions une médiation ethnobotanique qui prend les plantes au sérieux comme témoins de l'histoire. Une approche qui croise rigueur académique et pédagogie accessible, et qui mobilise les travaux contemporains en anthropologie de la nature, en histoire des sciences coloniales et en études de genre.
           </p>
-          <p className="text-sm leading-[1.7] text-white/60 max-w-[620px] mb-14 text-justify">
+          <p className="text-lg leading-[1.7] text-white/80 max-w-[680px] mb-6 text-justify">
+            Il n'existe pas de meilleur témoin historique qu'une plante. Une plante porte en elle son origine géographique, les routes qu'elle a empruntées, les mains qui l'ont cultivée, les noms qu'on lui a donnés et ceux qu'on lui a effacés. Botanique Ludique propose aux musées, jardins botaniques, médiathèques et universités de raconter les plantes autrement : par leur histoire sociale, politique et culturelle, en complément du regard botanique classique.
+          </p>
+          <p className="text-sm leading-[1.7] text-white/60 max-w-[680px] mb-14 text-justify">
             Découvrez nos <Link to="/workshops" className="underline text-[hsl(73_44%_67%)] hover:text-white transition-colors">ateliers botaniques pour tous publics</Link> ou nos <Link to="/etablissements-scolaires" className="underline text-[hsl(73_44%_67%)] hover:text-white transition-colors">interventions pédagogiques pour établissements scolaires</Link>.
           </p>
         </AnimatedSection>
@@ -114,11 +117,11 @@ const ConferencesSavoirs = () => {
             <span className="section-label block mb-4" style={{ color: 'hsl(73 44% 67%)' }}>
               Sorties nature & exploration
             </span>
-            <h3 className="font-display text-[clamp(2rem,5vw,4.5rem)] uppercase leading-[0.95] tracking-[-2px] text-white mb-4">
-              Balades<br />Botaniques
+            <h3 className="font-display text-3xl md:text-4xl uppercase leading-[0.95] mb-4 text-white">
+              Balades<br />Ethnobotaniques
             </h3>
             <p className="text-base text-white/70 max-w-[560px] leading-[1.7] mb-12">
-              Des sorties guidées pour observer, identifier et comprendre les plantes dans leur milieu naturel ou urbain. Chaque balade botanique guidée dans les Yvelines ou en Île-de-France est une invitation à redécouvrir notre environnement végétal, idéale pour une sortie pédagogique plantes sauvages.
+              Des visites guidées qui transforment chaque jardin, chaque serre, chaque parc en une archive vivante. Une approche unique en Île-de-France qui croise botanique, anthropologie et histoire sociale du végétal, à destination des institutions culturelles et patrimoniales.
             </p>
           </AnimatedSection>
 
@@ -150,10 +153,10 @@ const ConferencesSavoirs = () => {
                 Pour les institutions
               </span>
               <h3 className="font-display text-3xl md:text-4xl uppercase leading-[0.95] mb-4 text-white">
-                Modules Pédagogiques<br />Sur Mesure
+                Formats<br />d'Intervention
               </h3>
               <p className="text-[15px] leading-[1.7] text-white/70 mb-6 text-justify">
-                Des interventions adaptables en durée et en contenu, conçues pour s'intégrer dans vos programmes éducatifs, culturels ou de sensibilisation.
+                Conférences, balades guidées, cycles thématiques, ateliers de médiation pour vos équipes : des formats modulables conçus pour s'intégrer dans votre programmation culturelle, scientifique ou patrimoniale. Chaque intervention est adaptée à votre lieu, à votre public et à vos collections.
               </p>
               <Link
                 to="/contact"
@@ -192,10 +195,10 @@ const ConferencesSavoirs = () => {
       <div className="bg-[hsl(var(--olive))] py-9 px-6 md:px-16 lg:px-[120px] flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
           <h3 className="font-display text-xl md:text-[22px] uppercase text-[hsl(var(--black))]">
-            Vous organisez un événement ou une journée pédagogique ?
+            Une institution, un projet, une programmation à construire ?
           </h3>
           <p className="text-sm text-[hsl(var(--black))]/60 mt-1">
-            Conférences, interventions scolaires, balades botaniques — discutons de votre projet.
+            Conférences, balades ethnobotaniques, cycles thématiques — parlons de votre projet ensemble.
           </p>
         </div>
         <Link
