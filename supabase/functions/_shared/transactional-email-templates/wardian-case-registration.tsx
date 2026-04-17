@@ -45,7 +45,7 @@ const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianC
 
           <Text style={textBold}>Rendez-vous :</Text>
           <Text style={text}>
-            Mardi 22 avril 2026, 16h00 – 17h30{'\n'}
+            Mercredi 22 avril 2026, 16h00 – 17h30{'\n'}
             La Rochefoucauld, Paris 14e (Denfert-Rochereau)
           </Text>
 
