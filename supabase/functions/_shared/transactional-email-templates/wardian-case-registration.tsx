@@ -51,7 +51,7 @@ const WardianCaseRegistrationEmail = ({ firstName, name, userMessage }: WardianC
 
           <Text style={textBold}>Règlement :</Text>
           <Text style={text}>
-            Tu peux régler via PayPal 48h avant l'atelier pour confirmer ta place, ou en espèces sur place 10 à 15 minutes avant le début.
+            Le règlement se fait en espèces sur place, 10 à 15 minutes avant le début de l'atelier.
           </Text>
 
           <Text style={text}>
