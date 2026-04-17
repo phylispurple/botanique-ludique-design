@@ -11,7 +11,7 @@ const upcomingEvents = [
   {
     id: "wardian-case-22-avril",
     name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
-    date: "Mardi 22 avril 2026",
+    date: "Mercredi 22 avril 2026",
     time: "16h00 – 17h30",
     location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
     audience: "Tout public",
