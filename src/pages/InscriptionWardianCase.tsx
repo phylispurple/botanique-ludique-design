@@ -148,7 +148,7 @@ const InscriptionWardianCase = () => {
                 <CalendarIcon className="w-5 h-5 text-primary mt-0.5" />
                 <div>
                   <p className="text-xs uppercase tracking-wider text-foreground/50 mb-1">Date</p>
-                  <p className="text-sm font-medium text-foreground">Mardi 22 avril 2026</p>
+                  <p className="text-sm font-medium text-foreground">Mercredi 22 avril 2026</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
