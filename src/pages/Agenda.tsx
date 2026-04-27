@@ -69,6 +69,36 @@ const upcomingEvents = [
   },
 ];
 
+const pastEvents = [
+  {
+    id: "wardian-case-22-avril",
+    name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
+    date: "Mercredi 22 avril 2026",
+    time: "16h00 – 17h30",
+    location: "La Rochefoucauld, Paris 14e",
+    audience: "Tout public",
+    description: "Histoire fascinante de la Wardian Case et fabrication d'un mini terrarium.",
+  },
+  {
+    id: "stage-botanique-chatou",
+    name: "Stage Botanique – Vacances de Printemps",
+    date: "Du 20 au 24 avril 2026",
+    time: "10h30 – 12h00",
+    location: "MJC de Chatou",
+    audience: "8–15 ans",
+    description: "Une semaine de découverte botanique pendant les vacances de printemps.",
+  },
+  {
+    id: "stage-botanique-bezons",
+    name: "Stage Botanique – Adolescents",
+    date: "Du 20 au 24 avril 2026",
+    time: "",
+    location: "Espace Elsa Triolet-Aragon, Bezons",
+    audience: "13–17 ans",
+    description: "Stage botanique dédié aux adolescents : activités scientifiques et créatives.",
+  },
+];
+
 const Agenda = () => {
   const eventsSchema = upcomingEvents.map(event => ({
     "@type": "Event",
