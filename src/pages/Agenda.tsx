@@ -240,6 +240,41 @@ const Agenda = () => {
               ))}
             </div>
 
+            {/* Past events */}
+            <div className="mt-20 animate-fade-in">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="h-px flex-1 bg-foreground/20" />
+                <h2 className="text-xs uppercase tracking-[0.25em] font-bold text-foreground/60" style={{ fontFamily: 'Space Mono, monospace' }}>
+                  Événements passés
+                </h2>
+                <div className="h-px flex-1 bg-foreground/20" />
+              </div>
+              <div className="grid gap-4 md:grid-cols-2">
+                {pastEvents.map((event) => (
+                  <div
+                    key={event.id}
+                    className="border-2 border-foreground/30 bg-background/50 p-5 opacity-70 hover:opacity-90 transition-opacity"
+                  >
+                    <p className="text-xs uppercase tracking-wider font-bold text-foreground/50 mb-2" style={{ fontFamily: 'Space Mono, monospace' }}>
+                      {event.date}{event.time ? ` · ${event.time}` : ''}
+                    </p>
+                    <h3 className="text-base font-bold text-foreground/80 mb-2 leading-snug" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500 }}>
+                      {event.name}
+                    </h3>
+                    <p className="text-sm text-foreground/50 mb-3">{event.description}</p>
+                    <div className="flex items-center gap-3 text-xs text-foreground/40">
+                      <span className="flex items-center gap-1">
+                        <MapPin className="w-3 h-3" /> {event.location}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Users className="w-3 h-3" /> {event.audience}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* CTA Atelier sur mesure */}
             <div className="mt-16 border-3 border-foreground p-8 md:p-12 text-center animate-fade-in bg-primary/5" style={{ boxShadow: '6px 6px 0 hsl(var(--foreground))' }}>
               <Sprout className="w-8 h-8 text-primary mx-auto mb-4" />
