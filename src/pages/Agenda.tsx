@@ -9,40 +9,16 @@ import { Badge } from "@/components/ui/badge";
 
 const upcomingEvents = [
   {
-    id: "wardian-case-22-avril",
-    name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
-    date: "Mercredi 22 avril 2026",
-    time: "16h00 – 17h30",
+    id: "mauvaises-herbes-6-mai",
+    name: "Mauvaises herbes : histoire des jardins punk + fabrication de bombes à graines",
+    date: "Mercredi 6 mai 2026",
+    time: "17h00",
     location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
     audience: "Tout public",
-    spots: "12 participant·es max",
-    description: "Découvrez l'histoire fascinante de la Wardian Case, puis fabriquez votre propre mini terrarium à emporter. Plantes, substrat et matériel fournis. Gratuité pour les bénéficiaires d'Aurore.",
+    spots: "Sur inscription",
+    description: "Histoire des jardins punk et de la politique des plantes sauvages en ville, suivie de la fabrication de bombes à graines à lancer dans les friches urbaines. 7€ matériel compris.",
     linkType: "internal" as const,
-    internalUrl: "/inscription/wardian-case",
-  },
-  {
-    id: "stage-botanique-chatou",
-    name: "Stage Botanique – Vacances de Printemps",
-    date: "Du lundi 20 au vendredi 24 avril 2026",
-    time: "10h30 – 12h00",
-    location: "MJC de Chatou",
-    audience: "8–15 ans",
-    spots: "Places limitées",
-    description: "Une semaine de découverte botanique pendant les vacances de printemps ! Activités créatives et scientifiques autour des plantes.",
-    linkType: "external" as const,
-    externalUrl: "https://chatou.goasso.org/activites?q%5Bid_eq%5D=18219&with-scroll-to=true",
-  },
-  {
-    id: "stage-botanique-bezons",
-    name: "Stage Botanique – Adolescents",
-    date: "Du lundi 20 au vendredi 24 avril 2026",
-    time: "",
-    location: "Espace Elsa Triolet-Aragon, Bezons",
-    audience: "13–17 ans",
-    spots: "",
-    description: "Un stage botanique dédié aux adolescents pour découvrir le monde des plantes à travers des activités scientifiques et créatives.",
-    linkType: "external" as const,
-    externalUrl: "https://www.ville-bezons.fr/annuaire/tiers-lieu-de-la-jeunesse/",
+    internalUrl: "/inscription/mauvaises-herbes",
   },
   {
     id: "kokedama-maurepas",
@@ -90,6 +66,36 @@ const upcomingEvents = [
     spots: "",
     description: "Une balade botanique à la découverte de la flore locale. Plus d'informations à venir.",
     linkType: "coming" as const,
+  },
+];
+
+const pastEvents = [
+  {
+    id: "wardian-case-22-avril",
+    name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
+    date: "Mercredi 22 avril 2026",
+    time: "16h00 – 17h30",
+    location: "La Rochefoucauld, Paris 14e",
+    audience: "Tout public",
+    description: "Histoire fascinante de la Wardian Case et fabrication d'un mini terrarium.",
+  },
+  {
+    id: "stage-botanique-chatou",
+    name: "Stage Botanique – Vacances de Printemps",
+    date: "Du 20 au 24 avril 2026",
+    time: "10h30 – 12h00",
+    location: "MJC de Chatou",
+    audience: "8–15 ans",
+    description: "Une semaine de découverte botanique pendant les vacances de printemps.",
+  },
+  {
+    id: "stage-botanique-bezons",
+    name: "Stage Botanique – Adolescents",
+    date: "Du 20 au 24 avril 2026",
+    time: "",
+    location: "Espace Elsa Triolet-Aragon, Bezons",
+    audience: "13–17 ans",
+    description: "Stage botanique dédié aux adolescents : activités scientifiques et créatives.",
   },
 ];
 
@@ -232,6 +238,41 @@ const Agenda = () => {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Past events */}
+            <div className="mt-20 animate-fade-in">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="h-px flex-1 bg-foreground/20" />
+                <h2 className="text-xs uppercase tracking-[0.25em] font-bold text-foreground/60" style={{ fontFamily: 'Space Mono, monospace' }}>
+                  Événements passés
+                </h2>
+                <div className="h-px flex-1 bg-foreground/20" />
+              </div>
+              <div className="grid gap-4 md:grid-cols-2">
+                {pastEvents.map((event) => (
+                  <div
+                    key={event.id}
+                    className="border-2 border-foreground/30 bg-background/50 p-5 opacity-70 hover:opacity-90 transition-opacity"
+                  >
+                    <p className="text-xs uppercase tracking-wider font-bold text-foreground/50 mb-2" style={{ fontFamily: 'Space Mono, monospace' }}>
+                      {event.date}{event.time ? ` · ${event.time}` : ''}
+                    </p>
+                    <h3 className="text-base font-bold text-foreground/80 mb-2 leading-snug" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500 }}>
+                      {event.name}
+                    </h3>
+                    <p className="text-sm text-foreground/50 mb-3">{event.description}</p>
+                    <div className="flex items-center gap-3 text-xs text-foreground/40">
+                      <span className="flex items-center gap-1">
+                        <MapPin className="w-3 h-3" /> {event.location}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Users className="w-3 h-3" /> {event.audience}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* CTA Atelier sur mesure */}
