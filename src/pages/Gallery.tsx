@@ -37,6 +37,7 @@ import teinture2Image from "@/assets/gallery-teinture-2.webp";
 import teinture3Image from "@/assets/gallery-teinture-3.webp";
 import workshopGroupImage from "@/assets/gallery-workshop-group.webp";
 import miniTerrariumImage from "@/assets/gallery-mini-terrarium.jpeg";
+import kokedamaTradescantiaImage from "@/assets/gallery-kokedama-tradescantia.jpg";
 
 const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string; className?: string; style?: React.CSSProperties }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -106,6 +107,7 @@ const Gallery = () => {
     { src: kosovoConstruction6, alt: "Application du torchis", caption: "Techniques ancestrales de construction, Kosovo", type: "image" },
     { src: kosovoConstruction7, alt: "Manipulation du torchis", caption: "Apprentissage éco-construction, Kosovo", type: "image" },
     { src: miniTerrariumImage, alt: "Mini terrarium en bocal", caption: "Mini terrarium en bocal", type: "image" },
+    { src: kokedamaTradescantiaImage, alt: "Kokedama avec tradescantia", caption: "Kokedama, Tradescantia zebrina en cours de création", type: "image" },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
