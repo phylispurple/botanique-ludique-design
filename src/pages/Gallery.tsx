@@ -41,6 +41,7 @@ import kokedamaTradescantiaImage from "@/assets/gallery-kokedama-tradescantia.jp
 import bougieFleursSecheesImage from "@/assets/gallery-bougie-fleurs-sechees.jpg";
 import fittoniaPotsImage from "@/assets/gallery-fittonia-pots.jpg";
 import terrariumEnfantsFabricationImage from "@/assets/gallery-terrarium-enfants-fabrication.jpg";
+import terrariumEnfantsMousseImage from "@/assets/gallery-terrarium-enfants-mousse.jpg";
 
 const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string; className?: string; style?: React.CSSProperties }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -75,6 +76,7 @@ const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string
 const Gallery = () => {
   const items = [
     { src: portraitVanessaImage, alt: "Vanessa Charlery, ethnobotaniste", caption: "Portrait, Vanessa Charlery, fondatrice", type: "image" },
+    { src: terrariumEnfantsMousseImage, alt: "Atelier terrarium enfants avec mousse", caption: "Atelier enfants, Préparation de la mousse pour terrariums", type: "image" },
     { src: fittoniaPotsImage, alt: "Plantules de Fittonia en pots", caption: "Fittonia, plantules prêtes pour les terrariums", type: "image" },
     { src: terrariumEnfantsFabricationImage, alt: "Enfants fabriquant un terrarium", caption: "Atelier enfants, Fabrication de terrariums en bocaux", type: "image" },
     { src: bougieFleursSecheesImage, alt: "Bougie aux fleurs séchées", caption: "Atelier bougie, Fleurs séchées en gel transparent", type: "image" },
