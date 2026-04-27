@@ -72,6 +72,7 @@ const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string
 const Gallery = () => {
   const items = [
     { src: portraitVanessaImage, alt: "Vanessa Charlery, ethnobotaniste", caption: "Portrait, Vanessa Charlery, fondatrice", type: "image" },
+    { src: kokedamaTradescantiaImage, alt: "Kokedama avec tradescantia", caption: "Kokedama, Tradescantia zebrina en cours de création", type: "image" },
     { src: kokedamaGardenImage, alt: "Kokedama dans un jardin", caption: "Kokedama dans un jardin naturel", type: "image" },
     { src: "/videos/workshop-demo.mp4", alt: "Immersion dans nos ateliers", caption: "Immersion dans nos ateliers", type: "video" },
     { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium, Atelier Botanique Ludique", type: "image" },
@@ -107,7 +108,6 @@ const Gallery = () => {
     { src: kosovoConstruction6, alt: "Application du torchis", caption: "Techniques ancestrales de construction, Kosovo", type: "image" },
     { src: kosovoConstruction7, alt: "Manipulation du torchis", caption: "Apprentissage éco-construction, Kosovo", type: "image" },
     { src: miniTerrariumImage, alt: "Mini terrarium en bocal", caption: "Mini terrarium en bocal", type: "image" },
-    { src: kokedamaTradescantiaImage, alt: "Kokedama avec tradescantia", caption: "Kokedama, Tradescantia zebrina en cours de création", type: "image" },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
