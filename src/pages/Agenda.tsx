@@ -9,16 +9,16 @@ import { Badge } from "@/components/ui/badge";
 
 const upcomingEvents = [
   {
-    id: "wardian-case-22-avril",
-    name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
-    date: "Mercredi 22 avril 2026",
-    time: "16h00 – 17h30",
+    id: "mauvaises-herbes-6-mai",
+    name: "Mauvaises herbes : histoire des jardins punk + fabrication de bombes à graines",
+    date: "Mercredi 6 mai 2026",
+    time: "17h00",
     location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
     audience: "Tout public",
-    spots: "12 participant·es max",
-    description: "Découvrez l'histoire fascinante de la Wardian Case, puis fabriquez votre propre mini terrarium à emporter. Plantes, substrat et matériel fournis. Gratuité pour les bénéficiaires d'Aurore.",
+    spots: "Sur inscription",
+    description: "Histoire des jardins punk et de la politique des plantes sauvages en ville, suivie de la fabrication de bombes à graines à lancer dans les friches urbaines. 7€ matériel compris.",
     linkType: "internal" as const,
-    internalUrl: "/inscription/wardian-case",
+    internalUrl: "/inscription/mauvaises-herbes",
   },
   {
     id: "stage-botanique-chatou",
