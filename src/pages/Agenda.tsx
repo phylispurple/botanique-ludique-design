@@ -21,6 +21,18 @@ const upcomingEvents = [
     internalUrl: "/inscription/mauvaises-herbes",
   },
   {
+    id: "teintures-vegetales-27-mai",
+    name: "Histoire culturelle et politique des teintures végétales",
+    date: "Mercredi 27 mai 2026",
+    time: "17h00",
+    location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
+    audience: "Tout public",
+    spots: "Sur inscription",
+    description: "De l'indigo des esclaves aux Antilles au curcuma de votre cuisine, Botanique Ludique retrace l'histoire politique des couleurs végétales, suivie d'une initiation pratique à la teinture. 8€ matériel fourni.",
+    linkType: "internal" as const,
+    internalUrl: "/inscription/teintures-vegetales",
+  },
+  {
     id: "kokedama-maurepas",
     name: "Atelier Kokedama – Parent-Enfant",
     date: "Mardi 20 mai 2026",
