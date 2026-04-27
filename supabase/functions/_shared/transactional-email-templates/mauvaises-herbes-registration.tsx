@@ -41,10 +41,7 @@ const MauvaisesHerbesRegistrationEmail = ({
           </Heading>
 
           <Text style={text}>
-            {participants && Number(participants) > 1
-              ? `Ton inscription pour ${participants} personnes est bien enregistrée.`
-              : `Ton inscription est bien enregistrée.`}
-            {price ? ` Tarif total : ${price}.` : ''}
+            Ton inscription est bien enregistrée, j'ai hâte de t'y retrouver.
           </Text>
 
           {userMessage ? (
