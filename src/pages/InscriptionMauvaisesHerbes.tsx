@@ -43,8 +43,10 @@ const InscriptionMauvaisesHerbes = () => {
           templateData: {
             firstName: form.prenom,
             name: fullName,
-            subject: 'Mauvaises herbes – 6 mai',
+            subject: 'Bombes de graines, 6 mai',
             userMessage: form.message || undefined,
+            participants: form.nombrePersonnes,
+            price: price(),
           },
         }
       });
