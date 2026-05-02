@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Accordion,
   AccordionContent,
@@ -14,93 +12,76 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import {
   Users,
   Leaf,
-  TreePine,
-  Award,
   Clock,
   MapPin,
   ArrowRight,
-  CheckCircle,
-  Sparkles,
   Download,
   Image as ImageIcon,
-  Heart,
-  Lightbulb,
+  Sparkles,
   Sprout,
+  Lightbulb,
   HandHeart,
+  Award,
 } from "lucide-react";
 
 const PDF_URL = "/documents/plaquette-botanique-ludique-entreprise-2026-2027.pdf";
 
 const LandingTeamBuilding = () => {
   const benefits = [
-    { icon: Users, title: "Cohésion d'équipe", description: "Renforce les liens dans une ambiance détendue et créative." },
-    { icon: Leaf, title: "Engagement RSE", description: "Activité écoresponsable, alignée avec vos valeurs." },
-    { icon: Sparkles, title: "Bien-être au travail", description: "Une parenthèse nature qui apaise et reconnecte." },
-    { icon: Award, title: "Création tangible", description: "Chaque participant·e repart avec son objet végétal." },
+    { icon: Users, title: "Cohésion", desc: "Renforce les liens dans une ambiance détendue.", bg: "bg-green-pale" },
+    { icon: Leaf, title: "RSE", desc: "Activité écoresponsable, alignée avec vos valeurs.", bg: "bg-orange-light" },
+    { icon: Sparkles, title: "Bien-être", desc: "Une parenthèse nature qui apaise et reconnecte.", bg: "bg-yellow" },
+    { icon: Award, title: "Création", desc: "Chaque participant·e repart avec son objet végétal.", bg: "bg-blue-light" },
   ];
 
   const program = [
-    { time: "0 — 15 min", title: "Accueil et mise en lien", desc: "Présentation de l'atelier, du vivant que nous allons rencontrer, et tour de table convivial." },
-    { time: "15 — 45 min", title: "Découverte botanique", desc: "Une courte approche ethnobotanique : histoires, usages et imaginaires des plantes utilisées." },
-    { time: "45 min — 1h45", title: "Création guidée", desc: "Atelier pratique pas à pas : kokedama, terrarium, teinture ou bombes à graines selon votre choix." },
-    { time: "1h45 — 2h", title: "Conseils d'entretien", desc: "Comment prendre soin de sa création au bureau ou à la maison, et prolonger l'expérience." },
+    { time: "00 / 15", title: "Accueil et mise en lien", desc: "Présentation, tour de table convivial et rencontre du vivant que nous allons explorer." },
+    { time: "15 / 45", title: "Découverte botanique", desc: "Une courte approche ethnobotanique. Histoires, usages et imaginaires des plantes utilisées." },
+    { time: "45 / 105", title: "Création guidée", desc: "Atelier pratique pas à pas. Kokedama, terrarium, teinture ou bombes à graines selon votre choix." },
+    { time: "105 / 120", title: "Conseils d'entretien", desc: "Comment prendre soin de sa création au bureau ou à la maison, et prolonger l'expérience." },
   ];
 
   const workshops = [
-    { title: "Atelier Terrarium", duration: "2h", participants: "6 à 12 pers.", highlight: "Le plus demandé", desc: "Créez votre écosystème dans un bocal en verre et repartez avec votre terrarium unique." },
-    { title: "Atelier Kokedama", duration: "2h", participants: "6 à 12 pers.", highlight: "Art végétal japonais", desc: "Réalisez votre boule de plantes suspendue ou posée, entre tradition japonaise et créativité." },
-    { title: "Teinture végétale collaborative", duration: "2h30", participants: "10 à 40 pers.", highlight: "Création collective", desc: "Explorez les plantes tinctoriales et créez ensemble une œuvre textile naturelle." },
-    { title: "Bombes à graines RSE", duration: "1h30", participants: "10 à 60 pers.", highlight: "Action RSE", desc: "Fabriquez des bombes à graines mellifères pour contribuer à la biodiversité urbaine." },
+    { title: "Atelier Terrarium", duration: "2h", participants: "6 à 12 pers.", highlight: "Le plus demandé", desc: "Créez votre écosystème dans un bocal en verre et repartez avec votre terrarium unique.", bg: "bg-green-pale", num: "01" },
+    { title: "Atelier Kokedama", duration: "2h", participants: "6 à 12 pers.", highlight: "Art végétal japonais", desc: "Réalisez votre boule de plantes suspendue ou posée, entre tradition japonaise et créativité.", bg: "bg-orange-light", num: "02" },
+    { title: "Teinture végétale", duration: "2h30", participants: "10 à 40 pers.", highlight: "Création collective", desc: "Explorez les plantes tinctoriales et créez ensemble une œuvre textile naturelle.", bg: "bg-yellow", num: "03" },
+    { title: "Bombes à graines", duration: "1h30", participants: "10 à 60 pers.", highlight: "Action RSE", desc: "Fabriquez des bombes à graines mellifères pour contribuer à la biodiversité urbaine.", bg: "bg-blue-light", num: "04" },
   ];
 
   const reasons = [
-    { icon: Sparkles, title: "Une approche unique", desc: "Mélange de botanique, créativité et bien-être pour une expérience mémorable." },
-    { icon: Users, title: "Cohésion et bien-être", desc: "Favorise les échanges, renforce les liens et crée un moment de détente collectif." },
-    { icon: Sprout, title: "Sensibilisation au vivant", desc: "Un temps pour reconnecter vos équipes à la nature et à l'essentiel." },
-    { icon: Lightbulb, title: "Créativité et apprentissage", desc: "On apprend, on découvre, on expérimente et on repart fier·e de sa création." },
-    { icon: Leaf, title: "Des matériaux de qualité", desc: "Plantes sélectionnées avec soin, matériaux naturels et durables." },
-    { icon: HandHeart, title: "Accompagnement sur-mesure", desc: "Ateliers adaptés à vos besoins, à vos valeurs et à vos espaces." },
+    { icon: Sparkles, title: "Approche unique", desc: "Botanique, créativité et bien-être pour une expérience mémorable." },
+    { icon: Users, title: "Cohésion et bien-être", desc: "Favorise les échanges et crée un moment de détente collectif." },
+    { icon: Sprout, title: "Sensibilisation au vivant", desc: "Un temps pour reconnecter vos équipes à la nature." },
+    { icon: Lightbulb, title: "Créativité et apprentissage", desc: "On apprend, on expérimente et on repart fier·e de sa création." },
+    { icon: Leaf, title: "Matériaux de qualité", desc: "Plantes sélectionnées avec soin, matériaux naturels et durables." },
+    { icon: HandHeart, title: "Sur-mesure", desc: "Ateliers adaptés à vos besoins, vos valeurs et vos espaces." },
   ];
 
   const options = [
-    "Format sur site, dans vos locaux ou en extérieur (selon la météo)",
+    "Format sur site dans vos locaux ou en extérieur",
     "Format en plein air dans un parc d'Île-de-France",
-    "Groupes de 6 à 12 personnes pour un format intimiste, formats plus larges sur demande",
-    "Animation bilingue français/anglais possible",
-    "Pause gourmande végétale à ajouter (tisanes, infusions de saison)",
-    "Kit de communication interne pour annoncer l'atelier à vos équipes",
-    "Documentation pour votre rapport RSE/QVCT",
+    "Groupes de 6 à 12 personnes, formats plus larges sur demande",
+    "Animation bilingue français anglais possible",
+    "Pause gourmande végétale à ajouter",
+    "Kit de communication interne pour annoncer l'atelier",
+    "Documentation pour votre rapport RSE et QVCT",
+    "Adaptation à votre charte graphique d'entreprise",
   ];
 
   const faqs = [
-    {
-      q: "Combien de personnes peuvent participer ?",
-      a: "Nos formats standards accueillent 6 à 12 personnes pour un moment convivial et qualitatif. Pour des groupes plus importants (jusqu'à 60 personnes), nous proposons des formats adaptés comme la teinture collaborative ou les bombes à graines.",
-    },
-    {
-      q: "Où se déroulent les ateliers ?",
-      a: "Nous nous déplaçons dans vos locaux à Paris, dans les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95). L'atelier peut aussi se tenir en extérieur (parc, jardin) selon la météo.",
-    },
-    {
-      q: "Que repartent les participant·e·s avec ?",
-      a: "Chaque personne repart avec sa création (terrarium, kokedama, étoffe teinte ou bombes à graines), ainsi qu'une fiche d'entretien pour prolonger l'expérience au bureau ou à la maison.",
-    },
-    {
-      q: "Combien de temps à l'avance faut-il réserver ?",
-      a: "Nous recommandons 3 à 4 semaines de délai pour préparer l'atelier dans les meilleures conditions. Pour des demandes urgentes, n'hésitez pas à nous contacter, nous étudions chaque demande.",
-    },
-    {
-      q: "Quel est le tarif ?",
-      a: "Chaque atelier fait l'objet d'un devis personnalisé selon le nombre de participant·e·s, le format choisi, le lieu et les options. Demandez-nous votre devis, nous vous répondons rapidement.",
-    },
-    {
-      q: "L'atelier s'inscrit-il dans une démarche RSE/QVCT ?",
-      a: "Oui, nos ateliers s'alignent avec les enjeux de Qualité de Vie et Conditions de Travail et la RSE : santé mentale, écoresponsabilité, cohésion, sensibilisation au vivant. Nous fournissons une documentation pour votre reporting.",
-    },
+    { q: "Combien de personnes peuvent participer ?", a: "Nos formats standards accueillent 6 à 12 personnes pour un moment convivial et qualitatif. Pour des groupes plus importants, jusqu'à 60 personnes, nous proposons des formats adaptés comme la teinture collaborative ou les bombes à graines." },
+    { q: "Où se déroulent les ateliers ?", a: "Nous nous déplaçons dans vos locaux à Paris, dans les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95). L'atelier peut aussi se tenir en extérieur, parc ou jardin, selon la météo." },
+    { q: "Que repartent les participant·e·s avec ?", a: "Chaque personne repart avec sa création. Terrarium, kokedama, étoffe teinte ou bombes à graines, ainsi qu'une fiche d'entretien pour prolonger l'expérience au bureau ou à la maison." },
+    { q: "Combien de temps à l'avance faut-il réserver ?", a: "Nous recommandons 3 à 4 semaines de délai pour préparer l'atelier dans les meilleures conditions. Pour des demandes urgentes, n'hésitez pas à nous contacter, nous étudions chaque demande." },
+    { q: "Quel est le tarif ?", a: "Chaque atelier fait l'objet d'un devis personnalisé selon le nombre de participant·e·s, le format choisi, le lieu et les options. Demandez-nous votre devis, nous vous répondons rapidement." },
+    { q: "L'atelier s'inscrit-il dans une démarche RSE ou QVCT ?", a: "Oui, nos ateliers s'alignent avec les enjeux de Qualité de Vie et Conditions de Travail et la RSE. Santé mentale, écoresponsabilité, cohésion, sensibilisation au vivant. Nous fournissons une documentation pour votre reporting." },
   ];
 
+  const occasions = ["Séminaire", "Cohésion", "Journée RSE", "Onboarding", "Summer party", "Fin d'année", "Anniversaire", "Offsite", "Semaine QVCT"];
+  const cities = ["Paris", "La Défense", "Hauts-de-Seine", "Yvelines", "Val-d'Oise", "Nanterre", "Boulogne", "Versailles", "Cergy", "Saint-Germain"];
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-cream">
       <SEO
         title="Team Building Nature Entreprise Paris & Île-de-France"
         description="Team building botanique en entreprise à Paris et en Île-de-France. Ateliers terrarium, kokedama, teinture végétale. Cohésion, RSE, bien-être. Devis sur mesure."
@@ -111,94 +92,81 @@ const LandingTeamBuilding = () => {
         type="LocalBusiness"
         data={{
           name: "Team Building Nature en Entreprise – Botanique Ludique",
-          description:
-            "Ateliers botaniques pour entreprises en Île-de-France : team building, cohésion, RSE et bien-être au travail.",
+          description: "Ateliers botaniques pour entreprises en Île-de-France : team building, cohésion, RSE et bien-être au travail.",
         }}
       />
       <Navigation />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">
-        <div className="container mx-auto max-w-6xl text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-sage/20 text-sage-dark px-4 py-2 rounded-full text-sm font-medium">
-            <TreePine className="w-4 h-4" />
-            Team Building, Cohésion, Bien-être
+      {/* HERO */}
+      <section className="pt-32 pb-20 px-4 bg-green relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, hsl(var(--foreground)) 1.5px, transparent 1.5px)", backgroundSize: "24px 24px" }} aria-hidden />
+        <div className="container mx-auto max-w-6xl relative">
+          <div className="inline-block border-brutal bg-yellow px-4 py-2 mb-8 shadow-brutal">
+            <span className="font-mono text-[11px] uppercase tracking-[2px] font-bold">Team Building / Cohésion / Bien-être</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-charcoal">
-            Team Building <span className="text-sage">Nature</span> en Entreprise
+          <h1 className="font-display text-[clamp(2.5rem,8vw,6rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+            Des ateliers<br />
+            <span className="bg-yellow text-foreground px-3 inline-block -rotate-1 border-brutal shadow-brutal">qui font pousser</span><br />
+            les liens.
           </h1>
-          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+          <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mb-10 leading-relaxed">
             Des expériences végétales originales et accessibles pour renforcer les liens, stimuler la créativité et prendre soin du vivant. Une approche ethnobotanique qui mêle botanique, créativité et bien-être.
           </p>
-          <div className="flex flex-wrap justify-center gap-3 pt-2">
-            <Button asChild size="lg" className="bg-sage hover:bg-sage-dark text-white">
-              <Link to="/contact">
-                Demander un devis
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-sage text-sage-dark hover:bg-sage/10">
-              <a href={PDF_URL} download>
-                <Download className="mr-2 w-4 h-4" />
-                Télécharger la plaquette
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="ghost" className="text-charcoal hover:bg-sage/10">
-              <Link to="/gallery">
-                <ImageIcon className="mr-2 w-4 h-4" />
-                Voir la galerie photos
-              </Link>
-            </Button>
+          <div className="flex flex-wrap gap-4">
+            <Link to="/contact" className="inline-flex items-center gap-2 bg-yellow text-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all">
+              Demander un devis <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a href={PDF_URL} download className="inline-flex items-center gap-2 bg-cream text-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all">
+              <Download className="w-4 h-4" /> La plaquette
+            </a>
+            <Link to="/gallery" className="inline-flex items-center gap-2 bg-orange text-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all">
+              <ImageIcon className="w-4 h-4" /> Galerie photos
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Bénéfices */}
-      <section className="py-16 px-4 bg-white">
+      {/* BÉNÉFICES */}
+      <section className="py-20 px-4 bg-cream">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-display text-charcoal mb-8 text-center">
-            Pourquoi un team building nature ?
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mb-12">
+            <span className="font-mono text-xs uppercase tracking-[2px] text-primary">/ 01</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2">
+              Pourquoi un team<br />building <span className="text-primary">nature</span> ?
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0">
             {benefits.map((b, i) => (
-              <Card key={i} className="border-sage/20 h-full">
-                <CardContent className="p-6 text-center h-full flex flex-col">
-                  <div className="w-12 h-12 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <b.icon className="w-6 h-6 text-sage" />
-                  </div>
-                  <h3 className="font-display text-lg text-charcoal mb-2">{b.title}</h3>
-                  <p className="text-sm text-charcoal/70">{b.description}</p>
-                </CardContent>
-              </Card>
+              <div key={i} className={`${b.bg} border-brutal p-8 -ml-[3px] -mt-[3px] hover:-translate-y-1 hover:shadow-brutal transition-all`}>
+                <b.icon className="w-8 h-8 mb-4" strokeWidth={2.5} />
+                <h3 className="font-display text-2xl uppercase mb-2 leading-tight">{b.title}</h3>
+                <p className="font-body text-sm text-foreground/80">{b.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Programme */}
-      <section className="py-16 px-4 bg-cream/30">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-display text-charcoal mb-3 text-center">
-            Le déroulé d'un atelier
-          </h2>
-          <p className="text-center text-charcoal/70 mb-10 max-w-2xl mx-auto">
-            Un format de 2h pensé pour alterner découverte, échanges et pratique.
-          </p>
-          <div className="space-y-4">
+      {/* PROGRAMME */}
+      <section className="py-20 px-4 bg-foreground text-primary-foreground">
+        <div className="container mx-auto max-w-5xl">
+          <div className="mb-12">
+            <span className="font-mono text-xs uppercase tracking-[2px] text-yellow">/ 02</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2">
+              Le déroulé<br />d'un <span className="text-yellow">atelier</span>
+            </h2>
+            <p className="font-body text-primary-foreground/70 mt-4 max-w-xl">Un format de 2h pensé pour alterner découverte, échanges et pratique.</p>
+          </div>
+          <div className="space-y-0">
             {program.map((p, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-xl p-6 border border-sage/20 flex flex-col md:flex-row gap-4 md:items-start"
-              >
-                <div className="md:w-40 shrink-0">
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-sage-dark bg-sage/10 px-3 py-1 rounded-full">
-                    <Clock className="w-3.5 h-3.5" />
-                    {p.time}
-                  </span>
+              <div key={i} className="border-brutal border-primary-foreground bg-foreground -mt-[3px] p-6 md:p-8 flex flex-col md:flex-row gap-6 md:items-center hover:bg-green-bright hover:text-foreground transition-colors group">
+                <div className="md:w-48 shrink-0">
+                  <span className="font-mono text-xs uppercase tracking-[2px] text-yellow group-hover:text-foreground">Min {p.time}</span>
+                  <div className="font-display text-4xl md:text-5xl uppercase leading-none mt-1">0{i + 1}</div>
                 </div>
-                <div>
-                  <h3 className="font-display text-lg text-charcoal mb-1">{p.title}</h3>
-                  <p className="text-sm text-charcoal/70">{p.desc}</p>
+                <div className="flex-1">
+                  <h3 className="font-display text-xl md:text-2xl uppercase mb-2 leading-tight">{p.title}</h3>
+                  <p className="font-body text-sm text-primary-foreground/80 group-hover:text-foreground/80">{p.desc}</p>
                 </div>
               </div>
             ))}
@@ -206,109 +174,90 @@ const LandingTeamBuilding = () => {
         </div>
       </section>
 
-      {/* Ateliers */}
-      <section className="py-16 px-4 bg-white">
+      {/* ATELIERS */}
+      <section className="py-20 px-4 bg-cream">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-display text-charcoal mb-8 text-center">
-            Nos ateliers team building
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="mb-12">
+            <span className="font-mono text-xs uppercase tracking-[2px] text-primary">/ 03</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2">
+              Nos <span className="text-primary">ateliers</span><br />team building
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-0">
             {workshops.map((w, i) => (
-              <Card key={i} className="border-sage/20 h-full">
-                <CardContent className="p-6 h-full flex flex-col">
-                  <div className="flex justify-between items-start mb-3 gap-3">
-                    <h3 className="font-display text-xl text-charcoal">{w.title}</h3>
-                    <span className="text-xs font-medium bg-sage text-white px-2 py-1 rounded shrink-0">
-                      {w.highlight}
-                    </span>
-                  </div>
-                  <p className="text-sm text-charcoal/70 mb-4 flex-1">{w.desc}</p>
-                  <div className="flex flex-wrap gap-4 text-sm text-charcoal/60">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {w.duration}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Users className="w-4 h-4" />
-                      {w.participants}
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
+              <div key={i} className={`${w.bg} border-brutal p-8 -ml-[3px] -mt-[3px] flex flex-col hover:-translate-y-1 hover:shadow-brutal transition-all`}>
+                <div className="flex justify-between items-start mb-4">
+                  <span className="font-display text-5xl md:text-6xl leading-none text-foreground/30">{w.num}</span>
+                  <span className="font-mono text-[10px] uppercase tracking-[1.5px] bg-foreground text-primary-foreground px-2 py-1">{w.highlight}</span>
+                </div>
+                <h3 className="font-display text-2xl md:text-3xl uppercase mb-3 leading-tight">{w.title}</h3>
+                <p className="font-body text-sm text-foreground/80 mb-6 flex-1">{w.desc}</p>
+                <div className="flex flex-wrap gap-3 pt-4 border-t-[3px] border-foreground">
+                  <span className="font-mono text-[11px] uppercase tracking-[1.5px] flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" />{w.duration}</span>
+                  <span className="font-mono text-[11px] uppercase tracking-[1.5px] flex items-center gap-1.5"><Users className="w-3.5 h-3.5" />{w.participants}</span>
+                </div>
+              </div>
             ))}
           </div>
-          <div className="text-center mt-10">
-            <Button asChild variant="outline" className="border-sage text-sage-dark hover:bg-sage/10">
-              <Link to="/gallery">
-                <ImageIcon className="mr-2 w-4 h-4" />
-                Découvrir nos ateliers en images
-              </Link>
-            </Button>
+          <div className="text-center mt-12">
+            <Link to="/gallery" className="inline-flex items-center gap-2 bg-foreground text-primary-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all">
+              <ImageIcon className="w-4 h-4" /> Découvrir nos ateliers en images
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Pourquoi nous choisir */}
-      <section className="py-16 px-4 bg-sage/5">
+      {/* POURQUOI NOUS */}
+      <section className="py-20 px-4 bg-orange-light">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-display text-charcoal mb-10 text-center">
-            Pourquoi nous choisir ?
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mb-12">
+            <span className="font-mono text-xs uppercase tracking-[2px] text-foreground">/ 04</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2">
+              Pourquoi nous<br /><span className="bg-foreground text-primary-foreground px-2 inline-block">choisir</span>
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0">
             {reasons.map((r, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 border border-sage/20 h-full">
-                <div className="w-10 h-10 bg-sage/10 rounded-lg flex items-center justify-center mb-3">
-                  <r.icon className="w-5 h-5 text-sage" />
-                </div>
-                <h3 className="font-display text-lg text-charcoal mb-2">{r.title}</h3>
-                <p className="text-sm text-charcoal/70">{r.desc}</p>
+              <div key={i} className="bg-cream border-brutal p-6 -ml-[3px] -mt-[3px] hover:bg-yellow transition-colors">
+                <r.icon className="w-7 h-7 mb-3" strokeWidth={2.5} />
+                <h3 className="font-display text-lg uppercase mb-2 leading-tight">{r.title}</h3>
+                <p className="font-body text-sm text-foreground/80">{r.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Options et formats */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-display text-charcoal mb-3 text-center">
-            Options et formats sur mesure
-          </h2>
-          <p className="text-center text-charcoal/70 mb-10 max-w-2xl mx-auto">
-            Chaque atelier est adapté à votre équipe, à vos espaces et à vos objectifs.
-          </p>
-          <ul className="grid md:grid-cols-2 gap-3">
+      {/* OPTIONS */}
+      <section className="py-20 px-4 bg-cream">
+        <div className="container mx-auto max-w-5xl">
+          <div className="mb-12">
+            <span className="font-mono text-xs uppercase tracking-[2px] text-primary">/ 05</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2">
+              Options &<br /><span className="text-primary">formats</span> sur mesure
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-0">
             {options.map((o, i) => (
-              <li key={i} className="flex gap-3 items-start bg-cream/40 rounded-lg p-4">
-                <CheckCircle className="w-5 h-5 text-sage shrink-0 mt-0.5" />
-                <span className="text-charcoal/80 text-sm">{o}</span>
-              </li>
+              <div key={i} className="bg-blue-light border-brutal p-5 -ml-[3px] -mt-[3px] flex gap-4 items-start hover:bg-green-pale transition-colors">
+                <span className="font-display text-2xl text-primary shrink-0">+</span>
+                <span className="font-body text-sm text-foreground/90">{o}</span>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
-      {/* Occasions */}
-      <section className="py-16 px-4 bg-cream/30">
+      {/* OCCASIONS */}
+      <section className="py-20 px-4 bg-yellow">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl font-display text-charcoal mb-6">Pour quelles occasions ?</h2>
+          <span className="font-mono text-xs uppercase tracking-[2px]">/ 06</span>
+          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2 mb-10">
+            Pour quelles <span className="italic font-editorial normal-case">occasions</span> ?
+          </h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {[
-              "Séminaire",
-              "Journée de cohésion",
-              "Journée RSE",
-              "Onboarding",
-              "Summer party",
-              "Fête de fin d'année",
-              "Anniversaire entreprise",
-              "Offsite",
-              "Semaine QVCT",
-            ].map((o, i) => (
-              <span
-                key={i}
-                className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-charcoal shadow-sm"
-              >
-                <CheckCircle className="w-4 h-4 text-sage" />
+            {occasions.map((o, i) => (
+              <span key={i} className="font-mono text-[11px] uppercase tracking-[1.5px] px-4 py-2 border-brutal-thin bg-cream hover:bg-foreground hover:text-primary-foreground transition-colors cursor-default">
                 {o}
               </span>
             ))}
@@ -316,53 +265,40 @@ const LandingTeamBuilding = () => {
         </div>
       </section>
 
-      {/* Plaquette */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
-          <div className="bg-gradient-to-br from-sage/15 to-cream/40 border border-sage/20 rounded-2xl p-8 md:p-12 text-center">
-            <Heart className="w-10 h-10 text-sage mx-auto mb-4" />
-            <h2 className="text-2xl md:text-3xl font-display text-charcoal mb-3">
-              Notre plaquette de présentation
-            </h2>
-            <p className="text-charcoal/70 mb-6 max-w-xl mx-auto">
-              Toutes les infos pratiques de nos ateliers entreprise 2026-2027 dans un document à partager avec vos équipes.
-            </p>
-            <Button asChild size="lg" className="bg-sage hover:bg-sage-dark text-white">
-              <a href={PDF_URL} download>
-                <Download className="mr-2 w-4 h-4" />
-                Télécharger la plaquette (PDF)
-              </a>
-            </Button>
+      {/* PLAQUETTE */}
+      <section className="py-20 px-4 bg-cream">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-primary text-primary-foreground border-brutal shadow-brutal-lg p-10 md:p-14 grid md:grid-cols-[1fr_auto] gap-8 items-center">
+            <div>
+              <span className="font-mono text-xs uppercase tracking-[2px] text-yellow">Plaquette 2026 / 2027</span>
+              <h2 className="font-display text-3xl md:text-4xl uppercase leading-[0.95] tracking-[-1px] mt-2 mb-4">
+                Toutes les infos<br />dans un seul document.
+              </h2>
+              <p className="font-body text-primary-foreground/85 max-w-md">
+                À partager avec vos équipes, votre direction RSE ou votre CSE.
+              </p>
+            </div>
+            <a href={PDF_URL} download className="inline-flex items-center gap-2 bg-yellow text-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all justify-center">
+              <Download className="w-4 h-4" /> Télécharger
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Zone d'intervention */}
-      <section className="py-16 px-4 bg-sage/10">
+      {/* ZONE */}
+      <section className="py-20 px-4 bg-green-pale">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl font-display text-charcoal mb-6">Zone d'intervention</h2>
-          <p className="text-charcoal/70 mb-6 max-w-2xl mx-auto">
-            Nous intervenons dans tout Paris, les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95).
+          <span className="font-mono text-xs uppercase tracking-[2px] text-primary">/ 07</span>
+          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2 mb-4">
+            Zone d'<span className="text-primary">intervention</span>
+          </h2>
+          <p className="font-body text-foreground/70 mb-10 max-w-2xl mx-auto">
+            Nous intervenons à Paris, dans les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95).
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            {[
-              "Paris",
-              "La Défense",
-              "Hauts-de-Seine (92)",
-              "Yvelines (78)",
-              "Val-d'Oise (95)",
-              "Nanterre",
-              "Boulogne",
-              "Versailles",
-              "Cergy",
-              "Saint-Germain-en-Laye",
-            ].map((city) => (
-              <span
-                key={city}
-                className="inline-flex items-center gap-1 bg-white px-4 py-2 rounded-full text-sm text-charcoal shadow-sm"
-              >
-                <MapPin className="w-3 h-3 text-sage" />
-                {city}
+            {cities.map((c) => (
+              <span key={c} className="inline-flex items-center gap-1.5 bg-cream px-4 py-2 border-brutal-thin font-mono text-[11px] uppercase tracking-[1.5px]">
+                <MapPin className="w-3 h-3 text-primary" />{c}
               </span>
             ))}
           </div>
@@ -370,48 +306,44 @@ const LandingTeamBuilding = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-20 px-4 bg-cream">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-display text-charcoal mb-8 text-center">
-            Questions fréquentes
-          </h2>
-          <Accordion type="single" collapsible className="w-full">
+          <div className="mb-12 text-center">
+            <span className="font-mono text-xs uppercase tracking-[2px] text-primary">/ 08</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2">
+              Questions<br /><span className="text-primary">fréquentes</span>
+            </h2>
+          </div>
+          <Accordion type="single" collapsible className="w-full space-y-0">
             {faqs.map((f, i) => (
-              <AccordionItem key={i} value={`item-${i}`}>
-                <AccordionTrigger className="text-left font-display text-lg text-charcoal">
+              <AccordionItem key={i} value={`item-${i}`} className="border-brutal -mt-[3px] bg-cream data-[state=open]:bg-yellow transition-colors px-5">
+                <AccordionTrigger className="text-left font-display text-base md:text-lg uppercase leading-tight tracking-tight hover:no-underline py-5">
                   {f.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-charcoal/70">{f.a}</AccordionContent>
+                <AccordionContent className="font-body text-foreground/80 pb-5">{f.a}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
       </section>
 
-      {/* CTA final */}
-      <section className="py-16 px-4 bg-charcoal text-white">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-display mb-6">
-            Prêt·e à organiser votre team building nature ?
+      {/* CTA FINAL */}
+      <section className="py-24 px-4 bg-foreground text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle, hsl(var(--primary-foreground)) 1.5px, transparent 1.5px)", backgroundSize: "24px 24px" }} aria-hidden />
+        <div className="container mx-auto max-w-4xl text-center relative">
+          <h2 className="font-display text-[clamp(2rem,6vw,4rem)] uppercase leading-[0.9] tracking-[-1px] mb-6">
+            Parlons de votre<br /><span className="bg-yellow text-foreground px-3 inline-block -rotate-1 border-brutal">projet</span>
           </h2>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Parlons de votre projet : nombre de participant·e·s, lieu, envies. Nous vous proposons un format sur mesure.
+          <p className="font-body text-lg text-primary-foreground/80 mb-10 max-w-xl mx-auto">
+            Nombre de participant·e·s, lieu, envies. Nous vous proposons un format sur mesure.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Button asChild size="lg" className="bg-sage hover:bg-sage-dark">
-              <Link to="/contact">Demander un devis</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10"
-            >
-              <a href={PDF_URL} download>
-                <Download className="mr-2 w-4 h-4" />
-                Télécharger la plaquette
-              </a>
-            </Button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/contact" className="inline-flex items-center gap-2 bg-yellow text-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all">
+              Demander un devis <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a href={PDF_URL} download className="inline-flex items-center gap-2 bg-cream text-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all">
+              <Download className="w-4 h-4" /> Télécharger la plaquette
+            </a>
           </div>
         </div>
       </section>
