@@ -27,19 +27,19 @@ const FoyerJeunesYvelines = () => (
     "formula": [
             {
                     "line": "Accueil ouvert",
-                    "detail": "L'atelier est annoncé en interne, les jeunes viennent à leur rythme. Pas d'inscription forcée, juste une invitation."
+                    "detail": "Atelier annoncé en interne, les résident·e·s viennent à leur rythme. Format apprécié dans les foyers du Mantois et de Saint-Quentin."
             },
             {
                     "line": "Animation guidée",
-                    "detail": "Format simple et accessible, terrarium, bouture, kokedama. La médiatrice circule et accompagne sans presser."
+                    "detail": "Format simple (bouture, terrarium, kokedama), animation pas à pas par notre médiatrice."
             },
             {
                     "line": "Échange libre",
-                    "detail": "L'animation est l'occasion de parler du vivant, des saisons, des origines, sans poser de question intrusive."
+                    "detail": "L'atelier est l'occasion d'aborder le vivant, les saisons, parfois les origines, sans question intrusive."
             },
             {
-                    "line": "Cycle possible",
-                    "detail": "Plusieurs séances espacées pour installer une habitude et créer un rendez-vous attendu."
+                    "line": "Cycle régulier",
+                    "detail": "Plusieurs séances espacées pour installer une habitude, en lien avec l'équipe socio-éducative du foyer."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const FoyerJeunesYvelines = () => (
     "faqs": [
             {
                     "q": "Conventionnement possible ?",
-                    "a": "Oui, nous travaillons avec des structures associatives et publiques. Notre statut associatif facilite les financements."
+                    "a": "Oui, nous travaillons avec des structures associatives et publiques. Statut associatif qui facilite les financements via politiques jeunesse."
             },
             {
                     "q": "Disponible dans le 78 ?",
-                    "a": "Oui, à Versailles, Saint-Germain-en-Laye, Maurepas, Mantes-la-Jolie et plus largement en IDF. Notre public mêle familles installées dans les villes de l'ouest parisien, comités d'entreprise des sièges sociaux du Mantois et institutions culturelles autour du château de Versailles."
+                    "a": "Oui, en lien avec les foyers de jeunes travailleur·ses du Mantois et de Saint-Quentin-en-Yvelines, et plus largement des Yvelines."
             },
             {
-                    "q": "Cycle régulier possible ?",
-                    "a": "Oui, c'est même la formule la plus efficace pour ce type de public. Une présence régulière permet d'installer la confiance."
+                    "q": "Cycle régulier conseillé ?",
+                    "a": "Oui, c'est la formule la plus efficace pour ce type de public. Une présence régulière permet d'installer la confiance et le rituel."
             },
             {
                     "q": "Public mixte ?",
-                    "a": "Oui, l'atelier accueille jeunes hommes et jeunes femmes ensemble. La plante est un terrain neutre qui facilite la mixité."
+                    "a": "Oui, l'atelier accueille jeunes hommes et jeunes femmes ensemble. La plante est un terrain neutre qui facilite la mixité dans des contextes parfois sensibles."
             }
     ]
   }} />

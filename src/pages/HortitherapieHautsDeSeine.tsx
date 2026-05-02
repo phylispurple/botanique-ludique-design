@@ -27,19 +27,19 @@ const HortitherapieHautsDeSeine = () => (
     "formula": [
             {
                     "line": "Séance unique",
-                    "detail": "Un atelier ponctuel pour découvrir, observer, manipuler. Idéal pour tester avant un éventuel cycle plus long."
+                    "detail": "Un atelier ponctuel dans les services hospitaliers de Foch (Suresnes) et Ambroise-Paré (Boulogne) et les EHPAD altoséquanais, pour découvrir et tester avant un cycle."
             },
             {
                     "line": "Cycle court",
-                    "detail": "Quatre séances pour suivre un fil conducteur saisonnier. Permet d'installer une habitude et un rapport personnel à la plante."
+                    "detail": "Quatre séances bimensuelles pour installer un rituel hortithérapeutique dans un service hospitalier ou un EHPAD."
             },
             {
-                    "line": "Cycle long",
-                    "detail": "Programme sur l'année avec un fil narratif documenté pour les équipes, qui peuvent se l'approprier."
+                    "line": "Cycle annuel",
+                    "detail": "Programme sur l'année avec une logique cumulative, le groupe se reconnaît et s'approprie l'atelier."
             },
             {
-                    "line": "Formation équipe",
-                    "detail": "Transmission de gestes simples pour que les soignant·e·s puissent prolonger l'atelier en autonomie entre nos passages."
+                    "line": "Formation soignants",
+                    "detail": "Sessions courtes pour les équipes hospitalières et médico-sociales des Hauts-de-Seine, autour des médiations non médicamenteuses."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const HortitherapieHautsDeSeine = () => (
     "faqs": [
             {
                     "q": "Public à mobilité réduite ?",
-                    "a": "Oui, nos formats sont adaptés. L'atelier vient à la table ou au lit. Nous travaillons régulièrement avec des EHPAD et des structures de jour."
+                    "a": "Oui, nos formats sont adaptés. L'atelier vient à la table, au fauteuil ou au lit. Nous travaillons régulièrement dans les services hospitaliers de Foch (Suresnes) et Ambroise-Paré (Boulogne) et les EHPAD altoséquanais."
             },
             {
                     "q": "Intervention dans le 92 ?",
-                    "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement des Hauts-de-Seine. Pour les zones plus excentrées, nous étudions la faisabilité au cas par cas."
+                    "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement. Pour les zones plus excentrées des Hauts-de-Seine, nous étudions la faisabilité au cas par cas."
             },
             {
                     "q": "Conventionnement ARS ou département ?",
-                    "a": "Nous travaillons avec des structures publiques et privées. Notre statut associatif et nos références facilitent les démarches administratives."
+                    "a": "Notre statut associatif et nos références des Hauts-de-Seine facilitent les démarches administratives et la facturation publique."
             },
             {
                     "q": "Cycle annuel possible ?",
-                    "a": "Oui, c'est la formule que nous recommandons pour un vrai impact thérapeutique observable. Une séance par mois pendant six à douze mois."
+                    "a": "Oui, c'est la formule recommandée pour un impact thérapeutique observable. Une séance par mois sur six à douze mois, format suivi par les équipes."
             }
     ]
   }} />

@@ -27,19 +27,19 @@ const OnboardingValDOise = () => (
     "formula": [
             {
                     "line": "Accueil",
-                    "detail": "Présentation du format et des intervenant·e·s en quelques minutes, autour d'un café."
+                    "detail": "Présentation du format dans vos locaux à Cergy ou dans la vallée de Montmorency, en arrivée des recrues."
             },
             {
                     "line": "Atelier",
-                    "detail": "Création guidée, terrarium, kokedama ou bouture personnalisée selon votre brief et la durée disponible."
+                    "detail": "Création guidée, format adapté aux équipes mixtes terrain et bureau souvent rencontrées dans le 95."
             },
             {
                     "line": "Mot RH",
-                    "detail": "Vous reprenez la main pour le mot d'accueil officiel, dans une ambiance plus détendue qu'à l'arrivée."
+                    "detail": "Vous reprenez la main pour le mot d'accueil, dans un cadre plus chaleureux qu'une salle de formation."
             },
             {
                     "line": "Goûter",
-                    "detail": "En option, nous gérons aussi un moment convivial autour de l'atelier, avec boissons et collations."
+                    "detail": "En option, moment convivial avec produits franciliens, pour clôturer la journée."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const OnboardingValDOise = () => (
     "faqs": [
             {
                     "q": "Format mensuel possible ?",
-                    "a": "Oui, nous pouvons venir tous les mois pour vos nouvelles vagues d'onboarding. C'est même la formule la plus efficace pour installer un rituel."
+                    "a": "Oui, nous venons tous les mois pour vos vagues d'onboarding récurrentes. Format apprécié des entreprises de Cergy, Pontoise, Argenteuil et le Vexin qui recrutent en continu."
             },
             {
                     "q": "Vous venez dans le 95 ?",
-                    "a": "Oui, à Cergy, Argenteuil, Sarcelles, Pontoise et plus largement en IDF. Notre équipe se déplace avec tout le matériel."
+                    "a": "Oui, partout du Val-d'Oise. Notre équipe se déplace avec tout le matériel."
             },
             {
                     "q": "Personnalisation marque employeur ?",
-                    "a": "Oui, étiquette personnalisée, choix de plantes alignées avec vos valeurs, palette de couleurs aux teintes de votre charte."
+                    "a": "Oui, étiquettes personnalisées, choix de plantes alignées avec vos valeurs, palette de couleurs aux teintes de votre charte."
             },
             {
                     "q": "Délai d'organisation ?",
-                    "a": "Trois semaines minimum pour caler les agendas et préparer le matériel. Les onboarding récurrents sont planifiés en début d'année."
+                    "a": "Trois semaines minimum pour caler les agendas. Les sièges installés à Cergy-Pontoise et les structures du Vexin privilégient les onboarding planifiés en début d'année."
             }
     ]
   }} />

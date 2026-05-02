@@ -27,19 +27,19 @@ const OnboardingParis = () => (
     "formula": [
             {
                     "line": "Accueil",
-                    "detail": "Présentation du format et des intervenant·e·s en quelques minutes, autour d'un café."
+                    "detail": "Présentation du format dans vos locaux parisiens, à n'importe quel arrondissement."
             },
             {
                     "line": "Atelier",
-                    "detail": "Création guidée, terrarium, kokedama ou bouture personnalisée selon votre brief et la durée disponible."
+                    "detail": "Création guidée terrarium, kokedama ou bouture personnalisée selon votre brief et la durée disponible."
             },
             {
                     "line": "Mot RH",
-                    "detail": "Vous reprenez la main pour le mot d'accueil officiel, dans une ambiance plus détendue qu'à l'arrivée."
+                    "detail": "Vous reprenez la main pour le mot d'accueil officiel, dans une ambiance déjà détendue par l'atelier."
             },
             {
                     "line": "Goûter",
-                    "detail": "En option, nous gérons aussi un moment convivial autour de l'atelier, avec boissons et collations."
+                    "detail": "En option, nous gérons un moment convivial autour de l'atelier, avec produits issus de circuits courts parisiens."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const OnboardingParis = () => (
     "faqs": [
             {
                     "q": "Format mensuel possible ?",
-                    "a": "Oui, nous pouvons venir tous les mois pour vos nouvelles vagues d'onboarding. C'est même la formule la plus efficace pour installer un rituel."
+                    "a": "Oui, nous venons tous les mois pour vos vagues d'onboarding récurrentes. Format apprécié des entreprises de tous les arrondissements parisiens, de la rive gauche aux quartiers de l'Est qui recrutent en continu."
             },
             {
                     "q": "Vous venez dans le 75 ?",
-                    "a": "Oui, à tous les arrondissements parisiens et plus largement en IDF. Notre équipe se déplace avec tout le matériel."
+                    "a": "Oui, partout parisien·nes. Notre équipe se déplace avec tout le matériel."
             },
             {
                     "q": "Personnalisation marque employeur ?",
-                    "a": "Oui, étiquette personnalisée, choix de plantes alignées avec vos valeurs, palette de couleurs aux teintes de votre charte."
+                    "a": "Oui, étiquettes personnalisées, choix de plantes alignées avec vos valeurs, palette de couleurs aux teintes de votre charte."
             },
             {
                     "q": "Délai d'organisation ?",
-                    "a": "Trois semaines minimum pour caler les agendas et préparer le matériel. Les onboarding récurrents sont planifiés en début d'année."
+                    "a": "Trois semaines minimum pour caler les agendas. Les sièges des grandes maisons du 8e, les agences créatives du 11e et du 18e privilégient les onboarding planifiés en début d'année."
             }
     ]
   }} />

@@ -27,19 +27,19 @@ const SeminaireEntrepriseYvelines = () => (
     "formula": [
             {
                     "line": "Module 2h",
-                    "detail": "Inséré dans une journée plus large, idéal en fin de matinée ou d'après-midi pour casser le rythme cognitif."
+                    "detail": "Inséré dans une journée de séminaire à Versailles ou Saint-Quentin-en-Yvelines, idéal en milieu d'après-midi pour casser le rythme."
             },
             {
                     "line": "Demi-journée",
-                    "detail": "Atelier complet plus balade ethnobotanique dans le parc du château de Versailles ou la forêt de Saint-Germain-en-Laye, ou un parc proche de votre lieu de séminaire."
+                    "detail": "Atelier complet plus balade ethnobotanique dans le parc du château de Versailles ou la forêt de Saint-Germain."
             },
             {
                     "line": "Journée complète",
-                    "detail": "Programme sur mesure mêlant ateliers, balade, conférence et restitution, articulé avec votre fil rouge thématique."
+                    "detail": "Programme sur mesure articulé avec une visite guidée du Potager du Roi à Versailles, en option."
             },
             {
-                    "line": "Format hybride",
-                    "detail": "Combinaison d'atelier intérieur et de balade extérieure, particulièrement apprécié au printemps et à l'automne."
+                    "line": "Format extérieur",
+                    "detail": "Atelier en plein air dans la cour ou le parc de votre lieu de séminaire, particulièrement apprécié de mai à septembre."
             }
     ],
     "practical": [
@@ -80,16 +80,16 @@ const SeminaireEntrepriseYvelines = () => (
                     "a": "Oui, à Versailles, Saint-Germain-en-Laye, Maurepas, Mantes-la-Jolie et plus largement des Yvelines. Notre équipe se déplace avec tout le matériel végétal et l'outillage."
             },
             {
-                    "q": "Combien de personnes maximum ?",
-                    "a": "Jusqu'à soixante. Au-delà, nous proposons un format à double animatrice ou plusieurs ateliers en parallèle."
+                    "q": "Combien de personnes au maximum ?",
+                    "a": "Jusqu'à soixante personnes en format atelier classique. Au-delà, nous fonctionnons à double animatrice ou en plusieurs ateliers en parallèle."
             },
             {
-                    "q": "Délai de réservation ?",
-                    "a": "Six à huit semaines à l'avance idéalement, davantage pour les périodes denses (juin, septembre, décembre)."
+                    "q": "Quel délai prévoir ?",
+                    "a": "Six à huit semaines à l'avance, davantage en juin, septembre et décembre. Les sièges du triangle Saint-Quentin / Vélizy / Versailles planifient souvent en année N-1."
             },
             {
-                    "q": "Adaptation à votre charte ?",
-                    "a": "Oui, sur devis. Nous adaptons la communication, les supports imprimés et certaines créations aux couleurs et au ton de votre identité."
+                    "q": "Adaptable à votre charte ?",
+                    "a": "Oui, sur devis. Nous adaptons supports imprimés, étiquettes plantes et certaines créations à votre identité."
             }
     ]
   }} />

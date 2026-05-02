@@ -27,19 +27,19 @@ const FestivalCulturelParis = () => (
     "formula": [
             {
                     "line": "Conférence",
-                    "detail": "Une heure de présentation grand public, avec questions du public. Sur un thème lié à votre programmation."
+                    "detail": "Une heure de présentation grand public, format apprécié des festivals parisiens comme la Nuit Blanche ou la Fête des Jardins."
             },
             {
                     "line": "Atelier participatif",
-                    "detail": "Animation guidée pour un nombre limité, sur inscription. Format idéal pour créer un moment singulier dans le festival."
+                    "detail": "Animation guidée sur inscription pour un public limité, dans un kiosque ou un espace dédié."
             },
             {
                     "line": "Stand permanent",
-                    "detail": "Présence sur plusieurs heures, démonstrations et échanges en libre accès. Visibilité maximale pour le festival."
+                    "detail": "Présence sur plusieurs heures dans un parc parisien ou une cour d'institution culturelle."
             },
             {
-                    "line": "Programmation complète",
-                    "detail": "Combinaison des formats sur plusieurs jours, articulée avec votre direction artistique."
+                    "line": "Programmation longue",
+                    "detail": "Cycle complet sur la durée du festival, combinaison de tous les formats."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const FestivalCulturelParis = () => (
     "faqs": [
             {
                     "q": "Logistique festival ?",
-                    "a": "Nous sommes habitué·e·s aux contraintes : timing serré, public mouvant, météo aléatoire, lieux atypiques. Nous nous adaptons."
+                    "a": "Nous sommes habitué·e·s aux contraintes des festivals : timing serré, public mouvant, météo aléatoire, lieux atypiques. Notre matériel est conçu pour ces conditions."
             },
             {
                     "q": "Intervention dans le 75 ?",
-                    "a": "Oui, à tous les arrondissements parisiens et plus largement parisien·nes. Nous nous déplaçons avec tout le matériel."
+                    "a": "Oui, à tous les arrondissements parisiens et plus largement, en lien avec des festivals comme Nuit Blanche, la Fête des Jardins ou les programmations du Pavillon de l'Eau."
             },
             {
                     "q": "Format extérieur tenable ?",
-                    "a": "Oui, avec un abri ou une tonnelle. Nous adaptons les ateliers à la météo et avons toujours un plan B en cas de pluie."
+                    "a": "Oui, avec un abri ou une tonnelle. Plan B systématique en cas de pluie, indispensable pour les festivals d'été."
             },
             {
                     "q": "Subventionnement ?",
-                    "a": "Nous savons travailler avec des structures conventionnées DRAC, région ou département. Notre statut associatif simplifie les démarches."
+                    "a": "Nous travaillons avec des structures conventionnées DRAC, région ou département. Notre statut associatif simplifie les démarches."
             }
     ]
   }} />

@@ -27,19 +27,19 @@ const FoyerJeunesParis = () => (
     "formula": [
             {
                     "line": "Accueil ouvert",
-                    "detail": "L'atelier est annoncé en interne, les jeunes viennent à leur rythme. Pas d'inscription forcée, juste une invitation."
+                    "detail": "Atelier ouvert aux résident·e·s, format apprécié des FJT parisiens (ALJT, URHAJ)."
             },
             {
                     "line": "Animation guidée",
-                    "detail": "Format simple et accessible, terrarium, bouture, kokedama. La médiatrice circule et accompagne sans presser."
+                    "detail": "Format adapté à des résident·e·s parisien·nes en insertion, souvent en horaires décalés."
             },
             {
                     "line": "Échange libre",
-                    "detail": "L'animation est l'occasion de parler du vivant, des saisons, des origines, sans poser de question intrusive."
+                    "detail": "Conversation libre autour des plantes, qui ouvre sur la nature en ville et le rapport au vivant."
             },
             {
-                    "line": "Cycle possible",
-                    "detail": "Plusieurs séances espacées pour installer une habitude et créer un rendez-vous attendu."
+                    "line": "Cycle régulier",
+                    "detail": "Séances mensuelles pour installer un rendez-vous attendu, en lien avec l'équipe socio-éducative."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const FoyerJeunesParis = () => (
     "faqs": [
             {
                     "q": "Conventionnement possible ?",
-                    "a": "Oui, nous travaillons avec des structures associatives et publiques. Notre statut associatif facilite les financements."
+                    "a": "Oui, nous travaillons avec des structures associatives et publiques. Statut associatif qui facilite les financements via politiques jeunesse."
             },
             {
                     "q": "Disponible dans le 75 ?",
-                    "a": "Oui, à tous les arrondissements parisiens et plus largement en IDF. Notre public parisien est dense et varié : couples qui cherchent une activité originale, comités d'entreprise des sièges du 8e ou du 9e, structures culturelles publiques, écoles et associations."
+                    "a": "Oui, en lien avec les Foyers de Jeunes Travailleur·ses gérés par l'ALJT et l'URHAJ à Paris, et plus largement parisien·nes."
             },
             {
-                    "q": "Cycle régulier possible ?",
-                    "a": "Oui, c'est même la formule la plus efficace pour ce type de public. Une présence régulière permet d'installer la confiance."
+                    "q": "Cycle régulier conseillé ?",
+                    "a": "Oui, c'est la formule la plus efficace pour ce type de public. Une présence régulière permet d'installer la confiance et le rituel."
             },
             {
                     "q": "Public mixte ?",
-                    "a": "Oui, l'atelier accueille jeunes hommes et jeunes femmes ensemble. La plante est un terrain neutre qui facilite la mixité."
+                    "a": "Oui, l'atelier accueille jeunes hommes et jeunes femmes ensemble. La plante est un terrain neutre qui facilite la mixité dans des contextes parfois sensibles."
             }
     ]
   }} />

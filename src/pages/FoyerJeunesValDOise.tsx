@@ -27,19 +27,19 @@ const FoyerJeunesValDOise = () => (
     "formula": [
             {
                     "line": "Accueil ouvert",
-                    "detail": "L'atelier est annoncé en interne, les jeunes viennent à leur rythme. Pas d'inscription forcée, juste une invitation."
+                    "detail": "Atelier ouvert aux résident·e·s des foyers de Sarcelles, Cergy ou Argenteuil, sur leurs créneaux habituels."
             },
             {
                     "line": "Animation guidée",
-                    "detail": "Format simple et accessible, terrarium, bouture, kokedama. La médiatrice circule et accompagne sans presser."
+                    "detail": "Format adapté aux jeunes en insertion, souvent accompagné·e·s par la Mission Locale."
             },
             {
                     "line": "Échange libre",
-                    "detail": "L'animation est l'occasion de parler du vivant, des saisons, des origines, sans poser de question intrusive."
+                    "detail": "Conversation autour des plantes, qui ouvre sur des thèmes (saisons, jardin familial, métiers verts)."
             },
             {
-                    "line": "Cycle possible",
-                    "detail": "Plusieurs séances espacées pour installer une habitude et créer un rendez-vous attendu."
+                    "line": "Cycle régulier",
+                    "detail": "Séances espacées pour créer un rituel et faciliter l'appropriation par le groupe."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const FoyerJeunesValDOise = () => (
     "faqs": [
             {
                     "q": "Conventionnement possible ?",
-                    "a": "Oui, nous travaillons avec des structures associatives et publiques. Notre statut associatif facilite les financements."
+                    "a": "Oui, nous travaillons avec des structures associatives et publiques. Statut associatif qui facilite les financements via politiques jeunesse."
             },
             {
                     "q": "Disponible dans le 95 ?",
-                    "a": "Oui, à Cergy, Argenteuil, Sarcelles, Pontoise et plus largement en IDF. Notre public val-d'oisien comprend de nombreuses structures sociales et éducatives, des comités d'entreprise du quartier de Cergy-Pontoise, et des familles attachées à un cadre semi-rural."
+                    "a": "Oui, en lien avec les foyers de jeunes travailleur·ses de Sarcelles, Cergy et Argenteuil, et plus largement du Val-d'Oise."
             },
             {
-                    "q": "Cycle régulier possible ?",
-                    "a": "Oui, c'est même la formule la plus efficace pour ce type de public. Une présence régulière permet d'installer la confiance."
+                    "q": "Cycle régulier conseillé ?",
+                    "a": "Oui, c'est la formule la plus efficace pour ce type de public. Une présence régulière permet d'installer la confiance et le rituel."
             },
             {
                     "q": "Public mixte ?",
-                    "a": "Oui, l'atelier accueille jeunes hommes et jeunes femmes ensemble. La plante est un terrain neutre qui facilite la mixité."
+                    "a": "Oui, l'atelier accueille jeunes hommes et jeunes femmes ensemble. La plante est un terrain neutre qui facilite la mixité dans des contextes parfois sensibles."
             }
     ]
   }} />

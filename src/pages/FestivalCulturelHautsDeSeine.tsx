@@ -27,19 +27,19 @@ const FestivalCulturelHautsDeSeine = () => (
     "formula": [
             {
                     "line": "Conférence",
-                    "detail": "Une heure de présentation grand public, avec questions du public. Sur un thème lié à votre programmation."
+                    "detail": "Une heure de présentation grand public, format apprécié des festivals comme Chorus ou les rencontres autour de l'écologie des Hauts-de-Seine."
             },
             {
                     "line": "Atelier participatif",
-                    "detail": "Animation guidée pour un nombre limité, sur inscription. Format idéal pour créer un moment singulier dans le festival."
+                    "detail": "Animation guidée pour un nombre limité, sur inscription. Format adapté aux festivals urbains et corporate."
             },
             {
                     "line": "Stand permanent",
-                    "detail": "Présence sur plusieurs heures, démonstrations et échanges en libre accès. Visibilité maximale pour le festival."
+                    "detail": "Présence sur plusieurs heures avec démonstrations en continu, idéal pour les festivals à fort flux."
             },
             {
-                    "line": "Programmation complète",
-                    "detail": "Combinaison des formats sur plusieurs jours, articulée avec votre direction artistique."
+                    "line": "Programmation longue",
+                    "detail": "Combinaison de formats sur plusieurs jours, en lien avec votre direction artistique et votre fil conducteur."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const FestivalCulturelHautsDeSeine = () => (
     "faqs": [
             {
                     "q": "Logistique festival ?",
-                    "a": "Nous sommes habitué·e·s aux contraintes : timing serré, public mouvant, météo aléatoire, lieux atypiques. Nous nous adaptons."
+                    "a": "Nous sommes habitué·e·s aux contraintes des festivals : timing serré, public mouvant, météo aléatoire, lieux atypiques. Notre matériel est conçu pour ces conditions."
             },
             {
                     "q": "Intervention dans le 92 ?",
-                    "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement des Hauts-de-Seine. Nous nous déplaçons avec tout le matériel."
+                    "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement, en lien avec des festivals comme Chorus, le festival de Saint-Cloud ou les Rencontres ImagiSciences."
             },
             {
                     "q": "Format extérieur tenable ?",
-                    "a": "Oui, avec un abri ou une tonnelle. Nous adaptons les ateliers à la météo et avons toujours un plan B en cas de pluie."
+                    "a": "Oui, avec un abri ou une tonnelle. Plan B systématique en cas de pluie, indispensable pour les festivals d'été."
             },
             {
                     "q": "Subventionnement ?",
-                    "a": "Nous savons travailler avec des structures conventionnées DRAC, région ou département. Notre statut associatif simplifie les démarches."
+                    "a": "Nous travaillons avec des structures conventionnées DRAC, région ou département. Notre statut associatif simplifie les démarches."
             }
     ]
   }} />

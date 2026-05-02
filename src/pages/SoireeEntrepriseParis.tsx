@@ -27,19 +27,19 @@ const SoireeEntrepriseParis = () => (
     "formula": [
             {
                     "line": "Stand atelier",
-                    "detail": "Un îlot installé pendant le cocktail, avec une animatrice et tout le matériel pour les passages successifs."
+                    "detail": "Îlot pendant le cocktail dans un loft, un rooftop ou une salle de réception parisienne, avec animatrice et matériel."
             },
             {
                     "line": "Mini créations",
-                    "detail": "Bouture, mini terrarium en flacon, sachet aromatique. Formats rapides, adaptés au flux d'une soirée."
+                    "detail": "Formats rapides (bouture, mini terrarium, sachet aromatique) qui rentrent dans un sac à main."
             },
             {
                     "line": "À emporter",
-                    "detail": "Chaque personne repart avec sa création dans un emballage soigné, prêt à être glissé dans un sac."
+                    "detail": "Emballage soigné aux couleurs de votre entreprise, possible avec un délai d'anticipation."
             },
             {
                     "line": "Module long",
-                    "detail": "Possibilité d'un atelier assis pour un nombre limité de participants, en parallèle du stand debout."
+                    "detail": "Atelier assis en parallèle du stand debout, pour un sous-groupe d'invité·e·s qui veut une expérience plus longue."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const SoireeEntrepriseParis = () => (
     "faqs": [
             {
                     "q": "Disponible dans tout le 75 ?",
-                    "a": "Oui, tous les arrondissements parisiens et au-delà. Nous nous adaptons aux contraintes de lieux d'événement (rooftops, lofts, salons)."
+                    "a": "Oui, à tous les arrondissements parisiens et au-delà. Nous nous adaptons aux contraintes des lieux d'événement (rooftops, lofts, salons de réception)."
             },
             {
                     "q": "Soirée fin d'année ?",
-                    "a": "C'est une période très demandée, à anticiper deux mois à l'avance. Décembre se remplit dès septembre."
+                    "a": "Très demandé : les sièges des grandes maisons du 8e, les agences créatives du 11e et du 18e concentrent leurs soirées en décembre. À anticiper deux à trois mois à l'avance."
             },
             {
                     "q": "Personnalisation possible ?",
-                    "a": "Oui, étiquette personnalisée, choix de plantes, packaging à votre image. Nous travaillons avec votre équipe communication."
+                    "a": "Oui, étiquettes personnalisées, choix de plantes, packaging à votre image, en lien avec votre équipe communication."
             },
             {
                     "q": "Format extérieur ?",
-                    "a": "Possible en saison douce, à condition d'avoir un abri en cas de pluie. Nous évitons les soirées en extérieur entre novembre et mars."
+                    "a": "Possible en saison douce, à condition d'avoir un abri en cas de pluie. Évité entre novembre et mars sauf lieux couverts."
             }
     ]
   }} />

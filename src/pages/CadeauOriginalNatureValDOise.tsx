@@ -27,19 +27,19 @@ const CadeauOriginalNatureValDOise = () => (
     "formula": [
             {
                     "line": "Carte cadeau",
-                    "detail": "Format PDF par mail ou carte papier sur demande, à offrir directement au ou à la bénéficiaire."
+                    "detail": "Format PDF par mail dans la journée, valable sur tous nos formats du Val-d'Oise."
             },
             {
                     "line": "Choix de l'atelier",
-                    "detail": "Le ou la bénéficiaire choisit terrarium, kokedama, teinture, balade ethnobotanique selon ses envies."
+                    "detail": "Le ou la bénéficiaire choisit terrarium, kokedama, teinture ou balade dans le parc du château de La Roche-Guyon ou la forêt de Montmorency."
             },
             {
                     "line": "Réservation",
-                    "detail": "Réservation simple par mail, créneaux ouverts toute l'année avec une concentration sur le printemps et l'automne."
+                    "detail": "Réservation par mail, créneaux ouverts en semaine et week-end, à Cergy, Pontoise et plus largement."
             },
             {
                     "line": "Validité",
-                    "detail": "Un an de validité à partir de la date d'achat. Prolongation possible en cas d'imprévu, sur simple demande."
+                    "detail": "Un an à partir de l'achat, prolongation gracieuse en cas d'imprévu."
             }
     ],
     "practical": [

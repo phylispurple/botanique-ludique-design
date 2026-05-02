@@ -27,19 +27,19 @@ const HortitherapieValDOise = () => (
     "formula": [
             {
                     "line": "Séance unique",
-                    "detail": "Un atelier ponctuel pour découvrir, observer, manipuler. Idéal pour tester avant un éventuel cycle plus long."
+                    "detail": "Un atelier ponctuel dans les EHPAD et MAS du Vexin et de la plaine de France, souvent en cadre semi-rural, pour tester l'approche dans un cadre semi-rural."
             },
             {
-                    "line": "Cycle court",
-                    "detail": "Quatre séances pour suivre un fil conducteur saisonnier. Permet d'installer une habitude et un rapport personnel à la plante."
+                    "line": "Cycle saisonnier",
+                    "detail": "Quatre séances rythmées par les saisons, en lien avec le jardin de la structure quand il existe."
             },
             {
-                    "line": "Cycle long",
-                    "detail": "Programme sur l'année avec un fil narratif documenté pour les équipes, qui peuvent se l'approprier."
+                    "line": "Cycle annuel",
+                    "detail": "Programme sur l'année avec mobilisation du jardin extérieur quand le cadre le permet, fréquent dans le Vexin."
             },
             {
-                    "line": "Formation équipe",
-                    "detail": "Transmission de gestes simples pour que les soignant·e·s puissent prolonger l'atelier en autonomie entre nos passages."
+                    "line": "Formation soignants",
+                    "detail": "Sessions pour les équipes médico-sociales du 95, en lien avec les politiques départementales de qualité de vie en EHPAD."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const HortitherapieValDOise = () => (
     "faqs": [
             {
                     "q": "Public à mobilité réduite ?",
-                    "a": "Oui, nos formats sont adaptés. L'atelier vient à la table ou au lit. Nous travaillons régulièrement avec des EHPAD et des structures de jour."
+                    "a": "Oui, nos formats sont adaptés. L'atelier vient à la table, au fauteuil ou au lit. Nous travaillons régulièrement dans les EHPAD et MAS du Vexin et de la plaine de France, souvent en cadre semi-rural."
             },
             {
                     "q": "Intervention dans le 95 ?",
-                    "a": "Oui, à Cergy, Argenteuil, Sarcelles, Pontoise et plus largement du Val-d'Oise. Pour les zones plus excentrées, nous étudions la faisabilité au cas par cas."
+                    "a": "Oui, à Cergy, Argenteuil, Sarcelles, Pontoise et plus largement. Pour les zones plus excentrées du Val-d'Oise, nous étudions la faisabilité au cas par cas."
             },
             {
                     "q": "Conventionnement ARS ou département ?",
-                    "a": "Nous travaillons avec des structures publiques et privées. Notre statut associatif et nos références facilitent les démarches administratives."
+                    "a": "Notre statut associatif et nos références du Val-d'Oise facilitent les démarches administratives et la facturation publique."
             },
             {
                     "q": "Cycle annuel possible ?",
-                    "a": "Oui, c'est la formule que nous recommandons pour un vrai impact thérapeutique observable. Une séance par mois pendant six à douze mois."
+                    "a": "Oui, c'est la formule recommandée pour un impact thérapeutique observable. Une séance par mois sur six à douze mois, format suivi par les équipes."
             }
     ]
   }} />

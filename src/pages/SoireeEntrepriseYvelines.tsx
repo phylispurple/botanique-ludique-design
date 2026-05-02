@@ -27,19 +27,19 @@ const SoireeEntrepriseYvelines = () => (
     "formula": [
             {
                     "line": "Stand atelier",
-                    "detail": "Un îlot installé pendant le cocktail, avec une animatrice et tout le matériel pour les passages successifs."
+                    "detail": "Un îlot installé pendant le cocktail, par exemple dans les salons d'un domaine des Yvelines, avec une animatrice et tout le matériel."
             },
             {
                     "line": "Mini créations",
-                    "detail": "Bouture, mini terrarium en flacon, sachet aromatique. Formats rapides, adaptés au flux d'une soirée."
+                    "detail": "Bouture, mini terrarium en flacon, sachet aromatique, formats rapides adaptés au flux d'une soirée."
             },
             {
                     "line": "À emporter",
-                    "detail": "Chaque personne repart avec sa création dans un emballage soigné, prêt à être glissé dans un sac."
+                    "detail": "Chaque personne repart avec sa création dans un emballage soigné, parfait pour le retour en train ou en voiture."
             },
             {
                     "line": "Module long",
-                    "detail": "Possibilité d'un atelier assis pour un nombre limité de participants, en parallèle du stand debout."
+                    "detail": "Atelier assis pour un nombre limité, en parallèle du stand debout, pour les soirées qui mêlent cocktail et dîner assis."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const SoireeEntrepriseYvelines = () => (
     "faqs": [
             {
                     "q": "Disponible dans tout le 78 ?",
-                    "a": "Oui, Versailles, Saint-Germain-en-Laye, Maurepas, Mantes-la-Jolie et au-delà. Nous nous adaptons aux contraintes de lieux d'événement (rooftops, lofts, salons)."
+                    "a": "Oui, à Versailles, Saint-Germain-en-Laye, Maurepas, Mantes-la-Jolie et au-delà. Nous nous adaptons aux contraintes des lieux d'événement (rooftops, lofts, salons de réception)."
             },
             {
                     "q": "Soirée fin d'année ?",
-                    "a": "C'est une période très demandée, à anticiper deux mois à l'avance. Décembre se remplit dès septembre."
+                    "a": "Très demandé : les sièges du triangle Saint-Quentin / Vélizy / Versailles concentrent leurs soirées en décembre. À anticiper deux à trois mois à l'avance."
             },
             {
                     "q": "Personnalisation possible ?",
-                    "a": "Oui, étiquette personnalisée, choix de plantes, packaging à votre image. Nous travaillons avec votre équipe communication."
+                    "a": "Oui, étiquettes personnalisées, choix de plantes, packaging à votre image, en lien avec votre équipe communication."
             },
             {
                     "q": "Format extérieur ?",
-                    "a": "Possible en saison douce, à condition d'avoir un abri en cas de pluie. Nous évitons les soirées en extérieur entre novembre et mars."
+                    "a": "Possible en saison douce, à condition d'avoir un abri en cas de pluie. Évité entre novembre et mars sauf lieux couverts."
             }
     ]
   }} />

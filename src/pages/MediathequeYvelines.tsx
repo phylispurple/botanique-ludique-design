@@ -27,19 +27,19 @@ const MediathequeYvelines = () => (
     "formula": [
             {
                     "line": "Heure du conte",
-                    "detail": "Lecture d'un texte botanique pour les plus jeunes, prolongée par une activité tactile autour d'une plante."
+                    "detail": "Lecture d'un texte botanique pour les 3-7 ans, prolongée par une activité tactile, format calé sur les heures du conte habituelles."
             },
             {
                     "line": "Atelier découverte",
-                    "detail": "Initiation au terrarium, au kokedama ou à la teinture pour un groupe restreint, sur inscription préalable."
+                    "detail": "Initiation au terrarium ou au kokedama pour un groupe restreint sur inscription, format apprécié des médiathèques de Versailles Grand Parc."
             },
             {
                     "line": "Conférence",
-                    "detail": "Présentation grand public sur l'ethnobotanique, l'histoire des plantes ou un thème en lien avec la programmation."
+                    "detail": "Présentation grand public sur l'ethnobotanique ou sur l'histoire du Potager du Roi, en lien avec le patrimoine local."
             },
             {
-                    "line": "Cycle thématique",
-                    "detail": "Programmation sur plusieurs semaines, autour d'une saison ou d'un fil documentaire, avec restitution publique."
+                    "line": "Cycle saisonnier",
+                    "detail": "Programmation sur quatre saisons en lien avec les fonds jeunesse et nature de votre médiathèque."
             }
     ],
     "practical": [
@@ -76,20 +76,20 @@ const MediathequeYvelines = () => (
     ],
     "faqs": [
             {
-                    "q": "Conventionnée DRAC ou département ?",
-                    "a": "Nous travaillons régulièrement avec des institutions publiques et adaptons nos devis aux cadres conventionnés. Notre statut associatif facilite la facturation."
+                    "q": "Travail avec institutions publiques ?",
+                    "a": "Oui, nous intervenons régulièrement avec le réseau des médiathèques portées par les communautés d'agglomération de Saint-Quentin-en-Yvelines, Versailles Grand Parc et Mantes Communauté. Notre statut associatif facilite la facturation publique."
             },
             {
                     "q": "Disponible partout dans le 78 ?",
-                    "a": "Oui, à Versailles, Saint-Germain-en-Laye, Maurepas, Mantes-la-Jolie et au-delà. Nous nous déplaçons avec tout le matériel nécessaire à l'animation."
+                    "a": "Oui, à Versailles, Saint-Germain-en-Laye, Maurepas, Mantes-la-Jolie et plus largement. Nous nous déplaçons avec tout le matériel."
             },
             {
-                    "q": "Format en cycle possible ?",
-                    "a": "Oui, c'est même la formule la plus impactante. Une présence répétée crée un public fidèle et une médiation qui s'approfondit."
+                    "q": "Formats en cycle possibles ?",
+                    "a": "Oui, c'est la formule la plus impactante : une présence répétée crée un public fidèle et une médiation qui s'approfondit."
             },
             {
                     "q": "Matériel fourni ?",
-                    "a": "Oui, tout le matériel végétal et l'outillage sont apportés par notre équipe. La médiathèque fournit l'espace et l'eau."
+                    "a": "Oui, tout le matériel végétal et l'outillage sont apportés par notre équipe. La médiathèque fournit l'espace, l'eau et un point électrique."
             }
     ]
   }} />

@@ -27,19 +27,19 @@ const SeminaireEntrepriseParis = () => (
     "formula": [
             {
                     "line": "Module 2h",
-                    "detail": "Inséré dans une journée plus large, idéal en fin de matinée ou d'après-midi pour casser le rythme cognitif."
+                    "detail": "Inséré dans un séminaire dans vos locaux ou un lieu privatisé parisien, format flexible adapté à votre agenda."
             },
             {
                     "line": "Demi-journée",
-                    "detail": "Atelier complet plus balade ethnobotanique dans le Jardin des Plantes ou le parc des Buttes-Chaumont, ou un parc proche de votre lieu de séminaire."
+                    "detail": "Atelier complet plus balade ethnobotanique dans le Jardin des Plantes ou le parc des Buttes-Chaumont."
             },
             {
                     "line": "Journée complète",
-                    "detail": "Programme sur mesure mêlant ateliers, balade, conférence et restitution, articulé avec votre fil rouge thématique."
+                    "detail": "Programme combinant atelier, balade au Jardin des Plantes et conférence sur l'histoire botanique de Paris."
             },
             {
-                    "line": "Format hybride",
-                    "detail": "Combinaison d'atelier intérieur et de balade extérieure, particulièrement apprécié au printemps et à l'automne."
+                    "line": "Format extérieur",
+                    "detail": "Atelier dans un parc parisien (Buttes-Chaumont, Bercy, Monceau), pour les saisons douces."
             }
     ],
     "practical": [
@@ -80,16 +80,16 @@ const SeminaireEntrepriseParis = () => (
                     "a": "Oui, à tous les arrondissements parisiens et plus largement parisien·nes. Notre équipe se déplace avec tout le matériel végétal et l'outillage."
             },
             {
-                    "q": "Combien de personnes maximum ?",
-                    "a": "Jusqu'à soixante. Au-delà, nous proposons un format à double animatrice ou plusieurs ateliers en parallèle."
+                    "q": "Combien de personnes au maximum ?",
+                    "a": "Jusqu'à soixante personnes en format atelier classique. Au-delà, nous fonctionnons à double animatrice ou en plusieurs ateliers en parallèle."
             },
             {
-                    "q": "Délai de réservation ?",
-                    "a": "Six à huit semaines à l'avance idéalement, davantage pour les périodes denses (juin, septembre, décembre)."
+                    "q": "Quel délai prévoir ?",
+                    "a": "Six à huit semaines à l'avance, davantage en juin, septembre et décembre. Les sièges des grandes maisons du 8e, les agences créatives du 11e et du 18e planifient souvent en année N-1."
             },
             {
-                    "q": "Adaptation à votre charte ?",
-                    "a": "Oui, sur devis. Nous adaptons la communication, les supports imprimés et certaines créations aux couleurs et au ton de votre identité."
+                    "q": "Adaptable à votre charte ?",
+                    "a": "Oui, sur devis. Nous adaptons supports imprimés, étiquettes plantes et certaines créations à votre identité."
             }
     ]
   }} />

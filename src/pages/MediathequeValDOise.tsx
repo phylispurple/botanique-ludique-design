@@ -27,19 +27,19 @@ const MediathequeValDOise = () => (
     "formula": [
             {
                     "line": "Heure du conte",
-                    "detail": "Lecture d'un texte botanique pour les plus jeunes, prolongée par une activité tactile autour d'une plante."
+                    "detail": "Lecture pour les jeunes lecteurs autour d'une plante, en lien avec le réseau départemental des médiathèques."
             },
             {
                     "line": "Atelier découverte",
-                    "detail": "Initiation au terrarium, au kokedama ou à la teinture pour un groupe restreint, sur inscription préalable."
+                    "detail": "Initiation au terrarium ou au kokedama pour un petit groupe, sur inscription."
             },
             {
                     "line": "Conférence",
-                    "detail": "Présentation grand public sur l'ethnobotanique, l'histoire des plantes ou un thème en lien avec la programmation."
+                    "detail": "Présentation sur l'abbaye de Royaumont, les paysages d'Auvers-sur-Oise ou l'agriculture maraîchère historique."
             },
             {
                     "line": "Cycle thématique",
-                    "detail": "Programmation sur plusieurs semaines, autour d'une saison ou d'un fil documentaire, avec restitution publique."
+                    "detail": "Programmation sur plusieurs séances en lien avec une exposition ou un fonds local de votre médiathèque."
             }
     ],
     "practical": [
@@ -76,20 +76,20 @@ const MediathequeValDOise = () => (
     ],
     "faqs": [
             {
-                    "q": "Conventionnée DRAC ou département ?",
-                    "a": "Nous travaillons régulièrement avec des institutions publiques et adaptons nos devis aux cadres conventionnés. Notre statut associatif facilite la facturation."
+                    "q": "Travail avec institutions publiques ?",
+                    "a": "Oui, nous intervenons régulièrement avec le réseau départemental des médiathèques val-d'oisiennes, porté par le Conseil Départemental. Notre statut associatif facilite la facturation publique."
             },
             {
                     "q": "Disponible partout dans le 95 ?",
-                    "a": "Oui, à Cergy, Argenteuil, Sarcelles, Pontoise et au-delà. Nous nous déplaçons avec tout le matériel nécessaire à l'animation."
+                    "a": "Oui, à Cergy, Argenteuil, Sarcelles, Pontoise et plus largement. Nous nous déplaçons avec tout le matériel."
             },
             {
-                    "q": "Format en cycle possible ?",
-                    "a": "Oui, c'est même la formule la plus impactante. Une présence répétée crée un public fidèle et une médiation qui s'approfondit."
+                    "q": "Formats en cycle possibles ?",
+                    "a": "Oui, c'est la formule la plus impactante : une présence répétée crée un public fidèle et une médiation qui s'approfondit."
             },
             {
                     "q": "Matériel fourni ?",
-                    "a": "Oui, tout le matériel végétal et l'outillage sont apportés par notre équipe. La médiathèque fournit l'espace et l'eau."
+                    "a": "Oui, tout le matériel végétal et l'outillage sont apportés par notre équipe. La médiathèque fournit l'espace, l'eau et un point électrique."
             }
     ]
   }} />

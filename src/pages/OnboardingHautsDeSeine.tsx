@@ -27,19 +27,19 @@ const OnboardingHautsDeSeine = () => (
     "formula": [
             {
                     "line": "Accueil",
-                    "detail": "Présentation du format et des intervenant·e·s en quelques minutes, autour d'un café."
+                    "detail": "Présentation du format dans vos locaux de La Défense, Boulogne ou Issy, en arrivée des nouvelles recrues."
             },
             {
                     "line": "Atelier",
-                    "detail": "Création guidée, terrarium, kokedama ou bouture personnalisée selon votre brief et la durée disponible."
+                    "detail": "Création guidée, format optimisé pour les contraintes horaires des grands sièges (1h30 maximum)."
             },
             {
-                    "line": "Mot RH",
-                    "detail": "Vous reprenez la main pour le mot d'accueil officiel, dans une ambiance plus détendue qu'à l'arrivée."
+                    "line": "Mot dirigeant",
+                    "detail": "Espace pour un mot du dirigeant ou de la direction RH, dans un cadre plus chaleureux qu'une salle de réunion."
             },
             {
-                    "line": "Goûter",
-                    "detail": "En option, nous gérons aussi un moment convivial autour de l'atelier, avec boissons et collations."
+                    "line": "Cocktail",
+                    "detail": "Possibilité d'enchaîner avec un cocktail dînatoire pour clôturer la journée d'intégration."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const OnboardingHautsDeSeine = () => (
     "faqs": [
             {
                     "q": "Format mensuel possible ?",
-                    "a": "Oui, nous pouvons venir tous les mois pour vos nouvelles vagues d'onboarding. C'est même la formule la plus efficace pour installer un rituel."
+                    "a": "Oui, nous venons tous les mois pour vos vagues d'onboarding récurrentes. Format apprécié des entreprises de La Défense, Boulogne, Issy et Nanterre qui recrutent en continu."
             },
             {
                     "q": "Vous venez dans le 92 ?",
-                    "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement en IDF. Notre équipe se déplace avec tout le matériel."
+                    "a": "Oui, partout des Hauts-de-Seine. Notre équipe se déplace avec tout le matériel."
             },
             {
                     "q": "Personnalisation marque employeur ?",
-                    "a": "Oui, étiquette personnalisée, choix de plantes alignées avec vos valeurs, palette de couleurs aux teintes de votre charte."
+                    "a": "Oui, étiquettes personnalisées, choix de plantes alignées avec vos valeurs, palette de couleurs aux teintes de votre charte."
             },
             {
                     "q": "Délai d'organisation ?",
-                    "a": "Trois semaines minimum pour caler les agendas et préparer le matériel. Les onboarding récurrents sont planifiés en début d'année."
+                    "a": "Trois semaines minimum pour caler les agendas. Les sièges sociaux de La Défense, les médias d'Issy et les start-ups de Boulogne privilégient les onboarding planifiés en début d'année."
             }
     ]
   }} />

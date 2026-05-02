@@ -27,19 +27,19 @@ const HortitherapieParis = () => (
     "formula": [
             {
                     "line": "Séance unique",
-                    "detail": "Un atelier ponctuel pour découvrir, observer, manipuler. Idéal pour tester avant un éventuel cycle plus long."
+                    "detail": "Un atelier ponctuel dans les EHPAD municipaux de Paris, les services AP-HP (Bichat, Cochin, Pitié-Salpêtrière) et les structures sociales, pour évaluer la pertinence dans votre structure."
             },
             {
                     "line": "Cycle court",
-                    "detail": "Quatre séances pour suivre un fil conducteur saisonnier. Permet d'installer une habitude et un rapport personnel à la plante."
+                    "detail": "Quatre séances rapprochées, format apprécié des hôpitaux AP-HP et des EHPAD parisiens en plein cœur urbain."
             },
             {
-                    "line": "Cycle long",
-                    "detail": "Programme sur l'année avec un fil narratif documenté pour les équipes, qui peuvent se l'approprier."
+                    "line": "Cycle annuel",
+                    "detail": "Programme sur l'année, recommandé pour un véritable impact thérapeutique observable par les équipes."
             },
             {
-                    "line": "Formation équipe",
-                    "detail": "Transmission de gestes simples pour que les soignant·e·s puissent prolonger l'atelier en autonomie entre nos passages."
+                    "line": "Formation soignants",
+                    "detail": "Transmission aux équipes parisiennes (AP-HP, CASVP, structures associatives) pour un relais en interne."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const HortitherapieParis = () => (
     "faqs": [
             {
                     "q": "Public à mobilité réduite ?",
-                    "a": "Oui, nos formats sont adaptés. L'atelier vient à la table ou au lit. Nous travaillons régulièrement avec des EHPAD et des structures de jour."
+                    "a": "Oui, nos formats sont adaptés. L'atelier vient à la table, au fauteuil ou au lit. Nous travaillons régulièrement dans les EHPAD municipaux de Paris, les services AP-HP (Bichat, Cochin, Pitié-Salpêtrière) et les structures sociales."
             },
             {
                     "q": "Intervention dans le 75 ?",
-                    "a": "Oui, à tous les arrondissements parisiens et plus largement parisien·nes. Pour les zones plus excentrées, nous étudions la faisabilité au cas par cas."
+                    "a": "Oui, à tous les arrondissements parisiens et plus largement. Pour les zones plus excentrées parisien·nes, nous étudions la faisabilité au cas par cas."
             },
             {
                     "q": "Conventionnement ARS ou département ?",
-                    "a": "Nous travaillons avec des structures publiques et privées. Notre statut associatif et nos références facilitent les démarches administratives."
+                    "a": "Notre statut associatif et nos références parisien·nes facilitent les démarches administratives et la facturation publique."
             },
             {
                     "q": "Cycle annuel possible ?",
-                    "a": "Oui, c'est la formule que nous recommandons pour un vrai impact thérapeutique observable. Une séance par mois pendant six à douze mois."
+                    "a": "Oui, c'est la formule recommandée pour un impact thérapeutique observable. Une séance par mois sur six à douze mois, format suivi par les équipes."
             }
     ]
   }} />

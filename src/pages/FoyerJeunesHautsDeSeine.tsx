@@ -27,19 +27,19 @@ const FoyerJeunesHautsDeSeine = () => (
     "formula": [
             {
                     "line": "Accueil ouvert",
-                    "detail": "L'atelier est annoncé en interne, les jeunes viennent à leur rythme. Pas d'inscription forcée, juste une invitation."
+                    "detail": "Atelier ouvert aux résident·e·s, format apprécié des foyers Habitat Jeunes de Nanterre, Gennevilliers ou Clichy."
             },
             {
                     "line": "Animation guidée",
-                    "detail": "Format simple et accessible, terrarium, bouture, kokedama. La médiatrice circule et accompagne sans presser."
+                    "detail": "Format simple, accessible, qui fonctionne avec un public en insertion sociale et professionnelle."
             },
             {
                     "line": "Échange libre",
-                    "detail": "L'animation est l'occasion de parler du vivant, des saisons, des origines, sans poser de question intrusive."
+                    "detail": "Conversation libre autour des plantes, sans cadre rigide, qui ouvre des sujets parfois inattendus."
             },
             {
-                    "line": "Cycle possible",
-                    "detail": "Plusieurs séances espacées pour installer une habitude et créer un rendez-vous attendu."
+                    "line": "Cycle régulier",
+                    "detail": "Plusieurs séances pour créer un rendez-vous attendu et faciliter l'appropriation par le groupe."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const FoyerJeunesHautsDeSeine = () => (
     "faqs": [
             {
                     "q": "Conventionnement possible ?",
-                    "a": "Oui, nous travaillons avec des structures associatives et publiques. Notre statut associatif facilite les financements."
+                    "a": "Oui, nous travaillons avec des structures associatives et publiques. Statut associatif qui facilite les financements via politiques jeunesse."
             },
             {
                     "q": "Disponible dans le 92 ?",
-                    "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement en IDF. Notre public est concentré sur la première couronne, avec une forte présence de sièges sociaux à La Défense, de comités d'entreprise du quartier d'affaires et de jeunes familles à Boulogne et Issy."
+                    "a": "Oui, en lien avec les foyers Habitat Jeunes de Nanterre, Gennevilliers et Clichy, et plus largement des Hauts-de-Seine."
             },
             {
-                    "q": "Cycle régulier possible ?",
-                    "a": "Oui, c'est même la formule la plus efficace pour ce type de public. Une présence régulière permet d'installer la confiance."
+                    "q": "Cycle régulier conseillé ?",
+                    "a": "Oui, c'est la formule la plus efficace pour ce type de public. Une présence régulière permet d'installer la confiance et le rituel."
             },
             {
                     "q": "Public mixte ?",
-                    "a": "Oui, l'atelier accueille jeunes hommes et jeunes femmes ensemble. La plante est un terrain neutre qui facilite la mixité."
+                    "a": "Oui, l'atelier accueille jeunes hommes et jeunes femmes ensemble. La plante est un terrain neutre qui facilite la mixité dans des contextes parfois sensibles."
             }
     ]
   }} />

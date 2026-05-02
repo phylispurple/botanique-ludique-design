@@ -27,19 +27,19 @@ const SeminaireEntrepriseValDOise = () => (
     "formula": [
             {
                     "line": "Module 2h",
-                    "detail": "Inséré dans une journée plus large, idéal en fin de matinée ou d'après-midi pour casser le rythme cognitif."
+                    "detail": "Inséré dans une journée de séminaire à Cergy ou dans le Vexin, format adapté à votre temporalité."
             },
             {
                     "line": "Demi-journée",
-                    "detail": "Atelier complet plus balade ethnobotanique dans le parc du château de La Roche-Guyon ou la forêt de Montmorency, ou un parc proche de votre lieu de séminaire."
+                    "detail": "Atelier complet plus balade ethnobotanique dans le parc du château de La Roche-Guyon ou la forêt de Montmorency."
             },
             {
                     "line": "Journée complète",
-                    "detail": "Programme sur mesure mêlant ateliers, balade, conférence et restitution, articulé avec votre fil rouge thématique."
+                    "detail": "Programme sur mesure articulé avec une visite de l'abbaye de Royaumont et son jardin des neuf carrés."
             },
             {
-                    "line": "Format hybride",
-                    "detail": "Combinaison d'atelier intérieur et de balade extérieure, particulièrement apprécié au printemps et à l'automne."
+                    "line": "Format extérieur",
+                    "detail": "Atelier en plein air dans la cour ou le parc d'un lieu de séminaire, particulièrement adapté aux domaines du Vexin."
             }
     ],
     "practical": [
@@ -80,16 +80,16 @@ const SeminaireEntrepriseValDOise = () => (
                     "a": "Oui, à Cergy, Argenteuil, Sarcelles, Pontoise et plus largement du Val-d'Oise. Notre équipe se déplace avec tout le matériel végétal et l'outillage."
             },
             {
-                    "q": "Combien de personnes maximum ?",
-                    "a": "Jusqu'à soixante. Au-delà, nous proposons un format à double animatrice ou plusieurs ateliers en parallèle."
+                    "q": "Combien de personnes au maximum ?",
+                    "a": "Jusqu'à soixante personnes en format atelier classique. Au-delà, nous fonctionnons à double animatrice ou en plusieurs ateliers en parallèle."
             },
             {
-                    "q": "Délai de réservation ?",
-                    "a": "Six à huit semaines à l'avance idéalement, davantage pour les périodes denses (juin, septembre, décembre)."
+                    "q": "Quel délai prévoir ?",
+                    "a": "Six à huit semaines à l'avance, davantage en juin, septembre et décembre. Les sièges installés à Cergy-Pontoise et les structures du Vexin planifient souvent en année N-1."
             },
             {
-                    "q": "Adaptation à votre charte ?",
-                    "a": "Oui, sur devis. Nous adaptons la communication, les supports imprimés et certaines créations aux couleurs et au ton de votre identité."
+                    "q": "Adaptable à votre charte ?",
+                    "a": "Oui, sur devis. Nous adaptons supports imprimés, étiquettes plantes et certaines créations à votre identité."
             }
     ]
   }} />
