@@ -85,6 +85,38 @@ const blogPosts = [
     images: [blogMediationScientifique],
     date: "2026-03-15",
     category: "Ressources pédagogiques"
+  },
+  {
+    slug: "financer-animation-nature-ccas",
+    title: "Comment financer une animation nature en CCAS, guide 2026",
+    excerpt: "Lignes budgétaires, Conférence des financeurs, ARS, mutuelles, mécénat : panorama des dispositifs pour les CCAS.",
+    images: [blogMediationScientifique],
+    date: "2026-04-10",
+    category: "Ressources collectivités"
+  },
+  {
+    slug: "organiser-fete-nature-mairie",
+    title: "Organiser la Fête de la Nature dans votre commune",
+    excerpt: "Calendrier, formats, lieux, communication, budget : guide pratique pour une programmation municipale réussie.",
+    images: [blogMediationScientifique],
+    date: "2026-04-08",
+    category: "Ressources collectivités"
+  },
+  {
+    slug: "journees-patrimoine-animations-vegetales",
+    title: "Journées du Patrimoine, idées d'animations végétales",
+    excerpt: "Cinq idées de médiation patrimoniale autour du végétal pour les JEP, du parc historique à l'atelier herbier.",
+    images: [blogMediationScientifique],
+    date: "2026-04-05",
+    category: "Ressources collectivités"
+  },
+  {
+    slug: "semaine-developpement-durable-mairie",
+    title: "Semaine du Développement Durable, 5 ateliers nature en mairie",
+    excerpt: "Bombes à graines, teinture végétale, kokedama, terrarium, conférence : cinq formats clé en main pour la SEDD.",
+    images: [blogMediationScientifique],
+    date: "2026-04-03",
+    category: "Ressources collectivités"
   }
 ];
 

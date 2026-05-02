@@ -34,6 +34,12 @@ import BlogFilmsNature from "./pages/BlogFilmsNature";
 import BlogBotaniqueCollege from "./pages/BlogBotaniqueCollege";
 import BlogPlantesSauvagesSortie from "./pages/BlogPlantesSauvagesSortie";
 import BlogMediationScientifique from "./pages/BlogMediationScientifique";
+import BlogFinancerAnimationCCAS from "./pages/BlogFinancerAnimationCCAS";
+import BlogFeteNatureMairie from "./pages/BlogFeteNatureMairie";
+import BlogJourneesPatrimoineVegetal from "./pages/BlogJourneesPatrimoineVegetal";
+import BlogSemaineDDMairie from "./pages/BlogSemaineDDMairie";
+import MarchesPublics from "./pages/MarchesPublics";
+import ReferencesCollectivites from "./pages/ReferencesCollectivites";
 import LandingSeniorsEHPAD from "./pages/LandingSeniorsEHPAD";
 import LandingCSE from "./pages/LandingCSE";
 import LandingEcoles from "./pages/LandingEcoles";
@@ -239,6 +245,12 @@ const App = () => (
           <Route path="/blog/botanique-projet-pedagogique-college" element={<BlogBotaniqueCollege />} />
           <Route path="/blog/plantes-sauvages-sortie-scolaire-ile-de-france" element={<BlogPlantesSauvagesSortie />} />
           <Route path="/blog/mediation-scientifique-definition-exemples" element={<BlogMediationScientifique />} />
+          <Route path="/blog/financer-animation-nature-ccas" element={<BlogFinancerAnimationCCAS />} />
+          <Route path="/blog/organiser-fete-nature-mairie" element={<BlogFeteNatureMairie />} />
+          <Route path="/blog/journees-patrimoine-animations-vegetales" element={<BlogJourneesPatrimoineVegetal />} />
+          <Route path="/blog/semaine-developpement-durable-mairie" element={<BlogSemaineDDMairie />} />
+          <Route path="/marches-publics" element={<MarchesPublics />} />
+          <Route path="/references-collectivites" element={<ReferencesCollectivites />} />
           <Route path="/actualites" element={<Blog />} />
           <Route path="/animation-seniors-ehpad" element={<LandingSeniorsEHPAD />} />
           <Route path="/animation-cse-entreprise" element={<LandingCSE />} />

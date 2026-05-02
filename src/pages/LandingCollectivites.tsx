@@ -65,12 +65,15 @@ const LandingCollectivites = () => {
           <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
             Bien plus que des ateliers créatifs : une approche ethnobotanique qui tisse des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes. Animations clé en main pour vos événements municipaux.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
             <Button asChild size="lg" className="bg-sage hover:bg-sage-dark text-white">
               <Link to="/contact">Devis gratuit sous 24h <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-sage text-sage hover:bg-sage/10">
-              <Link to="/workshops">Découvrir les ateliers</Link>
+              <Link to="/references-collectivites">Voir nos références</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="border-sage text-sage hover:bg-sage/10">
+              <Link to="/marches-publics">Marchés publics</Link>
             </Button>
           </div>
         </div>
