@@ -112,6 +112,15 @@ import BaladesBotaniques from "./pages/BaladesBotaniques";
 import BaladeBotaniqueMusee from "./pages/BaladeBotaniqueMusee";
 import BaladeBotaniqueJardinPatrimonial from "./pages/BaladeBotaniqueJardinPatrimonial";
 import BaladeBotaniqueUrbaineParis from "./pages/BaladeBotaniqueUrbaineParis";
+import BaladeBotaniqueParis from "./pages/BaladeBotaniqueParis";
+import BaladeBotaniqueYvelines from "./pages/BaladeBotaniqueYvelines";
+import BaladeBotaniqueHautsDeSeine from "./pages/BaladeBotaniqueHautsDeSeine";
+import BaladeBotaniqueValDOise from "./pages/BaladeBotaniqueValDOise";
+import BaladeBotaniqueEntreprise from "./pages/BaladeBotaniqueEntreprise";
+import BaladeBotaniqueScolaire from "./pages/BaladeBotaniqueScolaire";
+import BaladePlantesSauvagesParis from "./pages/BaladePlantesSauvagesParis";
+import BaladeBotaniqueColoniale from "./pages/BaladeBotaniqueColoniale";
+import BaladeBotaniquePrintempsEte from "./pages/BaladeBotaniquePrintempsEte";
 
 const queryClient = new QueryClient();
 
