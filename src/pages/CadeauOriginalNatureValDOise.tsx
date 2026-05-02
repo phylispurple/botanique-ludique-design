@@ -1,15 +1,15 @@
 import OccasionTemplate from "@/components/OccasionTemplate";
 import { Heart } from "lucide-react";
 
-const CadeauOriginalNatureParis = () => (
+const CadeauOriginalNatureValDOise = () => (
   <OccasionTemplate data={{
-    "slug": "cadeau-original-nature-paris",
+    "slug": "cadeau-original-nature-val-d-oise",
     "icon": Heart,
     "eyebrow": "Cadeau original",
-    "title": "Idée de cadeau original nature Paris",
-    "metaTitle": "Cadeau original nature Paris, atelier ou carte",
-    "metaDesc": "Idée de cadeau original nature dans le 75 Paris. Carte cadeau atelier botanique, terrarium, kokedama, balade ethnobotanique.",
-    "pitch": "Offrir mieux qu'un objet : une expérience, dans le Paris. Nos cartes cadeaux donnent accès à un atelier ou une balade qui restera longtemps en mémoire.",
+    "title": "Idée de cadeau original nature Val-d'Oise",
+    "metaTitle": "Cadeau original nature Val-d'Oise, atelier ou carte",
+    "metaDesc": "Idée de cadeau original nature dans le 95 Val-d'Oise. Carte cadeau atelier botanique, terrarium, kokedama, balade ethnobotanique.",
+    "pitch": "Offrir mieux qu'un objet : une expérience, dans le Val-d'Oise. Nos cartes cadeaux donnent accès à un atelier ou une balade qui restera longtemps en mémoire.",
     "why": [
         {
             "title": "Vivant",
@@ -53,7 +53,7 @@ const CadeauOriginalNatureParis = () => (
         },
         {
             "label": "Lieu",
-            "value": "Paris (75)"
+            "value": "Val-d'Oise (95)"
         },
         {
             "label": "Prix",
@@ -70,8 +70,8 @@ const CadeauOriginalNatureParis = () => (
             "label": "Team building"
         },
         {
-            "to": "/balade-botanique-paris",
-            "label": "Balade Paris"
+            "to": "/balade-botanique-val-d-oise",
+            "label": "Balade Val-d'Oise"
         }
     ],
     "faqs": [
@@ -80,8 +80,8 @@ const CadeauOriginalNatureParis = () => (
             "a": "Nous vous envoyons une carte par mail, à imprimer ou à transférer directement."
         },
         {
-            "q": "Valable dans le 75 ?",
-            "a": "Oui, valable pour tous nos ateliers à Paris intra-muros, tous les arrondissements et au-delà."
+            "q": "Valable dans le 95 ?",
+            "a": "Oui, valable pour tous nos ateliers à Cergy, Argenteuil, Sarcelles, Pontoise et au-delà."
         },
         {
             "q": "Échangeable ?",
@@ -94,4 +94,4 @@ const CadeauOriginalNatureParis = () => (
     ]
 }} />
 );
-export default CadeauOriginalNatureParis;
+export default CadeauOriginalNatureValDOise;
