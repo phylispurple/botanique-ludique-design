@@ -9,19 +9,19 @@ const SeminaireEntrepriseParis = () => (
     "title": "Animation séminaire entreprise Paris",
     "metaTitle": "Animation séminaire entreprise Paris, végétal",
     "metaDesc": "Animation séminaire entreprise dans le 75 Paris autour du végétal. Module ou journée complète, terrarium, kokedama, balade.",
-    "pitch": "Une animation de séminaire qui ne ressemble pas aux autres, dans Paris. Un temps végétal en plein milieu de votre journée, qui crée du lien autrement et marque durablement les esprits.",
+    "pitch": "Une animation de séminaire pensée pour les sièges des grandes maisons du 8e, les agences créatives du 11e et du 18e, les institutions culturelles et associations du 13e. Dans Paris, nos modules végétaux s'insèrent dans votre journée, posent un temps de calme manuel et marquent durablement les équipes.",
     "why": [
             {
-                    "title": "Sortir du cadre",
-                    "desc": "Un temps manuel et calme qui change radicalement de la dynamique habituelle d'un séminaire. Les corps se posent, les voix baissent."
+                    "title": "Sortir du PowerPoint",
+                    "desc": "Après plusieurs heures de présentation, l'atelier manuel agit comme une réinitialisation cognitive. Des équipes parisiennes saturées de propositions, qui cherchent du contenu vraiment original et une vraie médiation."
             },
             {
-                    "title": "Créer du lien",
-                    "desc": "L'atelier fait tomber les rôles et les hiérarchies. Les équipes se redécouvrent par les mains, sans avoir à se justifier."
+                    "title": "Créer du lien horizontal",
+                    "desc": "Autour de la plante, les hiérarchies s'effacent. Paris concentre une demande très forte en animations originales, avec un tissu B2B varié allant des petites équipes créatives aux grandes directions communication, et nos retours montrent un effet immédiat sur la cohésion."
             },
             {
-                    "title": "Souvenir tangible",
-                    "desc": "Chaque participant·e repart avec sa création, qui rappellera le séminaire pendant des mois sur le bureau ou dans le salon."
+                    "title": "Ancrer dans un territoire",
+                    "desc": "Le séminaire prend racine dans un lieu réel, pas dans une animation hors-sol. Possibilité de balade dans le Jardin des Plantes ou le parc des Buttes-Chaumont pour prolonger le moment."
             }
     ],
     "formula": [

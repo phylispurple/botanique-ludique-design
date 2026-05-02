@@ -9,19 +9,19 @@ const OnboardingYvelines = () => (
     "title": "Atelier onboarding collaborateurs Yvelines",
     "metaTitle": "Atelier onboarding Yvelines, intégration végétale",
     "metaDesc": "Atelier onboarding collaborateurs dans le 78 Yvelines. Animation végétale pour intégrer vos nouvelles recrues autrement.",
-    "pitch": "Intégrer ses nouvelles recrues autrement, dans Yvelines. Un atelier botanique pour faire connaissance, créer des liens et marquer le premier jour avec un objet vivant à emporter sur son bureau.",
+    "pitch": "Intégrer ses nouvelles recrues autrement, pensé pour les sièges du Mantois, les pépinières de PME autour de Saint-Quentin-en-Yvelines et les institutions culturelles autour du château de Versailles. Un atelier botanique en début de journée d'arrivée, qui crée des liens et marque le premier jour avec un objet vivant.",
     "why": [
             {
-                    "title": "Faciliter le lien",
-                    "desc": "L'atelier manuel met les recrues à l'aise plus vite qu'un tour de table classique. Les mains travaillent, les langues se délient sans effort."
+                    "title": "Brise-glace efficace",
+                    "desc": "Plus rapide qu'un tour de table classique. Les mains travaillent, les langues se délient sans pression."
             },
             {
                     "title": "Cadeau d'accueil",
-                    "desc": "Chaque nouveau·elle repart avec une plante qui grandira sur son bureau. Un point de repère vivant dans l'espace de travail."
+                    "desc": "Chaque nouveau·elle repart avec une plante qui grandira sur son bureau des Yvelines. Un point de repère vivant dans l'espace de travail."
             },
             {
                     "title": "Marque employeur",
-                    "desc": "Un onboarding mémorable qui se raconte sur LinkedIn et entre futur·e·s candidat·e·s. Un signe de soin envers les équipes."
+                    "desc": "Le département compte de nombreux sièges sociaux installés dans le triangle Saint-Quentin / Vélizy / Versailles, et un tissu associatif dense autour des villes royales. Un onboarding mémorable participe à votre attractivité auprès des futur·e·s candidat·e·s."
             }
     ],
     "formula": [

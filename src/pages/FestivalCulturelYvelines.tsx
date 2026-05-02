@@ -9,11 +9,11 @@ const FestivalCulturelYvelines = () => (
     "title": "Intervention festival culturel Yvelines",
     "metaTitle": "Intervention festival culturel Yvelines, atelier végétal",
     "metaDesc": "Intervention en festival culturel dans le 78 Yvelines. Atelier ou conférence ethnobotanique, format adapté au public festivalier.",
-    "pitch": "Un programme botanique dans votre festival, dans Yvelines. Conférence, atelier ou stand permanent, pensés pour le public et le rythme festivalier, avec une vraie épaisseur intellectuelle.",
+    "pitch": "Un programme botanique pour les festivals culturels des Yvelines. Le département accueille des festivals patrimoniaux (Mois Molière à Versailles, Blues sur Seine à Mantes) où la dimension culturelle est forte. Conférence, atelier ou stand permanent, pensés pour le rythme festivalier et le grand public.",
     "why": [
             {
                     "title": "Différenciant",
-                    "desc": "Une proposition rare dans la programmation festival classique, qui apporte une dimension scientifique et sensorielle."
+                    "desc": "Une proposition rare dans la programmation culturelle, qui apporte une dimension scientifique et sensorielle bienvenue."
             },
             {
                     "title": "Inclusif",
@@ -21,7 +21,7 @@ const FestivalCulturelYvelines = () => (
             },
             {
                     "title": "Documenté",
-                    "desc": "Notre approche ethnobotanique apporte une réelle profondeur intellectuelle, en cohérence avec les festivals exigeants."
+                    "desc": "Notre approche ethnobotanique apporte une vraie profondeur intellectuelle, en cohérence avec les festivals exigeants des Yvelines."
             }
     ],
     "formula": [

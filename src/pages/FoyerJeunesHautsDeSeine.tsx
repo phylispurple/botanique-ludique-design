@@ -9,19 +9,19 @@ const FoyerJeunesHautsDeSeine = () => (
     "title": "Animation foyer jeunes travailleurs Hauts-de-Seine",
     "metaTitle": "Animation foyer jeunes Hauts-de-Seine, atelier botanique",
     "metaDesc": "Animation en foyer jeunes travailleurs dans le 92 Hauts-de-Seine. Atelier botanique inclusif, sensible aux publics fragilisés.",
-    "pitch": "Un atelier botanique pour foyer de jeunes travailleur·ses dans Hauts-de-Seine. Format inclusif, sans préjugé, qui pose un moment de calme et de créativité dans un quotidien souvent dense.",
+    "pitch": "Un atelier botanique pour foyer de jeunes travailleur·ses des Hauts-de-Seine. Le 92 compte plusieurs foyers Habitat Jeunes à Nanterre, Gennevilliers et Clichy, accueillant des publics en insertion. Format inclusif, sans préjugé, qui pose un moment de calme et de créativité.",
     "why": [
             {
                     "title": "Apaisant",
-                    "desc": "Les plantes recentrent, ralentissent, apaisent. Un effet observé dès la première séance, sur des publics parfois en tension."
+                    "desc": "Les plantes recentrent, ralentissent, apaisent. Un effet observé dès la première séance, sur des publics parfois en tension liée à leur parcours."
             },
             {
                     "title": "Sans prérequis",
-                    "desc": "Aucune connaissance botanique demandée, juste l'envie d'essayer. Aucun jugement sur le résultat de la création."
+                    "desc": "Aucune connaissance botanique demandée. Aucun jugement sur le résultat de la création, l'important est le geste et la présence."
             },
             {
                     "title": "Repartir avec",
-                    "desc": "Chaque jeune repart avec une plante à faire vivre dans sa chambre, qui devient un compagnon discret et durable."
+                    "desc": "Chaque jeune repart avec une plante à faire vivre dans sa chambre des Hauts-de-Seine, qui devient un compagnon discret et durable."
             }
     ],
     "formula": [

@@ -9,19 +9,19 @@ const CadeauOriginalNatureParis = () => (
     "title": "Idée de cadeau original nature Paris",
     "metaTitle": "Cadeau original nature Paris, atelier ou carte",
     "metaDesc": "Idée de cadeau original nature dans le 75 Paris. Carte cadeau atelier botanique, terrarium, kokedama, balade ethnobotanique.",
-    "pitch": "Offrir mieux qu'un objet : une expérience, dans Paris. Nos cartes cadeaux donnent accès à un atelier ou une balade qui restera longtemps en mémoire, et qui repart avec une création vivante.",
+    "pitch": "Offrir mieux qu'un objet : une expérience, parisien·nes. Nos cartes cadeaux donnent accès à un atelier ou une balade dans Paris, qui repart avec une création vivante.",
     "why": [
             {
                     "title": "Vivant",
-                    "desc": "L'expérience marque, la création repart à la maison, la plante grandit. Trois souvenirs en un cadeau."
+                    "desc": "L'expérience marque, la création repart à la maison, la plante grandit. Trois souvenirs en un seul cadeau."
             },
             {
                     "title": "Personnalisable",
-                    "desc": "L'atelier au choix du bénéficiaire, la date au choix, le lieu au choix. Liberté totale dans l'usage."
+                    "desc": "L'atelier au choix du ou de la bénéficiaire, la date au choix, le lieu au choix dans Paris. Liberté totale dans l'usage."
             },
             {
                     "title": "Local",
-                    "desc": "Soutient une animatrice locale parisien·nes plutôt qu'une plateforme nationale qui prélève sa marge."
+                    "desc": "Soutient une animatrice locale qui anime régulièrement à tous les arrondissements parisiens, plutôt qu'une plateforme nationale qui prélève sa marge."
             }
     ],
     "formula": [

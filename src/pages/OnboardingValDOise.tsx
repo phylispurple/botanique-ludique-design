@@ -9,19 +9,19 @@ const OnboardingValDOise = () => (
     "title": "Atelier onboarding collaborateurs Val-d'Oise",
     "metaTitle": "Atelier onboarding Val-d'Oise, intégration végétale",
     "metaDesc": "Atelier onboarding collaborateurs dans le 95 Val-d'Oise. Animation végétale pour intégrer vos nouvelles recrues autrement.",
-    "pitch": "Intégrer ses nouvelles recrues autrement, dans Val-d'Oise. Un atelier botanique pour faire connaissance, créer des liens et marquer le premier jour avec un objet vivant à emporter sur son bureau.",
+    "pitch": "Intégrer ses nouvelles recrues autrement, pensé pour les sièges installés à Cergy-Pontoise, les centres logistiques de la plaine de France et les structures associatives du Vexin. Un atelier botanique en début de journée d'arrivée, qui crée des liens et marque le premier jour avec un objet vivant.",
     "why": [
             {
-                    "title": "Faciliter le lien",
-                    "desc": "L'atelier manuel met les recrues à l'aise plus vite qu'un tour de table classique. Les mains travaillent, les langues se délient sans effort."
+                    "title": "Brise-glace efficace",
+                    "desc": "Plus rapide qu'un tour de table classique. Les mains travaillent, les langues se délient sans pression."
             },
             {
                     "title": "Cadeau d'accueil",
-                    "desc": "Chaque nouveau·elle repart avec une plante qui grandira sur son bureau. Un point de repère vivant dans l'espace de travail."
+                    "desc": "Chaque nouveau·elle repart avec une plante qui grandira sur son bureau du Val-d'Oise. Un point de repère vivant dans l'espace de travail."
             },
             {
                     "title": "Marque employeur",
-                    "desc": "Un onboarding mémorable qui se raconte sur LinkedIn et entre futur·e·s candidat·e·s. Un signe de soin envers les équipes."
+                    "desc": "Le Val-d'Oise mêle un pôle d'affaires à Cergy, des zones d'activité étendues et un tissu associatif et culturel dynamique en milieu semi-rural. Un onboarding mémorable participe à votre attractivité auprès des futur·e·s candidat·e·s."
             }
     ],
     "formula": [

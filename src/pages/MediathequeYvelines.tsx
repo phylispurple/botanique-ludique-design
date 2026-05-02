@@ -9,19 +9,19 @@ const MediathequeYvelines = () => (
     "title": "Intervention en médiathèque Yvelines",
     "metaTitle": "Intervention médiathèque Yvelines, animation botanique",
     "metaDesc": "Intervention en médiathèque dans le 78 Yvelines. Animation botanique pour public familial, scolaire ou adulte, autour du livre et du vivant.",
-    "pitch": "Un croisement naturel entre le livre et le vivant, dans Yvelines. Nous animons des temps en médiathèque qui prolongent la lecture par l'expérience sensorielle, en s'appuyant sur les fonds documentaires.",
+    "pitch": "Un croisement entre le livre et le vivant, pensé pour le réseau des médiathèques des Yvelines. Les médiathèques des Yvelines sont nombreuses à programmer sur la nature, en lien avec le Réseau Carel et les politiques départementales. Nous prolongeons les fonds documentaires par une expérience sensorielle.",
     "why": [
             {
-                    "title": "Public large",
-                    "desc": "Familles, classes en sortie, ados, adultes curieux, seniors lecteurs. Nos formats s'adaptent au public attendu et à la temporalité disponible."
+                    "title": "Public médiathèque",
+                    "desc": "Familles, classes, ados, adultes curieux, seniors lecteurs. Nos formats s'adaptent à chaque tranche d'horaire de votre programmation."
             },
             {
-                    "title": "Lien au fonds",
-                    "desc": "Nous nous appuyons sur les ouvrages déjà présents dans la médiathèque pour ancrer l'animation dans une médiation documentaire concrète."
+                    "title": "Lien aux fonds",
+                    "desc": "Nous nous appuyons sur les ouvrages déjà présents dans votre médiathèque (jardinage, sciences, jeunesse) pour ancrer la médiation."
             },
             {
-                    "title": "Médiation douce",
-                    "desc": "Une approche sensible, manuelle, sans pression de performance. Le contact aux plantes ouvre des conversations qu'un livre seul n'ouvrirait pas."
+                    "title": "Approche documentée",
+                    "desc": "Notre médiatrice, anthropologue formée à l'EHESS, apporte une vraie épaisseur intellectuelle, en cohérence avec une institution culturelle."
             }
     ],
     "formula": [

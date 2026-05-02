@@ -9,19 +9,19 @@ const SoireeEntrepriseYvelines = () => (
     "title": "Animation soirée entreprise végétale Yvelines",
     "metaTitle": "Animation soirée entreprise Yvelines, format végétal",
     "metaDesc": "Animation soirée entreprise dans le 78 Yvelines autour du végétal. Format atelier debout, fluide, en parallèle d'un cocktail.",
-    "pitch": "Une animation de soirée qui ne perturbe pas le cocktail, dans Yvelines. Format debout, fluide, où chacun·e passe à son rythme et repart avec une création.",
+    "pitch": "Une animation de soirée qui ne perturbe pas le cocktail, pensée pour les sièges du Mantois, les pépinières de PME autour de Saint-Quentin-en-Yvelines et les institutions culturelles autour du château de Versailles. Format debout, fluide, où chacun·e passe à son rythme et repart avec une création.",
     "why": [
             {
-                    "title": "Format debout",
-                    "desc": "L'atelier vient à eux, en îlot, sans interrompre la circulation des invité·e·s entre buffet et bar."
+                    "title": "Format adapté à votre lieu",
+                    "desc": "Rooftop, loft, salon de réception, espace atypique : nous nous adaptons aux contraintes des lieux d'événement des Yvelines."
             },
             {
                     "title": "Parle à tout le monde",
                     "desc": "Pas besoin d'expertise. Le format est conçu pour que chacun·e réussisse sa création en quinze minutes maximum."
             },
             {
-                    "title": "Mémorable",
-                    "desc": "Une animation qui se raconte le lendemain et qui marque la soirée bien plus qu'un photobooth."
+                    "title": "Mémorable et photogénique",
+                    "desc": "Une animation qui se raconte le lendemain et qui marque la soirée bien plus qu'un photobooth. Des entreprises souvent ancrées dans des bâtiments historiques, qui apprécient le lien avec un patrimoine vivant."
             }
     ],
     "formula": [

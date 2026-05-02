@@ -9,11 +9,11 @@ const FestivalCulturelHautsDeSeine = () => (
     "title": "Intervention festival culturel Hauts-de-Seine",
     "metaTitle": "Intervention festival culturel Hauts-de-Seine, atelier végétal",
     "metaDesc": "Intervention en festival culturel dans le 92 Hauts-de-Seine. Atelier ou conférence ethnobotanique, format adapté au public festivalier.",
-    "pitch": "Un programme botanique dans votre festival, dans Hauts-de-Seine. Conférence, atelier ou stand permanent, pensés pour le public et le rythme festivalier, avec une vraie épaisseur intellectuelle.",
+    "pitch": "Un programme botanique pour les festivals culturels des Hauts-de-Seine. Le 92 héberge des festivals comme Chorus, le festival de Saint-Cloud, et des événements de quartier autour de la culture et de l'écologie. Conférence, atelier ou stand permanent, pensés pour le rythme festivalier et le grand public.",
     "why": [
             {
                     "title": "Différenciant",
-                    "desc": "Une proposition rare dans la programmation festival classique, qui apporte une dimension scientifique et sensorielle."
+                    "desc": "Une proposition rare dans la programmation culturelle, qui apporte une dimension scientifique et sensorielle bienvenue."
             },
             {
                     "title": "Inclusif",
@@ -21,7 +21,7 @@ const FestivalCulturelHautsDeSeine = () => (
             },
             {
                     "title": "Documenté",
-                    "desc": "Notre approche ethnobotanique apporte une réelle profondeur intellectuelle, en cohérence avec les festivals exigeants."
+                    "desc": "Notre approche ethnobotanique apporte une vraie profondeur intellectuelle, en cohérence avec les festivals exigeants des Hauts-de-Seine."
             }
     ],
     "formula": [

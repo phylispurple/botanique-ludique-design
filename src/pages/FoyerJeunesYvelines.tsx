@@ -9,19 +9,19 @@ const FoyerJeunesYvelines = () => (
     "title": "Animation foyer jeunes travailleurs Yvelines",
     "metaTitle": "Animation foyer jeunes Yvelines, atelier botanique",
     "metaDesc": "Animation en foyer jeunes travailleurs dans le 78 Yvelines. Atelier botanique inclusif, sensible aux publics fragilisés.",
-    "pitch": "Un atelier botanique pour foyer de jeunes travailleur·ses dans Yvelines. Format inclusif, sans préjugé, qui pose un moment de calme et de créativité dans un quotidien souvent dense.",
+    "pitch": "Un atelier botanique pour foyer de jeunes travailleur·ses des Yvelines. Le 78 compte plusieurs foyers de jeunes travailleur·ses dans le Mantois, à Trappes et autour de Saint-Quentin-en-Yvelines. Format inclusif, sans préjugé, qui pose un moment de calme et de créativité.",
     "why": [
             {
                     "title": "Apaisant",
-                    "desc": "Les plantes recentrent, ralentissent, apaisent. Un effet observé dès la première séance, sur des publics parfois en tension."
+                    "desc": "Les plantes recentrent, ralentissent, apaisent. Un effet observé dès la première séance, sur des publics parfois en tension liée à leur parcours."
             },
             {
                     "title": "Sans prérequis",
-                    "desc": "Aucune connaissance botanique demandée, juste l'envie d'essayer. Aucun jugement sur le résultat de la création."
+                    "desc": "Aucune connaissance botanique demandée. Aucun jugement sur le résultat de la création, l'important est le geste et la présence."
             },
             {
                     "title": "Repartir avec",
-                    "desc": "Chaque jeune repart avec une plante à faire vivre dans sa chambre, qui devient un compagnon discret et durable."
+                    "desc": "Chaque jeune repart avec une plante à faire vivre dans sa chambre des Yvelines, qui devient un compagnon discret et durable."
             }
     ],
     "formula": [

@@ -9,19 +9,19 @@ const SeminaireEntrepriseValDOise = () => (
     "title": "Animation séminaire entreprise Val-d'Oise",
     "metaTitle": "Animation séminaire entreprise Val-d'Oise, végétal",
     "metaDesc": "Animation séminaire entreprise dans le 95 Val-d'Oise autour du végétal. Module ou journée complète, terrarium, kokedama, balade.",
-    "pitch": "Une animation de séminaire qui ne ressemble pas aux autres, dans Val-d'Oise. Un temps végétal en plein milieu de votre journée, qui crée du lien autrement et marque durablement les esprits.",
+    "pitch": "Une animation de séminaire pensée pour les sièges installés à Cergy-Pontoise, les centres logistiques de la plaine de France et les structures associatives du Vexin. Dans Val-d'Oise, nos modules végétaux s'insèrent dans votre journée, posent un temps de calme manuel et marquent durablement les équipes.",
     "why": [
             {
-                    "title": "Sortir du cadre",
-                    "desc": "Un temps manuel et calme qui change radicalement de la dynamique habituelle d'un séminaire. Les corps se posent, les voix baissent."
+                    "title": "Sortir du PowerPoint",
+                    "desc": "Après plusieurs heures de présentation, l'atelier manuel agit comme une réinitialisation cognitive. Des équipes qui apprécient les formats authentiques, ancrés dans un vrai territoire plutôt qu'une animation hors-sol."
             },
             {
-                    "title": "Créer du lien",
-                    "desc": "L'atelier fait tomber les rôles et les hiérarchies. Les équipes se redécouvrent par les mains, sans avoir à se justifier."
+                    "title": "Créer du lien horizontal",
+                    "desc": "Autour de la plante, les hiérarchies s'effacent. Le Val-d'Oise mêle un pôle d'affaires à Cergy, des zones d'activité étendues et un tissu associatif et culturel dynamique en milieu semi-rural, et nos retours montrent un effet immédiat sur la cohésion."
             },
             {
-                    "title": "Souvenir tangible",
-                    "desc": "Chaque participant·e repart avec sa création, qui rappellera le séminaire pendant des mois sur le bureau ou dans le salon."
+                    "title": "Ancrer dans un territoire",
+                    "desc": "Le séminaire prend racine dans un lieu réel, pas dans une animation hors-sol. Possibilité de balade dans le parc du château de La Roche-Guyon ou la forêt de Montmorency pour prolonger le moment."
             }
     ],
     "formula": [

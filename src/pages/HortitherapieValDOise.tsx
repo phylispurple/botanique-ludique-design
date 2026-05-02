@@ -9,19 +9,19 @@ const HortitherapieValDOise = () => (
     "title": "Atelier d'hortithérapie Val-d'Oise",
     "metaTitle": "Atelier hortithérapie Val-d'Oise, médiation par le végétal",
     "metaDesc": "Atelier d'hortithérapie dans le 95 Val-d'Oise. Médiation par le végétal en EHPAD, IME, hôpital, foyer, en cycle ou à la séance.",
-    "pitch": "Le végétal comme support de soin, dans Val-d'Oise. Un atelier d'hortithérapie pensé pour les structures médico-sociales, sensorielles et inclusives, en séance unique ou en cycle.",
+    "pitch": "Le végétal comme support de soin, pensé pour les structures médico-sociales du Val-d'Oise. Le Val-d'Oise dispose de plusieurs EHPAD et MAS dans des cadres ruraux ou semi-ruraux, terrain favorable à l'hortithérapie en cycle long. Nos cycles s'adaptent aux contraintes des équipes soignantes et aux capacités du public.",
     "why": [
             {
                     "title": "Sensoriel",
-                    "desc": "Le toucher, l'odorat, la vue mobilisés sans exigence cognitive forte. Adapté aux publics avec troubles cognitifs ou sensoriels."
+                    "desc": "Le toucher, l'odorat, la vue mobilisés sans exigence cognitive forte. Adapté aux personnes avec troubles cognitifs, sensoriels ou en perte d'autonomie."
             },
             {
-                    "title": "Adaptable",
-                    "desc": "Format ajustable selon les capacités physiques et cognitives du groupe. L'atelier peut venir au lit, à la table, dans la chambre."
+                    "title": "Ancrage local",
+                    "desc": "Nous travaillons avec des plantes adaptées au climat francilien et à la biographie des résident·e·s, qui reconnaissent souvent les espèces de leur jardin d'enfance."
             },
             {
                     "title": "Apaisant",
-                    "desc": "Le contact aux plantes apaise, recentre, réduit l'agitation. Les équipes soignantes observent souvent un bénéfice immédiat sur l'humeur du groupe."
+                    "desc": "Les équipes soignantes du Val-d'Oise observent un bénéfice immédiat sur l'humeur et l'agitation du groupe, après une séance."
             }
     ],
     "formula": [

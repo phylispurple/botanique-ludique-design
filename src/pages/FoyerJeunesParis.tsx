@@ -9,19 +9,19 @@ const FoyerJeunesParis = () => (
     "title": "Animation foyer jeunes travailleurs Paris",
     "metaTitle": "Animation foyer jeunes Paris, atelier botanique",
     "metaDesc": "Animation en foyer jeunes travailleurs dans le 75 Paris. Atelier botanique inclusif, sensible aux publics fragilisés.",
-    "pitch": "Un atelier botanique pour foyer de jeunes travailleur·ses dans Paris. Format inclusif, sans préjugé, qui pose un moment de calme et de créativité dans un quotidien souvent dense.",
+    "pitch": "Un atelier botanique pour foyer de jeunes travailleur·ses parisien·nes. Paris compte de nombreux Foyers de Jeunes Travailleur·ses (FJT) gérés par l'ALJT et l'URHAJ, en lien avec les politiques jeunesse de la ville. Format inclusif, sans préjugé, qui pose un moment de calme et de créativité.",
     "why": [
             {
                     "title": "Apaisant",
-                    "desc": "Les plantes recentrent, ralentissent, apaisent. Un effet observé dès la première séance, sur des publics parfois en tension."
+                    "desc": "Les plantes recentrent, ralentissent, apaisent. Un effet observé dès la première séance, sur des publics parfois en tension liée à leur parcours."
             },
             {
                     "title": "Sans prérequis",
-                    "desc": "Aucune connaissance botanique demandée, juste l'envie d'essayer. Aucun jugement sur le résultat de la création."
+                    "desc": "Aucune connaissance botanique demandée. Aucun jugement sur le résultat de la création, l'important est le geste et la présence."
             },
             {
                     "title": "Repartir avec",
-                    "desc": "Chaque jeune repart avec une plante à faire vivre dans sa chambre, qui devient un compagnon discret et durable."
+                    "desc": "Chaque jeune repart avec une plante à faire vivre dans sa chambre parisien·nes, qui devient un compagnon discret et durable."
             }
     ],
     "formula": [

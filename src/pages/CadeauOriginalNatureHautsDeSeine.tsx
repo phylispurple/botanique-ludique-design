@@ -9,19 +9,19 @@ const CadeauOriginalNatureHautsDeSeine = () => (
     "title": "Idée de cadeau original nature Hauts-de-Seine",
     "metaTitle": "Cadeau original nature Hauts-de-Seine, atelier ou carte",
     "metaDesc": "Idée de cadeau original nature dans le 92 Hauts-de-Seine. Carte cadeau atelier botanique, terrarium, kokedama, balade ethnobotanique.",
-    "pitch": "Offrir mieux qu'un objet : une expérience, dans Hauts-de-Seine. Nos cartes cadeaux donnent accès à un atelier ou une balade qui restera longtemps en mémoire, et qui repart avec une création vivante.",
+    "pitch": "Offrir mieux qu'un objet : une expérience, des Hauts-de-Seine. Nos cartes cadeaux donnent accès à un atelier ou une balade dans Hauts-de-Seine, qui repart avec une création vivante.",
     "why": [
             {
                     "title": "Vivant",
-                    "desc": "L'expérience marque, la création repart à la maison, la plante grandit. Trois souvenirs en un cadeau."
+                    "desc": "L'expérience marque, la création repart à la maison, la plante grandit. Trois souvenirs en un seul cadeau."
             },
             {
                     "title": "Personnalisable",
-                    "desc": "L'atelier au choix du bénéficiaire, la date au choix, le lieu au choix. Liberté totale dans l'usage."
+                    "desc": "L'atelier au choix du ou de la bénéficiaire, la date au choix, le lieu au choix dans Hauts-de-Seine. Liberté totale dans l'usage."
             },
             {
                     "title": "Local",
-                    "desc": "Soutient une animatrice locale des Hauts-de-Seine plutôt qu'une plateforme nationale qui prélève sa marge."
+                    "desc": "Soutient une animatrice locale qui anime régulièrement à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly, plutôt qu'une plateforme nationale qui prélève sa marge."
             }
     ],
     "formula": [

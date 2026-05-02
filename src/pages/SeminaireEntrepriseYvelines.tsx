@@ -9,19 +9,19 @@ const SeminaireEntrepriseYvelines = () => (
     "title": "Animation séminaire entreprise Yvelines",
     "metaTitle": "Animation séminaire entreprise Yvelines, végétal",
     "metaDesc": "Animation séminaire entreprise dans le 78 Yvelines autour du végétal. Module ou journée complète, terrarium, kokedama, balade.",
-    "pitch": "Une animation de séminaire qui ne ressemble pas aux autres, dans Yvelines. Un temps végétal en plein milieu de votre journée, qui crée du lien autrement et marque durablement les esprits.",
+    "pitch": "Une animation de séminaire pensée pour les sièges du Mantois, les pépinières de PME autour de Saint-Quentin-en-Yvelines et les institutions culturelles autour du château de Versailles. Dans Yvelines, nos modules végétaux s'insèrent dans votre journée, posent un temps de calme manuel et marquent durablement les équipes.",
     "why": [
             {
-                    "title": "Sortir du cadre",
-                    "desc": "Un temps manuel et calme qui change radicalement de la dynamique habituelle d'un séminaire. Les corps se posent, les voix baissent."
+                    "title": "Sortir du PowerPoint",
+                    "desc": "Après plusieurs heures de présentation, l'atelier manuel agit comme une réinitialisation cognitive. Des entreprises souvent ancrées dans des bâtiments historiques, qui apprécient le lien avec un patrimoine vivant."
             },
             {
-                    "title": "Créer du lien",
-                    "desc": "L'atelier fait tomber les rôles et les hiérarchies. Les équipes se redécouvrent par les mains, sans avoir à se justifier."
+                    "title": "Créer du lien horizontal",
+                    "desc": "Autour de la plante, les hiérarchies s'effacent. Le département compte de nombreux sièges sociaux installés dans le triangle Saint-Quentin / Vélizy / Versailles, et un tissu associatif dense autour des villes royales, et nos retours montrent un effet immédiat sur la cohésion."
             },
             {
-                    "title": "Souvenir tangible",
-                    "desc": "Chaque participant·e repart avec sa création, qui rappellera le séminaire pendant des mois sur le bureau ou dans le salon."
+                    "title": "Ancrer dans un territoire",
+                    "desc": "Le séminaire prend racine dans un lieu réel, pas dans une animation hors-sol. Possibilité de balade dans le parc du château de Versailles ou la forêt de Saint-Germain-en-Laye pour prolonger le moment."
             }
     ],
     "formula": [
@@ -31,7 +31,7 @@ const SeminaireEntrepriseYvelines = () => (
             },
             {
                     "line": "Demi-journée",
-                    "detail": "Atelier complet plus balade ethnobotanique dans le parc du château de Versailles ou la forêt de Saint-Germain, ou un parc proche de votre lieu de séminaire."
+                    "detail": "Atelier complet plus balade ethnobotanique dans le parc du château de Versailles ou la forêt de Saint-Germain-en-Laye, ou un parc proche de votre lieu de séminaire."
             },
             {
                     "line": "Journée complète",

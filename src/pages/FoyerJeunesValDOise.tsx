@@ -9,19 +9,19 @@ const FoyerJeunesValDOise = () => (
     "title": "Animation foyer jeunes travailleurs Val-d'Oise",
     "metaTitle": "Animation foyer jeunes Val-d'Oise, atelier botanique",
     "metaDesc": "Animation en foyer jeunes travailleurs dans le 95 Val-d'Oise. Atelier botanique inclusif, sensible aux publics fragilisés.",
-    "pitch": "Un atelier botanique pour foyer de jeunes travailleur·ses dans Val-d'Oise. Format inclusif, sans préjugé, qui pose un moment de calme et de créativité dans un quotidien souvent dense.",
+    "pitch": "Un atelier botanique pour foyer de jeunes travailleur·ses du Val-d'Oise. Le 95 compte plusieurs foyers de jeunes travailleur·ses (Sarcelles, Cergy, Argenteuil), avec des publics en insertion accompagnés par la Mission Locale. Format inclusif, sans préjugé, qui pose un moment de calme et de créativité.",
     "why": [
             {
                     "title": "Apaisant",
-                    "desc": "Les plantes recentrent, ralentissent, apaisent. Un effet observé dès la première séance, sur des publics parfois en tension."
+                    "desc": "Les plantes recentrent, ralentissent, apaisent. Un effet observé dès la première séance, sur des publics parfois en tension liée à leur parcours."
             },
             {
                     "title": "Sans prérequis",
-                    "desc": "Aucune connaissance botanique demandée, juste l'envie d'essayer. Aucun jugement sur le résultat de la création."
+                    "desc": "Aucune connaissance botanique demandée. Aucun jugement sur le résultat de la création, l'important est le geste et la présence."
             },
             {
                     "title": "Repartir avec",
-                    "desc": "Chaque jeune repart avec une plante à faire vivre dans sa chambre, qui devient un compagnon discret et durable."
+                    "desc": "Chaque jeune repart avec une plante à faire vivre dans sa chambre du Val-d'Oise, qui devient un compagnon discret et durable."
             }
     ],
     "formula": [

@@ -9,11 +9,11 @@ const FestivalCulturelParis = () => (
     "title": "Intervention festival culturel Paris",
     "metaTitle": "Intervention festival culturel Paris, atelier végétal",
     "metaDesc": "Intervention en festival culturel dans le 75 Paris. Atelier ou conférence ethnobotanique, format adapté au public festivalier.",
-    "pitch": "Un programme botanique dans votre festival, dans Paris. Conférence, atelier ou stand permanent, pensés pour le public et le rythme festivalier, avec une vraie épaisseur intellectuelle.",
+    "pitch": "Un programme botanique pour les festivals culturels parisien·nes. Paris accueille des festivals culturels exigeants (Nuit Blanche, Pavillon de l'Eau, Fête des Jardins) qui programment volontiers sur le végétal et le vivant. Conférence, atelier ou stand permanent, pensés pour le rythme festivalier et le grand public.",
     "why": [
             {
                     "title": "Différenciant",
-                    "desc": "Une proposition rare dans la programmation festival classique, qui apporte une dimension scientifique et sensorielle."
+                    "desc": "Une proposition rare dans la programmation culturelle, qui apporte une dimension scientifique et sensorielle bienvenue."
             },
             {
                     "title": "Inclusif",
@@ -21,7 +21,7 @@ const FestivalCulturelParis = () => (
             },
             {
                     "title": "Documenté",
-                    "desc": "Notre approche ethnobotanique apporte une réelle profondeur intellectuelle, en cohérence avec les festivals exigeants."
+                    "desc": "Notre approche ethnobotanique apporte une vraie profondeur intellectuelle, en cohérence avec les festivals exigeants parisien·nes."
             }
     ],
     "formula": [

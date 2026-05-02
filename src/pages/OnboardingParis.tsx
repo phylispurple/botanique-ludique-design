@@ -9,19 +9,19 @@ const OnboardingParis = () => (
     "title": "Atelier onboarding collaborateurs Paris",
     "metaTitle": "Atelier onboarding Paris, intégration végétale",
     "metaDesc": "Atelier onboarding collaborateurs dans le 75 Paris. Animation végétale pour intégrer vos nouvelles recrues autrement.",
-    "pitch": "Intégrer ses nouvelles recrues autrement, dans Paris. Un atelier botanique pour faire connaissance, créer des liens et marquer le premier jour avec un objet vivant à emporter sur son bureau.",
+    "pitch": "Intégrer ses nouvelles recrues autrement, pensé pour les sièges des grandes maisons du 8e, les agences créatives du 11e et du 18e, les institutions culturelles et associations du 13e. Un atelier botanique en début de journée d'arrivée, qui crée des liens et marque le premier jour avec un objet vivant.",
     "why": [
             {
-                    "title": "Faciliter le lien",
-                    "desc": "L'atelier manuel met les recrues à l'aise plus vite qu'un tour de table classique. Les mains travaillent, les langues se délient sans effort."
+                    "title": "Brise-glace efficace",
+                    "desc": "Plus rapide qu'un tour de table classique. Les mains travaillent, les langues se délient sans pression."
             },
             {
                     "title": "Cadeau d'accueil",
-                    "desc": "Chaque nouveau·elle repart avec une plante qui grandira sur son bureau. Un point de repère vivant dans l'espace de travail."
+                    "desc": "Chaque nouveau·elle repart avec une plante qui grandira sur son bureau parisien·nes. Un point de repère vivant dans l'espace de travail."
             },
             {
                     "title": "Marque employeur",
-                    "desc": "Un onboarding mémorable qui se raconte sur LinkedIn et entre futur·e·s candidat·e·s. Un signe de soin envers les équipes."
+                    "desc": "Paris concentre une demande très forte en animations originales, avec un tissu B2B varié allant des petites équipes créatives aux grandes directions communication. Un onboarding mémorable participe à votre attractivité auprès des futur·e·s candidat·e·s."
             }
     ],
     "formula": [
