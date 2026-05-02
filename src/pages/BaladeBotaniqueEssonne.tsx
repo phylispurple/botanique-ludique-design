@@ -6,7 +6,7 @@ const BaladeBotaniqueEssonne = () => (
     dept: "Essonne", deptCode: "91", region: "FR-91",
     title: "Balade botanique en Essonne",
     metaTitle: "Balade botanique en Essonne, vallée de Chevreuse et plateaux",
-    metaDesc: "Balade botanique en Essonne. Médiation ethnobotanique dans la vallée de Chevreuse, à Évry et dans les communes du 91.",
+    metaDesc: "Balade botanique en Essonne, vallée de Chevreuse, plateaux et lisières : reconnaissance des plantes sauvages, paysages cultivés et flore typique du sud francilien.",
     intro: "Entre plateaux agricoles, vallées préservées et villes nouvelles, l'Essonne offre une mosaïque de paysages pour relire le végétal sous l'angle culturel et historique.",
     context: "Le 91 combine ruralité, patrimoine scientifique et urbanisme contemporain. Un terrain riche pour proposer des balades adaptées à des publics variés.",
     spots: [

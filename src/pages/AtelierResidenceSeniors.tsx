@@ -7,7 +7,7 @@ const AtelierResidenceSeniors = () => (
     icon: Heart,
     eyebrow: "Résidences seniors",
     title: "Atelier botanique en résidence seniors",
-    metaTitle: "Atelier botanique résidence seniors, animation pour résidences services",
+    metaTitle: "Atelier botanique en résidence seniors et services",
     metaDesc: "Atelier botanique en résidence seniors à Paris et en Île-de-France. Animation douce et stimulante, terrarium, kokedama, herbier.",
     pitch: "Un atelier botanique pensé pour les résidences seniors et résidences services. Un temps stimulant, calme et chargé de sens pour les résidents, qui combine geste manuel, mémoire et conversation.",
     why: [

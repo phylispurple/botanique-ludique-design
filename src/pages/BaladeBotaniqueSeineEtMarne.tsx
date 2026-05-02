@@ -6,7 +6,7 @@ const BaladeBotaniqueSeineEtMarne = () => (
     dept: "Seine-et-Marne", deptCode: "77", region: "FR-77",
     title: "Balade botanique en Seine-et-Marne",
     metaTitle: "Balade botanique en Seine-et-Marne, Fontainebleau et Brie",
-    metaDesc: "Balade botanique en Seine-et-Marne. Lecture ethnobotanique de Fontainebleau, du Gâtinais et des villes du 77.",
+    metaDesc: "Balade botanique en Seine-et-Marne, autour de Fontainebleau et de la Brie : forêts, plaines agricoles et flore régionale, pour scolaires, collectivités et entreprises.",
     intro: "De la forêt de Fontainebleau aux paysages de la Brie, la Seine-et-Marne offre un terrain exceptionnel pour relire le végétal sous l'angle anthropologique et historique.",
     context: "Le 77 conjugue grandes forêts, patrimoine royal et ruralité préservée. Un terrain rêvé pour des balades de plus longue durée et des cycles approfondis.",
     spots: [

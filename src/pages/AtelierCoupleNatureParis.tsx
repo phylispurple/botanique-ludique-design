@@ -8,7 +8,7 @@ const AtelierCoupleNatureParis = () => (
     eyebrow: "Date originale à Paris",
     title: "Atelier botanique en couple à Paris",
     metaTitle: "Atelier botanique en couple à Paris, date originale nature",
-    metaDesc: "Atelier botanique en couple à Paris. Une date originale et sensible, terrarium ou kokedama à fabriquer ensemble.",
+    metaDesc: "Atelier botanique en couple à Paris : terrarium, kokedama ou teinture végétale, une idée de date originale et apaisée loin du restaurant classique.",
     pitch: "Une date différente : pas un cinéma, pas un restaurant, mais deux heures à fabriquer ensemble une plante qui restera chez vous longtemps. Un beau souvenir partagé.",
     why: [
       { title: "Différent", desc: "Sortir des dates classiques pour vivre un moment manuel, calme, qui pousse à parler autrement." },

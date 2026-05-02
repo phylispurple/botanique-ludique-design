@@ -7,7 +7,7 @@ const InterventionMediatheque = () => (
     icon: BookOpen,
     eyebrow: "Lecture publique",
     title: "Intervention en médiathèque",
-    metaTitle: "Intervention médiathèque botanique en Île-de-France, balade et atelier",
+    metaTitle: "Intervention médiathèque botanique en Île-de-France",
     metaDesc: "Intervention en médiathèque autour de la botanique. Balade ethnobotanique, atelier ou conférence pour vos publics adultes et familles.",
     pitch: "Une médiation ethnobotanique pensée pour les médiathèques, leurs collections et leurs publics. Atelier, balade ou conférence, en lien avec votre programmation culturelle et scientifique.",
     why: [
