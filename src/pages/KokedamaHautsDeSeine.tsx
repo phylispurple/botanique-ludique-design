@@ -9,7 +9,7 @@ const KokedamaHautsDeSeine = () => (
     "title": "Atelier kokedama Hauts-de-Seine",
     "metaTitle": "Atelier kokedama Hauts-de-Seine, sphère végétale japonaise",
     "metaDesc": "Atelier kokedama dans le 92 Hauts-de-Seine. Apprenez l'art japonais de la sphère végétale moussue, transmise pas à pas.",
-    "lead": "Le kokedama, sphère de mousse et de plante issue d'une tradition japonaise, se pratique dans Hauts-de-Seine avec la même attention qu'à Kyoto. Une boule de terre, une plante, un fil de jute, et beaucoup de présence dans le geste."boule de mousse\", se pratique dans le Hauts-de-Seine avec la même attention qu'au Japon.",
+    "lead": "Le kokedama, sphère de mousse et de plante issue d'une tradition japonaise, se pratique dans les Hauts-de-Seine avec la même attention qu'à Kyoto. Une boule de terre, une plante, un fil de jute, et beaucoup de présence dans le geste.",
     "story": [
             "Le mot kokedama signifie littéralement \"boule de mousse\". Il dérive du nearai bonsaï, où la motte était présentée nue, sans pot. Au 20e siècle, cette pratique s'est ouverte aux plantes d'intérieur courantes pour gagner les appartements japonais, puis européens dans les années 2000.",
             "À l'inverse du bonsaï qui demande des décennies de patience, le kokedama est accessible en deux heures. Mais la philosophie reste la même : un dialogue lent avec la plante, une attention au modelé, une acceptation de l'imperfection.",

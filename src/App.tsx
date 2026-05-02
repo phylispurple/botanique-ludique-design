@@ -191,7 +191,6 @@ import FoyerJeunesParis from "./pages/FoyerJeunesParis";
 import FoyerJeunesYvelines from "./pages/FoyerJeunesYvelines";
 import FoyerJeunesHautsDeSeine from "./pages/FoyerJeunesHautsDeSeine";
 import FoyerJeunesValDOise from "./pages/FoyerJeunesValDOise";
-import CadeauOriginalNatureParis from "./pages/CadeauOriginalNatureParis";
 import CadeauOriginalNatureYvelines from "./pages/CadeauOriginalNatureYvelines";
 import CadeauOriginalNatureHautsDeSeine from "./pages/CadeauOriginalNatureHautsDeSeine";
 import CadeauOriginalNatureValDOise from "./pages/CadeauOriginalNatureValDOise";
@@ -401,7 +400,6 @@ const App = () => (
                 <Route path="/foyer-jeunes-yvelines" element={<FoyerJeunesYvelines />} />
                 <Route path="/foyer-jeunes-hauts-de-seine" element={<FoyerJeunesHautsDeSeine />} />
                 <Route path="/foyer-jeunes-val-d-oise" element={<FoyerJeunesValDOise />} />
-                <Route path="/cadeau-original-nature-paris" element={<CadeauOriginalNatureParis />} />
                 <Route path="/cadeau-original-nature-yvelines" element={<CadeauOriginalNatureYvelines />} />
                 <Route path="/cadeau-original-nature-hauts-de-seine" element={<CadeauOriginalNatureHautsDeSeine />} />
                 <Route path="/cadeau-original-nature-val-d-oise" element={<CadeauOriginalNatureValDOise />} />
