@@ -131,15 +131,53 @@ const BaladesBotaniques = () => {
           </div>
         </section>
 
-        {/* Voir aussi */}
-        <section className="px-6 md:px-16 lg:px-[120px] py-16 border-t border-[hsl(var(--black))]/15">
-          <p className="font-mono-brand text-[10px] tracking-[2px] uppercase text-[hsl(var(--black))]/50 mb-4">
-            Voir aussi
-          </p>
-          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-            <Link to="/#mediation" className="underline hover:no-underline">Conférences et savoirs</Link>
-            <Link to="/etablissements-scolaires" className="underline hover:no-underline">Interventions scolaires</Link>
-            <Link to="/workshops" className="underline hover:no-underline">Ateliers tous publics</Link>
+        {/* Explorer par territoire et thématique */}
+        <section className="px-6 md:px-16 lg:px-[120px] py-20 border-t border-[hsl(var(--black))]/15">
+          <span className="font-mono-brand text-[11px] tracking-[3px] uppercase text-[hsl(var(--black))]/60 block mb-4">
+            Explorer
+          </span>
+          <h2 className="font-display text-2xl md:text-4xl uppercase leading-[1] mb-12 max-w-[700px]">
+            Toutes les balades<br />par angle
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div>
+              <p className="font-mono-brand text-[10px] tracking-[2.5px] uppercase mb-4 text-[hsl(var(--black))]/60">Par département</p>
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/balade-botanique-paris" className="underline hover:no-underline">Paris (75)</Link></li>
+                <li><Link to="/balade-botanique-yvelines" className="underline hover:no-underline">Yvelines (78)</Link></li>
+                <li><Link to="/balade-botanique-hauts-de-seine" className="underline hover:no-underline">Hauts-de-Seine (92)</Link></li>
+                <li><Link to="/balade-botanique-val-d-oise" className="underline hover:no-underline">Val-d'Oise (95)</Link></li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-mono-brand text-[10px] tracking-[2.5px] uppercase mb-4 text-[hsl(var(--black))]/60">Par public</p>
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/balade-botanique-musee" className="underline hover:no-underline">Musées et institutions</Link></li>
+                <li><Link to="/balade-botanique-jardin-patrimonial" className="underline hover:no-underline">Jardins patrimoniaux</Link></li>
+                <li><Link to="/balade-botanique-entreprise-cse" className="underline hover:no-underline">Entreprises et CSE</Link></li>
+                <li><Link to="/balade-botanique-scolaire" className="underline hover:no-underline">Écoles et collèges</Link></li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-mono-brand text-[10px] tracking-[2.5px] uppercase mb-4 text-[hsl(var(--black))]/60">Par thématique</p>
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/balade-botanique-urbaine-paris" className="underline hover:no-underline">Botanique urbaine</Link></li>
+                <li><Link to="/balade-plantes-sauvages-comestibles-paris" className="underline hover:no-underline">Plantes sauvages comestibles</Link></li>
+                <li><Link to="/balade-botanique-coloniale-paris" className="underline hover:no-underline">Botanique coloniale</Link></li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-mono-brand text-[10px] tracking-[2.5px] uppercase mb-4 text-[hsl(var(--black))]/60">Par saison</p>
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/balade-botanique-printemps-ete" className="underline hover:no-underline">Printemps et été</Link></li>
+                <li><Link to="/agenda" className="underline hover:no-underline">Agenda complet</Link></li>
+              </ul>
+              <p className="font-mono-brand text-[10px] tracking-[2.5px] uppercase mb-4 mt-8 text-[hsl(var(--black))]/60">Voir aussi</p>
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/#mediation" className="underline hover:no-underline">Conférences et savoirs</Link></li>
+                <li><Link to="/workshops" className="underline hover:no-underline">Ateliers tous publics</Link></li>
+              </ul>
+            </div>
           </div>
         </section>
       </main>
