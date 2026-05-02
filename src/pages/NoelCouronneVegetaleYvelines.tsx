@@ -27,19 +27,19 @@ const NoelCouronneVegetaleYvelines = () => (
     "formula": [
             {
                     "line": "Présentation",
-                    "detail": "Petite traversée des végétaux d'hiver et de leurs symboliques européennes : houx, lierre, sapin, gui."
+                    "detail": "Petite traversée des végétaux d'hiver et des traditions de couronnes en France et en Europe."
             },
             {
                     "line": "Composition",
-                    "detail": "Choix des branchages, structuration de la base, ajout des accents colorés et des éléments secs."
+                    "detail": "Choix des branchages locaux (sapin, eucalyptus, pin), structuration de la base sur cercle métallique."
             },
             {
                     "line": "Finition",
-                    "detail": "Ruban, ficelle de jute, pommes de pin, choix de la dernière touche pour personnaliser votre couronne."
+                    "detail": "Ruban de jute, pommes de pin de la forêt de Rambouillet, baies séchées, dernière touche personnelle."
             },
             {
                     "line": "Conseils",
-                    "detail": "Comment garder la couronne fraîche jusqu'à l'Épiphanie avec une simple brumisation hebdomadaire."
+                    "detail": "Brumisation hebdomadaire pour tenir jusqu'à l'Épiphanie, conseils d'exposition adaptés aux maisons des Yvelines."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const NoelCouronneVegetaleYvelines = () => (
     "faqs": [
             {
                     "q": "À quelle période ?",
-                    "a": "De fin novembre à mi-décembre, créneaux limités, réservation à anticiper dès octobre. Au-delà du 15 décembre, plus aucun créneau ne reste libre."
+                    "a": "Fin novembre à mi-décembre, créneaux limités. À Versailles et Saint-Germain, anticiper dès octobre."
             },
             {
                     "q": "Disponible dans le 78 ?",
-                    "a": "Oui, à Versailles, Saint-Germain-en-Laye, Maurepas, Mantes-la-Jolie et plus largement des Yvelines. Le format en entreprise pour célébrer la fin d'année autrement marche très bien."
+                    "a": "Oui, à Versailles, Saint-Germain-en-Laye, Le Vésinet, Maurepas et au-delà. Format en entreprise très demandé dans le triangle Saint-Quentin / Versailles."
             },
             {
-                    "q": "La couronne tient combien de temps ?",
-                    "a": "Avec une brumisation hebdomadaire et une porte non exposée plein sud, environ trois à quatre semaines. Certains conifères tiennent plus."
+                    "q": "Tient combien de temps ?",
+                    "a": "Trois à quatre semaines avec brumisation, parfois plus si la porte n'est pas exposée plein sud."
             },
             {
-                    "q": "Format entreprise possible ?",
-                    "a": "Oui, idéal pour fêter la fin d'année autrement. Notre public mêle familles installées dans les villes de l'ouest parisien, comités d'entreprise des sièges sociaux du Mantois et institutions culturelles autour du château de Versailles sont nombreuses à choisir ce format en décembre."
+                    "q": "Format entreprise ?",
+                    "a": "Oui, formule appréciée des sièges et PME des Yvelines pour fêter la fin d'année."
             }
     ]
   }} />

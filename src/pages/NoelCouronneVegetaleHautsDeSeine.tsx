@@ -27,19 +27,19 @@ const NoelCouronneVegetaleHautsDeSeine = () => (
     "formula": [
             {
                     "line": "Présentation",
-                    "detail": "Petite traversée des végétaux d'hiver et de leurs symboliques européennes : houx, lierre, sapin, gui."
+                    "detail": "Petite traversée des végétaux d'hiver et des symboliques européennes (houx, lierre, sapin, gui)."
             },
             {
                     "line": "Composition",
-                    "detail": "Choix des branchages, structuration de la base, ajout des accents colorés et des éléments secs."
+                    "detail": "Choix de branchages frais, structuration sur cercle, ajout d'éléments secs et colorés."
             },
             {
                     "line": "Finition",
-                    "detail": "Ruban, ficelle de jute, pommes de pin, choix de la dernière touche pour personnaliser votre couronne."
+                    "detail": "Ruban, ficelle de jute, pommes de pin, baies séchées, choix d'une dernière touche personnelle."
             },
             {
                     "line": "Conseils",
-                    "detail": "Comment garder la couronne fraîche jusqu'à l'Épiphanie avec une simple brumisation hebdomadaire."
+                    "detail": "Brumisation pour tenir jusqu'à l'Épiphanie, conseils adaptés aux appartements des Hauts-de-Seine (chauffage central)."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const NoelCouronneVegetaleHautsDeSeine = () => (
     "faqs": [
             {
                     "q": "À quelle période ?",
-                    "a": "De fin novembre à mi-décembre, créneaux limités, réservation à anticiper dès octobre. Au-delà du 15 décembre, plus aucun créneau ne reste libre."
+                    "a": "Fin novembre à mi-décembre, créneaux limités. La Défense et Boulogne saturent vite en décembre."
             },
             {
                     "q": "Disponible dans le 92 ?",
-                    "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement des Hauts-de-Seine. Le format en entreprise pour célébrer la fin d'année autrement marche très bien."
+                    "a": "Oui, à Boulogne, Issy-les-Moulineaux, Neuilly, Sceaux et plus largement. Demande très forte des sièges sociaux."
             },
             {
-                    "q": "La couronne tient combien de temps ?",
-                    "a": "Avec une brumisation hebdomadaire et une porte non exposée plein sud, environ trois à quatre semaines. Certains conifères tiennent plus."
+                    "q": "Tient combien de temps ?",
+                    "a": "Trois à quatre semaines avec brumisation, attention aux appartements très chauffés."
             },
             {
-                    "q": "Format entreprise possible ?",
-                    "a": "Oui, idéal pour fêter la fin d'année autrement. Notre public est concentré sur la première couronne, avec une forte présence de sièges sociaux à La Défense, de comités d'entreprise du quartier d'affaires et de jeunes familles à Boulogne et Issy sont nombreuses à choisir ce format en décembre."
+                    "q": "Format entreprise ?",
+                    "a": "Oui, formule appréciée des grands sièges altoséquanais pour célébrer la fin d'année autrement."
             }
     ]
   }} />

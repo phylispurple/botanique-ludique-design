@@ -27,19 +27,19 @@ const BabyShowerVegetalHautsDeSeine = () => (
     "formula": [
             {
                     "line": "Accueil",
-                    "detail": "Verre d'accueil sans alcool, mise en lien des invitées, présentation du format de la séance."
+                    "detail": "Verre d'accueil sans alcool dans un appartement à Boulogne, un loft à Issy ou une maison à Neuilly, mise en lien des invitées."
             },
             {
                     "line": "Histoire",
-                    "detail": "Petite introduction sur les plantes choisies pour la séance, leurs origines et leur symbolique éventuelle."
+                    "detail": "Introduction sur les plantes de la séance, en clin d'œil au jardin de Joséphine à Malmaison."
             },
             {
                     "line": "Création",
-                    "detail": "Atelier guidé en groupe, autour de la future maman. Notre médiatrice circule pour aider chacune."
+                    "detail": "Atelier guidé autour de la future maman, animé par notre médiatrice."
             },
             {
                     "line": "Cadeau collectif",
-                    "detail": "Création collective offerte à la future maman, en option. Souvent un grand kokedama ou un terrarium plus ambitieux."
+                    "detail": "Création collective offerte à la future maman, souvent une grande composition partagée."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const BabyShowerVegetalHautsDeSeine = () => (
     "faqs": [
             {
                     "q": "Adapté à une femme enceinte ?",
-                    "a": "Oui totalement. Tous les matériaux que nous utilisons sont sains, l'atelier est doux, la future maman participe debout ou assise selon son envie."
+                    "a": "Oui, format pensé pour le confort de la future maman, avec position libre et matériaux sains."
             },
             {
-                    "q": "Vous venez où dans le 92 ?",
-                    "a": "À Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement des Hauts-de-Seine. Le format à domicile fonctionne particulièrement bien pour ce type de moment intime."
+                    "q": "Vous venez où des Hauts-de-Seine ?",
+                    "a": "À Boulogne, Issy-les-Moulineaux, Neuilly, Sceaux et plus largement dans le 92. Très demandé à Boulogne et Neuilly."
             },
             {
-                    "q": "À domicile ou en salle ?",
-                    "a": "Les deux. La majorité des baby showers que nous animons ont lieu chez la future maman ou chez l'organisatrice, dans un cadre familier et chaleureux."
+                    "q": "Format en appartement parisien type haussmannien ?",
+                    "a": "Oui, particulièrement adapté. Nous arrivons avec tout, sans odeur ni salissure."
             },
             {
                     "q": "Combien de temps avant ?",
-                    "a": "Trois à quatre semaines de réservation, davantage pour les week-ends. La période idéale est entre le 6e et le 8e mois de grossesse."
+                    "a": "Trois à quatre semaines, davantage en mai-juin et septembre, périodes très demandées des Hauts-de-Seine."
             }
     ]
   }} />

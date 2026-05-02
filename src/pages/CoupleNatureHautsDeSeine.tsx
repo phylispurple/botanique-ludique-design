@@ -27,19 +27,19 @@ const CoupleNatureHautsDeSeine = () => (
     "formula": [
             {
                     "line": "Accueil",
-                    "detail": "Présentation du matériel et de l'atelier, choix de la formule entre terrarium, kokedama ou bouture."
+                    "detail": "Présentation du matériel et choix de la formule dans un appartement à Boulogne, un loft à Issy ou une maison à Neuilly, ou dans un lieu choisi par vous."
             },
             {
                     "line": "Création à deux",
-                    "detail": "Vous composez ensemble un terrarium ou deux kokedamas en miroir, selon ce que vous préférez."
+                    "detail": "Vous composez ensemble un terrarium ou deux kokedamas en miroir, à votre tempo."
             },
             {
                     "line": "Conseils",
-                    "detail": "Tout ce qu'il faut savoir pour faire vivre votre création à la maison sur le long terme."
+                    "detail": "Conseils adaptés aux appartements des Hauts-de-Seine, souvent lumineux mais avec chauffage soutenu."
             },
             {
                     "line": "Repartir avec",
-                    "detail": "Votre objet végétal à installer chez vous le soir même, sans étape technique supplémentaire."
+                    "detail": "Votre création installée chez vous le soir même, sans manipulation supplémentaire."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const CoupleNatureHautsDeSeine = () => (
     "faqs": [
             {
                     "q": "Format pour une demande en mariage ?",
-                    "a": "Oui, c'est possible et nous l'avons déjà animé plusieurs fois. Discutons-en par mail pour orchestrer le moment discrètement."
+                    "a": "Oui, possible et déjà orchestré des Hauts-de-Seine. Mail pour les détails."
             },
             {
                     "q": "Disponible dans le 92 ?",
-                    "a": "Oui, Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement des Hauts-de-Seine. À domicile ou dans un lieu choisi par vous."
+                    "a": "Oui, Boulogne, Issy-les-Moulineaux, Neuilly, Sceaux et plus largement. Très demandé à Boulogne et Issy."
             },
             {
-                    "q": "À domicile possible ?",
-                    "a": "Oui, c'est même un format souvent demandé pour ce type d'atelier intimiste, dans un appartement ou une maison."
+                    "q": "À domicile ?",
+                    "a": "Oui, format majoritaire. Adapté aux appartements urbains comme aux maisons de Sceaux ou Meudon."
             },
             {
-                    "q": "Carte cadeau possible ?",
-                    "a": "Oui, nous proposons des cartes cadeaux pour offrir l'atelier en couple. Validité un an, atelier au choix au moment de la réservation."
+                    "q": "Carte cadeau ?",
+                    "a": "Oui, valable un an, atelier au choix au moment de la réservation."
             }
     ]
   }} />

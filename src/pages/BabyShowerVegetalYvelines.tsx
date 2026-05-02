@@ -27,19 +27,19 @@ const BabyShowerVegetalYvelines = () => (
     "formula": [
             {
                     "line": "Accueil",
-                    "detail": "Verre d'accueil sans alcool, mise en lien des invitées, présentation du format de la séance."
+                    "detail": "Verre d'accueil sans alcool dans un domaine ou un appartement à Versailles, Saint-Germain ou Le Pecq, mise en lien des invitées."
             },
             {
                     "line": "Histoire",
-                    "detail": "Petite introduction sur les plantes choisies pour la séance, leurs origines et leur symbolique éventuelle."
+                    "detail": "Petite introduction sur les plantes de la séance, en lien avec les jardins historiques des Yvelines."
             },
             {
                     "line": "Création",
-                    "detail": "Atelier guidé en groupe, autour de la future maman. Notre médiatrice circule pour aider chacune."
+                    "detail": "Atelier guidé en cercle autour de la future maman, encadré par notre médiatrice."
             },
             {
                     "line": "Cadeau collectif",
-                    "detail": "Création collective offerte à la future maman, en option. Souvent un grand kokedama ou un terrarium plus ambitieux."
+                    "detail": "Création collective offerte à la future maman, souvent un grand kokedama suspendu."
             }
     ],
     "practical": [
@@ -77,19 +77,19 @@ const BabyShowerVegetalYvelines = () => (
     "faqs": [
             {
                     "q": "Adapté à une femme enceinte ?",
-                    "a": "Oui totalement. Tous les matériaux que nous utilisons sont sains, l'atelier est doux, la future maman participe debout ou assise selon son envie."
+                    "a": "Oui, totalement. Tous les matériaux sont sains, la future maman participe assise ou debout selon son envie."
             },
             {
-                    "q": "Vous venez où dans le 78 ?",
-                    "a": "À Versailles, Saint-Germain-en-Laye, Maurepas, Mantes-la-Jolie et plus largement des Yvelines. Le format à domicile fonctionne particulièrement bien pour ce type de moment intime."
+                    "q": "Vous venez où des Yvelines ?",
+                    "a": "À Versailles, Saint-Germain-en-Laye, Le Vésinet, Maurepas et plus largement dans le 78. Format à domicile particulièrement apprécié."
             },
             {
-                    "q": "À domicile ou en salle ?",
-                    "a": "Les deux. La majorité des baby showers que nous animons ont lieu chez la future maman ou chez l'organisatrice, dans un cadre familier et chaleureux."
+                    "q": "À domicile uniquement ?",
+                    "a": "Non, nous intervenons aussi en lieu privatisé (salle d'un restaurant, appartement loué). À domicile reste le format majoritaire des Yvelines."
             },
             {
                     "q": "Combien de temps avant ?",
-                    "a": "Trois à quatre semaines de réservation, davantage pour les week-ends. La période idéale est entre le 6e et le 8e mois de grossesse."
+                    "a": "Trois à quatre semaines, davantage en mai-juin où les baby showers des Yvelines sont très demandés."
             }
     ]
   }} />
