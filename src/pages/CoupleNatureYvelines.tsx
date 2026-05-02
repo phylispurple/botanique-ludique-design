@@ -9,38 +9,38 @@ const CoupleNatureYvelines = () => (
     "title": "Atelier en couple autour des plantes Yvelines",
     "metaTitle": "Atelier couple botanique Yvelines, à deux",
     "metaDesc": "Atelier botanique en couple dans le 78 Yvelines. Idée de date originale autour des plantes, terrarium ou kokedama à deux.",
-    "pitch": "Une idée de date qui sort du cinéma-resto. Dans le Yvelines, vous composez à deux un objet végétal qui restera chez vous bien après la soirée.",
+    "pitch": "Une idée de date qui sort du cinéma-restaurant, dans Yvelines. Vous composez à deux un objet végétal qui restera chez vous bien après la soirée, et vous repartez avec quelque chose de vivant.",
     "why": [
-        {
-            "title": "Original",
-            "desc": "Loin des formats touristiques classiques. Un vrai moment, une vraie création."
-        },
-        {
-            "title": "À votre rythme",
-            "desc": "Animation guidée mais pas dirigiste. Vous prenez le temps qu'il vous faut."
-        },
-        {
-            "title": "Souvenir vivant",
-            "desc": "Vous repartez avec une plante qui grandira sous vos yeux pendant des années."
-        }
+            {
+                    "title": "Original",
+                    "desc": "Loin des formats touristiques classiques. Un vrai moment manuel, une vraie création, une expérience qui se raconte ensuite."
+            },
+            {
+                    "title": "À votre rythme",
+                    "desc": "Animation guidée mais jamais dirigiste. Vous prenez le temps qu'il vous faut, parlez ou pas, suivez votre propre tempo."
+            },
+            {
+                    "title": "Souvenir vivant",
+                    "desc": "Vous repartez avec une plante qui grandira sous vos yeux pendant des années. Un compagnon de la relation, sans surcharger l'instant."
+            }
     ],
     "formula": [
-        {
-            "line": "Accueil",
-            "detail": "Présentation du matériel et de l'atelier, choix de la formule."
-        },
-        {
-            "line": "Création à deux",
-            "detail": "Vous composez un terrarium ou deux kokedamas en miroir."
-        },
-        {
-            "line": "Conseils",
-            "detail": "Tout ce qu'il faut savoir pour faire vivre votre création."
-        },
-        {
-            "line": "Repartir avec",
-            "detail": "Votre objet végétal à installer chez vous le soir même."
-        }
+            {
+                    "line": "Accueil",
+                    "detail": "Présentation du matériel et choix de la formule dans un domaine ou un appartement à Versailles, Saint-Germain ou Le Pecq, ou dans un lieu choisi par vous."
+            },
+            {
+                    "line": "Création à deux",
+                    "detail": "Vous composez ensemble un terrarium ou deux kokedamas en miroir, à votre rythme."
+            },
+            {
+                    "line": "Conseils",
+                    "detail": "Tout ce qu'il faut savoir pour faire vivre votre création dans une maison ou un appartement des Yvelines."
+            },
+            {
+                    "line": "Repartir avec",
+                    "detail": "Votre objet végétal à installer le soir même, sans étape supplémentaire."
+            }
     ],
     "practical": [
         {
@@ -75,23 +75,23 @@ const CoupleNatureYvelines = () => (
         }
     ],
     "faqs": [
-        {
-            "q": "Format pour une demande ?",
-            "a": "Oui, c'est possible. Discutons-en par mail pour orchestrer le moment discrètement."
-        },
-        {
-            "q": "Disponible dans le 78 ?",
-            "a": "Oui, Versailles, Saint-Germain-en-Laye, Maurepas, Mantes-la-Jolie et plus largement."
-        },
-        {
-            "q": "À domicile possible ?",
-            "a": "Oui, c'est même un format souvent demandé pour ce type d'atelier intimiste."
-        },
-        {
-            "q": "Carte cadeau possible ?",
-            "a": "Oui, nous proposons des cartes cadeaux pour offrir l'atelier."
-        }
+            {
+                    "q": "Format pour une demande en mariage ?",
+                    "a": "Oui, déjà animé plusieurs fois des Yvelines. Discutons-en par mail pour orchestrer discrètement le moment."
+            },
+            {
+                    "q": "Disponible dans le 78 ?",
+                    "a": "Oui, Versailles, Saint-Germain-en-Laye, Le Vésinet, Maurepas et plus largement. Format apprécié des couples de l'ouest parisien."
+            },
+            {
+                    "q": "À domicile ?",
+                    "a": "Oui, c'est même le format majoritaire pour cet atelier intime, dans une maison ou un appartement."
+            },
+            {
+                    "q": "Carte cadeau ?",
+                    "a": "Oui, valable un an, pour offrir l'atelier en couple, avec choix du créneau au moment de la réservation."
+            }
     ]
-}} />
+  }} />
 );
 export default CoupleNatureYvelines;

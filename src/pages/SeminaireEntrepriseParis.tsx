@@ -9,38 +9,38 @@ const SeminaireEntrepriseParis = () => (
     "title": "Animation séminaire entreprise Paris",
     "metaTitle": "Animation séminaire entreprise Paris, végétal",
     "metaDesc": "Animation séminaire entreprise dans le 75 Paris autour du végétal. Module ou journée complète, terrarium, kokedama, balade.",
-    "pitch": "Une animation qui ne ressemble pas aux autres, dans le Paris. Un temps végétal en plein milieu de votre séminaire, qui crée du lien autrement et marque durablement.",
+    "pitch": "Une animation de séminaire pensée pour les sièges des grandes maisons du 8e, les agences créatives du 11e et du 18e, les institutions culturelles et associations du 13e. Dans Paris, nos modules végétaux s'insèrent dans votre journée, posent un temps de calme manuel et marquent durablement les équipes.",
     "why": [
-        {
-            "title": "Sortir du cadre",
-            "desc": "Un temps manuel et calme qui change radicalement de la dynamique d'un séminaire classique."
-        },
-        {
-            "title": "Créer du lien",
-            "desc": "Les ateliers font tomber les rôles et hiérarchies. Les équipes se redécouvrent."
-        },
-        {
-            "title": "Souvenir tangible",
-            "desc": "Chaque participant·e repart avec sa création, qui rappellera le séminaire pendant des mois."
-        }
+            {
+                    "title": "Sortir du PowerPoint",
+                    "desc": "Après plusieurs heures de présentation, l'atelier manuel agit comme une réinitialisation cognitive. Des équipes parisiennes saturées de propositions, qui cherchent du contenu vraiment original et une vraie médiation."
+            },
+            {
+                    "title": "Créer du lien horizontal",
+                    "desc": "Autour de la plante, les hiérarchies s'effacent. Paris concentre une demande très forte en animations originales, avec un tissu B2B varié allant des petites équipes créatives aux grandes directions communication, et nos retours montrent un effet immédiat sur la cohésion."
+            },
+            {
+                    "title": "Ancrer dans un territoire",
+                    "desc": "Le séminaire prend racine dans un lieu réel, pas dans une animation hors-sol. Possibilité de balade dans le Jardin des Plantes ou le parc des Buttes-Chaumont pour prolonger le moment."
+            }
     ],
     "formula": [
-        {
-            "line": "Module 2h",
-            "detail": "Inséré dans une journée plus large, idéal en fin de matinée ou d'après-midi."
-        },
-        {
-            "line": "Demi-journée",
-            "detail": "Atelier complet plus balade ethnobotanique dans un parc proche."
-        },
-        {
-            "line": "Journée complète",
-            "detail": "Programme sur mesure mêlant ateliers, balade, conférence et restitution."
-        },
-        {
-            "line": "Format hybride",
-            "detail": "Combinaison atelier intérieur et balade extérieure, apprécié au printemps."
-        }
+            {
+                    "line": "Module 2h",
+                    "detail": "Inséré dans un séminaire dans vos locaux ou un lieu privatisé parisien, format flexible adapté à votre agenda."
+            },
+            {
+                    "line": "Demi-journée",
+                    "detail": "Atelier complet plus balade ethnobotanique dans le Jardin des Plantes ou le parc des Buttes-Chaumont."
+            },
+            {
+                    "line": "Journée complète",
+                    "detail": "Programme combinant atelier, balade au Jardin des Plantes et conférence sur l'histoire botanique de Paris."
+            },
+            {
+                    "line": "Format extérieur",
+                    "detail": "Atelier dans un parc parisien (Buttes-Chaumont, Bercy, Monceau), pour les saisons douces."
+            }
     ],
     "practical": [
         {
@@ -75,23 +75,23 @@ const SeminaireEntrepriseParis = () => (
         }
     ],
     "faqs": [
-        {
-            "q": "Vous intervenez dans tout le 75 ?",
-            "a": "Oui, à Paris intra-muros, tous les arrondissements et plus largement. Notre équipe se déplace avec tout le matériel."
-        },
-        {
-            "q": "Combien de personnes maximum ?",
-            "a": "Jusqu'à soixante. Au-delà, format à double animatrice possible."
-        },
-        {
-            "q": "Délai de réservation ?",
-            "a": "Six à huit semaines à l'avance idéalement, davantage pour les périodes denses."
-        },
-        {
-            "q": "Adaptation à votre charte ?",
-            "a": "Oui, sur devis. Nous adaptons communication, supports et certaines créations à votre identité."
-        }
+            {
+                    "q": "Vous intervenez dans tout le 75 ?",
+                    "a": "Oui, à tous les arrondissements parisiens et plus largement parisien·nes. Notre équipe se déplace avec tout le matériel végétal et l'outillage."
+            },
+            {
+                    "q": "Combien de personnes au maximum ?",
+                    "a": "Jusqu'à soixante personnes en format atelier classique. Au-delà, nous fonctionnons à double animatrice ou en plusieurs ateliers en parallèle."
+            },
+            {
+                    "q": "Quel délai prévoir ?",
+                    "a": "Six à huit semaines à l'avance, davantage en juin, septembre et décembre. Les sièges des grandes maisons du 8e, les agences créatives du 11e et du 18e planifient souvent en année N-1."
+            },
+            {
+                    "q": "Adaptable à votre charte ?",
+                    "a": "Oui, sur devis. Nous adaptons supports imprimés, étiquettes plantes et certaines créations à votre identité."
+            }
     ]
-}} />
+  }} />
 );
 export default SeminaireEntrepriseParis;

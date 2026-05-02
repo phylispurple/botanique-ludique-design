@@ -9,38 +9,38 @@ const MediathequeHautsDeSeine = () => (
     "title": "Intervention en médiathèque Hauts-de-Seine",
     "metaTitle": "Intervention médiathèque Hauts-de-Seine, animation botanique",
     "metaDesc": "Intervention en médiathèque dans le 92 Hauts-de-Seine. Animation botanique pour public familial, scolaire ou adulte, autour du livre et du vivant.",
-    "pitch": "Un croisement naturel entre le livre et le vivant. Dans le Hauts-de-Seine, nous animons des temps en médiathèque qui prolongent la lecture par l'expérience sensorielle.",
+    "pitch": "Un croisement entre le livre et le vivant, pensé pour le réseau des médiathèques des Hauts-de-Seine. Les médiathèques altoséquanaises proposent une programmation riche, avec des moyens importants pour la médiation scientifique et naturelle. Nous prolongeons les fonds documentaires par une expérience sensorielle.",
     "why": [
-        {
-            "title": "Public large",
-            "desc": "Familles, classes, ados, adultes. Nos formats s'adaptent au public attendu."
-        },
-        {
-            "title": "Lien au fonds",
-            "desc": "Nous nous appuyons sur les ouvrages de la médiathèque pour ancrer l'animation."
-        },
-        {
-            "title": "Médiation douce",
-            "desc": "Une approche sensible, manuelle, sans pression de performance."
-        }
+            {
+                    "title": "Public médiathèque",
+                    "desc": "Familles, classes, ados, adultes curieux, seniors lecteurs. Nos formats s'adaptent à chaque tranche d'horaire de votre programmation."
+            },
+            {
+                    "title": "Lien aux fonds",
+                    "desc": "Nous nous appuyons sur les ouvrages déjà présents dans votre médiathèque (jardinage, sciences, jeunesse) pour ancrer la médiation."
+            },
+            {
+                    "title": "Approche documentée",
+                    "desc": "Notre médiatrice, anthropologue formée à l'EHESS, apporte une vraie épaisseur intellectuelle, en cohérence avec une institution culturelle."
+            }
     ],
     "formula": [
-        {
-            "line": "Heure du conte",
-            "detail": "Lecture d'un texte botanique pour les plus jeunes, prolongée par une activité."
-        },
-        {
-            "line": "Atelier découverte",
-            "detail": "Initiation au terrarium, au kokedama ou à la teinture pour un groupe."
-        },
-        {
-            "line": "Conférence",
-            "detail": "Présentation grand public sur l'ethnobotanique, l'histoire des plantes."
-        },
-        {
-            "line": "Cycle thématique",
-            "detail": "Programmation sur plusieurs semaines, autour d'une saison ou d'un thème."
-        }
+            {
+                    "line": "Heure du conte",
+                    "detail": "Lecture pour les jeunes lecteurs autour d'une plante, format apprécié dans les médiathèques de Vallée Sud Grand Paris."
+            },
+            {
+                    "line": "Atelier découverte",
+                    "detail": "Initiation au terrarium ou à la teinture pour un groupe limité, sur inscription préalable."
+            },
+            {
+                    "line": "Conférence",
+                    "detail": "Présentation sur l'arboretum de la Vallée-aux-Loups ou sur Joséphine et la Malmaison, en lien avec le patrimoine altoséquanais."
+            },
+            {
+                    "line": "Cycle thématique",
+                    "detail": "Programmation sur plusieurs mois en lien avec une exposition ou un fonds documentaire de votre établissement."
+            }
     ],
     "practical": [
         {
@@ -75,23 +75,23 @@ const MediathequeHautsDeSeine = () => (
         }
     ],
     "faqs": [
-        {
-            "q": "Conventionnée DRAC ou département ?",
-            "a": "Nous travaillons régulièrement avec des institutions publiques et adaptons nos devis à leurs cadres."
-        },
-        {
-            "q": "Disponible partout dans le 92 ?",
-            "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et au-delà."
-        },
-        {
-            "q": "Format en cycle possible ?",
-            "a": "Oui, nous proposons des programmations sur plusieurs semaines ou plusieurs saisons."
-        },
-        {
-            "q": "Matériel fourni ?",
-            "a": "Oui, tout le matériel végétal et l'outillage sont apportés par l'équipe."
-        }
+            {
+                    "q": "Travail avec institutions publiques ?",
+                    "a": "Oui, nous intervenons régulièrement avec le réseau des médiathèques de Vallée Sud Grand Paris, Paris Ouest La Défense et Boucle Nord de Seine. Notre statut associatif facilite la facturation publique."
+            },
+            {
+                    "q": "Disponible partout dans le 92 ?",
+                    "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement. Nous nous déplaçons avec tout le matériel."
+            },
+            {
+                    "q": "Formats en cycle possibles ?",
+                    "a": "Oui, c'est la formule la plus impactante : une présence répétée crée un public fidèle et une médiation qui s'approfondit."
+            },
+            {
+                    "q": "Matériel fourni ?",
+                    "a": "Oui, tout le matériel végétal et l'outillage sont apportés par notre équipe. La médiathèque fournit l'espace, l'eau et un point électrique."
+            }
     ]
-}} />
+  }} />
 );
 export default MediathequeHautsDeSeine;

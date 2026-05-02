@@ -9,38 +9,38 @@ const NoelCouronneVegetaleHautsDeSeine = () => (
     "title": "Atelier couronne de Noël végétale Hauts-de-Seine",
     "metaTitle": "Couronne de Noël végétale Hauts-de-Seine, atelier botanique",
     "metaDesc": "Atelier couronne de Noël végétale dans le 92 Hauts-de-Seine. Sapin, eucalyptus, baies, ruban, à composer en deux heures.",
-    "pitch": "Une couronne de Noël qui dure plus que la saison. Dans le Hauts-de-Seine, nous composons des couronnes en végétaux frais et durables, à votre image.",
+    "pitch": "Une couronne de Noël qui dure plus que la saison. Dans Hauts-de-Seine, nous composons des couronnes en végétaux frais et durables, à votre image, loin du plastique et du made in China.",
     "why": [
-        {
-            "title": "Naturel",
-            "desc": "Sapin, eucalyptus, branches de pin, baies fraîches, à l'opposé du plastique."
-        },
-        {
-            "title": "Personnel",
-            "desc": "Chaque couronne est unique, à votre style et à votre porte d'entrée."
-        },
-        {
-            "title": "Convivial",
-            "desc": "Un format chaleureux à vivre entre ami·e·s, en famille ou entre collègues."
-        }
+            {
+                    "title": "Naturel",
+                    "desc": "Sapin, eucalyptus, branches de pin, baies fraîches, fruits secs. À l'opposé du plastique des couronnes de supermarché."
+            },
+            {
+                    "title": "Personnel",
+                    "desc": "Chaque couronne est unique, à votre style et à votre porte d'entrée. Nous proposons une palette large mais c'est vous qui composez."
+            },
+            {
+                    "title": "Convivial",
+                    "desc": "Un format chaleureux à vivre entre ami·e·s, en famille ou entre collègues, en début de saison de Noël. Souvent suivi d'un vin chaud."
+            }
     ],
     "formula": [
-        {
-            "line": "Présentation",
-            "detail": "Petite traversée des végétaux d'hiver et de leurs symboliques européennes."
-        },
-        {
-            "line": "Composition",
-            "detail": "Choix des branchages, structuration, ajout des accents colorés."
-        },
-        {
-            "line": "Finition",
-            "detail": "Ruban, ficelle, pommes de pin, choix de la dernière touche."
-        },
-        {
-            "line": "Conseils",
-            "detail": "Comment garder la couronne fraîche jusqu'aux Rois."
-        }
+            {
+                    "line": "Présentation",
+                    "detail": "Petite traversée des végétaux d'hiver et des symboliques européennes (houx, lierre, sapin, gui)."
+            },
+            {
+                    "line": "Composition",
+                    "detail": "Choix de branchages frais, structuration sur cercle, ajout d'éléments secs et colorés."
+            },
+            {
+                    "line": "Finition",
+                    "detail": "Ruban, ficelle de jute, pommes de pin, baies séchées, choix d'une dernière touche personnelle."
+            },
+            {
+                    "line": "Conseils",
+                    "detail": "Brumisation pour tenir jusqu'à l'Épiphanie, conseils adaptés aux appartements des Hauts-de-Seine (chauffage central)."
+            }
     ],
     "practical": [
         {
@@ -75,23 +75,23 @@ const NoelCouronneVegetaleHautsDeSeine = () => (
         }
     ],
     "faqs": [
-        {
-            "q": "À quelle période ?",
-            "a": "De fin novembre à mi-décembre, créneaux limités, réservation à anticiper."
-        },
-        {
-            "q": "Disponible dans le 92 ?",
-            "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement."
-        },
-        {
-            "q": "La couronne tient combien de temps ?",
-            "a": "Avec brumisation hebdomadaire, environ trois à quatre semaines."
-        },
-        {
-            "q": "Format entreprise possible ?",
-            "a": "Oui, idéal pour fêter la fin d'année autrement avec ses équipes."
-        }
+            {
+                    "q": "À quelle période ?",
+                    "a": "Fin novembre à mi-décembre, créneaux limités. La Défense et Boulogne saturent vite en décembre."
+            },
+            {
+                    "q": "Disponible dans le 92 ?",
+                    "a": "Oui, à Boulogne, Issy-les-Moulineaux, Neuilly, Sceaux et plus largement. Demande très forte des sièges sociaux."
+            },
+            {
+                    "q": "Tient combien de temps ?",
+                    "a": "Trois à quatre semaines avec brumisation, attention aux appartements très chauffés."
+            },
+            {
+                    "q": "Format entreprise ?",
+                    "a": "Oui, formule appréciée des grands sièges altoséquanais pour célébrer la fin d'année autrement."
+            }
     ]
-}} />
+  }} />
 );
 export default NoelCouronneVegetaleHautsDeSeine;
