@@ -121,6 +121,32 @@ import BaladeBotaniqueScolaire from "./pages/BaladeBotaniqueScolaire";
 import BaladePlantesSauvagesParis from "./pages/BaladePlantesSauvagesParis";
 import BaladeBotaniqueColoniale from "./pages/BaladeBotaniqueColoniale";
 import BaladeBotaniquePrintempsEte from "./pages/BaladeBotaniquePrintempsEte";
+import AtelierTeintureVegetaleParis from "./pages/AtelierTeintureVegetaleParis";
+import AtelierKombuchaCuirVegetal from "./pages/AtelierKombuchaCuirVegetal";
+import AtelierEvjfBotaniqueParis from "./pages/AtelierEvjfBotaniqueParis";
+import AtelierAnniversaireEnfantParis from "./pages/AtelierAnniversaireEnfantParis";
+import AtelierAnniversaireAdulteParis from "./pages/AtelierAnniversaireAdulteParis";
+import AtelierBabyShowerVegetal from "./pages/AtelierBabyShowerVegetal";
+import AtelierNoelCouronneVegetale from "./pages/AtelierNoelCouronneVegetale";
+import AtelierCoupleNatureParis from "./pages/AtelierCoupleNatureParis";
+import CadeauOriginalNatureParis from "./pages/CadeauOriginalNatureParis";
+import IdeeCadeauAmoureuxPlantes from "./pages/IdeeCadeauAmoureuxPlantes";
+import GuideTerrarium from "./pages/GuideTerrarium";
+import GuideKokedama from "./pages/GuideKokedama";
+import GuideEthnobotanique from "./pages/GuideEthnobotanique";
+import GuidePlantesTinctoriales from "./pages/GuidePlantesTinctoriales";
+import AnimationSeminaireParis from "./pages/AnimationSeminaireParis";
+import AtelierOnboarding from "./pages/AtelierOnboarding";
+import AnimationSoireeEntreprise from "./pages/AnimationSoireeEntreprise";
+import InterventionMediatheque from "./pages/InterventionMediatheque";
+import InterventionFestivalCulturel from "./pages/InterventionFestivalCulturel";
+import AnimationFoyerJeunes from "./pages/AnimationFoyerJeunes";
+import AtelierTherapeutiqueJardin from "./pages/AtelierTherapeutiqueJardin";
+import AtelierResidenceSeniors from "./pages/AtelierResidenceSeniors";
+import BaladeBotaniqueSeineSaintDenis from "./pages/BaladeBotaniqueSeineSaintDenis";
+import BaladeBotaniqueValDeMarne from "./pages/BaladeBotaniqueValDeMarne";
+import BaladeBotaniqueEssonne from "./pages/BaladeBotaniqueEssonne";
+import BaladeBotaniqueSeineEtMarne from "./pages/BaladeBotaniqueSeineEtMarne";
 
 const queryClient = new QueryClient();
 
@@ -256,6 +282,33 @@ const App = () => (
                  <Route path="/balade-plantes-sauvages-comestibles-paris" element={<BaladePlantesSauvagesParis />} />
                  <Route path="/balade-botanique-coloniale-paris" element={<BaladeBotaniqueColoniale />} />
                  <Route path="/balade-botanique-printemps-ete" element={<BaladeBotaniquePrintempsEte />} />
+                 {/* Vague SEO 6 - Produits, occasions, guides, B2B, social, départements */}
+                 <Route path="/atelier-teinture-vegetale-paris" element={<AtelierTeintureVegetaleParis />} />
+                 <Route path="/atelier-kombucha-cuir-vegetal" element={<AtelierKombuchaCuirVegetal />} />
+                 <Route path="/atelier-evjf-botanique-paris" element={<AtelierEvjfBotaniqueParis />} />
+                 <Route path="/atelier-anniversaire-enfant-nature-paris" element={<AtelierAnniversaireEnfantParis />} />
+                 <Route path="/atelier-anniversaire-adulte-nature-paris" element={<AtelierAnniversaireAdulteParis />} />
+                 <Route path="/atelier-baby-shower-vegetal-paris" element={<AtelierBabyShowerVegetal />} />
+                 <Route path="/atelier-noel-couronne-vegetale-paris" element={<AtelierNoelCouronneVegetale />} />
+                 <Route path="/atelier-couple-nature-paris" element={<AtelierCoupleNatureParis />} />
+                 <Route path="/cadeau-original-nature-paris" element={<CadeauOriginalNatureParis />} />
+                 <Route path="/idee-cadeau-amoureux-des-plantes" element={<IdeeCadeauAmoureuxPlantes />} />
+                 <Route path="/guide/comment-faire-un-terrarium" element={<GuideTerrarium />} />
+                 <Route path="/guide/comment-faire-un-kokedama" element={<GuideKokedama />} />
+                 <Route path="/guide/ethnobotanique-definition" element={<GuideEthnobotanique />} />
+                 <Route path="/guide/plantes-tinctoriales-ile-de-france" element={<GuidePlantesTinctoriales />} />
+                 <Route path="/animation-seminaire-entreprise-paris" element={<AnimationSeminaireParis />} />
+                 <Route path="/atelier-onboarding-collaborateurs" element={<AtelierOnboarding />} />
+                 <Route path="/animation-soiree-entreprise-vegetale" element={<AnimationSoireeEntreprise />} />
+                 <Route path="/intervention-mediatheque-botanique" element={<InterventionMediatheque />} />
+                 <Route path="/intervention-festival-culturel-botanique" element={<InterventionFestivalCulturel />} />
+                 <Route path="/animation-foyer-jeunes-travailleurs" element={<AnimationFoyerJeunes />} />
+                 <Route path="/atelier-therapeutique-jardin" element={<AtelierTherapeutiqueJardin />} />
+                 <Route path="/atelier-residence-seniors-paris" element={<AtelierResidenceSeniors />} />
+                 <Route path="/balade-botanique-seine-saint-denis" element={<BaladeBotaniqueSeineSaintDenis />} />
+                 <Route path="/balade-botanique-val-de-marne" element={<BaladeBotaniqueValDeMarne />} />
+                 <Route path="/balade-botanique-essonne" element={<BaladeBotaniqueEssonne />} />
+                 <Route path="/balade-botanique-seine-et-marne" element={<BaladeBotaniqueSeineEtMarne />} />
                 {/* Redirects for existing pages with alternate URLs */}
              <Route path="/atelier-botanique-ehpad" element={<Navigate to="/animation-seniors-ehpad" replace />} />
              <Route path="/atelier-botanique-ecole" element={<Navigate to="/animation-scolaire-nature" replace />} />
