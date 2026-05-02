@@ -112,6 +112,15 @@ import BaladesBotaniques from "./pages/BaladesBotaniques";
 import BaladeBotaniqueMusee from "./pages/BaladeBotaniqueMusee";
 import BaladeBotaniqueJardinPatrimonial from "./pages/BaladeBotaniqueJardinPatrimonial";
 import BaladeBotaniqueUrbaineParis from "./pages/BaladeBotaniqueUrbaineParis";
+import BaladeBotaniqueParis from "./pages/BaladeBotaniqueParis";
+import BaladeBotaniqueYvelines from "./pages/BaladeBotaniqueYvelines";
+import BaladeBotaniqueHautsDeSeine from "./pages/BaladeBotaniqueHautsDeSeine";
+import BaladeBotaniqueValDOise from "./pages/BaladeBotaniqueValDOise";
+import BaladeBotaniqueEntreprise from "./pages/BaladeBotaniqueEntreprise";
+import BaladeBotaniqueScolaire from "./pages/BaladeBotaniqueScolaire";
+import BaladePlantesSauvagesParis from "./pages/BaladePlantesSauvagesParis";
+import BaladeBotaniqueColoniale from "./pages/BaladeBotaniqueColoniale";
+import BaladeBotaniquePrintempsEte from "./pages/BaladeBotaniquePrintempsEte";
 
 const queryClient = new QueryClient();
 
@@ -238,6 +247,15 @@ const App = () => (
                  <Route path="/balade-botanique-musee" element={<BaladeBotaniqueMusee />} />
                  <Route path="/balade-botanique-jardin-patrimonial" element={<BaladeBotaniqueJardinPatrimonial />} />
                  <Route path="/balade-botanique-urbaine-paris" element={<BaladeBotaniqueUrbaineParis />} />
+                 <Route path="/balade-botanique-paris" element={<BaladeBotaniqueParis />} />
+                 <Route path="/balade-botanique-yvelines" element={<BaladeBotaniqueYvelines />} />
+                 <Route path="/balade-botanique-hauts-de-seine" element={<BaladeBotaniqueHautsDeSeine />} />
+                 <Route path="/balade-botanique-val-d-oise" element={<BaladeBotaniqueValDOise />} />
+                 <Route path="/balade-botanique-entreprise-cse" element={<BaladeBotaniqueEntreprise />} />
+                 <Route path="/balade-botanique-scolaire" element={<BaladeBotaniqueScolaire />} />
+                 <Route path="/balade-plantes-sauvages-comestibles-paris" element={<BaladePlantesSauvagesParis />} />
+                 <Route path="/balade-botanique-coloniale-paris" element={<BaladeBotaniqueColoniale />} />
+                 <Route path="/balade-botanique-printemps-ete" element={<BaladeBotaniquePrintempsEte />} />
                 {/* Redirects for existing pages with alternate URLs */}
              <Route path="/atelier-botanique-ehpad" element={<Navigate to="/animation-seniors-ehpad" replace />} />
              <Route path="/atelier-botanique-ecole" element={<Navigate to="/animation-scolaire-nature" replace />} />
