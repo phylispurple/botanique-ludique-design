@@ -9,38 +9,38 @@ const MediathequeHautsDeSeine = () => (
     "title": "Intervention en médiathèque Hauts-de-Seine",
     "metaTitle": "Intervention médiathèque Hauts-de-Seine, animation botanique",
     "metaDesc": "Intervention en médiathèque dans le 92 Hauts-de-Seine. Animation botanique pour public familial, scolaire ou adulte, autour du livre et du vivant.",
-    "pitch": "Un croisement naturel entre le livre et le vivant. Dans le Hauts-de-Seine, nous animons des temps en médiathèque qui prolongent la lecture par l'expérience sensorielle.",
+    "pitch": "Un croisement naturel entre le livre et le vivant, dans Hauts-de-Seine. Nous animons des temps en médiathèque qui prolongent la lecture par l'expérience sensorielle, en s'appuyant sur les fonds documentaires.",
     "why": [
-        {
-            "title": "Public large",
-            "desc": "Familles, classes, ados, adultes. Nos formats s'adaptent au public attendu."
-        },
-        {
-            "title": "Lien au fonds",
-            "desc": "Nous nous appuyons sur les ouvrages de la médiathèque pour ancrer l'animation."
-        },
-        {
-            "title": "Médiation douce",
-            "desc": "Une approche sensible, manuelle, sans pression de performance."
-        }
+            {
+                    "title": "Public large",
+                    "desc": "Familles, classes en sortie, ados, adultes curieux, seniors lecteurs. Nos formats s'adaptent au public attendu et à la temporalité disponible."
+            },
+            {
+                    "title": "Lien au fonds",
+                    "desc": "Nous nous appuyons sur les ouvrages déjà présents dans la médiathèque pour ancrer l'animation dans une médiation documentaire concrète."
+            },
+            {
+                    "title": "Médiation douce",
+                    "desc": "Une approche sensible, manuelle, sans pression de performance. Le contact aux plantes ouvre des conversations qu'un livre seul n'ouvrirait pas."
+            }
     ],
     "formula": [
-        {
-            "line": "Heure du conte",
-            "detail": "Lecture d'un texte botanique pour les plus jeunes, prolongée par une activité."
-        },
-        {
-            "line": "Atelier découverte",
-            "detail": "Initiation au terrarium, au kokedama ou à la teinture pour un groupe."
-        },
-        {
-            "line": "Conférence",
-            "detail": "Présentation grand public sur l'ethnobotanique, l'histoire des plantes."
-        },
-        {
-            "line": "Cycle thématique",
-            "detail": "Programmation sur plusieurs semaines, autour d'une saison ou d'un thème."
-        }
+            {
+                    "line": "Heure du conte",
+                    "detail": "Lecture d'un texte botanique pour les plus jeunes, prolongée par une activité tactile autour d'une plante."
+            },
+            {
+                    "line": "Atelier découverte",
+                    "detail": "Initiation au terrarium, au kokedama ou à la teinture pour un groupe restreint, sur inscription préalable."
+            },
+            {
+                    "line": "Conférence",
+                    "detail": "Présentation grand public sur l'ethnobotanique, l'histoire des plantes ou un thème en lien avec la programmation."
+            },
+            {
+                    "line": "Cycle thématique",
+                    "detail": "Programmation sur plusieurs semaines, autour d'une saison ou d'un fil documentaire, avec restitution publique."
+            }
     ],
     "practical": [
         {
@@ -75,23 +75,23 @@ const MediathequeHautsDeSeine = () => (
         }
     ],
     "faqs": [
-        {
-            "q": "Conventionnée DRAC ou département ?",
-            "a": "Nous travaillons régulièrement avec des institutions publiques et adaptons nos devis à leurs cadres."
-        },
-        {
-            "q": "Disponible partout dans le 92 ?",
-            "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et au-delà."
-        },
-        {
-            "q": "Format en cycle possible ?",
-            "a": "Oui, nous proposons des programmations sur plusieurs semaines ou plusieurs saisons."
-        },
-        {
-            "q": "Matériel fourni ?",
-            "a": "Oui, tout le matériel végétal et l'outillage sont apportés par l'équipe."
-        }
+            {
+                    "q": "Conventionnée DRAC ou département ?",
+                    "a": "Nous travaillons régulièrement avec des institutions publiques et adaptons nos devis aux cadres conventionnés. Notre statut associatif facilite la facturation."
+            },
+            {
+                    "q": "Disponible partout dans le 92 ?",
+                    "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et au-delà. Nous nous déplaçons avec tout le matériel nécessaire à l'animation."
+            },
+            {
+                    "q": "Format en cycle possible ?",
+                    "a": "Oui, c'est même la formule la plus impactante. Une présence répétée crée un public fidèle et une médiation qui s'approfondit."
+            },
+            {
+                    "q": "Matériel fourni ?",
+                    "a": "Oui, tout le matériel végétal et l'outillage sont apportés par notre équipe. La médiathèque fournit l'espace et l'eau."
+            }
     ]
-}} />
+  }} />
 );
 export default MediathequeHautsDeSeine;

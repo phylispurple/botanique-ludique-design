@@ -9,29 +9,29 @@ const KokedamaHautsDeSeine = () => (
     "title": "Atelier kokedama Hauts-de-Seine",
     "metaTitle": "Atelier kokedama Hauts-de-Seine, sphère végétale japonaise",
     "metaDesc": "Atelier kokedama dans le 92 Hauts-de-Seine. Apprenez l'art japonais de la sphère végétale moussue, transmise pas à pas.",
-    "lead": "Une sphère de mousse, une plante qui en jaillit, un fil de jute pour tenir l'ensemble. Le kokedama, littéralement \"boule de mousse\", se pratique dans le Hauts-de-Seine avec la même attention qu'au Japon.",
+    "lead": "Le kokedama, sphère de mousse et de plante issue d'une tradition japonaise, se pratique dans Hauts-de-Seine avec la même attention qu'à Kyoto. Une boule de terre, une plante, un fil de jute, et beaucoup de présence dans le geste."boule de mousse\", se pratique dans le Hauts-de-Seine avec la même attention qu'au Japon.",
     "story": [
-        "Le kokedama trouve ses racines dans la tradition japonaise du nearai bonsaï, où la motte de terre nue se suffit à elle-même. Au fil du 20e siècle, l'art se simplifie pour gagner les intérieurs contemporains.",
-        "Nous animons cet atelier dans le Hauts-de-Seine pour des particuliers, des EVJF, des comités d'entreprise. Les déplacements sont possibles à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly.",
-        "Vous repartez avec votre kokedama, suspendu ou posé, et les gestes simples pour le faire vivre plusieurs années."
+            "Le mot kokedama signifie littéralement \"boule de mousse\". Il dérive du nearai bonsaï, où la motte était présentée nue, sans pot. Au 20e siècle, cette pratique s'est ouverte aux plantes d'intérieur courantes pour gagner les appartements japonais, puis européens dans les années 2000.",
+            "À l'inverse du bonsaï qui demande des décennies de patience, le kokedama est accessible en deux heures. Mais la philosophie reste la même : un dialogue lent avec la plante, une attention au modelé, une acceptation de l'imperfection.",
+            "Dans Hauts-de-Seine, nous animons cet atelier dans les ateliers des particuliers, dans les espaces d'entreprise et lors d'événements privés à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly. Le format se prête particulièrement bien aux EVJF, anniversaires et team buildings car il combine apprentissage technique et moment méditatif."
     ],
     "steps": [
-        {
-            "title": "Origines du kokedama",
-            "desc": "Une mise en contexte rapide, du bonsaï à la version contemporaine."
-        },
-        {
-            "title": "Choix de la plante",
-            "desc": "Fougère, lierre, asparagus : sélection guidée selon votre intérieur."
-        },
-        {
-            "title": "Façonnage de la sphère",
-            "desc": "Mélange de substrat, modelage à la main, habillage de mousse, ligature au fil de jute."
-        },
-        {
-            "title": "Entretien et arrosage",
-            "desc": "La technique du bain pour maintenir la plante en vie sereinement."
-        }
+            {
+                    "title": "Origines et philosophie",
+                    "desc": "Une mise en contexte sur le nearai bonsaï, le wabi-sabi et la diffusion contemporaine du kokedama hors du Japon."
+            },
+            {
+                    "title": "Choix de la plante",
+                    "desc": "Fougère, lierre, asparagus, plantes vertes : sélection guidée selon la luminosité de votre intérieur et vos habitudes d'arrosage."
+            },
+            {
+                    "title": "Modelage de la sphère",
+                    "desc": "Mélange de substrat akadama et terre noire, modelage à la main, habillage de mousse, ligature au fil de jute. Le geste compte autant que le résultat."
+            },
+            {
+                    "title": "Vivre avec son kokedama",
+                    "desc": "Technique du bain pour l'arrosage, exposition idéale, signes de manque d'eau ou d'excès. Les bons réflexes pour plusieurs années."
+            }
     ],
     "formats": [
         {
@@ -68,23 +68,23 @@ const KokedamaHautsDeSeine = () => (
         }
     ],
     "faqs": [
-        {
-            "q": "Vous déplacez-vous dans le 92 ?",
-            "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement dans le département."
-        },
-        {
-            "q": "Quelle plante repart-on ?",
-            "a": "Vous choisissez parmi plusieurs options proposées le jour J : fougères, lierre, asparagus, plantes vertes adaptées."
-        },
-        {
-            "q": "Combien de temps vit un kokedama ?",
-            "a": "Plusieurs années avec un arrosage régulier par bain et une lumière indirecte."
-        },
-        {
-            "q": "Format privatisé possible ?",
-            "a": "Oui, dès six personnes, à domicile ou en entreprise."
-        }
+            {
+                    "q": "Disponible dans toutes les villes des Hauts-de-Seine ?",
+                    "a": "Oui, à Boulogne-Billancourt, Nanterre, Issy-les-Moulineaux, Neuilly et plus largement dans le 92. Pour les zones plus excentrées, nous étudions chaque demande au cas par cas."
+            },
+            {
+                    "q": "La mousse est-elle prélevée localement ?",
+                    "a": "Non, par souci de protection des sous-bois. Nous utilisons de la mousse issue de filières professionnelles ou de la mousse de sphaigne réhydratée."
+            },
+            {
+                    "q": "Combien de temps vit un kokedama ?",
+                    "a": "Plusieurs années avec un arrosage régulier par bain et une lumière indirecte. Certains de nos participant·e·s reviennent avec leur kokedama trois ans plus tard, encore vivace."
+            },
+            {
+                    "q": "Pour quelle occasion ce format est-il pensé ?",
+                    "a": "EVJF, anniversaires adultes, team building, baby shower. Notre public est concentré sur la première couronne, avec une forte présence de sièges sociaux à La Défense, de comités d'entreprise du quartier d'affaires et de jeunes familles à Boulogne et Issy apprécient particulièrement ce format pour son côté méditatif."
+            }
     ]
-}} />
+  }} />
 );
 export default KokedamaHautsDeSeine;

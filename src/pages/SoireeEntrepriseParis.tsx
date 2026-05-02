@@ -9,38 +9,38 @@ const SoireeEntrepriseParis = () => (
     "title": "Animation soirée entreprise végétale Paris",
     "metaTitle": "Animation soirée entreprise Paris, format végétal",
     "metaDesc": "Animation soirée entreprise dans le 75 Paris autour du végétal. Format atelier debout, fluide, en parallèle d'un cocktail.",
-    "pitch": "Une animation de soirée qui ne perturbe pas le cocktail, dans le Paris. Format debout, fluide, où chacun·e passe à son rythme et repart avec une création.",
+    "pitch": "Une animation de soirée qui ne perturbe pas le cocktail, dans Paris. Format debout, fluide, où chacun·e passe à son rythme et repart avec une création.",
     "why": [
-        {
-            "title": "Format debout",
-            "desc": "L'atelier vient à eux, en îlot, sans interrompre la circulation."
-        },
-        {
-            "title": "Parle à tout le monde",
-            "desc": "Pas besoin d'expertise. Tout le monde repart avec un objet réussi."
-        },
-        {
-            "title": "Mémorable",
-            "desc": "Une animation qui se raconte ensuite et qui marque la soirée."
-        }
+            {
+                    "title": "Format debout",
+                    "desc": "L'atelier vient à eux, en îlot, sans interrompre la circulation des invité·e·s entre buffet et bar."
+            },
+            {
+                    "title": "Parle à tout le monde",
+                    "desc": "Pas besoin d'expertise. Le format est conçu pour que chacun·e réussisse sa création en quinze minutes maximum."
+            },
+            {
+                    "title": "Mémorable",
+                    "desc": "Une animation qui se raconte le lendemain et qui marque la soirée bien plus qu'un photobooth."
+            }
     ],
     "formula": [
-        {
-            "line": "Stand atelier",
-            "detail": "Un îlot installé pendant le cocktail, avec une animatrice et tout le matériel."
-        },
-        {
-            "line": "Mini créations",
-            "detail": "Bouture, mini terrarium, sachet aromatique, formats rapides."
-        },
-        {
-            "line": "À emporter",
-            "detail": "Chaque personne repart avec sa création dans un emballage soigné."
-        },
-        {
-            "line": "Module long",
-            "detail": "Possibilité d'un atelier assis pour un nombre limité de participants."
-        }
+            {
+                    "line": "Stand atelier",
+                    "detail": "Un îlot installé pendant le cocktail, avec une animatrice et tout le matériel pour les passages successifs."
+            },
+            {
+                    "line": "Mini créations",
+                    "detail": "Bouture, mini terrarium en flacon, sachet aromatique. Formats rapides, adaptés au flux d'une soirée."
+            },
+            {
+                    "line": "À emporter",
+                    "detail": "Chaque personne repart avec sa création dans un emballage soigné, prêt à être glissé dans un sac."
+            },
+            {
+                    "line": "Module long",
+                    "detail": "Possibilité d'un atelier assis pour un nombre limité de participants, en parallèle du stand debout."
+            }
     ],
     "practical": [
         {
@@ -75,23 +75,23 @@ const SoireeEntrepriseParis = () => (
         }
     ],
     "faqs": [
-        {
-            "q": "Disponible dans tout le 75 ?",
-            "a": "Oui, Paris intra-muros, tous les arrondissements et au-delà."
-        },
-        {
-            "q": "Soirée fin d'année ?",
-            "a": "C'est une période très demandée, à anticiper deux mois à l'avance."
-        },
-        {
-            "q": "Personnalisation possible ?",
-            "a": "Oui, étiquette, choix de plantes, packaging à votre image."
-        },
-        {
-            "q": "Format extérieur ?",
-            "a": "Possible en saison douce, à condition d'avoir un abri en cas de pluie."
-        }
+            {
+                    "q": "Disponible dans tout le 75 ?",
+                    "a": "Oui, tous les arrondissements parisiens et au-delà. Nous nous adaptons aux contraintes de lieux d'événement (rooftops, lofts, salons)."
+            },
+            {
+                    "q": "Soirée fin d'année ?",
+                    "a": "C'est une période très demandée, à anticiper deux mois à l'avance. Décembre se remplit dès septembre."
+            },
+            {
+                    "q": "Personnalisation possible ?",
+                    "a": "Oui, étiquette personnalisée, choix de plantes, packaging à votre image. Nous travaillons avec votre équipe communication."
+            },
+            {
+                    "q": "Format extérieur ?",
+                    "a": "Possible en saison douce, à condition d'avoir un abri en cas de pluie. Nous évitons les soirées en extérieur entre novembre et mars."
+            }
     ]
-}} />
+  }} />
 );
 export default SoireeEntrepriseParis;
