@@ -134,6 +134,32 @@ const LandingTeamBuilding = () => {
         </div>
       </section>
 
+      {/* CARROUSEL PHOTOS */}
+      <section className="py-12 bg-foreground border-y-[3px] border-foreground overflow-hidden">
+        <div className="mb-8 px-4 container mx-auto max-w-6xl flex items-end justify-between gap-4 flex-wrap">
+          <div>
+            <span className="font-mono text-xs uppercase tracking-[2px] text-yellow">Aperçu</span>
+            <h2 className="font-display text-2xl md:text-4xl uppercase leading-[0.95] tracking-[-1px] text-primary-foreground mt-2">
+              Nos ateliers en <span className="text-yellow">images</span>
+            </h2>
+          </div>
+          <Link to="/gallery" className="font-mono text-[11px] uppercase tracking-[1.5px] text-primary-foreground border-b-2 border-yellow hover:text-yellow transition-colors pb-1">
+            Voir toute la galerie →
+          </Link>
+        </div>
+        <PhotoCarousel
+          images={[
+            { src: galleryTerrarium, alt: "Atelier terrarium en entreprise — Botanique Ludique" },
+            { src: galleryWorkshopGroup, alt: "Team building botanique en groupe — Botanique Ludique" },
+            { src: galleryKokedamaGarden, alt: "Atelier kokedama d'entreprise — Botanique Ludique" },
+            { src: galleryTeinture, alt: "Atelier teinture végétale collaborative — Botanique Ludique" },
+            { src: galleryFlowerCrown, alt: "Atelier création florale en entreprise — Botanique Ludique" },
+            { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs naturels — Botanique Ludique" },
+            { src: galleryMiniTerrarium, alt: "Mini terrarium d'équipe — Botanique Ludique" },
+          ]}
+        />
+      </section>
+
       {/* BÉNÉFICES */}
       <section className="py-20 px-4 bg-cream">
         <div className="container mx-auto max-w-6xl">
