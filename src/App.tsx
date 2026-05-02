@@ -108,6 +108,10 @@ import MediationCulturelleNatureParis from "./pages/MediationCulturelleNaturePar
 import MediationCulturelleNatureYvelines from "./pages/MediationCulturelleNatureYvelines";
 import MediationCulturelleNatureHautsDeSeine from "./pages/MediationCulturelleNatureHautsDeSeine";
 import MediationCulturelleNatureValDOise from "./pages/MediationCulturelleNatureValDOise";
+import BaladesBotaniques from "./pages/BaladesBotaniques";
+import BaladeBotaniqueMusee from "./pages/BaladeBotaniqueMusee";
+import BaladeBotaniqueJardinPatrimonial from "./pages/BaladeBotaniqueJardinPatrimonial";
+import BaladeBotaniqueUrbaineParis from "./pages/BaladeBotaniqueUrbaineParis";
 
 const queryClient = new QueryClient();
 
@@ -229,6 +233,11 @@ const App = () => (
                  <Route path="/mediation-culturelle-nature-yvelines" element={<MediationCulturelleNatureYvelines />} />
                  <Route path="/mediation-culturelle-nature-hauts-de-seine" element={<MediationCulturelleNatureHautsDeSeine />} />
                  <Route path="/mediation-culturelle-nature-val-d-oise" element={<MediationCulturelleNatureValDOise />} />
+                 {/* Balades botaniques */}
+                 <Route path="/balades-botaniques" element={<BaladesBotaniques />} />
+                 <Route path="/balade-botanique-musee" element={<BaladeBotaniqueMusee />} />
+                 <Route path="/balade-botanique-jardin-patrimonial" element={<BaladeBotaniqueJardinPatrimonial />} />
+                 <Route path="/balade-botanique-urbaine-paris" element={<BaladeBotaniqueUrbaineParis />} />
                 {/* Redirects for existing pages with alternate URLs */}
              <Route path="/atelier-botanique-ehpad" element={<Navigate to="/animation-seniors-ehpad" replace />} />
              <Route path="/atelier-botanique-ecole" element={<Navigate to="/animation-scolaire-nature" replace />} />
