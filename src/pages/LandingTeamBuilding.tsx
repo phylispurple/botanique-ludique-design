@@ -9,6 +9,14 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
+import PhotoCarousel from "@/components/PhotoCarousel";
+import galleryTerrarium from "@/assets/gallery-terrarium.webp";
+import galleryTeinture from "@/assets/gallery-teinture-1.webp";
+import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
+import galleryKokedamaGarden from "@/assets/gallery-kokedama-garden.webp";
+import galleryWorkshopGroup from "@/assets/gallery-workshop-group.webp";
+import gallerySachetSenteur from "@/assets/gallery-sachet-senteur.webp";
+import galleryMiniTerrarium from "@/assets/gallery-mini-terrarium.jpeg";
 import {
   Users,
   Leaf,
