@@ -6,7 +6,7 @@ const BaladeBotaniqueSeineSaintDenis = () => (
     dept: "Seine-Saint-Denis", deptCode: "93", region: "FR-93",
     title: "Balade botanique en Seine-Saint-Denis",
     metaTitle: "Balade botanique en Seine-Saint-Denis pour villes et écoles",
-    metaDesc: "Balade botanique en Seine-Saint-Denis. Médiation ethnobotanique pour mairies, médiathèques et écoles du 93.",
+    metaDesc: "Balade botanique en Seine-Saint-Denis pour villes, écoles et associations : parcs, friches et plantes urbaines, lecture sensible et anthropologique du vivant.",
     intro: "Du parc de la Courneuve aux friches reconquises, la Seine-Saint-Denis offre un terrain singulier pour relire le végétal urbain à hauteur d'habitant·e·s.",
     context: "Le 93 conjugue grands parcs départementaux, friches industrielles végétalisées et tissu associatif riche. Un département idéal pour des balades qui parlent à tous les publics.",
     spots: [

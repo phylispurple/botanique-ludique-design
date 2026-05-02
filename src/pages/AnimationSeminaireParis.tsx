@@ -7,7 +7,7 @@ const AnimationSeminaireParis = () => (
     icon: Sparkles,
     eyebrow: "Séminaire entreprise",
     title: "Animation séminaire entreprise à Paris",
-    metaTitle: "Animation séminaire entreprise à Paris, atelier botanique original",
+    metaTitle: "Animation séminaire entreprise à Paris autour du végétal",
     metaDesc: "Animation séminaire entreprise à Paris autour du végétal. Module ou journée complète, terrarium, kokedama, balade ou teinture pour vos équipes.",
     pitch: "Une animation qui ne ressemble pas aux autres. Un temps végétal en plein milieu de votre séminaire, qui crée du lien autrement et marque durablement les esprits.",
     why: [

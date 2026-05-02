@@ -6,7 +6,7 @@ const BaladeBotaniqueValDeMarne = () => (
     dept: "Val-de-Marne", deptCode: "94", region: "FR-94",
     title: "Balade botanique dans le Val-de-Marne",
     metaTitle: "Balade botanique dans le Val-de-Marne, parcs et bords de Marne",
-    metaDesc: "Balade botanique dans le Val-de-Marne. Lecture ethnobotanique des parcs, bords de Marne et villes du 94.",
+    metaDesc: "Balade botanique dans le Val-de-Marne le long de la Marne et dans les parcs : flore urbaine, plantes spontanées et lectures historiques du paysage francilien.",
     intro: "Des bords de Marne aux roseraies de L'Haÿ-les-Roses, le Val-de-Marne offre une diversité botanique propice à des balades sensibles et patrimoniales.",
     context: "Le 94 abrite des jardins remarquables, un patrimoine impressionniste et un tissu municipal dynamique. Un département idéal pour des médiations grand public.",
     spots: [

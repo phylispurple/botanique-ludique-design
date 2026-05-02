@@ -8,7 +8,7 @@ const AtelierAnniversaireAdulteParis = () => (
     eyebrow: "Anniversaire adulte nature",
     title: "Atelier anniversaire adulte à Paris",
     metaTitle: "Anniversaire adulte nature à Paris, atelier botanique original",
-    metaDesc: "Anniversaire adulte original à Paris autour de la botanique. Terrarium, kokedama ou teinture végétale entre ami·e·s.",
+    metaDesc: "Anniversaire adulte à Paris autour des plantes : terrarium, kokedama, teinture végétale ou couronne, un format original et apaisé pour vos invité·es.",
     pitch: "Un anniversaire qui change du restaurant, sans pour autant tomber dans l'animation enfantine. Un moment partagé, manuel et sensible autour des plantes, pour célébrer en intimité.",
     why: [
       { title: "Original", desc: "Une activité rare et raffinée pour célébrer un anniversaire entre adultes, ami·e·s ou famille." },

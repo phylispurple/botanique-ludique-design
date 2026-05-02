@@ -7,7 +7,7 @@ const AnimationSoireeEntreprise = () => (
     icon: Sparkles,
     eyebrow: "Soirée entreprise",
     title: "Animation soirée entreprise végétale",
-    metaTitle: "Animation soirée entreprise végétale, alternative aux animations classiques",
+    metaTitle: "Animation soirée entreprise végétale à Paris et IDF",
     metaDesc: "Animation soirée entreprise autour du végétal à Paris. Une alternative douce aux animations classiques, terrarium, couronne, teinture.",
     pitch: "Une animation de soirée d'entreprise qui ne ressemble pas aux autres. Pas de jeu de quiz hurlé, pas de déguisement forcé : un atelier botanique pour faire descendre la pression et favoriser les vraies conversations.",
     why: [
