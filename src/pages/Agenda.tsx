@@ -1,11 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
-import { Calendar as CalendarIcon, MapPin, Clock, Users, ExternalLink, ArrowRight, Mail, Leaf, Sprout } from "lucide-react";
+import { Calendar as CalendarIcon, MapPin, Clock, Users, ExternalLink, ArrowRight, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
 
 const upcomingEvents = [
   {
@@ -34,11 +32,11 @@ const upcomingEvents = [
   },
   {
     id: "kokedama-maurepas",
-    name: "Atelier Kokedama – Parent-Enfant",
+    name: "Atelier Kokedama, Parent-Enfant",
     date: "Mardi 20 mai 2026",
-    time: "15h30 – 17h00",
+    time: "15h30 / 17h00",
     location: "Relais Marianne, Maurepas (78)",
-    audience: "Maurepasien·nes uniquement – Parent-Enfant",
+    audience: "Maurepasien·nes, Parent-Enfant",
     spots: "",
     description: "Atelier parent-enfant pour créer ensemble votre propre kokedama. Réservé aux habitants de Maurepas.",
     linkType: "external" as const,
@@ -46,20 +44,20 @@ const upcomingEvents = [
   },
   {
     id: "balade-ecole-du-breuil",
-    name: "Balade Botanique : Histoire politique et culturelle des jardins",
+    name: "Balade Botanique : histoire politique et culturelle des jardins",
     date: "Samedi 31 mai 2026",
     time: "Horaires à confirmer",
-    location: "École Du Breuil, Paris – Fête de l'École",
+    location: "École Du Breuil, Paris, Fête de l'École",
     audience: "Tout public",
     spots: "",
-    description: "Dans le cadre de la Fête de l'École Du Breuil, participez à une balade botanique passionnante sur l'histoire politique et culturelle des jardins.",
+    description: "Dans le cadre de la Fête de l'École Du Breuil, une balade botanique passionnante sur l'histoire politique et culturelle des jardins.",
     linkType: "coming" as const,
   },
   {
     id: "kokedama-franconville",
-    name: "Atelier Kokedama – Les Jardins Suspendus",
+    name: "Atelier Kokedama, Les Jardins Suspendus",
     date: "Samedi 5 juillet 2026",
-    time: "10h30 – 12h30",
+    time: "10h30 / 12h30",
     location: "Buttes du Parisis, Franconville",
     audience: "Tout public",
     spots: "",
@@ -70,7 +68,7 @@ const upcomingEvents = [
   },
   {
     id: "balade-st-quentin",
-    name: "Balade Botanique – Agglomération de Saint-Quentin-en-Yvelines",
+    name: "Balade Botanique, Saint-Quentin-en-Yvelines",
     date: "Courant septembre 2026",
     time: "À confirmer",
     location: "Saint-Quentin-en-Yvelines (78)",
@@ -86,237 +84,264 @@ const pastEvents = [
     id: "wardian-case-22-avril",
     name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
     date: "Mercredi 22 avril 2026",
-    time: "16h00 – 17h30",
+    time: "16h00 / 17h30",
     location: "La Rochefoucauld, Paris 14e",
     audience: "Tout public",
     description: "Histoire fascinante de la Wardian Case et fabrication d'un mini terrarium.",
   },
   {
     id: "stage-botanique-chatou",
-    name: "Stage Botanique – Vacances de Printemps",
+    name: "Stage Botanique, Vacances de Printemps",
     date: "Du 20 au 24 avril 2026",
-    time: "10h30 – 12h00",
+    time: "10h30 / 12h00",
     location: "MJC de Chatou",
-    audience: "8–15 ans",
+    audience: "8 / 15 ans",
     description: "Une semaine de découverte botanique pendant les vacances de printemps.",
   },
   {
     id: "stage-botanique-bezons",
-    name: "Stage Botanique – Adolescents",
+    name: "Stage Botanique, Adolescents",
     date: "Du 20 au 24 avril 2026",
     time: "",
     location: "Espace Elsa Triolet-Aragon, Bezons",
-    audience: "13–17 ans",
+    audience: "13 / 17 ans",
     description: "Stage botanique dédié aux adolescents : activités scientifiques et créatives.",
   },
 ];
 
+// Couleurs alternées pour les bandeaux date
+const dateColors = ["bg-yellow", "bg-green-pale", "bg-orange-light", "bg-blue-light", "bg-yellow", "bg-green-pale"];
+
 const Agenda = () => {
-  const eventsSchema = upcomingEvents.map(event => ({
+  const eventsSchema = upcomingEvents.map((event) => ({
     "@type": "Event",
-    "name": event.name,
-    "description": event.description,
-    "startDate": event.date,
-    "location": {
-      "@type": "Place",
-      "name": event.location,
-    },
-    "offers": {
+    name: event.name,
+    description: event.description,
+    startDate: event.date,
+    location: { "@type": "Place", name: event.location },
+    offers: {
       "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "EUR",
-      "url": "https://botaniqueludique.com/agenda"
+      price: "0",
+      priceCurrency: "EUR",
+      url: "https://botaniqueludique.com/agenda",
     },
-    "organizer": {
+    organizer: {
       "@type": "Person",
-      "name": "Vanessa Charlery",
-      "url": "https://botaniqueludique.com/about"
-    }
+      name: "Vanessa Charlery",
+      url: "https://botaniqueludique.com/about",
+    },
   }));
 
   return (
-    <div className="min-h-screen relative bg-background">
+    <div className="min-h-screen bg-cream">
       <SEO
-        title="Agenda des Ateliers Botaniques | Paris & IDF"
-        description="📅 Retrouvez tous les prochains ateliers et balades botaniques de Botanique Ludique à Paris et en Île-de-France. Kokedama, terrarium, teinture végétale."
+        title="Agenda des Ateliers Botaniques | Paris & Île-de-France"
+        description="Retrouvez tous les prochains ateliers et balades botaniques de Botanique Ludique à Paris et en Île-de-France. Kokedama, terrarium, teinture végétale."
         keywords="agenda atelier botanique, réservation atelier Paris, dates ateliers Yvelines, planning ateliers botaniques"
         canonical="/agenda"
       />
       <SchemaOrg type="Course" data={eventsSchema} />
-      <FloatingIllustrations />
       <Navigation />
 
-      <main className="pt-32 pb-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-5xl mx-auto">
+      {/* HERO */}
+      <section className="pt-32 pb-16 px-4 bg-green relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: "radial-gradient(circle, hsl(var(--foreground)) 1.5px, transparent 1.5px)",
+            backgroundSize: "24px 24px",
+          }}
+          aria-hidden
+        />
+        <div className="container mx-auto max-w-5xl relative">
+          <div className="inline-flex items-center gap-2 border-brutal bg-yellow px-4 py-2 mb-8 shadow-brutal">
+            <CalendarIcon className="w-4 h-4" />
+            <span className="font-mono text-[11px] uppercase tracking-[2px] font-bold">Agenda 2026</span>
+          </div>
+          <h1 className="font-display text-[clamp(2.5rem,8vw,6rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+            Prochains<br />
+            <span className="bg-yellow text-foreground px-3 inline-block -rotate-1 border-brutal shadow-brutal">
+              événements
+            </span>
+          </h1>
+          <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl leading-relaxed">
+            Ateliers, stages et balades botaniques à Paris et en Île-de-France. Inscrivez-vous pour partager un moment avec le vivant.
+          </p>
+        </div>
+      </section>
 
-            {/* Hero */}
-            <div className="mb-16 animate-fade-in text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 border-2 border-foreground bg-accent/30 mb-6" style={{ boxShadow: '3px 3px 0 hsl(var(--foreground))' }}>
-                <CalendarIcon className="w-4 h-4 text-foreground" />
-                <span className="text-xs uppercase tracking-[0.2em] font-bold text-foreground" style={{ fontFamily: 'Space Mono, monospace' }}>
-                  Agenda 2026
-                </span>
-              </div>
-              <h1 className="text-[2.4rem] sm:text-5xl md:text-6xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: 'hsl(var(--foreground))' }}>
-                Prochains événements
-              </h1>
-              <p className="text-lg text-foreground/60 max-w-2xl mx-auto" style={{ fontFamily: 'Fraunces, serif', fontStyle: 'italic' }}>
-                Ateliers, stages et balades botaniques à Paris et en Île-de-France
-              </p>
-              <div className="flex justify-center gap-3 mt-6">
-                <Leaf className="w-5 h-5 text-primary/40" />
-                <Sprout className="w-5 h-5 text-primary/60" />
-                <Leaf className="w-5 h-5 text-primary/40" />
-              </div>
-            </div>
+      {/* ÉVÉNEMENTS À VENIR */}
+      <section className="py-20 px-4 bg-cream">
+        <div className="container mx-auto max-w-5xl">
+          <div className="mb-12">
+            <span className="font-mono text-xs uppercase tracking-[2px] text-primary">/ 01</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2">
+              À <span className="text-primary">venir</span>
+            </h2>
+          </div>
 
-            {/* Events grid */}
-            <div className="grid gap-6 md:gap-8 animate-fade-in">
-              {upcomingEvents.map((event, index) => (
-                <div
-                  key={event.id}
-                  className="group border-3 border-foreground bg-background hover:bg-accent/10 transition-all duration-300 hover:-translate-y-1"
-                  style={{
-                    boxShadow: '5px 5px 0 hsl(var(--foreground))',
-                    animationDelay: `${index * 80}ms`,
-                  }}
-                >
-                  <div className="flex flex-col md:flex-row">
-                    {/* Date sidebar */}
-                    <div className="md:w-52 flex-shrink-0 bg-primary/10 border-b-3 md:border-b-0 md:border-r-3 border-foreground p-5 md:p-6 flex flex-col justify-center items-center text-center">
-                      <Leaf className="w-5 h-5 text-primary/50 mb-2" />
-                      <p className="text-xs uppercase tracking-wider font-bold text-foreground/60 mb-1" style={{ fontFamily: 'Space Mono, monospace' }}>
-                        Date
-                      </p>
-                      <p className="text-sm font-bold text-foreground leading-tight">{event.date}</p>
-                      {event.time && (
-                        <p className="text-xs text-foreground/50 mt-1.5 flex items-center gap-1">
-                          <Clock className="w-3 h-3" /> {event.time}
-                        </p>
+          <div className="space-y-0">
+            {upcomingEvents.map((event, index) => (
+              <article
+                key={event.id}
+                className="border-brutal bg-cream -mt-[3px] hover:-translate-y-1 hover:shadow-brutal transition-all"
+              >
+                <div className="flex flex-col md:flex-row">
+                  {/* Bandeau date */}
+                  <div
+                    className={`md:w-56 shrink-0 ${dateColors[index % dateColors.length]} border-b-[3px] md:border-b-0 md:border-r-[3px] border-foreground p-6 flex flex-col justify-center`}
+                  >
+                    <span className="font-mono text-[10px] uppercase tracking-[2px] text-foreground/60 mb-2">
+                      Date
+                    </span>
+                    <span className="font-display text-lg uppercase leading-tight tracking-tight">
+                      {event.date}
+                    </span>
+                    {event.time && (
+                      <span className="font-mono text-xs uppercase tracking-[1.5px] text-foreground/70 mt-3 flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5" />
+                        {event.time}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Contenu */}
+                  <div className="flex-1 p-6 md:p-8 flex flex-col gap-4">
+                    <h3 className="font-display text-xl md:text-2xl uppercase leading-tight tracking-tight">
+                      {event.name}
+                    </h3>
+                    <p className="font-body text-sm text-foreground/80 leading-relaxed">
+                      {event.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[1.5px] text-foreground/70">
+                      <span className="flex items-center gap-1.5">
+                        <MapPin className="w-3.5 h-3.5 text-primary" />
+                        {event.location}
+                      </span>
+                      {event.spots && (
+                        <span className="flex items-center gap-1.5">
+                          <Users className="w-3.5 h-3.5 text-primary" />
+                          {event.spots}
+                        </span>
                       )}
                     </div>
 
-                    {/* Content */}
-                    <div className="flex-1 p-5 md:p-6 space-y-3">
-                      <h2 className="text-lg md:text-xl font-bold group-hover:text-primary transition-colors leading-snug" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: 'hsl(var(--foreground))' }}>
-                        {event.name}
-                      </h2>
-                      <p className="text-sm text-foreground/60 leading-relaxed">{event.description}</p>
+                    <div className="flex flex-wrap items-center gap-3 pt-3 mt-auto border-t-[3px] border-foreground">
+                      <span className="font-mono text-[10px] uppercase tracking-[1.5px] px-3 py-1.5 border-brutal-thin bg-foreground text-primary-foreground">
+                        {event.audience}
+                      </span>
 
-                      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-foreground/50">
-                        <span className="flex items-center gap-1.5">
-                          <MapPin className="w-3.5 h-3.5 text-primary" /> {event.location}
+                      {event.linkType === "external" && event.externalUrl && (
+                        <a
+                          href={event.externalUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="ml-auto inline-flex items-center gap-2 bg-yellow text-foreground border-brutal shadow-brutal px-5 py-3 font-display uppercase text-xs tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all"
+                        >
+                          {(event as any).buttonLabel || "S'inscrire"}
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      )}
+                      {event.linkType === "internal" && (event as any).internalUrl && (
+                        <Link
+                          to={(event as any).internalUrl}
+                          className="ml-auto inline-flex items-center gap-2 bg-foreground text-primary-foreground border-brutal shadow-brutal px-5 py-3 font-display uppercase text-xs tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all"
+                        >
+                          S'inscrire
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </Link>
+                      )}
+                      {event.linkType === "coming" && (
+                        <span className="ml-auto inline-flex items-center gap-2 px-5 py-3 border-[3px] border-dashed border-foreground/40 font-display uppercase text-xs tracking-wide text-foreground/50 cursor-default">
+                          Inscription à venir
                         </span>
-                        {event.spots && (
-                          <span className="flex items-center gap-1.5">
-                            <Users className="w-3.5 h-3.5 text-primary" /> {event.spots}
-                          </span>
-                        )}
-                      </div>
-
-                      <div className="flex flex-wrap items-center gap-3 pt-2">
-                        <Badge className="bg-accent/20 text-foreground border-2 border-foreground/20 text-xs font-bold uppercase tracking-wider">
-                          {event.audience}
-                        </Badge>
-
-                        {event.linkType === "external" && event.externalUrl && (
-                          <a
-                            href={event.externalUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="ml-auto inline-flex items-center gap-2 px-5 py-2.5 border-2 border-foreground bg-foreground text-background hover:bg-primary hover:border-primary hover:text-primary-foreground text-xs uppercase tracking-wider font-bold transition-all duration-300"
-                            style={{ boxShadow: '3px 3px 0 hsl(var(--primary))' }}
-                          >
-                            {(event as any).buttonLabel || "S'inscrire"} <ExternalLink className="w-3.5 h-3.5" />
-                          </a>
-                        )}
-                        {event.linkType === "internal" && (event as any).internalUrl && (
-                          <Link
-                            to={(event as any).internalUrl}
-                            className="ml-auto inline-flex items-center gap-2 px-5 py-2.5 border-2 border-foreground bg-foreground text-background hover:bg-primary hover:border-primary hover:text-primary-foreground text-xs uppercase tracking-wider font-bold transition-all duration-300"
-                            style={{ boxShadow: '3px 3px 0 hsl(var(--primary))' }}
-                          >
-                            S'inscrire <ArrowRight className="w-3.5 h-3.5" />
-                          </Link>
-                        )}
-                        {event.linkType === "coming" && (
-                          <span className="ml-auto inline-flex items-center gap-2 px-5 py-2.5 border-2 border-dashed border-foreground/30 text-foreground/40 text-xs uppercase tracking-wider font-bold cursor-default">
-                            Inscription à venir
-                          </span>
-                        )}
-                      </div>
+                      )}
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            {/* Past events */}
-            <div className="mt-20 animate-fade-in">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="h-px flex-1 bg-foreground/20" />
-                <h2 className="text-xs uppercase tracking-[0.25em] font-bold text-foreground/60" style={{ fontFamily: 'Space Mono, monospace' }}>
-                  Événements passés
-                </h2>
-                <div className="h-px flex-1 bg-foreground/20" />
-              </div>
-              <div className="grid gap-4 md:grid-cols-2">
-                {pastEvents.map((event) => (
-                  <div
-                    key={event.id}
-                    className="border-2 border-foreground/30 bg-background/50 p-5 opacity-70 hover:opacity-90 transition-opacity"
-                  >
-                    <p className="text-xs uppercase tracking-wider font-bold text-foreground/50 mb-2" style={{ fontFamily: 'Space Mono, monospace' }}>
-                      {event.date}{event.time ? ` · ${event.time}` : ''}
-                    </p>
-                    <h3 className="text-base font-bold text-foreground/80 mb-2 leading-snug" style={{ fontFamily: 'Fraunces, serif', fontWeight: 500 }}>
-                      {event.name}
-                    </h3>
-                    <p className="text-sm text-foreground/50 mb-3">{event.description}</p>
-                    <div className="flex items-center gap-3 text-xs text-foreground/40">
-                      <span className="flex items-center gap-1">
-                        <MapPin className="w-3 h-3" /> {event.location}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Users className="w-3 h-3" /> {event.audience}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* CTA Atelier sur mesure */}
-            <div className="mt-16 border-3 border-foreground p-8 md:p-12 text-center animate-fade-in bg-primary/5" style={{ boxShadow: '6px 6px 0 hsl(var(--foreground))' }}>
-              <Sprout className="w-8 h-8 text-primary mx-auto mb-4" />
-              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: 'hsl(var(--foreground))' }}>
-                Vous souhaitez organiser un atelier ?
-              </h2>
-              <p className="text-foreground/60 mb-8 max-w-xl mx-auto">
-                Nous organisons des ateliers sur-mesure pour les entreprises, collectivités, écoles et EHPAD partout en Île-de-France.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-foreground bg-foreground text-background hover:bg-primary hover:border-primary hover:text-primary-foreground text-xs uppercase tracking-[0.15em] font-bold transition-all duration-300"
-                  style={{ boxShadow: '3px 3px 0 hsl(var(--primary))' }}
-                >
-                  <Mail className="w-4 h-4" />
-                  Nous écrire
-                </Link>
-                <Link
-                  to="/pro"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-foreground text-foreground hover:bg-foreground hover:text-background text-xs uppercase tracking-[0.15em] font-bold transition-all duration-300"
-                >
-                  Offres professionnelles
-                </Link>
-              </div>
-            </div>
-
+              </article>
+            ))}
           </div>
         </div>
-      </main>
+      </section>
+
+      {/* CTA SUR MESURE */}
+      <section className="py-20 px-4 bg-foreground text-primary-foreground relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "radial-gradient(circle, hsl(var(--primary-foreground)) 1.5px, transparent 1.5px)",
+            backgroundSize: "24px 24px",
+          }}
+          aria-hidden
+        />
+        <div className="container mx-auto max-w-4xl text-center relative">
+          <span className="font-mono text-xs uppercase tracking-[2px] text-yellow">/ Sur mesure</span>
+          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2 mb-6">
+            Organiser un<br />
+            <span className="bg-yellow text-foreground px-3 inline-block -rotate-1 border-brutal">atelier ?</span>
+          </h2>
+          <p className="font-body text-lg text-primary-foreground/80 mb-10 max-w-xl mx-auto">
+            Nous organisons des ateliers sur mesure pour les entreprises, collectivités, écoles et EHPAD partout en Île-de-France.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-yellow text-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all"
+            >
+              <Mail className="w-4 h-4" />
+              Nous écrire
+            </Link>
+            <Link
+              to="/pro"
+              className="inline-flex items-center gap-2 bg-cream text-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all"
+            >
+              Offres professionnelles
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ÉVÉNEMENTS PASSÉS */}
+      <section className="py-20 px-4 bg-cream">
+        <div className="container mx-auto max-w-5xl">
+          <div className="mb-12">
+            <span className="font-mono text-xs uppercase tracking-[2px] text-foreground/50">/ Archives</span>
+            <h2 className="font-display text-[clamp(1.75rem,4vw,2.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2">
+              Événements passés
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-0">
+            {pastEvents.map((event) => (
+              <div
+                key={event.id}
+                className="border-brutal bg-cream -ml-[3px] -mt-[3px] p-6 opacity-75 hover:opacity-100 hover:bg-green-pale transition-all"
+              >
+                <span className="font-mono text-[10px] uppercase tracking-[2px] text-foreground/60 block mb-2">
+                  {event.date}
+                  {event.time ? ` · ${event.time}` : ""}
+                </span>
+                <h3 className="font-display text-base md:text-lg uppercase leading-tight tracking-tight mb-3">
+                  {event.name}
+                </h3>
+                <p className="font-body text-sm text-foreground/70 mb-4">{event.description}</p>
+                <div className="flex flex-wrap gap-3 font-mono text-[10px] uppercase tracking-[1.5px] text-foreground/60 pt-3 border-t-[3px] border-foreground/20">
+                  <span className="flex items-center gap-1">
+                    <MapPin className="w-3 h-3" />
+                    {event.location}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Users className="w-3 h-3" />
+                    {event.audience}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
