@@ -147,6 +147,54 @@ import BaladeBotaniqueSeineSaintDenis from "./pages/BaladeBotaniqueSeineSaintDen
 import BaladeBotaniqueValDeMarne from "./pages/BaladeBotaniqueValDeMarne";
 import BaladeBotaniqueEssonne from "./pages/BaladeBotaniqueEssonne";
 import BaladeBotaniqueSeineEtMarne from "./pages/BaladeBotaniqueSeineEtMarne";
+import TerrariumYvelines from "./pages/TerrariumYvelines";
+import TerrariumHautsDeSeine from "./pages/TerrariumHautsDeSeine";
+import KokedamaYvelines from "./pages/KokedamaYvelines";
+import KokedamaHautsDeSeine from "./pages/KokedamaHautsDeSeine";
+import TeintureVegetaleYvelines from "./pages/TeintureVegetaleYvelines";
+import TeintureVegetaleHautsDeSeine from "./pages/TeintureVegetaleHautsDeSeine";
+import EvjfYvelines from "./pages/EvjfYvelines";
+import EvjfHautsDeSeine from "./pages/EvjfHautsDeSeine";
+import AnniversaireAdulteYvelines from "./pages/AnniversaireAdulteYvelines";
+import AnniversaireAdulteHautsDeSeine from "./pages/AnniversaireAdulteHautsDeSeine";
+import BabyShowerVegetalYvelines from "./pages/BabyShowerVegetalYvelines";
+import BabyShowerVegetalHautsDeSeine from "./pages/BabyShowerVegetalHautsDeSeine";
+import NoelCouronneVegetaleYvelines from "./pages/NoelCouronneVegetaleYvelines";
+import NoelCouronneVegetaleHautsDeSeine from "./pages/NoelCouronneVegetaleHautsDeSeine";
+import CoupleNatureYvelines from "./pages/CoupleNatureYvelines";
+import CoupleNatureHautsDeSeine from "./pages/CoupleNatureHautsDeSeine";
+import SeminaireEntrepriseParis from "./pages/SeminaireEntrepriseParis";
+import SeminaireEntrepriseYvelines from "./pages/SeminaireEntrepriseYvelines";
+import SeminaireEntrepriseHautsDeSeine from "./pages/SeminaireEntrepriseHautsDeSeine";
+import SeminaireEntrepriseValDOise from "./pages/SeminaireEntrepriseValDOise";
+import MediathequeParis from "./pages/MediathequeParis";
+import MediathequeYvelines from "./pages/MediathequeYvelines";
+import MediathequeHautsDeSeine from "./pages/MediathequeHautsDeSeine";
+import MediathequeValDOise from "./pages/MediathequeValDOise";
+import HortitherapieParis from "./pages/HortitherapieParis";
+import HortitherapieYvelines from "./pages/HortitherapieYvelines";
+import HortitherapieHautsDeSeine from "./pages/HortitherapieHautsDeSeine";
+import HortitherapieValDOise from "./pages/HortitherapieValDOise";
+import OnboardingParis from "./pages/OnboardingParis";
+import OnboardingYvelines from "./pages/OnboardingYvelines";
+import OnboardingHautsDeSeine from "./pages/OnboardingHautsDeSeine";
+import OnboardingValDOise from "./pages/OnboardingValDOise";
+import SoireeEntrepriseParis from "./pages/SoireeEntrepriseParis";
+import SoireeEntrepriseYvelines from "./pages/SoireeEntrepriseYvelines";
+import SoireeEntrepriseHautsDeSeine from "./pages/SoireeEntrepriseHautsDeSeine";
+import SoireeEntrepriseValDOise from "./pages/SoireeEntrepriseValDOise";
+import FestivalCulturelParis from "./pages/FestivalCulturelParis";
+import FestivalCulturelYvelines from "./pages/FestivalCulturelYvelines";
+import FestivalCulturelHautsDeSeine from "./pages/FestivalCulturelHautsDeSeine";
+import FestivalCulturelValDOise from "./pages/FestivalCulturelValDOise";
+import FoyerJeunesParis from "./pages/FoyerJeunesParis";
+import FoyerJeunesYvelines from "./pages/FoyerJeunesYvelines";
+import FoyerJeunesHautsDeSeine from "./pages/FoyerJeunesHautsDeSeine";
+import FoyerJeunesValDOise from "./pages/FoyerJeunesValDOise";
+import CadeauOriginalNatureParis from "./pages/CadeauOriginalNatureParis";
+import CadeauOriginalNatureYvelines from "./pages/CadeauOriginalNatureYvelines";
+import CadeauOriginalNatureHautsDeSeine from "./pages/CadeauOriginalNatureHautsDeSeine";
+import CadeauOriginalNatureValDOise from "./pages/CadeauOriginalNatureValDOise";
 
 const queryClient = new QueryClient();
 
@@ -309,6 +357,54 @@ const App = () => (
                  <Route path="/balade-botanique-val-de-marne" element={<BaladeBotaniqueValDeMarne />} />
                  <Route path="/balade-botanique-essonne" element={<BaladeBotaniqueEssonne />} />
                  <Route path="/balade-botanique-seine-et-marne" element={<BaladeBotaniqueSeineEtMarne />} />
+                <Route path="/atelier-terrarium-yvelines" element={<TerrariumYvelines />} />
+                <Route path="/atelier-terrarium-hauts-de-seine" element={<TerrariumHautsDeSeine />} />
+                <Route path="/atelier-kokedama-yvelines" element={<KokedamaYvelines />} />
+                <Route path="/atelier-kokedama-hauts-de-seine" element={<KokedamaHautsDeSeine />} />
+                <Route path="/atelier-teinture-vegetale-yvelines" element={<TeintureVegetaleYvelines />} />
+                <Route path="/atelier-teinture-vegetale-hauts-de-seine" element={<TeintureVegetaleHautsDeSeine />} />
+                <Route path="/atelier-evjf-botanique-yvelines" element={<EvjfYvelines />} />
+                <Route path="/atelier-evjf-botanique-hauts-de-seine" element={<EvjfHautsDeSeine />} />
+                <Route path="/atelier-anniversaire-adulte-yvelines" element={<AnniversaireAdulteYvelines />} />
+                <Route path="/atelier-anniversaire-adulte-hauts-de-seine" element={<AnniversaireAdulteHautsDeSeine />} />
+                <Route path="/baby-shower-vegetal-yvelines" element={<BabyShowerVegetalYvelines />} />
+                <Route path="/baby-shower-vegetal-hauts-de-seine" element={<BabyShowerVegetalHautsDeSeine />} />
+                <Route path="/noel-couronne-vegetale-yvelines" element={<NoelCouronneVegetaleYvelines />} />
+                <Route path="/noel-couronne-vegetale-hauts-de-seine" element={<NoelCouronneVegetaleHautsDeSeine />} />
+                <Route path="/couple-nature-yvelines" element={<CoupleNatureYvelines />} />
+                <Route path="/couple-nature-hauts-de-seine" element={<CoupleNatureHautsDeSeine />} />
+                <Route path="/seminaire-entreprise-paris" element={<SeminaireEntrepriseParis />} />
+                <Route path="/seminaire-entreprise-yvelines" element={<SeminaireEntrepriseYvelines />} />
+                <Route path="/seminaire-entreprise-hauts-de-seine" element={<SeminaireEntrepriseHautsDeSeine />} />
+                <Route path="/seminaire-entreprise-val-d-oise" element={<SeminaireEntrepriseValDOise />} />
+                <Route path="/mediatheque-paris" element={<MediathequeParis />} />
+                <Route path="/mediatheque-yvelines" element={<MediathequeYvelines />} />
+                <Route path="/mediatheque-hauts-de-seine" element={<MediathequeHautsDeSeine />} />
+                <Route path="/mediatheque-val-d-oise" element={<MediathequeValDOise />} />
+                <Route path="/hortitherapie-paris" element={<HortitherapieParis />} />
+                <Route path="/hortitherapie-yvelines" element={<HortitherapieYvelines />} />
+                <Route path="/hortitherapie-hauts-de-seine" element={<HortitherapieHautsDeSeine />} />
+                <Route path="/hortitherapie-val-d-oise" element={<HortitherapieValDOise />} />
+                <Route path="/onboarding-paris" element={<OnboardingParis />} />
+                <Route path="/onboarding-yvelines" element={<OnboardingYvelines />} />
+                <Route path="/onboarding-hauts-de-seine" element={<OnboardingHautsDeSeine />} />
+                <Route path="/onboarding-val-d-oise" element={<OnboardingValDOise />} />
+                <Route path="/soiree-entreprise-paris" element={<SoireeEntrepriseParis />} />
+                <Route path="/soiree-entreprise-yvelines" element={<SoireeEntrepriseYvelines />} />
+                <Route path="/soiree-entreprise-hauts-de-seine" element={<SoireeEntrepriseHautsDeSeine />} />
+                <Route path="/soiree-entreprise-val-d-oise" element={<SoireeEntrepriseValDOise />} />
+                <Route path="/festival-culturel-paris" element={<FestivalCulturelParis />} />
+                <Route path="/festival-culturel-yvelines" element={<FestivalCulturelYvelines />} />
+                <Route path="/festival-culturel-hauts-de-seine" element={<FestivalCulturelHautsDeSeine />} />
+                <Route path="/festival-culturel-val-d-oise" element={<FestivalCulturelValDOise />} />
+                <Route path="/foyer-jeunes-paris" element={<FoyerJeunesParis />} />
+                <Route path="/foyer-jeunes-yvelines" element={<FoyerJeunesYvelines />} />
+                <Route path="/foyer-jeunes-hauts-de-seine" element={<FoyerJeunesHautsDeSeine />} />
+                <Route path="/foyer-jeunes-val-d-oise" element={<FoyerJeunesValDOise />} />
+                <Route path="/cadeau-original-nature-paris" element={<CadeauOriginalNatureParis />} />
+                <Route path="/cadeau-original-nature-yvelines" element={<CadeauOriginalNatureYvelines />} />
+                <Route path="/cadeau-original-nature-hauts-de-seine" element={<CadeauOriginalNatureHautsDeSeine />} />
+                <Route path="/cadeau-original-nature-val-d-oise" element={<CadeauOriginalNatureValDOise />} />
                 {/* Redirects for existing pages with alternate URLs */}
              <Route path="/atelier-botanique-ehpad" element={<Navigate to="/animation-seniors-ehpad" replace />} />
              <Route path="/atelier-botanique-ecole" element={<Navigate to="/animation-scolaire-nature" replace />} />
