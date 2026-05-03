@@ -282,8 +282,8 @@ const Index = () => {
                 { src: "/logos/maurepas.png", alt: "" },
                 { src: "/logos/la-roche.png", alt: "" },
               ].map((logo, index) => (
-                <div key={`b-${index}`} className="flex-shrink-0 flex items-center justify-center p-4 border-brutal" style={{ width: 140 }} aria-hidden="true">
-                  <img src={logo.src} alt="" className="max-h-12 w-auto object-contain" loading="lazy" />
+                <div key={`b-${index}`} className="flex-shrink-0 aspect-square flex items-center justify-center p-5 border-brutal bg-[hsl(var(--cream))]" style={{ width: 140, height: 140 }} aria-hidden="true">
+                  <img src={logo.src} alt="" className="max-h-16 max-w-[100px] w-auto h-auto object-contain" loading="lazy" />
                 </div>
               ))
             )}
