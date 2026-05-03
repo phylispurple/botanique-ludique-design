@@ -14,6 +14,7 @@ export interface BaladeGeoData {
   title: string;
   metaTitle: string;
   metaDesc: string;
+  keywords?: string;
   intro: string;
   context: string;
   spots: { name: string; desc: string }[];
@@ -35,6 +36,7 @@ const BaladeGeoTemplate = ({ data }: { data: BaladeGeoData }) => {
       <SEO
         title={data.metaTitle}
         description={data.metaDesc}
+        keywords={data.keywords}
         canonical={`/${data.slug}`}
         region={data.region}
         city={data.dept}

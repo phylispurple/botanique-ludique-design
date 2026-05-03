@@ -35,7 +35,7 @@ const AtelierEthnobotaniqueEntreprise = () => {
       <SEO
         title="Atelier ethnobotanique entreprise, team building végétal IDF"
         description="Atelier ethnobotanique pour entreprise en Île-de-France. Approche anthropologique du vivant, format team building, QVCT ou semaine RSE. Intervention sur site."
-        keywords="atelier ethnobotanique entreprise, team building végétal, ethnobotanique team building, atelier botanique entreprise Paris, QVCT nature, RSE plantes"
+        keywords="atelier ethnobotanique entreprise, team building végétal, ethnobotanique team building, qvct nature entreprise, rse plantes vivant, médiation ethnobotanique entreprise"
         canonical="/atelier-ethnobotanique-entreprise"
       />
       <SchemaOrg
