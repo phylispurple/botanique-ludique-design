@@ -276,7 +276,6 @@ const Index = () => {
                 { src: "/logos/mjc-vesinet.jpg", alt: "" },
                 { src: "/logos/jappy-senior.svg", alt: "" },
                 { src: "/logos/mjc-chatou.jpeg", alt: "" },
-                { src: "/logos/publicis.jpg", alt: "" },
                 { src: "/logos/f93.jpg", alt: "" },
                 { src: "/logos/bezons.svg", alt: "" },
                 { src: "/logos/maurepas.png", alt: "" },
