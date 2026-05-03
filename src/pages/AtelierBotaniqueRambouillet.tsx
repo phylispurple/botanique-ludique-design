@@ -11,6 +11,7 @@ const AtelierBotaniqueRambouillet = () => (
       metaTitle: "Atelier botanique Rambouillet, sud-Yvelines (78)",
       metaDesc:
         "Atelier botanique à Rambouillet et alentours, terrarium, kokedama, teinture végétale et balade ethnobotanique en sud-Yvelines (78).",
+      keywords: "atelier botanique rambouillet, atelier nature sud-yvelines, terrarium rambouillet, kokedama rambouillet, balade ethnobotanique 78 sud, animation végétale rambouillet",
       intro:
         "À Rambouillet et dans le sud des Yvelines, la forêt domaniale, les jardins du château et la bergerie nationale forment un terrain rare pour comprendre nos rapports au végétal. Nos ateliers s'y posent avec naturel.",
       context:
