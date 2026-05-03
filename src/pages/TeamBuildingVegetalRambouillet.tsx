@@ -11,6 +11,7 @@ const TeamBuildingVegetalRambouillet = () => (
       metaTitle: "Team building végétal Rambouillet, atelier nature 78",
       metaDesc:
         "Team building végétal et atelier nature à Rambouillet et sud-Yvelines (78). Format ethnobotanique pour entreprises, séminaires et CSE locaux.",
+      keywords: "team building végétal rambouillet, team building nature 78, séminaire entreprise rambouillet, atelier cohésion équipe sud-yvelines, qvct rambouillet, animation rse rambouillet",
       intro:
         "À Rambouillet et dans le sud des Yvelines, vos équipes peuvent enfin sortir des team buildings urbains et standardisés. Cadre forestier, patrimoine vivant, format ethnobotanique sur mesure.",
       context:
