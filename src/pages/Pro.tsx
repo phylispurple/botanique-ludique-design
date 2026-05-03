@@ -369,6 +369,50 @@ const Pro = () => {
       </section>
 
       {/* ═══════════════════════════════════════════ */}
+      {/* SECTEURS SPÉCIALISÉS */}
+      {/* ═══════════════════════════════════════════ */}
+      <section className="py-20 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection>
+            <span className="section-label block mb-4">Pages dédiées par secteur</span>
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.9] tracking-[-1px] text-[hsl(var(--black))] mb-12">
+              Vous êtes<br />
+              <span className="text-[hsl(var(--olive))]">d'un secteur spécifique</span>
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-0">
+            {[
+              { to: "/hortitherapie-hopital-clinique", label: "Hôpital, clinique, hortithérapie", desc: "Oncologie, gériatrie, psychiatrie, jardin thérapeutique." },
+              { to: "/animation-nature-universite-bde", label: "Université, grande école, BDE", desc: "Semaine DD, intégration, QVT étudiante, conférences." },
+              { to: "/animation-nature-bailleurs-sociaux", label: "Bailleur social, ESH, ANRU", desc: "Pied d'immeuble, jardin partagé, politique de la ville." },
+              { to: "/mediation-vegetale-architectes-paysagistes", label: "Architecte, paysagiste, MOE", desc: "Concertation, inauguration, sous-traitance médiation." },
+              { to: "/atelier-vegetal-parentalite-naissance", label: "Maternité, PMI, parentalité", desc: "Naissance, lieu d'accueil parents-enfants, sage-femme." },
+              { to: "/animation-vegetale-hotel-evenementiel", label: "Hôtel, lieu événementiel premium", desc: "Séminaire client, lobby, lancement, mariage privé." },
+              { to: "/balade-ethnobotanique-office-tourisme", label: "Office de tourisme, patrimoine", desc: "Programmation saisonnière, JEP, Rendez-vous aux jardins." },
+              { to: "/atelier-vegetal-cabinet-rh-coach", label: "Cabinet RH, coach, consultant·e", desc: "Co-animation, marque blanche, apport d'affaires." },
+              { to: "/marches-publics", label: "Marchés publics et collectivités", desc: "SIRET, RC Pro, Chorus Pro, dossier administratif." },
+            ].map((s, i) => (
+              <AnimatedSection key={s.to} delay={i * 60} className="h-full">
+                <Link
+                  to={s.to}
+                  className="group h-full p-6 md:p-7 border-[3px] border-[hsl(var(--black))] -mt-[3px] -ml-[3px] flex flex-col bg-[hsl(var(--cream))] hover:bg-[hsl(var(--olive))] transition-colors"
+                >
+                  <h3 className="font-display text-base md:text-lg uppercase leading-[1.15] mb-3 text-[hsl(var(--black))]">
+                    {s.label}
+                  </h3>
+                  <p className="text-sm leading-[1.6] text-[hsl(var(--black))]/70 flex-1">{s.desc}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 font-mono-brand text-[11px] tracking-[2px] uppercase text-[hsl(var(--black))]">
+                    Voir la page <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════ */}
       {/* DEVIS FORM */}
       {/* ═══════════════════════════════════════════ */}
       <section id="devis" className="py-20 px-4 md:px-8">
