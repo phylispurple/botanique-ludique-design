@@ -54,6 +54,9 @@ import AtelierBotaniqueNanterre from "./pages/AtelierBotaniqueNanterre";
 import AtelierBotaniqueBoulogne from "./pages/AtelierBotaniqueBoulogne";
 import AtelierBotaniqueCergy from "./pages/AtelierBotaniqueCergy";
 import AtelierTerrariumTeamBuilding from "./pages/AtelierTerrariumTeamBuilding";
+import AtelierEthnobotaniqueEntreprise from "./pages/AtelierEthnobotaniqueEntreprise";
+import AtelierBotaniqueRambouillet from "./pages/AtelierBotaniqueRambouillet";
+import TeamBuildingVegetalRambouillet from "./pages/TeamBuildingVegetalRambouillet";
 import AtelierBienEtreNatureEntreprise from "./pages/AtelierBienEtreNatureEntreprise";
 import AnimationSemaineQVCT from "./pages/AnimationSemaineQVCT";
 import ActiviteIntergenerationnelle from "./pages/ActiviteIntergenerationnelle";
@@ -256,7 +259,10 @@ const App = () => (
           <Route path="/animation-cse-entreprise" element={<LandingCSE />} />
           <Route path="/animation-scolaire-nature" element={<LandingEcoles />} />
           <Route path="/ateliers-mjc-association" element={<LandingMJC />} />
-          <Route path="/team-building-nature-entreprise" element={<LandingTeamBuilding />} />
+         <Route path="/team-building-nature-entreprise" element={<LandingTeamBuilding />} />
+         <Route path="/atelier-ethnobotanique-entreprise" element={<AtelierEthnobotaniqueEntreprise />} />
+         <Route path="/atelier-botanique-rambouillet" element={<AtelierBotaniqueRambouillet />} />
+         <Route path="/team-building-vegetal-rambouillet" element={<TeamBuildingVegetalRambouillet />} />
           <Route path="/atelier-botanique-saint-germain-en-laye" element={<AtelierBotaniqueSaintGermain />} />
           <Route path="/atelier-botanique-le-pecq" element={<AtelierBotaniqueLePecq />} />
           <Route path="/atelier-botanique-le-vesinet" element={<AtelierBotaniqueLeVesinet />} />
