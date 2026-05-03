@@ -280,6 +280,7 @@ const Index = () => {
                 { src: "/logos/f93.jpg", alt: "" },
                 { src: "/logos/bezons.svg", alt: "" },
                 { src: "/logos/maurepas.png", alt: "" },
+                { src: "/logos/la-roche.png", alt: "" },
               ].map((logo, index) => (
                 <div key={`b-${index}`} className="flex-shrink-0 flex items-center justify-center p-4 border-brutal" style={{ width: 140 }} aria-hidden="true">
                   <img src={logo.src} alt="" className="max-h-12 w-auto object-contain" loading="lazy" />
