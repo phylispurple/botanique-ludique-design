@@ -271,6 +271,14 @@ const App = () => (
          <Route path="/atelier-ethnobotanique-entreprise" element={<AtelierEthnobotaniqueEntreprise />} />
          <Route path="/atelier-botanique-rambouillet" element={<AtelierBotaniqueRambouillet />} />
          <Route path="/team-building-vegetal-rambouillet" element={<TeamBuildingVegetalRambouillet />} />
+         <Route path="/hortitherapie-hopital-clinique" element={<HortitherapieHopitalClinique />} />
+         <Route path="/animation-nature-universite-bde" element={<AnimationNatureUniversiteBDE />} />
+         <Route path="/mediation-vegetale-architectes-paysagistes" element={<MediationVegetaleArchitectesPaysagistes />} />
+         <Route path="/animation-nature-bailleurs-sociaux" element={<AnimationNatureBailleursSociaux />} />
+         <Route path="/atelier-vegetal-parentalite-naissance" element={<AtelierVegetalParentaliteNaissance />} />
+         <Route path="/animation-vegetale-hotel-evenementiel" element={<AnimationVegetaleHotelEvenementiel />} />
+         <Route path="/balade-ethnobotanique-office-tourisme" element={<BaladeEthnobotaniqueOfficeTourisme />} />
+         <Route path="/atelier-vegetal-cabinet-rh-coach" element={<AtelierVegetalCabinetRHCoach />} />
           <Route path="/atelier-botanique-saint-germain-en-laye" element={<AtelierBotaniqueSaintGermain />} />
           <Route path="/atelier-botanique-le-pecq" element={<AtelierBotaniqueLePecq />} />
           <Route path="/atelier-botanique-le-vesinet" element={<AtelierBotaniqueLeVesinet />} />
