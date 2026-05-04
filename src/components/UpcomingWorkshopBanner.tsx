@@ -9,7 +9,11 @@ interface UpcomingWorkshop {
 }
 
 // Configuration des prochains ateliers - À mettre à jour manuellement
-const upcomingWorkshop: UpcomingWorkshop | null = null; // Mettre un objet quand une date est confirmée
+const upcomingWorkshop: UpcomingWorkshop | null = {
+  title: "Atelier Terrarium",
+  date: "20 mai 2026",
+  location: "Relais Marianne",
+};
 
 const UpcomingWorkshopBanner = () => {
   if (upcomingWorkshop) {
