@@ -63,8 +63,8 @@ const upcomingEvents: UpcomingEvent[] = [
     internalUrl: "/inscription/mauvaises-herbes",
   },
   {
-    id: "kokedama-maurepas",
-    name: "Atelier Kokedama, Parent-Enfant",
+    id: "terrarium-maurepas",
+    name: "Atelier Terrarium, Parent-Enfant",
     date: "Mardi 20 mai 2026",
     parsedDate: d(2026, 5, 20),
     time: "15h30 / 17h00",
