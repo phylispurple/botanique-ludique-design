@@ -72,7 +72,7 @@ const upcomingEvents: UpcomingEvent[] = [
     audience: "Maurepasien·nes, Parent-Enfant",
     spots: "",
     description:
-      "Atelier parent-enfant pour créer ensemble votre propre kokedama. Réservé aux habitants de Maurepas.",
+      "Atelier parent-enfant pour créer ensemble votre propre terrarium. Réservé aux habitants de Maurepas.",
     linkType: "external",
     externalUrl:
       "https://www.maurepas.fr/index.php/Actualit%26eacute%3Bs?idpage=15021&idmetacontenu=18619&iddossiercontenu=565&positioncontenu=A1",
