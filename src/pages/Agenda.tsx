@@ -330,6 +330,21 @@ const Agenda = () => {
 
                     <div className="flex-1 p-6 md:p-8 flex flex-col gap-4">
                       <h3 className="font-display text-xl md:text-2xl uppercase leading-tight tracking-tight">{event.name}</h3>
+                      {event.image && (
+                        <a
+                          href={event.image}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block border-brutal-thin overflow-hidden bg-cream"
+                        >
+                          <img
+                            src={event.image}
+                            alt={event.name}
+                            loading="lazy"
+                            className="w-full max-h-72 object-contain bg-cream"
+                          />
+                        </a>
+                      )}
                       <p className="font-body text-sm text-foreground/80 leading-relaxed">{event.description}</p>
 
                       <div className="flex flex-wrap gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[1.5px] text-foreground/70">
