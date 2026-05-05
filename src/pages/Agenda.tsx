@@ -32,6 +32,7 @@ type UpcomingEvent = {
   audience: string;
   spots: string;
   description: string;
+  image?: string;
 } & EventLink;
 
 type PastEvent = {
