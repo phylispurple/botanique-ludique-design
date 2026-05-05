@@ -16,6 +16,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import duBreuilImage from "@/assets/du-breuil-en-fete-2026.png";
 
 type EventLink =
   | { linkType: "internal"; internalUrl: string; buttonLabel?: string }
@@ -32,6 +33,7 @@ type UpcomingEvent = {
   audience: string;
   spots: string;
   description: string;
+  image?: string;
 } & EventLink;
 
 type PastEvent = {
@@ -93,16 +95,19 @@ const upcomingEvents: UpcomingEvent[] = [
   },
   {
     id: "balade-ecole-du-breuil",
-    name: "Balade Botanique : histoire politique et culturelle des jardins",
-    date: "Samedi 31 mai 2026",
+    name: "Balade ethnobotanique : Plantes voyageuses, histoires oubliées",
+    date: "Dimanche 31 mai 2026",
     parsedDate: d(2026, 5, 31),
-    time: "Horaires à confirmer",
-    location: "École Du Breuil, Paris, Fête de l'École",
+    time: "12h00",
+    location: "École Du Breuil, Route de la Pyramide, Bois de Vincennes, Paris 12e",
     audience: "Tout public",
-    spots: "",
+    spots: "Sur réservation, places limitées",
     description:
-      "Dans le cadre de la Fête de l'École Du Breuil, une balade botanique passionnante sur l'histoire politique et culturelle des jardins.",
-    linkType: "coming",
+      "Dans le cadre de Du Breuil en fête 2026, une visite ethnobotanique portée par Botanique Ludique. Chaque style de jardin et de plantes révèle des circulations historiques, des rapports à la nature et aux savoirs botaniques. Un regard historique et social porté par une anthropologue. Inscription par mail à alexandre.rault@paris.fr (objet : visite ethnobotanique). Programme complet de la fête sur ecoledubreuil.fr.",
+    image: duBreuilImage,
+    linkType: "external",
+    externalUrl: "mailto:alexandre.rault@paris.fr?subject=visite%20ethnobotanique",
+    buttonLabel: "S'inscrire par mail",
   },
   {
     id: "kokedama-franconville",
@@ -325,6 +330,21 @@ const Agenda = () => {
 
                     <div className="flex-1 p-6 md:p-8 flex flex-col gap-4">
                       <h3 className="font-display text-xl md:text-2xl uppercase leading-tight tracking-tight">{event.name}</h3>
+                      {event.image && (
+                        <a
+                          href={event.image}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block border-brutal-thin overflow-hidden bg-cream"
+                        >
+                          <img
+                            src={event.image}
+                            alt={event.name}
+                            loading="lazy"
+                            className="w-full max-h-72 object-contain bg-cream"
+                          />
+                        </a>
+                      )}
                       <p className="font-body text-sm text-foreground/80 leading-relaxed">{event.description}</p>
 
                       <div className="flex flex-wrap gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[1.5px] text-foreground/70">
@@ -371,6 +391,18 @@ const Agenda = () => {
                           </span>
                         )}
                       </div>
+
+                      {event.id === "balade-ecole-du-breuil" && (
+                        <a
+                          href="https://www.ecoledubreuil.fr/evenement/fete-de-lecole-du-breuil-2026/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-[11px] uppercase tracking-[1.5px] underline underline-offset-4 text-foreground/70 hover:text-foreground inline-flex items-center gap-1.5"
+                        >
+                          Programme officiel Du Breuil en fête 2026
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </article>
