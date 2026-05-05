@@ -16,6 +16,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import duBreuilImage from "@/assets/du-breuil-en-fete-2026.png";
 
 type EventLink =
   | { linkType: "internal"; internalUrl: string; buttonLabel?: string }
