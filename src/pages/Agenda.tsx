@@ -391,6 +391,18 @@ const Agenda = () => {
                           </span>
                         )}
                       </div>
+
+                      {event.id === "balade-ecole-du-breuil" && (
+                        <a
+                          href="https://www.ecoledubreuil.fr/evenement/fete-de-lecole-du-breuil-2026/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-[11px] uppercase tracking-[1.5px] underline underline-offset-4 text-foreground/70 hover:text-foreground inline-flex items-center gap-1.5"
+                        >
+                          Programme officiel Du Breuil en fête 2026
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </article>
