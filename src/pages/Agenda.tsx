@@ -102,27 +102,11 @@ const upcomingEvents: UpcomingEvent[] = [
     audience: "Tout public",
     spots: "Sur réservation, places limitées",
     description:
-      "Dans le cadre de Du Breuil en fête 2026, une visite ethnobotanique portée par Botanique Ludique. Chaque style de jardin et de plantes révèle des circulations historiques, des rapports à la nature et aux savoirs botaniques tout au long de l'histoire. Un regard historique et social porté par une anthropologue. Inscription par mail à alexandre.rault@paris.fr, objet : visite ethnobotanique.",
+      "Dans le cadre de Du Breuil en fête 2026, une visite ethnobotanique portée par Botanique Ludique. Chaque style de jardin et de plantes révèle des circulations historiques, des rapports à la nature et aux savoirs botaniques. Un regard historique et social porté par une anthropologue. Inscription par mail à alexandre.rault@paris.fr (objet : visite ethnobotanique). Programme complet de la fête sur ecoledubreuil.fr.",
     image: duBreuilImage,
     linkType: "external",
     externalUrl: "mailto:alexandre.rault@paris.fr?subject=visite%20ethnobotanique",
     buttonLabel: "S'inscrire par mail",
-  },
-  {
-    id: "balade-ecole-du-breuil-info",
-    name: "Du Breuil en fête 2026",
-    date: "30 et 31 mai 2026",
-    parsedDate: d(2026, 5, 30),
-    time: "Week-end",
-    location: "École Du Breuil, Route de la Pyramide, Bois de Vincennes, Paris 12e",
-    audience: "Tout public",
-    spots: "Entrée libre",
-    description:
-      "Le grand rendez-vous annuel de l'École Du Breuil. Botanique Ludique y propose une visite ethnobotanique le dimanche 31 mai à 12h. Programme complet et infos pratiques sur le site officiel.",
-    image: duBreuilImage,
-    linkType: "external",
-    externalUrl: "https://www.ecoledubreuil.fr/evenement/fete-de-lecole-du-breuil-2026/",
-    buttonLabel: "Infos de l'événement",
   },
   {
     id: "kokedama-franconville",
