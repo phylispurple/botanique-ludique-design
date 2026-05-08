@@ -127,6 +127,16 @@ const upcomingEvents: UpcomingEvent[] = [
 
 const pastEvents: PastEvent[] = [
   {
+    id: "mauvaises-herbes-6-mai",
+    name: "Mauvaises herbes : histoire des jardins punk + fabrication de bombes à graines",
+    date: "Mercredi 6 mai 2026",
+    parsedDate: d(2026, 5, 6),
+    time: "17h00",
+    location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
+    audience: "Tout public",
+    description: "Histoire des jardins punk et de la politique des plantes sauvages en ville, suivie de la fabrication de bombes à graines à lancer dans les friches urbaines. 7€ matériel compris.",
+  },
+  {
     id: "wardian-case-22-avril",
     name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
     date: "Mercredi 22 avril 2026",
