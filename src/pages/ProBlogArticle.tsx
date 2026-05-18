@@ -152,6 +152,7 @@ const ProBlogArticle = () => {
                   <Link
                     key={r.slug}
                     to={`/${r.slug}`}
+                    onClick={() => trackBlogCtaClick(article.slug, `/${r.slug}`, "related_landing")}
                     className="bg-white rounded-lg p-5 hover:shadow-lg transition-shadow"
                   >
                     <h3
