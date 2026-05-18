@@ -98,6 +98,10 @@ import AtelierBotaniqueEnfantValDOise from "./pages/AtelierBotaniqueEnfantValDOi
 import AtelierBotaniqueAdulteIDF from "./pages/AtelierBotaniqueAdulteIDF";
 import AtelierBotaniqueAdulteParis from "./pages/AtelierBotaniqueAdulteParis";
 import AtelierFloralParis from "./pages/AtelierFloralParis";
+import ProLandingPage from "./pages/ProLandingPage";
+import ProBlogArticle from "./pages/ProBlogArticle";
+import { PRO_LANDINGS } from "@/data/proLandings";
+import { PRO_ARTICLES } from "@/data/proBlogArticles";
 import AtelierBotaniqueAdulteYvelines from "./pages/AtelierBotaniqueAdulteYvelines";
 import AtelierBotaniqueAdulteHautsDeSeine from "./pages/AtelierBotaniqueAdulteHautsDeSeine";
 import AtelierBotaniqueAdulteValDOise from "./pages/AtelierBotaniqueAdulteValDOise";
@@ -446,6 +450,14 @@ const App = () => (
           <Route path="/conditions-de-vente" element={<SalesTerms />} />
           <Route path="/admin/testimonials" element={<AdminTestimonials />} />
           <Route path="/unsubscribe" element={<Unsubscribe />} />
+          {/* B2B / QVCT / RSE landing pages (config-driven) */}
+          {PRO_LANDINGS.map((p) => (
+            <Route key={p.slug} path={`/${p.slug}`} element={<ProLandingPage />} />
+          ))}
+          {/* Top-of-funnel HR/QVCT blog articles */}
+          {PRO_ARTICLES.map((a) => (
+            <Route key={a.slug} path={`/blog/${a.slug}`} element={<ProBlogArticle />} />
+          ))}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
