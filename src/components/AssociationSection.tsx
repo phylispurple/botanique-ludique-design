@@ -51,7 +51,7 @@ const AssociationSection = () => {
         <div className="absolute -top-20 -right-16 w-[400px] h-[400px] bg-white/5 rounded-full pointer-events-none" />
 
         <AnimatedSection>
-          <span className="section-label block mb-4 text-white/50">
+          <span className="section-label block mb-4 text-white/75">
             Association loi 1901 · Le Pecq (78230)
           </span>
           <h2 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.95] tracking-[-2px] text-white mb-4">
@@ -78,7 +78,7 @@ const AssociationSection = () => {
                   {card.desc}
                 </p>
                 {card.disabled ? (
-                  <span className="inline-flex items-center gap-2 mt-4 font-display text-xs uppercase tracking-[2px] text-white/40">
+                  <span className="inline-flex items-center gap-2 mt-4 font-display text-xs uppercase tracking-[2px] text-white/70">
                     {card.linkText}
                   </span>
                 ) : (
@@ -96,7 +96,7 @@ const AssociationSection = () => {
 
         {/* Bureau bar */}
         <div className="bg-white/[0.06] py-7 px-6 md:px-10 flex flex-wrap items-center gap-6 md:gap-10 border-t border-white/[0.12] mt-0">
-          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-white/40 flex-shrink-0">
+          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-white/70 flex-shrink-0">
             Bureau
           </span>
           <div className="flex flex-wrap gap-6">
@@ -105,7 +105,7 @@ const AssociationSection = () => {
                 <strong className="font-display text-sm uppercase text-white">
                   {member.name}
                 </strong>
-                <span className="font-mono-brand text-[10px] text-white/50 uppercase tracking-[1px]">
+                <span className="font-mono-brand text-[10px] text-white/75 uppercase tracking-[1px]">
                   {member.role}
                 </span>
               </div>

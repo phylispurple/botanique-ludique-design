@@ -260,7 +260,7 @@ const Navigation = () => {
             </Link>
           </li>
 
-          <li className="text-white/15 text-[6px] leading-none">●</li>
+          <li className="text-white/70 text-[6px] leading-none">●</li>
 
           {/* Association — tout à droite */}
           <li>
