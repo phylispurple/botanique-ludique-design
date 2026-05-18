@@ -93,6 +93,12 @@ const InscriptionWardianCase = () => {
         description: "Un email de confirmation vous a été envoyé. Nous reviendrons vers vous très vite.",
       });
 
+      trackFormSubmit("inscription_wardian_case", {
+        participants: Number(form.nombrePersonnes) || 1,
+        aurore: form.beneficiaireAurore === "oui",
+        bocal: form.bocal,
+      });
+
       setForm({ nom: "", prenom: "", email: "", telephone: "", nombrePersonnes: "1", beneficiaireAurore: "non", bocal: "ramene", message: "" });
     } catch (error) {
       toast({
