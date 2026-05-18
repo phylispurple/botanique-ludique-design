@@ -1,77 +1,71 @@
-# Mon avis honnête sur ces suggestions ChatGPT
+## Objectif
 
-## Le verdict en une phrase
+Élargir l'audience SEO B2B au-delà des requêtes directes (QVCT, RSE, team building déjà couvertes) en captant des recherches **amont** de RH/Office Manager/dirigeants PME. Ces lecteurs ne cherchent pas encore un atelier nature : ils cherchent une solution à un problème RH (burn-out, rétention, onboarding, RPS). Les articles les amènent au site, les éduquent, puis les renvoient vers les landings pros existantes.
 
-**Ces conseils sont génériques et 80% sont DÉJÀ implémentés sur ton site.** L'IA qui te parle ne connaît pas ton site, elle te récite la base du SEO local. Tu as 194 pages, dont la quasi-totalité de ce qu'elle te recommande.
+## Méthode
 
-## Ce que tu as DÉJÀ (et qu'elle te suggère de créer)
+Réutilisation du système existant : ajouter 10 entrées dans `src/data/proBlogArticles.ts`. Aucun nouveau composant, aucune nouvelle route à câbler manuellement, le template `ProBlogArticle.tsx` les rend automatiquement. Sitemap mis à jour.
 
-| Suggestion ChatGPT | Statut chez toi |
-|---|---|
-| "Atelier terrarium entreprise" | `AtelierTerrariumTeamBuilding.tsx` |
-| "Atelier kokedama entreprise" | `AtelierKokedamaTeamBuilding.tsx` |
-| "Team building végétal" | `LandingTeamBuilding.tsx` + `TeamBuildingRSEParis.tsx` |
-| "Atelier botanique Yvelines / 78" | `AteliersBotaniquesYvelines.tsx` + 6 villes (Chatou, Versailles, St-Germain, Le Pecq, Le Vésinet, Conflans) |
-| "Atelier terrarium Yvelines" | `TerrariumYvelines.tsx` |
-| "Atelier kokedama Yvelines" | `KokedamaYvelines.tsx` |
-| "Animation botanique entreprise" | `AnimationBotaniqueIDF.tsx` + 4 départements |
-| "Balade ethnobotanique" | `BaladeBotaniqueEntreprise.tsx`, `GuideEthnobotanique.tsx`, 8 balades géo |
-| "Atelier ethnobotanique" | Couvert dans Guide + Balades |
-| Réalisations / cas clients | `ReferencesCollectivites.tsx` (créée la semaine dernière) |
+## Les 10 articles (sujets, requête cible, volume estimé)
 
-**Conclusion :** la stratégie "créer des pages géolocalisées longue traîne" → tu l'as déjà poussée à fond.
+| # | Titre | Slug | Mot-clé cible | Volume FR/mois |
+|---|---|---|---|---|
+| 1 | Prévenir le burn-out en entreprise : 8 actions concrètes pour managers | `prevenir-burn-out-entreprise-actions-manager` | prévention burn out entreprise | 590 |
+| 2 | Onboarding réussi : le rôle sous-estimé des rituels collectifs | `onboarding-reussi-rituels-collectifs-entreprise` | onboarding entreprise | 1900 |
+| 3 | Marque employeur : 7 leviers qui marchent mieux que les baby-foot | `marque-employeur-leviers-attractivite-pme` | marque employeur | 8100 |
+| 4 | Rétention des talents en PME : ce que les grandes entreprises ne disent pas | `retention-talents-pme-strategies` | rétention talents | 720 |
+| 5 | Biophilie au bureau : aménager pour le bien-être (guide complet) | `biophilie-bureau-amenagement-bien-etre` | biophilie | 2400 |
+| 6 | Risques Psychosociaux (RPS) : 5 dispositifs préventifs efficaces | `rps-prevention-dispositifs-entreprise` | prévention rps | 480 |
+| 7 | Bilan RSE annuel : checklist pour PME sans direction RSE dédiée | `bilan-rse-annuel-checklist-pme` | bilan rse | 720 |
+| 8 | Animations de Noël entreprise : 10 idées éthiques et mémorables | `animations-noel-entreprise-ethiques-idees` | animation noel entreprise | 1300 |
+| 9 | Réintégration télétravail : comment recréer du lien quand l'équipe revient au bureau | `reintegration-teletravail-cohesion-equipe` | retour bureau télétravail | 390 |
+| 10 | Pass Culture entreprise et CSE : utiliser le budget culturel autrement | `pass-culture-cse-budget-culturel-entreprise` | budget cse culture | 320 |
 
-## Ce qu'elle dit de juste
+**Pool total visé : ~17 000 recherches/mois cumulées**, difficulté faible à moyenne. Objectif réaliste 6-12 mois : 200 à 600 visiteurs SEO/mois en plus.
 
-1. **Tu domines ta marque, pas les requêtes business** — vrai, c'est normal pour un site jeune.
-2. **Le SEO prend 6-12 mois** à indexer correctement les pages géo (elle ne le dit pas, mais c'est la vraie raison de ta visibilité limitée).
-3. **L'angle "ethnobotanique entreprise" est ton territoire exclusif** — vrai et bien vu.
+## Structure de chaque article
 
-## Ce qu'elle rate (les vrais trous)
+Pattern déjà éprouvé sur les 7 existants :
+- 6 à 8 sections H2 avec 2-3 paragraphes chacune
+- 1 liste à puces maximum par article (memory: éviter les listes lourdes)
+- Ton anthropologique/scientifique soft, posture conseil pas vente
+- ~1200-1500 mots uniques par article
+- CTA contextualisé en bas pointant vers la landing pro la plus proche
+- 2-3 `relatedLandings` pour le maillage interne
 
-### Trou 1 : Rambouillet — 0 page dédiée
-Elle insiste 4 fois sur Rambouillet et tu n'as **aucune page Rambouillet** alors que :
-- C'est ta zone forte (cf. ton aveu "moins de concurrence + plus ciblé")
-- Tu as Chatou, Versailles, St-Germain, Boulogne, Conflans... mais pas Rambouillet/sud-Yvelines
+## Maillage stratégique (le point qui fait la différence)
 
-### Trou 2 : "Ethnobotanique entreprise" pas exploité comme angle commercial
-Tu as `GuideEthnobotanique` (éditorial) et `BaladeBotaniqueEntreprise` (balades), mais **aucune page combinant explicitement** "Atelier ethnobotanique entreprise / team building" — c'est pourtant ton USP unique.
+Chaque article renvoie vers 2-3 landings B2B existantes. Exemple :
+- Article "burn-out" → landings `atelier-qvct-paris`, `animation-bien-etre-entreprise`
+- Article "marque employeur" → landings `team-building-nature-paris`, `seminaire-vert-paris`
+- Article "RSE bilan" → landings `animation-rse-entreprise`, `atelier-developpement-durable-entreprise`
 
-### Trou 3 : Le vrai problème SEO n'est pas le nombre de pages
-Avec 194 pages, le risque #1 est la **cannibalisation** (plusieurs pages ciblent le même mot-clé) et le **thin content**. Mieux vaut 30 pages excellentes que 194 dont la moitié se font concurrence entre elles.
-
-## Plan proposé (ciblé, pas de bourrage)
-
-### 1. Créer la page manquante "ethnobotanique entreprise"
-- Nouvelle page `/atelier-ethnobotanique-entreprise`
-- Cible le territoire SEO exclusif identifié (concurrence quasi nulle)
-- Lien depuis `/pro`, `LandingTeamBuilding`, footer
-
-### 2. Créer 2 pages Rambouillet (sud-Yvelines)
-- `/atelier-botanique-rambouillet` (hub local)
-- `/team-building-vegetal-rambouillet` (B2B local)
-- Mentionner communes voisines : Saint-Arnoult, Le Perray, Gambais, Cernay-la-Ville
-
-### 3. Audit anti-cannibalisation (rapide)
-- Lister les pages qui ciblent les mêmes mots-clés (ex : combien de pages ciblent "atelier botanique Yvelines" ?)
-- Définir une page "canonique" par cluster, ajouter des liens internes vers elle, différencier les autres par angle/intention
-
-### 4. Renforcer le maillage interne
-- Depuis `Pro.tsx`, lier explicitement vers les 3 angles forts : ethnobotanique entreprise / team building / médiation collectivités
-- Chaque page géo Yvelines doit lier vers Rambouillet (et inversement)
-
-### Ce que je NE ferai PAS
-- Créer 50 nouvelles pages géo : tu en as déjà trop, c'est contre-productif.
-- Bourrer de mots-clés exacts comme suggéré ("avec ces mots EXACTS") : Google pénalise depuis 2013.
-- Promettre "n°1 rapidement" : 3-6 mois minimum sur des requêtes business, même longue traîne.
+Ce maillage transfère le "jus SEO" des articles top-of-funnel vers les pages qui convertissent.
 
 ## Détails techniques
 
-- Pages sur le modèle `BaladeGeoTemplate` ou `OccasionTemplate` existant pour cohérence brutaliste.
-- SEO : title 40-60 char, description 120-160 (cf. memory), canonical absolu, BreadcrumbList Schema.
-- Ajout au `public/sitemap.xml` avec priorité 0.8.
-- Audit cannibalisation = simple `rg` sur les `<title>` et `keywords` des pages, livré en commentaire dans le code ou rapport markdown.
+```text
+src/data/proBlogArticles.ts        → +10 entrées dans PRO_ARTICLES
+public/sitemap.xml                 → +10 URLs /blog-pro/{slug}
+src/pages/ProBlogArticle.tsx       → aucune modif (template existant suffit)
+src/App.tsx                        → aucune modif (routes générées en boucle)
+```
 
----
+Schemas.org `Article` + `BreadcrumbList` déjà gérés par le template. Pas de migration DB. Pas de nouveau composant. Pas de dépendance ajoutée.
 
-**Veux-tu que je lance ce plan ?** Ou tu préfères d'abord que je fasse l'audit cannibalisation seul (rapport sans modification) pour décider après ?
+## Risques et anticipation
+
+- **Duplicate content avec articles existants** : les 10 nouveaux sujets sont volontairement déconnectés thématiquement des 7 actuels (RH amont vs QVCT direct), zéro chevauchement.
+- **Thin content** : minimum 1200 mots/article garanti, ce qui sort largement du seuil Google.
+- **Maillage interne** : si on en ajoute 10 d'un coup, certains pourraient mettre du temps à être crawlés. Sitemap mis à jour pour accélérer l'indexation.
+
+## Hors scope
+
+- Pas de génération d'images (memory: photos authentiques préférées, IA réservée aux pédagogiques sans alternative photo)
+- Pas de nouvelle catégorie blog
+- Pas de modification du template visuel
+- Pas de campagne d'annonce externe (LinkedIn, newsletter) → décision séparée
+
+## Livrable
+
+Après implémentation, tu auras 17 articles pro au total. Tu pourras à tout moment relire chaque entrée dans `proBlogArticles.ts` et faire éditer un wording si besoin (texte centralisé, modification rapide).
