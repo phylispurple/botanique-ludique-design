@@ -122,12 +122,14 @@ const ProBlogArticle = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to={ctaTarget}
+                onClick={() => trackBlogCtaClick(article.slug, ctaTarget, "voir_offre")}
                 className="inline-flex items-center gap-2 px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full"
               >
                 Voir l'offre <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 to="/contact"
+                onClick={() => trackBlogCtaClick(article.slug, "/contact", "nous_ecrire")}
                 className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full"
               >
                 Nous écrire
