@@ -112,6 +112,7 @@ const Contact = () => {
 
       if (error) throw error;
 
+      trackFormSubmit("contact", { profile: formData.profile || "unspecified", prestation: formData.prestation || "general" });
       toast({ title: "Merci beaucoup pour votre petit mot 🍀", description: "On vous répond au plus vite !" });
       setFormData({ name: "", email: "", phone: "", organization: "", prestation: "", profile: "", subject: "", message: "" });
     } catch (error: any) {
