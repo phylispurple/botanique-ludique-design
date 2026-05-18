@@ -9,6 +9,7 @@ import { Users, Building2, Heart, Calendar, Mail, Phone, Loader2, Clock, Graduat
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
+import { trackFormSubmit } from "@/lib/analytics";
 import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
 import AnimatedSection from "@/components/AnimatedSection";
 import BackToTop from "@/components/BackToTop";
@@ -51,6 +52,7 @@ const Pro = () => {
     try {
       const { error } = await supabase.functions.invoke('send-b2b-quote-email', { body: formData });
       if (error) throw error;
+      trackFormSubmit("b2b_quote", { event_type: formData.eventType });
       toast({ title: "Demande envoyée !", description: "Nous vous contacterons dans les plus brefs délais (sous 24h)." });
       setFormData({ name: "", organization: "", email: "", phone: "", eventType: "", date: "", message: "" });
     } catch (error: any) {

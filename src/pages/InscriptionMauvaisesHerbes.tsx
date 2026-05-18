@@ -4,6 +4,7 @@ import { Send } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import InscriptionLayout from "@/components/InscriptionLayout";
+import { trackFormSubmit } from "@/lib/analytics";
 
 const inputCls =
   "w-full bg-cream border-[3px] border-foreground focus:bg-yellow outline-none px-3 py-2.5 font-body text-sm text-foreground placeholder:text-foreground/70 transition-colors";
@@ -75,6 +76,8 @@ const InscriptionMauvaisesHerbes = () => {
         title: "Inscription envoyée",
         description: "Un email de confirmation vous a été envoyé. Nous reviendrons vers vous très vite.",
       });
+
+      trackFormSubmit("inscription_mauvaises_herbes", { participants: Number(form.nombrePersonnes) || 1 });
 
       setForm({ nom: "", prenom: "", email: "", telephone: "", nombrePersonnes: "1", message: "" });
     } catch (error) {

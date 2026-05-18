@@ -8,6 +8,7 @@ import { SEO } from "@/components/SEO";
 import { Loader2, Mail, MapPin, Phone, Send, Calendar as CalendarIcon, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
+import { trackFormSubmit } from "@/lib/analytics";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Le nom est requis").max(100, "Le nom doit faire moins de 100 caractères"),
@@ -111,6 +112,7 @@ const Contact = () => {
 
       if (error) throw error;
 
+      trackFormSubmit("contact", { profile: formData.profile || "unspecified", prestation: formData.prestation || "general" });
       toast({ title: "Merci beaucoup pour votre petit mot 🍀", description: "On vous répond au plus vite !" });
       setFormData({ name: "", email: "", phone: "", organization: "", prestation: "", profile: "", subject: "", message: "" });
     } catch (error: any) {
