@@ -7,6 +7,7 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import SocialProofBar from "@/components/SocialProofBar";
 import { CheckCircle, Briefcase, Sparkles } from "lucide-react";
 import { findProLanding } from "@/data/proLandings";
+import { PRO_LANDING_CONTEXT } from "@/data/proLandingsContext";
 
 const ProLandingPage = () => {
   const { slug } = useParams<{ slug: string }>();
