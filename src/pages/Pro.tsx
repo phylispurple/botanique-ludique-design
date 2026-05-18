@@ -9,6 +9,7 @@ import { Users, Building2, Heart, Calendar, Mail, Phone, Loader2, Clock, Graduat
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
+import { trackFormSubmit } from "@/lib/analytics";
 import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
 import AnimatedSection from "@/components/AnimatedSection";
 import BackToTop from "@/components/BackToTop";
