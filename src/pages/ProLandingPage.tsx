@@ -35,6 +35,7 @@ const ProLandingPage = () => {
   } = config;
 
   const h1Parts = h1Highlight ? h1.split(h1Highlight) : null;
+  const context = PRO_LANDING_CONTEXT[config.slug];
 
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: "#F7F7EB" }}>
