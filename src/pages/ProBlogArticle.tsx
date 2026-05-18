@@ -8,6 +8,7 @@ import SocialProofBar from "@/components/SocialProofBar";
 import { Clock, ArrowRight } from "lucide-react";
 import { findProArticle, PRO_ARTICLES } from "@/data/proBlogArticles";
 import { findProLanding } from "@/data/proLandings";
+import { trackBlogCtaClick } from "@/lib/analytics";
 
 const ProBlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
