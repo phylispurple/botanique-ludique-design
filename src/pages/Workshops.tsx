@@ -218,7 +218,7 @@ const workshops: Workshop[] = [
     description: "Créez votre propre bougie artisanale décorée de fleurs séchées. Choix de la cire, des senteurs et des fleurs : chaque bougie est unique. Un atelier créatif et sensoriel pour repartir avec une création 100% personnalisée.",
     duration: "1h30",
     public: "Tout public",
-    image: sachetSenteurImage,
+    image: bougieFleursSecheesImage,
     icon: Flower2,
     category: "floral",
     tag: "nouveau",
