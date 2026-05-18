@@ -97,6 +97,7 @@ import AtelierBotaniqueEnfantHautsDeSeine from "./pages/AtelierBotaniqueEnfantHa
 import AtelierBotaniqueEnfantValDOise from "./pages/AtelierBotaniqueEnfantValDOise";
 import AtelierBotaniqueAdulteIDF from "./pages/AtelierBotaniqueAdulteIDF";
 import AtelierBotaniqueAdulteParis from "./pages/AtelierBotaniqueAdulteParis";
+import AtelierFloralParis from "./pages/AtelierFloralParis";
 import AtelierBotaniqueAdulteYvelines from "./pages/AtelierBotaniqueAdulteYvelines";
 import AtelierBotaniqueAdulteHautsDeSeine from "./pages/AtelierBotaniqueAdulteHautsDeSeine";
 import AtelierBotaniqueAdulteValDOise from "./pages/AtelierBotaniqueAdulteValDOise";
@@ -320,6 +321,7 @@ const App = () => (
                <Route path="/atelier-botanique-enfant-val-d-oise" element={<AtelierBotaniqueEnfantValDOise />} />
                <Route path="/atelier-botanique-adulte-ile-de-france" element={<AtelierBotaniqueAdulteIDF />} />
                <Route path="/atelier-botanique-adulte-paris" element={<AtelierBotaniqueAdulteParis />} />
+               <Route path="/atelier-floral-paris" element={<AtelierFloralParis />} />
                <Route path="/atelier-botanique-adulte-yvelines" element={<AtelierBotaniqueAdulteYvelines />} />
                <Route path="/atelier-botanique-adulte-hauts-de-seine" element={<AtelierBotaniqueAdulteHautsDeSeine />} />
                <Route path="/atelier-botanique-adulte-val-d-oise" element={<AtelierBotaniqueAdulteValDOise />} />
