@@ -1,0 +1,62 @@
+# Botanique Ludique
+
+> Ateliers, balades et médiations ethnobotaniques à Paris et en Île-de-France. Une approche scientifique et anthropologique du vivant, fondée par Vanessa Charlery (EHESS).
+
+Botanique Ludique conçoit des ateliers botaniques accessibles pour scolaires, familles, entreprises, collectivités, EHPAD et associations. Spécialités : terrarium, kokedama, teinture végétale, herbier, bombes à graines, balades ethnobotaniques. Interventions à Paris (75), dans les Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95).
+
+Contact : contact@botaniqueludique.com, 06 09 83 16 06.
+
+## Pages principales
+
+- [Accueil](/): Présentation de Botanique Ludique et de son approche ethnobotanique.
+- [À propos](/about): Parcours de Vanessa Charlery, anthropologue et fondatrice.
+- [Association](/association): Mission associative, financement de chercheur·es et artistes.
+- [Ateliers](/workshops): Catalogue complet des ateliers botaniques (terrarium, kokedama, teinture, herbier, vannerie, bougies, tisanes).
+- [Galerie](/gallery): Photographies des ateliers, créations et interventions.
+- [Agenda](/agenda): Prochains ateliers, balades et événements publics en Île-de-France.
+- [Blog](/blog): Articles ethnobotaniques, ressources pédagogiques, histoires culturelles des plantes.
+- [FAQ](/faq): Questions fréquentes sur les ateliers, tarifs et modalités.
+- [Contact](/contact): Formulaire et coordonnées pour devis ou réservation.
+
+## Publics cibles
+
+- [Établissements scolaires](/etablissements-scolaires): Animations SVT, sorties nature, Pass Culture pour écoles, collèges et lycées d'Île-de-France.
+- [Professionnels et entreprises](/pro): Team building, RSE, QVCT, séminaires et événements végétaux.
+- [Collectivités et mairies](/animation-collectivites-mairies): Animations municipales, fêtes de la nature, semaines du développement durable.
+- [Seniors et EHPAD](/animation-seniors-ehpad): Ateliers d'hortithérapie et activités végétales adaptées.
+- [MJC et associations](/ateliers-mjc-association): Programmation d'ateliers récurrents pour structures socio-culturelles.
+- [CSE](/animation-cse-entreprise): Activités bien-être pour comités sociaux et économiques.
+
+## Ateliers signature
+
+- [Atelier kokedama Paris](/atelier-kokedama-paris): Création de boules de mousse japonaises.
+- [Atelier terrarium Paris](/atelier-terrarium-paris): Mini écosystèmes sous verre.
+- [Atelier teinture végétale](/atelier-teinture-vegetale): Couleurs naturelles et histoire des teintures.
+- [Atelier ethnobotanique entreprise](/atelier-ethnobotanique-entreprise): Médiation scientifique en contexte professionnel.
+- [Team building nature](/team-building-nature-entreprise): Cohésion d'équipe autour du vivant.
+- [Hortithérapie hôpital](/hortitherapie-hopital-clinique): Médiation végétale en milieu de soin.
+
+## Territoires d'intervention
+
+- [Ateliers Île-de-France](/ateliers-idf): Vue d'ensemble des interventions en région parisienne.
+- [Ateliers Yvelines (78)](/ateliers-botaniques-yvelines): Saint-Germain-en-Laye, Chatou, Le Pecq, Le Vésinet, Versailles, Rambouillet.
+- [Animatrice nature IDF](/animatrice-nature-ile-de-france): Présentation de l'offre régionale.
+
+## Articles de blog
+
+- [Teinture végétale, chou rouge et indigo naturel](/blog/teinture-vegetale-chou-rouge-indigo-naturel): Chimie et histoire des couleurs végétales.
+- [Monstera, plante coloniale et distinction sociale](/blog/monstera-plante-coloniale-distinction-sociale): Anthropologie d'une plante d'intérieur.
+- [Palmiers et architecture haussmannienne](/blog/palmiers-architecture-haussmannienne-colonialisme): Histoire végétale de Paris.
+- [Terrarium, biopiraterie et histoire coloniale](/blog/terrarium-biopiraterie-histoire-coloniale): Origines politiques de la Wardian Case.
+- [Médiation scientifique, définition et exemples](/blog/mediation-scientifique-definition-exemples): Cadre théorique et pratique.
+- [Botanique en projet pédagogique collège](/blog/botanique-projet-pedagogique-college): Ressources pour enseignant·es.
+- [Plantes sauvages et sortie scolaire IDF](/blog/plantes-sauvages-sortie-scolaire-ile-de-france): Guide pour organiser une sortie.
+- [Organiser une fête de la nature en mairie](/blog/organiser-fete-nature-mairie): Méthodologie pour collectivités.
+
+## Optional
+
+- [Marchés publics](/marches-publics): Informations pour acheteurs publics.
+- [Références collectivités](/references-collectivites): Liste des collaborations municipales.
+- [Inscription Wardian Case](/inscription/wardian-case): Formulaire d'inscription événement.
+- [Inscription Mauvaises herbes](/inscription/mauvaises-herbes): Formulaire d'inscription événement.
+- [Inscription Teintures végétales](/inscription/teintures-vegetales): Formulaire d'inscription événement.
