@@ -204,12 +204,22 @@ const workshops: Workshop[] = [
   },
   {
     title: "Tisanes, Sirops & Élixirs Botaniques",
-    description: "Composez vos propres mélanges de tisanes thérapeutiques, sirops floraux et élixirs botaniques en puisant dans les traditions herboristes du monde entier. Explorez les propriétés des plantes médicinales et aromatiques locales pour créer des préparations personnalisées : sirop de lavande, tisane digestive, élixir de sureau.",
+    description: "Partez à la découverte des plantes aromatiques à travers leurs histoires et leurs voyages : quels savoirs elles portent, comment elles ont circulé entre les cultures et les continents, ce qu'elles nous disent de nos rapports au vivant. Au fil de l'atelier, vous composerez votre propre mélange de tisane ou bouquet aromatique à rapporter chez vous — un souvenir sensoriel et une nouvelle façon de regarder les plantes du quotidien.",
     duration: "2h30",
     public: "Tout public",
     image: floralWatersImage,
     icon: Droplets,
     category: "bien-etre",
+    tag: "nouveau",
+  },
+  {
+    title: "Bougies & Fleurs Séchées",
+    description: "Créez votre propre bougie artisanale décorée de fleurs séchées. Choix de la cire, des senteurs et des fleurs : chaque bougie est unique. Un atelier créatif et sensoriel pour repartir avec une création 100% personnalisée.",
+    duration: "1h30",
+    public: "Tout public",
+    image: sachetSenteurImage,
+    icon: Flower2,
+    category: "floral",
     tag: "nouveau",
   },
 
