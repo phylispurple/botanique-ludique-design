@@ -75,6 +75,8 @@ const InscriptionTeinturesVegetales = () => {
         description: "Un email de confirmation vous a été envoyé. Nous reviendrons vers vous très vite.",
       });
 
+      trackFormSubmit("inscription_teintures_vegetales", { participants: Number(form.nombrePersonnes) || 1 });
+
       setForm({ nom: "", prenom: "", email: "", telephone: "", nombrePersonnes: "1", message: "" });
     } catch (error) {
       toast({
