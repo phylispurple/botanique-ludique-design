@@ -106,6 +106,25 @@ const ProLandingPage = () => {
               ))}
             </div>
 
+            {/* Unique editorial context (anti thin-content) */}
+            {context && (
+              <article className="bg-white rounded-lg p-8 md:p-10 mb-20 max-w-4xl mx-auto">
+                <h2
+                  className="text-2xl md:text-3xl mb-6"
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 400, color: "#3D3D2E" }}
+                >
+                  {context.heading}
+                </h2>
+                <div className="space-y-5">
+                  {context.paragraphs.map((p, i) => (
+                    <p key={i} className="text-charcoal/80 leading-relaxed text-base">
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              </article>
+            )}
+
             {/* Formats */}
             <h2
               className="text-2xl md:text-3xl mb-10 text-center"
