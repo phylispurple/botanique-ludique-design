@@ -72,6 +72,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-foreground">
           <video
             autoPlay loop muted playsInline
+            preload="auto"
             className="w-full h-full object-cover opacity-60"
             src="/videos/hero-bg.mp4"
           />
