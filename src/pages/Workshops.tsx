@@ -19,6 +19,7 @@ import photoVegetalImage from "@/assets/workshop-photo-vegetal.jpg";
 import herbariumImage from "@/assets/workshop-herbarium.jpg";
 import sharedGardenImage from "@/assets/workshop-shared-garden.jpg";
 import sachetSenteurImage from "@/assets/gallery-sachet-senteur.jpg";
+import bougieFleursSecheesImage from "@/assets/gallery-bougie-fleurs-sechees.jpg";
 import tatakiZomeImage from "@/assets/workshop-tataki-zome.jpg";
 import veganLeatherImage from "@/assets/workshop-vegan-leather.jpg";
 import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.jpg";
@@ -217,7 +218,7 @@ const workshops: Workshop[] = [
     description: "Créez votre propre bougie artisanale décorée de fleurs séchées. Choix de la cire, des senteurs et des fleurs : chaque bougie est unique. Un atelier créatif et sensoriel pour repartir avec une création 100% personnalisée.",
     duration: "1h30",
     public: "Tout public",
-    image: sachetSenteurImage,
+    image: bougieFleursSecheesImage,
     icon: Flower2,
     category: "floral",
     tag: "nouveau",
