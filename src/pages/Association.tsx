@@ -73,7 +73,7 @@ const Association = () => {
       <section className="py-20 md:py-28 px-6 md:px-16 lg:px-[120px]" style={{ background: 'hsl(0 0% 10%)' }}>
         <div className="max-w-4xl">
           <AnimatedSection>
-            <span className="section-label block mb-5 text-white/50">
+            <span className="section-label block mb-5 text-white/75">
               Association loi 1901 · Le Pecq (78230)
             </span>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] mb-8" style={{ color: 'hsl(36 33% 93%)' }}>
@@ -142,7 +142,7 @@ const Association = () => {
       {/* Cards */}
       <section className="px-6 md:px-16 lg:px-[120px] py-20" style={{ background: 'hsl(0 0% 10%)' }}>
         <AnimatedSection>
-          <span className="section-label block mb-4 text-white/50">Vie associative</span>
+          <span className="section-label block mb-4 text-white/75">Vie associative</span>
           <h2 className="font-display text-3xl md:text-4xl text-white mb-12">
             Rejoindre l'association
           </h2>
@@ -161,7 +161,7 @@ const Association = () => {
                 </p>
                 {card.disabled ?
               card.linkText &&
-              <span className="inline-flex items-center mt-5 font-mono-brand text-[10px] uppercase tracking-[2px] text-white/30">
+              <span className="inline-flex items-center mt-5 font-mono-brand text-[10px] uppercase tracking-[2px] text-white/70">
                       {card.linkText}
                     </span> :
 

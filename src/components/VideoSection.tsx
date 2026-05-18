@@ -36,7 +36,7 @@ const VideoSection = () => {
         <h2 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.95] tracking-[-2px] text-[hsl(var(--cream))] mb-2">
           En<br />Images
         </h2>
-        <p className="font-mono-brand text-sm uppercase tracking-[2px] text-white/45 mb-12">
+        <p className="font-mono-brand text-sm uppercase tracking-[2px] text-white/75 mb-12">
           Découvrez l'univers Botanique Ludique en mouvement
         </p>
       </AnimatedSection>

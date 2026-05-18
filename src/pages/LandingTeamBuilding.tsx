@@ -221,7 +221,7 @@ const LandingTeamBuilding = () => {
             {workshops.map((w, i) => (
               <div key={i} className={`${w.bg} border-brutal p-8 -ml-[3px] -mt-[3px] flex flex-col hover:-translate-y-1 hover:shadow-brutal transition-all`}>
                 <div className="flex justify-between items-start mb-4">
-                  <span className="font-display text-5xl md:text-6xl leading-none text-foreground/30">{w.num}</span>
+                  <span className="font-display text-5xl md:text-6xl leading-none text-foreground/60">{w.num}</span>
                   <span className="font-mono text-[10px] uppercase tracking-[1.5px] bg-foreground text-primary-foreground px-2 py-1">{w.highlight}</span>
                 </div>
                 <h3 className="font-display text-2xl md:text-3xl uppercase mb-3 leading-tight">{w.title}</h3>

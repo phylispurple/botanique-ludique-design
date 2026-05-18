@@ -180,7 +180,7 @@ const ConferencesSavoirs = () => {
                     <span className="font-display text-[13px] uppercase tracking-[1px] text-white">
                       {mod.label}
                     </span>
-                    <span className="text-xs text-white/50 font-mono-brand ml-auto">
+                    <span className="text-xs text-white/75 font-mono-brand ml-auto">
                       {mod.duration}
                     </span>
                   </div>
