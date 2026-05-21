@@ -112,6 +112,16 @@ const upcomingEvents: UpcomingEvent[] = [
 
 const pastEvents: PastEvent[] = [
   {
+    id: "terrarium-maurepas",
+    name: "Atelier Terrarium, Parent-Enfant",
+    date: "Mardi 20 mai 2026",
+    parsedDate: d(2026, 5, 20),
+    time: "15h30 / 17h00",
+    location: "Relais Marianne, Maurepas (78)",
+    audience: "Maurepasien·nes, Parent-Enfant",
+    description:
+      "Atelier parent-enfant pour créer ensemble votre propre terrarium. Réservé aux habitants de Maurepas.",
+  },
     id: "mauvaises-herbes-6-mai",
     name: "Mauvaises herbes : histoire des jardins punk + fabrication de bombes à graines",
     date: "Mercredi 6 mai 2026",
