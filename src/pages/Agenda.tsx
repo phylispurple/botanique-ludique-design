@@ -122,6 +122,7 @@ const pastEvents: PastEvent[] = [
     description:
       "Atelier parent-enfant pour créer ensemble votre propre terrarium. Réservé aux habitants de Maurepas.",
   },
+  {
     id: "mauvaises-herbes-6-mai",
     name: "Mauvaises herbes : histoire des jardins punk + fabrication de bombes à graines",
     date: "Mercredi 6 mai 2026",
