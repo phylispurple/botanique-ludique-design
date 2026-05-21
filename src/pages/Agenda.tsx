@@ -382,6 +382,11 @@ const Agenda = () => {
                             Inscription à venir
                           </span>
                         )}
+                        {event.linkType === "soldOut" && (
+                          <span className="ml-auto inline-flex items-center gap-2 bg-foreground text-primary-foreground border-brutal shadow-brutal px-5 py-3 font-display uppercase text-xs tracking-wide cursor-not-allowed">
+                            Complet
+                          </span>
+                        )}
                       </div>
 
                       {event.id === "balade-ecole-du-breuil" && (
