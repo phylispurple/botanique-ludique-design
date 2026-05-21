@@ -21,7 +21,8 @@ import duBreuilImage from "@/assets/du-breuil-en-fete-2026.png";
 type EventLink =
   | { linkType: "internal"; internalUrl: string; buttonLabel?: string }
   | { linkType: "external"; externalUrl: string; buttonLabel?: string }
-  | { linkType: "coming" };
+  | { linkType: "coming" }
+  | { linkType: "soldOut" };
 
 type UpcomingEvent = {
   id: string;
@@ -34,6 +35,7 @@ type UpcomingEvent = {
   spots: string;
   description: string;
   image?: string;
+  soldOut?: boolean;
 } & EventLink;
 
 type PastEvent = {
@@ -50,21 +52,6 @@ type PastEvent = {
 const d = (year: number, month: number, day: number) => new Date(year, month - 1, day);
 
 const upcomingEvents: UpcomingEvent[] = [
-  {
-    id: "terrarium-maurepas",
-    name: "Atelier Terrarium, Parent-Enfant",
-    date: "Mardi 20 mai 2026",
-    parsedDate: d(2026, 5, 20),
-    time: "15h30 / 17h00",
-    location: "Relais Marianne, Maurepas (78)",
-    audience: "Maurepasien·nes, Parent-Enfant",
-    spots: "",
-    description:
-      "Atelier parent-enfant pour créer ensemble votre propre terrarium. Réservé aux habitants de Maurepas.",
-    linkType: "external",
-    externalUrl:
-      "https://www.maurepas.fr/index.php/Actualit%26eacute%3Bs?idpage=15021&idmetacontenu=18619&iddossiercontenu=565&positioncontenu=A1",
-  },
   {
     id: "teintures-vegetales-27-mai",
     name: "Histoire culturelle et politique des teintures végétales",
@@ -87,13 +74,11 @@ const upcomingEvents: UpcomingEvent[] = [
     time: "12h00",
     location: "École Du Breuil, Route de la Pyramide, Bois de Vincennes, Paris 12e",
     audience: "Tout public",
-    spots: "Sur réservation, places limitées",
+    spots: "Complet",
     description:
-      "Dans le cadre de Du Breuil en fête 2026, une visite ethnobotanique portée par Botanique Ludique. Chaque style de jardin et de plantes révèle des circulations historiques, des rapports à la nature et aux savoirs botaniques. Un regard historique et social porté par une anthropologue. Inscription par mail à alexandre.rault@paris.fr (objet : visite ethnobotanique). Programme complet de la fête sur ecoledubreuil.fr.",
+      "Dans le cadre de Du Breuil en fête 2026, une visite ethnobotanique portée par Botanique Ludique. Chaque style de jardin et de plantes révèle des circulations historiques, des rapports à la nature et aux savoirs botaniques. Un regard historique et social porté par une anthropologue. Programme complet de la fête sur ecoledubreuil.fr.",
     image: duBreuilImage,
-    linkType: "external",
-    externalUrl: "mailto:alexandre.rault@paris.fr?subject=visite%20ethnobotanique",
-    buttonLabel: "S'inscrire par mail",
+    linkType: "soldOut",
   },
   {
     id: "kokedama-franconville",
@@ -126,6 +111,17 @@ const upcomingEvents: UpcomingEvent[] = [
 ];
 
 const pastEvents: PastEvent[] = [
+  {
+    id: "terrarium-maurepas",
+    name: "Atelier Terrarium, Parent-Enfant",
+    date: "Mardi 20 mai 2026",
+    parsedDate: d(2026, 5, 20),
+    time: "15h30 / 17h00",
+    location: "Relais Marianne, Maurepas (78)",
+    audience: "Maurepasien·nes, Parent-Enfant",
+    description:
+      "Atelier parent-enfant pour créer ensemble votre propre terrarium. Réservé aux habitants de Maurepas.",
+  },
   {
     id: "mauvaises-herbes-6-mai",
     name: "Mauvaises herbes : histoire des jardins punk + fabrication de bombes à graines",
@@ -384,6 +380,11 @@ const Agenda = () => {
                         {event.linkType === "coming" && (
                           <span className="ml-auto inline-flex items-center gap-2 px-5 py-3 border-[3px] border-dashed border-foreground/40 font-display uppercase text-xs tracking-wide text-foreground/50 cursor-default">
                             Inscription à venir
+                          </span>
+                        )}
+                        {event.linkType === "soldOut" && (
+                          <span className="ml-auto inline-flex items-center gap-2 bg-foreground text-primary-foreground border-brutal shadow-brutal px-5 py-3 font-display uppercase text-xs tracking-wide cursor-not-allowed">
+                            Complet
                           </span>
                         )}
                       </div>
