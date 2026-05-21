@@ -53,21 +53,6 @@ const d = (year: number, month: number, day: number) => new Date(year, month - 1
 
 const upcomingEvents: UpcomingEvent[] = [
   {
-    id: "terrarium-maurepas",
-    name: "Atelier Terrarium, Parent-Enfant",
-    date: "Mardi 20 mai 2026",
-    parsedDate: d(2026, 5, 20),
-    time: "15h30 / 17h00",
-    location: "Relais Marianne, Maurepas (78)",
-    audience: "Maurepasien·nes, Parent-Enfant",
-    spots: "",
-    description:
-      "Atelier parent-enfant pour créer ensemble votre propre terrarium. Réservé aux habitants de Maurepas.",
-    linkType: "external",
-    externalUrl:
-      "https://www.maurepas.fr/index.php/Actualit%26eacute%3Bs?idpage=15021&idmetacontenu=18619&iddossiercontenu=565&positioncontenu=A1",
-  },
-  {
     id: "teintures-vegetales-27-mai",
     name: "Histoire culturelle et politique des teintures végétales",
     date: "Mercredi 27 mai 2026",
@@ -89,13 +74,11 @@ const upcomingEvents: UpcomingEvent[] = [
     time: "12h00",
     location: "École Du Breuil, Route de la Pyramide, Bois de Vincennes, Paris 12e",
     audience: "Tout public",
-    spots: "Sur réservation, places limitées",
+    spots: "Complet",
     description:
-      "Dans le cadre de Du Breuil en fête 2026, une visite ethnobotanique portée par Botanique Ludique. Chaque style de jardin et de plantes révèle des circulations historiques, des rapports à la nature et aux savoirs botaniques. Un regard historique et social porté par une anthropologue. Inscription par mail à alexandre.rault@paris.fr (objet : visite ethnobotanique). Programme complet de la fête sur ecoledubreuil.fr.",
+      "Dans le cadre de Du Breuil en fête 2026, une visite ethnobotanique portée par Botanique Ludique. Chaque style de jardin et de plantes révèle des circulations historiques, des rapports à la nature et aux savoirs botaniques. Un regard historique et social porté par une anthropologue. Programme complet de la fête sur ecoledubreuil.fr.",
     image: duBreuilImage,
-    linkType: "external",
-    externalUrl: "mailto:alexandre.rault@paris.fr?subject=visite%20ethnobotanique",
-    buttonLabel: "S'inscrire par mail",
+    linkType: "soldOut",
   },
   {
     id: "kokedama-franconville",
