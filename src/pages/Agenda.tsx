@@ -21,7 +21,8 @@ import duBreuilImage from "@/assets/du-breuil-en-fete-2026.png";
 type EventLink =
   | { linkType: "internal"; internalUrl: string; buttonLabel?: string }
   | { linkType: "external"; externalUrl: string; buttonLabel?: string }
-  | { linkType: "coming" };
+  | { linkType: "coming" }
+  | { linkType: "soldOut" };
 
 type UpcomingEvent = {
   id: string;
@@ -34,6 +35,7 @@ type UpcomingEvent = {
   spots: string;
   description: string;
   image?: string;
+  soldOut?: boolean;
 } & EventLink;
 
 type PastEvent = {
