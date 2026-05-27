@@ -53,21 +53,6 @@ const d = (year: number, month: number, day: number) => new Date(year, month - 1
 
 const upcomingEvents: UpcomingEvent[] = [
   {
-    id: "au-fil-des-jardins-voisins",
-    name: "Au fil des jardins de Voisins",
-    date: "Dimanche 7 juin 2026",
-    parsedDate: d(2026, 6, 7),
-    time: "16h00",
-    location: "Domaine de la Croix du Bois, chemin de la Croix du Bois, Voisins-le-Bretonneux (parking sur place)",
-    audience: "Tout public à partir de 10 ans, durée 2h",
-    spots: "Inscription par mail",
-    description:
-      "Des jardins et des hommes. En compagnie de Vanessa Charlery, médiatrice culturelle et ethnobotaniste formée en anthropologie de la nature à l'EHESS, partez à la rencontre des jardins de Voisins-le-Bretonneux comme vous ne les avez jamais vus. Vous saurez tout de ce qu'ils nous disent de notre rapport au vivant à travers les époques, mais aussi de ce qu'ils nous disent de nos sociétés.",
-    linkType: "external",
-    externalUrl: "mailto:museedelaville@sqy.fr?subject=Inscription%20-%20Au%20fil%20des%20jardins%20de%20Voisins%20-%207%20juin%202026",
-    buttonLabel: "S'inscrire par mail",
-  },
-  {
     id: "balade-ecole-du-breuil",
     name: "Balade ethnobotanique : Plantes voyageuses, histoires oubliées",
     date: "Dimanche 31 mai 2026",
@@ -80,6 +65,21 @@ const upcomingEvents: UpcomingEvent[] = [
       "Dans le cadre de Du Breuil en fête 2026, une visite ethnobotanique portée par Botanique Ludique. Chaque style de jardin et de plantes révèle des circulations historiques, des rapports à la nature et aux savoirs botaniques. Un regard historique et social porté par une anthropologue. Programme complet de la fête sur ecoledubreuil.fr.",
     image: duBreuilImage,
     linkType: "soldOut",
+  },
+  {
+    id: "au-fil-des-jardins-voisins",
+    name: "Au fil des jardins de Voisins",
+    date: "Dimanche 7 juin 2026",
+    parsedDate: d(2026, 6, 7),
+    time: "16h00",
+    location: "Domaine de la Croix du Bois, chemin de la Croix du Bois, Voisins-le-Bretonneux (parking sur place)",
+    audience: "Tout public à partir de 10 ans, durée 2h",
+    spots: "Inscription par mail : museedelaville@sqy.fr",
+    description:
+      "Des jardins et des hommes. En compagnie de Vanessa Charlery, médiatrice culturelle et ethnobotaniste formée en anthropologie de la nature à l'EHESS, partez à la rencontre des jardins de Voisins-le-Bretonneux comme vous ne les avez jamais vus. Vous saurez tout de ce qu'ils nous disent de notre rapport au vivant à travers les époques, mais aussi de ce qu'ils nous disent de nos sociétés.",
+    linkType: "external",
+    externalUrl: "mailto:museedelaville@sqy.fr?subject=Inscription%20-%20Au%20fil%20des%20jardins%20de%20Voisins%20-%207%20juin%202026",
+    buttonLabel: "S'inscrire par mail",
   },
   {
     id: "kokedama-franconville",
@@ -96,18 +96,6 @@ const upcomingEvents: UpcomingEvent[] = [
     externalUrl:
       "https://openagenda.com/fr/ile-de-france/events/atelier-creation-dun-kokedama",
     buttonLabel: "En savoir plus",
-  },
-  {
-    id: "balade-st-quentin",
-    name: "Balade Botanique, Saint-Quentin-en-Yvelines",
-    date: "Courant septembre 2026",
-    parsedDate: d(2026, 9, 15),
-    time: "À confirmer",
-    location: "Saint-Quentin-en-Yvelines (78)",
-    audience: "Tout public",
-    spots: "",
-    description: "Une balade botanique à la découverte de la flore locale. Plus d'informations à venir.",
-    linkType: "coming",
   },
 ];
 
