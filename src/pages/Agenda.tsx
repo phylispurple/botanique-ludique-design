@@ -53,18 +53,19 @@ const d = (year: number, month: number, day: number) => new Date(year, month - 1
 
 const upcomingEvents: UpcomingEvent[] = [
   {
-    id: "teintures-vegetales-27-mai",
-    name: "Histoire culturelle et politique des teintures végétales",
-    date: "Mercredi 27 mai 2026",
-    parsedDate: d(2026, 5, 27),
-    time: "17h00",
-    location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
-    audience: "Tout public",
-    spots: "Sur inscription",
+    id: "au-fil-des-jardins-voisins",
+    name: "Au fil des jardins de Voisins",
+    date: "Dimanche 7 juin 2026",
+    parsedDate: d(2026, 6, 7),
+    time: "16h00",
+    location: "Domaine de la Croix du Bois, chemin de la Croix du Bois, Voisins-le-Bretonneux (parking sur place)",
+    audience: "Tout public à partir de 10 ans, durée 2h",
+    spots: "Inscription par mail",
     description:
-      "De l'indigo des esclaves aux Antilles au curcuma de votre cuisine, Botanique Ludique retrace l'histoire politique des couleurs végétales, suivie d'une initiation pratique à la teinture. 8€ matériel fourni.",
-    linkType: "internal",
-    internalUrl: "/inscription/teintures-vegetales",
+      "Des jardins et des hommes. En compagnie de Vanessa Charlery, médiatrice culturelle et ethnobotaniste formée en anthropologie de la nature à l'EHESS, partez à la rencontre des jardins de Voisins-le-Bretonneux comme vous ne les avez jamais vus. Vous saurez tout de ce qu'ils nous disent de notre rapport au vivant à travers les époques, mais aussi de ce qu'ils nous disent de nos sociétés.",
+    linkType: "external",
+    externalUrl: "mailto:museedelaville@sqy.fr?subject=Inscription%20-%20Au%20fil%20des%20jardins%20de%20Voisins%20-%207%20juin%202026",
+    buttonLabel: "S'inscrire par mail",
   },
   {
     id: "balade-ecole-du-breuil",
