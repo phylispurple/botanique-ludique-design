@@ -113,6 +113,17 @@ const upcomingEvents: UpcomingEvent[] = [
 
 const pastEvents: PastEvent[] = [
   {
+    id: "teintures-vegetales-27-mai",
+    name: "Histoire culturelle et politique des teintures végétales",
+    date: "Mercredi 27 mai 2026",
+    parsedDate: d(2026, 5, 27),
+    time: "17h00",
+    location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
+    audience: "Tout public",
+    description:
+      "De l'indigo des esclaves aux Antilles au curcuma de votre cuisine, histoire politique des couleurs végétales suivie d'une initiation pratique à la teinture.",
+  },
+  {
     id: "terrarium-maurepas",
     name: "Atelier Terrarium, Parent-Enfant",
     date: "Mardi 20 mai 2026",
