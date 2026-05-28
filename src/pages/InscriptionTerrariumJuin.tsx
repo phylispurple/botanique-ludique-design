@@ -118,7 +118,7 @@ const InscriptionTerrariumJuin = () => {
             <li>· <strong>12€</strong> par personne</li>
             <li>· Bocal de 3 litres, boutures, terre et matériel fournis</li>
             <li>· Atelier maintenu à partir de 6 inscriptions</li>
-            <li>· Paiement sur place</li>
+            <li>· Paiement sur place le jour de l'atelier, en espèces</li>
           </ul>
         }
       >
@@ -174,7 +174,7 @@ const InscriptionTerrariumJuin = () => {
           </button>
 
           <p className="font-mono text-[10px] uppercase tracking-[1.5px] text-foreground/50 text-center">
-            Email de confirmation envoyé. Paiement sur place le jour de l'atelier.
+            Email de confirmation envoyé. Paiement sur place le jour de l'atelier, en espèces.
           </p>
         </form>
       </InscriptionLayout>
