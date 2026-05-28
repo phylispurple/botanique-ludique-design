@@ -19,6 +19,7 @@ import NotFound from "./pages/NotFound";
 import AdminTestimonials from "./pages/AdminTestimonials";
 import Agenda from "./pages/Agenda";
 import InscriptionWardianCase from "./pages/InscriptionWardianCase";
+import InscriptionTerrariumJuin from "./pages/InscriptionTerrariumJuin";
 import InscriptionMauvaisesHerbes from "./pages/InscriptionMauvaisesHerbes";
 import InscriptionTeinturesVegetales from "./pages/InscriptionTeinturesVegetales";
 import AteliersBotaniquesYvelines from "./pages/AteliersBotaniquesYvelines";
