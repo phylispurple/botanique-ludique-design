@@ -11,6 +11,7 @@ export interface TemplateEntry {
 
 import { template as wardianCaseRegistration } from './wardian-case-registration.tsx'
 import { template as wardianCaseAdminNotification } from './wardian-case-admin-notification.tsx'
+import { template as wardianCaseJuinRegistration } from './wardian-case-juin-registration.tsx'
 import { template as mauvaisesHerbesRegistration } from './mauvaises-herbes-registration.tsx'
 import { template as mauvaisesHerbesAdminNotification } from './mauvaises-herbes-admin-notification.tsx'
 import { template as teinturesVegetalesRegistration } from './teintures-vegetales-registration.tsx'
@@ -19,6 +20,7 @@ import { template as teinturesVegetalesAdminNotification } from './teintures-veg
 export const TEMPLATES: Record<string, TemplateEntry> = {
   'wardian-case-registration': wardianCaseRegistration,
   'wardian-case-admin-notification': wardianCaseAdminNotification,
+  'wardian-case-juin-registration': wardianCaseJuinRegistration,
   'mauvaises-herbes-registration': mauvaisesHerbesRegistration,
   'mauvaises-herbes-admin-notification': mauvaisesHerbesAdminNotification,
   'teintures-vegetales-registration': teinturesVegetalesRegistration,
