@@ -44,13 +44,12 @@ const InscriptionTerrariumJuin = () => {
 
       const { error: confirmError } = await supabase.functions.invoke("send-transactional-email", {
         body: {
-          templateName: "wardian-case-registration",
+          templateName: "wardian-case-juin-registration",
           recipientEmail: form.email,
           idempotencyKey: `wardian-juin-confirm-${registrationId}`,
           templateData: {
             firstName: form.prenom,
             name: fullName,
-            subject: "Wardian Case, 6 juin 2026",
             userMessage: form.message || undefined,
           },
         },
