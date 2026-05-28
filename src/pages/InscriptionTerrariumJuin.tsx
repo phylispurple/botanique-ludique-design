@@ -147,6 +147,17 @@ const InscriptionTerrariumJuin = () => {
               L'atelier de fabrication en bocal
             </figcaption>
           </figure>
+          <figure className="border-brutal shadow-brutal overflow-hidden bg-cream">
+            <img
+              src={tradescantiaImage}
+              alt="Bouture de Tradescantia zebrina aux feuilles argentées et violettes"
+              loading="lazy"
+              className="w-full h-56 object-cover"
+            />
+            <figcaption className="font-mono text-[10px] uppercase tracking-[2px] text-foreground/70 px-3 py-2 border-t-[3px] border-foreground">
+              Tradescantia, autre bouture proposée
+            </figcaption>
+          </figure>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
