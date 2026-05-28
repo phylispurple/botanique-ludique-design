@@ -7,6 +7,7 @@ import InscriptionLayout from "@/components/InscriptionLayout";
 import { trackFormSubmit } from "@/lib/analytics";
 import fittoniaPotsImage from "@/assets/gallery-fittonia-pots.jpg";
 import terrariumEnfantsFabricationImage from "@/assets/gallery-terrarium-enfants-fabrication.jpg";
+import tradescantiaImage from "@/assets/gallery-tradescantia-bouture.jpg";
 
 const inputCls =
   "w-full bg-cream border-[3px] border-foreground focus:bg-yellow outline-none px-3 py-2.5 font-body text-sm text-foreground placeholder:text-foreground/70 transition-colors";
@@ -123,7 +124,7 @@ const InscriptionTerrariumJuin = () => {
           </ul>
         }
       >
-        <div className="grid sm:grid-cols-2 gap-4 mb-8">
+        <div className="grid sm:grid-cols-3 gap-4 mb-8">
           <figure className="border-brutal shadow-brutal overflow-hidden bg-cream">
             <img
               src={fittoniaPotsImage}
@@ -144,6 +145,17 @@ const InscriptionTerrariumJuin = () => {
             />
             <figcaption className="font-mono text-[10px] uppercase tracking-[2px] text-foreground/70 px-3 py-2 border-t-[3px] border-foreground">
               L'atelier de fabrication en bocal
+            </figcaption>
+          </figure>
+          <figure className="border-brutal shadow-brutal overflow-hidden bg-cream">
+            <img
+              src={tradescantiaImage}
+              alt="Bouture de Tradescantia zebrina aux feuilles argentées et violettes"
+              loading="lazy"
+              className="w-full h-56 object-cover"
+            />
+            <figcaption className="font-mono text-[10px] uppercase tracking-[2px] text-foreground/70 px-3 py-2 border-t-[3px] border-foreground">
+              Tradescantia, autre bouture proposée
             </figcaption>
           </figure>
         </div>
