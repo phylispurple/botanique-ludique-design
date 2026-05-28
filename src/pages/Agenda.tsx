@@ -67,6 +67,21 @@ const upcomingEvents: UpcomingEvent[] = [
     linkType: "soldOut",
   },
   {
+    id: "terrarium-la-rochefoucauld-6-juin",
+    name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
+    date: "Samedi 6 juin 2026",
+    parsedDate: d(2026, 6, 6),
+    time: "16h00",
+    location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
+    audience: "Tout public",
+    spots: "12 participant·es max. Atelier maintenu à partir de 6 inscriptions.",
+    description:
+      "Plongez dans l'histoire fascinante de la Wardian Case, du XIXe siècle à nos jours, puis fabriquez votre propre terrarium. Bocal de 3 litres, boutures, terre et matériel fournis. 12€ par personne.",
+    linkType: "external",
+    externalUrl: "mailto:contact@botaniqueludique.com?subject=Inscription%20-%20Terrarium%20La%20Rochefoucauld%20-%206%20juin%202026",
+    buttonLabel: "S'inscrire par mail",
+  },
+  {
     id: "au-fil-des-jardins-voisins",
     name: "Au fil des jardins de Voisins",
     date: "Dimanche 7 juin 2026",
