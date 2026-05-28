@@ -19,6 +19,7 @@ import NotFound from "./pages/NotFound";
 import AdminTestimonials from "./pages/AdminTestimonials";
 import Agenda from "./pages/Agenda";
 import InscriptionWardianCase from "./pages/InscriptionWardianCase";
+import InscriptionTerrariumJuin from "./pages/InscriptionTerrariumJuin";
 import InscriptionMauvaisesHerbes from "./pages/InscriptionMauvaisesHerbes";
 import InscriptionTeinturesVegetales from "./pages/InscriptionTeinturesVegetales";
 import AteliersBotaniquesYvelines from "./pages/AteliersBotaniquesYvelines";
@@ -246,6 +247,7 @@ const App = () => (
           <Route path="/calendar" element={<Agenda />} />
           <Route path="/calendrier" element={<Agenda />} />
           <Route path="/inscription/wardian-case" element={<InscriptionWardianCase />} />
+          <Route path="/inscription/terrarium-6-juin" element={<InscriptionTerrariumJuin />} />
           <Route path="/inscription/mauvaises-herbes" element={<InscriptionMauvaisesHerbes />} />
           <Route path="/inscription/teintures-vegetales" element={<InscriptionTeinturesVegetales />} />
           <Route path="/ateliers-botaniques-yvelines" element={<AteliersBotaniquesYvelines />} />

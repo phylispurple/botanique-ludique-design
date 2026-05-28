@@ -77,9 +77,9 @@ const upcomingEvents: UpcomingEvent[] = [
     spots: "12 participant·es max. Atelier maintenu à partir de 6 inscriptions.",
     description:
       "Plongez dans l'histoire fascinante de la Wardian Case, du XIXe siècle à nos jours, puis fabriquez votre propre terrarium. Bocal de 3 litres, boutures, terre et matériel fournis. 12€ par personne.",
-    linkType: "external",
-    externalUrl: "mailto:contact@botaniqueludique.com?subject=Inscription%20-%20Terrarium%20La%20Rochefoucauld%20-%206%20juin%202026",
-    buttonLabel: "S'inscrire par mail",
+    linkType: "internal",
+    internalUrl: "/inscription/terrarium-6-juin",
+    buttonLabel: "S'inscrire",
   },
   {
     id: "au-fil-des-jardins-voisins",
