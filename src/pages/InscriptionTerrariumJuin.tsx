@@ -5,6 +5,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import InscriptionLayout from "@/components/InscriptionLayout";
 import { trackFormSubmit } from "@/lib/analytics";
+import fittoniaPotsImage from "@/assets/gallery-fittonia-pots.jpg";
+import terrariumEnfantsFabricationImage from "@/assets/gallery-terrarium-enfants-fabrication.jpg";
 
 const inputCls =
   "w-full bg-cream border-[3px] border-foreground focus:bg-yellow outline-none px-3 py-2.5 font-body text-sm text-foreground placeholder:text-foreground/70 transition-colors";
@@ -122,6 +124,31 @@ const InscriptionTerrariumJuin = () => {
           </ul>
         }
       >
+        <div className="grid sm:grid-cols-2 gap-4 mb-8">
+          <figure className="border-brutal shadow-brutal overflow-hidden bg-cream">
+            <img
+              src={fittoniaPotsImage}
+              alt="Fittonia et plantes prêtes à être plantées en terrarium"
+              loading="lazy"
+              className="w-full h-56 object-cover"
+            />
+            <figcaption className="font-mono text-[10px] uppercase tracking-[2px] text-foreground/70 px-3 py-2 border-t-[3px] border-foreground">
+              Les boutures fournies (Fittonia, mousses…)
+            </figcaption>
+          </figure>
+          <figure className="border-brutal shadow-brutal overflow-hidden bg-cream">
+            <img
+              src={terrariumEnfantsFabricationImage}
+              alt="Participant·es en train de fabriquer leur terrarium en atelier"
+              loading="lazy"
+              className="w-full h-56 object-cover"
+            />
+            <figcaption className="font-mono text-[10px] uppercase tracking-[2px] text-foreground/70 px-3 py-2 border-t-[3px] border-foreground">
+              L'atelier de fabrication en bocal
+            </figcaption>
+          </figure>
+        </div>
+
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-5">
             <div>
