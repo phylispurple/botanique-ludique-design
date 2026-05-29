@@ -11,12 +11,16 @@ interface Props {
   name?: string
   userMessage?: string
   jarSize?: string
+  participantCount?: number
+  totalPrice?: number
 }
 
-const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSize }: Props) => {
+const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSize, participantCount, totalPrice }: Props) => {
   const greetName = firstName || name || ''
   const size = jarSize || '3 litres'
   const unitPrice = size.includes('5') ? 18 : 12
+  const count = participantCount && participantCount > 0 ? participantCount : 1
+  const total = typeof totalPrice === 'number' ? totalPrice : unitPrice * count
   return (
     <Html lang="fr" dir="ltr">
       <Head />
