@@ -136,7 +136,7 @@ export const template = {
     userMessage: 'Est-ce adapté pour débuter ?',
     jarSize: '5 litres',
     participantCount: 2,
-    totalPrice: 36,
+    totalPrice: 40,
   },
 } satisfies TemplateEntry
 
