@@ -144,7 +144,7 @@ const InscriptionTerrariumJuin = () => {
         audience="12 participant·es max"
         pricing={
           <ul className="space-y-1.5 font-body text-sm text-foreground/80">
-            <li>· <strong>12€</strong> par personne pour un bocal de 3 litres</li>
+            <li>· <strong>12€</strong> par personne pour un bocal de 3 litres, couvercle en aluminium</li>
             <li>· <strong>20€</strong> par personne pour un bocal de 5 litres en verre recyclé, bouchon liège</li>
             <li>· Boutures, terre et matériel fournis</li>
             <li>· Stock limité : {STOCK_3L} bocaux 3L et {STOCK_5L} bocaux 5L restants</li>
