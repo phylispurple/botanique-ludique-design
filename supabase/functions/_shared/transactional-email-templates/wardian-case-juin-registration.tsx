@@ -201,6 +201,9 @@ export const template = {
   previewData: {
     firstName: 'Marie',
     userMessage: 'Est-ce adapté pour débuter ?',
+    jarSize: '5 litres',
+    participantCount: 2,
+    totalPrice: 36,
   },
 } satisfies TemplateEntry
 
