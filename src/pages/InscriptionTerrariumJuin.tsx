@@ -216,8 +216,8 @@ const InscriptionTerrariumJuin = () => {
             <label className={labelCls}>Taille du bocal *</label>
             <div className="grid sm:grid-cols-2 gap-3">
               {([
-                { size: "3L" as const, label: "Bocal 3 litres", price: PRICE_3L, stock: STOCK_3L },
-                { size: "5L" as const, label: "Bocal 5 litres (verre recyclé, liège)", price: PRICE_5L, stock: STOCK_5L },
+                { size: "3L" as const, label: "Bocal 3 litres", desc: "Couvercle en aluminium", price: PRICE_3L, stock: STOCK_3L },
+                { size: "5L" as const, label: "Bocal 5 litres", desc: "Verre recyclé, bouchon liège", price: PRICE_5L, stock: STOCK_5L },
               ]).map((opt) => {
                 const disabled = opt.stock <= 0;
                 const selected = form.jarSize === opt.size;
@@ -232,7 +232,8 @@ const InscriptionTerrariumJuin = () => {
                     } ${disabled ? "opacity-40 cursor-not-allowed" : ""}`}
                   >
                     <div className="font-display uppercase text-base tracking-tight">{opt.label}</div>
-                    <div className="font-mono text-[11px] uppercase tracking-[1.5px] mt-1">
+                    <div className="font-body text-xs text-foreground/70 mt-0.5">{opt.desc}</div>
+                    <div className="font-mono text-[11px] uppercase tracking-[1.5px] mt-1.5">
                       {opt.price}€ / personne
                     </div>
                     <div className="font-mono text-[10px] uppercase tracking-[1.5px] text-foreground/60 mt-1">
