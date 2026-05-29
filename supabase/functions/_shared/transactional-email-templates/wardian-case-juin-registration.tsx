@@ -352,3 +352,7 @@ const signatureBand = { padding: '16px 0 0' }
 const signatureLeft = { color: ink, fontSize: '16px', fontWeight: 900 as const, letterSpacing: '1px', margin: '0' }
 const signatureName = { color: ink, fontSize: '13px', fontWeight: 800 as const, letterSpacing: '2px', margin: '0' }
 const signatureSub = { color: ink, fontSize: '11px', letterSpacing: '2px', margin: '2px 0 0' }
+
+const practicalSection = { marginTop: '16px', padding: '20px 22px', border: `2px solid ${ink}`, backgroundColor: cream }
+const practicalItem = { color: ink, fontSize: '13px', lineHeight: '1.6', margin: '10px 0', fontFamily: "'Courier New', monospace" }
+const practicalLabel = { color: ink, fontSize: '12px', fontWeight: 800 as const, letterSpacing: '1.5px', fontFamily: "'Helvetica Neue', Arial, sans-serif" }
