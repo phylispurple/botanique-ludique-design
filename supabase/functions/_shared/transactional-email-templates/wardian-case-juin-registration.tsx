@@ -48,7 +48,9 @@ const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSiz
             <Heading style={heroTitleCompact}>
               {greetName ? `${greetName.toUpperCase()}, INSCRIPTION CONFIRMÉE` : 'INSCRIPTION CONFIRMÉE'}
             </Heading>
-            <Text style={heroSubtitleCompact}>ATELIER WARDIAN CASE, SAMEDI 6 JUIN 2026, 16H, PARIS 14E</Text>
+            <Text style={heroSubtitleCompact}>
+              MERCI POUR TA CONFIANCE. HÂTE DE CRÉER ET D'EXPLORER AVEC TOI.
+            </Text>
           </Section>
 
           {/* Compact event card */}
@@ -58,6 +60,19 @@ const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSiz
             <Text style={sageDesc}>
               Bocal de {size}, {unitPrice}€ par personne. Boutures, terre et matériel fournis. Tu repars avec ton terrarium.
             </Text>
+          </Section>
+
+          {/* Yellow tag + question */}
+          <Section style={bottomBand}>
+            <Row>
+              <Column style={yellowTag}>
+                <Text style={yellowText}>🌿 Un atelier entre histoire, nature et gestes créatifs.</Text>
+              </Column>
+              <Column style={questionBox}>
+                <Text style={questionTitle}>UNE QUESTION ?</Text>
+                <Text style={questionDesc}>Écris-moi : contact@botaniqueludique.com</Text>
+              </Column>
+            </Row>
           </Section>
 
           {userMessage ? (
