@@ -43,95 +43,28 @@ const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSiz
 
           <Hr style={blackRule} />
 
-          {/* Hero title */}
+          {/* Compact header */}
           <Section style={heroSection}>
-            <Heading style={heroTitle}>
-              {greetName ? `${greetName.toUpperCase()}, TON INSCRIPTION EST CONFIRMÉE !` : 'TON INSCRIPTION EST CONFIRMÉE !'}
+            <Heading style={heroTitleCompact}>
+              {greetName ? `${greetName.toUpperCase()}, INSCRIPTION CONFIRMÉE` : 'INSCRIPTION CONFIRMÉE'}
             </Heading>
-            <Text style={heroSubtitle}>
-              MERCI POUR TA CONFIANCE.<br />
-              HÂTE DE CRÉER ET D'EXPLORER AVEC TOI.
-            </Text>
+            <Text style={heroSubtitleCompact}>ATELIER WARDIAN CASE, SAMEDI 6 JUIN 2026, 16H, PARIS 14E</Text>
           </Section>
 
-          {/* Workshop block */}
+          {/* Compact event card */}
           <Section style={sageBlock}>
-            <Text style={sageLabel}>ATELIER</Text>
-            <Heading style={sageTitle}>WARDIAN CASE,<br />6 JUIN</Heading>
+            <Text style={sageLabel}>TON ATELIER</Text>
+            <Heading style={sageTitleCompact}>WARDIAN CASE, 6 JUIN</Heading>
             <Text style={sageDesc}>
-              Plonge dans l'histoire fascinante du terrarium, de la Wardian Case victorienne aux enjeux coloniaux, puis fabrique ton propre terrarium dans un bocal de {size}.
+              Bocal de {size}, {unitPrice}€ par personne. Boutures, terre et matériel fournis. Tu repars avec ton terrarium.
             </Text>
-          </Section>
-
-          {/* 2x2 info grid */}
-          <Section style={infoGrid}>
-            <Row>
-              <Column style={infoCell}>
-                <Text style={infoLabel}>📅 DATE</Text>
-                <Text style={infoValue}>SAMEDI 6 JUIN 2026</Text>
-              </Column>
-              <Column style={infoCell}>
-                <Text style={infoLabel}>🕒 HORAIRE</Text>
-                <Text style={infoValue}>16H00</Text>
-              </Column>
-            </Row>
-            <Row>
-              <Column style={infoCell}>
-                <Text style={infoLabel}>📍 LIEU</Text>
-                <Text style={infoValue}>LA ROCHEFOUCAULD,<br />PARIS 14E</Text>
-              </Column>
-              <Column style={infoCell}>
-                <Text style={infoLabel}>👥 PUBLIC</Text>
-                <Text style={infoValue}>12 PARTICIPANT·ES MAX</Text>
-              </Column>
-            </Row>
-          </Section>
-
-          {/* Tarif & matériel */}
-          <Section style={twoColWrap}>
-            <Row>
-              <Column style={tarifCol}>
-                <Text style={sectionHeader}>TARIF & MATÉRIEL</Text>
-                <Text style={listItem}>· {unitPrice}€ par personne</Text>
-                <Text style={listItem}>· Bocal de {size}, boutures, terre et matériel fournis</Text>
-                <Text style={listItem}>· Atelier maintenu à partir de 6 inscriptions</Text>
-                <Text style={listItem}>· Paiement sur place le jour de l'atelier, en espèces</Text>
-              </Column>
-              <Column style={attendCol}>
-                <Text style={sectionHeaderDark}>CE QUI T'ATTEND POUR CET ATELIER :</Text>
-                <Text style={attendTitle}>🌿 Découverte de l'histoire de la Wardian Case</Text>
-                <Text style={attendDesc}>Un voyage captivant entre botanique, exploration et enjeux coloniaux.</Text>
-                <Hr style={dottedRule} />
-                <Text style={attendTitle}>🌿 Création de ton terrarium</Text>
-                <Text style={attendDesc}>Tu réaliseras ton propre écosystème dans un bocal de {size}.</Text>
-                <Hr style={dottedRule} />
-                <Text style={attendTitle}>🌿 Tout le matériel fourni</Text>
-                <Text style={attendDesc}>Boutures, terre, matériaux et outils : tu n'as rien à préparer, juste à profiter.</Text>
-                <Hr style={dottedRule} />
-                <Text style={attendTitle}>🌿 Repars avec ta création</Text>
-                <Text style={attendDesc}>Un terrarium unique à emporter chez toi et à voir évoluer dans le temps.</Text>
-              </Column>
-            </Row>
-          </Section>
-
-          {/* Yellow tag + question */}
-          <Section style={bottomBand}>
-            <Row>
-              <Column style={yellowTag}>
-                <Text style={yellowText}>🌿 Un atelier entre histoire, nature et gestes créatifs.</Text>
-              </Column>
-              <Column style={questionBox}>
-                <Text style={questionTitle}>UNE QUESTION ?</Text>
-                <Text style={questionDesc}>Écris-moi : contact@botaniqueludique.com</Text>
-              </Column>
-            </Row>
           </Section>
 
           {userMessage ? (
             <Section style={userMsgSection}>
               <Text style={userMsgLabel}>TON MESSAGE :</Text>
               <Text style={userMsgContent}>« {userMessage} »</Text>
-              <Text style={userMsgReply}>Je te réponds au plus vite !</Text>
+              <Text style={userMsgReply}>Je te réponds au plus vite.</Text>
             </Section>
           ) : null}
 
