@@ -18,7 +18,7 @@ interface Props {
 const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSize, participantCount, totalPrice }: Props) => {
   const greetName = firstName || name || ''
   const size = jarSize || '3 litres'
-  const unitPrice = size.includes('5') ? 18 : 12
+  const unitPrice = size.includes('5') ? 20 : 12
   const count = participantCount && participantCount > 0 ? participantCount : 1
   const total = typeof totalPrice === 'number' ? totalPrice : unitPrice * count
   return (
@@ -43,95 +43,28 @@ const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSiz
 
           <Hr style={blackRule} />
 
-          {/* Hero title */}
+          {/* Compact header */}
           <Section style={heroSection}>
-            <Heading style={heroTitle}>
-              {greetName ? `${greetName.toUpperCase()}, TON INSCRIPTION EST CONFIRMÉE !` : 'TON INSCRIPTION EST CONFIRMÉE !'}
+            <Heading style={heroTitleCompact}>
+              {greetName ? `${greetName.toUpperCase()}, INSCRIPTION CONFIRMÉE` : 'INSCRIPTION CONFIRMÉE'}
             </Heading>
-            <Text style={heroSubtitle}>
-              MERCI POUR TA CONFIANCE.<br />
-              HÂTE DE CRÉER ET D'EXPLORER AVEC TOI.
-            </Text>
+            <Text style={heroSubtitleCompact}>ATELIER WARDIAN CASE, SAMEDI 6 JUIN 2026, 16H, PARIS 14E</Text>
           </Section>
 
-          {/* Workshop block */}
+          {/* Compact event card */}
           <Section style={sageBlock}>
-            <Text style={sageLabel}>ATELIER</Text>
-            <Heading style={sageTitle}>WARDIAN CASE,<br />6 JUIN</Heading>
+            <Text style={sageLabel}>TON ATELIER</Text>
+            <Heading style={sageTitleCompact}>WARDIAN CASE, 6 JUIN</Heading>
             <Text style={sageDesc}>
-              Plonge dans l'histoire fascinante du terrarium, de la Wardian Case victorienne aux enjeux coloniaux, puis fabrique ton propre terrarium dans un bocal de {size}.
+              Bocal de {size}, {unitPrice}€ par personne. Boutures, terre et matériel fournis. Tu repars avec ton terrarium.
             </Text>
-          </Section>
-
-          {/* 2x2 info grid */}
-          <Section style={infoGrid}>
-            <Row>
-              <Column style={infoCell}>
-                <Text style={infoLabel}>📅 DATE</Text>
-                <Text style={infoValue}>SAMEDI 6 JUIN 2026</Text>
-              </Column>
-              <Column style={infoCell}>
-                <Text style={infoLabel}>🕒 HORAIRE</Text>
-                <Text style={infoValue}>16H00</Text>
-              </Column>
-            </Row>
-            <Row>
-              <Column style={infoCell}>
-                <Text style={infoLabel}>📍 LIEU</Text>
-                <Text style={infoValue}>LA ROCHEFOUCAULD,<br />PARIS 14E</Text>
-              </Column>
-              <Column style={infoCell}>
-                <Text style={infoLabel}>👥 PUBLIC</Text>
-                <Text style={infoValue}>12 PARTICIPANT·ES MAX</Text>
-              </Column>
-            </Row>
-          </Section>
-
-          {/* Tarif & matériel */}
-          <Section style={twoColWrap}>
-            <Row>
-              <Column style={tarifCol}>
-                <Text style={sectionHeader}>TARIF & MATÉRIEL</Text>
-                <Text style={listItem}>· {unitPrice}€ par personne</Text>
-                <Text style={listItem}>· Bocal de {size}, boutures, terre et matériel fournis</Text>
-                <Text style={listItem}>· Atelier maintenu à partir de 6 inscriptions</Text>
-                <Text style={listItem}>· Paiement sur place le jour de l'atelier, en espèces</Text>
-              </Column>
-              <Column style={attendCol}>
-                <Text style={sectionHeaderDark}>CE QUI T'ATTEND POUR CET ATELIER :</Text>
-                <Text style={attendTitle}>🌿 Découverte de l'histoire de la Wardian Case</Text>
-                <Text style={attendDesc}>Un voyage captivant entre botanique, exploration et enjeux coloniaux.</Text>
-                <Hr style={dottedRule} />
-                <Text style={attendTitle}>🌿 Création de ton terrarium</Text>
-                <Text style={attendDesc}>Tu réaliseras ton propre écosystème dans un bocal de {size}.</Text>
-                <Hr style={dottedRule} />
-                <Text style={attendTitle}>🌿 Tout le matériel fourni</Text>
-                <Text style={attendDesc}>Boutures, terre, matériaux et outils : tu n'as rien à préparer, juste à profiter.</Text>
-                <Hr style={dottedRule} />
-                <Text style={attendTitle}>🌿 Repars avec ta création</Text>
-                <Text style={attendDesc}>Un terrarium unique à emporter chez toi et à voir évoluer dans le temps.</Text>
-              </Column>
-            </Row>
-          </Section>
-
-          {/* Yellow tag + question */}
-          <Section style={bottomBand}>
-            <Row>
-              <Column style={yellowTag}>
-                <Text style={yellowText}>🌿 Un atelier entre histoire, nature et gestes créatifs.</Text>
-              </Column>
-              <Column style={questionBox}>
-                <Text style={questionTitle}>UNE QUESTION ?</Text>
-                <Text style={questionDesc}>Écris-moi : contact@botaniqueludique.com</Text>
-              </Column>
-            </Row>
           </Section>
 
           {userMessage ? (
             <Section style={userMsgSection}>
               <Text style={userMsgLabel}>TON MESSAGE :</Text>
               <Text style={userMsgContent}>« {userMessage} »</Text>
-              <Text style={userMsgReply}>Je te réponds au plus vite !</Text>
+              <Text style={userMsgReply}>Je te réponds au plus vite.</Text>
             </Section>
           ) : null}
 
@@ -155,7 +88,7 @@ const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSiz
             <Hr style={dottedRule} />
             <Text style={practicalItem}>
               <span style={practicalLabel}>ACCÈS AU LIEU. </span>
-              La Rochefoucauld, Paris 14e. Métro Denfert-Rochereau ou Mouton-Duvernet. Je t'enverrai l'adresse précise et le code d'entrée quelques jours avant l'atelier.
+              La Rochefoucauld, Paris 14e. Métro Denfert-Rochereau ou Mouton-Duvernet.
             </Text>
             <Hr style={dottedRule} />
             <Text style={practicalItem}>
@@ -203,7 +136,7 @@ export const template = {
     userMessage: 'Est-ce adapté pour débuter ?',
     jarSize: '5 litres',
     participantCount: 2,
-    totalPrice: 36,
+    totalPrice: 40,
   },
 } satisfies TemplateEntry
 
@@ -241,7 +174,7 @@ const brandBold = { color: ink, fontSize: '12px', letterSpacing: '2px', fontWeig
 
 const blackRule = { borderColor: ink, borderTopWidth: '2px', margin: '0' }
 
-const heroSection = { padding: '36px 0 28px' }
+const heroSection = { padding: '20px 0 16px' }
 const heroTitle = {
   color: ink,
   fontSize: '40px',
@@ -249,6 +182,15 @@ const heroTitle = {
   fontWeight: 900 as const,
   letterSpacing: '-1px',
   margin: '0 0 20px',
+  textTransform: 'uppercase' as const,
+}
+const heroTitleCompact = {
+  color: ink,
+  fontSize: '24px',
+  lineHeight: '1.1',
+  fontWeight: 900 as const,
+  letterSpacing: '-0.5px',
+  margin: '0 0 10px',
   textTransform: 'uppercase' as const,
 }
 const heroSubtitle = {
@@ -259,13 +201,21 @@ const heroSubtitle = {
   margin: '0',
   fontWeight: 600 as const,
 }
+const heroSubtitleCompact = {
+  color: ink,
+  fontSize: '11px',
+  letterSpacing: '1.5px',
+  lineHeight: '1.5',
+  margin: '0',
+  fontWeight: 600 as const,
+}
 
 const sageBlock = {
   backgroundColor: sage,
   border: `2px solid ${ink}`,
-  padding: '24px 28px',
+  padding: '16px 20px',
 }
-const sageLabel = { color: ink, fontSize: '11px', letterSpacing: '3px', margin: '0 0 8px', fontWeight: 600 as const }
+const sageLabel = { color: ink, fontSize: '11px', letterSpacing: '3px', margin: '0 0 6px', fontWeight: 600 as const }
 const sageTitle = {
   color: ink,
   fontSize: '34px',
@@ -275,7 +225,16 @@ const sageTitle = {
   margin: '0 0 16px',
   textTransform: 'uppercase' as const,
 }
-const sageDesc = { color: ink, fontSize: '14px', lineHeight: '1.6', margin: '0', fontFamily: "'Courier New', monospace" }
+const sageTitleCompact = {
+  color: ink,
+  fontSize: '22px',
+  lineHeight: '1.1',
+  fontWeight: 900 as const,
+  letterSpacing: '0',
+  margin: '0 0 10px',
+  textTransform: 'uppercase' as const,
+}
+const sageDesc = { color: ink, fontSize: '13px', lineHeight: '1.5', margin: '0', fontFamily: "'Courier New', monospace" }
 
 const infoGrid = {
   border: `2px solid ${ink}`,
@@ -353,6 +312,6 @@ const signatureLeft = { color: ink, fontSize: '16px', fontWeight: 900 as const, 
 const signatureName = { color: ink, fontSize: '13px', fontWeight: 800 as const, letterSpacing: '2px', margin: '0' }
 const signatureSub = { color: ink, fontSize: '11px', letterSpacing: '2px', margin: '2px 0 0' }
 
-const practicalSection = { marginTop: '16px', padding: '20px 22px', border: `2px solid ${ink}`, backgroundColor: cream }
-const practicalItem = { color: ink, fontSize: '13px', lineHeight: '1.6', margin: '10px 0', fontFamily: "'Courier New', monospace" }
+const practicalSection = { marginTop: '14px', padding: '14px 16px', border: `2px solid ${ink}`, backgroundColor: cream }
+const practicalItem = { color: ink, fontSize: '12px', lineHeight: '1.4', margin: '6px 0', fontFamily: "'Courier New', monospace" }
 const practicalLabel = { color: ink, fontSize: '12px', fontWeight: 800 as const, letterSpacing: '1.5px', fontFamily: "'Helvetica Neue', Arial, sans-serif" }

@@ -19,7 +19,7 @@ const STOCK_3L = 4;
 const STOCK_5L = 2;
 
 const PRICE_3L = 12;
-const PRICE_5L = 18;
+const PRICE_5L = 20;
 
 type JarSize = "3L" | "5L";
 
@@ -130,7 +130,7 @@ const InscriptionTerrariumJuin = () => {
     <>
       <SEO
         title="Inscription Atelier Terrarium, 6 juin 2026 à Paris 14e"
-        description="Inscrivez-vous à l'atelier Wardian Case du 6 juin 2026 : histoire culturelle du terrarium et fabrication. Bocal 3L (12€) ou 5L (18€), boutures et terre fournis."
+        description="Inscrivez-vous à l'atelier Wardian Case du 6 juin 2026 : histoire culturelle du terrarium et fabrication. Bocal 3L (12€) ou 5L verre recyclé bouchon liège (20€), boutures et terre fournis."
         canonical="/inscription/terrarium-6-juin"
       />
       <InscriptionLayout
@@ -145,7 +145,7 @@ const InscriptionTerrariumJuin = () => {
         pricing={
           <ul className="space-y-1.5 font-body text-sm text-foreground/80">
             <li>· <strong>12€</strong> par personne pour un bocal de 3 litres</li>
-            <li>· <strong>18€</strong> par personne pour un bocal de 5 litres</li>
+            <li>· <strong>20€</strong> par personne pour un bocal de 5 litres en verre recyclé, bouchon liège</li>
             <li>· Boutures, terre et matériel fournis</li>
             <li>· Stock limité : {STOCK_3L} bocaux 3L et {STOCK_5L} bocaux 5L restants</li>
             <li>· Atelier maintenu à partir de 6 inscriptions</li>
@@ -217,7 +217,7 @@ const InscriptionTerrariumJuin = () => {
             <div className="grid sm:grid-cols-2 gap-3">
               {([
                 { size: "3L" as const, label: "Bocal 3 litres", price: PRICE_3L, stock: STOCK_3L },
-                { size: "5L" as const, label: "Bocal 5 litres", price: PRICE_5L, stock: STOCK_5L },
+                { size: "5L" as const, label: "Bocal 5 litres (verre recyclé, liège)", price: PRICE_5L, stock: STOCK_5L },
               ]).map((opt) => {
                 const disabled = opt.stock <= 0;
                 const selected = form.jarSize === opt.size;
