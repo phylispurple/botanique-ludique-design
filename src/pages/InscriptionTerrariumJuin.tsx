@@ -19,7 +19,7 @@ const STOCK_3L = 4;
 const STOCK_5L = 2;
 
 const PRICE_3L = 12;
-const PRICE_5L = 18;
+const PRICE_5L = 20;
 
 type JarSize = "3L" | "5L";
 
