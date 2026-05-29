@@ -18,7 +18,7 @@ interface Props {
 const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSize, participantCount, totalPrice }: Props) => {
   const greetName = firstName || name || ''
   const size = jarSize || '3 litres'
-  const unitPrice = size.includes('5') ? 18 : 12
+  const unitPrice = size.includes('5') ? 20 : 12
   const count = participantCount && participantCount > 0 ? participantCount : 1
   const total = typeof totalPrice === 'number' ? totalPrice : unitPrice * count
   return (
