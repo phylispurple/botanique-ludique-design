@@ -135,6 +135,45 @@ const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSiz
             </Section>
           ) : null}
 
+          {/* Infos pratiques */}
+          <Section style={practicalSection}>
+            <Text style={sectionHeader}>INFOS PRATIQUES</Text>
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>ANNULATION. </span>
+              Si tu dois finalement annuler, préviens-moi au plus tard la veille de l'atelier. Cela me permettra de proposer ta place à une personne en attente.
+            </Text>
+            <Hr style={dottedRule} />
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>PAIEMENT EN ESPÈCES. </span>
+              Merci de prévoir l'appoint le jour de l'atelier, je n'ai pas toujours la monnaie sur place. Montant à régler : {total}€ ({count} × {unitPrice}€).
+            </Text>
+            <Hr style={dottedRule} />
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>PONCTUALITÉ. </span>
+              Arrive quelques minutes en avance pour qu'on puisse démarrer ensemble à 16h.
+            </Text>
+            <Hr style={dottedRule} />
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>ACCÈS AU LIEU. </span>
+              La Rochefoucauld, Paris 14e. Métro Denfert-Rochereau ou Mouton-Duvernet. Je t'enverrai l'adresse précise et le code d'entrée quelques jours avant l'atelier.
+            </Text>
+            <Hr style={dottedRule} />
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>TENUE. </span>
+              Prévois des vêtements dans lesquels tu peux te salir, on manipule de la terre et des plantes.
+            </Text>
+            <Hr style={dottedRule} />
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>TRANSPORT DU TERRARIUM. </span>
+              Pense à venir avec un cabas ou un sac solide pour ramener ton bocal en toute sécurité.
+            </Text>
+            <Hr style={dottedRule} />
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>BESOINS SPÉCIFIQUES. </span>
+              Allergies, mobilité réduite, accompagnement particulier : signale-le moi en répondant à ce mail, je m'adapte avec plaisir.
+            </Text>
+          </Section>
+
           <Hr style={blackRule} />
 
           {/* Signature */}
