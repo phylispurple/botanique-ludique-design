@@ -77,6 +77,8 @@ const InscriptionTerrariumJuin = () => {
             name: fullName,
             userMessage: form.message || undefined,
             jarSize: form.jarSize === "5L" ? "5 litres" : "3 litres",
+            participantCount: form.nombrePersonnes,
+            totalPrice: price(),
           },
         },
       });

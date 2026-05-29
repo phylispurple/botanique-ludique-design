@@ -1,51 +1,40 @@
-# Choix bocal 3L (12€) ou 5L (18€) — Atelier Wardian Case 6 juin
-
 ## Objectif
 
-Permettre à chaque participant·e de choisir entre un bocal 3L à 12€ ou un bocal 5L à 18€ sur le formulaire `/inscription/terrarium-6-juin`, en tenant compte du stock disponible (4 bocaux 3L, 2 bocaux 5L).
+Enrichir le mail de confirmation Wardian Case avec des informations pratiques importantes, en respectant le ton soft et inclusif et le style brutaliste (uppercase bold, fond Cream, sans emojis dans les nouvelles sections).
 
-## Modifications du formulaire (`src/pages/InscriptionTerrariumJuin.tsx`)
+## Nouveau bloc "INFOS PRATIQUES" (à insérer juste avant la signature)
 
-1. **Nouveau champ "Taille du bocal"** (radio brutaliste, même style que `InscriptionWardianCase.tsx`)
-   - Option 3L à 12€
-   - Option 5L à 18€
+Encadré brutaliste, fond Cream, bordure 2px noire, titre en uppercase bold. Liste de points courts et clairs :
 
-2. **Recalcul du tarif** : `prix unitaire × nombre de personnes`, où prix unitaire dépend du choix (12€ ou 18€).
+1. **Annulation** : « Si tu dois finalement annuler, préviens-moi au plus tard la veille de l'atelier. Cela me permettra de proposer ta place à une personne sur liste d'attente. »
 
-3. **Pricing dans le bloc latéral** : remplacer la ligne "12€ par personne" par les deux tarifs.
+2. **Paiement en espèces** : « Merci de prévoir l'appoint le jour de l'atelier. Je n'ai pas toujours la monnaie sur place. Montant à régler : {totalPrice}€ ({participantCount} × {unitPrice}€). »
 
-4. **Mention stock limité** : petit avertissement sous le sélecteur, "Stock limité, premiers inscrits premiers servis".
+3. **Ponctualité** : « Merci d'arriver quelques minutes en avance pour qu'on puisse démarrer ensemble à 16h. »
 
-## Gestion du stock (côté frontend, simple et pragmatique)
+4. **Accès au lieu** : « La Rochefoucauld, Paris 14e. Métro Denfert-Rochereau ou Mouton-Duvernet. Je t'enverrai l'adresse précise et le code d'entrée quelques jours avant. »
 
-Pas de table Supabase ajoutée. On gère deux constantes en haut du fichier :
+5. **Tenue** : « Prévois une tenue dans laquelle tu peux te salir, on manipule de la terre et des plantes. »
 
-```ts
-const STOCK_3L = 4;
-const STOCK_5L = 2;
-```
+6. **Repartir avec ton terrarium** : « Pense à venir avec un sac un peu solide ou un cabas pour transporter ton bocal en toute sécurité. »
 
-Tu pourras décrémenter ces valeurs à la main dans le code au fur et à mesure des inscriptions reçues par email (rapide, pas besoin d'admin). Quand une taille atteint 0, l'option est désactivée dans le formulaire avec la mention "Épuisé".
+7. **Allergies, mobilité réduite, besoins spécifiques** : « Signale-moi tout besoin particulier en répondant à ce mail, je m'adapte avec plaisir. »
 
-Le champ "Nombre de personnes" est aussi capé par le stock restant de la taille choisie (ex. si 5L choisi et stock=2, max 2 personnes).
+## Détails techniques
 
-## Email admin (`templateData` envoyé à `wardian-case-admin-notification`)
+**Fichier modifié** : `supabase/functions/_shared/transactional-email-templates/wardian-case-juin-registration.tsx`
 
-Le champ `bocal` envoyé à l'edge function reflètera le choix exact : `"Bocal 3 litres (12€/personne)"` ou `"Bocal 5 litres (18€/personne)"`. Aucun changement template requis, le champ existe déjà.
+- Ajout des props `totalPrice` et `participantCount` à l'interface `Props` (déjà envoyées par le formulaire pour le template admin, à ajouter aussi côté participant dans `InscriptionTerrariumJuin.tsx`).
+- Nouvelle `Section` `practicalInfo` insérée entre le bloc `bottomBand` (ou `userMsgSection` si présent) et le `Hr` final avant la signature.
+- Styles cohérents avec l'existant : encadré `border: 2px solid ink`, fond `cream`, titre `sectionHeader` (chip sage), items en `listItem` avec un label uppercase bold suivi du texte en monospace Courier.
+- Pas d'emojis dans ce bloc (respect de la règle brand : light punctuation, no heavy bullet lists, soft tone). Pas d'em-dashes.
+- Mise à jour du `previewData` pour inclure `totalPrice: 24` et `participantCount: 2`.
 
-## Email de confirmation participant
+**Fichier modifié** : `src/pages/InscriptionTerrariumJuin.tsx`
+- Ajouter `totalPrice` et `participantCount` dans le `templateData` envoyé à `send-transactional-email` côté participant.
 
-Le template `wardian-case-juin-registration.tsx` mentionne actuellement "bocal 3L". À adapter pour rendre la taille dynamique :
-- Ajouter un champ `jarSize` (ex. "3 litres" ou "5 litres") dans `templateData`
-- Remplacer la mention en dur par cette variable dans le template.
+**Redéploiement** : `send-transactional-email` après modification du template.
 
-## Cohérence tarifaire
+## Test final
 
-12€ pour 3L et 18€ pour 5L : ratio +50% prix pour +66% de volume, cohérent et même légèrement avantageux pour le client sur le 5L. Validé.
-
-## Fichiers modifiés
-
-- `src/pages/InscriptionTerrariumJuin.tsx` (champ taille, calcul prix, capping stock)
-- `supabase/functions/_shared/transactional-email-templates/wardian-case-juin-registration.tsx` (variable `jarSize`)
-
-Aucune migration DB, aucune nouvelle dépendance.
+Envoi d'un mail de test à `phylispurple@gmail.com` avec bocal 5L, 2 participants, total 36€ pour vérifier le rendu.

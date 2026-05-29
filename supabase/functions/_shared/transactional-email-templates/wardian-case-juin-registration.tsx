@@ -11,12 +11,16 @@ interface Props {
   name?: string
   userMessage?: string
   jarSize?: string
+  participantCount?: number
+  totalPrice?: number
 }
 
-const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSize }: Props) => {
+const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSize, participantCount, totalPrice }: Props) => {
   const greetName = firstName || name || ''
   const size = jarSize || '3 litres'
   const unitPrice = size.includes('5') ? 18 : 12
+  const count = participantCount && participantCount > 0 ? participantCount : 1
+  const total = typeof totalPrice === 'number' ? totalPrice : unitPrice * count
   return (
     <Html lang="fr" dir="ltr">
       <Head />
@@ -131,6 +135,45 @@ const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSiz
             </Section>
           ) : null}
 
+          {/* Infos pratiques */}
+          <Section style={practicalSection}>
+            <Text style={sectionHeader}>INFOS PRATIQUES</Text>
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>ANNULATION. </span>
+              Si tu dois finalement annuler, préviens-moi au plus tard la veille de l'atelier. Cela me permettra de proposer ta place à une personne en attente.
+            </Text>
+            <Hr style={dottedRule} />
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>PAIEMENT EN ESPÈCES. </span>
+              Merci de prévoir l'appoint le jour de l'atelier, je n'ai pas toujours la monnaie sur place. Montant à régler : {total}€ ({count} × {unitPrice}€).
+            </Text>
+            <Hr style={dottedRule} />
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>PONCTUALITÉ. </span>
+              Arrive quelques minutes en avance pour qu'on puisse démarrer ensemble à 16h.
+            </Text>
+            <Hr style={dottedRule} />
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>ACCÈS AU LIEU. </span>
+              La Rochefoucauld, Paris 14e. Métro Denfert-Rochereau ou Mouton-Duvernet. Je t'enverrai l'adresse précise et le code d'entrée quelques jours avant l'atelier.
+            </Text>
+            <Hr style={dottedRule} />
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>TENUE. </span>
+              Prévois des vêtements dans lesquels tu peux te salir, on manipule de la terre et des plantes.
+            </Text>
+            <Hr style={dottedRule} />
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>TRANSPORT DU TERRARIUM. </span>
+              Pense à venir avec un cabas ou un sac solide pour ramener ton bocal en toute sécurité.
+            </Text>
+            <Hr style={dottedRule} />
+            <Text style={practicalItem}>
+              <span style={practicalLabel}>BESOINS SPÉCIFIQUES. </span>
+              Allergies, mobilité réduite, accompagnement particulier : signale-le moi en répondant à ce mail, je m'adapte avec plaisir.
+            </Text>
+          </Section>
+
           <Hr style={blackRule} />
 
           {/* Signature */}
@@ -158,6 +201,9 @@ export const template = {
   previewData: {
     firstName: 'Marie',
     userMessage: 'Est-ce adapté pour débuter ?',
+    jarSize: '5 litres',
+    participantCount: 2,
+    totalPrice: 36,
   },
 } satisfies TemplateEntry
 
@@ -306,3 +352,7 @@ const signatureBand = { padding: '16px 0 0' }
 const signatureLeft = { color: ink, fontSize: '16px', fontWeight: 900 as const, letterSpacing: '1px', margin: '0' }
 const signatureName = { color: ink, fontSize: '13px', fontWeight: 800 as const, letterSpacing: '2px', margin: '0' }
 const signatureSub = { color: ink, fontSize: '11px', letterSpacing: '2px', margin: '2px 0 0' }
+
+const practicalSection = { marginTop: '16px', padding: '20px 22px', border: `2px solid ${ink}`, backgroundColor: cream }
+const practicalItem = { color: ink, fontSize: '13px', lineHeight: '1.6', margin: '10px 0', fontFamily: "'Courier New', monospace" }
+const practicalLabel = { color: ink, fontSize: '12px', fontWeight: 800 as const, letterSpacing: '1.5px', fontFamily: "'Helvetica Neue', Arial, sans-serif" }
