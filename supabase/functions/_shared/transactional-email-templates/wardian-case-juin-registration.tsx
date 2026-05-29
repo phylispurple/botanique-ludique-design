@@ -10,10 +10,13 @@ interface Props {
   firstName?: string
   name?: string
   userMessage?: string
+  jarSize?: string
 }
 
-const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage }: Props) => {
+const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSize }: Props) => {
   const greetName = firstName || name || ''
+  const size = jarSize || '3 litres'
+  const unitPrice = size.includes('5') ? 18 : 12
   return (
     <Html lang="fr" dir="ltr">
       <Head />
@@ -52,7 +55,7 @@ const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage }: Prop
             <Text style={sageLabel}>ATELIER</Text>
             <Heading style={sageTitle}>WARDIAN CASE,<br />6 JUIN</Heading>
             <Text style={sageDesc}>
-              Plonge dans l'histoire fascinante du terrarium, de la Wardian Case victorienne aux enjeux coloniaux, puis fabrique ton propre terrarium dans un bocal de 3 litres.
+              Plonge dans l'histoire fascinante du terrarium, de la Wardian Case victorienne aux enjeux coloniaux, puis fabrique ton propre terrarium dans un bocal de {size}.
             </Text>
           </Section>
 
@@ -85,8 +88,8 @@ const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage }: Prop
             <Row>
               <Column style={tarifCol}>
                 <Text style={sectionHeader}>TARIF & MATÉRIEL</Text>
-                <Text style={listItem}>· 12€ par personne</Text>
-                <Text style={listItem}>· Bocal de 3 litres, boutures, terre et matériel fournis</Text>
+                <Text style={listItem}>· {unitPrice}€ par personne</Text>
+                <Text style={listItem}>· Bocal de {size}, boutures, terre et matériel fournis</Text>
                 <Text style={listItem}>· Atelier maintenu à partir de 6 inscriptions</Text>
                 <Text style={listItem}>· Paiement sur place le jour de l'atelier, en espèces</Text>
               </Column>
@@ -96,7 +99,7 @@ const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage }: Prop
                 <Text style={attendDesc}>Un voyage captivant entre botanique, exploration et enjeux coloniaux.</Text>
                 <Hr style={dottedRule} />
                 <Text style={attendTitle}>🌿 Création de ton terrarium</Text>
-                <Text style={attendDesc}>Tu réaliseras ton propre écosystème dans un bocal de 3 litres.</Text>
+                <Text style={attendDesc}>Tu réaliseras ton propre écosystème dans un bocal de {size}.</Text>
                 <Hr style={dottedRule} />
                 <Text style={attendTitle}>🌿 Tout le matériel fourni</Text>
                 <Text style={attendDesc}>Boutures, terre, matériaux et outils : tu n'as rien à préparer, juste à profiter.</Text>
