@@ -88,7 +88,7 @@ const WardianCaseJuinRegistrationEmail = ({ firstName, name, userMessage, jarSiz
             <Hr style={dottedRule} />
             <Text style={practicalItem}>
               <span style={practicalLabel}>ACCÈS AU LIEU. </span>
-              La Rochefoucauld, Paris 14e. Métro Denfert-Rochereau ou Mouton-Duvernet. Je t'enverrai l'adresse précise et le code d'entrée quelques jours avant l'atelier.
+              La Rochefoucauld, Paris 14e. Métro Denfert-Rochereau ou Mouton-Duvernet.
             </Text>
             <Hr style={dottedRule} />
             <Text style={practicalItem}>
