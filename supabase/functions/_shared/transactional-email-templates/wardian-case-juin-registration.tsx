@@ -174,7 +174,7 @@ const brandBold = { color: ink, fontSize: '12px', letterSpacing: '2px', fontWeig
 
 const blackRule = { borderColor: ink, borderTopWidth: '2px', margin: '0' }
 
-const heroSection = { padding: '36px 0 28px' }
+const heroSection = { padding: '20px 0 16px' }
 const heroTitle = {
   color: ink,
   fontSize: '40px',
@@ -182,6 +182,15 @@ const heroTitle = {
   fontWeight: 900 as const,
   letterSpacing: '-1px',
   margin: '0 0 20px',
+  textTransform: 'uppercase' as const,
+}
+const heroTitleCompact = {
+  color: ink,
+  fontSize: '24px',
+  lineHeight: '1.1',
+  fontWeight: 900 as const,
+  letterSpacing: '-0.5px',
+  margin: '0 0 10px',
   textTransform: 'uppercase' as const,
 }
 const heroSubtitle = {
@@ -192,13 +201,21 @@ const heroSubtitle = {
   margin: '0',
   fontWeight: 600 as const,
 }
+const heroSubtitleCompact = {
+  color: ink,
+  fontSize: '11px',
+  letterSpacing: '1.5px',
+  lineHeight: '1.5',
+  margin: '0',
+  fontWeight: 600 as const,
+}
 
 const sageBlock = {
   backgroundColor: sage,
   border: `2px solid ${ink}`,
-  padding: '24px 28px',
+  padding: '16px 20px',
 }
-const sageLabel = { color: ink, fontSize: '11px', letterSpacing: '3px', margin: '0 0 8px', fontWeight: 600 as const }
+const sageLabel = { color: ink, fontSize: '11px', letterSpacing: '3px', margin: '0 0 6px', fontWeight: 600 as const }
 const sageTitle = {
   color: ink,
   fontSize: '34px',
@@ -208,7 +225,16 @@ const sageTitle = {
   margin: '0 0 16px',
   textTransform: 'uppercase' as const,
 }
-const sageDesc = { color: ink, fontSize: '14px', lineHeight: '1.6', margin: '0', fontFamily: "'Courier New', monospace" }
+const sageTitleCompact = {
+  color: ink,
+  fontSize: '22px',
+  lineHeight: '1.1',
+  fontWeight: 900 as const,
+  letterSpacing: '0',
+  margin: '0 0 10px',
+  textTransform: 'uppercase' as const,
+}
+const sageDesc = { color: ink, fontSize: '13px', lineHeight: '1.5', margin: '0', fontFamily: "'Courier New', monospace" }
 
 const infoGrid = {
   border: `2px solid ${ink}`,
