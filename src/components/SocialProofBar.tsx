@@ -9,6 +9,7 @@ const PARTNER_LOGOS = [
   { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
   { src: "/logos/f93.jpg", alt: "F93" },
   { src: "/logos/la-roche.png", alt: "La Roche" },
+  { src: "/logos/ecole-du-breuil.jpg", alt: "École Du Breuil" },
 ];
 
 const STATS = [
