@@ -116,6 +116,17 @@ const upcomingEvents: UpcomingEvent[] = [
 
 const pastEvents: PastEvent[] = [
   {
+    id: "balade-ecole-du-breuil",
+    name: "Balade ethnobotanique : Plantes voyageuses, histoires oubliées",
+    date: "Dimanche 31 mai 2026",
+    parsedDate: d(2026, 5, 31),
+    time: "12h00",
+    location: "École Du Breuil, Route de la Pyramide, Bois de Vincennes, Paris 12e",
+    audience: "Tout public",
+    description:
+      "Dans le cadre de Du Breuil en fête 2026, une visite ethnobotanique portée par Botanique Ludique. Chaque style de jardin et de plantes révèle des circulations historiques, des rapports à la nature et aux savoirs botaniques. Un regard historique et social porté par une anthropologue.",
+  },
+  {
     id: "teintures-vegetales-27-mai",
     name: "Histoire culturelle et politique des teintures végétales",
     date: "Mercredi 27 mai 2026",
@@ -156,17 +167,6 @@ const pastEvents: PastEvent[] = [
     location: "La Rochefoucauld, Paris 14e",
     audience: "Tout public",
     description: "Histoire fascinante de la Wardian Case et fabrication d'un mini terrarium.",
-  },
-  {
-    id: "balade-ecole-du-breuil",
-    name: "Balade ethnobotanique : Plantes voyageuses, histoires oubliées",
-    date: "Dimanche 31 mai 2026",
-    parsedDate: d(2026, 5, 31),
-    time: "12h00",
-    location: "École Du Breuil, Route de la Pyramide, Bois de Vincennes, Paris 12e",
-    audience: "Tout public",
-    description:
-      "Dans le cadre de Du Breuil en fête 2026, une visite ethnobotanique portée par Botanique Ludique. Chaque style de jardin et de plantes révèle des circulations historiques, des rapports à la nature et aux savoirs botaniques. Un regard historique et social porté par une anthropologue.",
   },
   {
     id: "stage-botanique-chatou",
