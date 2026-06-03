@@ -16,7 +16,6 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import duBreuilImage from "@/assets/du-breuil-en-fete-2026.png";
 
 type EventLink =
   | { linkType: "internal"; internalUrl: string; buttonLabel?: string }
@@ -53,18 +52,19 @@ const d = (year: number, month: number, day: number) => new Date(year, month - 1
 
 const upcomingEvents: UpcomingEvent[] = [
   {
-    id: "balade-ecole-du-breuil",
-    name: "Balade ethnobotanique : Plantes voyageuses, histoires oubliées",
-    date: "Dimanche 31 mai 2026",
-    parsedDate: d(2026, 5, 31),
-    time: "12h00",
-    location: "École Du Breuil, Route de la Pyramide, Bois de Vincennes, Paris 12e",
-    audience: "Tout public",
-    spots: "Complet",
+    id: "stage-botanique-chatou-juillet",
+    name: "Stage Botanique, Vacances d'Été",
+    date: "Du 7 au 10 juillet 2026",
+    parsedDate: d(2026, 7, 7),
+    time: "10h30 / 12h00",
+    location: "MJC de Chatou",
+    audience: "8 / 15 ans",
+    spots: "",
     description:
-      "Dans le cadre de Du Breuil en fête 2026, une visite ethnobotanique portée par Botanique Ludique. Chaque style de jardin et de plantes révèle des circulations historiques, des rapports à la nature et aux savoirs botaniques. Un regard historique et social porté par une anthropologue. Programme complet de la fête sur ecoledubreuil.fr.",
-    image: duBreuilImage,
-    linkType: "soldOut",
+      "Une semaine de découverte botanique pendant les vacances d'été. Inscriptions et informations sur le site de la MJC de Chatou.",
+    linkType: "external",
+    externalUrl: "https://mjcchatou.org/",
+    buttonLabel: "S'inscrire",
   },
   {
     id: "terrarium-la-rochefoucauld-6-juin",
@@ -156,6 +156,17 @@ const pastEvents: PastEvent[] = [
     location: "La Rochefoucauld, Paris 14e",
     audience: "Tout public",
     description: "Histoire fascinante de la Wardian Case et fabrication d'un mini terrarium.",
+  },
+  {
+    id: "balade-ecole-du-breuil",
+    name: "Balade ethnobotanique : Plantes voyageuses, histoires oubliées",
+    date: "Dimanche 31 mai 2026",
+    parsedDate: d(2026, 5, 31),
+    time: "12h00",
+    location: "École Du Breuil, Route de la Pyramide, Bois de Vincennes, Paris 12e",
+    audience: "Tout public",
+    description:
+      "Dans le cadre de Du Breuil en fête 2026, une visite ethnobotanique portée par Botanique Ludique. Chaque style de jardin et de plantes révèle des circulations historiques, des rapports à la nature et aux savoirs botaniques. Un regard historique et social porté par une anthropologue.",
   },
   {
     id: "stage-botanique-chatou",
