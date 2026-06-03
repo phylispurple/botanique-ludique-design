@@ -52,21 +52,6 @@ const d = (year: number, month: number, day: number) => new Date(year, month - 1
 
 const upcomingEvents: UpcomingEvent[] = [
   {
-    id: "stage-botanique-chatou-juillet",
-    name: "Stage Botanique, Vacances d'Été",
-    date: "Du 7 au 10 juillet 2026",
-    parsedDate: d(2026, 7, 7),
-    time: "10h30 / 12h00",
-    location: "MJC de Chatou",
-    audience: "8 / 15 ans",
-    spots: "",
-    description:
-      "Une semaine de découverte botanique pendant les vacances d'été. Inscriptions et informations sur le site de la MJC de Chatou.",
-    linkType: "external",
-    externalUrl: "https://mjcchatou.org/",
-    buttonLabel: "S'inscrire",
-  },
-  {
     id: "terrarium-la-rochefoucauld-6-juin",
     name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
     date: "Samedi 6 juin 2026",
@@ -111,6 +96,21 @@ const upcomingEvents: UpcomingEvent[] = [
     externalUrl:
       "https://openagenda.com/fr/ile-de-france/events/atelier-creation-dun-kokedama",
     buttonLabel: "En savoir plus",
+  },
+  {
+    id: "stage-botanique-chatou-juillet",
+    name: "Stage Botanique, Vacances d'Été",
+    date: "Du 7 au 10 juillet 2026",
+    parsedDate: d(2026, 7, 7),
+    time: "10h30 / 12h00",
+    location: "MJC de Chatou",
+    audience: "8 / 15 ans",
+    spots: "",
+    description:
+      "Une semaine de découverte botanique pendant les vacances d'été. Inscriptions et informations sur le site de la MJC de Chatou.",
+    linkType: "external",
+    externalUrl: "https://mjcchatou.org/",
+    buttonLabel: "S'inscrire",
   },
 ];
 
