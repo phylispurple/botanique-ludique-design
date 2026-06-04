@@ -1,0 +1,12 @@
+
+ALTER FUNCTION public.move_to_dlq(text, text, bigint, jsonb) SET search_path = public, pgmq;
+ALTER FUNCTION public.read_email_batch(text, integer, integer) SET search_path = public, pgmq;
+ALTER FUNCTION public.delete_email(text, bigint) SET search_path = public, pgmq;
+ALTER FUNCTION public.enqueue_email(text, jsonb) SET search_path = public, pgmq;
+
+DROP POLICY IF EXISTS "Only admins can insert roles" ON public.user_roles;
+CREATE POLICY "Only admins can insert roles"
+ON public.user_roles
+FOR INSERT
+TO authenticated
+WITH CHECK (public.has_role(auth.uid(), 'admin'::app_role) AND user_id <> auth.uid());
