@@ -31,11 +31,14 @@ const lieux = [
 ];
 
 const faqs = [
+  { q: "Qu'est-ce qu'une balade ethnobotanique RSE en entreprise ?", a: "C'est une marche guidée de 2 à 3h dans un parc ou bois proche du site de l'entreprise, animée par une ethnobotaniste. Les collaborateur·ices apprennent à identifier 8 à 12 plantes locales, leurs usages culturels et leurs enjeux écologiques. Format apprécié en Semaine RSE, journée Développement Durable ou QVCT, pour 12 à 25 personnes." },
   { q: "La balade ethnobotanique convient-elle à un cadre RSE entreprise ?", a: "Oui, c'est même un format particulièrement crédible. Là où certains team building peuvent paraître artificiels, la balade ethnobotanique offre une vraie expérience écologique, scientifique et collective. Apprécié en Semaine RSE et journées DD." },
   { q: "Où la balade se déroule-t-elle dans les Yvelines ?", a: "Selon votre site : forêt de Saint-Germain, parc Meissonier à Poissy, bois de Vélizy, île de loisirs de Saint-Quentin-en-Yvelines, ou tout espace vert à proximité de vos locaux. Nous repérons le parcours en amont." },
   { q: "Quelle météo, et si il pleut ?", a: "Format adapté du printemps à l'automne. En cas de pluie forte le jour J, nous proposons une alternative en intérieur, atelier herbier ou conférence ethnobotanique, sans coût supplémentaire." },
   { q: "Combien de personnes maximum ?", a: "Idéalement 12 à 25 personnes par groupe, pour préserver la qualité d'écoute. Au-delà, nous fonctionnons à deux animatrices avec deux groupes parallèles." },
-  { q: "Tarif indicatif pour une balade RSE entreprise dans le 78 ?", a: "Entre 35 et 50 euros par personne selon la durée, le lieu et le nombre de participant·es. Comprend repérage, animation, carnet remis aux participant·es. Devis personnalisé après échange." }
+  { q: "Tarif indicatif pour une balade RSE entreprise dans le 78 ?", a: "Entre 35 et 50 euros par personne selon la durée, le lieu et le nombre de participant·es. Comprend repérage, animation, carnet remis aux participant·es. Devis personnalisé après échange." },
+  { q: "Pourquoi choisir un prestataire local 78 plutôt que parisien ?", a: "Un prestataire local connaît les parcs et bois du 78 (forêt de Saint-Germain, île de loisirs de SQY, bois de Vélizy), repère les parcours rapidement, et arrive en 10 à 30 minutes sans surcoût. C'est aussi cohérent avec votre démarche RSE : favoriser les acteurs locaux et réduire les déplacements." },
+  { q: "Quelles plantes typiques rencontre-t-on en balade dans les Yvelines ?", a: "Selon la saison et le site : sureau, ortie, plantain, achillée, lierre terrestre, aubépine, charme, chêne, fougère scolopendre, lichens. Chaque plante est replacée dans son contexte ethnobotanique, médicinal et culturel." }
 ];
 
 const BaladeEthnobotaniqueRSEYvelines = () => (
