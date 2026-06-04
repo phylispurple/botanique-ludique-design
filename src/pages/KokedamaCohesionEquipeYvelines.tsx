@@ -22,11 +22,23 @@ const benefits = [
 ];
 
 const faqs = [
+  { q: "Qu'est-ce qu'un atelier kokedama en entreprise ?", a: "Le kokedama est un art végétal japonais où une plante est enracinée dans une sphère de substrat enveloppée de mousse vivante. En entreprise, l'atelier kokedama dure 2h30, accueille 10 à 25 collaborateur·ices et se déroule sur le lieu de travail. Il combine geste artisanal lent, esthétique wabi-sabi et symbolique d'ancrage d'équipe." },
   { q: "Le kokedama convient-il à toutes les équipes en entreprise ?", a: "Oui, particulièrement aux équipes cherchant un format calme et créatif. Très apprécié dans les sièges tech de Vélizy, les centres R&D de Guyancourt et les sièges PME de Saint-Germain-en-Laye." },
   { q: "Combien de personnes par session ?", a: "Idéalement 10 à 25 personnes. Au-delà, nous mobilisons une seconde animatrice ou organisons deux sessions en parallèle. Format apprécié des équipes de 10 à 60 dans le 78." },
   { q: "Quelle durée prévoir ?", a: "Le format standard fait 2h30, ce qui permet à chacun·e de finir son kokedama sereinement. Une version courte de 2h reste possible pour insertion en séminaire." },
   { q: "Plantes utilisées et entretien ?", a: "Plantes d'intérieur résistantes : Asplenium, lierre, Ficus pumila. Arrosage par immersion toutes les 2 semaines. Fiche d'entretien remise à chaque participant·e." },
-  { q: "Tarif pour un atelier kokedama d'entreprise dans les Yvelines ?", a: "Entre 45 et 65 euros par personne selon le format, le nombre de participant·es et le lieu. Devis personnalisé après échange sur votre projet." }
+  { q: "Tarif pour un atelier kokedama d'entreprise dans les Yvelines ?", a: "Entre 45 et 65 euros par personne selon le format, le nombre de participant·es et le lieu. Devis personnalisé après échange sur votre projet." },
+  { q: "Dans quelles villes du 78 vous déplacez-vous ?", a: "Depuis notre base au Pecq, nous intervenons dans toutes les Yvelines : Vélizy-Villacoublay (15 min), Saint-Quentin-en-Yvelines (25 min), Guyancourt (25 min), Versailles (15 min), Poissy (15 min), Saint-Germain-en-Laye (5 min), Montigny-le-Bretonneux, Maisons-Laffitte. Déplacement inclus dans le devis." },
+  { q: "Pourquoi un prestataire local plutôt que parisien ?", a: "Proximité directe avec votre site (10 à 30 minutes), pas de surcoût Paris, connaissance du tissu RH du 78, disponibilité plus large pour les créneaux courts (after-work, pause midi). C'est une logique RSE de prestataire local privilégié." }
+];
+
+const reperesData = [
+  { label: "Durée", value: "2h (court) à 2h30 (standard)" },
+  { label: "Effectif", value: "10 à 25 personnes, jusqu'à 60 en double animation" },
+  { label: "Tarif", value: "45 à 65 € par personne, déplacement 78 inclus" },
+  { label: "Lieu", value: "Dans vos locaux, partout dans les Yvelines (78)" },
+  { label: "Matériel", value: "Tout fourni : substrats, plantes, mousse, cordelettes" },
+  { label: "Origine", value: "Art végétal japonais, philosophie wabi-sabi" }
 ];
 
 const KokedamaCohesionEquipeYvelines = () => (
@@ -74,6 +86,31 @@ const KokedamaCohesionEquipeYvelines = () => (
               <div className="font-mono-brand text-[9px] uppercase tracking-[2px] text-[hsl(var(--black))]/50">{s.label}</div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="py-16 px-4 md:px-8 bg-[hsl(var(--cream))] border-t-[3px] border-b-[3px] border-[hsl(var(--black))]">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_1.2fr] gap-12">
+        <div>
+          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4">Définition</span>
+          <h2 className="font-display text-2xl md:text-3xl uppercase leading-[1] tracking-[-1px] text-[hsl(var(--black))] mb-4">Atelier kokedama en entreprise</h2>
+          <p className="text-base leading-relaxed text-[hsl(var(--black))]/75">
+            Art végétal japonais où une plante est enracinée dans une sphère de substrat enveloppée de mousse vivante. En cohésion d'équipe, l'atelier dure 2h30, accueille 10 à 25 collaborateur·ices sur leur lieu de travail. Le geste lent du modelage et de la ligature porte une symbolique d'ancrage, d'écoute et de croissance partagée.
+          </p>
+        </div>
+        <div>
+          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4">Repères chiffrés</span>
+          <table className="w-full border-brutal bg-[hsl(var(--cream))]">
+            <tbody>
+              {reperesData.map((r, i) => (
+                <tr key={i} className="border-b-[3px] border-[hsl(var(--black))] last:border-b-0">
+                  <th scope="row" className="text-left p-3 font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/60 align-top w-32 border-r-[3px] border-[hsl(var(--black))]">{r.label}</th>
+                  <td className="p-3 text-sm text-[hsl(var(--black))] leading-relaxed">{r.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </section>

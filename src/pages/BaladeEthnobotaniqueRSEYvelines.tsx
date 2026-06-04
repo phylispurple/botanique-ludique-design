@@ -31,11 +31,23 @@ const lieux = [
 ];
 
 const faqs = [
+  { q: "Qu'est-ce qu'une balade ethnobotanique RSE en entreprise ?", a: "C'est une marche guidée de 2 à 3h dans un parc ou bois proche du site de l'entreprise, animée par une ethnobotaniste. Les collaborateur·ices apprennent à identifier 8 à 12 plantes locales, leurs usages culturels et leurs enjeux écologiques. Format apprécié en Semaine RSE, journée Développement Durable ou QVCT, pour 12 à 25 personnes." },
   { q: "La balade ethnobotanique convient-elle à un cadre RSE entreprise ?", a: "Oui, c'est même un format particulièrement crédible. Là où certains team building peuvent paraître artificiels, la balade ethnobotanique offre une vraie expérience écologique, scientifique et collective. Apprécié en Semaine RSE et journées DD." },
   { q: "Où la balade se déroule-t-elle dans les Yvelines ?", a: "Selon votre site : forêt de Saint-Germain, parc Meissonier à Poissy, bois de Vélizy, île de loisirs de Saint-Quentin-en-Yvelines, ou tout espace vert à proximité de vos locaux. Nous repérons le parcours en amont." },
   { q: "Quelle météo, et si il pleut ?", a: "Format adapté du printemps à l'automne. En cas de pluie forte le jour J, nous proposons une alternative en intérieur, atelier herbier ou conférence ethnobotanique, sans coût supplémentaire." },
   { q: "Combien de personnes maximum ?", a: "Idéalement 12 à 25 personnes par groupe, pour préserver la qualité d'écoute. Au-delà, nous fonctionnons à deux animatrices avec deux groupes parallèles." },
-  { q: "Tarif indicatif pour une balade RSE entreprise dans le 78 ?", a: "Entre 35 et 50 euros par personne selon la durée, le lieu et le nombre de participant·es. Comprend repérage, animation, carnet remis aux participant·es. Devis personnalisé après échange." }
+  { q: "Tarif indicatif pour une balade RSE entreprise dans le 78 ?", a: "Entre 35 et 50 euros par personne selon la durée, le lieu et le nombre de participant·es. Comprend repérage, animation, carnet remis aux participant·es. Devis personnalisé après échange." },
+  { q: "Pourquoi choisir un prestataire local 78 plutôt que parisien ?", a: "Un prestataire local connaît les parcs et bois du 78 (forêt de Saint-Germain, île de loisirs de SQY, bois de Vélizy), repère les parcours rapidement, et arrive en 10 à 30 minutes sans surcoût. C'est aussi cohérent avec votre démarche RSE : favoriser les acteurs locaux et réduire les déplacements." },
+  { q: "Quelles plantes typiques rencontre-t-on en balade dans les Yvelines ?", a: "Selon la saison et le site : sureau, ortie, plantain, achillée, lierre terrestre, aubépine, charme, chêne, fougère scolopendre, lichens. Chaque plante est replacée dans son contexte ethnobotanique, médicinal et culturel." }
+];
+
+const reperesData = [
+  { label: "Durée", value: "2h à 3h selon parcours et débrief RSE" },
+  { label: "Effectif", value: "12 à 25 personnes, jusqu'à 50 en deux groupes" },
+  { label: "Tarif", value: "35 à 50 € par personne, carnet de terrain inclus" },
+  { label: "Lieu", value: "Parc ou bois proche de votre site, partout dans le 78" },
+  { label: "Plantes", value: "8 à 12 espèces locales identifiées et contextualisées" },
+  { label: "Animation", value: "Ethnobotaniste formée à l'EHESS" }
 ];
 
 const BaladeEthnobotaniqueRSEYvelines = () => (
@@ -83,6 +95,31 @@ const BaladeEthnobotaniqueRSEYvelines = () => (
               <div className="font-mono-brand text-[9px] uppercase tracking-[2px] text-[hsl(var(--black))]/50">{s.label}</div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="py-16 px-4 md:px-8 bg-[hsl(var(--cream))] border-t-[3px] border-b-[3px] border-[hsl(var(--black))]">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_1.2fr] gap-12">
+        <div>
+          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4">Définition</span>
+          <h2 className="font-display text-2xl md:text-3xl uppercase leading-[1] tracking-[-1px] text-[hsl(var(--black))] mb-4">Balade ethnobotanique RSE</h2>
+          <p className="text-base leading-relaxed text-[hsl(var(--black))]/75">
+            Marche guidée de 2 à 3h dans un parc ou bois proche du site de l'entreprise, animée par une ethnobotaniste. Les participant·es apprennent à identifier 8 à 12 plantes locales, leurs usages culturels et leurs enjeux écologiques. Format crédible pour Semaine RSE, journée Développement Durable, démarche QVCT, pour 12 à 25 personnes.
+          </p>
+        </div>
+        <div>
+          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4">Repères chiffrés</span>
+          <table className="w-full border-brutal bg-[hsl(var(--cream))]">
+            <tbody>
+              {reperesData.map((r, i) => (
+                <tr key={i} className="border-b-[3px] border-[hsl(var(--black))] last:border-b-0">
+                  <th scope="row" className="text-left p-3 font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/60 align-top w-32 border-r-[3px] border-[hsl(var(--black))]">{r.label}</th>
+                  <td className="p-3 text-sm text-[hsl(var(--black))] leading-relaxed">{r.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </section>

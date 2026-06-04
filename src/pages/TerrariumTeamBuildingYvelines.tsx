@@ -22,10 +22,22 @@ const benefits = [
 ];
 
 const faqs = [
+  { q: "Qu'est-ce qu'un team building terrarium ?", a: "Le team building terrarium est un atelier de cohésion d'équipe où chaque collaborateur·ice compose un écosystème végétal miniature scellé sous verre. Durée 2h, format 10 à 30 personnes, animé par une botaniste sur le lieu de l'entreprise. Hérité des caisses de Ward du XIXᵉ siècle." },
   { q: "Quel format pour un terrarium team building dans les Yvelines ?", a: "Le format standard fait 2h, idéal en pause séminaire ou en after-work. Pour les groupes plus créatifs, le format demi-journée (3h) permet d'aller plus loin dans la composition." },
   { q: "Combien de personnes maximum ?", a: "Jusqu'à 30 personnes en simultané avec une animatrice. Au-delà, nous fonctionnons en double animatrice ou en rotations. Idéal pour les équipes projet de Vélizy, Guyancourt ou Saint-Quentin-en-Yvelines." },
   { q: "Vous fournissez tout le matériel ?", a: "Oui, bocaux, substrats, plantes tropicales (Fittonia, Pilea, mousses), outils de plantation, tabliers et protections. Vous n'avez à prévoir que les tables et l'accès eau." },
-  { q: "Quel tarif indicatif pour un terrarium d'entreprise ?", a: "Entre 40 et 60 euros par personne selon le nombre de participant·es, le format et le lieu d'intervention dans le 78. Devis personnalisé après échange." }
+  { q: "Quel tarif indicatif pour un terrarium d'entreprise ?", a: "Entre 40 et 60 euros par personne selon le nombre de participant·es, le format et le lieu d'intervention dans le 78. Devis personnalisé après échange." },
+  { q: "Dans quelles villes des Yvelines intervenez-vous ?", a: "Nous intervenons dans tout le 78 depuis notre base au Pecq : Vélizy-Villacoublay (15 min), Saint-Quentin-en-Yvelines (25 min), Guyancourt (25 min), Versailles (15 min), Poissy (15 min), Saint-Germain-en-Laye (5 min), Montigny-le-Bretonneux, Houilles, Sartrouville, Maisons-Laffitte." },
+  { q: "Combien de temps pour venir dans nos locaux depuis Le Pecq ?", a: "10 à 30 minutes selon votre ville dans le 78. Le déplacement est inclus dans le devis pour toutes les villes des Yvelines, sans surcoût parisien. C'est notre différence avec un prestataire basé à Paris." }
+];
+
+const reperesData = [
+  { label: "Durée", value: "2h (court) à 3h (demi-journée)" },
+  { label: "Effectif", value: "10 à 30 personnes, jusqu'à 60 en double animation" },
+  { label: "Tarif", value: "40 à 60 € par personne, déplacement 78 inclus" },
+  { label: "Lieu", value: "Dans vos locaux, partout dans les Yvelines (78)" },
+  { label: "Matériel", value: "Tout fourni : bocaux, substrats, plantes, outils" },
+  { label: "Animation", value: "Botaniste formée, approche ethnobotanique EHESS" }
 ];
 
 const TerrariumTeamBuildingYvelines = () => (
@@ -73,6 +85,31 @@ const TerrariumTeamBuildingYvelines = () => (
               <div className="font-mono-brand text-[9px] uppercase tracking-[2px] text-[hsl(var(--black))]/50">{s.label}</div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="py-16 px-4 md:px-8 bg-[hsl(var(--cream))] border-t-[3px] border-b-[3px] border-[hsl(var(--black))]">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_1.2fr] gap-12">
+        <div>
+          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4">Définition</span>
+          <h2 className="font-display text-2xl md:text-3xl uppercase leading-[1] tracking-[-1px] text-[hsl(var(--black))] mb-4">Team building terrarium</h2>
+          <p className="text-base leading-relaxed text-[hsl(var(--black))]/75">
+            Atelier de cohésion d'équipe en entreprise où chaque participant·e compose un écosystème végétal miniature scellé sous verre. Format de 2h, 10 à 30 personnes, animé sur le lieu de travail par une botaniste. Hérité des caisses de Ward, dispositifs scientifiques du XIXᵉ siècle conçus pour transporter des plantes tropicales par bateau.
+          </p>
+        </div>
+        <div>
+          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4">Repères chiffrés</span>
+          <table className="w-full border-brutal bg-[hsl(var(--cream))]">
+            <tbody>
+              {reperesData.map((r, i) => (
+                <tr key={i} className="border-b-[3px] border-[hsl(var(--black))] last:border-b-0">
+                  <th scope="row" className="text-left p-3 font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/60 align-top w-32 border-r-[3px] border-[hsl(var(--black))]">{r.label}</th>
+                  <td className="p-3 text-sm text-[hsl(var(--black))] leading-relaxed">{r.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
