@@ -35,9 +35,9 @@ const BlogTerrariumBiopiraterie = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="Le Terrarium, une Arme de Biopiraterie à l'Ère Coloniale Victorienne"
-        description="Du Wardian Case victorien au vol de 70 000 graines d'hévéa : comment un simple bocal en verre est devenu l'outil de la plus grande opération de biopiraterie de l'histoire coloniale."
-        keywords="terrarium histoire, wardian case, biopiraterie, Nathaniel Ward, hévéa Brésil, Henry Wickham, fern fever, caoutchouc colonialisme, aviamento, seringueiros, esclavage dette, histoire botanique, ethnobotanique terrarium"
+        title="Histoire du terrarium : du Wardian Case à la biopiraterie victorienne"
+        description="Histoire du terrarium et invention du Wardian Case en 1829. De Nathaniel Ward au vol de 70 000 graines d'hévéa : comment un bocal de verre a redessiné le monde."
+        keywords="histoire du terrarium, qui a inventé le terrarium, terrarium victorien, wardian case, biopiraterie, Nathaniel Ward, hévéa Brésil, Henry Wickham, fern fever, caoutchouc colonialisme, ethnobotanique terrarium"
         canonical="/blog/terrarium-biopiraterie-histoire-coloniale"
         type="article"
       />
