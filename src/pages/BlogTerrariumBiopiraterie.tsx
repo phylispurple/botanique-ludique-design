@@ -733,6 +733,55 @@ const BlogTerrariumBiopiraterie = () => {
                 </div>
               </div>
 
+              {/* FAQ Section */}
+              <section className="mb-12 animate-fade-in scroll-mt-28" aria-label="Questions fréquentes sur le terrarium">
+                <h2 className="text-2xl md:text-3xl mb-8" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  Questions fréquentes sur le terrarium
+                </h2>
+
+                <div className="space-y-6">
+                  <details className="group bg-white/60 border border-charcoal/10 rounded-xl p-6 open:bg-white transition-colors">
+                    <summary className="flex justify-between items-center cursor-pointer list-none font-semibold text-charcoal group-open:text-sage-dark">
+                      Qui a inventé le terrarium ?
+                      <span className="ml-4 text-sage transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p className="mt-4 text-charcoal/80 leading-relaxed">
+                      Le terrarium a été inventé accidentellement en <strong>1829</strong> par <strong>Nathaniel Bagshaw Ward</strong>, un médecin et botaniste amateur londonien. Il a observé qu'une fougère poussait dans une bouteille en verre scellée où il conservait une chrysalide de papillon sphinx.
+                    </p>
+                  </details>
+
+                  <details className="group bg-white/60 border border-charcoal/10 rounded-xl p-6 open:bg-white transition-colors">
+                    <summary className="flex justify-between items-center cursor-pointer list-none font-semibold text-charcoal group-open:text-sage-dark">
+                      Qu'est-ce qu'un Wardian Case ?
+                      <span className="ml-4 text-sage transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p className="mt-4 text-charcoal/80 leading-relaxed">
+                      Le <strong>Wardian Case</strong> est l'ancêtre du terrarium moderne. C'est une mini-serre portative en verre scellée qui crée un <strong>microclimat autonome</strong>, permettant de transporter des plantes vivantes sur de longues distances par voie maritime.
+                    </p>
+                  </details>
+
+                  <details className="group bg-white/60 border border-charcoal/10 rounded-xl p-6 open:bg-white transition-colors">
+                    <summary className="flex justify-between items-center cursor-pointer list-none font-semibold text-charcoal group-open:text-sage-dark">
+                      En quelle année le terrarium a-t-il été inventé ?
+                      <span className="ml-4 text-sage transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p className="mt-4 text-charcoal/80 leading-relaxed">
+                      Le terrarium a été inventé en <strong>1829</strong> à Londres par Nathaniel Bagshaw Ward, dans le contexte de la révolution industrielle et de la <em>fern fever</em> (fièvre des fougères) qui animait l'Angleterre victorienne.
+                    </p>
+                  </details>
+
+                  <details className="group bg-white/60 border border-charcoal/10 rounded-xl p-6 open:bg-white transition-colors">
+                    <summary className="flex justify-between items-center cursor-pointer list-none font-semibold text-charcoal group-open:text-sage-dark">
+                      Pourquoi le terrarium est-il lié à la biopiraterie ?
+                      <span className="ml-4 text-sage transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p className="mt-4 text-charcoal/80 leading-relaxed">
+                      Le Wardian Case a permis le <strong>transport maritime réussi</strong> de plantes économiques précieuses entre continents. Il a été utilisé pour déplacer l'<strong>hévéa du Brésil vers l'Asie du Sud-Est</strong>, ce qui a conduit à la plus grande opération de biopiraterie de l'histoire coloniale, avec le vol de 70 000 graines d'hévéa par Henry Wickham en 1876.
+                    </p>
+                  </details>
+                </div>
+              </section>
+
               {/* CTA Ateliers */}
               <BlogCTA variant="ethnobotanique" />
 
