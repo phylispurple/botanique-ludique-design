@@ -44,11 +44,22 @@ const BlogTerrariumBiopiraterie = () => {
       <SchemaOrg 
         type="Article"
         data={{
-          headline: "Le Terrarium, une Arme de Biopiraterie à l'Ère Coloniale Victorienne",
-          description: "Du Wardian Case victorien au vol de 70 000 graines d'hévéa : comment un simple bocal en verre est devenu l'outil de la plus grande opération de biopiraterie de l'histoire coloniale.",
+          headline: "Histoire du terrarium : du Wardian Case à la biopiraterie victorienne",
+          description: "Histoire du terrarium et invention du Wardian Case en 1829. De Nathaniel Ward au vol de 70 000 graines d'hévéa : comment un bocal de verre a redessiné le monde.",
           author: { name: "Vanessa Charlery" },
           datePublished: "2026-02-06",
           dateModified: "2026-02-06"
+        }}
+      />
+      <SchemaOrg
+        type="FAQPage"
+        data={{
+          questions: [
+            { q: "Qui a inventé le terrarium ?", a: "Le terrarium a été inventé accidentellement en 1829 par Nathaniel Bagshaw Ward, un médecin et botaniste amateur londonien. Il a observé qu'une fougère poussait dans une bouteille en verre scellée où il conservait une chrysalide de papillon sphinx." },
+            { q: "Qu'est-ce qu'un Wardian Case ?", a: "Le Wardian Case est l'ancêtre du terrarium moderne. C'est une mini-serre portative en verre scellée qui crée un microclimat autonome, permettant de transporter des plantes vivantes sur de longues distances." },
+            { q: "En quelle année le terrarium a-t-il été inventé ?", a: "Le terrarium a été inventé en 1829 à Londres par Nathaniel Bagshaw Ward." },
+            { q: "Pourquoi le terrarium est-il lié à la biopiraterie ?", a: "Le Wardian Case a permis le transport maritime réussi de plantes économiques précieuses entre continents. Il a été utilisé pour déplacer l'hévéa du Brésil vers l'Asie du Sud-Est, ce qui a conduit à la plus grande opération de biopiraterie de l'histoire coloniale." }
+          ]
         }}
       />
       <FloatingIllustrations />
