@@ -34,8 +34,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO
-        title="Vanessa Charlery, Animatrice Ethnobotaniste | À Propos ✦ Ma Démarche"
-        description="🌿 Découvrez Vanessa Charlery, animatrice ethnobotaniste formée à l'EHESS. Reconnecter l'humain au végétal par des ateliers créatifs uniques. Approche anthropologique et sensorielle."
+        title="Vanessa Charlery, animatrice ethnobotaniste, à propos"
+        description="Vanessa Charlery, animatrice ethnobotaniste formée à l'EHESS. Ateliers créatifs pour reconnecter l'humain au végétal, approche anthropologique et sensorielle."
         keywords="Vanessa Charlery, animatrice ethnobotaniste, EHESS, photographe botanique, éducation environnement, ethnobotanique, philosophie nature, reconnexion vivant"
         canonical="/about" />
       
