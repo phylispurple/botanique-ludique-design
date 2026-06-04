@@ -189,6 +189,9 @@ import CoupleNatureHautsDeSeine from "./pages/CoupleNatureHautsDeSeine";
 import SeminaireEntrepriseParis from "./pages/SeminaireEntrepriseParis";
 import SeminaireEntrepriseYvelines from "./pages/SeminaireEntrepriseYvelines";
 import TeamBuildingEntrepriseYvelines from "./pages/TeamBuildingEntrepriseYvelines";
+import TerrariumTeamBuildingYvelines from "./pages/TerrariumTeamBuildingYvelines";
+import KokedamaCohesionEquipeYvelines from "./pages/KokedamaCohesionEquipeYvelines";
+import BaladeEthnobotaniqueRSEYvelines from "./pages/BaladeEthnobotaniqueRSEYvelines";
 import SeminaireEntrepriseHautsDeSeine from "./pages/SeminaireEntrepriseHautsDeSeine";
 import SeminaireEntrepriseValDOise from "./pages/SeminaireEntrepriseValDOise";
 import MediathequeParis from "./pages/MediathequeParis";
@@ -418,6 +421,10 @@ const App = () => (
                 <Route path="/seminaire-entreprise-paris" element={<SeminaireEntrepriseParis />} />
                 <Route path="/seminaire-entreprise-yvelines" element={<SeminaireEntrepriseYvelines />} />
                 <Route path="/team-building-entreprise-yvelines" element={<TeamBuildingEntrepriseYvelines />} />
+                <Route path="/terrarium-team-building-yvelines" element={<TerrariumTeamBuildingYvelines />} />
+                <Route path="/kokedama-cohesion-equipe-yvelines" element={<KokedamaCohesionEquipeYvelines />} />
+                <Route path="/balade-ethnobotanique-rse-yvelines" element={<BaladeEthnobotaniqueRSEYvelines />} />
+                <Route path="/devis-entreprise" element={<Navigate to="/pro#devis" replace />} />
                 <Route path="/seminaire-entreprise-hauts-de-seine" element={<SeminaireEntrepriseHautsDeSeine />} />
                 <Route path="/seminaire-entreprise-val-d-oise" element={<SeminaireEntrepriseValDOise />} />
                 <Route path="/mediatheque-paris" element={<MediathequeParis />} />
