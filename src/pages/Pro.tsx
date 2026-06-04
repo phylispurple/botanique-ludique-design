@@ -13,12 +13,16 @@ import { trackFormSubmit } from "@/lib/analytics";
 import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
 import AnimatedSection from "@/components/AnimatedSection";
 import BackToTop from "@/components/BackToTop";
+import Testimonials from "@/components/Testimonials";
+import SocialProofBar from "@/components/SocialProofBar";
 
 const quoteSchema = z.object({
   name: z.string().trim().min(1, "Le nom est requis").max(100),
   organization: z.string().trim().min(1, "Le nom de l'organisation est requis").max(200),
   email: z.string().trim().email("Email invalide").max(255),
   phone: z.string().trim().max(20).optional(),
+  city: z.string().trim().max(100).optional(),
+  participants: z.string().trim().max(50).optional(),
   eventType: z.string().trim().min(1, "Le type d'événement est requis").max(200),
   date: z.string().optional(),
   message: z.string().trim().max(2000).optional(),
@@ -33,6 +37,8 @@ const Pro = () => {
     organization: "",
     email: "",
     phone: "",
+    city: "",
+    participants: "",
     eventType: "",
     date: "",
     message: "",
@@ -54,7 +60,7 @@ const Pro = () => {
       if (error) throw error;
       trackFormSubmit("b2b_quote", { event_type: formData.eventType });
       toast({ title: "Demande envoyée !", description: "Nous vous contacterons dans les plus brefs délais (sous 24h)." });
-      setFormData({ name: "", organization: "", email: "", phone: "", eventType: "", date: "", message: "" });
+      setFormData({ name: "", organization: "", email: "", phone: "", city: "", participants: "", eventType: "", date: "", message: "" });
     } catch (error: any) {
       console.error('Error sending B2B quote request:', error);
       toast({ title: "Erreur lors de l'envoi", description: "Une erreur est survenue. Veuillez réessayer.", variant: "destructive" });
@@ -415,6 +421,34 @@ const Pro = () => {
       </section>
 
       {/* ═══════════════════════════════════════════ */}
+      {/* PREUVE SOCIALE — logos + témoignages */}
+      {/* ═══════════════════════════════════════════ */}
+      <section className="py-20 px-4 md:px-8 bg-[hsl(var(--green-pale))]">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection>
+            <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4 text-center">Ils nous font confiance</span>
+            <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] uppercase leading-[0.9] tracking-[-1px] text-[hsl(var(--black))] mb-12 text-center">
+              Plus de 50 structures<br />
+              <span className="text-[hsl(var(--olive))]">accompagnées</span>
+            </h2>
+          </AnimatedSection>
+          <SocialProofBar />
+        </div>
+      </section>
+
+      <section className="py-20 px-4 md:px-8 bg-[hsl(var(--cream))]">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection>
+            <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4 text-center">Ce qu'elles et ils en disent</span>
+            <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] uppercase leading-[0.9] tracking-[-1px] text-[hsl(var(--black))] mb-12 text-center">
+              Témoignages clients
+            </h2>
+          </AnimatedSection>
+          <Testimonials />
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════ */}
       {/* DEVIS FORM */}
       {/* ═══════════════════════════════════════════ */}
       <section id="devis" className="py-20 px-4 md:px-8">
@@ -561,7 +595,39 @@ const Pro = () => {
                           onChange={(e) => setFormData({...formData, date: e.target.value})}
                           className="w-full bg-transparent border-b-2 border-[hsl(var(--black))]/20 py-3 text-sm focus:border-[hsl(var(--olive))] outline-none transition-colors"
                         />
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/60 block mb-2">
+                          Ville d'intervention
+                        </label>
+                        <input
+                          type="text"
+                          value={formData.city}
+                          onChange={(e) => setFormData({...formData, city: e.target.value})}
+                          placeholder="Vélizy, Saint-Quentin-en-Yvelines..."
+                          className="w-full bg-transparent border-b-2 border-[hsl(var(--black))]/20 py-3 text-sm focus:border-[hsl(var(--olive))] outline-none transition-colors placeholder:text-[hsl(var(--black))]/30"
+                        />
                       </div>
+                      <div>
+                        <label className="font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/60 block mb-2">
+                          Nombre de participants
+                        </label>
+                        <select
+                          value={formData.participants}
+                          onChange={(e) => setFormData({...formData, participants: e.target.value})}
+                          className="w-full bg-transparent border-b-2 border-[hsl(var(--black))]/20 py-3 text-sm focus:border-[hsl(var(--olive))] outline-none transition-colors appearance-none"
+                        >
+                          <option value="">À estimer...</option>
+                          <option value="Moins de 10">Moins de 10</option>
+                          <option value="10 à 20">10 à 20</option>
+                          <option value="20 à 40">20 à 40</option>
+                          <option value="40 à 60">40 à 60</option>
+                          <option value="Plus de 60">Plus de 60</option>
+                        </select>
+                      </div>
+                    </div>
                     </div>
 
                     <div>
