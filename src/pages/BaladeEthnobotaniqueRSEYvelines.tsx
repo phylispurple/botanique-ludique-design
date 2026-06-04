@@ -99,6 +99,31 @@ const BaladeEthnobotaniqueRSEYvelines = () => (
       </div>
     </section>
 
+    <section className="py-16 px-4 md:px-8 bg-[hsl(var(--cream))] border-t-[3px] border-b-[3px] border-[hsl(var(--black))]">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_1.2fr] gap-12">
+        <div>
+          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4">Définition</span>
+          <h2 className="font-display text-2xl md:text-3xl uppercase leading-[1] tracking-[-1px] text-[hsl(var(--black))] mb-4">Balade ethnobotanique RSE</h2>
+          <p className="text-base leading-relaxed text-[hsl(var(--black))]/75">
+            Marche guidée de 2 à 3h dans un parc ou bois proche du site de l'entreprise, animée par une ethnobotaniste. Les participant·es apprennent à identifier 8 à 12 plantes locales, leurs usages culturels et leurs enjeux écologiques. Format crédible pour Semaine RSE, journée Développement Durable, démarche QVCT, pour 12 à 25 personnes.
+          </p>
+        </div>
+        <div>
+          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4">Repères chiffrés</span>
+          <table className="w-full border-brutal bg-[hsl(var(--cream))]">
+            <tbody>
+              {reperesData.map((r, i) => (
+                <tr key={i} className="border-b-[3px] border-[hsl(var(--black))] last:border-b-0">
+                  <th scope="row" className="text-left p-3 font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/60 align-top w-32 border-r-[3px] border-[hsl(var(--black))]">{r.label}</th>
+                  <td className="p-3 text-sm text-[hsl(var(--black))] leading-relaxed">{r.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <section className="py-20 px-4 md:px-8 bg-[hsl(var(--black))] text-[hsl(var(--cream))]">
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
