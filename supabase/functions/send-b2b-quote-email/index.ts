@@ -18,6 +18,8 @@ const b2bQuoteSchema = z.object({
   organization: z.string().trim().min(1, "Organization is required").max(200, "Organization name too long"),
   email: z.string().trim().email("Invalid email address").max(255, "Email too long"),
   phone: z.string().trim().max(20, "Phone number too long").optional(),
+  city: z.string().trim().max(100, "City too long").optional(),
+  participants: z.string().trim().max(50, "Participants too long").optional(),
   eventType: z.string().trim().min(1, "Event type is required").max(100, "Event type too long"),
   date: z.string().trim().max(50, "Date too long").optional(),
   message: z.string().trim().max(2000, "Message too long").optional(),
@@ -118,13 +120,15 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    const { name, organization, email, phone, eventType, date, message } = validationResult.data;
+    const { name, organization, email, phone, city, participants, eventType, date, message } = validationResult.data;
 
     // Escape all user inputs for HTML
     const safeName = escapeHtml(name);
     const safeOrganization = escapeHtml(organization);
     const safeEmail = escapeHtml(email);
     const safePhone = phone ? escapeHtml(phone) : null;
+    const safeCity = city ? escapeHtml(city) : null;
+    const safeParticipants = participants ? escapeHtml(participants) : null;
     const safeEventType = escapeHtml(eventType);
     const safeMessage = message ? escapeHtml(message) : null;
 
@@ -168,6 +172,8 @@ const handler = async (req: Request): Promise<Response> => {
           <div style="background-color: #E8F1E3; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #5D653A; margin-top: 0;">Détails de la demande</h3>
             <p style="margin: 10px 0;"><strong>Type d'événement :</strong> <span style="color: #3D3D2E; font-weight: 600;">${safeEventType}</span></p>
+            ${safeCity ? `<p style="margin: 10px 0;"><strong>Ville d'intervention :</strong> ${safeCity}</p>` : ''}
+            ${safeParticipants ? `<p style="margin: 10px 0;"><strong>Participants :</strong> ${safeParticipants}</p>` : ''}
             <p style="margin: 10px 0;"><strong>Date souhaitée :</strong> ${formattedDate}</p>
           </div>
           
