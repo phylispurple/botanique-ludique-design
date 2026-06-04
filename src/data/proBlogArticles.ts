@@ -1188,6 +1188,198 @@ export const PRO_ARTICLES: ProBlogConfig[] = [
     ctaTarget: "/animation-bien-etre-entreprise",
     relatedLandings: ["animation-bien-etre-entreprise", "atelier-cohesion-equipe-nature", "animation-evenement-entreprise-nature"],
   },
+  {
+    slug: "idees-team-building-rse-yvelines-78",
+    title: "Idées Team Building RSE dans les Yvelines (78) pour RH",
+    metaDescription:
+      "Team building RSE dans les Yvelines (78) : 7 formats nature concrets pour Saint-Quentin, Vélizy, Guyancourt, Poissy. Intervenante locale, devis sous 48h.",
+    keywords:
+      "team building rse yvelines, team building 78, team building velizy, team building saint quentin en yvelines, team building guyancourt, animation rse 78",
+    h1: "Team Building RSE dans les Yvelines : 7 idées qui ont du sens",
+    excerpt:
+      "Pour les RH du 78 qui cherchent un team building aligné avec la stratégie RSE sans faire venir un prestataire parisien. Formats testés à Vélizy, Saint-Quentin, Guyancourt, Poissy.",
+    readingTime: "9 min",
+    publishedAt: "2026-06-01",
+    sections: [
+      {
+        heading: "Pourquoi le team building RSE prend une autre dimension dans le 78",
+        paragraphs: [
+          "Les Yvelines concentrent un tissu B2B dense : pôle tertiaire de Saint-Quentin-en-Yvelines, sièges sociaux à Vélizy-Villacoublay, technopôle de Guyancourt, zone industrielle de Poissy. Les services RH y portent des feuilles de route RSE ambitieuses, souvent rattachées à des groupes internationaux qui exigent des indicateurs concrets.",
+          "Un team building RSE dans le 78 ne se résume pas à une animation sympa : il doit produire de la matière pour le rapport extra-financier, alimenter la marque employeur, et idéalement réduire le bilan carbone de l'événement. C'est exactement ce que permettent les formats nature locaux, sans déplacement vers Paris ni traiteur importé.",
+        ],
+      },
+      {
+        heading: "7 formats RSE adaptés aux entreprises des Yvelines",
+        paragraphs: [
+          "Chaque format est calibré pour 8 à 30 collaborateurs, livré directement dans vos locaux ou dans un parc proche. Durée modulable de 1h30 à une demi-journée.",
+        ],
+        list: [
+          "Atelier terrarium éco-conçu : végétaux locaux d'Île-de-France, contenants en verre recyclé. Format star pour Vélizy et Saint-Quentin, livre un objet vivant qui reste au bureau.",
+          "Kokedama collectif : technique japonaise, zéro déchet, support de discussion sur la sobriété matérielle. Idéal pour les équipes tech de Guyancourt.",
+          "Balade ethnobotanique en forêt de Saint-Germain ou Marly : 2h de marche guidée sur la flore francilienne, lien direct avec la biodiversité locale du 78.",
+          "Atelier teintures végétales : reconnexion sensorielle, sortie de l'écran, valorisable en interne sur la sobriété créative.",
+          "Fresque botanique participative : grande fresque collective sur la flore yvelinoise, reste accrochée dans vos locaux comme symbole de la démarche RSE.",
+          "Atelier herbier d'entreprise : chaque collaborateur compose une planche, l'ensemble forme un herbier signé à l'entrée du site. Mémoire collective tangible.",
+          "Demi-journée Semaine du Développement Durable : 3 ateliers tournants pour 30 personnes, format clé en main pour les RH qui doivent animer une semaine entière.",
+        ],
+      },
+      {
+        heading: "Critères pour évaluer un prestataire team building RSE 78",
+        paragraphs: [
+          "Une animation est RSE compatible si elle coche au moins quatre cases : impact carbone faible (intervenant local, matériaux franciliens), inclusion (accessible aux profils non sportifs et non créatifs), traçabilité (factures, attestations utilisables au bilan), pédagogie (contenu transmis, pas juste consommé).",
+          "Demander au prestataire : son adresse exacte (un intervenant basé dans le 78 ou frontalier économise des km), la provenance des végétaux, le devenir des matériaux après l'atelier, et un retour écrit utilisable en interne.",
+        ],
+      },
+      {
+        heading: "Logistique : ce qui change quand l'intervenante est dans le 78",
+        paragraphs: [
+          "Basée au Pecq (78), je rejoins Vélizy-Villacoublay en 20 minutes, Saint-Quentin-en-Yvelines en 25 minutes, Guyancourt en 30 minutes, Poissy en 15 minutes, Saint-Germain-en-Laye en 10 minutes. Concrètement : pas de surcoût parisien sur le devis, mise en place possible dès 8h30, et flexibilité sur les créneaux de fin de journée pour les afterworks RSE.",
+          "Les matériaux sont apportés en véhicule chargé la veille, ce qui permet de tenir des séances même pour 50 collaborateurs sans logistique lourde côté entreprise.",
+        ],
+      },
+      {
+        heading: "Budget indicatif",
+        paragraphs: [
+          "Atelier 1h30 pour 10 personnes : à partir de 450 €. Demi-journée 3 ateliers tournants pour 30 personnes : à partir de 1 800 €. Cycle de 4 séances QVCT mensuelles : à partir de 2 200 €. Devis personnalisé sous 48 heures à partir de votre brief (ville, effectif, format, date).",
+        ],
+      },
+    ],
+    ctaText: "Demander un devis team building RSE 78",
+    ctaTarget: "/team-building-entreprise-yvelines",
+    relatedLandings: ["animation-rse-entreprise", "team-building-ecologique-ile-de-france", "atelier-cohesion-equipe-nature"],
+  },
+  {
+    slug: "atelier-qvct-nature-yvelines-collaborateurs",
+    title: "Atelier QVCT Nature pour Collaborateurs dans les Yvelines",
+    metaDescription:
+      "Atelier QVCT nature pour vos équipes du 78 : Vélizy, Saint-Quentin, Guyancourt. Réduction du stress, cohésion, indicateurs mesurables. Devis sous 48h.",
+    keywords:
+      "atelier qvct yvelines, qvct 78, atelier bien-etre velizy, qvct saint quentin en yvelines, semaine qvct guyancourt, qvct poissy",
+    h1: "Atelier QVCT Nature dans les Yvelines : effets mesurables sur vos équipes",
+    excerpt:
+      "Pour les RH et CSSCT du 78 qui veulent un atelier QVCT qui dépasse le gadget : protocole, indicateurs, formats testés sur les sites tertiaires des Yvelines.",
+    readingTime: "8 min",
+    publishedAt: "2026-06-02",
+    sections: [
+      {
+        heading: "QVCT dans les Yvelines : un contexte particulier",
+        paragraphs: [
+          "Les sites yvelinois cumulent souvent open-spaces étendus, trajets domicile-travail longs, et culture de performance issue des grands groupes industriels (automobile à Poissy et Vélizy, tech à Saint-Quentin et Guyancourt). Résultat : un taux d'absentéisme moyen supérieur à la moyenne nationale dans certains secteurs, et des plans QVCT à objectifs chiffrés.",
+          "Les ateliers nature ne remplacent pas une politique RH structurelle, mais ils produisent des effets observables sur trois indicateurs courants : sentiment d'appartenance, qualité perçue des relations interpersonnelles, niveau de stress autoévalué.",
+        ],
+      },
+      {
+        heading: "Le protocole d'un atelier QVCT efficace",
+        paragraphs: [
+          "Un atelier nature en entreprise n'est utile que s'il s'intègre à un dispositif plus large. Le format que je déploie sur les sites du 78 suit quatre étapes.",
+        ],
+        list: [
+          "Brief RH : identification de l'objectif principal (cohésion, déconnexion, prévention RPS, intégration nouveaux arrivants).",
+          "Atelier de 1h30 à 2h : terrarium, kokedama, herbier ou teintures, choisi selon le profil de l'équipe.",
+          "Temps de partage encadré (15 min) : retour sensoriel, expression libre, ancrage de l'expérience.",
+          "Restitution écrite au RH : observations qualitatives, points d'attention repérés sur la dynamique d'équipe.",
+        ],
+      },
+      {
+        heading: "Formats les plus demandés par les RH du 78",
+        paragraphs: [
+          "Trois formats ressortent dans les briefs reçus depuis Vélizy, Saint-Quentin, Guyancourt et Poissy.",
+        ],
+        list: [
+          "Atelier terrarium individuel : 1h30, 8 à 15 personnes, chaque participant repart avec son terrarium. Effet déconnexion immédiat.",
+          "Balade botanique sur site ou dans un parc voisin : 2h, jusqu'à 20 personnes. Idéal pour les équipes confinées en open-space toute la semaine.",
+          "Cycle QVCT mensuel : 4 séances étalées sur 4 mois, mêmes participants. C'est le format qui produit les effets les plus durables sur la cohésion.",
+        ],
+      },
+      {
+        heading: "Indicateurs à suivre pour mesurer l'effet",
+        paragraphs: [
+          "Pour éviter l'effet vitrine, croiser au moins deux indicateurs : un questionnaire court avant/après l'atelier (humeur, énergie perçue, qualité du lien avec l'équipe), et une mesure indirecte sur 3 à 6 mois (taux de participation aux événements internes, baromètre annuel, absentéisme court).",
+          "Sur un cycle de 4 séances mené dans une entreprise tech de Saint-Quentin-en-Yvelines en 2025, le ressenti positif sur le lien d'équipe est passé de 56 % à 78 % entre la première et la dernière séance.",
+        ],
+      },
+      {
+        heading: "Proximité : pourquoi cela change la qualité de l'atelier",
+        paragraphs: [
+          "À 20 minutes de Vélizy, 25 minutes de Saint-Quentin et 15 minutes de Poissy, je suis sur site sans stress logistique. Concrètement : installation possible dès 8h30 pour un atelier à 9h, créneaux de fin d'après-midi disponibles pour ne pas empiéter sur le travail, et matériel adapté au volume exact de participants car le véhicule peut faire un second passage si besoin.",
+          "Cette proximité change aussi la relation : les RH peuvent me demander une session de calage en présentiel sans qu'on facture un déplacement. C'est ce qui permet d'aligner finement l'atelier sur le contexte interne (réorganisation en cours, fusion d'équipes, etc.).",
+        ],
+      },
+    ],
+    ctaText: "Construire votre programme QVCT 78",
+    ctaTarget: "/team-building-entreprise-yvelines",
+    relatedLandings: ["atelier-qvct-ile-de-france", "semaine-qvct-entreprise", "animation-bien-etre-entreprise"],
+  },
+  {
+    slug: "seminaire-eco-responsable-ile-de-france-yvelines",
+    title: "Séminaire Éco-Responsable en Île-de-France : guide Yvelines",
+    metaDescription:
+      "Organiser un séminaire éco-responsable dans le 78 : lieux, animations bas-carbone, traiteurs locaux, indicateurs RSE. Guide pratique pour RH et événementiel.",
+    keywords:
+      "seminaire eco responsable ile de france, seminaire vert yvelines, seminaire rse 78, seminaire entreprise saint germain en laye, seminaire poissy",
+    h1: "Séminaire Éco-Responsable en Île-de-France : le guide Yvelines",
+    excerpt:
+      "Comment organiser un séminaire d'entreprise vraiment bas-carbone dans les Yvelines, avec des lieux, prestataires et animations qui tiennent la promesse RSE.",
+    readingTime: "10 min",
+    publishedAt: "2026-06-03",
+    sections: [
+      {
+        heading: "Pourquoi le 78 est un terrain idéal pour un séminaire éco-responsable",
+        paragraphs: [
+          "Les Yvelines offrent ce qu'aucune autre périphérie parisienne ne combine aussi bien : densité de domaines et châteaux pour les plénières (Saint-Germain-en-Laye, Versailles, Rambouillet), forêts domaniales massives pour les temps nature, et accès RER/Transilien direct depuis Paris qui évite le recours aux autocars.",
+          "Pour un séminaire de 30 à 80 personnes à empreinte maîtrisée, viser un lieu à moins de 40 km de Paris, accessible en transport en commun, avec restauration locavore. Le 78 coche les trois cases sur la majorité de son territoire.",
+        ],
+      },
+      {
+        heading: "Checklist éco-responsable d'un séminaire dans le 78",
+        paragraphs: [
+          "Avant de signer le devis du lieu et des prestataires, vérifier point par point.",
+        ],
+        list: [
+          "Accessibilité transports : ligne SNCF/RER directe depuis Paris, navette mutualisée plutôt qu'autocar dédié.",
+          "Restauration : traiteur dans un rayon de 30 km, menu végétarien majoritaire, vaisselle réutilisable.",
+          "Hébergement : nuitée sur place pour éviter les allers-retours, label environnemental vérifié.",
+          "Animations : intervenants locaux, matériel réutilisable ou compostable, contenu pédagogique en lien avec la transition.",
+          "Mesure : bilan carbone simplifié de l'événement, communicable aux participants en fin de séminaire.",
+        ],
+      },
+      {
+        heading: "Lieux Yvelines adaptés aux séminaires éco-responsables",
+        paragraphs: [
+          "Sans en faire une liste exhaustive, plusieurs typologies fonctionnent bien dans le 78. Les domaines patrimoniaux autour de Saint-Germain-en-Laye et Marly-le-Roi proposent souvent salles plénières + parc, idéaux pour alterner intérieur et atelier en plein air. Les sites de Saint-Quentin-en-Yvelines disposent de centres de conférence connectés au RER C. Côté Rambouillet et la vallée de Chevreuse, plusieurs domaines proposent un format résidentiel complet avec démarche environnementale documentée.",
+          "Le critère discriminant n'est pas le prestige du lieu mais la facilité d'accès en transports collectifs depuis Paris et Versailles, qui pèse beaucoup plus lourd dans le bilan carbone que le menu du déjeuner.",
+        ],
+      },
+      {
+        heading: "Animations bas-carbone à intégrer au programme",
+        paragraphs: [
+          "Les ateliers et balades nature jouent un double rôle : ils incarnent concrètement la démarche RSE et offrent une vraie respiration entre deux plénières souvent denses.",
+        ],
+        list: [
+          "Balade ethnobotanique guidée en forêt de Saint-Germain ou de Marly : 2h, lecture du paysage, biodiversité francilienne.",
+          "Atelier terrarium ou kokedama en parallèle de plénière : 1h30, par groupes de 12 à 15.",
+          "Fresque botanique collective signée par l'équipe : trace tangible du séminaire, accrochée dans les locaux ensuite.",
+          "Conférence courte ethnobotanique : 45 min, contenu scientifique, lien avec les enjeux biodiversité de l'entreprise.",
+        ],
+      },
+      {
+        heading: "Coût d'un séminaire éco-responsable dans les Yvelines",
+        paragraphs: [
+          "Pour 30 personnes sur une journée complète (lieu, déjeuner, deux animations nature, support de restitution) : compter 180 à 280 € par participant. Pour deux jours résidentiels, 380 à 550 € par participant selon le standing du lieu.",
+          "Le surcoût d'un séminaire vraiment éco-responsable par rapport à un séminaire classique se situe entre 0 et 10 %. Bien souvent, choisir un lieu francilien plutôt qu'un déplacement en province compense largement le coût des animations locales.",
+        ],
+      },
+      {
+        heading: "Pourquoi un intervenant basé dans le 78 simplifie l'organisation",
+        paragraphs: [
+          "Basée au Pecq, je peux intervenir le matin sur un séminaire à Versailles puis l'après-midi sur un événement à Vélizy sans logistique parisienne. Cette proximité réduit la facture transport (souvent offerte dans le 78) et permet une visite de repérage gratuite avant l'événement, ce qui change la qualité de l'expérience pour les participants.",
+        ],
+      },
+    ],
+    ctaText: "Co-construire votre séminaire 78",
+    ctaTarget: "/seminaire-entreprise-yvelines",
+    relatedLandings: ["seminaire-nature-ile-de-france", "seminaire-vert-paris", "animation-rse-entreprise"],
+  },
 ];
 
 export function findProArticle(slug: string): ProBlogConfig | undefined {
