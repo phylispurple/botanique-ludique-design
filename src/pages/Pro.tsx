@@ -13,6 +13,8 @@ import { trackFormSubmit } from "@/lib/analytics";
 import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
 import AnimatedSection from "@/components/AnimatedSection";
 import BackToTop from "@/components/BackToTop";
+import Testimonials from "@/components/Testimonials";
+import SocialProofBar from "@/components/SocialProofBar";
 
 const quoteSchema = z.object({
   name: z.string().trim().min(1, "Le nom est requis").max(100),
@@ -415,6 +417,34 @@ const Pro = () => {
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════ */}
+      {/* PREUVE SOCIALE — logos + témoignages */}
+      {/* ═══════════════════════════════════════════ */}
+      <section className="py-20 px-4 md:px-8 bg-[hsl(var(--green-pale))]">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection>
+            <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4 text-center">Ils nous font confiance</span>
+            <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] uppercase leading-[0.9] tracking-[-1px] text-[hsl(var(--black))] mb-12 text-center">
+              Plus de 50 structures<br />
+              <span className="text-[hsl(var(--olive))]">accompagnées</span>
+            </h2>
+          </AnimatedSection>
+          <SocialProofBar />
+        </div>
+      </section>
+
+      <section className="py-20 px-4 md:px-8 bg-[hsl(var(--cream))]">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection>
+            <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4 text-center">Ce qu'elles et ils en disent</span>
+            <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] uppercase leading-[0.9] tracking-[-1px] text-[hsl(var(--black))] mb-12 text-center">
+              Témoignages clients
+            </h2>
+          </AnimatedSection>
+          <Testimonials />
         </div>
       </section>
 
