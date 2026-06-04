@@ -188,6 +188,7 @@ import CoupleNatureYvelines from "./pages/CoupleNatureYvelines";
 import CoupleNatureHautsDeSeine from "./pages/CoupleNatureHautsDeSeine";
 import SeminaireEntrepriseParis from "./pages/SeminaireEntrepriseParis";
 import SeminaireEntrepriseYvelines from "./pages/SeminaireEntrepriseYvelines";
+import TeamBuildingEntrepriseYvelines from "./pages/TeamBuildingEntrepriseYvelines";
 import SeminaireEntrepriseHautsDeSeine from "./pages/SeminaireEntrepriseHautsDeSeine";
 import SeminaireEntrepriseValDOise from "./pages/SeminaireEntrepriseValDOise";
 import MediathequeParis from "./pages/MediathequeParis";
@@ -416,6 +417,7 @@ const App = () => (
                 <Route path="/couple-nature-hauts-de-seine" element={<CoupleNatureHautsDeSeine />} />
                 <Route path="/seminaire-entreprise-paris" element={<SeminaireEntrepriseParis />} />
                 <Route path="/seminaire-entreprise-yvelines" element={<SeminaireEntrepriseYvelines />} />
+                <Route path="/team-building-entreprise-yvelines" element={<TeamBuildingEntrepriseYvelines />} />
                 <Route path="/seminaire-entreprise-hauts-de-seine" element={<SeminaireEntrepriseHautsDeSeine />} />
                 <Route path="/seminaire-entreprise-val-d-oise" element={<SeminaireEntrepriseValDOise />} />
                 <Route path="/mediatheque-paris" element={<MediathequeParis />} />
