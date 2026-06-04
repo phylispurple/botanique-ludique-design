@@ -28,8 +28,8 @@ const BlogTeintureChouRouge = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="Teinture Végétale au Chou Rouge : Guide Complet pour Obtenir un Indigo Naturel"
-        description="Découvrez comment créer une teinture indigo naturelle à partir de chou rouge fermenté. Tutoriel étape par étape : fermentation, modification du pH, mordançage à l'alun et techniques de fixation sur lin et coton."
+        title="Teinture végétale au chou rouge, indigo naturel"
+        description="Tutoriel teinture végétale au chou rouge fermenté, indigo naturel, mordançage à l'alun et fixation sur lin et coton, étape par étape."
         keywords="teinture végétale chou rouge, indigo naturel, anthocyanes, teinture naturelle maison, mordançage alun, fermentation chou rouge, teinture lin coton, pigments naturels, teinture éco-responsable, atelier teinture végétale Paris"
         canonical="/blog/teinture-vegetale-chou-rouge-indigo-naturel"
         type="article"
