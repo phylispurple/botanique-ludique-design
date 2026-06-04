@@ -94,7 +94,7 @@ const BlogTerrariumBiopiraterie = () => {
               </div>
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                Le Terrarium, une Arme de Biopiraterie à l'Ère Coloniale Victorienne
+                Histoire du terrarium : du Wardian Case à la biopiraterie victorienne
               </h1>
               
               <p className="text-xl text-charcoal/80 leading-relaxed mb-8">
