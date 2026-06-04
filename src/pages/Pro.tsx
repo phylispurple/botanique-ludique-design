@@ -565,7 +565,39 @@ const Pro = () => {
                           onChange={(e) => setFormData({...formData, date: e.target.value})}
                           className="w-full bg-transparent border-b-2 border-[hsl(var(--black))]/20 py-3 text-sm focus:border-[hsl(var(--olive))] outline-none transition-colors"
                         />
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/60 block mb-2">
+                          Ville d'intervention
+                        </label>
+                        <input
+                          type="text"
+                          value={formData.city}
+                          onChange={(e) => setFormData({...formData, city: e.target.value})}
+                          placeholder="Vélizy, Saint-Quentin-en-Yvelines..."
+                          className="w-full bg-transparent border-b-2 border-[hsl(var(--black))]/20 py-3 text-sm focus:border-[hsl(var(--olive))] outline-none transition-colors placeholder:text-[hsl(var(--black))]/30"
+                        />
                       </div>
+                      <div>
+                        <label className="font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/60 block mb-2">
+                          Nombre de participants
+                        </label>
+                        <select
+                          value={formData.participants}
+                          onChange={(e) => setFormData({...formData, participants: e.target.value})}
+                          className="w-full bg-transparent border-b-2 border-[hsl(var(--black))]/20 py-3 text-sm focus:border-[hsl(var(--olive))] outline-none transition-colors appearance-none"
+                        >
+                          <option value="">À estimer...</option>
+                          <option value="Moins de 10">Moins de 10</option>
+                          <option value="10 à 20">10 à 20</option>
+                          <option value="20 à 40">20 à 40</option>
+                          <option value="40 à 60">40 à 60</option>
+                          <option value="Plus de 60">Plus de 60</option>
+                        </select>
+                      </div>
+                    </div>
                     </div>
 
                     <div>
