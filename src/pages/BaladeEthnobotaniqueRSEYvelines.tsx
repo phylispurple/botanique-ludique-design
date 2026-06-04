@@ -41,6 +41,15 @@ const faqs = [
   { q: "Quelles plantes typiques rencontre-t-on en balade dans les Yvelines ?", a: "Selon la saison et le site : sureau, ortie, plantain, achillée, lierre terrestre, aubépine, charme, chêne, fougère scolopendre, lichens. Chaque plante est replacée dans son contexte ethnobotanique, médicinal et culturel." }
 ];
 
+const reperesData = [
+  { label: "Durée", value: "2h à 3h selon parcours et débrief RSE" },
+  { label: "Effectif", value: "12 à 25 personnes, jusqu'à 50 en deux groupes" },
+  { label: "Tarif", value: "35 à 50 € par personne, carnet de terrain inclus" },
+  { label: "Lieu", value: "Parc ou bois proche de votre site, partout dans le 78" },
+  { label: "Plantes", value: "8 à 12 espèces locales identifiées et contextualisées" },
+  { label: "Animation", value: "Ethnobotaniste formée à l'EHESS" }
+];
+
 const BaladeEthnobotaniqueRSEYvelines = () => (
   <div className="min-h-screen bg-[hsl(var(--cream))]">
     <SEO
