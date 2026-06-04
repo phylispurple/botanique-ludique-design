@@ -19,6 +19,8 @@ const quoteSchema = z.object({
   organization: z.string().trim().min(1, "Le nom de l'organisation est requis").max(200),
   email: z.string().trim().email("Email invalide").max(255),
   phone: z.string().trim().max(20).optional(),
+  city: z.string().trim().max(100).optional(),
+  participants: z.string().trim().max(50).optional(),
   eventType: z.string().trim().min(1, "Le type d'événement est requis").max(200),
   date: z.string().optional(),
   message: z.string().trim().max(2000).optional(),
@@ -33,6 +35,8 @@ const Pro = () => {
     organization: "",
     email: "",
     phone: "",
+    city: "",
+    participants: "",
     eventType: "",
     date: "",
     message: "",
@@ -54,7 +58,7 @@ const Pro = () => {
       if (error) throw error;
       trackFormSubmit("b2b_quote", { event_type: formData.eventType });
       toast({ title: "Demande envoyée !", description: "Nous vous contacterons dans les plus brefs délais (sous 24h)." });
-      setFormData({ name: "", organization: "", email: "", phone: "", eventType: "", date: "", message: "" });
+      setFormData({ name: "", organization: "", email: "", phone: "", city: "", participants: "", eventType: "", date: "", message: "" });
     } catch (error: any) {
       console.error('Error sending B2B quote request:', error);
       toast({ title: "Erreur lors de l'envoi", description: "Une erreur est survenue. Veuillez réessayer.", variant: "destructive" });
