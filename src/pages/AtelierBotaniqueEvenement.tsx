@@ -45,7 +45,7 @@ const AtelierBotaniqueEvenement = () => {
   ];
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO 
         title="Atelier Botanique Événement | Mariage, Anniversaire, EVJF ✦ Paris & IDF"
         description="🌿 Ateliers botaniques pour événements privés : mariages, anniversaires, EVJF, baby showers. Animation originale et créative à Paris et en Île-de-France."
@@ -91,11 +91,11 @@ const AtelierBotaniqueEvenement = () => {
             </div>
 
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Pourquoi choisir un atelier botanique pour votre événement ?
               </h2>
               
-              <div className="bg-sand rounded-lg p-8 md:p-10 mb-8">
+              <div className="bg-sand p-8 md:p-10 mb-8">
                 <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
                   Un atelier botanique apporte une touche d'<strong>originalité et de nature</strong> à votre célébration. 
                   Contrairement aux animations classiques, nos ateliers créent un véritable moment de partage : 
@@ -115,13 +115,13 @@ const AtelierBotaniqueEvenement = () => {
             </section>
 
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Nos ateliers pour événements
               </h2>
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 {workshops.map((workshop, index) => (
-                  <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <Card key={index} className="overflow-hidden hover:shadow-brutal-lg transition-shadow">
                     <div className="aspect-video overflow-hidden">
                       <img 
                         src={workshop.image} 
@@ -131,7 +131,7 @@ const AtelierBotaniqueEvenement = () => {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold text-charcoal mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                      <h3 className="text-xl font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                         {workshop.title}
                       </h3>
                       <p className="text-charcoal/70 mb-4">{workshop.description}</p>
@@ -151,7 +151,7 @@ const AtelierBotaniqueEvenement = () => {
               <div className="text-center">
                 <Link 
                   to="/workshops"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-[hsl(var(--cream))] text-sm uppercase tracking-wider font-semibold transition-all duration-300 "
                 >
                   <Leaf className="w-4 h-4" />
                   Voir tous nos ateliers
@@ -160,32 +160,32 @@ const AtelierBotaniqueEvenement = () => {
             </section>
 
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Pour quel type d'événement ?
               </h2>
               
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-sage/10 rounded-lg p-6 text-center">
+                <div className="bg-sage/10 p-6 text-center border-brutal shadow-brutal">
                   <Heart className="w-10 h-10 text-sage mx-auto mb-4" />
-                  <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>Mariages & Fiançailles</h3>
+                  <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Mariages & Fiançailles</h3>
                   <ul className="text-sm text-charcoal/70 space-y-2 text-left">
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Animation cocktail ou vin d'honneur</li>
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Cadeaux invités végétaux</li>
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Décoration florale participative</li>
                   </ul>
                 </div>
-                <div className="bg-sage/10 rounded-lg p-6 text-center">
+                <div className="bg-sage/10 p-6 text-center border-brutal shadow-brutal">
                   <PartyPopper className="w-10 h-10 text-sage mx-auto mb-4" />
-                  <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>EVJF & Anniversaires</h3>
+                  <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>EVJF & Anniversaires</h3>
                   <ul className="text-sm text-charcoal/70 space-y-2 text-left">
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> EVJF nature et couronnes de fleurs</li>
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Anniversaires enfants dès 4 ans</li>
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Fêtes entre amis originales</li>
                   </ul>
                 </div>
-                <div className="bg-sage/10 rounded-lg p-6 text-center">
+                <div className="bg-sage/10 p-6 text-center border-brutal shadow-brutal">
                   <Gift className="w-10 h-10 text-sage mx-auto mb-4" />
-                  <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>Célébrations Familiales</h3>
+                  <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Célébrations Familiales</h3>
                   <ul className="text-sm text-charcoal/70 space-y-2 text-left">
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Baby showers végétales</li>
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Fêtes de famille intergénérationnelles</li>
@@ -196,7 +196,7 @@ const AtelierBotaniqueEvenement = () => {
             </section>
 
             <section className="mb-20 animate-fade-in">
-              <div className="bg-sand rounded-lg p-8 md:p-10">
+              <div className="bg-sand p-8 md:p-10">
                 <div className="flex justify-center mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className="w-5 h-5 text-amber-500 fill-amber-500" />
@@ -216,34 +216,34 @@ const AtelierBotaniqueEvenement = () => {
             </section>
 
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Pourquoi choisir Botanique Ludique ?
               </h2>
               
               <div className="grid md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage/20 flex items-center justify-center mx-auto mb-4">
                     <Leaf className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">Sur mesure</h3>
                   <p className="text-sm text-charcoal/70">Chaque atelier est personnalisé selon votre thème et vos envies</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage/20 flex items-center justify-center mx-auto mb-4">
                     <MapPin className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">Déplacement inclus</h3>
                   <p className="text-sm text-charcoal/70">Nous venons chez vous partout en Île-de-France (75, 78, 92, 95)</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage/20 flex items-center justify-center mx-auto mb-4">
                     <Users className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">Tous âges</h3>
                   <p className="text-sm text-charcoal/70">Des ateliers adaptés dès 4 ans jusqu'aux seniors</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage/20 flex items-center justify-center mx-auto mb-4">
                     <Gift className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">Souvenir vivant</h3>
@@ -253,8 +253,8 @@ const AtelierBotaniqueEvenement = () => {
             </section>
 
             <section className="animate-fade-in">
-              <div className="bg-gradient-to-br from-sage/20 to-sand rounded-2xl p-8 md:p-12 text-center">
-                <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <div className="bg-gradient-to-br from-sage/20 to-sand p-8 md:p-12 text-center">
+                <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                   Envie d'une animation botanique pour votre événement ?
                 </h2>
                 <p className="text-charcoal/80 mb-8 max-w-2xl mx-auto">
@@ -264,14 +264,14 @@ const AtelierBotaniqueEvenement = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/contact"
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-sage text-sage hover:bg-sage hover:text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-[3px] border-sage text-sage hover:bg-sage hover:text-[hsl(var(--cream))] text-sm uppercase tracking-wider font-semibold transition-all duration-300 "
                   >
                     <Mail className="w-4 h-4" />
                     Demander un devis gratuit
                   </Link>
                   <a 
                     href="tel:+33609831606"
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-sage text-sage hover:bg-sage hover:text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-[3px] border-sage text-sage hover:bg-sage hover:text-[hsl(var(--cream))] text-sm uppercase tracking-wider font-semibold transition-all duration-300 "
                   >
                     <Phone className="w-4 h-4" />
                     06 09 83 16 06

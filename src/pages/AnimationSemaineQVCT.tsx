@@ -37,11 +37,11 @@ const AnimationSemaineQVCT = () => {
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <AnimatedSection className="text-center space-y-6">
             <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-full bg-blue-100">
+              <div className="p-3 bg-blue-100">
                 <Calendar className="w-12 h-12 text-blue-600" />
               </div>
             </div>
-            <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 text-sm font-semibold mb-4">
               📅 Semaine du 16-20 juin 2025
             </div>
             <h1
@@ -56,7 +56,7 @@ const AnimationSemaineQVCT = () => {
             <div className="pt-6">
               <Link
                 to="/contact"
-                className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+                className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg"
               >
                 Demander votre animation
               </Link>
@@ -66,7 +66,7 @@ const AnimationSemaineQVCT = () => {
       </section>
 
       {/* What is QVCT */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -94,7 +94,7 @@ const AnimationSemaineQVCT = () => {
                 ))}
               </ul>
             </div>
-            <div className="bg-blue-50 p-8 rounded-xl border-2 border-blue-200">
+            <div className="bg-blue-50 p-8 border-[3px] border-blue-200">
               <h3 className="font-semibold text-charcoal mb-4">📌 Dates à retenir</h3>
               <p className="text-2xl font-bold text-blue-600 mb-4">16-20 juin 2025</p>
               <p className="text-charcoal/70 text-sm mb-6">
@@ -141,7 +141,7 @@ const AnimationSemaineQVCT = () => {
                 desc: "Démontre votre engagement pour l'environnement",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
+              <div key={i} className="p-6 bg-white shadow-brutal hover:shadow-brutal-lg transition-all border-brutal shadow-brutal">
                 <item.icon className="w-8 h-8 text-blue-600 mb-4" />
                 <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-sm text-charcoal/70">{item.desc}</p>
@@ -152,7 +152,7 @@ const AnimationSemaineQVCT = () => {
       </section>
 
       {/* Ateliers */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -196,7 +196,7 @@ const AnimationSemaineQVCT = () => {
                 participants: "30-200+",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-blue-50 rounded-xl border-l-4 border-blue-600 hover:border-blue-800 transition-colors">
+              <div key={i} className="p-6 bg-blue-50 border-l-4 border-blue-600 hover:border-blue-800 transition-colors">
                 <h3 className="text-xl font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-charcoal/80 mb-3">{item.desc}</p>
                 <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
@@ -241,7 +241,7 @@ const AnimationSemaineQVCT = () => {
       </section>
 
       {/* Tarifs */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -252,14 +252,14 @@ const AnimationSemaineQVCT = () => {
             </h2>
           </AnimatedSection>
 
-          <AnimatedSection delay={100} className="p-8 bg-blue-50 rounded-xl border-2 border-blue-200">
+          <AnimatedSection delay={100} className="p-8 bg-blue-50 border-[3px] border-blue-200">
             <p className="text-charcoal/80 mb-6">
               Les tarifs varient selon le nombre de participants, la durée et le type d'atelier choisi. 
             </p>
             <p className="text-charcoal/80 mb-6">
               <strong>Exemple :</strong> Atelier kokedama pour 30 personnes = 35€/pers
             </p>
-            <div className="bg-white p-6 rounded-lg mb-6">
+            <div className="bg-white p-6 mb-6 border-brutal shadow-brutal">
               <p className="text-sm text-charcoal/70 mb-4">
                 📌 Tarifs dégressifs pour groupes importants
               </p>
@@ -269,7 +269,7 @@ const AnimationSemaineQVCT = () => {
             </div>
             <Link
               to="/contact"
-              className="inline-block w-full text-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-all"
+              className="inline-block w-full text-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all"
             >
               Demander un devis QVCT personnalisé
             </Link>
@@ -289,7 +289,7 @@ const AnimationSemaineQVCT = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-white text-blue-600 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+              className="inline-block px-10 py-4 bg-white text-blue-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
             >
               Demander votre animation
             </Link>

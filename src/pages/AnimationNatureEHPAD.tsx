@@ -31,7 +31,7 @@ const AnimationNatureEHPAD = () => {
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <AnimatedSection className="text-center space-y-6">
             <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-full bg-rose-100">
+              <div className="p-3 bg-rose-100">
                 <Heart className="w-12 h-12 text-rose-600" />
               </div>
             </div>
@@ -47,7 +47,7 @@ const AnimationNatureEHPAD = () => {
             <div className="pt-6">
               <Link
                 to="/contact"
-                className="inline-block px-8 py-4 bg-rose-600 hover:bg-rose-700 text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+                className="inline-block px-8 py-4 bg-rose-600 hover:bg-rose-700 text-white font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg"
               >
                 Demander une animation
               </Link>
@@ -57,7 +57,7 @@ const AnimationNatureEHPAD = () => {
       </section>
 
       {/* Why Nature for Seniors */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -91,7 +91,7 @@ const AnimationNatureEHPAD = () => {
                 desc: "Retrouver le contact avec les plantes, les couleurs, les textures",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-rose-50 rounded-xl border-l-4 border-rose-600">
+              <div key={i} className="p-6 bg-rose-50 border-l-4 border-rose-600">
                 <item.icon className="w-8 h-8 text-rose-600 mb-4" />
                 <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-sm text-charcoal/70">{item.desc}</p>
@@ -140,7 +140,7 @@ const AnimationNatureEHPAD = () => {
                 desc: "L'engagement social et la nature combattent l'isolement et la dépression",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white rounded-xl shadow-sm">
+              <div key={i} className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-rose-600 flex-shrink-0 mt-1" />
                   <div>
@@ -155,7 +155,7 @@ const AnimationNatureEHPAD = () => {
       </section>
 
       {/* Our Ateliers */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -205,7 +205,7 @@ const AnimationNatureEHPAD = () => {
                 difficulty: "Flexible",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-rose-50 rounded-xl border-l-4 border-rose-600 hover:border-rose-800 transition-colors">
+              <div key={i} className="p-6 bg-rose-50 border-l-4 border-rose-600 hover:border-rose-800 transition-colors">
                 <h3 className="text-lg font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-charcoal/80 text-sm mb-4">{item.desc}</p>
                 <div className="flex flex-wrap gap-4 text-xs text-muted-foreground">
@@ -253,7 +253,7 @@ const AnimationNatureEHPAD = () => {
       </section>
 
       {/* Practical Info */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -291,7 +291,7 @@ const AnimationNatureEHPAD = () => {
                 desc: "Ponctuelle ou régulière (mensuelle, hebdomadaire). À vous de choisir.",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-rose-50 rounded-xl">
+              <div key={i} className="p-6 bg-rose-50 ">
                 <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-sm text-charcoal/70">{item.desc}</p>
               </div>
@@ -323,7 +323,7 @@ const AnimationNatureEHPAD = () => {
                 author: "Responsable animations, EHPAD Yvelines",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white rounded-xl border-l-4 border-rose-600 shadow-sm">
+              <div key={i} className="p-6 bg-white border-l-4 border-rose-600 shadow-brutal border-brutal shadow-brutal">
                 <p className="text-charcoal/80 italic mb-4">"{item.quote}"</p>
                 <p className="text-sm font-medium text-charcoal">{item.author}</p>
               </div>
@@ -333,7 +333,7 @@ const AnimationNatureEHPAD = () => {
       </section>
 
       {/* Pricing */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -344,7 +344,7 @@ const AnimationNatureEHPAD = () => {
             </h2>
           </AnimatedSection>
 
-          <AnimatedSection delay={100} className="p-8 bg-rose-50 rounded-xl border-2 border-rose-200">
+          <AnimatedSection delay={100} className="p-8 bg-rose-50 border-[3px] border-rose-200">
             <p className="text-charcoal/80 mb-6">
               Nous proposons des formules flexibles pour les EHPAD. À partir de <strong>300€ l'atelier</strong>.
             </p>
@@ -355,7 +355,7 @@ const AnimationNatureEHPAD = () => {
             </ul>
             <Link
               to="/contact"
-              className="inline-block px-8 py-3 bg-rose-600 hover:bg-rose-700 text-white rounded-full font-semibold transition-all"
+              className="inline-block px-8 py-3 bg-rose-600 hover:bg-rose-700 text-white font-semibold transition-all"
             >
               Demander un devis EHPAD
             </Link>
@@ -375,7 +375,7 @@ const AnimationNatureEHPAD = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-white text-rose-600 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+              className="inline-block px-10 py-4 bg-white text-rose-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
             >
               Demander une animation
             </Link>

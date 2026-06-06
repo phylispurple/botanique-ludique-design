@@ -29,7 +29,7 @@ const AnimatriceNatureHautsDeSeine = () => {
   ];
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO 
         title="Animatrice Nature Hauts-de-Seine (92)"
         description="Animatrice nature et botanique dans les Hauts-de-Seine (92). Ateliers pour entreprises, écoles, EHPAD à Boulogne-Billancourt, Nanterre, Rueil-Malmaison, Issy-les-Moulineaux."
@@ -65,11 +65,11 @@ const AnimatriceNatureHautsDeSeine = () => {
             </div>
 
             {/* Approche */}
-            <div className="bg-white rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
+            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-start gap-4">
                 <BookOpen className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
-                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     La nature au cœur du 92
                   </h2>
                   <p className="text-charcoal/80 leading-relaxed mb-4">
@@ -92,10 +92,10 @@ const AnimatriceNatureHautsDeSeine = () => {
                 { src: galleryTeinture, title: "Teinture végétale", desc: "Couleurs naturelles et savoirs traditionnels" },
                 { src: galleryTerrarium, title: "Terrarium", desc: "Mini-écosystèmes pour petits et grands" }
               ].map((a, i) => (
-                <div key={i} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div key={i} className="overflow-hidden shadow-brutal hover:shadow-brutal-lg transition-shadow">
                   <img src={a.src} alt={`${a.title} Hauts-de-Seine`} className="w-full h-48 object-cover" loading="lazy" />
-                  <div className="p-5 bg-white">
-                    <h3 className="text-lg font-semibold mb-1" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>{a.title}</h3>
+                  <div className="p-5 bg-white border-brutal shadow-brutal">
+                    <h3 className="text-lg font-semibold mb-1" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{a.title}</h3>
                     <p className="text-sm text-charcoal/70">{a.desc}</p>
                   </div>
                 </div>
@@ -103,23 +103,23 @@ const AnimatriceNatureHautsDeSeine = () => {
             </div>
 
             {/* Villes */}
-            <div className="bg-sage/10 rounded-lg p-8 mb-16 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+            <div className="bg-sage/10 p-8 mb-16 animate-fade-in border-brutal shadow-brutal">
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Nos interventions dans les Hauts-de-Seine
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {cities.map((city, i) => (
-                  <Link to={city.link} key={i} className="bg-white px-4 py-3 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group">
-                    <span className="block text-sage-dark font-semibold group-hover:text-off-white">📍 {city.name}</span>
-                    <span className="text-xs text-charcoal/60 group-hover:text-off-white/80">{city.detail}</span>
+                  <Link to={city.link} key={i} className="bg-white px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal">
+                    <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 {city.name}</span>
+                    <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">{city.detail}</span>
                   </Link>
                 ))}
               </div>
             </div>
 
             {/* Avantages */}
-            <div className="bg-sand rounded-lg p-8 mb-16">
-              <h2 className="text-2xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Pourquoi nous choisir dans le 92 ?</h2>
+            <div className="bg-sand p-8 mb-16">
+              <h2 className="text-2xl mb-6" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Pourquoi nous choisir dans le 92 ?</h2>
               <div className="grid sm:grid-cols-2 gap-3">
                 {[
                   "Formée à l'EHESS en ethnobotanique",
@@ -139,11 +139,11 @@ const AnimatriceNatureHautsDeSeine = () => {
 
             {/* FAQ */}
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Questions fréquentes</h2>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Questions fréquentes</h2>
               <div className="space-y-4 max-w-4xl mx-auto">
                 {faqQuestions.map((faq, i) => (
-                  <div key={i} className="bg-white rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>{faq.question}</h3>
+                  <div key={i} className="bg-white p-6 border-brutal shadow-brutal">
+                    <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{faq.question}</h3>
                     <p className="text-charcoal/70 leading-relaxed">{faq.answer}</p>
                   </div>
                 ))}
@@ -151,14 +151,14 @@ const AnimatriceNatureHautsDeSeine = () => {
             </div>
 
             {/* CTA */}
-            <div className="bg-sage text-off-white rounded-lg p-8 md:p-12 text-center animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+            <div className="bg-sage text-[hsl(var(--cream))] p-8 md:p-12 text-center animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Animatrice nature dans le 92 — contactez-nous
               </h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">Devis gratuit · Tout le département · Entreprises, écoles, collectivités</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Demander un devis</Link>
-                <Link to="/pro" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Offres professionnelles</Link>
+                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-charcoal text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all ">Demander un devis</Link>
+                <Link to="/pro" className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-charcoal text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all ">Offres professionnelles</Link>
               </div>
             </div>
           </div>

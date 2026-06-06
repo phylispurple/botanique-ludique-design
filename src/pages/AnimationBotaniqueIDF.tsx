@@ -35,7 +35,7 @@ const AnimationBotaniqueIDF = () => {
   ];
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO
         title="Animation Botanique en Île-de-France"
         description="Animations botaniques créatives en Île-de-France : kokedama, teinture végétale, terrarium, vannerie. Pour entreprises, écoles, EHPAD, collectivités. Paris, 78, 92, 95."
@@ -70,11 +70,11 @@ const AnimationBotaniqueIDF = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
+            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-start gap-4 mb-6">
                 <BookOpen className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
-                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Des animations botaniques avec une approche ethnobotanique
                   </h2>
                   <p className="text-charcoal/80 leading-relaxed mb-4">
@@ -91,18 +91,18 @@ const AnimationBotaniqueIDF = () => {
             </div>
 
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Animations botaniques pour tous les publics
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {publics.map((p, i) => (
                   <Link to={p.link} key={i}>
-                    <Card className="hover:shadow-lg transition-all h-full animate-fade-in" style={{ animationDelay: `${i * 100}ms` }}>
+                    <Card className="hover:shadow-brutal-lg transition-all h-full animate-fade-in" style={{ animationDelay: `${i * 100}ms` }}>
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
                           <p.icon className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                           <div>
-                            <h3 className="text-xl font-semibold text-charcoal mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>{p.title}</h3>
+                            <h3 className="text-xl font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{p.title}</h3>
                             <p className="text-charcoal/70 leading-relaxed">{p.description}</p>
                           </div>
                         </div>
@@ -114,7 +114,7 @@ const AnimationBotaniqueIDF = () => {
             </div>
 
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Nos animations botaniques phares
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
@@ -123,11 +123,11 @@ const AnimationBotaniqueIDF = () => {
                   { src: galleryTeinture, title: "Teinture Végétale", desc: "Transformez les pigments des plantes en couleurs sur textile. Un atelier fascinant mêlant science et artisanat." },
                   { src: galleryTerrarium, title: "Atelier Terrarium", desc: "Composez un jardin miniature en bocal. Une animation ludique pour comprendre les écosystèmes." }
                 ].map((atelier, i) => (
-                  <Card key={i} className="hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: `${i * 100}ms` }}>
+                  <Card key={i} className="hover:shadow-brutal-lg transition-shadow animate-fade-in" style={{ animationDelay: `${i * 100}ms` }}>
                     <CardContent className="p-0">
-                      <img src={atelier.src} alt={`Animation botanique - ${atelier.title}`} className="w-full h-48 object-cover rounded-t-lg" loading="lazy" />
+                      <img src={atelier.src} alt={`Animation botanique - ${atelier.title}`} className="w-full h-48 object-cover " loading="lazy" />
                       <div className="p-6">
-                        <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>{atelier.title}</h3>
+                        <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{atelier.title}</h3>
                         <p className="text-charcoal/70 leading-relaxed text-sm">{atelier.desc}</p>
                       </div>
                     </CardContent>
@@ -136,14 +136,14 @@ const AnimationBotaniqueIDF = () => {
               </div>
             </div>
 
-            <div className="bg-sage/10 rounded-lg p-8 mb-16 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+            <div className="bg-sage/10 p-8 mb-16 animate-fade-in border-brutal shadow-brutal">
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 <MapPin className="w-6 h-6 inline-block mr-2" />
                 Animations botaniques en Île-de-France
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {departments.map((dept, i) => (
-                  <Link to={dept.link} key={i} className="bg-white rounded-lg p-5 hover:shadow-md transition-all group">
+                  <Link to={dept.link} key={i} className="bg-white p-5 hover:shadow-brutal-lg transition-all group border-brutal shadow-brutal">
                     <h3 className="text-lg font-semibold text-sage-dark mb-3 group-hover:text-sage">{dept.name}</h3>
                     <ul className="space-y-1">
                       {dept.cities.map((city, j) => (
@@ -156,25 +156,25 @@ const AnimationBotaniqueIDF = () => {
             </div>
 
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Questions fréquentes</h2>
+              <h2 className="text-3xl md:text-4xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Questions fréquentes</h2>
               <div className="space-y-4 max-w-4xl mx-auto">
                 {faqQuestions.map((faq, i) => (
-                  <div key={i} className="bg-white rounded-lg p-6 animate-fade-in" style={{ animationDelay: `${i * 50}ms` }}>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>{faq.question}</h3>
+                  <div key={i} className="bg-white p-6 animate-fade-in border-brutal shadow-brutal" style={{ animationDelay: `${i * 50}ms` }}>
+                    <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{faq.question}</h3>
                     <p className="text-charcoal/70 leading-relaxed">{faq.answer}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-sage text-off-white rounded-lg p-8 md:p-12 text-center animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+            <div className="bg-sage text-[hsl(var(--cream))] p-8 md:p-12 text-center animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Besoin d'une animation botanique en Île-de-France ?
               </h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">Devis gratuit sous 24h · Tout le matériel inclus · Tous publics</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Demander un devis</Link>
-                <Link to="/workshops" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Voir nos ateliers</Link>
+                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-charcoal text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all ">Demander un devis</Link>
+                <Link to="/workshops" className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-charcoal text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all ">Voir nos ateliers</Link>
               </div>
             </div>
           </div>

@@ -18,7 +18,7 @@ const AtelierBotaniqueAdulteParis = () => {
   ];
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO
         title="Atelier Botanique Adulte Paris (75)"
         description="Ateliers botaniques pour adultes à Paris. Kokedama, teinture végétale, terrarium, vannerie. Loisirs créatifs nature pour particuliers et entreprises. Tous arrondissements."
@@ -46,11 +46,11 @@ const AtelierBotaniqueAdulteParis = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
+            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-start gap-4">
                 <BookOpen className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
-                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Plus qu'un loisir créatif : une expérience ethnobotanique
                   </h2>
                   <p className="text-charcoal/80 leading-relaxed mb-4">
@@ -67,18 +67,18 @@ const AtelierBotaniqueAdulteParis = () => {
                 { src: galleryTeinture, title: "Teinture végétale Paris", desc: "Couleurs naturelles, savoir-faire ancestral" },
                 { src: galleryTerrarium, title: "Terrarium Paris", desc: "Un jardin miniature personnel" }
               ].map((a, i) => (
-                <div key={i} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div key={i} className="overflow-hidden shadow-brutal hover:shadow-brutal-lg transition-shadow">
                   <img src={a.src} alt={a.title} className="w-full h-48 object-cover" loading="lazy" />
-                  <div className="p-5 bg-white">
-                    <h3 className="text-lg font-semibold mb-1" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>{a.title}</h3>
+                  <div className="p-5 bg-white border-brutal shadow-brutal">
+                    <h3 className="text-lg font-semibold mb-1" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{a.title}</h3>
                     <p className="text-sm text-charcoal/70">{a.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="bg-sand rounded-lg p-8 mb-16">
-              <h2 className="text-2xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Infos pratiques</h2>
+            <div className="bg-sand p-8 mb-16">
+              <h2 className="text-2xl mb-6" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Infos pratiques</h2>
               <div className="grid sm:grid-cols-2 gap-3">
                 {["Matériel fourni intégralement", "Création à emporter", "6 à 20 participants", "1h30 à 3h selon l'atelier", "Tous arrondissements de Paris", "Devis gratuit sous 24h", "Aucun prérequis", "Idéal EVJF, anniversaires, team building"].map((b, i) => (
                   <div key={i} className="flex items-start gap-2">
@@ -90,23 +90,23 @@ const AtelierBotaniqueAdulteParis = () => {
             </div>
 
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Questions fréquentes</h2>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Questions fréquentes</h2>
               <div className="space-y-4 max-w-4xl mx-auto">
                 {faqQuestions.map((faq, i) => (
-                  <div key={i} className="bg-white rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>{faq.question}</h3>
+                  <div key={i} className="bg-white p-6 border-brutal shadow-brutal">
+                    <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{faq.question}</h3>
                     <p className="text-charcoal/70 leading-relaxed">{faq.answer}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-sage text-off-white rounded-lg p-8 md:p-12 text-center animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>Un atelier botanique pour adultes à Paris ?</h2>
+            <div className="bg-sage text-[hsl(var(--cream))] p-8 md:p-12 text-center animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Un atelier botanique pour adultes à Paris ?</h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">Devis gratuit sous 24h · Tous arrondissements · Tous niveaux</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Demander un devis</Link>
-                <Link to="/atelier-kokedama-paris" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Nos ateliers à Paris</Link>
+                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-charcoal text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all ">Demander un devis</Link>
+                <Link to="/atelier-kokedama-paris" className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-charcoal text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all ">Nos ateliers à Paris</Link>
               </div>
             </div>
           </div>

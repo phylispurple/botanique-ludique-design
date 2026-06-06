@@ -77,8 +77,8 @@ const AteliersIDF = () => {
 
       {/* Hero Section */}
       <section className="relative py-24 px-4 bg-gradient-to-br from-sage/10 to-sand/30 overflow-hidden">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-sage/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-80 h-80 bg-earth/10 rounded-full blur-3xl" />
+        <div className="absolute top-10 right-10 w-64 h-64 bg-sage/10 blur-3xl border-brutal shadow-brutal" />
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-earth/10 blur-3xl" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-12">
@@ -86,7 +86,7 @@ const AteliersIDF = () => {
               <MapPin className="w-12 h-12 text-sage" />
               <Leaf className="w-10 h-10 text-earth" />
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6 text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6 text-charcoal" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
               Ateliers Botaniques en Île-de-France
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -96,22 +96,22 @@ const AteliersIDF = () => {
           </div>
 
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform">
+            <div className="bg-white/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <div className="text-4xl font-bold text-sage mb-2">75</div>
               <div className="text-lg font-semibold text-charcoal">Paris</div>
               <div className="text-sm text-muted-foreground mt-2">Centre et périphérie</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform">
+            <div className="bg-white/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <div className="text-4xl font-bold text-earth mb-2">78</div>
               <div className="text-lg font-semibold text-charcoal">Yvelines</div>
               <div className="text-sm text-muted-foreground mt-2">Chatou, Le Vésinet, St-Germain...</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform">
+            <div className="bg-white/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <div className="text-4xl font-bold text-sage-dark mb-2">92</div>
               <div className="text-lg font-semibold text-charcoal">Hauts-de-Seine</div>
               <div className="text-sm text-muted-foreground mt-2">Nanterre, Boulogne, Rueil...</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform">
+            <div className="bg-white/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <div className="text-4xl font-bold text-accent mb-2">95</div>
               <div className="text-lg font-semibold text-charcoal">Val-d'Oise</div>
               <div className="text-sm text-muted-foreground mt-2">Cergy, Pontoise, Argenteuil...</div>
@@ -145,19 +145,19 @@ const AteliersIDF = () => {
       {/* Departments Section */}
       <section className="py-20 px-4 bg-sand/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl mb-12 text-center text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+          <h2 className="text-3xl md:text-4xl mb-12 text-center text-charcoal" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
             Nos Zones d'Intervention en Île-de-France
           </h2>
 
           <div className="space-y-12">
             {departments.map((dept, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white shadow-brutal overflow-hidden hover:shadow-brutal-lg transition-shadow border-brutal shadow-brutal">
                 <div className={`bg-gradient-to-r ${dept.color} p-6 text-white`}>
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold">
+                    <div className="bg-white/20 backdrop-blur-sm w-16 h-16 flex items-center justify-center text-2xl font-bold border-brutal shadow-brutal">
                       {dept.code}
                     </div>
-                    <h3 className="text-3xl font-semibold" style={{ fontFamily: 'Fraunces, serif' }}>
+                    <h3 className="text-3xl font-semibold" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                       {dept.name}
                     </h3>
                   </div>
@@ -176,7 +176,7 @@ const AteliersIDF = () => {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {dept.cities.map((city, i) => (
-                          <span key={i} className="px-3 py-1 bg-sage/10 text-sage-dark rounded-full text-sm">
+                          <span key={i} className="px-3 py-1 bg-sage/10 text-sage-dark text-sm border-brutal shadow-brutal">
                             {city}
                           </span>
                         ))}
@@ -190,7 +190,7 @@ const AteliersIDF = () => {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {dept.workshops.map((workshop, i) => (
-                          <span key={i} className="px-3 py-1 bg-earth/10 text-earth rounded-full text-sm">
+                          <span key={i} className="px-3 py-1 bg-earth/10 text-earth text-sm">
                             {workshop}
                           </span>
                         ))}
@@ -207,7 +207,7 @@ const AteliersIDF = () => {
       {/* Key Workshops Section */}
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl mb-4 text-center text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+          <h2 className="text-3xl md:text-4xl mb-4 text-center text-charcoal" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
             Nos Ateliers Phares en Île-de-France
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -216,7 +216,7 @@ const AteliersIDF = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {keyWorkshops.map((workshop, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
+              <div key={index} className="bg-white shadow-brutal overflow-hidden hover:scale-105 transition-transform border-brutal shadow-brutal">
                 <div className="aspect-video overflow-hidden">
                   <img 
                     src={workshop.image} 
@@ -226,7 +226,7 @@ const AteliersIDF = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif' }}>
+                  <h3 className="text-2xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     {workshop.title}
                   </h3>
                   <p className="text-charcoal/70 mb-4 leading-relaxed">
@@ -246,12 +246,12 @@ const AteliersIDF = () => {
       {/* Target Audiences Section */}
       <section className="py-20 px-4 bg-sage/5">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl mb-12 text-center text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+          <h2 className="text-3xl md:text-4xl mb-12 text-center text-charcoal" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
             Pour Qui ?
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform">
+            <div className="bg-white p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <Users className="w-12 h-12 text-sage mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-charcoal mb-2">Particuliers</h3>
               <p className="text-sm text-muted-foreground">
@@ -259,7 +259,7 @@ const AteliersIDF = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform">
+            <div className="bg-white p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <Building2 className="w-12 h-12 text-earth mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-charcoal mb-2">Entreprises</h3>
               <p className="text-sm text-muted-foreground">
@@ -267,7 +267,7 @@ const AteliersIDF = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform">
+            <div className="bg-white p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <Leaf className="w-12 h-12 text-sage-dark mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-charcoal mb-2">Collectivités</h3>
               <p className="text-sm text-muted-foreground">
@@ -275,7 +275,7 @@ const AteliersIDF = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform">
+            <div className="bg-white p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <Users className="w-12 h-12 text-accent mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-charcoal mb-2">EHPAD & Écoles</h3>
               <p className="text-sm text-muted-foreground">
@@ -289,7 +289,7 @@ const AteliersIDF = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-sage to-sage-dark text-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+          <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
             Envie d'organiser un atelier botanique en Île-de-France ?
           </h2>
           <p className="text-lg mb-8 opacity-90">
@@ -299,13 +299,13 @@ const AteliersIDF = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/workshops" 
-              className="px-8 py-4 bg-white text-sage-dark rounded-full font-semibold text-lg hover:scale-105 transition-transform shadow-lg"
+              className="px-8 py-4 bg-white text-sage-dark font-semibold text-lg hover:scale-105 transition-transform shadow-brutal border-brutal shadow-brutal"
             >
               Voir tous les ateliers
             </Link>
             <Link 
               to="/contact" 
-              className="px-8 py-4 bg-transparent border-2 border-white rounded-full font-semibold text-lg hover:scale-105 transition-transform"
+              className="px-8 py-4 bg-transparent border-[3px] border-white font-semibold text-lg hover:scale-105 transition-transform"
             >
               Demander un devis
             </Link>

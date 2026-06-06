@@ -27,7 +27,7 @@ const AtelierBotaniqueAdulteIDF = () => {
   ];
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO
         title="Atelier Botanique Adulte Île-de-France"
         description="Ateliers botaniques pour adultes en Île-de-France. Kokedama, teinture végétale, terrarium, vannerie. Loisirs créatifs nature pour particuliers, entreprises, associations."
@@ -56,11 +56,11 @@ const AtelierBotaniqueAdulteIDF = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
+            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-start gap-4">
                 <BookOpen className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
-                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     L'ethnobotanique, un voyage entre science et culture
                   </h2>
                   <p className="text-charcoal/80 leading-relaxed mb-4">
@@ -77,13 +77,13 @@ const AtelierBotaniqueAdulteIDF = () => {
             </div>
 
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-3xl md:text-4xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Nos ateliers pour adultes
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {ateliers.map((a, i) => (
-                  <div key={i} className="bg-white rounded-lg p-6 hover:shadow-lg transition-all animate-fade-in" style={{ animationDelay: `${i * 80}ms` }}>
-                    <h3 className="text-lg font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>{a.title}</h3>
+                  <div key={i} className="bg-white p-6 hover:shadow-brutal-lg transition-all animate-fade-in border-brutal shadow-brutal" style={{ animationDelay: `${i * 80}ms` }}>
+                    <h3 className="text-lg font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{a.title}</h3>
                     <p className="text-charcoal/70 text-sm leading-relaxed">{a.desc}</p>
                   </div>
                 ))}
@@ -96,18 +96,18 @@ const AtelierBotaniqueAdulteIDF = () => {
                 { src: galleryTeinture, title: "Teinture végétale", desc: "Couleurs ancestrales, techniques vivantes" },
                 { src: galleryTerrarium, title: "Terrarium", desc: "Un jardin miniature à emporter" }
               ].map((a, i) => (
-                <div key={i} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div key={i} className="overflow-hidden shadow-brutal hover:shadow-brutal-lg transition-shadow">
                   <img src={a.src} alt={a.title} className="w-full h-48 object-cover" loading="lazy" />
-                  <div className="p-5 bg-white">
-                    <h3 className="text-lg font-semibold mb-1" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>{a.title}</h3>
+                  <div className="p-5 bg-white border-brutal shadow-brutal">
+                    <h3 className="text-lg font-semibold mb-1" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{a.title}</h3>
                     <p className="text-sm text-charcoal/70">{a.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="bg-sage/10 rounded-lg p-8 mb-16 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+            <div className="bg-sage/10 p-8 mb-16 animate-fade-in border-brutal shadow-brutal">
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Nos zones d'intervention
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -117,16 +117,16 @@ const AtelierBotaniqueAdulteIDF = () => {
                   { name: "Hauts-de-Seine (92)", link: "/atelier-botanique-adulte-hauts-de-seine" },
                   { name: "Val-d'Oise (95)", link: "/atelier-botanique-adulte-val-d-oise" }
                 ].map((zone, i) => (
-                  <Link to={zone.link} key={i} className="bg-white px-4 py-3 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group">
-                    <span className="block text-sage-dark font-semibold group-hover:text-off-white"><MapPin className="w-4 h-4 inline mr-1" />{zone.name}</span>
+                  <Link to={zone.link} key={i} className="bg-white px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal">
+                    <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]"><MapPin className="w-4 h-4 inline mr-1" />{zone.name}</span>
                   </Link>
                 ))}
               </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-sand rounded-lg p-8">
-                <h2 className="text-2xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Pour qui ?</h2>
+              <div className="bg-sand p-8">
+                <h2 className="text-2xl mb-6" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Pour qui ?</h2>
                 <ul className="space-y-3">
                   {["Particuliers en quête de loisirs créatifs", "Entreprises (team building, séminaire)", "MJC et centres culturels", "Associations et clubs", "EHPAD et résidences seniors", "Événements privés (EVJF, anniversaires)"].map((b, i) => (
                     <li key={i} className="flex items-start gap-2">
@@ -136,8 +136,8 @@ const AtelierBotaniqueAdulteIDF = () => {
                   ))}
                 </ul>
               </div>
-              <div className="bg-sand rounded-lg p-8">
-                <h2 className="text-2xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Infos pratiques</h2>
+              <div className="bg-sand p-8">
+                <h2 className="text-2xl mb-6" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Infos pratiques</h2>
                 <ul className="space-y-3">
                   {["Tout le matériel est fourni", "Création à emporter", "Groupes de 6 à 20 personnes", "Durée : 1h30 à 3h", "Aucun prérequis", "Devis gratuit sous 24h"].map((b, i) => (
                     <li key={i} className="flex items-start gap-2">
@@ -150,23 +150,23 @@ const AtelierBotaniqueAdulteIDF = () => {
             </div>
 
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Questions fréquentes</h2>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Questions fréquentes</h2>
               <div className="space-y-4 max-w-4xl mx-auto">
                 {faqQuestions.map((faq, i) => (
-                  <div key={i} className="bg-white rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>{faq.question}</h3>
+                  <div key={i} className="bg-white p-6 border-brutal shadow-brutal">
+                    <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{faq.question}</h3>
                     <p className="text-charcoal/70 leading-relaxed">{faq.answer}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-sage text-off-white rounded-lg p-8 md:p-12 text-center animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>Un atelier botanique pour adultes ?</h2>
+            <div className="bg-sage text-[hsl(var(--cream))] p-8 md:p-12 text-center animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Un atelier botanique pour adultes ?</h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">Devis gratuit sous 24h · Paris, 78, 92, 95 · Tous niveaux</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Demander un devis</Link>
-                <Link to="/workshops" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Découvrir nos ateliers</Link>
+                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-charcoal text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all ">Demander un devis</Link>
+                <Link to="/workshops" className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-charcoal text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all ">Découvrir nos ateliers</Link>
               </div>
             </div>
           </div>

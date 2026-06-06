@@ -33,7 +33,7 @@ const AtelierTerrariumTeamBuilding = () => {
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <AnimatedSection className="text-center space-y-6">
             <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-full bg-sage/20">
+              <div className="p-3 bg-sage/20">
                 <Leaf className="w-12 h-12 text-sage" />
               </div>
             </div>
@@ -49,7 +49,7 @@ const AtelierTerrariumTeamBuilding = () => {
             <div className="pt-6">
               <Link
                 to="/contact"
-                className="inline-block px-8 py-4 bg-sage hover:bg-sage-dark text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+                className="inline-block px-8 py-4 bg-sage hover:bg-sage-dark text-white font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg"
               >
                 Demander un devis
               </Link>
@@ -59,7 +59,7 @@ const AtelierTerrariumTeamBuilding = () => {
       </section>
 
       {/* Info Section */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="grid md:grid-cols-3 gap-8">
             {[
@@ -110,7 +110,7 @@ const AtelierTerrariumTeamBuilding = () => {
       </section>
 
       {/* Why Choose */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection>
             <h2
@@ -140,7 +140,7 @@ const AtelierTerrariumTeamBuilding = () => {
                 desc: "Contrairement à d'autres team buildings, les participants repartent avec un objet qu'ils créé, un vrai souvenir de l'événement.",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 rounded-xl bg-sage/10 border border-sage/20">
+              <div key={i} className="p-6 bg-sage/10 border border-sage/20 border-brutal shadow-brutal">
                 <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-sm text-charcoal/70">{item.desc}</p>
               </div>
@@ -167,7 +167,7 @@ const AtelierTerrariumTeamBuilding = () => {
               { participants: "20-50", price: "35€/pers", duration: "2h" },
               { participants: "50-100", price: "28€/pers", duration: "2h30" },
             ].map((item, i) => (
-              <div key={i} className="p-6 rounded-xl bg-white border-2 border-sage/30 text-center hover:border-sage/60 transition-colors">
+              <div key={i} className="p-6 bg-white border-[3px] border-sage/30 text-center hover:border-sage/60 transition-colors border-brutal shadow-brutal">
                 <p className="text-sm text-muted-foreground mb-2">{item.participants} personnes</p>
                 <p className="text-3xl font-bold text-sage mb-2">{item.price}</p>
                 <p className="text-sm text-charcoal/70">Atelier de {item.duration}</p>
@@ -175,11 +175,11 @@ const AtelierTerrariumTeamBuilding = () => {
             ))}
           </AnimatedSection>
 
-          <AnimatedSection delay={200} className="mt-8 p-6 bg-white rounded-xl border-2 border-sage/20 text-center">
+          <AnimatedSection delay={200} className="mt-8 p-6 bg-white border-[3px] border-sage/20 text-center border-brutal shadow-brutal">
             <p className="text-charcoal/70 mb-4">Tarifs dégressifs pour groupes importants. Devis personnalisé sur demande.</p>
             <Link
               to="/contact"
-              className="inline-block px-8 py-3 bg-sage hover:bg-sage-dark text-white rounded-full font-semibold transition-all"
+              className="inline-block px-8 py-3 bg-sage hover:bg-sage-dark text-white font-semibold transition-all"
             >
               Demander un devis personnalisé
             </Link>
@@ -188,7 +188,7 @@ const AtelierTerrariumTeamBuilding = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-16 px-4 bg-sage/10">
+      <section className="py-16 px-4 bg-sage/10 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl text-center">
           <AnimatedSection>
             <h2
@@ -202,7 +202,7 @@ const AtelierTerrariumTeamBuilding = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-sage hover:bg-sage-dark text-white rounded-full font-semibold text-lg transition-all hover:scale-105 hover:shadow-lg"
+              className="inline-block px-10 py-4 bg-sage hover:bg-sage-dark text-white font-semibold text-lg transition-all hover:scale-105 hover:shadow-brutal-lg"
             >
               Nous contacter
             </Link>
