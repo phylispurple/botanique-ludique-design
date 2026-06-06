@@ -70,7 +70,7 @@ const AnimationBotaniqueParis = () => {
                 <BookOpen className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
                   <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
-                    Animation Botanique à Paris 1er–20e et à Paris
+                    Animation Botanique dans tout Paris (75)
                   </h2>
                   <p className="text-charcoal/80 leading-relaxed mb-4">
                     Nous intervenons auprès des <strong>entreprises, écoles, EHPAD, collectivités et associations</strong> de Paris 
