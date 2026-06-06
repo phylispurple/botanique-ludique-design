@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
@@ -148,6 +149,7 @@ const MediationCulturelleNatureParis = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -379,6 +380,8 @@ const AtelierTeintureScolaire = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      <LandingPhotoStrip />
 
       <Footer />
     </div>
