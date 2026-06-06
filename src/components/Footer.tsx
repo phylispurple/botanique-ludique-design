@@ -38,7 +38,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-sm font-body leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              Ateliers créatifs pour reconnecter l'humain au végétal. Association loi 1901 de médiation culturelle et scientifique.
+              Ateliers créatifs pour reconnecter l'humain au végétal. Médiation culturelle et scientifique en Île-de-France.
             </p>
             <div className="flex flex-col space-y-2.5 pt-2">
               <a href="mailto:contact@botaniqueludique.com" className="flex items-center gap-2 text-sm font-body transition-colors hover:text-white/90" style={{ color: 'rgba(255,255,255,0.5)' }}>

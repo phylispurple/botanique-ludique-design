@@ -17,7 +17,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           "url": "https://botaniqueludique.com",
           "logo": "https://botaniqueludique.com/favicon.png",
           "image": "https://botaniqueludique.com/hero-botanical.jpg",
-          "description": "Association de médiation culturelle et scientifique autour du vivant. Ateliers de botanique pour scolaires, entreprises et grand public. Conférences et balades guidées en Île-de-France.",
+          "description": "Médiation culturelle et scientifique autour du vivant. Ateliers de botanique pour scolaires, entreprises et grand public. Conférences et balades guidées en Île-de-France.",
           "founder": {
             "@type": "Person",
             "name": "Vanessa Charlery",
@@ -72,7 +72,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           "@id": "https://botaniqueludique.com",
           "name": "Botanique Ludique",
           "image": "https://botaniqueludique.com/hero-botanical.jpg",
-          "description": "Association de médiation culturelle et scientifique autour du vivant. Ateliers de botanique, conférences et balades guidées à Paris et en Île-de-France.",
+          "description": "Médiation culturelle et scientifique autour du vivant. Ateliers de botanique, conférences et balades guidées à Paris et en Île-de-France.",
           "founder": {
             "@type": "Person",
             "name": "Vanessa Charlery",
@@ -191,7 +191,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           "name": "Botanique Ludique",
           "url": "https://botaniqueludique.com",
           "logo": "https://botaniqueludique.com/favicon.png",
-          "description": "Association loi 1901 de médiation culturelle et scientifique autour du vivant. Ateliers, conférences, balades botaniques en Île-de-France.",
+          "description": "Médiation culturelle et scientifique autour du vivant. Ateliers, conférences, balades botaniques en Île-de-France.",
           "founder": {
             "@type": "Person",
             "name": "Vanessa Charlery",
