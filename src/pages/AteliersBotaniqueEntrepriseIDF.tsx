@@ -82,7 +82,7 @@ const AteliersBotaniqueEntrepriseIDF = () => {
   ];
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO 
         title="Ateliers Botaniques pour Entreprises en Île-de-France"
         description="Interventions botaniques dans toute l'Île-de-France pour vos séminaires, team building et événements d'entreprise. Paris, 92, 78, 94, 93, 91, 95, 77. Devis sur-mesure."
@@ -114,16 +114,16 @@ const AteliersBotaniqueEntrepriseIDF = () => {
             </div>
 
             {/* Zone d'intervention */}
-            <div className="bg-white rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
+            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-center justify-center gap-3 mb-8">
                 <MapPin className="w-8 h-8 text-sage" />
-                <h2 className="text-2xl md:text-3xl text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                <h2 className="text-2xl md:text-3xl text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                   Nos Zones d'Intervention en Île-de-France
                 </h2>
               </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {locations.map((location, index) => (
-                  <div key={index} className="bg-sage/5 p-4 rounded-lg">
+                  <div key={index} className="bg-sage/5 p-4 ">
                     <p className="font-semibold text-sage-dark mb-1">{location.dept}</p>
                     <p className="text-sm text-charcoal/70">{location.cities}</p>
                   </div>
@@ -136,17 +136,17 @@ const AteliersBotaniqueEntrepriseIDF = () => {
 
             {/* Types d'intervention */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Types d'Interventions
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {interventionTypes.map((type, index) => {
                   const Icon = type.icon;
                   return (
-                    <Card key={index} className="hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+                    <Card key={index} className="hover:shadow-brutal-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4 mb-4">
-                          <div className="bg-sage/10 p-3 rounded-full">
+                          <div className="bg-sage/10 p-3 border-brutal shadow-brutal">
                             <Icon className="w-6 h-6 text-sage" />
                           </div>
                           <div className="flex-1">
@@ -174,12 +174,12 @@ const AteliersBotaniqueEntrepriseIDF = () => {
 
             {/* Formats */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Formats Disponibles
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
                 {formats.map((format, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+                  <Card key={index} className="hover:shadow-brutal-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
                     <CardContent className="p-6 space-y-4">
                       <div className="text-center">
                         <Calendar className="w-12 h-12 text-sage mx-auto mb-3" />
@@ -203,8 +203,8 @@ const AteliersBotaniqueEntrepriseIDF = () => {
             </div>
 
             {/* Advantages */}
-            <div className="bg-sand rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+            <div className="bg-sand p-8 md:p-12 mb-16 animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Pourquoi Choisir Botanique Ludique ?
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
@@ -218,8 +218,8 @@ const AteliersBotaniqueEntrepriseIDF = () => {
             </div>
 
             {/* Pricing */}
-            <div className="bg-white rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Tarification Transparente
               </h2>
               <div className="max-w-2xl mx-auto space-y-4 text-charcoal/80">
@@ -243,7 +243,7 @@ const AteliersBotaniqueEntrepriseIDF = () => {
             </div>
 
             {/* Testimonial */}
-            <div className="bg-sage/10 border-l-4 border-sage p-8 mb-16 animate-fade-in">
+            <div className="bg-sage/10 border-l-4 border-sage p-8 mb-16 animate-fade-in border-brutal shadow-brutal">
               <p className="text-lg text-charcoal/80 italic mb-4">
                 "Nous avons fait appel à Botanique Ludique pour notre séminaire annuel en Essonne. L'équipe s'est 
                 déplacée avec tout le matériel, l'animation était top et nos 35 collaborateurs ont adoré l'atelier 
@@ -253,8 +253,8 @@ const AteliersBotaniqueEntrepriseIDF = () => {
             </div>
 
             {/* CTA */}
-            <div className="bg-sage text-off-white rounded-lg p-8 md:p-12 text-center animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+            <div className="bg-sage text-[hsl(var(--cream))] p-8 md:p-12 text-center animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Prêt à Organiser Votre Atelier en Entreprise ?
               </h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">
@@ -262,7 +262,7 @@ const AteliersBotaniqueEntrepriseIDF = () => {
               </p>
               <Link 
                 to="/b2b"
-                className="inline-flex items-center px-8 py-4 bg-off-white hover:bg-sand text-sage font-semibold uppercase tracking-wider transition-all rounded-full text-lg"
+                className="inline-flex items-center px-8 py-4 bg-[hsl(var(--cream))] hover:bg-sand text-sage font-semibold uppercase tracking-wider transition-all text-lg"
               >
                 Demander un devis
               </Link>

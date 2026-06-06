@@ -10,7 +10,7 @@ import dyeingImage from "@/assets/gallery-teinture-1.webp";
 
 const AtelierTeintureVegetale = () => {
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO 
         title="Atelier Teinture Végétale Paris | Pigments Naturels ✦ 75 IDF"
         description="🌿 Atelier teinture végétale à Paris et Île-de-France. Apprenez à teindre textiles et papiers avec des pigments 100% naturels. Particuliers et pros. Dès 55€."
@@ -55,7 +55,7 @@ const AtelierTeintureVegetale = () => {
             <section className="mb-20 animate-fade-in">
               <div className="grid md:grid-cols-2 gap-10 items-center">
                 <div>
-                  <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Qu'est-ce que la teinture végétale ?
                   </h2>
                   <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
@@ -74,20 +74,20 @@ const AtelierTeintureVegetale = () => {
                     chimiques de l'industrie textile.
                   </p>
                 </div>
-                <div className="rounded-lg overflow-hidden shadow-lg">
+                <div className="overflow-hidden shadow-brutal">
                   <img src={dyeingImage} alt="Atelier teinture végétale à Paris - extraction de pigments naturels" className="w-full h-full object-cover" />
                 </div>
               </div>
             </section>
 
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Déroulement de l'atelier teinture végétale
               </h2>
-              <div className="bg-sand rounded-lg p-8 md:p-10">
+              <div className="bg-sand p-8 md:p-10">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-xl font-semibold text-charcoal mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>Le programme</h3>
+                    <h3 className="text-xl font-semibold text-charcoal mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Le programme</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" /><span className="text-charcoal/80">Histoire de la teinture végétale à travers les civilisations</span></li>
                       <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" /><span className="text-charcoal/80">Découverte des plantes tinctoriales et leurs pigments</span></li>
@@ -97,7 +97,7 @@ const AtelierTeintureVegetale = () => {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-charcoal mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>Infos pratiques</h3>
+                    <h3 className="text-xl font-semibold text-charcoal mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Infos pratiques</h3>
                     <div className="space-y-4">
                       <div className="flex items-center gap-3"><Clock className="w-5 h-5 text-sage" /><span className="text-charcoal/80"><strong>Durée :</strong> 3h</span></div>
                       <div className="flex items-center gap-3"><Users className="w-5 h-5 text-sage" /><span className="text-charcoal/80"><strong>Participants :</strong> 10 max</span></div>
@@ -111,27 +111,27 @@ const AtelierTeintureVegetale = () => {
             </section>
 
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Les couleurs que vous découvrirez
               </h2>
               <div className="grid md:grid-cols-4 gap-6">
-                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-16 h-16 rounded-full mx-auto mb-3" style={{ backgroundColor: '#2E4057' }} />
+                <div className="text-center bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                  <div className="w-16 h-16 mx-auto mb-3" style={{ backgroundColor: '#2E4057' }} />
                   <h3 className="font-semibold text-charcoal mb-1">Indigo</h3>
                   <p className="text-xs text-charcoal/60">Chou rouge, indigotier</p>
                 </div>
-                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-16 h-16 rounded-full mx-auto mb-3" style={{ backgroundColor: '#C4944A' }} />
+                <div className="text-center bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                  <div className="w-16 h-16 mx-auto mb-3" style={{ backgroundColor: '#C4944A' }} />
                   <h3 className="font-semibold text-charcoal mb-1">Or & Jaune</h3>
                   <p className="text-xs text-charcoal/60">Pelures d'oignon, curcuma</p>
                 </div>
-                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-16 h-16 rounded-full mx-auto mb-3" style={{ backgroundColor: '#D4A5A5' }} />
+                <div className="text-center bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                  <div className="w-16 h-16 mx-auto mb-3" style={{ backgroundColor: '#D4A5A5' }} />
                   <h3 className="font-semibold text-charcoal mb-1">Rose & Mauve</h3>
                   <p className="text-xs text-charcoal/60">Noyau d'avocat, betterave</p>
                 </div>
-                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-16 h-16 rounded-full mx-auto mb-3" style={{ backgroundColor: '#6B8E5A' }} />
+                <div className="text-center bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                  <div className="w-16 h-16 mx-auto mb-3" style={{ backgroundColor: '#6B8E5A' }} />
                   <h3 className="font-semibold text-charcoal mb-1">Vert & Kaki</h3>
                   <p className="text-xs text-charcoal/60">Feuilles de noyer, épinards</p>
                 </div>
@@ -139,12 +139,12 @@ const AtelierTeintureVegetale = () => {
             </section>
 
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Pour qui est cet atelier ?
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-sage/10 rounded-lg p-6">
-                  <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>Particuliers</h3>
+                <div className="bg-sage/10 p-6 border-brutal shadow-brutal">
+                  <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Particuliers</h3>
                   <ul className="text-sm text-charcoal/70 space-y-2">
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Découverte de la teinture naturelle</li>
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Atelier créatif entre amis</li>
@@ -152,8 +152,8 @@ const AtelierTeintureVegetale = () => {
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Mode et textile durable</li>
                   </ul>
                 </div>
-                <div className="bg-sage/10 rounded-lg p-6">
-                  <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>Entreprises</h3>
+                <div className="bg-sage/10 p-6 border-brutal shadow-brutal">
+                  <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Entreprises</h3>
                   <ul className="text-sm text-charcoal/70 space-y-2">
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Team building RSE</li>
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Sensibilisation environnementale</li>
@@ -161,8 +161,8 @@ const AtelierTeintureVegetale = () => {
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Événement CSE original</li>
                   </ul>
                 </div>
-                <div className="bg-sage/10 rounded-lg p-6">
-                  <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>Éducation</h3>
+                <div className="bg-sage/10 p-6 border-brutal shadow-brutal">
+                  <h3 className="font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Éducation</h3>
                   <ul className="text-sm text-charcoal/70 space-y-2">
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Ateliers scolaires (sciences)</li>
                     <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" /> Centres de loisirs</li>
@@ -174,7 +174,7 @@ const AtelierTeintureVegetale = () => {
             </section>
 
             <section className="mb-20 animate-fade-in">
-              <div className="bg-sand rounded-lg p-8 md:p-10">
+              <div className="bg-sand p-8 md:p-10">
                 <div className="flex justify-center mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className="w-5 h-5 text-amber-500 fill-amber-500" />
@@ -194,18 +194,18 @@ const AtelierTeintureVegetale = () => {
             </section>
 
             <section className="animate-fade-in">
-              <div className="bg-gradient-to-br from-sage/20 to-sand rounded-2xl p-8 md:p-12 text-center">
-                <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <div className="bg-gradient-to-br from-sage/20 to-sand p-8 md:p-12 text-center">
+                <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                   Envie de découvrir les couleurs de la nature ?
                 </h2>
                 <p className="text-charcoal/80 mb-8 max-w-2xl mx-auto">
                   Réservez votre atelier teinture végétale à Paris ou en Île-de-France. Nous vous répondons sous 24h.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-sage text-sage hover:bg-sage hover:text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full">
+                  <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-[3px] border-sage text-sage hover:bg-sage hover:text-[hsl(var(--cream))] text-sm uppercase tracking-wider font-semibold transition-all duration-300 ">
                     <Mail className="w-4 h-4" /> Réserver un atelier
                   </Link>
-                  <a href="tel:+33609831606" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-sage text-sage hover:bg-sage hover:text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full">
+                  <a href="tel:+33609831606" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-[3px] border-sage text-sage hover:bg-sage hover:text-[hsl(var(--cream))] text-sm uppercase tracking-wider font-semibold transition-all duration-300 ">
                     <Phone className="w-4 h-4" /> 06 09 83 16 06
                   </a>
                 </div>

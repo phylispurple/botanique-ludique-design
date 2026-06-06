@@ -70,7 +70,7 @@ const TeamBuildingRSEParis = () => {
   ];
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO 
         title="Team Building RSE Paris, Yvelines, Hauts-de-Seine, Val-d'Oise - Ateliers Botaniques"
         description="Organisez un team building nature et RSE à Paris, Yvelines (78), Hauts-de-Seine (92), Val-d'Oise (95) avec des ateliers botaniques créatifs. Kokedama, teinture végétale, terrarium."
@@ -106,9 +106,9 @@ const TeamBuildingRSEParis = () => {
               {companyBenefits.map((benefit, index) => {
                 const Icon = benefit.icon;
                 return (
-                  <Card key={index} className="text-center hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+                  <Card key={index} className="text-center hover:shadow-brutal-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
                     <CardContent className="p-6 space-y-4">
-                      <div className="bg-sage/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                      <div className="bg-sage/10 w-16 h-16 flex items-center justify-center mx-auto border-brutal shadow-brutal">
                         <Icon className="w-8 h-8 text-sage" />
                       </div>
                       <h3 className="text-xl font-semibold text-charcoal">{benefit.title}</h3>
@@ -121,17 +121,17 @@ const TeamBuildingRSEParis = () => {
 
             {/* Activities Section */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Nos Ateliers Team Building RSE
               </h2>
               <div className="space-y-8">
                 {rseActivities.map((activity, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+                  <Card key={index} className="hover:shadow-brutal-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
                     <CardContent className="p-8">
                       <div className="grid md:grid-cols-3 gap-6">
                         <div className="md:col-span-2 space-y-4">
                           <div>
-                            <h3 className="text-2xl font-semibold text-charcoal mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                            <h3 className="text-2xl font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                               {activity.title}
                             </h3>
                             <div className="flex gap-4 text-sm text-sage-dark">
@@ -143,7 +143,7 @@ const TeamBuildingRSEParis = () => {
                             {activity.description}
                           </p>
                         </div>
-                        <div className="bg-sage/5 p-4 rounded-lg">
+                        <div className="bg-sage/5 p-4 ">
                           <h4 className="font-semibold text-charcoal mb-3">Bénéfices :</h4>
                           <ul className="space-y-2">
                             {activity.benefits.map((benefit, idx) => (
@@ -162,28 +162,28 @@ const TeamBuildingRSEParis = () => {
             </div>
 
             {/* Process Section */}
-            <div className="bg-sand rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+            <div className="bg-sand p-8 md:p-12 mb-16 animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Comment Organiser Votre Team Building ?
               </h2>
               <div className="grid md:grid-cols-4 gap-6 text-center">
                 <div className="space-y-3">
-                  <div className="bg-sage text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto text-xl font-bold">1</div>
+                  <div className="bg-sage text-white w-12 h-12 flex items-center justify-center mx-auto text-xl font-bold">1</div>
                   <h3 className="font-semibold text-charcoal">Contactez-nous</h3>
                   <p className="text-sm text-charcoal/70">Parlez-nous de votre projet et vos objectifs</p>
                 </div>
                 <div className="space-y-3">
-                  <div className="bg-sage text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto text-xl font-bold">2</div>
+                  <div className="bg-sage text-white w-12 h-12 flex items-center justify-center mx-auto text-xl font-bold">2</div>
                   <h3 className="font-semibold text-charcoal">Personnalisation</h3>
                   <p className="text-sm text-charcoal/70">Nous adaptons l'atelier à vos besoins</p>
                 </div>
                 <div className="space-y-3">
-                  <div className="bg-sage text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto text-xl font-bold">3</div>
+                  <div className="bg-sage text-white w-12 h-12 flex items-center justify-center mx-auto text-xl font-bold">3</div>
                   <h3 className="font-semibold text-charcoal">Organisation</h3>
                   <p className="text-sm text-charcoal/70">Date, lieu et logistique</p>
                 </div>
                 <div className="space-y-3">
-                  <div className="bg-sage text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto text-xl font-bold">4</div>
+                  <div className="bg-sage text-white w-12 h-12 flex items-center justify-center mx-auto text-xl font-bold">4</div>
                   <h3 className="font-semibold text-charcoal">Jour J</h3>
                   <p className="text-sm text-charcoal/70">Animation clé en main par nos experts</p>
                 </div>
@@ -191,13 +191,13 @@ const TeamBuildingRSEParis = () => {
             </div>
 
             {/* Clients Section */}
-            <div className="bg-white rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Ils Nous Font Confiance
               </h2>
               <div className="grid md:grid-cols-4 gap-6">
                 {clients.map((client, index) => (
-                  <div key={index} className="text-center p-4 bg-sage/5 rounded-lg">
+                  <div key={index} className="text-center p-4 bg-sage/5 ">
                     <p className="font-semibold text-charcoal mb-1">{client.name}</p>
                     <p className="text-sm text-charcoal/60">{client.type}</p>
                   </div>
@@ -206,7 +206,7 @@ const TeamBuildingRSEParis = () => {
             </div>
 
             {/* Testimonial */}
-            <div className="bg-sage/10 border-l-4 border-sage p-8 mb-16 animate-fade-in">
+            <div className="bg-sage/10 border-l-4 border-sage p-8 mb-16 animate-fade-in border-brutal shadow-brutal">
               <p className="text-lg text-charcoal/80 italic mb-4">
                 "L'atelier kokedama organisé par Botanique Ludique pour notre séminaire d'équipe a été un vrai succès. 
                 Nos collaborateurs ont adoré cette parenthèse nature créative, et cela s'inscrit parfaitement dans notre 
@@ -216,8 +216,8 @@ const TeamBuildingRSEParis = () => {
             </div>
 
             {/* CTA */}
-            <div className="bg-sage text-off-white rounded-lg p-8 md:p-12 text-center animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+            <div className="bg-sage text-[hsl(var(--cream))] p-8 md:p-12 text-center animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Prêt à Organiser Votre Team Building Nature ?
               </h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">
@@ -225,7 +225,7 @@ const TeamBuildingRSEParis = () => {
               </p>
               <Link 
                 to="/b2b"
-                className="inline-flex items-center px-8 py-4 bg-off-white hover:bg-sand text-sage font-semibold uppercase tracking-wider transition-all rounded-full text-lg"
+                className="inline-flex items-center px-8 py-4 bg-[hsl(var(--cream))] hover:bg-sand text-sage font-semibold uppercase tracking-wider transition-all text-lg"
               >
                 Demander un devis
               </Link>

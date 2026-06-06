@@ -31,7 +31,7 @@ const AtelierBienEtreNatureEntreprise = () => {
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <AnimatedSection className="text-center space-y-6">
             <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-full bg-green-100">
+              <div className="p-3 bg-green-100">
                 <Heart className="w-12 h-12 text-green-600" />
               </div>
             </div>
@@ -47,7 +47,7 @@ const AtelierBienEtreNatureEntreprise = () => {
             <div className="pt-6">
               <Link
                 to="/contact"
-                className="inline-block px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+                className="inline-block px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg"
               >
                 Demander un devis
               </Link>
@@ -57,7 +57,7 @@ const AtelierBienEtreNatureEntreprise = () => {
       </section>
 
       {/* Problem & Solution */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="grid md:grid-cols-2 gap-12">
             <div>
@@ -73,7 +73,7 @@ const AtelierBienEtreNatureEntreprise = () => {
                   "Engagement des collaborateurs en baisse",
                 ].map((item, i) => (
                   <div key={i} className="flex gap-3 items-start">
-                    <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-5 h-5 bg-red-100 flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-xs text-red-600">!</span>
                     </div>
                     <p className="text-charcoal/80">{item}</p>
@@ -134,7 +134,7 @@ const AtelierBienEtreNatureEntreprise = () => {
                 desc: "Un objet créé à ramener améliore la satisfaction à long terme",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
+              <div key={i} className="p-6 bg-white shadow-brutal hover:shadow-brutal-lg transition-all border-brutal shadow-brutal">
                 <item.icon className="w-8 h-8 text-green-600 mb-4" />
                 <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-sm text-charcoal/70">{item.desc}</p>
@@ -145,7 +145,7 @@ const AtelierBienEtreNatureEntreprise = () => {
       </section>
 
       {/* Workshop Options */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -183,7 +183,7 @@ const AtelierBienEtreNatureEntreprise = () => {
                 duration: "2h",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 rounded-xl bg-gradient-to-br from-green-50 to-green-100/30 border border-green-200">
+              <div key={i} className="p-6 bg-gradient-to-br from-green-50 to-green-100/30 border border-green-200">
                 <h3 className="text-xl font-semibold text-charcoal mb-1">{item.title}</h3>
                 <p className="text-sm text-green-600 font-medium mb-3">{item.subtitle}</p>
                 <p className="text-charcoal/70 mb-4 text-sm">{item.desc}</p>
@@ -195,7 +195,7 @@ const AtelierBienEtreNatureEntreprise = () => {
       </section>
 
       {/* QVCT & RSE */}
-      <section className="py-16 px-4 bg-sage/10">
+      <section className="py-16 px-4 bg-sage/10 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection>
             <h2
@@ -206,7 +206,7 @@ const AtelierBienEtreNatureEntreprise = () => {
             </h2>
           </AnimatedSection>
 
-          <AnimatedSection delay={100} className="bg-white p-8 rounded-xl shadow-sm">
+          <AnimatedSection delay={100} className="bg-white p-8 shadow-brutal border-brutal shadow-brutal">
             <p className="text-charcoal/80 mb-6">
               Nos ateliers répondent aux critères de <strong>Qualité de Vie et Conditions de Travail (QVCT)</strong> et s'alignent avec votre engagement RSE :
             </p>
@@ -229,7 +229,7 @@ const AtelierBienEtreNatureEntreprise = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -251,7 +251,7 @@ const AtelierBienEtreNatureEntreprise = () => {
                 author: "Responsable Évènements, Groupe Tech",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-green-50 rounded-xl border-l-4 border-green-600">
+              <div key={i} className="p-6 bg-green-50 border-l-4 border-green-600">
                 <p className="text-charcoal/80 italic mb-4">"{item.quote}"</p>
                 <p className="text-sm font-medium text-charcoal">{item.author}</p>
               </div>
@@ -272,7 +272,7 @@ const AtelierBienEtreNatureEntreprise = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-white text-green-600 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+              className="inline-block px-10 py-4 bg-white text-green-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
             >
               Demander un devis
             </Link>

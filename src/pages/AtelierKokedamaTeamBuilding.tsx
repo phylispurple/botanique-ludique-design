@@ -31,7 +31,7 @@ const AtelierKokedamaTeamBuilding = () => {
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <AnimatedSection className="text-center space-y-6">
             <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-full bg-teal-100">
+              <div className="p-3 bg-teal-100">
                 <Leaf className="w-12 h-12 text-teal-600" />
               </div>
             </div>
@@ -47,7 +47,7 @@ const AtelierKokedamaTeamBuilding = () => {
             <div className="pt-6">
               <Link
                 to="/contact"
-                className="inline-block px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+                className="inline-block px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg"
               >
                 Demander un devis
               </Link>
@@ -57,7 +57,7 @@ const AtelierKokedamaTeamBuilding = () => {
       </section>
 
       {/* What is Kokedama */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -80,7 +80,7 @@ const AtelierKokedamaTeamBuilding = () => {
                 Le résultat ? Un objet design, écologique, facile d'entretien et profondément zen.
               </p>
             </div>
-            <div className="bg-teal-50 p-8 rounded-xl border-2 border-teal-200">
+            <div className="bg-teal-50 p-8 border-[3px] border-teal-200">
               <h3 className="font-semibold text-charcoal mb-4">Caractéristiques</h3>
               <ul className="space-y-3 text-sm text-charcoal/80">
                 <li>✓ Art traditionnel japonais (depuis 1990s)</li>
@@ -130,7 +130,7 @@ const AtelierKokedamaTeamBuilding = () => {
                 desc: "Créer ensemble encourage les conversations authentiques entre collègues",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
+              <div key={i} className="p-6 bg-white shadow-brutal hover:shadow-brutal-lg transition-all border-brutal shadow-brutal">
                 <item.icon className="w-8 h-8 text-teal-600 mb-4" />
                 <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-sm text-charcoal/70">{item.desc}</p>
@@ -141,7 +141,7 @@ const AtelierKokedamaTeamBuilding = () => {
       </section>
 
       {/* The Experience */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -162,7 +162,7 @@ const AtelierKokedamaTeamBuilding = () => {
               { step: 6, title: "Partage", desc: "Photos de groupe, retours et conseils d'entretien" },
             ].map((item) => (
               <div key={item.step} className="flex gap-6 items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-teal-100 flex items-center justify-center">
                   <span className="font-bold text-teal-600">{item.step}</span>
                 </div>
                 <div>
@@ -187,7 +187,7 @@ const AtelierKokedamaTeamBuilding = () => {
               { label: "Matériel", value: "Fourni" },
               { label: "Résultat", value: "À emporter" },
             ].map((item, i) => (
-              <div key={i} className="text-center p-6 bg-white rounded-xl shadow-sm">
+              <div key={i} className="text-center p-6 bg-white shadow-brutal border-brutal shadow-brutal">
                 <p className="text-teal-600 font-semibold text-sm mb-2">{item.label}</p>
                 <p className="text-charcoal font-semibold">{item.value}</p>
               </div>
@@ -197,7 +197,7 @@ const AtelierKokedamaTeamBuilding = () => {
       </section>
 
       {/* Variations */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -227,7 +227,7 @@ const AtelierKokedamaTeamBuilding = () => {
                 desc: "À emporter pour continuer le projet au bureau",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-teal-50 rounded-xl border-l-4 border-teal-600">
+              <div key={i} className="p-6 bg-teal-50 border-l-4 border-teal-600">
                 <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-sm text-charcoal/70">{item.desc}</p>
               </div>
@@ -254,7 +254,7 @@ const AtelierKokedamaTeamBuilding = () => {
               { participants: "20-50", price: "40€/pers", duration: "2h" },
               { participants: "50-100", price: "32€/pers", duration: "2h" },
             ].map((item, i) => (
-              <div key={i} className="p-6 rounded-xl bg-white border-2 border-teal-200 text-center hover:border-teal-600 transition-colors">
+              <div key={i} className="p-6 bg-white border-[3px] border-teal-200 text-center hover:border-teal-600 transition-colors border-brutal shadow-brutal">
                 <p className="text-sm text-muted-foreground mb-2">{item.participants} personnes</p>
                 <p className="text-3xl font-bold text-teal-600 mb-2">{item.price}</p>
                 <p className="text-sm text-charcoal/70">Atelier de {item.duration}</p>
@@ -262,11 +262,11 @@ const AtelierKokedamaTeamBuilding = () => {
             ))}
           </AnimatedSection>
 
-          <AnimatedSection delay={200} className="p-6 bg-white rounded-xl border-2 border-teal-200 text-center">
+          <AnimatedSection delay={200} className="p-6 bg-white border-[3px] border-teal-200 text-center border-brutal shadow-brutal">
             <p className="text-charcoal/70 mb-4">Tarifs dégressifs pour groupes importants et offres combinées disponibles.</p>
             <Link
               to="/contact"
-              className="inline-block px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-full font-semibold transition-all"
+              className="inline-block px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold transition-all"
             >
               Demander un devis
             </Link>
@@ -286,7 +286,7 @@ const AtelierKokedamaTeamBuilding = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-white text-teal-600 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+              className="inline-block px-10 py-4 bg-white text-teal-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
             >
               Demander un devis
             </Link>

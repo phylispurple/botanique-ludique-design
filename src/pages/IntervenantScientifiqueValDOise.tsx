@@ -20,7 +20,7 @@ const IntervenantScientifiqueValDOise = () => {
   ];
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO
         title="Intervenant Scientifique Nature Val-d'Oise (95)"
         description="Intervenant scientifique botanique dans le Val-d'Oise (95). Ateliers nature pour entreprises, écoles, EHPAD à Cergy, Pontoise, Argenteuil."
@@ -48,11 +48,11 @@ const IntervenantScientifiqueValDOise = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
+            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-start gap-4">
                 <BookOpen className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
-                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+                  <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     La botanique scientifique dans le 95
                   </h2>
                   <p className="text-charcoal/80 leading-relaxed">
@@ -70,29 +70,29 @@ const IntervenantScientifiqueValDOise = () => {
                 { src: galleryTeinture, title: "Teinture végétale", desc: "Chimie naturelle des pigments" },
                 { src: galleryTerrarium, title: "Terrarium", desc: "Écosystèmes en miniature" }
               ].map((a, i) => (
-                <div key={i} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div key={i} className="overflow-hidden shadow-brutal hover:shadow-brutal-lg transition-shadow">
                   <img src={a.src} alt={`${a.title} Val-d'Oise`} className="w-full h-48 object-cover" loading="lazy" />
-                  <div className="p-5 bg-white">
-                    <h3 className="text-lg font-semibold mb-1" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>{a.title}</h3>
+                  <div className="p-5 bg-white border-brutal shadow-brutal">
+                    <h3 className="text-lg font-semibold mb-1" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{a.title}</h3>
                     <p className="text-sm text-charcoal/70">{a.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="bg-sage/10 rounded-lg p-8 mb-16 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Villes d'intervention</h2>
+            <div className="bg-sage/10 p-8 mb-16 animate-fade-in border-brutal shadow-brutal">
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Villes d'intervention</h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {cities.map((city, i) => (
-                  <div key={i} className="bg-white px-4 py-3 rounded-lg text-center shadow-sm">
+                  <div key={i} className="bg-white px-4 py-3 text-center shadow-brutal border-brutal shadow-brutal">
                     <span className="text-sage-dark font-semibold"><MapPin className="w-4 h-4 inline mr-1" />{city}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-sand rounded-lg p-8 mb-16">
-              <h2 className="text-2xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Pourquoi nous choisir ?</h2>
+            <div className="bg-sand p-8 mb-16">
+              <h2 className="text-2xl mb-6" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Pourquoi nous choisir ?</h2>
               <div className="grid sm:grid-cols-2 gap-3">
                 {["Animatrice ethnobotaniste formée à l'EHESS", "Interventions dans tout le 95", "Matériel fourni", "Approche scientifique unique", "Tous publics, tous âges", "Devis gratuit sous 24h"].map((b, i) => (
                   <div key={i} className="flex items-start gap-2">
@@ -104,23 +104,23 @@ const IntervenantScientifiqueValDOise = () => {
             </div>
 
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>Questions fréquentes</h2>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Questions fréquentes</h2>
               <div className="space-y-4 max-w-4xl mx-auto">
                 {faqQuestions.map((faq, i) => (
-                  <div key={i} className="bg-white rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>{faq.question}</h3>
+                  <div key={i} className="bg-white p-6 border-brutal shadow-brutal">
+                    <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{faq.question}</h3>
                     <p className="text-charcoal/70 leading-relaxed">{faq.answer}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-sage text-off-white rounded-lg p-8 md:p-12 text-center animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>Intervenant scientifique dans le 95 — contactez-nous</h2>
+            <div className="bg-sage text-[hsl(var(--cream))] p-8 md:p-12 text-center animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Intervenant scientifique dans le 95 — contactez-nous</h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">Devis gratuit sous 24h · Tout le département 95 · Tous publics</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Demander un devis</Link>
-                <Link to="/atelier-botanique-cergy" className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full">Nos ateliers dans le 95</Link>
+                <Link to="/contact" className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-charcoal text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all ">Demander un devis</Link>
+                <Link to="/atelier-botanique-cergy" className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-charcoal text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all ">Nos ateliers dans le 95</Link>
               </div>
             </div>
           </div>

@@ -36,7 +36,7 @@ const AteliersBotaniquesComplets = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto px-4 max-w-6xl">
           <AnimatedSection>
             <h2 className="text-2xl md:text-3xl font-light text-center mb-12" style={{ fontFamily: "Fraunces, serif", color: "#5D653A" }}>
@@ -94,7 +94,7 @@ const AteliersBotaniquesComplets = () => {
                 ],
               },
             ].map((section, i) => (
-              <div key={i} className="p-6 bg-sage/5 rounded-xl border border-sage/20">
+              <div key={i} className="p-6 bg-sage/5 border border-sage/20">
                 <h3 className="font-semibold text-charcoal mb-4">{section.category}</h3>
                 <ul className="space-y-2">
                   {section.ateliers.map((atelier, j) => (
@@ -151,7 +151,7 @@ const AteliersBotaniquesComplets = () => {
                 popular: "⭐⭐⭐",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all text-center">
+              <div key={i} className="p-6 bg-white shadow-brutal hover:shadow-brutal-lg transition-all text-center border-brutal shadow-brutal">
                 <p className="text-4xl mb-3">{item.emoji}</p>
                 <h3 className="font-semibold text-charcoal mb-2">{item.name}</h3>
                 <p className="text-xs text-charcoal/70 mb-3">{item.desc}</p>
@@ -163,7 +163,7 @@ const AteliersBotaniquesComplets = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ fontFamily: "Fraunces, serif", color: "#5D653A" }}>
@@ -175,13 +175,13 @@ const AteliersBotaniquesComplets = () => {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 to="/workshops"
-                className="px-8 py-4 bg-sage hover:bg-sage-dark text-white rounded-full font-semibold transition-all"
+                className="px-8 py-4 bg-sage hover:bg-sage-dark text-white font-semibold transition-all"
               >
                 Voir les dates
               </Link>
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-transparent border-2 border-sage text-sage hover:bg-sage/10 rounded-full font-semibold transition-all"
+                className="px-8 py-4 bg-transparent border-[3px] border-sage text-sage hover:bg-sage/10 font-semibold transition-all"
               >
                 Sur-mesure
               </Link>

@@ -45,7 +45,7 @@ const AtelierBotaniqueLeVesinet = () => {
   ];
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO 
         title="Atelier Botanique Le Vésinet | Kokedama, Terrarium ✦ Ville-Parc 78"
         description="🌿 Ateliers botaniques au Vésinet, ville-parc des Yvelines. Kokedama, teinture végétale, terrarium dès 25€. Créez au cœur d'un patrimoine paysager exceptionnel !"
@@ -96,11 +96,11 @@ const AtelierBotaniqueLeVesinet = () => {
 
             {/* Why Le Vésinet Section */}
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Le Vésinet : un écrin végétal unique pour les arts botaniques
               </h2>
               
-              <div className="bg-sand rounded-lg p-8 md:p-10 mb-8">
+              <div className="bg-sand p-8 md:p-10 mb-8">
                 <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
                   Le Vésinet est un cas unique en France : une <strong>ville entièrement conçue comme un parc paysager</strong>. 
                   Créée en 1875 par le comte de Choulot, elle offre 100 hectares d'espaces verts, 5 lacs artificiels, 
@@ -121,13 +121,13 @@ const AtelierBotaniqueLeVesinet = () => {
 
             {/* Workshops Grid */}
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Nos ateliers disponibles au Vésinet
               </h2>
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 {workshops.map((workshop, index) => (
-                  <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <Card key={index} className="overflow-hidden hover:shadow-brutal-lg transition-shadow">
                     <div className="aspect-video overflow-hidden">
                       <img 
                         src={workshop.image} 
@@ -137,7 +137,7 @@ const AtelierBotaniqueLeVesinet = () => {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold text-charcoal mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                      <h3 className="text-xl font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                         {workshop.title}
                       </h3>
                       <p className="text-charcoal/70 mb-4">{workshop.description}</p>
@@ -157,7 +157,7 @@ const AtelierBotaniqueLeVesinet = () => {
               <div className="text-center">
                 <Link 
                   to="/workshops"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-[hsl(var(--cream))] text-sm uppercase tracking-wider font-semibold transition-all duration-300 "
                 >
                   <Leaf className="w-4 h-4" />
                   Voir tous nos ateliers
@@ -167,13 +167,13 @@ const AtelierBotaniqueLeVesinet = () => {
 
             {/* Parks & Lakes Section */}
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Les parcs du Vésinet : une inspiration botanique inépuisable
               </h2>
               
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Les 5 lacs artificiels
                   </h3>
                   <p className="text-charcoal/70 mb-4">
@@ -181,8 +181,8 @@ const AtelierBotaniqueLeVesinet = () => {
                     luxuriante inspirent nos créations aquatiques et nos terrariums humides.
                   </p>
                 </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Les arbres remarquables
                   </h3>
                   <p className="text-charcoal/70 mb-4">
@@ -190,8 +190,8 @@ const AtelierBotaniqueLeVesinet = () => {
                     Cette collection botanique exceptionnelle nourrit notre approche pédagogique.
                   </p>
                 </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Les jardins privés
                   </h3>
                   <p className="text-charcoal/70 mb-4">
@@ -199,8 +199,8 @@ const AtelierBotaniqueLeVesinet = () => {
                     camélias et roses anciennes, sources d'inspiration pour nos ateliers floraux.
                   </p>
                 </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     La coulée verte
                   </h3>
                   <p className="text-charcoal/70 mb-4">
@@ -213,26 +213,26 @@ const AtelierBotaniqueLeVesinet = () => {
 
             {/* Local Areas Section */}
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Nous intervenons dans tout le secteur du Vésinet
               </h2>
               
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white rounded-lg p-6 text-center shadow-sm">
+                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Villes-parcs</h3>
                   <p className="text-sm text-charcoal/70">
                     Le Vésinet, Maisons-Laffitte, Saint-Germain-en-Laye
                   </p>
                 </div>
-                <div className="bg-white rounded-lg p-6 text-center shadow-sm">
+                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Boucles de Seine</h3>
                   <p className="text-sm text-charcoal/70">
                     Chatou, Croissy-sur-Seine, Le Pecq, Le Port-Marly
                   </p>
                 </div>
-                <div className="bg-white rounded-lg p-6 text-center shadow-sm">
+                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Rive droite</h3>
                   <p className="text-sm text-charcoal/70">
@@ -244,13 +244,13 @@ const AtelierBotaniqueLeVesinet = () => {
 
             {/* For Who Section */}
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 À qui s'adressent nos ateliers au Vésinet ?
               </h2>
               
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-sage/10 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-charcoal mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                <div className="bg-sage/10 p-6 border-brutal shadow-brutal">
+                  <h3 className="text-xl font-semibold text-charcoal mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Particuliers & Familles
                   </h3>
                   <ul className="space-y-3">
@@ -272,8 +272,8 @@ const AtelierBotaniqueLeVesinet = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-sage/10 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-charcoal mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                <div className="bg-sage/10 p-6 border-brutal shadow-brutal">
+                  <h3 className="text-xl font-semibold text-charcoal mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Professionnels & Collectivités
                   </h3>
                   <ul className="space-y-3">
@@ -300,7 +300,7 @@ const AtelierBotaniqueLeVesinet = () => {
 
             {/* Testimonial Section */}
             <section className="mb-20 animate-fade-in">
-              <div className="bg-sand rounded-lg p-8 md:p-10">
+              <div className="bg-sand p-8 md:p-10">
                 <div className="flex justify-center mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className="w-5 h-5 text-amber-500 fill-amber-500" />
@@ -321,34 +321,34 @@ const AtelierBotaniqueLeVesinet = () => {
 
             {/* Why Choose Us */}
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Pourquoi choisir Botanique Ludique au Vésinet ?
               </h2>
               
               <div className="grid md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage/20 flex items-center justify-center mx-auto mb-4">
                     <Leaf className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">Expertise EHESS</h3>
                   <p className="text-sm text-charcoal/70">Fondatrice, animatrice ethnobotaniste formée de l'École des Hautes Études</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage/20 flex items-center justify-center mx-auto mb-4">
                     <Users className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">+400 Participants</h3>
                   <p className="text-sm text-charcoal/70">Une communauté passionnée en Île-de-France</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage/20 flex items-center justify-center mx-auto mb-4">
                     <TreeDeciduous className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">Esprit ville-parc</h3>
                   <p className="text-sm text-charcoal/70">Ateliers inspirés par le patrimoine végétal vésigondin</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage/20 flex items-center justify-center mx-auto mb-4">
                     <Calendar className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">Flexibilité</h3>
@@ -359,8 +359,8 @@ const AtelierBotaniqueLeVesinet = () => {
 
             {/* CTA Section */}
             <section className="animate-fade-in">
-              <div className="bg-gradient-to-br from-sage/20 to-sand rounded-2xl p-8 md:p-12 text-center">
-                <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <div className="bg-gradient-to-br from-sage/20 to-sand p-8 md:p-12 text-center">
+                <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                   Prêt pour un atelier botanique au Vésinet ?
                 </h2>
                 <p className="text-charcoal/80 mb-8 max-w-2xl mx-auto">
@@ -370,14 +370,14 @@ const AtelierBotaniqueLeVesinet = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/contact"
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-sage text-sage hover:bg-sage hover:text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-[3px] border-sage text-sage hover:bg-sage hover:text-[hsl(var(--cream))] text-sm uppercase tracking-wider font-semibold transition-all duration-300 "
                   >
                     <Mail className="w-4 h-4" />
                     Demander un devis
                   </Link>
                   <a 
                     href="tel:0609831606"
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-sage text-sage hover:bg-sage hover:text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-[3px] border-sage text-sage hover:bg-sage hover:text-[hsl(var(--cream))] text-sm uppercase tracking-wider font-semibold transition-all duration-300 "
                   >
                     <Phone className="w-4 h-4" />
                     06 09 83 16 06

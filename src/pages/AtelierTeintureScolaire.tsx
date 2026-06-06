@@ -31,7 +31,7 @@ const AtelierTeintureScolaire = () => {
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <AnimatedSection className="text-center space-y-6">
             <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-full bg-yellow-100">
+              <div className="p-3 bg-yellow-100">
                 <Palette className="w-12 h-12 text-yellow-700" />
               </div>
             </div>
@@ -47,7 +47,7 @@ const AtelierTeintureScolaire = () => {
             <div className="pt-6">
               <Link
                 to="/contact"
-                className="inline-block px-8 py-4 bg-yellow-700 hover:bg-yellow-800 text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+                className="inline-block px-8 py-4 bg-yellow-700 hover:bg-yellow-800 text-white font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg"
               >
                 Demander un devis
               </Link>
@@ -57,7 +57,7 @@ const AtelierTeintureScolaire = () => {
       </section>
 
       {/* Educational Value */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -149,7 +149,7 @@ const AtelierTeintureScolaire = () => {
               },
             ].map((item) => (
               <div key={item.step} className="flex gap-6 items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 flex items-center justify-center">
                   <span className="font-bold text-yellow-700">{item.step}</span>
                 </div>
                 <div>
@@ -163,7 +163,7 @@ const AtelierTeintureScolaire = () => {
       </section>
 
       {/* Format Options */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -201,7 +201,7 @@ const AtelierTeintureScolaire = () => {
                 group: "Flexible",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 rounded-xl bg-yellow-50 border-l-4 border-yellow-700">
+              <div key={i} className="p-6 bg-yellow-50 border-l-4 border-yellow-700">
                 <h3 className="text-lg font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-charcoal/80 text-sm mb-4">{item.desc}</p>
                 <div className="flex flex-wrap gap-4 text-xs text-muted-foreground">
@@ -244,7 +244,7 @@ const AtelierTeintureScolaire = () => {
                 activities: "Chimie avancée, histoire, écologie, projets artistiques",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white rounded-xl shadow-sm">
+              <div key={i} className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
                 <h3 className="font-bold text-yellow-700 mb-3">{item.age}</h3>
                 <p className="text-sm font-semibold text-charcoal mb-2">{item.focus}</p>
                 <p className="text-sm text-charcoal/70">{item.activities}</p>
@@ -255,7 +255,7 @@ const AtelierTeintureScolaire = () => {
       </section>
 
       {/* Alignment with Education */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection>
             <h2
@@ -266,7 +266,7 @@ const AtelierTeintureScolaire = () => {
             </h2>
           </AnimatedSection>
 
-          <AnimatedSection delay={100} className="p-8 bg-yellow-50 rounded-xl border-2 border-yellow-200">
+          <AnimatedSection delay={100} className="p-8 bg-yellow-50 border-[3px] border-yellow-200">
             <p className="text-charcoal/80 mb-6">
               Notre atelier s'aligne avec les objectifs du programme éducatif français :
             </p>
@@ -301,25 +301,25 @@ const AtelierTeintureScolaire = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={100} className="grid md:grid-cols-2 gap-8">
-            <div className="p-6 bg-white rounded-xl shadow-sm">
+            <div className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
               <h3 className="font-semibold text-charcoal mb-4">📍 Lieu</h3>
               <p className="text-charcoal/80 text-sm">
                 À votre école ou dans nos locaux. Déplacement inclus en Île-de-France pour les groupes importants.
               </p>
             </div>
-            <div className="p-6 bg-white rounded-xl shadow-sm">
+            <div className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
               <h3 className="font-semibold text-charcoal mb-4">📦 Matériel</h3>
               <p className="text-charcoal/80 text-sm">
                 Tout est fourni : plantes, tissus, outils. Les enfants repartent avec leur création.
               </p>
             </div>
-            <div className="p-6 bg-white rounded-xl shadow-sm">
+            <div className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
               <h3 className="font-semibold text-charcoal mb-4">👨‍🏫 Animateur</h3>
               <p className="text-charcoal/80 text-sm">
                 Ethnobotaniste expérimentée, formatrice en pédagogie. Approche bienveillante et inclusive.
               </p>
             </div>
-            <div className="p-6 bg-white rounded-xl shadow-sm">
+            <div className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
               <h3 className="font-semibold text-charcoal mb-4">🎯 Résultats</h3>
               <p className="text-charcoal/80 text-sm">
                 Les enfants repartent avec leurs créations teintes et une compréhension de la botanique.
@@ -330,7 +330,7 @@ const AtelierTeintureScolaire = () => {
       </section>
 
       {/* Pricing */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -341,7 +341,7 @@ const AtelierTeintureScolaire = () => {
             </h2>
           </AnimatedSection>
 
-          <AnimatedSection delay={100} className="p-8 bg-yellow-50 rounded-xl border-2 border-yellow-200 text-center mb-8">
+          <AnimatedSection delay={100} className="p-8 bg-yellow-50 border-[3px] border-yellow-200 text-center mb-8">
             <p className="text-charcoal/80 mb-4">
               Tarifs à partir de <strong>12€ par enfant</strong> (selon le groupe et la durée)
             </p>
@@ -353,7 +353,7 @@ const AtelierTeintureScolaire = () => {
           <AnimatedSection delay={200} className="text-center">
             <Link
               to="/contact"
-              className="inline-block px-8 py-4 bg-yellow-700 hover:bg-yellow-800 text-white rounded-full font-semibold transition-all"
+              className="inline-block px-8 py-4 bg-yellow-700 hover:bg-yellow-800 text-white font-semibold transition-all"
             >
               Demander un devis scolaire
             </Link>
@@ -373,7 +373,7 @@ const AtelierTeintureScolaire = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-white text-yellow-700 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+              className="inline-block px-10 py-4 bg-white text-yellow-700 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
             >
               Demander un devis
             </Link>

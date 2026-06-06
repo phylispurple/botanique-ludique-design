@@ -31,7 +31,7 @@ const ActiviteIntergenerationnelle = () => {
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <AnimatedSection className="text-center space-y-6">
             <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-full bg-purple-100">
+              <div className="p-3 bg-purple-100">
                 <Users className="w-12 h-12 text-purple-600" />
               </div>
             </div>
@@ -47,7 +47,7 @@ const ActiviteIntergenerationnelle = () => {
             <div className="pt-6">
               <Link
                 to="/contact"
-                className="inline-block px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+                className="inline-block px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg"
               >
                 Demander un devis
               </Link>
@@ -57,7 +57,7 @@ const ActiviteIntergenerationnelle = () => {
       </section>
 
       {/* The Need */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -86,7 +86,7 @@ const ActiviteIntergenerationnelle = () => {
                 desc: "cherchent des animations engageantes",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-purple-50 rounded-xl text-center">
+              <div key={i} className="p-6 bg-purple-50 text-center">
                 <p className="text-4xl font-bold text-purple-600 mb-2">{item.stat}</p>
                 <p className="font-semibold text-charcoal mb-1">{item.label}</p>
                 <p className="text-sm text-charcoal/70">{item.desc}</p>
@@ -109,7 +109,7 @@ const ActiviteIntergenerationnelle = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={100} className="space-y-8">
-            <div className="p-8 bg-white rounded-xl shadow-sm border-l-4 border-purple-600">
+            <div className="p-8 bg-white shadow-brutal border-l-4 border-purple-600 border-brutal shadow-brutal">
               <h3 className="text-2xl font-semibold text-charcoal mb-4">Comment ça marche ?</h3>
               <ol className="space-y-4">
                 {[
@@ -132,7 +132,7 @@ const ActiviteIntergenerationnelle = () => {
       </section>
 
       {/* Benefits */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -166,7 +166,7 @@ const ActiviteIntergenerationnelle = () => {
                 ],
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-purple-50 rounded-xl">
+              <div key={i} className="p-6 bg-purple-50 ">
                 <div className="flex items-center gap-3 mb-4">
                   <item.icon className="w-8 h-8 text-purple-600" />
                   <h3 className="text-xl font-semibold text-charcoal">{item.title}</h3>
@@ -224,7 +224,7 @@ const ActiviteIntergenerationnelle = () => {
                 ageRange: "6-99 ans",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
+              <div key={i} className="p-6 bg-white shadow-brutal hover:shadow-brutal-lg transition-all border-brutal shadow-brutal">
                 <h3 className="text-lg font-semibold text-charcoal mb-3">{item.title}</h3>
                 <p className="text-charcoal/80 text-sm mb-4">{item.desc}</p>
                 <div className="flex flex-wrap gap-3 text-xs text-muted-foreground">
@@ -238,7 +238,7 @@ const ActiviteIntergenerationnelle = () => {
       </section>
 
       {/* Success Stories */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -260,7 +260,7 @@ const ActiviteIntergenerationnelle = () => {
                 author: "Enseignant, École primaire",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-purple-50 rounded-xl border-l-4 border-purple-600">
+              <div key={i} className="p-6 bg-purple-50 border-l-4 border-purple-600">
                 <p className="text-charcoal/80 italic mb-4">"{item.quote}"</p>
                 <p className="text-sm font-medium text-charcoal">{item.author}</p>
               </div>
@@ -296,7 +296,7 @@ const ActiviteIntergenerationnelle = () => {
                 desc: "5-6 duos (enfant-senior) par session pour une qualité optimale",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white rounded-xl shadow-sm">
+              <div key={i} className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
                 <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-sm text-charcoal/70">{item.desc}</p>
               </div>
@@ -317,7 +317,7 @@ const ActiviteIntergenerationnelle = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-white text-purple-600 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
+              className="inline-block px-10 py-4 bg-white text-purple-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
             >
               Demander un devis
             </Link>

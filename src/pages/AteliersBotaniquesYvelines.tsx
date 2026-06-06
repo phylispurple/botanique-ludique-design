@@ -47,7 +47,7 @@ const AteliersBotaniquesYvelines = () => {
   ];
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO 
         title="Ateliers Botaniques dans les Yvelines (78) - Chatou, Le Pecq, Le Vésinet"
         description="Découvrez nos ateliers botaniques créatifs dans les Yvelines : kokedama, teinture végétale, vannerie à Chatou, Le Pecq, Le Vésinet, Saint-Germain-en-Laye. Ateliers nature pour tous."
@@ -79,38 +79,38 @@ const AteliersBotaniquesYvelines = () => {
             </div>
 
             {/* Villes couvertes avec liens SEO */}
-            <div className="bg-sage/10 rounded-lg p-8 mb-16 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+            <div className="bg-sage/10 p-8 mb-16 animate-fade-in border-brutal shadow-brutal">
+              <h2 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Nos Ateliers par Ville dans les Yvelines
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                 <Link 
                   to="/atelier-botanique-saint-germain-en-laye"
-                  className="bg-white px-4 py-3 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group"
+                  className="bg-white px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
                 >
-                  <span className="block text-sage-dark font-semibold group-hover:text-off-white">📍 Saint-Germain-en-Laye</span>
-                  <span className="text-xs text-charcoal/60 group-hover:text-off-white/80">Forêt domaniale & patrimoine</span>
+                  <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 Saint-Germain-en-Laye</span>
+                  <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">Forêt domaniale & patrimoine</span>
                 </Link>
                 <Link 
                   to="/atelier-botanique-chatou"
-                  className="bg-white px-4 py-3 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group"
+                  className="bg-white px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
                 >
-                  <span className="block text-sage-dark font-semibold group-hover:text-off-white">📍 Chatou</span>
-                  <span className="text-xs text-charcoal/60 group-hover:text-off-white/80">Île des Impressionnistes</span>
+                  <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 Chatou</span>
+                  <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">Île des Impressionnistes</span>
                 </Link>
                 <Link 
                   to="/atelier-botanique-le-vesinet"
-                  className="bg-white px-4 py-3 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group"
+                  className="bg-white px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
                 >
-                  <span className="block text-sage-dark font-semibold group-hover:text-off-white">📍 Le Vésinet</span>
-                  <span className="text-xs text-charcoal/60 group-hover:text-off-white/80">Ville-parc classée</span>
+                  <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 Le Vésinet</span>
+                  <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">Ville-parc classée</span>
                 </Link>
                 <Link 
                   to="/atelier-botanique-le-pecq"
-                  className="bg-white px-4 py-3 rounded-lg text-center hover:bg-sage hover:text-off-white transition-all shadow-sm group"
+                  className="bg-white px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
                 >
-                  <span className="block text-sage-dark font-semibold group-hover:text-off-white">📍 Le Pecq</span>
-                  <span className="text-xs text-charcoal/60 group-hover:text-off-white/80">Bords de Seine</span>
+                  <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 Le Pecq</span>
+                  <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">Bords de Seine</span>
                 </Link>
               </div>
               <p className="text-center text-charcoal/70">
@@ -120,21 +120,21 @@ const AteliersBotaniquesYvelines = () => {
 
             {/* Workshops Grid */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Nos Ateliers Phares dans les Yvelines
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
                 {workshops.map((workshop, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+                  <Card key={index} className="hover:shadow-brutal-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
                     <CardContent className="p-0">
                       <img 
                         src={workshop.image} 
                         alt={`Atelier ${workshop.title} Yvelines`}
-                        className="w-full h-48 object-cover rounded-t-lg"
+                        className="w-full h-48 object-cover "
                         loading="lazy"
                       />
                       <div className="p-6 space-y-3">
-                        <h3 className="text-2xl font-semibold text-charcoal" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                        <h3 className="text-2xl font-semibold text-charcoal" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                           {workshop.title}
                         </h3>
                         <div className="flex items-center gap-4 text-sm text-sage-dark">
@@ -152,7 +152,7 @@ const AteliersBotaniquesYvelines = () => {
                         </p>
                         <Link 
                           to={`/contact?subject=${encodeURIComponent(`Atelier ${workshop.title} - Yvelines`)}`}
-                          className="inline-flex items-center px-4 py-2 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                          className="inline-flex items-center px-4 py-2 bg-sage hover:bg-sage-dark text-[hsl(var(--cream))] text-sm uppercase tracking-wider font-semibold transition-all duration-300 "
                         >
                           Réserver
                         </Link>
@@ -165,8 +165,8 @@ const AteliersBotaniquesYvelines = () => {
 
             {/* Benefits Section */}
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-sand rounded-lg p-8">
-                <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <div className="bg-sand p-8">
+                <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                   Pourquoi Choisir Nos Ateliers ?
                 </h2>
                 <ul className="space-y-3">
@@ -179,8 +179,8 @@ const AteliersBotaniquesYvelines = () => {
                 </ul>
               </div>
 
-              <div className="bg-sand rounded-lg p-8">
-                <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <div className="bg-sand p-8">
+                <h2 className="text-2xl md:text-3xl mb-6" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                   Accès et Pratique
                 </h2>
                 <div className="space-y-4 text-charcoal/80">
@@ -204,18 +204,18 @@ const AteliersBotaniquesYvelines = () => {
             </div>
 
             {/* Testimonials Section */}
-            <div className="bg-white rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Témoignages de Participants des Yvelines
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-sage/5 p-6 rounded-lg">
+                <div className="bg-sage/5 p-6 ">
                   <p className="text-charcoal/80 italic mb-4">
                     "Atelier kokedama au top à Chatou ! Vanessa est très pédagogue et l'ambiance est super conviviale. Je recommande !"
                   </p>
                   <p className="text-sage-dark font-semibold">Marie, Chatou</p>
                 </div>
-                <div className="bg-sage/5 p-6 rounded-lg">
+                <div className="bg-sage/5 p-6 ">
                   <p className="text-charcoal/80 italic mb-4">
                     "J'ai adoré l'atelier de teinture végétale au Pecq. On apprend vraiment les techniques anciennes avec des matériaux naturels."
                   </p>
@@ -225,8 +225,8 @@ const AteliersBotaniquesYvelines = () => {
             </div>
 
             {/* CTA */}
-            <div className="bg-sage text-off-white rounded-lg p-8 md:p-12 text-center animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+            <div className="bg-sage text-[hsl(var(--cream))] p-8 md:p-12 text-center animate-fade-in">
+              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Prêt·e à découvrir nos ateliers dans les Yvelines ?
               </h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">
@@ -235,13 +235,13 @@ const AteliersBotaniquesYvelines = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/calendar"
-                  className="inline-flex items-center px-6 py-3 bg-off-white hover:bg-sand text-sage font-semibold uppercase tracking-wider transition-all rounded-full"
+                  className="inline-flex items-center px-6 py-3 bg-[hsl(var(--cream))] hover:bg-sand text-sage font-semibold uppercase tracking-wider transition-all "
                 >
                   Voir le calendrier
                 </Link>
                 <Link 
                   to="/contact"
-                  className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-sage text-off-white font-semibold uppercase tracking-wider transition-all rounded-full"
+                  className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-sage text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all "
                 >
                   Nous contacter
                 </Link>

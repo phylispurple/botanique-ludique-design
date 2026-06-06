@@ -45,7 +45,7 @@ const AtelierBotaniqueChatou = () => {
   ];
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO 
         title="Atelier Botanique Chatou | Kokedama, Teinture ✦ Île des Impressionnistes 78"
         description="🌿 Ateliers botaniques à Chatou, l'île des Impressionnistes. Kokedama, teinture végétale, terrarium dès 25€. Créez dans le décor qui inspira Renoir !"
@@ -96,11 +96,11 @@ const AtelierBotaniqueChatou = () => {
 
             {/* Why Chatou Section */}
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Chatou : quand l'art rencontre la botanique
               </h2>
               
-              <div className="bg-sand rounded-lg p-8 md:p-10 mb-8">
+              <div className="bg-sand p-8 md:p-10 mb-8">
                 <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
                   Chatou occupe une place unique dans l'histoire de l'art français. L'<strong>île des Impressionnistes</strong>, 
                   autrefois appelée île de Chatou, fut le lieu de villégiature préféré de Renoir, Monet, Manet et leurs amis. 
@@ -121,13 +121,13 @@ const AtelierBotaniqueChatou = () => {
 
             {/* Workshops Grid */}
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Nos ateliers disponibles à Chatou
               </h2>
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 {workshops.map((workshop, index) => (
-                  <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <Card key={index} className="overflow-hidden hover:shadow-brutal-lg transition-shadow">
                     <div className="aspect-video overflow-hidden">
                       <img 
                         src={workshop.image} 
@@ -137,7 +137,7 @@ const AtelierBotaniqueChatou = () => {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold text-charcoal mb-2" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                      <h3 className="text-xl font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                         {workshop.title}
                       </h3>
                       <p className="text-charcoal/70 mb-4">{workshop.description}</p>
@@ -157,7 +157,7 @@ const AtelierBotaniqueChatou = () => {
               <div className="text-center">
                 <Link 
                   to="/workshops"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-sage hover:bg-sage-dark text-[hsl(var(--cream))] text-sm uppercase tracking-wider font-semibold transition-all duration-300 "
                 >
                   <Leaf className="w-4 h-4" />
                   Voir tous nos ateliers
@@ -167,8 +167,8 @@ const AtelierBotaniqueChatou = () => {
 
             {/* MJC Chatou Partnership */}
             <section className="mb-20 animate-fade-in">
-              <div className="bg-sage/10 rounded-lg p-8 md:p-10">
-                <h2 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <div className="bg-sage/10 p-8 md:p-10 border-brutal shadow-brutal">
+                <h2 className="text-2xl md:text-3xl mb-6 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                   Partenaire de la MJC de Chatou
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed mb-6 text-center max-w-3xl mx-auto">
@@ -177,15 +177,15 @@ const AtelierBotaniqueChatou = () => {
                   et de partager notre passion avec les habitants de Chatou et des communes voisines.
                 </p>
                 <div className="grid md:grid-cols-3 gap-4 text-center">
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="bg-white p-4 shadow-brutal border-brutal shadow-brutal">
                     <span className="text-2xl font-bold text-sage">+50</span>
                     <p className="text-sm text-charcoal/70">Participants à la MJC</p>
                   </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="bg-white p-4 shadow-brutal border-brutal shadow-brutal">
                     <span className="text-2xl font-bold text-sage">12</span>
                     <p className="text-sm text-charcoal/70">Ateliers organisés</p>
                   </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="bg-white p-4 shadow-brutal border-brutal shadow-brutal">
                     <span className="text-2xl font-bold text-sage">5★</span>
                     <p className="text-sm text-charcoal/70">Satisfaction moyenne</p>
                   </div>
@@ -195,14 +195,14 @@ const AtelierBotaniqueChatou = () => {
 
             {/* Impressionist Heritage */}
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 L'héritage impressionniste dans nos ateliers
               </h2>
               
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
                   <Palette className="w-8 h-8 text-sage mb-3" />
-                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Les couleurs de Renoir
                   </h3>
                   <p className="text-charcoal/70">
@@ -210,9 +210,9 @@ const AtelierBotaniqueChatou = () => {
                     les verts profonds des saules, les reflets bleutés de la Seine, les touches de couleur des fleurs sauvages.
                   </p>
                 </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
                   <Leaf className="w-8 h-8 text-sage mb-3" />
-                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     La lumière en bord de Seine
                   </h3>
                   <p className="text-charcoal/70">
@@ -220,9 +220,9 @@ const AtelierBotaniqueChatou = () => {
                     Nos terrariums et kokedamas capturent cette atmosphère apaisante des bords de Seine.
                   </p>
                 </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
                   <Users className="w-8 h-8 text-sage mb-3" />
-                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     L'esprit des guinguettes
                   </h3>
                   <p className="text-charcoal/70">
@@ -230,9 +230,9 @@ const AtelierBotaniqueChatou = () => {
                     Créer ensemble, c'est perpétuer l'esprit des bords de Seine.
                   </p>
                 </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mb-3" />
-                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                  <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Un territoire d'inspiration
                   </h3>
                   <p className="text-charcoal/70">
@@ -245,26 +245,26 @@ const AtelierBotaniqueChatou = () => {
 
             {/* Local Areas Section */}
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Nous intervenons dans tout le secteur de Chatou
               </h2>
               
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white rounded-lg p-6 text-center shadow-sm">
+                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Boucles de Seine</h3>
                   <p className="text-sm text-charcoal/70">
                     Chatou, Croissy-sur-Seine, Le Vésinet, Montesson, Carrières-sur-Seine
                   </p>
                 </div>
-                <div className="bg-white rounded-lg p-6 text-center shadow-sm">
+                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Hauts-de-Seine</h3>
                   <p className="text-sm text-charcoal/70">
                     Rueil-Malmaison, Nanterre, Suresnes, La Garenne-Colombes
                   </p>
                 </div>
-                <div className="bg-white rounded-lg p-6 text-center shadow-sm">
+                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Yvelines Nord</h3>
                   <p className="text-sm text-charcoal/70">
@@ -276,13 +276,13 @@ const AtelierBotaniqueChatou = () => {
 
             {/* For Who Section */}
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 À qui s'adressent nos ateliers à Chatou ?
               </h2>
               
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-sage/10 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-charcoal mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                <div className="bg-sage/10 p-6 border-brutal shadow-brutal">
+                  <h3 className="text-xl font-semibold text-charcoal mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Particuliers & Familles
                   </h3>
                   <ul className="space-y-3">
@@ -304,8 +304,8 @@ const AtelierBotaniqueChatou = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-sage/10 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-charcoal mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400 }}>
+                <div className="bg-sage/10 p-6 border-brutal shadow-brutal">
+                  <h3 className="text-xl font-semibold text-charcoal mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Professionnels & Collectivités
                   </h3>
                   <ul className="space-y-3">
@@ -332,7 +332,7 @@ const AtelierBotaniqueChatou = () => {
 
             {/* Testimonial Section */}
             <section className="mb-20 animate-fade-in">
-              <div className="bg-sand rounded-lg p-8 md:p-10">
+              <div className="bg-sand p-8 md:p-10">
                 <div className="flex justify-center mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className="w-5 h-5 text-amber-500 fill-amber-500" />
@@ -353,34 +353,34 @@ const AtelierBotaniqueChatou = () => {
 
             {/* Why Choose Us */}
             <section className="mb-20 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Pourquoi choisir Botanique Ludique à Chatou ?
               </h2>
               
               <div className="grid md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage/20 flex items-center justify-center mx-auto mb-4">
                     <Leaf className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">Expertise EHESS</h3>
                   <p className="text-sm text-charcoal/70">Fondatrice, animatrice ethnobotaniste formée de l'École des Hautes Études</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage/20 flex items-center justify-center mx-auto mb-4">
                     <Users className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">+400 Participants</h3>
                   <p className="text-sm text-charcoal/70">Une communauté passionnée en Île-de-France</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage/20 flex items-center justify-center mx-auto mb-4">
                     <Palette className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">Esprit artistique</h3>
                   <p className="text-sm text-charcoal/70">Ateliers inspirés par l'héritage impressionniste</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage/20 flex items-center justify-center mx-auto mb-4">
                     <Calendar className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="font-semibold text-charcoal mb-2">Flexibilité</h3>
@@ -391,8 +391,8 @@ const AtelierBotaniqueChatou = () => {
 
             {/* CTA Section */}
             <section className="animate-fade-in">
-              <div className="bg-gradient-to-br from-sage/20 to-sand rounded-2xl p-8 md:p-12 text-center">
-                <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
+              <div className="bg-gradient-to-br from-sage/20 to-sand p-8 md:p-12 text-center">
+                <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                   Envie d'un atelier botanique à Chatou ?
                 </h2>
                 <p className="text-charcoal/80 mb-8 max-w-2xl mx-auto">
@@ -402,14 +402,14 @@ const AtelierBotaniqueChatou = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/contact"
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-sage text-sage hover:bg-sage hover:text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-[3px] border-sage text-sage hover:bg-sage hover:text-[hsl(var(--cream))] text-sm uppercase tracking-wider font-semibold transition-all duration-300 "
                   >
                     <Mail className="w-4 h-4" />
                     Demander un devis
                   </Link>
                   <a 
                     href="tel:0609831606"
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-sage text-sage hover:bg-sage hover:text-off-white text-sm uppercase tracking-wider font-semibold transition-all duration-300 rounded-full"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-[3px] border-sage text-sage hover:bg-sage hover:text-[hsl(var(--cream))] text-sm uppercase tracking-wider font-semibold transition-all duration-300 "
                   >
                     <Phone className="w-4 h-4" />
                     06 09 83 16 06

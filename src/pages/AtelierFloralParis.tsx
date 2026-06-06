@@ -70,7 +70,7 @@ const AtelierFloralParis = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 md:p-12 mb-16 animate-fade-in">
+            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-start gap-4">
                 <Sparkles className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
@@ -111,9 +111,9 @@ const AtelierFloralParis = () => {
                   desc: "L'art floral japonais revisité, une sphère de mousse et de plantes vivantes.",
                 },
               ].map((a, i) => (
-                <div key={i} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div key={i} className="overflow-hidden shadow-brutal hover:shadow-brutal-lg transition-shadow">
                   <img src={a.src} alt={a.title} className="w-full h-48 object-cover" loading="lazy" />
-                  <div className="p-5 bg-white">
+                  <div className="p-5 bg-white border-brutal shadow-brutal">
                     <h3
                       className="text-lg font-semibold mb-1"
                       style={{ fontFamily: "Fraunces, serif", fontWeight: 400, color: "#3D3D2E" }}
@@ -126,7 +126,7 @@ const AtelierFloralParis = () => {
               ))}
             </div>
 
-            <div className="bg-sand rounded-lg p-8 mb-16">
+            <div className="bg-sand p-8 mb-16">
               <h2
                 className="text-2xl mb-6"
                 style={{ fontFamily: "Fraunces, serif", fontWeight: 400, color: "#3D3D2E" }}
@@ -161,7 +161,7 @@ const AtelierFloralParis = () => {
               </h2>
               <div className="space-y-4 max-w-4xl mx-auto">
                 {faqQuestions.map((faq, i) => (
-                  <div key={i} className="bg-white rounded-lg p-6">
+                  <div key={i} className="bg-white p-6 border-brutal shadow-brutal">
                     <h3
                       className="text-lg font-semibold text-charcoal mb-2"
                       style={{ fontFamily: "Fraunces, serif", fontWeight: 400 }}
@@ -174,7 +174,7 @@ const AtelierFloralParis = () => {
               </div>
             </div>
 
-            <div className="bg-sage text-off-white rounded-lg p-8 md:p-12 text-center animate-fade-in">
+            <div className="bg-sage text-[hsl(var(--cream))] p-8 md:p-12 text-center animate-fade-in">
               <h2
                 className="text-2xl md:text-3xl mb-4"
                 style={{ fontFamily: "Fraunces, serif", fontWeight: 400 }}
@@ -187,13 +187,13 @@ const AtelierFloralParis = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full"
+                  className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-charcoal text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all "
                 >
                   Nous écrire
                 </Link>
                 <Link
                   to="/workshops"
-                  className="inline-flex items-center px-6 py-3 border-2 border-off-white hover:bg-off-white hover:text-charcoal text-off-white font-semibold uppercase tracking-wider transition-all rounded-full"
+                  className="inline-flex items-center px-6 py-3 border-[3px] border-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-charcoal text-[hsl(var(--cream))] font-semibold uppercase tracking-wider transition-all "
                 >
                   Voir tous nos ateliers
                 </Link>
