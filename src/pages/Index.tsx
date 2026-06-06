@@ -58,7 +58,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Botanique Ludique — Ateliers de botanique, conférences & balades guidées · Le Pecq (78)"
-        description="Association de médiation culturelle autour du vivant. Ateliers pour scolaires, entreprises et grand public. Conférences avec chercheurs et artistes. Île-de-France."
+        description="Médiation culturelle autour du vivant. Ateliers pour scolaires, entreprises et grand public. Conférences avec chercheurs et artistes. Île-de-France."
         keywords="ateliers botaniques Paris, ateliers nature Yvelines 78, ateliers Hauts-de-Seine 92, ateliers Val-d'Oise 95, kokedama Paris, teinture végétale Yvelines, médiation scientifique, conférence botanique Île-de-France"
         canonical="/"
       />
