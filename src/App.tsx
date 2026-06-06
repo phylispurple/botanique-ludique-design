@@ -39,6 +39,7 @@ import BlogFinancerAnimationCCAS from "./pages/BlogFinancerAnimationCCAS";
 import BlogFeteNatureMairie from "./pages/BlogFeteNatureMairie";
 import BlogJourneesPatrimoineVegetal from "./pages/BlogJourneesPatrimoineVegetal";
 import BlogSemaineDDMairie from "./pages/BlogSemaineDDMairie";
+import BlogBaladeBotaniqueDuBreuil from "./pages/BlogBaladeBotaniqueDuBreuil";
 import MarchesPublics from "./pages/MarchesPublics";
 import ReferencesCollectivites from "./pages/ReferencesCollectivites";
 import LandingSeniorsEHPAD from "./pages/LandingSeniorsEHPAD";
