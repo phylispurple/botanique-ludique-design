@@ -45,16 +45,18 @@ const LandingPhotoStrip = ({
   subtitle = "Aperçu de nos interventions, créations et publics",
 }: LandingPhotoStripProps) => {
   return (
-    <section className="py-16 md:py-20 border-t-[3px] border-b-[3px] border-[hsl(var(--black))] bg-[hsl(var(--cream))]">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-16 mb-10 md:mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+    <section className="py-12 md:py-16 border-b-[3px] border-[hsl(var(--black))] bg-[hsl(var(--yellow))]/40 relative overflow-hidden">
+      {/* Accent stripe top */}
+      <div className="absolute top-0 inset-x-0 h-[6px] bg-[hsl(var(--terracotta))]" />
+      <div className="max-w-[1600px] mx-auto px-6 md:px-16 mb-8 md:mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>
-          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-3">
-            Galerie / Sur le terrain
+          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--terracotta))] block mb-3">
+            ★ En images · Sur le terrain
           </span>
-          <h2 className="font-display text-3xl md:text-4xl uppercase tracking-[-1px] text-[hsl(var(--black))]">
+          <h2 className="font-display text-3xl md:text-4xl uppercase tracking-[-1px] text-[hsl(var(--black))] leading-none">
             {title}
           </h2>
-          <p className="font-body text-sm md:text-base text-[hsl(var(--black))]/70 mt-2 max-w-xl">
+          <p className="font-body text-sm md:text-base text-[hsl(var(--black))]/75 mt-2 max-w-xl">
             {subtitle}
           </p>
         </div>
