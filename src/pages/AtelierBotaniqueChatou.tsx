@@ -70,7 +70,6 @@ const AtelierBotaniqueChatou = () => {
       />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -94,6 +93,7 @@ const AtelierBotaniqueChatou = () => {
                 accessible depuis Le Vésinet, Croissy-sur-Seine, Rueil-Malmaison et tout le secteur.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             {/* Why Chatou Section */}
             <section className="mb-20 animate-fade-in">

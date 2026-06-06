@@ -39,7 +39,6 @@ const BaladeUrbaine = () => {
       />
       <SchemaOrg type="FAQPage" data={{ questions: faqs.map(f => ({ question: f.q, answer: f.a })) }} />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-24">
         {/* Hero - layout grille typographique différent */}
@@ -65,6 +64,7 @@ const BaladeUrbaine = () => {
             Format pensé pour les mairies, services culturels municipaux et collectivités qui souhaitent inscrire la culture scientifique dans l'espace public.
           </p>
         </section>
+      <LandingPhotoStrip />
 
         {/* Référence Mairie 14 - bandeau horizontal sobre */}
         <section className="bg-[hsl(var(--black))] text-[hsl(var(--cream))] py-10 px-6 md:px-16 lg:px-[120px]">

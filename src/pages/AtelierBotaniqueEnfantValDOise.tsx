@@ -32,7 +32,6 @@ const AtelierBotaniqueEnfantValDOise = () => {
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -48,6 +47,7 @@ const AtelierBotaniqueEnfantValDOise = () => {
                 Nos ateliers éveillent la curiosité scientifique à travers des <strong>activités créatives et sensorielles</strong>.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               {[

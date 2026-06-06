@@ -74,7 +74,6 @@ const AteliersIDF = () => {
         canonical="/ateliers-idf"
       />
       <Navigation />
-      <LandingPhotoStrip />
 
       {/* Hero Section */}
       <section className="relative py-24 px-4 bg-gradient-to-br from-sage/10 to-sand/30 overflow-hidden">
@@ -95,6 +94,7 @@ const AteliersIDF = () => {
               partout en Île-de-France
             </p>
           </div>
+      <LandingPhotoStrip />
 
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <div className="bg-[hsl(var(--yellow))]/15/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">

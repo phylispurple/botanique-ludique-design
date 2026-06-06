@@ -25,7 +25,6 @@ const AnimationNatureEHPAD = () => {
       />
 
       <Navigation />
-      <LandingPhotoStrip />
 
       {/* Hero */}
       <section className="min-h-[600px] flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-rose-50 to-background py-20">
@@ -56,6 +55,7 @@ const AnimationNatureEHPAD = () => {
           </AnimatedSection>
         </div>
       </section>
+      <LandingPhotoStrip />
 
       {/* Why Nature for Seniors */}
       <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">

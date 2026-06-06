@@ -105,7 +105,6 @@ const LandingTeamBuilding = () => {
         }}
       />
       <Navigation />
-      <LandingPhotoStrip />
 
       {/* HERO */}
       <section className="pt-32 pb-20 px-4 bg-green relative overflow-hidden">
@@ -135,6 +134,7 @@ const LandingTeamBuilding = () => {
           </div>
         </div>
       </section>
+      <LandingPhotoStrip />
 
       {/* CARROUSEL PHOTOS */}
       <section className="py-12 bg-foreground border-y-[3px] border-foreground overflow-hidden">

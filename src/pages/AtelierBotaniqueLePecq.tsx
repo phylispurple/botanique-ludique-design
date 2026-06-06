@@ -70,7 +70,6 @@ const AtelierBotaniqueLePecq = () => {
       />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -94,6 +93,7 @@ const AtelierBotaniqueLePecq = () => {
                 Saint-Germain-en-Laye, Le Vésinet, Chatou et toutes les communes riveraines.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             {/* Why Le Pecq Section */}
             <section className="mb-20 animate-fade-in">

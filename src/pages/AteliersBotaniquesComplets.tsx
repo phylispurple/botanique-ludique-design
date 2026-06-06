@@ -17,7 +17,6 @@ const AteliersBotaniquesComplets = () => {
       />
 
       <Navigation />
-      <LandingPhotoStrip />
 
       {/* Hero */}
       <section className="min-h-[500px] flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-sage/30 to-background py-20">
@@ -35,6 +34,7 @@ const AteliersBotaniquesComplets = () => {
           </AnimatedSection>
         </div>
       </section>
+      <LandingPhotoStrip />
 
       {/* Filter Section */}
       <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">

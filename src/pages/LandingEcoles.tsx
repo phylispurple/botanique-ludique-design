@@ -18,7 +18,6 @@ const LandingEcoles = () => {
     <div className="min-h-screen bg-background">
       <SEO title="Animation Scolaire Nature - Ateliers Botaniques Écoles" description="Interventions pédagogiques nature dans les écoles maternelles et primaires en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques." keywords="intervention scolaire nature, animation école botanique, atelier pédagogique plantes, intervention scolaire val d'oise" canonical="/ecoles-scolaire" />
       <Navigation />
-      <LandingPhotoStrip />
       
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">
         <div className="container mx-auto max-w-6xl text-center space-y-6">
@@ -28,6 +27,7 @@ const LandingEcoles = () => {
           <Button asChild size="lg" className="bg-sage hover:bg-sage-dark text-white"><Link to="/contact">Demander un devis<ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
         </div>
       </section>
+      <LandingPhotoStrip />
 
       <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">
         <div className="container mx-auto max-w-6xl">

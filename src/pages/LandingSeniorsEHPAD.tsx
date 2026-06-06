@@ -26,7 +26,6 @@ const LandingSeniorsEHPAD = () => {
     <div className="min-h-screen bg-background">
       <SEO title="Animation EHPAD & Seniors - Ateliers Botaniques Adaptés" description="Animations nature pour EHPAD et résidences seniors en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques adaptés." keywords="animation ehpad, atelier seniors nature, activité maison retraite, hortithérapie, animation ehpad val d'oise" canonical="/seniors-ehpad" />
       <Navigation />
-      <LandingPhotoStrip />
       
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">
         <div className="container mx-auto max-w-6xl text-center space-y-6">
@@ -38,6 +37,7 @@ const LandingSeniorsEHPAD = () => {
           </div>
         </div>
       </section>
+      <LandingPhotoStrip />
 
       <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">
         <div className="container mx-auto max-w-6xl">

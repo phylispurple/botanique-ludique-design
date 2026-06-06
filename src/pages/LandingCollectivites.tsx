@@ -52,7 +52,6 @@ const LandingCollectivites = () => {
         canonical="/animation-collectivites-mairies"
       />
       <Navigation />
-      <LandingPhotoStrip />
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">
@@ -80,6 +79,7 @@ const LandingCollectivites = () => {
           </div>
         </div>
       </section>
+      <LandingPhotoStrip />
 
       {/* Pourquoi */}
       <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">

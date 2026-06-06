@@ -70,7 +70,6 @@ const AtelierBotaniqueSaintGermain = () => {
       />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -94,6 +93,7 @@ const AtelierBotaniqueSaintGermain = () => {
                 Le Pecq, Le Vésinet, Chatou, Maisons-Laffitte, Poissy et au-delà.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             {/* Why Saint-Germain Section */}
             <section className="mb-20 animate-fade-in">

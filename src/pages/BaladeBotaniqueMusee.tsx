@@ -42,7 +42,6 @@ const BaladeBotaniqueMusee = () => {
       />
       <SchemaOrg type="FAQPage" data={{ questions: faqs.map(f => ({ question: f.q, answer: f.a })) }} />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-24">
         <section className="border-b-[3px] border-[hsl(var(--black))] py-20 px-6 md:px-16 lg:px-[120px]">
@@ -62,6 +61,7 @@ const BaladeBotaniqueMusee = () => {
             </p>
           </AnimatedSection>
         </section>
+      <LandingPhotoStrip />
 
         {/* Bandeau référence */}
         <section className="bg-[hsl(var(--olive))] py-10 px-6 md:px-16 lg:px-[120px] border-b-[3px] border-[hsl(var(--black))]">

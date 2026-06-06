@@ -49,7 +49,6 @@ const BaladesBotaniques = () => {
         areaServed: ["Paris", "Yvelines", "Hauts-de-Seine", "Val-d'Oise", "Île-de-France"],
       }} />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-24">
         {/* Hero brutalist sobre */}
@@ -69,6 +68,7 @@ const BaladesBotaniques = () => {
             </p>
           </AnimatedSection>
         </section>
+      <LandingPhotoStrip />
 
         {/* Trois formats */}
         <section className="px-6 md:px-16 lg:px-[120px] py-20">

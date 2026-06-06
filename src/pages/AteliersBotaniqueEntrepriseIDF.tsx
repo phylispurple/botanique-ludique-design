@@ -91,7 +91,6 @@ const AteliersBotaniqueEntrepriseIDF = () => {
       />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -113,6 +112,7 @@ const AteliersBotaniqueEntrepriseIDF = () => {
                 locaux ou le lieu de votre choix.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             {/* Zone d'intervention */}
             <div className="bg-[hsl(var(--yellow))]/15 p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
