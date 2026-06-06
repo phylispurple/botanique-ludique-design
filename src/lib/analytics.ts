@@ -138,3 +138,26 @@ export function trackBlogCtaClick(articleSlug: string, target: string, label?: s
     ...(label ? { label } : {}),
   });
 }
+
+/**
+ * Build a URL with UTM parameters for email / campaign links.
+ *
+ * Usage in your prospecting emails:
+ *   https://botaniqueludique.com/pro?${buildUtmUrl("email", "prospection_juin_2026")}
+ *
+ * GA4 will then bucket this traffic as "Email" instead of "Direct".
+ */
+export function buildUtmUrl(
+  medium: "email" | "social" | "referral" | "cpc" | "banner",
+  campaign: string,
+  source?: string,
+  extra?: Record<string, string>
+): string {
+  const params = new URLSearchParams({
+    utm_medium: medium,
+    utm_campaign: campaign,
+    ...(source ? { utm_source: source } : medium === "email" ? { utm_source: "email" } : {}),
+    ...extra,
+  });
+  return params.toString();
+}
