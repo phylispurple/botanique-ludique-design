@@ -2,6 +2,8 @@
 // (anti duplicate / thin content) et l'E-E-A-T : chaque page reçoit deux
 // paragraphes contextuels rédigés à la main, ancrés sur la requête cible.
 
+import { SEASONAL_LANDING_CONTEXT } from "./seasonalLandings";
+
 export interface LandingContext {
   /** Titre de la section éditoriale. */
   heading: string;
@@ -9,7 +11,7 @@ export interface LandingContext {
   paragraphs: string[];
 }
 
-export const PRO_LANDING_CONTEXT: Record<string, LandingContext> = {
+const _BASE_PRO_LANDING_CONTEXT: Record<string, LandingContext> = {
   "atelier-qvct-paris": {
     heading: "La QVCT à Paris, au-delà du fauteuil massant",
     paragraphs: [
