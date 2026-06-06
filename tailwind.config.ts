@@ -46,6 +46,15 @@ export default {
           light: 'hsl(var(--blue-light))',
         },
         purple: 'hsl(var(--purple))',
+        sage: {
+          DEFAULT: 'hsl(var(--sage))',
+          foreground: 'hsl(var(--sage-foreground))',
+        },
+        terracotta: {
+          DEFAULT: 'hsl(var(--terracotta))',
+          foreground: 'hsl(var(--terracotta-foreground))',
+        },
+        sand: 'hsl(var(--sand))',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
