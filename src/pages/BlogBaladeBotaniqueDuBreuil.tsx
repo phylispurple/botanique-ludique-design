@@ -34,6 +34,19 @@ const BlogBaladeBotaniqueDuBreuil = () => {
           { name: "Balade botanique École Du Breuil", url: "https://botaniqueludique.com/blog/balade-botanique-ecole-du-breuil" }
         ]}}
       />
+      <SchemaOrg
+        type="FAQPage"
+        data={{
+          questions: [
+            { question: "Comment organiser une balade botanique dans une école ?", answer: "Pour organiser une balade botanique dans une école, il suffit de contacter Botanique Ludique par email ou via le formulaire de contact. Nous adaptons le contenu ethnobotanique au niveau scolaire, que ce soit pour le primaire, le collège ou le lycée. La balade peut se dérouler dans le jardin de l'école, un parc proche ou un site patrimonial comme l'École Du Breuil." },
+            { question: "Qu'est-ce qu'une balade ethnobotanique ?", answer: "Une balade ethnobotanique est une promenade guidée qui combine botanique et anthropologie. Elle raconte l'histoire des plantes à travers les échanges humains, les circulations mondiales, les rapports de pouvoir et les représentations culturelles. C'est une médiation scientifique et culturelle du vivant, adaptée aux écoles, aux collectivités et au grand public." },
+            { question: "Quels publics peuvent participer à une balade botanique ?", answer: "Les balades botaniques de Botanique Ludique s'adressent aux particuliers, aux écoles primaires et secondaires, aux collèges et lycées, aux médiathèques, aux musées, aux jardins remarquables, aux mairies, aux EHPAD et aux entreprises en Île-de-France. Chaque animation est adaptée au public et au lieu." },
+            { question: "Quelles sont les thématiques abordées lors d'une balade botanique ?", answer: "Les thématiques varient selon le lieu et le public : histoire des jardins (simples, jardins à la française, jardins anglais, jardins japonais), plantes voyageuses et circulation mondiale, jardins coloniaux et expositions universelles, théorie des signatures, révolution industrielle et collections botaniques. Chaque balade est une lecture historique et anthropologique du végétal." },
+            { question: "La balade botanique est-elle adaptée aux enfants ?", answer: "Oui, les balades botaniques sont conçues pour être accessibles aux enfants dès le primaire. Nous utilisons un langage adapté, des anecdotes concrètes et des observations sensorielles pour rendre l'histoire des plantes vivante et compréhensible. Les balades sont aussi adaptées aux cycles 3, 4 et au lycée avec un contenu plus approfondi." },
+            { question: "Où se déroulent les balades ethnobotaniques en Île-de-France ?", answer: "Les balades peuvent se dérouler dans tout espace vert ou patrimonial d'Île-de-France : parcs, jardins botaniques, forêts, jardins de simples, jardins remarquables, musées avec jardin, ou même dans l'enceinte de l'établissement scolaire. Botanique Ludique intervient notamment à Paris, dans les Yvelines, les Hauts-de-Seine et le Val-d'Oise." },
+          ]
+        }}
+      />
       <Navigation />
 
       <article className="pt-32 pb-20 px-6 md:px-16 lg:px-[120px]">
