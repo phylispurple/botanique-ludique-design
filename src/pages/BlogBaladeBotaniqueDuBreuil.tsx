@@ -12,8 +12,8 @@ const BlogBaladeBotaniqueDuBreuil = () => {
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO
-        title="Balade botanique à l'École Du Breuil, plantes voyageuses et histoires oubliées"
-        description="Retour sur une balade ethnobotanique animée pour Du Breuil en fête 2026 dans le Bois de Vincennes. Histoire des jardins, plantes voyageuses et médiation pour écoles et collectivités."
+        title="Balade botanique École Du Breuil : plantes voyageuses"
+        description="Retour sur la balade ethnobotanique du 31 mai 2026 à l'École Du Breuil. Plantes voyageuses, histoire des jardins et médiation pour écoles."
         keywords="balade botanique École Du Breuil, balade ethnobotanique Paris, animation botanique collectivité, balade botanique école, médiation jardin patrimonial, animation Bois de Vincennes"
         canonical="/blog/balade-botanique-ecole-du-breuil"
       />
