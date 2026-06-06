@@ -32,6 +32,10 @@ const ProLandingPage = () => {
     city,
     ctaTitle,
     ctaText,
+    heroImage,
+    gallery,
+    partners,
+    relatedWorkshops,
   } = config;
 
   const h1Parts = h1Highlight ? h1.split(h1Highlight) : null;
