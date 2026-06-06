@@ -25,6 +25,7 @@ const AnimationNatureEHPAD = () => {
       />
 
       <Navigation />
+      <LandingPhotoStrip />
 
       {/* Hero */}
       <section className="min-h-[600px] flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-rose-50 to-background py-20">
@@ -57,7 +58,7 @@ const AnimationNatureEHPAD = () => {
       </section>
 
       {/* Why Nature for Seniors */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -140,7 +141,7 @@ const AnimationNatureEHPAD = () => {
                 desc: "L'engagement social et la nature combattent l'isolement et la dépression",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
+              <div key={i} className="p-6 bg-[hsl(var(--yellow))]/15 shadow-brutal border-brutal shadow-brutal">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-rose-600 flex-shrink-0 mt-1" />
                   <div>
@@ -155,7 +156,7 @@ const AnimationNatureEHPAD = () => {
       </section>
 
       {/* Our Ateliers */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -253,7 +254,7 @@ const AnimationNatureEHPAD = () => {
       </section>
 
       {/* Practical Info */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -323,7 +324,7 @@ const AnimationNatureEHPAD = () => {
                 author: "Responsable animations, EHPAD Yvelines",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white border-l-4 border-rose-600 shadow-brutal border-brutal shadow-brutal">
+              <div key={i} className="p-6 bg-[hsl(var(--yellow))]/15 border-l-4 border-rose-600 shadow-brutal border-brutal shadow-brutal">
                 <p className="text-charcoal/80 italic mb-4">"{item.quote}"</p>
                 <p className="text-sm font-medium text-charcoal">{item.author}</p>
               </div>
@@ -333,7 +334,7 @@ const AnimationNatureEHPAD = () => {
       </section>
 
       {/* Pricing */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -375,15 +376,13 @@ const AnimationNatureEHPAD = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-white text-rose-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
+              className="inline-block px-10 py-4 bg-[hsl(var(--yellow))]/15 text-rose-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
             >
               Demander une animation
             </Link>
           </AnimatedSection>
         </div>
       </section>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

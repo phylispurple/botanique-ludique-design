@@ -28,6 +28,7 @@ const AtelierTeintureVegetale = () => {
       />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -115,22 +116,22 @@ const AtelierTeintureVegetale = () => {
                 Les couleurs que vous découvrirez
               </h2>
               <div className="grid md:grid-cols-4 gap-6">
-                <div className="text-center bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                <div className="text-center bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal border-brutal shadow-brutal">
                   <div className="w-16 h-16 mx-auto mb-3" style={{ backgroundColor: '#2E4057' }} />
                   <h3 className="font-semibold text-charcoal mb-1">Indigo</h3>
                   <p className="text-xs text-charcoal/60">Chou rouge, indigotier</p>
                 </div>
-                <div className="text-center bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                <div className="text-center bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal border-brutal shadow-brutal">
                   <div className="w-16 h-16 mx-auto mb-3" style={{ backgroundColor: '#C4944A' }} />
                   <h3 className="font-semibold text-charcoal mb-1">Or & Jaune</h3>
                   <p className="text-xs text-charcoal/60">Pelures d'oignon, curcuma</p>
                 </div>
-                <div className="text-center bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                <div className="text-center bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal border-brutal shadow-brutal">
                   <div className="w-16 h-16 mx-auto mb-3" style={{ backgroundColor: '#D4A5A5' }} />
                   <h3 className="font-semibold text-charcoal mb-1">Rose & Mauve</h3>
                   <p className="text-xs text-charcoal/60">Noyau d'avocat, betterave</p>
                 </div>
-                <div className="text-center bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                <div className="text-center bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal border-brutal shadow-brutal">
                   <div className="w-16 h-16 mx-auto mb-3" style={{ backgroundColor: '#6B8E5A' }} />
                   <h3 className="font-semibold text-charcoal mb-1">Vert & Kaki</h3>
                   <p className="text-xs text-charcoal/60">Feuilles de noyer, épinards</p>
@@ -215,7 +216,6 @@ const AtelierTeintureVegetale = () => {
           </div>
         </div>
       </main>
-      <LandingPhotoStrip />
       <Footer />
     </div>
   );

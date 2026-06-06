@@ -18,6 +18,7 @@ const LandingEcoles = () => {
     <div className="min-h-screen bg-background">
       <SEO title="Animation Scolaire Nature - Ateliers Botaniques Écoles" description="Interventions pédagogiques nature dans les écoles maternelles et primaires en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques." keywords="intervention scolaire nature, animation école botanique, atelier pédagogique plantes, intervention scolaire val d'oise" canonical="/ecoles-scolaire" />
       <Navigation />
+      <LandingPhotoStrip />
       
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">
         <div className="container mx-auto max-w-6xl text-center space-y-6">
@@ -28,7 +29,7 @@ const LandingEcoles = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-display text-charcoal mb-8 text-center">Ateliers par niveau</h2>
           <div className="space-y-6">
@@ -56,7 +57,7 @@ const LandingEcoles = () => {
           <h2 className="text-3xl font-display text-charcoal mb-6">Zone d'intervention</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {["Paris", "Hauts-de-Seine (92)", "Yvelines (78)", "Val-d'Oise (95)", "Versailles", "Saint-Germain-en-Laye", "Cergy", "Pontoise"].map((city) => (
-              <span key={city} className="inline-flex items-center gap-1 bg-white px-4 py-2 rounded-full text-sm text-charcoal"><MapPin className="w-3 h-3 text-sage" />{city}</span>
+              <span key={city} className="inline-flex items-center gap-1 bg-[hsl(var(--yellow))]/15 px-4 py-2 rounded-full text-sm text-charcoal"><MapPin className="w-3 h-3 text-sage" />{city}</span>
             ))}
           </div>
         </div>
@@ -69,7 +70,6 @@ const LandingEcoles = () => {
         </div>
       </section>
 
-      <LandingPhotoStrip />
       <Footer />
     </div>
   );

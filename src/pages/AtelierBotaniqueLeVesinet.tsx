@@ -70,6 +70,7 @@ const AtelierBotaniqueLeVesinet = () => {
       />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -172,7 +173,7 @@ const AtelierBotaniqueLeVesinet = () => {
               </h2>
               
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal border-brutal shadow-brutal">
                   <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Les 5 lacs artificiels
                   </h3>
@@ -181,7 +182,7 @@ const AtelierBotaniqueLeVesinet = () => {
                     luxuriante inspirent nos créations aquatiques et nos terrariums humides.
                   </p>
                 </div>
-                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal border-brutal shadow-brutal">
                   <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Les arbres remarquables
                   </h3>
@@ -190,7 +191,7 @@ const AtelierBotaniqueLeVesinet = () => {
                     Cette collection botanique exceptionnelle nourrit notre approche pédagogique.
                   </p>
                 </div>
-                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal border-brutal shadow-brutal">
                   <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Les jardins privés
                   </h3>
@@ -199,7 +200,7 @@ const AtelierBotaniqueLeVesinet = () => {
                     camélias et roses anciennes, sources d'inspiration pour nos ateliers floraux.
                   </p>
                 </div>
-                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal border-brutal shadow-brutal">
                   <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     La coulée verte
                   </h3>
@@ -218,21 +219,21 @@ const AtelierBotaniqueLeVesinet = () => {
               </h2>
               
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Villes-parcs</h3>
                   <p className="text-sm text-charcoal/70">
                     Le Vésinet, Maisons-Laffitte, Saint-Germain-en-Laye
                   </p>
                 </div>
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Boucles de Seine</h3>
                   <p className="text-sm text-charcoal/70">
                     Chatou, Croissy-sur-Seine, Le Pecq, Le Port-Marly
                   </p>
                 </div>
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Rive droite</h3>
                   <p className="text-sm text-charcoal/70">
@@ -389,8 +390,6 @@ const AtelierBotaniqueLeVesinet = () => {
           </div>
         </div>
       </main>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

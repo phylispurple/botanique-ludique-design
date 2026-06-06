@@ -71,6 +71,7 @@ const AnimatriceNatureIDF = () => {
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -93,7 +94,7 @@ const AnimatriceNatureIDF = () => {
             </div>
 
             {/* Approche ethnobotanique */}
-            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15 p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-start gap-4 mb-6">
                 <BookOpen className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
@@ -175,7 +176,7 @@ const AnimatriceNatureIDF = () => {
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {departments.map((dept, i) => (
-                  <Link to={dept.link} key={i} className="bg-white p-5 hover:shadow-brutal-lg transition-all group border-brutal shadow-brutal">
+                  <Link to={dept.link} key={i} className="bg-[hsl(var(--yellow))]/15 p-5 hover:shadow-brutal-lg transition-all group border-brutal shadow-brutal">
                     <h3 className="text-lg font-semibold text-sage-dark mb-3 group-hover:text-sage">{dept.name}</h3>
                     <ul className="space-y-1">
                       {dept.cities.map((city, j) => (
@@ -194,7 +195,7 @@ const AnimatriceNatureIDF = () => {
               </h2>
               <div className="space-y-4 max-w-4xl mx-auto">
                 {faqQuestions.map((faq, i) => (
-                  <div key={i} className="bg-white p-6 animate-fade-in border-brutal shadow-brutal" style={{ animationDelay: `${i * 50}ms` }}>
+                  <div key={i} className="bg-[hsl(var(--yellow))]/15 p-6 animate-fade-in border-brutal shadow-brutal" style={{ animationDelay: `${i * 50}ms` }}>
                     <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                       {faq.question}
                     </h3>
@@ -224,8 +225,6 @@ const AnimatriceNatureIDF = () => {
           </div>
         </div>
       </main>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

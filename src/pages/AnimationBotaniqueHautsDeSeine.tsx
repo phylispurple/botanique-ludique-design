@@ -48,6 +48,7 @@ const AnimationBotaniqueHautsDeSeine = () => {
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -66,7 +67,7 @@ const AnimationBotaniqueHautsDeSeine = () => {
               </p>
             </div>
 
-            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15 p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-start gap-4">
                 <BookOpen className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
@@ -115,7 +116,7 @@ const AnimationBotaniqueHautsDeSeine = () => {
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {cities.map((city, i) => (
-                  <div key={i} className="bg-white p-4 border-brutal shadow-brutal">
+                  <div key={i} className="bg-[hsl(var(--yellow))]/15 p-4 border-brutal shadow-brutal">
                     <p className="text-sm text-charcoal/70">📍 {city.name}</p>
                   </div>
                 ))}
@@ -130,7 +131,7 @@ const AnimationBotaniqueHautsDeSeine = () => {
               <h2 className="text-3xl md:text-4xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Questions fréquentes</h2>
               <div className="space-y-4 max-w-4xl mx-auto">
                 {faqQuestions.map((faq, i) => (
-                  <div key={i} className="bg-white p-6 animate-fade-in border-brutal shadow-brutal" style={{ animationDelay: `${i * 50}ms` }}>
+                  <div key={i} className="bg-[hsl(var(--yellow))]/15 p-6 animate-fade-in border-brutal shadow-brutal" style={{ animationDelay: `${i * 50}ms` }}>
                     <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{faq.question}</h3>
                     <p className="text-charcoal/70 leading-relaxed">{faq.answer}</p>
                   </div>
@@ -151,7 +152,6 @@ const AnimationBotaniqueHautsDeSeine = () => {
           </div>
         </div>
       </main>
-      <LandingPhotoStrip />
       <Footer />
     </div>
   );

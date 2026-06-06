@@ -51,6 +51,7 @@ const AtelierEthnobotaniqueEntreprise = () => {
       />
       <SchemaOrg type="FAQPage" data={{ questions: faqs.map((f) => ({ question: f.q, answer: f.a })) }} />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-24">
         <section className="border-b-[3px] border-[hsl(var(--black))] py-16 px-6 md:px-16 lg:px-[120px]">
@@ -181,8 +182,6 @@ const AtelierEthnobotaniqueEntreprise = () => {
           </p>
         </section>
       </main>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

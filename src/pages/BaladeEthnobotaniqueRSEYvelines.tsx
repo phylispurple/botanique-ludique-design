@@ -66,6 +66,7 @@ const BaladeEthnobotaniqueRSEYvelines = () => (
     <SchemaOrg type="FAQPage" data={{ questions: faqs.map(f => ({ question: f.q, answer: f.a })) }} />
     <SchemaOrg type="BreadcrumbList" data={{ items: [{ name: "Accueil", url: "https://botaniqueludique.com/" }, { name: "Pro", url: "https://botaniqueludique.com/pro" }, { name: "Balade Ethnobotanique RSE Yvelines", url: "https://botaniqueludique.com/balade-ethnobotanique-rse-yvelines" }] }} />
     <Navigation />
+      <LandingPhotoStrip />
 
     <section className="pt-36 pb-20 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
@@ -217,8 +218,6 @@ const BaladeEthnobotaniqueRSEYvelines = () => (
         </div>
       </div>
     </section>
-
-    <LandingPhotoStrip />
 
     <Footer />
     <BackToTop />

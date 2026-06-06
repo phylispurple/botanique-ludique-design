@@ -105,6 +105,7 @@ const LandingTeamBuilding = () => {
         }}
       />
       <Navigation />
+      <LandingPhotoStrip />
 
       {/* HERO */}
       <section className="pt-32 pb-20 px-4 bg-green relative overflow-hidden">
@@ -383,7 +384,6 @@ const LandingTeamBuilding = () => {
         </div>
       </section>
 
-      <LandingPhotoStrip />
       <Footer />
     </div>
   );

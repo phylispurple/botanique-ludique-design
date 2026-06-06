@@ -39,6 +39,7 @@ const BaladeUrbaine = () => {
       />
       <SchemaOrg type="FAQPage" data={{ questions: faqs.map(f => ({ question: f.q, answer: f.a })) }} />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-24">
         {/* Hero - layout grille typographique différent */}
@@ -147,8 +148,6 @@ const BaladeUrbaine = () => {
           </p>
         </section>
       </main>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

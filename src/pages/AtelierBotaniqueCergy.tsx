@@ -70,6 +70,7 @@ const AtelierBotaniqueCergy = () => {
       />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -176,21 +177,21 @@ const AtelierBotaniqueCergy = () => {
               </h2>
               
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Agglomération de Cergy-Pontoise</h3>
                   <p className="text-sm text-charcoal/70">
                     Cergy, Pontoise, Osny, Éragny, Saint-Ouen-l'Aumône, Jouy-le-Moutier
                   </p>
                 </div>
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Vallée de l'Oise</h3>
                   <p className="text-sm text-charcoal/70">
                     Conflans-Sainte-Honorine, Herblay, Pierrelaye, Bessancourt, Taverny
                   </p>
                 </div>
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Vexin & environs</h3>
                   <p className="text-sm text-charcoal/70">
@@ -347,8 +348,6 @@ const AtelierBotaniqueCergy = () => {
           </div>
         </div>
       </main>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

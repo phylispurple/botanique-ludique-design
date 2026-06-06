@@ -25,6 +25,7 @@ const AtelierKokedamaTeamBuilding = () => {
       />
 
       <Navigation />
+      <LandingPhotoStrip />
 
       {/* Hero */}
       <section className="min-h-[600px] flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-teal-50 to-background py-20">
@@ -57,7 +58,7 @@ const AtelierKokedamaTeamBuilding = () => {
       </section>
 
       {/* What is Kokedama */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -130,7 +131,7 @@ const AtelierKokedamaTeamBuilding = () => {
                 desc: "Créer ensemble encourage les conversations authentiques entre collègues",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white shadow-brutal hover:shadow-brutal-lg transition-all border-brutal shadow-brutal">
+              <div key={i} className="p-6 bg-[hsl(var(--yellow))]/15 shadow-brutal hover:shadow-brutal-lg transition-all border-brutal shadow-brutal">
                 <item.icon className="w-8 h-8 text-teal-600 mb-4" />
                 <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-sm text-charcoal/70">{item.desc}</p>
@@ -141,7 +142,7 @@ const AtelierKokedamaTeamBuilding = () => {
       </section>
 
       {/* The Experience */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -187,7 +188,7 @@ const AtelierKokedamaTeamBuilding = () => {
               { label: "Matériel", value: "Fourni" },
               { label: "Résultat", value: "À emporter" },
             ].map((item, i) => (
-              <div key={i} className="text-center p-6 bg-white shadow-brutal border-brutal shadow-brutal">
+              <div key={i} className="text-center p-6 bg-[hsl(var(--yellow))]/15 shadow-brutal border-brutal shadow-brutal">
                 <p className="text-teal-600 font-semibold text-sm mb-2">{item.label}</p>
                 <p className="text-charcoal font-semibold">{item.value}</p>
               </div>
@@ -197,7 +198,7 @@ const AtelierKokedamaTeamBuilding = () => {
       </section>
 
       {/* Variations */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -254,7 +255,7 @@ const AtelierKokedamaTeamBuilding = () => {
               { participants: "20-50", price: "40€/pers", duration: "2h" },
               { participants: "50-100", price: "32€/pers", duration: "2h" },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white border-[3px] border-teal-200 text-center hover:border-teal-600 transition-colors border-brutal shadow-brutal">
+              <div key={i} className="p-6 bg-[hsl(var(--yellow))]/15 border-[3px] border-teal-200 text-center hover:border-teal-600 transition-colors border-brutal shadow-brutal">
                 <p className="text-sm text-muted-foreground mb-2">{item.participants} personnes</p>
                 <p className="text-3xl font-bold text-teal-600 mb-2">{item.price}</p>
                 <p className="text-sm text-charcoal/70">Atelier de {item.duration}</p>
@@ -262,7 +263,7 @@ const AtelierKokedamaTeamBuilding = () => {
             ))}
           </AnimatedSection>
 
-          <AnimatedSection delay={200} className="p-6 bg-white border-[3px] border-teal-200 text-center border-brutal shadow-brutal">
+          <AnimatedSection delay={200} className="p-6 bg-[hsl(var(--yellow))]/15 border-[3px] border-teal-200 text-center border-brutal shadow-brutal">
             <p className="text-charcoal/70 mb-4">Tarifs dégressifs pour groupes importants et offres combinées disponibles.</p>
             <Link
               to="/contact"
@@ -286,15 +287,13 @@ const AtelierKokedamaTeamBuilding = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-white text-teal-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
+              className="inline-block px-10 py-4 bg-[hsl(var(--yellow))]/15 text-teal-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
             >
               Demander un devis
             </Link>
           </AnimatedSection>
         </div>
       </section>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

@@ -31,6 +31,7 @@ const AnimationSemaineQVCT = () => {
       />
 
       <Navigation />
+      <LandingPhotoStrip />
 
       {/* Hero */}
       <section className="min-h-[600px] flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-blue-50 to-background py-20">
@@ -66,7 +67,7 @@ const AnimationSemaineQVCT = () => {
       </section>
 
       {/* What is QVCT */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -141,7 +142,7 @@ const AnimationSemaineQVCT = () => {
                 desc: "Démontre votre engagement pour l'environnement",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white shadow-brutal hover:shadow-brutal-lg transition-all border-brutal shadow-brutal">
+              <div key={i} className="p-6 bg-[hsl(var(--yellow))]/15 shadow-brutal hover:shadow-brutal-lg transition-all border-brutal shadow-brutal">
                 <item.icon className="w-8 h-8 text-blue-600 mb-4" />
                 <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-sm text-charcoal/70">{item.desc}</p>
@@ -152,7 +153,7 @@ const AnimationSemaineQVCT = () => {
       </section>
 
       {/* Ateliers */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -241,7 +242,7 @@ const AnimationSemaineQVCT = () => {
       </section>
 
       {/* Tarifs */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -259,7 +260,7 @@ const AnimationSemaineQVCT = () => {
             <p className="text-charcoal/80 mb-6">
               <strong>Exemple :</strong> Atelier kokedama pour 30 personnes = 35€/pers
             </p>
-            <div className="bg-white p-6 mb-6 border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15 p-6 mb-6 border-brutal shadow-brutal">
               <p className="text-sm text-charcoal/70 mb-4">
                 📌 Tarifs dégressifs pour groupes importants
               </p>
@@ -289,15 +290,13 @@ const AnimationSemaineQVCT = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-white text-blue-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
+              className="inline-block px-10 py-4 bg-[hsl(var(--yellow))]/15 text-blue-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
             >
               Demander votre animation
             </Link>
           </AnimatedSection>
         </div>
       </section>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

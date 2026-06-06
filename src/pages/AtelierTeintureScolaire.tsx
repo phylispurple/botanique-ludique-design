@@ -25,6 +25,7 @@ const AtelierTeintureScolaire = () => {
       />
 
       <Navigation />
+      <LandingPhotoStrip />
 
       {/* Hero */}
       <section className="min-h-[600px] flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-yellow-50 to-background py-20">
@@ -57,7 +58,7 @@ const AtelierTeintureScolaire = () => {
       </section>
 
       {/* Educational Value */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -163,7 +164,7 @@ const AtelierTeintureScolaire = () => {
       </section>
 
       {/* Format Options */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -244,7 +245,7 @@ const AtelierTeintureScolaire = () => {
                 activities: "Chimie avancée, histoire, écologie, projets artistiques",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
+              <div key={i} className="p-6 bg-[hsl(var(--yellow))]/15 shadow-brutal border-brutal shadow-brutal">
                 <h3 className="font-bold text-yellow-700 mb-3">{item.age}</h3>
                 <p className="text-sm font-semibold text-charcoal mb-2">{item.focus}</p>
                 <p className="text-sm text-charcoal/70">{item.activities}</p>
@@ -255,7 +256,7 @@ const AtelierTeintureScolaire = () => {
       </section>
 
       {/* Alignment with Education */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection>
             <h2
@@ -301,25 +302,25 @@ const AtelierTeintureScolaire = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={100} className="grid md:grid-cols-2 gap-8">
-            <div className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
+            <div className="p-6 bg-[hsl(var(--yellow))]/15 shadow-brutal border-brutal shadow-brutal">
               <h3 className="font-semibold text-charcoal mb-4">📍 Lieu</h3>
               <p className="text-charcoal/80 text-sm">
                 À votre école ou dans nos locaux. Déplacement inclus en Île-de-France pour les groupes importants.
               </p>
             </div>
-            <div className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
+            <div className="p-6 bg-[hsl(var(--yellow))]/15 shadow-brutal border-brutal shadow-brutal">
               <h3 className="font-semibold text-charcoal mb-4">📦 Matériel</h3>
               <p className="text-charcoal/80 text-sm">
                 Tout est fourni : plantes, tissus, outils. Les enfants repartent avec leur création.
               </p>
             </div>
-            <div className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
+            <div className="p-6 bg-[hsl(var(--yellow))]/15 shadow-brutal border-brutal shadow-brutal">
               <h3 className="font-semibold text-charcoal mb-4">👨‍🏫 Animateur</h3>
               <p className="text-charcoal/80 text-sm">
                 Ethnobotaniste expérimentée, formatrice en pédagogie. Approche bienveillante et inclusive.
               </p>
             </div>
-            <div className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
+            <div className="p-6 bg-[hsl(var(--yellow))]/15 shadow-brutal border-brutal shadow-brutal">
               <h3 className="font-semibold text-charcoal mb-4">🎯 Résultats</h3>
               <p className="text-charcoal/80 text-sm">
                 Les enfants repartent avec leurs créations teintes et une compréhension de la botanique.
@@ -330,7 +331,7 @@ const AtelierTeintureScolaire = () => {
       </section>
 
       {/* Pricing */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -373,15 +374,13 @@ const AtelierTeintureScolaire = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-white text-yellow-700 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
+              className="inline-block px-10 py-4 bg-[hsl(var(--yellow))]/15 text-yellow-700 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
             >
               Demander un devis
             </Link>
           </AnimatedSection>
         </div>
       </section>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>
