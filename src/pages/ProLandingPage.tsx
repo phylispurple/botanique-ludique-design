@@ -214,6 +214,76 @@ const ProLandingPage = () => {
               ))}
             </div>
 
+            {/* Gallery (photos issues d'événements précédents) */}
+            {gallery && gallery.length > 0 && (
+              <div className="mb-20">
+                <h2
+                  className="text-2xl md:text-3xl mb-8 text-center"
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 400, color: "#3D3D2E" }}
+                >
+                  En images
+                </h2>
+                <div className="grid sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                  {gallery.map((src, i) => (
+                    <div key={i} className="aspect-square overflow-hidden rounded-lg shadow-sm">
+                      <img
+                        src={src}
+                        alt={`${h1} — photo ${i + 1}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Partenaires */}
+            {partners && partners.length > 0 && (
+              <div className="bg-sand/60 rounded-lg p-8 mb-20 text-center">
+                <p
+                  className="text-xs uppercase tracking-widest text-sage mb-4"
+                  style={{ fontFamily: "Space Mono, monospace" }}
+                >
+                  Ils nous ont fait confiance
+                </p>
+                <div className="flex flex-wrap gap-3 justify-center">
+                  {partners.map((p) => (
+                    <span
+                      key={p}
+                      className="px-4 py-2 bg-white text-charcoal/80 text-sm rounded-full border border-sage/30"
+                      style={{ fontFamily: "Fraunces, serif", fontWeight: 500 }}
+                    >
+                      {p}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Ateliers liés (maillage interne SEO) */}
+            {relatedWorkshops && relatedWorkshops.length > 0 && (
+              <div className="bg-white rounded-lg p-8 mb-20">
+                <h2
+                  className="text-2xl mb-6 text-center"
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 400, color: "#3D3D2E" }}
+                >
+                  Ateliers et formats liés
+                </h2>
+                <div className="flex flex-wrap gap-3 justify-center">
+                  {relatedWorkshops.map((w) => (
+                    <Link
+                      key={w.path}
+                      to={w.path}
+                      className="inline-flex items-center px-5 py-2.5 bg-sage/10 hover:bg-sage hover:text-off-white text-sage text-sm font-semibold rounded-full transition-all border border-sage/30"
+                    >
+                      {w.label} →
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* CTA */}
             <div className="bg-sage text-off-white rounded-lg p-8 md:p-12 text-center animate-fade-in">
               <h2
