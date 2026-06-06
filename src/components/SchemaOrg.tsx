@@ -17,7 +17,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           "url": "https://botaniqueludique.com",
           "logo": "https://botaniqueludique.com/favicon.png",
           "image": "https://botaniqueludique.com/hero-botanical.jpg",
-          "description": "Association de médiation culturelle et scientifique autour du vivant. Ateliers de botanique pour scolaires, entreprises et grand public. Conférences et balades guidées en Île-de-France.",
+          "description": "Médiation culturelle et scientifique autour du vivant. Ateliers de botanique pour scolaires, entreprises et grand public. Conférences et balades guidées en Île-de-France.",
           "founder": {
             "@type": "Person",
             "name": "Vanessa Charlery",
