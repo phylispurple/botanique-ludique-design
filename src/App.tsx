@@ -272,6 +272,7 @@ const App = () => (
           <Route path="/blog/organiser-fete-nature-mairie" element={<BlogFeteNatureMairie />} />
           <Route path="/blog/journees-patrimoine-animations-vegetales" element={<BlogJourneesPatrimoineVegetal />} />
           <Route path="/blog/semaine-developpement-durable-mairie" element={<BlogSemaineDDMairie />} />
+          <Route path="/blog/balade-botanique-ecole-du-breuil" element={<BlogBaladeBotaniqueDuBreuil />} />
           <Route path="/marches-publics" element={<MarchesPublics />} />
           <Route path="/references-collectivites" element={<ReferencesCollectivites />} />
           <Route path="/actualites" element={<Blog />} />
