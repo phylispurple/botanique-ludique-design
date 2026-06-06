@@ -20,8 +20,17 @@ import blogFilmsPoster from "@/assets/blog-films-nature-poster.jpg";
 import blogBotaniqueCollege from "@/assets/blog-botanique-college.jpg";
 import blogPlantesSauvages from "@/assets/blog-plantes-sauvages.jpg";
 import blogMediationScientifique from "@/assets/blog-mediation-scientifique.jpg";
+import blogDuBreuilAffiche from "@/assets/du-breuil-en-fete-2026-affiche.png.asset.json";
 
 const blogPosts = [
+  {
+    slug: "balade-botanique-ecole-du-breuil",
+    title: "Plantes voyageuses, histoires oubliées : balade botanique à l'École Du Breuil",
+    excerpt: "Retour sur la balade ethnobotanique animée lors de Du Breuil en fête 2026, au cœur du Bois de Vincennes. Jardins de simples, plantes voyageuses et Wardian Cases.",
+    images: [blogDuBreuilAffiche.url],
+    date: "2026-06-06",
+    category: "Retour d'expérience"
+  },
   {
     slug: "10-films-nature-idees-fausses",
     title: "Les 10 Films qui Nous Ont Raconté N'importe Quoi à Propos de la « Nature »",
