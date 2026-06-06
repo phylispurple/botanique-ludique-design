@@ -2,6 +2,8 @@
 // (anti duplicate / thin content) et l'E-E-A-T : chaque page reçoit deux
 // paragraphes contextuels rédigés à la main, ancrés sur la requête cible.
 
+import { SEASONAL_LANDING_CONTEXT } from "./seasonalLandings";
+
 export interface LandingContext {
   /** Titre de la section éditoriale. */
   heading: string;
@@ -9,7 +11,7 @@ export interface LandingContext {
   paragraphs: string[];
 }
 
-export const PRO_LANDING_CONTEXT: Record<string, LandingContext> = {
+const _BASE_PRO_LANDING_CONTEXT: Record<string, LandingContext> = {
   "atelier-qvct-paris": {
     heading: "La QVCT à Paris, au-delà du fauteuil massant",
     paragraphs: [
@@ -101,4 +103,9 @@ export const PRO_LANDING_CONTEXT: Record<string, LandingContext> = {
       "Nous adaptons le format à l'ambiance soirée : matériel élégant, lumière soignée, gestes simples et rapidement gratifiants (mini-terrarium en pot soufflé, couronne de fleurs séchées, sachet de tisane personnalisée). L'objet repart en cadeau, ce qui remplace utilement le goodie générique souvent oublié. Pour les soirées de fin d'année, ce format produit régulièrement des photos qui circulent ensuite spontanément en interne et nourrissent la communication employeur.",
     ],
   },
+};
+
+export const PRO_LANDING_CONTEXT: Record<string, LandingContext> = {
+  ..._BASE_PRO_LANDING_CONTEXT,
+  ...SEASONAL_LANDING_CONTEXT,
 };

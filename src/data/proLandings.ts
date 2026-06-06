@@ -1,5 +1,8 @@
 // Configuration de 13 landing pages B2B (QVCT, RSE, team building, séminaire,
-// animation entreprise). Toutes consommées par <ProLandingPage> via le slug URL.
+// animation entreprise) + 15 landings saisonnières (fêtes, événements
+// saisonniers). Toutes consommées par <ProLandingPage> via le slug URL.
+
+import { SEASONAL_LANDINGS } from "./seasonalLandings";
 
 export interface ProLandingConfig {
   slug: string;
@@ -22,9 +25,17 @@ export interface ProLandingConfig {
   city: string;
   ctaTitle: string;
   ctaText: string;
+  /** Photo hero principale (import ES). Optionnel. */
+  heroImage?: string;
+  /** Mini galerie photos (imports ES). Optionnel. */
+  gallery?: string[];
+  /** Partenaires cités sous forme de pills textuelles. Optionnel. */
+  partners?: string[];
+  /** Liens internes vers ateliers liés. Optionnel. */
+  relatedWorkshops?: Array<{ label: string; path: string }>;
 }
 
-export const PRO_LANDINGS: ProLandingConfig[] = [
+const _BASE_PRO_LANDINGS: ProLandingConfig[] = [
   {
     slug: "atelier-qvct-paris",
     title: "Atelier QVCT à Paris pour Entreprises",
@@ -727,6 +738,11 @@ export const PRO_LANDINGS: ProLandingConfig[] = [
     ctaTitle: "Une soirée vraiment différente",
     ctaText: "Brief gratuit, format adapté à votre événement.",
   },
+];
+
+export const PRO_LANDINGS: ProLandingConfig[] = [
+  ..._BASE_PRO_LANDINGS,
+  ...SEASONAL_LANDINGS,
 ];
 
 export function findProLanding(slug: string): ProLandingConfig | undefined {
