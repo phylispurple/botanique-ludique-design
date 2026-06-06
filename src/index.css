@@ -54,6 +54,13 @@
     --blue-light: 194 35% 35%;
     --purple: 287 33% 36%;
 
+    /* Aliases brutalist palette */
+    --sage: 73 37% 44%;
+    --sage-foreground: 36 33% 93%;
+    --terracotta: 13 76% 50%;
+    --terracotta-foreground: 36 33% 93%;
+    --sand: 36 30% 82%;
+
     /* Shadows — brutaliste offset */
     --shadow-brutal: 4px 4px 0px hsl(0 0% 10%);
     --shadow-brutal-lg: 6px 6px 0px hsl(0 0% 10%);
