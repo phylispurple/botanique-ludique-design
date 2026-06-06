@@ -132,6 +132,8 @@ const BaladeBotaniqueMusee = () => {
         </section>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

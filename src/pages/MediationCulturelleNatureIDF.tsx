@@ -181,6 +181,7 @@ const MediationCulturelleNatureIDF = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

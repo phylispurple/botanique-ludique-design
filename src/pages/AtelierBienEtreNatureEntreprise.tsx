@@ -280,6 +280,8 @@ const AtelierBienEtreNatureEntreprise = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

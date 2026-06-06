@@ -203,6 +203,7 @@ const AnimationCentreSocial = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

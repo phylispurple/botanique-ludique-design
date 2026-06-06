@@ -234,6 +234,8 @@ const TeamBuildingRSEParis = () => {
         </div>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

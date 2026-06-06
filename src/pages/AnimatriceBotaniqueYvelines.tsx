@@ -190,6 +190,8 @@ const AnimatriceBotaniqueYvelines = () => {
         </div>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

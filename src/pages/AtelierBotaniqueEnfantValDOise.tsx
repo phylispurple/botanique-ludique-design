@@ -110,6 +110,7 @@ const AtelierBotaniqueEnfantValDOise = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

@@ -202,6 +202,7 @@ const AtelierFloralParis = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

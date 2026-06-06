@@ -151,6 +151,7 @@ const AnimationBotaniqueHautsDeSeine = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

@@ -151,6 +151,7 @@ const MediationScientifiqueValDOise = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

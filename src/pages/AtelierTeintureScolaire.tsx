@@ -381,6 +381,8 @@ const AtelierTeintureScolaire = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

@@ -168,6 +168,7 @@ const AnimatriceNatureParis = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

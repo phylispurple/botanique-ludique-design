@@ -141,6 +141,7 @@ const IntervenantScientifiqueParis = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

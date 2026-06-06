@@ -271,6 +271,8 @@ const AteliersBotaniqueEntrepriseIDF = () => {
         </div>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

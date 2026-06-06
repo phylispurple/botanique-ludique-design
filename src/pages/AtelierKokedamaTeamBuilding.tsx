@@ -294,6 +294,8 @@ const AtelierKokedamaTeamBuilding = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

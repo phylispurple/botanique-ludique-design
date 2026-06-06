@@ -152,6 +152,7 @@ const MediationCulturelleNatureYvelines = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

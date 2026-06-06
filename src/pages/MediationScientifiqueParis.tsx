@@ -149,6 +149,7 @@ const MediationScientifiqueParis = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

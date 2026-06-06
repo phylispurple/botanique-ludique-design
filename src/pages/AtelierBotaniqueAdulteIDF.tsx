@@ -172,6 +172,7 @@ const AtelierBotaniqueAdulteIDF = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

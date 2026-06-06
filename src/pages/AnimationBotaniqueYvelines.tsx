@@ -152,6 +152,7 @@ const AnimationBotaniqueYvelines = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

@@ -163,6 +163,7 @@ const IntervenantScientifiqueIDF = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

@@ -334,6 +334,8 @@ const AteliersIDF = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

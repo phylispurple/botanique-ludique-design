@@ -325,6 +325,8 @@ const ActiviteIntergenerationnelle = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

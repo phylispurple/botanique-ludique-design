@@ -112,6 +112,7 @@ const AtelierBotaniqueAdulteParis = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

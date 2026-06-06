@@ -138,6 +138,7 @@ const AtelierBotaniqueEnfantParis = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

@@ -390,6 +390,8 @@ const AtelierBotaniqueLeVesinet = () => {
         </div>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

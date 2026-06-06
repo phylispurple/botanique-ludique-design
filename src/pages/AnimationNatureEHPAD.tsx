@@ -383,6 +383,8 @@ const AnimationNatureEHPAD = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

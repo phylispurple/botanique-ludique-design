@@ -218,6 +218,8 @@ const BaladeEthnobotaniqueRSEYvelines = () => (
       </div>
     </section>
 
+    <LandingPhotoStrip />
+
     <Footer />
     <BackToTop />
   </div>

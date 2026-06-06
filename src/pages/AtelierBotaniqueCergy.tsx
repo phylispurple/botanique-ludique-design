@@ -348,6 +348,8 @@ const AtelierBotaniqueCergy = () => {
         </div>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

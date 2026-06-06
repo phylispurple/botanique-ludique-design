@@ -369,6 +369,8 @@ const AtelierBotaniqueLePecq = () => {
         </div>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

@@ -174,6 +174,8 @@ const JardinPatrimonial = () => {
         </section>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

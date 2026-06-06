@@ -180,6 +180,7 @@ const AnimationBotaniqueIDF = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

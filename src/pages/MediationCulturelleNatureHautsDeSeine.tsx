@@ -151,6 +151,7 @@ const MediationCulturelleNatureHautsDeSeine = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

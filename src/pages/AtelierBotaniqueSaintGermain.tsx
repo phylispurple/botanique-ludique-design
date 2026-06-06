@@ -343,6 +343,8 @@ const AtelierBotaniqueSaintGermain = () => {
         </div>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

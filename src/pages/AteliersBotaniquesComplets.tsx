@@ -190,6 +190,8 @@ const AteliersBotaniquesComplets = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

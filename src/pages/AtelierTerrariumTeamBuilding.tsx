@@ -210,6 +210,8 @@ const AtelierTerrariumTeamBuilding = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

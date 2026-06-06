@@ -148,6 +148,8 @@ const BaladeUrbaine = () => {
         </section>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

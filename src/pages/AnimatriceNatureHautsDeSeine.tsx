@@ -164,6 +164,7 @@ const AnimatriceNatureHautsDeSeine = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

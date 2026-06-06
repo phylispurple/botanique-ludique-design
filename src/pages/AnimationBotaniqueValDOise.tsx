@@ -151,6 +151,7 @@ const AnimationBotaniqueValDOise = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

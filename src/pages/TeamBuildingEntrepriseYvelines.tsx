@@ -301,6 +301,8 @@ const TeamBuildingEntrepriseYvelines = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
+
       <Footer />
       <BackToTop />
     </div>

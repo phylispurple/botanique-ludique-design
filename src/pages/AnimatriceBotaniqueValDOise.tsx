@@ -179,6 +179,7 @@ const AnimatriceBotaniqueValDOise = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

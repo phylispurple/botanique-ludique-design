@@ -152,6 +152,7 @@ const MediationScientifiqueYvelines = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

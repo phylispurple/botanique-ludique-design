@@ -152,6 +152,7 @@ const MediationBotaniqueYvelines = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

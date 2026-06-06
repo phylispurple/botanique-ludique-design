@@ -225,6 +225,8 @@ const AnimatriceNatureIDF = () => {
         </div>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

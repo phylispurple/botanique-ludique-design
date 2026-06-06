@@ -215,6 +215,7 @@ const AtelierTeintureVegetale = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

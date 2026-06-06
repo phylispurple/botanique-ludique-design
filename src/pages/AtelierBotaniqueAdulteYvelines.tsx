@@ -120,6 +120,7 @@ const AtelierBotaniqueAdulteYvelines = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

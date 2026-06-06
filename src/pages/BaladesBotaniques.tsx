@@ -183,6 +183,8 @@ const BaladesBotaniques = () => {
         </section>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

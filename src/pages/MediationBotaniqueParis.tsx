@@ -149,6 +149,7 @@ const MediationBotaniqueParis = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

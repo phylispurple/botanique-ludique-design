@@ -297,6 +297,8 @@ const AnimationSemaineQVCT = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

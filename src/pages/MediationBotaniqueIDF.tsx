@@ -180,6 +180,7 @@ const MediationBotaniqueIDF = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

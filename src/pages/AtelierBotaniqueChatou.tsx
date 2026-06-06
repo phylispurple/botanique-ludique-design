@@ -422,6 +422,8 @@ const AtelierBotaniqueChatou = () => {
         </div>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

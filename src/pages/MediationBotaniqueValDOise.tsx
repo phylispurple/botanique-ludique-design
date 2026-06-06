@@ -151,6 +151,7 @@ const MediationBotaniqueValDOise = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

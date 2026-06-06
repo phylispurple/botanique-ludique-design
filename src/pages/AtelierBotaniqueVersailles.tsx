@@ -347,6 +347,8 @@ const AtelierBotaniqueVersailles = () => {
         </div>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

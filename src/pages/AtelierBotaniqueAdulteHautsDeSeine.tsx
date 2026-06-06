@@ -110,6 +110,7 @@ const AtelierBotaniqueAdulteHautsDeSeine = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

@@ -126,6 +126,7 @@ const IntervenantScientifiqueValDOise = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

@@ -182,6 +182,8 @@ const AtelierEthnobotaniqueEntreprise = () => {
         </section>
       </main>
 
+      <LandingPhotoStrip />
+
       <Footer />
     </div>
   );

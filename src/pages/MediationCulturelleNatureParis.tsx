@@ -149,6 +149,7 @@ const MediationCulturelleNatureParis = () => {
           </div>
         </div>
       </main>
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );
