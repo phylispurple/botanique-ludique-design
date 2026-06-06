@@ -52,21 +52,6 @@ const d = (year: number, month: number, day: number) => new Date(year, month - 1
 
 const upcomingEvents: UpcomingEvent[] = [
   {
-    id: "terrarium-la-rochefoucauld-6-juin",
-    name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
-    date: "Samedi 6 juin 2026",
-    parsedDate: d(2026, 6, 6),
-    time: "16h00",
-    location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
-    audience: "Tout public",
-    spots: "12 participant·es max. Atelier maintenu à partir de 6 inscriptions.",
-    description:
-      "Plongez dans l'histoire fascinante de la Wardian Case, du XIXe siècle à nos jours, puis fabriquez votre propre terrarium. Bocal de 3 litres, boutures, terre et matériel fournis. 12€ par personne.",
-    linkType: "internal",
-    internalUrl: "/inscription/terrarium-6-juin",
-    buttonLabel: "S'inscrire",
-  },
-  {
     id: "au-fil-des-jardins-voisins",
     name: "Au fil des jardins de Voisins",
     date: "Dimanche 7 juin 2026",
@@ -115,6 +100,17 @@ const upcomingEvents: UpcomingEvent[] = [
 ];
 
 const pastEvents: PastEvent[] = [
+  {
+    id: "wardian-case-6-juin",
+    name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
+    date: "Samedi 6 juin 2026",
+    parsedDate: d(2026, 6, 6),
+    time: "16h00",
+    location: "La Rochefoucauld, Paris 14e (Denfert-Rochereau)",
+    audience: "Tout public",
+    description:
+      "Histoire culturelle et politique de la Wardian Case suivie de la fabrication d'un terrarium en bocal de 3 litres.",
+  },
   {
     id: "balade-ecole-du-breuil",
     name: "Balade ethnobotanique : Plantes voyageuses, histoires oubliées",
