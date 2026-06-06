@@ -104,3 +104,8 @@ const _BASE_PRO_LANDING_CONTEXT: Record<string, LandingContext> = {
     ],
   },
 };
+
+export const PRO_LANDING_CONTEXT: Record<string, LandingContext> = {
+  ..._BASE_PRO_LANDING_CONTEXT,
+  ...SEASONAL_LANDING_CONTEXT,
+};
