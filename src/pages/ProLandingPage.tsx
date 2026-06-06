@@ -81,6 +81,17 @@ const ProLandingPage = () => {
             <p className="subtitle-italic text-lg mb-6">{tagline}</p>
             <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">{intro}</p>
           </div>
+
+          {heroImage && (
+            <div className="max-w-5xl mx-auto mb-16 rounded-lg overflow-hidden shadow-lg animate-fade-in">
+              <img
+                src={heroImage}
+                alt={h1}
+                loading="eager"
+                className="w-full h-[280px] sm:h-[380px] md:h-[460px] object-cover"
+              />
+            </div>
+          )}
         </div>
 
         {/* Social proof bar */}
