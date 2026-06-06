@@ -96,7 +96,6 @@ const ProLandingPage = () => {
       <SchemaOrg type="FAQPage" data={{ questions: faq }} />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-28 pb-20">
         {/* Hero */}
@@ -124,6 +123,8 @@ const ProLandingPage = () => {
               {intro}
             </p>
           </div>
+          <LandingPhotoStrip />
+
 
           {heroImage && (
             <div className="max-w-5xl mx-auto mb-16 border-brutal shadow-brutal-lg overflow-hidden bg-cream">
