@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useLocation, Link, Navigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
@@ -10,7 +10,8 @@ import { findProLanding } from "@/data/proLandings";
 import { PRO_LANDING_CONTEXT } from "@/data/proLandingsContext";
 
 const ProLandingPage = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const { pathname } = useLocation();
+  const slug = pathname.replace(/^\/+/, "").replace(/\/+$/, "");
   const config = slug ? findProLanding(slug) : undefined;
 
   if (!config) {
