@@ -200,6 +200,72 @@ const BlogBaladeBotaniqueDuBreuil = () => {
                 Observer un palmier, une rose ou une fougère, c'est parfois remonter plusieurs siècles d'histoire. Et c'est précisément ce qui rend les plantes si passionnantes.
               </p>
 
+              <h2 className="font-display text-2xl uppercase tracking-[-1px] text-[hsl(var(--black))] mt-10 mb-4">
+                Questions fréquentes sur les balades botaniques
+              </h2>
+
+              <div className="space-y-4 mb-8">
+                <details className="group border-[3px] border-[hsl(var(--black))] bg-white">
+                  <summary className="cursor-pointer p-4 font-display text-sm uppercase tracking-[-0.3px] text-[hsl(var(--black))] flex items-center justify-between">
+                    Comment organiser une balade botanique dans une école ?
+                    <span className="ml-2 text-[hsl(var(--olive))] group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <div className="px-4 pb-4 text-sm text-[hsl(var(--black))]/80 leading-relaxed border-t-[3px] border-[hsl(var(--black))]">
+                    Pour organiser une balade botanique dans une école, il suffit de contacter Botanique Ludique par email ou via le formulaire de contact. Nous adaptons le contenu ethnobotanique au niveau scolaire, que ce soit pour le primaire, le collège ou le lycée. La balade peut se dérouler dans le jardin de l'école, un parc proche ou un site patrimonial comme l'École Du Breuil.
+                  </div>
+                </details>
+
+                <details className="group border-[3px] border-[hsl(var(--black))] bg-white">
+                  <summary className="cursor-pointer p-4 font-display text-sm uppercase tracking-[-0.3px] text-[hsl(var(--black))] flex items-center justify-between">
+                    Qu'est-ce qu'une balade ethnobotanique ?
+                    <span className="ml-2 text-[hsl(var(--olive))] group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <div className="px-4 pb-4 text-sm text-[hsl(var(--black))]/80 leading-relaxed border-t-[3px] border-[hsl(var(--black))]">
+                    Une balade ethnobotanique est une promenade guidée qui combine botanique et anthropologie. Elle raconte l'histoire des plantes à travers les échanges humains, les circulations mondiales, les rapports de pouvoir et les représentations culturelles. C'est une médiation scientifique et culturelle du vivant, adaptée aux écoles, aux collectivités et au grand public.
+                  </div>
+                </details>
+
+                <details className="group border-[3px] border-[hsl(var(--black))] bg-white">
+                  <summary className="cursor-pointer p-4 font-display text-sm uppercase tracking-[-0.3px] text-[hsl(var(--black))] flex items-center justify-between">
+                    Quels publics peuvent participer à une balade botanique ?
+                    <span className="ml-2 text-[hsl(var(--olive))] group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <div className="px-4 pb-4 text-sm text-[hsl(var(--black))]/80 leading-relaxed border-t-[3px] border-[hsl(var(--black))]">
+                    Les balades botaniques de Botanique Ludique s'adressent aux particuliers, aux écoles primaires et secondaires, aux collèges et lycées, aux médiathèques, aux musées, aux jardins remarquables, aux mairies, aux EHPAD et aux entreprises en Île-de-France. Chaque animation est adaptée au public et au lieu.
+                  </div>
+                </details>
+
+                <details className="group border-[3px] border-[hsl(var(--black))] bg-white">
+                  <summary className="cursor-pointer p-4 font-display text-sm uppercase tracking-[-0.3px] text-[hsl(var(--black))] flex items-center justify-between">
+                    Quelles sont les thématiques abordées lors d'une balade botanique ?
+                    <span className="ml-2 text-[hsl(var(--olive))] group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <div className="px-4 pb-4 text-sm text-[hsl(var(--black))]/80 leading-relaxed border-t-[3px] border-[hsl(var(--black))]">
+                    Les thématiques varient selon le lieu et le public : histoire des jardins (simples, jardins à la française, jardins anglais, jardins japonais), plantes voyageuses et circulation mondiale, jardins coloniaux et expositions universelles, théorie des signatures, révolution industrielle et collections botaniques. Chaque balade est une lecture historique et anthropologique du végétal.
+                  </div>
+                </details>
+
+                <details className="group border-[3px] border-[hsl(var(--black))] bg-white">
+                  <summary className="cursor-pointer p-4 font-display text-sm uppercase tracking-[-0.3px] text-[hsl(var(--black))] flex items-center justify-between">
+                    La balade botanique est-elle adaptée aux enfants ?
+                    <span className="ml-2 text-[hsl(var(--olive))] group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <div className="px-4 pb-4 text-sm text-[hsl(var(--black))]/80 leading-relaxed border-t-[3px] border-[hsl(var(--black))]">
+                    Oui, les balades botaniques sont conçues pour être accessibles aux enfants dès le primaire. Nous utilisons un langage adapté, des anecdotes concrètes et des observations sensorielles pour rendre l'histoire des plantes vivante et compréhensible. Les balades sont aussi adaptées aux cycles 3, 4 et au lycée avec un contenu plus approfondi.
+                  </div>
+                </details>
+
+                <details className="group border-[3px] border-[hsl(var(--black))] bg-white">
+                  <summary className="cursor-pointer p-4 font-display text-sm uppercase tracking-[-0.3px] text-[hsl(var(--black))] flex items-center justify-between">
+                    Où se déroulent les balades ethnobotaniques en Île-de-France ?
+                    <span className="ml-2 text-[hsl(var(--olive))] group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <div className="px-4 pb-4 text-sm text-[hsl(var(--black))]/80 leading-relaxed border-t-[3px] border-[hsl(var(--black))]">
+                    Les balades peuvent se dérouler dans tout espace vert ou patrimonial d'Île-de-France : parcs, jardins botaniques, forêts, jardins de simples, jardins remarquables, musées avec jardin, ou même dans l'enceinte de l'établissement scolaire. Botanique Ludique intervient notamment à Paris, dans les Yvelines, les Hauts-de-Seine et le Val-d'Oise.
+                  </div>
+                </details>
+              </div>
+
               <div className="border-brutal bg-[hsl(var(--green-pale))] p-8 mt-12">
                 <h3 className="font-display text-xl uppercase tracking-[-0.5px] text-[hsl(var(--black))] mb-3">
                   Organiser une balade botanique pour votre structure
