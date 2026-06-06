@@ -32,7 +32,6 @@ const AtelierBotaniqueAdulteHautsDeSeine = () => {
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -48,6 +47,7 @@ const AtelierBotaniqueAdulteHautsDeSeine = () => {
                 ou habitant de Boulogne-Billancourt, offrez-vous une <strong>parenthèse créative et végétale</strong>.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               {[

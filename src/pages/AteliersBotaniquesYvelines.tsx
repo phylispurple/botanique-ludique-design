@@ -56,7 +56,6 @@ const AteliersBotaniquesYvelines = () => {
       />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -78,6 +77,7 @@ const AteliersBotaniquesYvelines = () => {
                 formée à l'EHESS, nos ateliers de kokedama, teinture végétale et vannerie vont bien au-delà du simple loisir créatif.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             {/* Villes couvertes avec liens SEO */}
             <div className="bg-sage/10 p-8 mb-16 animate-fade-in border-brutal shadow-brutal">

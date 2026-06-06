@@ -26,7 +26,6 @@ const LandingCSE = () => {
     <div className="min-h-screen bg-background">
       <SEO title="Animation CSE & Comité d'Entreprise - Ateliers Nature" description="Animations botaniques pour CSE en Île-de-France : Paris, Yvelines (78), Hauts-de-Seine (92), Val-d'Oise (95). Ateliers nature créatifs. Devis gratuit sous 24h." keywords="animation cse, atelier comité entreprise, activité cse nature, team building cse paris, animation cse val d'oise" canonical="/cse-entreprise" />
       <Navigation />
-      <LandingPhotoStrip />
       
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">
         <div className="container mx-auto max-w-6xl text-center space-y-6">
@@ -36,6 +35,7 @@ const LandingCSE = () => {
           <Button asChild size="lg" className="bg-sage hover:bg-sage-dark text-white"><Link to="/contact">Devis gratuit sous 24h<ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
         </div>
       </section>
+      <LandingPhotoStrip />
 
       <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">
         <div className="container mx-auto max-w-6xl">

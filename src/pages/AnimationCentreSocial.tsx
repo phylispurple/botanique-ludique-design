@@ -63,7 +63,6 @@ const AnimationCentreSocial = () => {
       />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -87,6 +86,7 @@ const AnimationCentreSocial = () => {
                 animations vacances scolaires et projets de quartier autour de la nature.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             <section className="mb-20 animate-fade-in">
               <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>

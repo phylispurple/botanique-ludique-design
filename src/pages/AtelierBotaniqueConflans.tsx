@@ -67,7 +67,6 @@ const AtelierBotaniqueConflans = () => {
       />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -90,6 +89,7 @@ const AtelierBotaniqueConflans = () => {
                 entreprises et collectivités de Conflans, Herblay, Achères, Maurecourt, Andrésy et Chanteloup-les-Vignes.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             <section className="mb-20 animate-fade-in">
               <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>

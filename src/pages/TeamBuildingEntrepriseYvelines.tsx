@@ -110,7 +110,6 @@ const TeamBuildingEntrepriseYvelines = () => {
         ]}}
       />
       <Navigation />
-      <LandingPhotoStrip />
 
       {/* HERO */}
       <section className="pt-36 pb-20 px-4 md:px-8">
@@ -163,6 +162,7 @@ const TeamBuildingEntrepriseYvelines = () => {
           </div>
         </div>
       </section>
+      <LandingPhotoStrip />
 
       {/* VILLES */}
       <section className="py-20 px-4 md:px-8 bg-[hsl(var(--black))] text-[hsl(var(--cream))]">

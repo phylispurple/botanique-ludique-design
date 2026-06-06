@@ -70,7 +70,6 @@ const AtelierBotaniqueCergy = () => {
       />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -95,6 +94,7 @@ const AtelierBotaniqueCergy = () => {
                 et de tout le sud du Val-d'Oise.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             {/* Why Cergy Section */}
             <section className="mb-20 animate-fade-in">

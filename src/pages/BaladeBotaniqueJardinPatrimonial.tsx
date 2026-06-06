@@ -51,7 +51,6 @@ const JardinPatrimonial = () => {
       />
       <SchemaOrg type="FAQPage" data={{ questions: faqs.map(f => ({ question: f.q, answer: f.a })) }} />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-24">
         {/* Hero */}
@@ -69,6 +68,7 @@ const JardinPatrimonial = () => {
             </p>
           </AnimatedSection>
         </section>
+      <LandingPhotoStrip />
 
         {/* Référence École Du Breuil */}
         <section className="py-12 px-6 md:px-16 lg:px-[120px] border-b border-[hsl(var(--black))]/15">

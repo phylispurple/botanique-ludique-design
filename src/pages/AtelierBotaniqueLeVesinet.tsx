@@ -70,7 +70,6 @@ const AtelierBotaniqueLeVesinet = () => {
       />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -94,6 +93,7 @@ const AtelierBotaniqueLeVesinet = () => {
                 et la végétation luxuriante de cette ville-jardin, accessible depuis Chatou, Saint-Germain-en-Laye et Le Pecq.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             {/* Why Le Vésinet Section */}
             <section className="mb-20 animate-fade-in">

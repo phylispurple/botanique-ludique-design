@@ -70,7 +70,6 @@ const AtelierBotaniqueNanterre = () => {
       />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -94,6 +93,7 @@ const AtelierBotaniqueNanterre = () => {
                 collectivités et habitants de Nanterre, Rueil-Malmaison, Puteaux, Courbevoie, Suresnes et Colombes.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             {/* Why Nanterre Section */}
             <section className="mb-20 animate-fade-in">

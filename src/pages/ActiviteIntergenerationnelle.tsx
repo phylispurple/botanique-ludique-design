@@ -25,7 +25,6 @@ const ActiviteIntergenerationnelle = () => {
       />
 
       <Navigation />
-      <LandingPhotoStrip />
 
       {/* Hero */}
       <section className="min-h-[600px] flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-purple-50 to-background py-20">
@@ -56,6 +55,7 @@ const ActiviteIntergenerationnelle = () => {
           </AnimatedSection>
         </div>
       </section>
+      <LandingPhotoStrip />
 
       {/* The Need */}
       <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">

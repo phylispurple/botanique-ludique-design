@@ -79,7 +79,6 @@ const TeamBuildingRSEParis = () => {
       />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -101,6 +100,7 @@ const TeamBuildingRSEParis = () => {
                 environnemental au cœur de nos activités.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             {/* Benefits Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">

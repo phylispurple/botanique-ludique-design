@@ -30,7 +30,6 @@ const AtelierBotaniqueAdulteParis = () => {
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -46,6 +45,7 @@ const AtelierBotaniqueAdulteParis = () => {
                 à créer, apprendre et se reconnecter à la nature à travers des <strong>savoir-faire artisanaux enrichis d'ethnobotanique</strong>.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             <div className="bg-[hsl(var(--yellow))]/15 p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-start gap-4">

@@ -41,7 +41,6 @@ const IntervenantScientifiqueYvelines = () => {
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
       <Navigation />
-      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -57,6 +56,7 @@ const IntervenantScientifiqueYvelines = () => {
                 pour proposer des ateliers mêlant <strong>science, histoire et créativité</strong> dans tout le département.
               </p>
             </div>
+      <LandingPhotoStrip />
 
             <div className="bg-[hsl(var(--yellow))]/15 p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-start gap-4">
