@@ -74,6 +74,7 @@ const AteliersIDF = () => {
         canonical="/ateliers-idf"
       />
       <Navigation />
+      <LandingPhotoStrip />
 
       {/* Hero Section */}
       <section className="relative py-24 px-4 bg-gradient-to-br from-sage/10 to-sand/30 overflow-hidden">
@@ -96,22 +97,22 @@ const AteliersIDF = () => {
           </div>
 
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div className="bg-white/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <div className="text-4xl font-bold text-sage mb-2">75</div>
               <div className="text-lg font-semibold text-charcoal">Paris</div>
               <div className="text-sm text-muted-foreground mt-2">Centre et périphérie</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <div className="text-4xl font-bold text-earth mb-2">78</div>
               <div className="text-lg font-semibold text-charcoal">Yvelines</div>
               <div className="text-sm text-muted-foreground mt-2">Chatou, Le Vésinet, St-Germain...</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <div className="text-4xl font-bold text-sage-dark mb-2">92</div>
               <div className="text-lg font-semibold text-charcoal">Hauts-de-Seine</div>
               <div className="text-sm text-muted-foreground mt-2">Nanterre, Boulogne, Rueil...</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15/80 backdrop-blur-sm p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <div className="text-4xl font-bold text-accent mb-2">95</div>
               <div className="text-lg font-semibold text-charcoal">Val-d'Oise</div>
               <div className="text-sm text-muted-foreground mt-2">Cergy, Pontoise, Argenteuil...</div>
@@ -151,10 +152,10 @@ const AteliersIDF = () => {
 
           <div className="space-y-12">
             {departments.map((dept, index) => (
-              <div key={index} className="bg-white shadow-brutal overflow-hidden hover:shadow-brutal-lg transition-shadow border-brutal shadow-brutal">
+              <div key={index} className="bg-[hsl(var(--yellow))]/15 shadow-brutal overflow-hidden hover:shadow-brutal-lg transition-shadow border-brutal shadow-brutal">
                 <div className={`bg-gradient-to-r ${dept.color} p-6 text-white`}>
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="bg-white/20 backdrop-blur-sm w-16 h-16 flex items-center justify-center text-2xl font-bold border-brutal shadow-brutal">
+                    <div className="bg-[hsl(var(--yellow))]/15/20 backdrop-blur-sm w-16 h-16 flex items-center justify-center text-2xl font-bold border-brutal shadow-brutal">
                       {dept.code}
                     </div>
                     <h3 className="text-3xl font-semibold" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
@@ -216,7 +217,7 @@ const AteliersIDF = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {keyWorkshops.map((workshop, index) => (
-              <div key={index} className="bg-white shadow-brutal overflow-hidden hover:scale-105 transition-transform border-brutal shadow-brutal">
+              <div key={index} className="bg-[hsl(var(--yellow))]/15 shadow-brutal overflow-hidden hover:scale-105 transition-transform border-brutal shadow-brutal">
                 <div className="aspect-video overflow-hidden">
                   <img 
                     src={workshop.image} 
@@ -251,7 +252,7 @@ const AteliersIDF = () => {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <Users className="w-12 h-12 text-sage mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-charcoal mb-2">Particuliers</h3>
               <p className="text-sm text-muted-foreground">
@@ -259,7 +260,7 @@ const AteliersIDF = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <Building2 className="w-12 h-12 text-earth mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-charcoal mb-2">Entreprises</h3>
               <p className="text-sm text-muted-foreground">
@@ -267,7 +268,7 @@ const AteliersIDF = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <Leaf className="w-12 h-12 text-sage-dark mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-charcoal mb-2">Collectivités</h3>
               <p className="text-sm text-muted-foreground">
@@ -275,7 +276,7 @@ const AteliersIDF = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal text-center hover:scale-105 transition-transform border-brutal shadow-brutal">
               <Users className="w-12 h-12 text-accent mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-charcoal mb-2">EHPAD & Écoles</h3>
               <p className="text-sm text-muted-foreground">
@@ -299,7 +300,7 @@ const AteliersIDF = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/workshops" 
-              className="px-8 py-4 bg-white text-sage-dark font-semibold text-lg hover:scale-105 transition-transform shadow-brutal border-brutal shadow-brutal"
+              className="px-8 py-4 bg-[hsl(var(--yellow))]/15 text-sage-dark font-semibold text-lg hover:scale-105 transition-transform shadow-brutal border-brutal shadow-brutal"
             >
               Voir tous les ateliers
             </Link>
@@ -333,8 +334,6 @@ const AteliersIDF = () => {
           </div>
         </div>
       </section>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

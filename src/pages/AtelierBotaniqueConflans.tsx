@@ -67,6 +67,7 @@ const AtelierBotaniqueConflans = () => {
       />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -147,17 +148,17 @@ const AtelierBotaniqueConflans = () => {
                 Nous intervenons dans tout le secteur du confluent
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Confluent Seine-Oise</h3>
                   <p className="text-sm text-charcoal/70">Conflans, Andrésy, Maurecourt, Chanteloup-les-Vignes</p>
                 </div>
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Yvelines nord</h3>
                   <p className="text-sm text-charcoal/70">Achères, Poissy, Carrières-sous-Poissy, Triel-sur-Seine</p>
                 </div>
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Val-d'Oise sud</h3>
                   <p className="text-sm text-charcoal/70">Herblay, Pierrelaye, Saint-Ouen-l'Aumône, Éragny</p>
@@ -206,7 +207,6 @@ const AtelierBotaniqueConflans = () => {
           </div>
         </div>
       </main>
-      <LandingPhotoStrip />
       <Footer />
     </div>
   );

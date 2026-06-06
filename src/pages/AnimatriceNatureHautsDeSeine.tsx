@@ -45,6 +45,7 @@ const AnimatriceNatureHautsDeSeine = () => {
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -65,7 +66,7 @@ const AnimatriceNatureHautsDeSeine = () => {
             </div>
 
             {/* Approche */}
-            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15 p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-start gap-4">
                 <BookOpen className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
@@ -94,7 +95,7 @@ const AnimatriceNatureHautsDeSeine = () => {
               ].map((a, i) => (
                 <div key={i} className="overflow-hidden shadow-brutal hover:shadow-brutal-lg transition-shadow">
                   <img src={a.src} alt={`${a.title} Hauts-de-Seine`} className="w-full h-48 object-cover" loading="lazy" />
-                  <div className="p-5 bg-white border-brutal shadow-brutal">
+                  <div className="p-5 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
                     <h3 className="text-lg font-semibold mb-1" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{a.title}</h3>
                     <p className="text-sm text-charcoal/70">{a.desc}</p>
                   </div>
@@ -109,7 +110,7 @@ const AnimatriceNatureHautsDeSeine = () => {
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {cities.map((city, i) => (
-                  <Link to={city.link} key={i} className="bg-white px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal">
+                  <Link to={city.link} key={i} className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal">
                     <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 {city.name}</span>
                     <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">{city.detail}</span>
                   </Link>
@@ -142,7 +143,7 @@ const AnimatriceNatureHautsDeSeine = () => {
               <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>Questions fréquentes</h2>
               <div className="space-y-4 max-w-4xl mx-auto">
                 {faqQuestions.map((faq, i) => (
-                  <div key={i} className="bg-white p-6 border-brutal shadow-brutal">
+                  <div key={i} className="bg-[hsl(var(--yellow))]/15 p-6 border-brutal shadow-brutal">
                     <h3 className="text-lg font-semibold text-charcoal mb-2" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{faq.question}</h3>
                     <p className="text-charcoal/70 leading-relaxed">{faq.answer}</p>
                   </div>
@@ -164,7 +165,6 @@ const AnimatriceNatureHautsDeSeine = () => {
           </div>
         </div>
       </main>
-      <LandingPhotoStrip />
       <Footer />
     </div>
   );

@@ -25,6 +25,7 @@ const ActiviteIntergenerationnelle = () => {
       />
 
       <Navigation />
+      <LandingPhotoStrip />
 
       {/* Hero */}
       <section className="min-h-[600px] flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-purple-50 to-background py-20">
@@ -57,7 +58,7 @@ const ActiviteIntergenerationnelle = () => {
       </section>
 
       {/* The Need */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -109,7 +110,7 @@ const ActiviteIntergenerationnelle = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={100} className="space-y-8">
-            <div className="p-8 bg-white shadow-brutal border-l-4 border-purple-600 border-brutal shadow-brutal">
+            <div className="p-8 bg-[hsl(var(--yellow))]/15 shadow-brutal border-l-4 border-purple-600 border-brutal shadow-brutal">
               <h3 className="text-2xl font-semibold text-charcoal mb-4">Comment ça marche ?</h3>
               <ol className="space-y-4">
                 {[
@@ -132,7 +133,7 @@ const ActiviteIntergenerationnelle = () => {
       </section>
 
       {/* Benefits */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -224,7 +225,7 @@ const ActiviteIntergenerationnelle = () => {
                 ageRange: "6-99 ans",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white shadow-brutal hover:shadow-brutal-lg transition-all border-brutal shadow-brutal">
+              <div key={i} className="p-6 bg-[hsl(var(--yellow))]/15 shadow-brutal hover:shadow-brutal-lg transition-all border-brutal shadow-brutal">
                 <h3 className="text-lg font-semibold text-charcoal mb-3">{item.title}</h3>
                 <p className="text-charcoal/80 text-sm mb-4">{item.desc}</p>
                 <div className="flex flex-wrap gap-3 text-xs text-muted-foreground">
@@ -238,7 +239,7 @@ const ActiviteIntergenerationnelle = () => {
       </section>
 
       {/* Success Stories */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="text-center mb-12">
             <h2
@@ -296,7 +297,7 @@ const ActiviteIntergenerationnelle = () => {
                 desc: "5-6 duos (enfant-senior) par session pour une qualité optimale",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white shadow-brutal border-brutal shadow-brutal">
+              <div key={i} className="p-6 bg-[hsl(var(--yellow))]/15 shadow-brutal border-brutal shadow-brutal">
                 <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-sm text-charcoal/70">{item.desc}</p>
               </div>
@@ -317,15 +318,13 @@ const ActiviteIntergenerationnelle = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-white text-purple-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
+              className="inline-block px-10 py-4 bg-[hsl(var(--yellow))]/15 text-purple-600 font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg border-brutal shadow-brutal"
             >
               Demander un devis
             </Link>
           </AnimatedSection>
         </div>
       </section>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

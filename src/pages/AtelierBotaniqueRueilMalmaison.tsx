@@ -67,6 +67,7 @@ const AtelierBotaniqueRueilMalmaison = () => {
       />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -147,17 +148,17 @@ const AtelierBotaniqueRueilMalmaison = () => {
                 Nous intervenons dans tout le secteur de Rueil-Malmaison
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Rueil & environs</h3>
                   <p className="text-sm text-charcoal/70">Rueil-Malmaison, Garches, Vaucresson, Marnes-la-Coquette</p>
                 </div>
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Boucle de Seine</h3>
                   <p className="text-sm text-charcoal/70">Chatou, Le Vésinet, Croissy-sur-Seine, Le Pecq</p>
                 </div>
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Hauts-de-Seine ouest</h3>
                   <p className="text-sm text-charcoal/70">Suresnes, Puteaux, Nanterre, La Celle-Saint-Cloud</p>
@@ -206,7 +207,6 @@ const AtelierBotaniqueRueilMalmaison = () => {
           </div>
         </div>
       </main>
-      <LandingPhotoStrip />
       <Footer />
     </div>
   );

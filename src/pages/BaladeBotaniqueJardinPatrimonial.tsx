@@ -51,6 +51,7 @@ const JardinPatrimonial = () => {
       />
       <SchemaOrg type="FAQPage" data={{ questions: faqs.map(f => ({ question: f.q, answer: f.a })) }} />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-24">
         {/* Hero */}
@@ -173,8 +174,6 @@ const JardinPatrimonial = () => {
           </p>
         </section>
       </main>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

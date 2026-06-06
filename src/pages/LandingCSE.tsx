@@ -26,6 +26,7 @@ const LandingCSE = () => {
     <div className="min-h-screen bg-background">
       <SEO title="Animation CSE & Comité d'Entreprise - Ateliers Nature" description="Animations botaniques pour CSE en Île-de-France : Paris, Yvelines (78), Hauts-de-Seine (92), Val-d'Oise (95). Ateliers nature créatifs. Devis gratuit sous 24h." keywords="animation cse, atelier comité entreprise, activité cse nature, team building cse paris, animation cse val d'oise" canonical="/cse-entreprise" />
       <Navigation />
+      <LandingPhotoStrip />
       
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">
         <div className="container mx-auto max-w-6xl text-center space-y-6">
@@ -36,7 +37,7 @@ const LandingCSE = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-display text-charcoal mb-8 text-center">Pourquoi choisir un atelier nature ?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -63,7 +64,7 @@ const LandingCSE = () => {
           <h2 className="text-3xl font-display text-charcoal mb-6">Zone d'intervention</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {["Paris", "La Défense", "Hauts-de-Seine (92)", "Yvelines (78)", "Val-d'Oise (95)", "Nanterre", "Boulogne-Billancourt", "Cergy"].map((city) => (
-              <span key={city} className="inline-flex items-center gap-1 bg-white px-4 py-2 rounded-full text-sm text-charcoal"><MapPin className="w-3 h-3 text-sage" />{city}</span>
+              <span key={city} className="inline-flex items-center gap-1 bg-[hsl(var(--yellow))]/15 px-4 py-2 rounded-full text-sm text-charcoal"><MapPin className="w-3 h-3 text-sage" />{city}</span>
             ))}
           </div>
         </div>
@@ -76,7 +77,6 @@ const LandingCSE = () => {
         </div>
       </section>
 
-      <LandingPhotoStrip />
       <Footer />
     </div>
   );

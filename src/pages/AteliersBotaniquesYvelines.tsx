@@ -56,6 +56,7 @@ const AteliersBotaniquesYvelines = () => {
       />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -86,28 +87,28 @@ const AteliersBotaniquesYvelines = () => {
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                 <Link 
                   to="/atelier-botanique-saint-germain-en-laye"
-                  className="bg-white px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
+                  className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
                 >
                   <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 Saint-Germain-en-Laye</span>
                   <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">Forêt domaniale & patrimoine</span>
                 </Link>
                 <Link 
                   to="/atelier-botanique-chatou"
-                  className="bg-white px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
+                  className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
                 >
                   <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 Chatou</span>
                   <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">Île des Impressionnistes</span>
                 </Link>
                 <Link 
                   to="/atelier-botanique-le-vesinet"
-                  className="bg-white px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
+                  className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
                 >
                   <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 Le Vésinet</span>
                   <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">Ville-parc classée</span>
                 </Link>
                 <Link 
                   to="/atelier-botanique-le-pecq"
-                  className="bg-white px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
+                  className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
                 >
                   <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 Le Pecq</span>
                   <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">Bords de Seine</span>
@@ -204,7 +205,7 @@ const AteliersBotaniquesYvelines = () => {
             </div>
 
             {/* Testimonials Section */}
-            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15 p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Témoignages de Participants des Yvelines
               </h2>
@@ -250,8 +251,6 @@ const AteliersBotaniquesYvelines = () => {
           </div>
         </div>
       </main>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

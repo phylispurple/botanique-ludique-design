@@ -91,6 +91,7 @@ const AteliersBotaniqueEntrepriseIDF = () => {
       />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -114,7 +115,7 @@ const AteliersBotaniqueEntrepriseIDF = () => {
             </div>
 
             {/* Zone d'intervention */}
-            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15 p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <div className="flex items-center justify-center gap-3 mb-8">
                 <MapPin className="w-8 h-8 text-sage" />
                 <h2 className="text-2xl md:text-3xl text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
@@ -218,7 +219,7 @@ const AteliersBotaniqueEntrepriseIDF = () => {
             </div>
 
             {/* Pricing */}
-            <div className="bg-white p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
+            <div className="bg-[hsl(var(--yellow))]/15 p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
               <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Tarification Transparente
               </h2>
@@ -270,8 +271,6 @@ const AteliersBotaniqueEntrepriseIDF = () => {
           </div>
         </div>
       </main>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

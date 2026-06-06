@@ -52,6 +52,7 @@ const LandingCollectivites = () => {
         canonical="/animation-collectivites-mairies"
       />
       <Navigation />
+      <LandingPhotoStrip />
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">
@@ -81,7 +82,7 @@ const LandingCollectivites = () => {
       </section>
 
       {/* Pourquoi */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-display text-charcoal mb-4 text-center">
             Pourquoi choisir nos animations pour votre collectivité ?
@@ -134,7 +135,7 @@ const LandingCollectivites = () => {
       </section>
 
       {/* Comment ça marche */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-display text-charcoal mb-10 text-center">Comment ça marche ?</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -162,7 +163,7 @@ const LandingCollectivites = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {occasions.map((o, i) => (
-              <span key={i} className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-charcoal shadow-sm">
+              <span key={i} className="inline-flex items-center gap-2 bg-[hsl(var(--yellow))]/15 px-4 py-2 rounded-full text-charcoal shadow-sm">
                 <CheckCircle className="w-4 h-4 text-sage" />{o}
               </span>
             ))}
@@ -171,7 +172,7 @@ const LandingCollectivites = () => {
       </section>
 
       {/* Engagements */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-display text-charcoal mb-8 text-center">Nos engagements</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -201,7 +202,7 @@ const LandingCollectivites = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {cities.map((city) => (
-              <span key={city} className="inline-flex items-center gap-1 bg-white px-4 py-2 rounded-full text-sm text-charcoal shadow-sm">
+              <span key={city} className="inline-flex items-center gap-1 bg-[hsl(var(--yellow))]/15 px-4 py-2 rounded-full text-sm text-charcoal shadow-sm">
                 <MapPin className="w-3 h-3 text-sage" />{city}
               </span>
             ))}
@@ -220,14 +221,13 @@ const LandingCollectivites = () => {
             <Button asChild size="lg" className="bg-sage hover:bg-sage-dark">
               <Link to="/contact">Demander un devis gratuit</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+            <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-[hsl(var(--yellow))]/15/10">
               <a href="tel:0609831606">Appeler le 06 09 83 16 06</a>
             </Button>
           </div>
         </div>
       </section>
 
-      <LandingPhotoStrip />
       <Footer />
     </div>
   );

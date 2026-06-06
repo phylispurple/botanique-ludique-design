@@ -96,6 +96,7 @@ const ProLandingPage = () => {
       <SchemaOrg type="FAQPage" data={{ questions: faq }} />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-28 pb-20">
         {/* Hero */}
@@ -166,7 +167,7 @@ const ProLandingPage = () => {
 
             {/* Unique editorial context (anti thin-content) */}
             {context && (
-              <article className="bg-white border-brutal shadow-brutal p-8 md:p-10 mb-20 max-w-4xl mx-auto">
+              <article className="bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal p-8 md:p-10 mb-20 max-w-4xl mx-auto">
                 <h2 className="font-display uppercase text-2xl md:text-3xl mb-6 text-foreground leading-tight">
                   {context.heading}
                 </h2>
@@ -287,7 +288,7 @@ const ProLandingPage = () => {
             </div>
 
             {/* Practical */}
-            <div className="bg-white border-brutal shadow-brutal p-8 mb-20">
+            <div className="bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal p-8 mb-20">
               <h2 className="font-display uppercase text-2xl mb-6 text-foreground">
                 Ce qui est inclus
               </h2>
@@ -380,7 +381,7 @@ const ProLandingPage = () => {
 
             {/* Ateliers liés (maillage interne SEO) */}
             {relatedWorkshops && relatedWorkshops.length > 0 && (
-              <div className="bg-white border-brutal shadow-brutal p-8 mb-20">
+              <div className="bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal p-8 mb-20">
                 <h2 className="font-display uppercase text-2xl mb-6 text-center text-foreground">
                   Ateliers et formats liés
                 </h2>
@@ -430,7 +431,6 @@ const ProLandingPage = () => {
           </div>
         </div>
       </main>
-      <LandingPhotoStrip />
       <Footer />
     </div>
   );

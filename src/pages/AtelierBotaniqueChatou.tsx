@@ -70,6 +70,7 @@ const AtelierBotaniqueChatou = () => {
       />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -177,15 +178,15 @@ const AtelierBotaniqueChatou = () => {
                   et de partager notre passion avec les habitants de Chatou et des communes voisines.
                 </p>
                 <div className="grid md:grid-cols-3 gap-4 text-center">
-                  <div className="bg-white p-4 shadow-brutal border-brutal shadow-brutal">
+                  <div className="bg-[hsl(var(--yellow))]/15 p-4 shadow-brutal border-brutal shadow-brutal">
                     <span className="text-2xl font-bold text-sage">+50</span>
                     <p className="text-sm text-charcoal/70">Participants à la MJC</p>
                   </div>
-                  <div className="bg-white p-4 shadow-brutal border-brutal shadow-brutal">
+                  <div className="bg-[hsl(var(--yellow))]/15 p-4 shadow-brutal border-brutal shadow-brutal">
                     <span className="text-2xl font-bold text-sage">12</span>
                     <p className="text-sm text-charcoal/70">Ateliers organisés</p>
                   </div>
-                  <div className="bg-white p-4 shadow-brutal border-brutal shadow-brutal">
+                  <div className="bg-[hsl(var(--yellow))]/15 p-4 shadow-brutal border-brutal shadow-brutal">
                     <span className="text-2xl font-bold text-sage">5★</span>
                     <p className="text-sm text-charcoal/70">Satisfaction moyenne</p>
                   </div>
@@ -200,7 +201,7 @@ const AtelierBotaniqueChatou = () => {
               </h2>
               
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal border-brutal shadow-brutal">
                   <Palette className="w-8 h-8 text-sage mb-3" />
                   <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Les couleurs de Renoir
@@ -210,7 +211,7 @@ const AtelierBotaniqueChatou = () => {
                     les verts profonds des saules, les reflets bleutés de la Seine, les touches de couleur des fleurs sauvages.
                   </p>
                 </div>
-                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal border-brutal shadow-brutal">
                   <Leaf className="w-8 h-8 text-sage mb-3" />
                   <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     La lumière en bord de Seine
@@ -220,7 +221,7 @@ const AtelierBotaniqueChatou = () => {
                     Nos terrariums et kokedamas capturent cette atmosphère apaisante des bords de Seine.
                   </p>
                 </div>
-                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal border-brutal shadow-brutal">
                   <Users className="w-8 h-8 text-sage mb-3" />
                   <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     L'esprit des guinguettes
@@ -230,7 +231,7 @@ const AtelierBotaniqueChatou = () => {
                     Créer ensemble, c'est perpétuer l'esprit des bords de Seine.
                   </p>
                 </div>
-                <div className="bg-white p-6 shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mb-3" />
                   <h3 className="text-xl font-semibold text-charcoal mb-3" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                     Un territoire d'inspiration
@@ -250,21 +251,21 @@ const AtelierBotaniqueChatou = () => {
               </h2>
               
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Boucles de Seine</h3>
                   <p className="text-sm text-charcoal/70">
                     Chatou, Croissy-sur-Seine, Le Vésinet, Montesson, Carrières-sur-Seine
                   </p>
                 </div>
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Hauts-de-Seine</h3>
                   <p className="text-sm text-charcoal/70">
                     Rueil-Malmaison, Nanterre, Suresnes, La Garenne-Colombes
                   </p>
                 </div>
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Yvelines Nord</h3>
                   <p className="text-sm text-charcoal/70">
@@ -421,8 +422,6 @@ const AtelierBotaniqueChatou = () => {
           </div>
         </div>
       </main>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

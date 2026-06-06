@@ -17,6 +17,7 @@ const AteliersBotaniquesComplets = () => {
       />
 
       <Navigation />
+      <LandingPhotoStrip />
 
       {/* Hero */}
       <section className="min-h-[500px] flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-sage/30 to-background py-20">
@@ -36,7 +37,7 @@ const AteliersBotaniquesComplets = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto px-4 max-w-6xl">
           <AnimatedSection>
             <h2 className="text-2xl md:text-3xl font-light text-center mb-12" style={{ fontFamily: "Fraunces, serif", color: "#5D653A" }}>
@@ -151,7 +152,7 @@ const AteliersBotaniquesComplets = () => {
                 popular: "⭐⭐⭐",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white shadow-brutal hover:shadow-brutal-lg transition-all text-center border-brutal shadow-brutal">
+              <div key={i} className="p-6 bg-[hsl(var(--yellow))]/15 shadow-brutal hover:shadow-brutal-lg transition-all text-center border-brutal shadow-brutal">
                 <p className="text-4xl mb-3">{item.emoji}</p>
                 <h3 className="font-semibold text-charcoal mb-2">{item.name}</h3>
                 <p className="text-xs text-charcoal/70 mb-3">{item.desc}</p>
@@ -163,7 +164,7 @@ const AteliersBotaniquesComplets = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ fontFamily: "Fraunces, serif", color: "#5D653A" }}>
@@ -189,8 +190,6 @@ const AteliersBotaniquesComplets = () => {
           </AnimatedSection>
         </div>
       </section>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

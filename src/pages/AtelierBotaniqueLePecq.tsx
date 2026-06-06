@@ -70,6 +70,7 @@ const AtelierBotaniqueLePecq = () => {
       />
       <FloatingIllustrations />
       <Navigation />
+      <LandingPhotoStrip />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -173,21 +174,21 @@ const AtelierBotaniqueLePecq = () => {
               </h2>
               
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Boucles de Seine</h3>
                   <p className="text-sm text-charcoal/70">
                     Le Pecq, Le Port-Marly, Marly-le-Roi, Louveciennes, Bougival
                   </p>
                 </div>
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Coteaux de Seine</h3>
                   <p className="text-sm text-charcoal/70">
                     Saint-Germain-en-Laye, Le Vésinet, Chatou, Croissy-sur-Seine
                   </p>
                 </div>
-                <div className="bg-white p-6 text-center shadow-brutal border-brutal shadow-brutal">
+                <div className="bg-[hsl(var(--yellow))]/15 p-6 text-center shadow-brutal border-brutal shadow-brutal">
                   <MapPin className="w-8 h-8 text-sage mx-auto mb-3" />
                   <h3 className="font-semibold text-charcoal mb-2">Plaine de Montesson</h3>
                   <p className="text-sm text-charcoal/70">
@@ -280,7 +281,7 @@ const AtelierBotaniqueLePecq = () => {
                 Les bords de Seine : une source d'inspiration botanique
               </h2>
               
-              <div className="bg-white p-8 shadow-brutal border-brutal shadow-brutal">
+              <div className="bg-[hsl(var(--yellow))]/15 p-8 shadow-brutal border-brutal shadow-brutal">
                 <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
                   La Seine qui traverse Le Pecq a façonné un écosystème unique, riche en <strong>saules, aulnes, iris des marais</strong> 
                   et autres plantes des zones humides. Cette biodiversité exceptionnelle nourrit notre pratique artistique 
@@ -368,8 +369,6 @@ const AtelierBotaniqueLePecq = () => {
           </div>
         </div>
       </main>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>

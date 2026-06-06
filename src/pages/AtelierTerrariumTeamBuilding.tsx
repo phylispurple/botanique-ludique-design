@@ -27,6 +27,7 @@ const AtelierTerrariumTeamBuilding = () => {
       />
 
       <Navigation />
+      <LandingPhotoStrip />
 
       {/* Hero Section */}
       <section className="min-h-[600px] flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-sage/30 to-background py-20">
@@ -59,7 +60,7 @@ const AtelierTerrariumTeamBuilding = () => {
       </section>
 
       {/* Info Section */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection className="grid md:grid-cols-3 gap-8">
             {[
@@ -110,7 +111,7 @@ const AtelierTerrariumTeamBuilding = () => {
       </section>
 
       {/* Why Choose */}
-      <section className="py-16 px-4 bg-white border-brutal shadow-brutal">
+      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection>
             <h2
@@ -167,7 +168,7 @@ const AtelierTerrariumTeamBuilding = () => {
               { participants: "20-50", price: "35€/pers", duration: "2h" },
               { participants: "50-100", price: "28€/pers", duration: "2h30" },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white border-[3px] border-sage/30 text-center hover:border-sage/60 transition-colors border-brutal shadow-brutal">
+              <div key={i} className="p-6 bg-[hsl(var(--yellow))]/15 border-[3px] border-sage/30 text-center hover:border-sage/60 transition-colors border-brutal shadow-brutal">
                 <p className="text-sm text-muted-foreground mb-2">{item.participants} personnes</p>
                 <p className="text-3xl font-bold text-sage mb-2">{item.price}</p>
                 <p className="text-sm text-charcoal/70">Atelier de {item.duration}</p>
@@ -175,7 +176,7 @@ const AtelierTerrariumTeamBuilding = () => {
             ))}
           </AnimatedSection>
 
-          <AnimatedSection delay={200} className="mt-8 p-6 bg-white border-[3px] border-sage/20 text-center border-brutal shadow-brutal">
+          <AnimatedSection delay={200} className="mt-8 p-6 bg-[hsl(var(--yellow))]/15 border-[3px] border-sage/20 text-center border-brutal shadow-brutal">
             <p className="text-charcoal/70 mb-4">Tarifs dégressifs pour groupes importants. Devis personnalisé sur demande.</p>
             <Link
               to="/contact"
@@ -209,8 +210,6 @@ const AtelierTerrariumTeamBuilding = () => {
           </AnimatedSection>
         </div>
       </section>
-
-      <LandingPhotoStrip />
 
       <Footer />
     </div>
