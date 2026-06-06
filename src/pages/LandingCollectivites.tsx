@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import { SEO } from "@/components/SEO";
 import { Building2, Leaf, Users, Calendar, Clock, MapPin, ArrowRight, CheckCircle, Landmark, HeartHandshake, Palette } from "lucide-react";
 
@@ -226,6 +227,7 @@ const LandingCollectivites = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import { SEO } from "@/components/SEO";
 import { Building2, Users, Gift, Leaf, Clock, MapPin, ArrowRight, CheckCircle, Euro } from "lucide-react";
 
@@ -75,6 +76,7 @@ const LandingCSE = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

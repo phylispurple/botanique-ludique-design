@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import { SEO } from "@/components/SEO";
 import { Heart, Brain, Users, Flower2, Clock, MapPin, Phone, ArrowRight, Sparkles, Leaf } from "lucide-react";
 
@@ -78,6 +79,7 @@ const LandingSeniorsEHPAD = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );

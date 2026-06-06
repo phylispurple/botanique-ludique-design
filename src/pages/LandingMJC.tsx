@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import { SEO } from "@/components/SEO";
 import { Users, Palette, MapPin, ArrowRight, CheckCircle, Clock } from "lucide-react";
 
@@ -70,6 +71,7 @@ const LandingMJC = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );
