@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import { SEO } from "@/components/SEO";
 import { GraduationCap, BookOpen, Users, Clock, MapPin, ArrowRight, CheckCircle } from "lucide-react";
 
@@ -68,6 +69,7 @@ const LandingEcoles = () => {
         </div>
       </section>
 
+      <LandingPhotoStrip />
       <Footer />
     </div>
   );
