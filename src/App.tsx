@@ -232,6 +232,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <GATracker />
           <ScrollToTop />
           <FloatingContactButton />
           <Routes>
