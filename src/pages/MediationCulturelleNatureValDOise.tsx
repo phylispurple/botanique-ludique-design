@@ -22,7 +22,7 @@ const cities = [
 ];
 
 const faqQuestions = [
-  { question: "Proposez-vous de la médiation culturelle autour de la nature dans les Val-d'Oise (95) ?", answer: "Oui ! Nous intervenons dans tout le département des Val-d'Oise (95), notamment à Cergy, Pontoise, Argenteuil, Sarcelles, Enghien-les-Bains. Nous nous déplaçons dans vos locaux ou structures partenaires." },
+  { question: "Proposez-vous de la médiation culturelle autour de la nature dans le Val-d'Oise (95) ?", answer: "Oui ! Nous intervenons dans tout le département du Val-d'Oise (95), notamment à Cergy, Pontoise, Argenteuil, Sarcelles, Enghien-les-Bains. Nous nous déplaçons dans vos locaux ou structures partenaires." },
   { question: "Quels publics sont concernés par la médiation culturelle autour de la nature ?", answer: "Nous intervenons auprès de tous les publics : entreprises, écoles, EHPAD, collectivités, associations, médiathèques, musées et particuliers." },
   { question: "Quels formats proposez-vous ?", answer: "Conférences, ateliers participatifs, balades botaniques, interventions scolaires, animations événementielles. Chaque format est adapté à vos besoins." },
   { question: "Combien coûte une intervention ?", answer: "Les tarifs dépendent du format, de la durée et du nombre de participants. Contactez-nous pour un devis gratuit sous 24h." },
@@ -33,7 +33,7 @@ const MediationCulturelleNatureValDOise = () => {
     <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO
         title="Médiation Culturelle Nature Val-d'Oise (95)"
-        description="Médiation Culturelle Nature dans les Val-d'Oise (95). Conférences, ateliers et interventions botaniques à Cergy, Pontoise, Argenteuil, Sarcelles, Enghien-les-Bains. Ethnobotaniste diplômée EHESS."
+        description="Médiation Culturelle Nature dans le Val-d'Oise (95). Conférences, ateliers et interventions botaniques à Cergy, Pontoise, Argenteuil, Sarcelles, Enghien-les-Bains. Ethnobotaniste diplômée EHESS."
         keywords="médiation culturelle nature, ethnobotanique, conférence plantes cultures, val-d'oise, 95, cergy, pontoise, argenteuil, sarcelles"
         canonical="/mediation-culturelle-nature-val-d-oise"
         region="FR-95"
@@ -42,7 +42,7 @@ const MediationCulturelleNatureValDOise = () => {
       <SchemaOrg type="Service" data={{
         serviceType: "Médiation Culturelle Nature",
         name: "Médiation Culturelle Nature - Val-d'Oise (95)",
-        description: "Médiation Culturelle Nature pour tous publics dans les Val-d'Oise.",
+        description: "Médiation Culturelle Nature pour tous publics dans le Val-d'Oise.",
         areaServed: ["Val-d'Oise"]
       }} />
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
@@ -56,13 +56,13 @@ const MediationCulturelleNatureValDOise = () => {
             <div className="text-center mb-16 animate-fade-in">
               <Globe className="w-12 h-12 text-sage mx-auto mb-6" />
               <h1 className="page-title text-[2.2rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
-                Médiation Culturelle Nature dans les Val-d'Oise (95)
+                Médiation Culturelle Nature dans le Val-d'Oise (95)
               </h1>
               <p className="subtitle-italic text-lg mb-6">
                 Médiation culturelle autour de la nature · Val-d'Oise · Tous publics
               </p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
-                Botanique Ludique propose des interventions de <strong>médiation culturelle autour de la nature</strong> dans tout le département des Val-d'Oise (95). 
+                Botanique Ludique propose des interventions de <strong>médiation culturelle autour de la nature</strong> dans tout le département du Val-d'Oise (95). 
                 Portée par Vanessa Charlery, ethnobotaniste diplômée de l'EHESS, notre approche unique mêle <strong>sciences du vivant, anthropologie et créativité</strong>.
               </p>
             </div>
@@ -72,10 +72,10 @@ const MediationCulturelleNatureValDOise = () => {
                 <BookOpen className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
                   <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
-                    Médiation Culturelle Nature à Cergy et dans les Val-d'Oise
+                    Médiation Culturelle Nature à Cergy et dans le Val-d'Oise
                   </h2>
                   <p className="text-charcoal/80 leading-relaxed mb-4">
-                    Nous intervenons auprès des <strong>entreprises, écoles, EHPAD, collectivités et associations</strong> des Val-d'Oise 
+                    Nous intervenons auprès des <strong>entreprises, écoles, EHPAD, collectivités et associations</strong> du Val-d'Oise 
                     pour des conférences, ateliers participatifs et animations autour des plantes et de la biodiversité.
                   </p>
                   <p className="text-charcoal/80 leading-relaxed">
@@ -112,7 +112,7 @@ const MediationCulturelleNatureValDOise = () => {
             <div className="bg-sage/10 p-8 mb-16 animate-fade-in border-brutal shadow-brutal">
               <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 <MapPin className="w-6 h-6 inline-block mr-2" />
-                Nos interventions dans les Val-d'Oise (95)
+                Nos interventions dans le Val-d'Oise (95)
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {cities.map((city, i) => (
@@ -122,7 +122,7 @@ const MediationCulturelleNatureValDOise = () => {
                 ))}
               </div>
               <p className="text-center text-sm text-charcoal/60 mt-6">
-                Et dans toutes les communes des Val-d'Oise (95). 
+                Et dans toutes les communes du Val-d'Oise (95). 
                 <Link to="/mediation-culturelle-nature-ile-de-france" className="text-sage underline">Voir toutes nos zones d'intervention</Link>
               </p>
             </div>
@@ -141,7 +141,7 @@ const MediationCulturelleNatureValDOise = () => {
 
             <div className="bg-sage text-[hsl(var(--cream))] p-8 md:p-12 text-center animate-fade-in">
               <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
-                Un projet de médiation culturelle nature dans les Val-d'Oise ?
+                Un projet de médiation culturelle nature dans le Val-d'Oise ?
               </h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">Devis gratuit sous 24h · Interventions sur mesure · Tous publics</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -20,7 +20,7 @@ const cities = [
 ];
 
 const faqQuestions = [
-  { question: "Proposez-vous de la médiation botanique dans les Paris (75) ?", answer: "Oui ! Nous intervenons dans tout le département des Paris (75), notamment à Paris 1er–20e, Muséum national d'Histoire naturelle, Jardin des Plantes, Cité des Sciences, Médiathèques parisiennes. Nous nous déplaçons dans vos locaux ou structures partenaires." },
+  { question: "Proposez-vous de la médiation botanique à Paris (75) ?", answer: "Oui ! Nous intervenons dans tout le département de Paris (75), notamment à Paris 1er–20e, Muséum national d'Histoire naturelle, Jardin des Plantes, Cité des Sciences, Médiathèques parisiennes. Nous nous déplaçons dans vos locaux ou structures partenaires." },
   { question: "Quels publics sont concernés par la médiation botanique ?", answer: "Nous intervenons auprès de tous les publics : entreprises, écoles, EHPAD, collectivités, associations, médiathèques, musées et particuliers." },
   { question: "Quels formats proposez-vous ?", answer: "Conférences, ateliers participatifs, balades botaniques, interventions scolaires, animations événementielles. Chaque format est adapté à vos besoins." },
   { question: "Combien coûte une intervention ?", answer: "Les tarifs dépendent du format, de la durée et du nombre de participants. Contactez-nous pour un devis gratuit sous 24h." },
@@ -31,7 +31,7 @@ const MediationBotaniqueParis = () => {
     <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO
         title="Médiation Botanique Paris (75)"
-        description="Médiation Botanique dans les Paris (75). Conférences, ateliers et interventions botaniques à Paris 1er–20e, Muséum national d'Histoire naturelle, Jardin des Plantes, Cité des Sciences, Médiathèques parisiennes. Ethnobotaniste diplômée EHESS."
+        description="Médiation Botanique à Paris (75). Conférences, ateliers et interventions botaniques à Paris 1er–20e, Muséum national d'Histoire naturelle, Jardin des Plantes, Cité des Sciences, Médiathèques parisiennes. Ethnobotaniste diplômée EHESS."
         keywords="médiation botanique, médiation végétale, atelier plantes, paris, 75, paris 1er–20e, muséum national d'histoire naturelle, jardin des plantes, cité des sciences"
         canonical="/mediation-botanique-paris"
         region="FR-75"
@@ -40,7 +40,7 @@ const MediationBotaniqueParis = () => {
       <SchemaOrg type="Service" data={{
         serviceType: "Médiation Botanique",
         name: "Médiation Botanique - Paris (75)",
-        description: "Médiation Botanique pour tous publics dans les Paris.",
+        description: "Médiation Botanique pour tous publics à Paris.",
         areaServed: ["Paris"]
       }} />
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
@@ -54,13 +54,13 @@ const MediationBotaniqueParis = () => {
             <div className="text-center mb-16 animate-fade-in">
               <Leaf className="w-12 h-12 text-sage mx-auto mb-6" />
               <h1 className="page-title text-[2.2rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
-                Médiation Botanique dans les Paris (75)
+                Médiation Botanique à Paris (75)
               </h1>
               <p className="subtitle-italic text-lg mb-6">
                 Médiation botanique · Paris · Tous publics
               </p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
-                Botanique Ludique propose des interventions de <strong>médiation botanique</strong> dans tout le département des Paris (75). 
+                Botanique Ludique propose des interventions de <strong>médiation botanique</strong> dans tout le département de Paris (75). 
                 Portée par Vanessa Charlery, ethnobotaniste diplômée de l'EHESS, notre approche unique mêle <strong>sciences du vivant, anthropologie et créativité</strong>.
               </p>
             </div>
@@ -70,10 +70,10 @@ const MediationBotaniqueParis = () => {
                 <BookOpen className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
                   <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
-                    Médiation Botanique à Paris 1er–20e et dans les Paris
+                    Médiation Botanique à Paris 1er–20e et à Paris
                   </h2>
                   <p className="text-charcoal/80 leading-relaxed mb-4">
-                    Nous intervenons auprès des <strong>entreprises, écoles, EHPAD, collectivités et associations</strong> des Paris 
+                    Nous intervenons auprès des <strong>entreprises, écoles, EHPAD, collectivités et associations</strong> de Paris 
                     pour des conférences, ateliers participatifs et animations autour des plantes et de la biodiversité.
                   </p>
                   <p className="text-charcoal/80 leading-relaxed">
@@ -110,7 +110,7 @@ const MediationBotaniqueParis = () => {
             <div className="bg-sage/10 p-8 mb-16 animate-fade-in border-brutal shadow-brutal">
               <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 <MapPin className="w-6 h-6 inline-block mr-2" />
-                Nos interventions dans les Paris (75)
+                Nos interventions à Paris (75)
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {cities.map((city, i) => (
@@ -120,7 +120,7 @@ const MediationBotaniqueParis = () => {
                 ))}
               </div>
               <p className="text-center text-sm text-charcoal/60 mt-6">
-                Et dans toutes les communes des Paris (75). 
+                Et dans toutes les communes de Paris (75). 
                 <Link to="/mediation-botanique-ile-de-france" className="text-sage underline">Voir toutes nos zones d'intervention</Link>
               </p>
             </div>
@@ -139,7 +139,7 @@ const MediationBotaniqueParis = () => {
 
             <div className="bg-sage text-[hsl(var(--cream))] p-8 md:p-12 text-center animate-fade-in">
               <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
-                Besoin d'une médiation botanique dans les Paris ?
+                Besoin d'une médiation botanique à Paris ?
               </h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">Devis gratuit sous 24h · Interventions sur mesure · Tous publics</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
