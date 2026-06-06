@@ -23,7 +23,26 @@
     <title>Botanique Ludique, ateliers botaniques à Paris et IDF</title>
     <meta name="description" content="Ateliers botaniques créatifs à Paris, Yvelines (78) et Hauts-de-Seine (92), kokedama, terrariums, teintures végétales avec Botanique Ludique.">
 
-    <meta name="author" content="Vanessa Charlery" />
+    <!-- Google Analytics 4 -->
+    <!-- TODO: remplacer G-PLACEHOLDER par ton vrai ID de mesure GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER', {
+        send_page_view: false,          /* on gère page_view manuellement pour SPA */
+        cookie_flags: 'SameSite=None;Secure',
+        cookie_expires: 63072000,       /* 2 ans en secondes */
+        cookie_update: true,
+        allow_google_signals: true,
+        allow_ad_personalization_signals: false, /* respect RGPD */
+        language: 'fr',
+        page_title: document.title,
+        page_location: window.location.href
+      });
+    </script>
+    <!-- End Google Analytics 4 -->
 
     
     
