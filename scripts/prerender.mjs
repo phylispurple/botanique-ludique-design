@@ -80,15 +80,24 @@ function findChromium() {
   });
 }
 
-async function startServer(port) {
-  const handler = sirv(DIST, {
-    dev: false,
-    etag: true,
-    single: true, // SPA fallback to index.html
-    extensions: ["html"],
-  });
+async function startServer(port, spaRoutes) {
+  const staticHandler = sirv(DIST, { dev: false, etag: true });
+  const indexHtml = readFileSync(join(DIST, "index.html"), "utf8");
+  const spaSet = new Set(spaRoutes);
   return new Promise((resolveP, rejectP) => {
-    const server = createServer((req, res) => handler(req, res));
+    const server = createServer((req, res) => {
+      const pathname = (req.url || "/").split("?")[0].replace(/\/$/, "") || "/";
+      // Force SPA fallback for known app routes, bypassing legacy /<slug>.html redirects.
+      if (spaSet.has(pathname)) {
+        res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+        res.end(indexHtml);
+        return;
+      }
+      staticHandler(req, res, () => {
+        res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+        res.end(indexHtml);
+      });
+    });
     server.once("error", rejectP);
     server.listen(port, "127.0.0.1", () => resolveP(server));
   });
@@ -114,7 +123,7 @@ async function main() {
   console.log(`[prerender] Using Chromium at ${executablePath}`);
 
   const port = 4173 + Math.floor(Math.random() * 1000);
-  const server = await startServer(port);
+  const server = await startServer(port, routes);
   const base = `http://127.0.0.1:${port}`;
 
   const puppeteer = (await import("puppeteer-core")).default;
