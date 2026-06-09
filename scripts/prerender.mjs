@@ -140,22 +140,18 @@ async function main() {
       try {
         await page.setUserAgent("Mozilla/5.0 (compatible; PrerenderBot/1.0)");
         const response = await page.goto(url, {
-          waitUntil: "networkidle0",
+          waitUntil: "domcontentloaded",
           timeout: 45000,
         });
         if (!response || response.status() >= 400) {
           throw new Error(`HTTP ${response ? response.status() : "no-response"}`);
         }
-        // Wait for React to populate <head> via react-helmet-async and the root.
-        await page.waitForFunction(
-          () => {
-            const root = document.getElementById("root");
-            return root && root.innerHTML.trim().length > 100;
-          },
-          { timeout: 15000 }
+        // Give React + react-helmet-async time to mount and inject head tags.
+        await new Promise((r) => setTimeout(r, 2500));
+        const len = await page.evaluate(
+          () => document.getElementById("root")?.innerHTML.trim().length || 0
         );
-        // Small settle for late helmet updates / images.
-        await new Promise((r) => setTimeout(r, 250));
+        if (len < 500) throw new Error(`root too small (${len})`);
 
         const html = await page.content();
         const outDir =
