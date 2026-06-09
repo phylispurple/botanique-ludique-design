@@ -109,6 +109,23 @@ async function main() {
     return;
   }
 
+  // Skip prerendering in CI environments (GitHub Actions, etc.) where
+  // Chromium is unavailable or the build window is too tight. Prerendering
+  // still runs locally (npm run build) and in environments that explicitly
+  // opt in via PRERENDER=1.
+  const isCI =
+    process.env.CI === "true" ||
+    process.env.GITHUB_ACTIONS === "true" ||
+    process.env.SKIP_PRERENDER === "1";
+  const forced = process.env.PRERENDER === "1";
+  if (isCI && !forced) {
+    console.warn(
+      "[prerender] CI environment detected (CI/GITHUB_ACTIONS). " +
+        "Skipping prerendering. Set PRERENDER=1 to force."
+    );
+    return;
+  }
+
   const executablePath = findChromium();
   if (!executablePath) {
     console.warn(
