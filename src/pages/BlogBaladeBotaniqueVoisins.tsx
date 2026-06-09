@@ -9,6 +9,8 @@ import { ArrowRight } from "lucide-react";
 import afficheVoisins from "@/assets/au-fil-jardins-voisins-affiche.jpeg.asset.json";
 import panneauRoseraie from "@/assets/roseraie-croix-du-bois-panneau.png.asset.json";
 import versaillesPeuple from "@/assets/versailles-du-peuple-bofill.jpg.asset.json";
+import kiosqueCroixDuBois from "@/assets/croix-du-bois-kiosque.jpg.asset.json";
+import josephineImperatrice from "@/assets/josephine-imperatrice.webp.asset.json";
 
 const BlogBaladeBotaniqueVoisins = () => {
   return (
@@ -86,6 +88,18 @@ const BlogBaladeBotaniqueVoisins = () => {
                 Le jardin actuel est l'œuvre d'un industriel en moulage du début du XXe siècle. Il ne pouvait pas choisir le jardin à la française, trop chargé politiquement et impossible à imiter sans révéler qu'on n'avait ni Le Nôtre ni Versailles. Il ne voulait pas du jardin anglais, trop républicain, trop philosophique. Il a choisi l'italien. Terrasses, kiosque en pierre, sculptures des quatre saisons, perspectives qui cadrent le paysage plutôt que de l'écraser. C'est ce que Pierre Bourdieu appelait une distinction par déplacement. On ne copie pas le signe du dominant, on remonte à sa source. Florence précède Versailles. La référence humaniste et antique est plus légitime, plus ancienne, et permet de reconvertir un capital industriel en capital culturel. Un siècle plus tard, c'est exactement la logique d'un milliardaire de la tech qui s'achète une villa toscane plutôt qu'un château de la Loire.
               </p>
 
+              <figure className="my-8 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
+                <img
+                  src={kiosqueCroixDuBois.url}
+                  alt="Kiosque en pierre du parc de la Croix du Bois à Voisins-le-Bretonneux, coupole en ferronnerie dorée, sculptures et perspective à l'italienne"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+                <figcaption className="p-4 font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/70 border-t-[3px] border-[hsl(var(--black))]">
+                  Kiosque du parc de la Croix du Bois, Voisins-le-Bretonneux. Coupole en ferronnerie, vocabulaire italien.
+                </figcaption>
+              </figure>
+
               <h2 className="font-display text-2xl uppercase tracking-[-1px] text-[hsl(var(--black))] mt-10 mb-4">
                 Jardin à la française, jardin à l'italienne, jardin anglais : trois grammaires politiques
               </h2>
@@ -124,6 +138,18 @@ const BlogBaladeBotaniqueVoisins = () => {
               <p>
                 Joséphine de Beauharnais incarne ce moment. Sa roseraie de Malmaison, deux cent quarante-deux cultivars, s'appuyait sur un véritable réseau d'extraction botanique mondial financé par l'État impérial. Le mythe romantique de la roseraie en pleine terre, peinte par Redouté, s'est construit après sa mort. En réalité les roses étaient en pots, dans une serre. L'image a précédé la légende.
               </p>
+
+              <figure className="my-8 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
+                <img
+                  src={josephineImperatrice.url}
+                  alt="Portrait de l'impératrice Joséphine de Beauharnais, fondatrice de la roseraie de Malmaison, figure centrale de la rosomanie du XIXe siècle"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+                <figcaption className="p-4 font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/70 border-t-[3px] border-[hsl(var(--black))]">
+                  Joséphine de Beauharnais, commanditaire de la roseraie de Malmaison et de son réseau botanique mondial.
+                </figcaption>
+              </figure>
               <p>
                 Sur le panneau, la Rosa Boule de Neige est classée dans les rosiers anciens. C'est en réalité un rosier Bourbon, hybride spontané découvert en 1817 sur l'île Bourbon, aujourd'hui La Réunion, sur une terre alors esclavagiste. Un colon remarque le croisement, envoie les graines à Paris, et de ce hasard colonial naît l'une des familles de roses les plus cultivées du XIXe. Personne ne le sait en regardant la fleur. Les Noisettes, dont l'Aimée Vibert également citée, sont des hybrides américano-chinois arrivés en France via Charleston. Chaque nom de variété est une route commerciale.
               </p>
