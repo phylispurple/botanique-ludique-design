@@ -21,8 +21,17 @@ import blogBotaniqueCollege from "@/assets/blog-botanique-college.jpg";
 import blogPlantesSauvages from "@/assets/blog-plantes-sauvages.jpg";
 import blogMediationScientifique from "@/assets/blog-mediation-scientifique.jpg";
 import blogDuBreuilAffiche from "@/assets/du-breuil-en-fete-2026-affiche.png.asset.json";
+import blogVoisinsAffiche from "@/assets/au-fil-jardins-voisins-affiche.jpeg.asset.json";
 
 const blogPosts = [
+  {
+    slug: "balade-botanique-voisins-le-bretonneux",
+    title: "Au fil des jardins de Voisins : une lecture anthropologique du paysage de SQY",
+    excerpt: "Retour ethnobotanique sur la balade du 7 juin 2026 à Voisins-le-Bretonneux. Croix du Bois, distillerie Decauville, Versailles du peuple de Bofill, écoquartier.",
+    images: [blogVoisinsAffiche.url],
+    date: "2026-06-09",
+    category: "Retour d'expérience"
+  },
   {
     slug: "balade-botanique-ecole-du-breuil",
     title: "Plantes voyageuses, histoires oubliées : balade botanique à l'École Du Breuil",
