@@ -274,9 +274,8 @@ const BlogBaladeBotaniqueVoisins = () => {
                 </Link>
               </div>
             </div>
-          </AnimatedSection>
-        </div>
-      </article>
+          </div>
+        </article>
 
       <BackToTop />
       <Footer />
