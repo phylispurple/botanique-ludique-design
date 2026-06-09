@@ -137,8 +137,8 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO 
-        title="Blog Botanique | Guides, Tutoriels & Idées Nature ✦ Actualités"
-        description="📖 Articles, guides et tutoriels sur la botanique : kokedama, teinture végétale, team building nature. Conseils d'experts et idées d'activités à Paris & IDF."
+        title="Blog ethnobotanique, plantes et médiation culturelle"
+        description="Lisez notre blog ethnobotanique, histoires culturelles des plantes, ressources pédagogiques, tutoriels botaniques et analyses autour du vivant en Île-de-France."
         keywords="blog botanique, actualités nature, guide kokedama, teinture végétale, team building nature, ateliers botaniques Paris"
         canonical="/blog"
       />
