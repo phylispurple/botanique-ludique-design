@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Pages principales -->
   <url>
     <loc>https://botaniqueludique.com/</loc>
     <lastmod>2025-01-05</lastmod>
@@ -25,36 +24,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Routes canoniques et aliases -->
-  <url>
-    <loc>https://botaniqueludique.com/index.html</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/b2b</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <url>
     <loc>https://botaniqueludique.com/agenda</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/calendrier</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/inscription/wardian-case</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://botaniqueludique.com/gallery</loc>
@@ -80,14 +54,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://botaniqueludique.com/calendar</loc>
-    <lastmod>2025-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- 8 Nouvelles Pages React Stratégiques (Vague SEO 1 + 2) -->
   <url>
     <loc>https://botaniqueludique.com/atelier-terrarium-team-building</loc>
     <lastmod>2026-02-11</lastmod>
@@ -136,74 +102,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Pages régionales existantes -->
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-saint-germain-en-laye</loc>
-    <lastmod>2025-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-le-pecq</loc>
-    <lastmod>2025-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-le-vesinet</loc>
-    <lastmod>2025-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-chatou</loc>
-    <lastmod>2025-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-versailles</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-nanterre</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-boulogne-billancourt</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-cergy</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Nouvelles pages SEO (Vague 3) -->
   <url>
     <loc>https://botaniqueludique.com/atelier-botanique-evenement</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-rueil-malmaison</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-conflans-sainte-honorine</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
@@ -230,39 +132,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Pages Animatrice Nature / Botanique (Vague SEO 4) -->
-  <url>
-    <loc>https://botaniqueludique.com/animatrice-nature-ile-de-france</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/animatrice-botanique-yvelines</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/animatrice-nature-paris</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/animatrice-nature-hauts-de-seine</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/animatrice-botanique-val-d-oise</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
   <url>
     <loc>https://botaniqueludique.com/ateliers-botaniques-yvelines</loc>
     <lastmod>2025-01-23</lastmod>
@@ -287,8 +156,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Landing pages segments -->
   <url>
     <loc>https://botaniqueludique.com/animation-seniors-ehpad</loc>
     <lastmod>2025-12-09</lastmod>
@@ -319,8 +186,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Blog -->
   <url>
     <loc>https://botaniqueludique.com/blog</loc>
     <lastmod>2026-02-06</lastmod>
@@ -351,138 +216,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- ============================================ -->
-  <!-- VAGUE 1 : Redirects HTML Team Building -->
-  <!-- ============================================ -->
-
-  <!-- EHPAD / Seniors -->
-
-  <!-- Education / Scolaire -->
-
-  <!-- Villes Yvelines (78) -->
-
-  <!-- Villes Hauts-de-Seine (92) -->
-
-  <!-- Villes Val-d'Oise (95) -->
-
-  <!-- RSE et QVCT -->
-  <!-- Pages consolidées CCAS par département -->
-  <!-- Pages consolidées Médiathèque par département -->
-  <!-- Pages consolidées Centre Social par département -->
-  <!-- Pages consolidées Relais Famille par département -->
-
-  <!-- ============================================ -->
-  <!-- REDIRECTS HTML SUPPLÉMENTAIRES (70+) -->
-  <!-- ============================================ -->
-
-  <!-- Activités intergénérationnelles -->
-
-  <!-- Kokedama variations -->
-
-  <!-- Teinture végétale -->
-
-  <!-- Terrarium variations -->
-
-  <!-- Bien-être en entreprise -->
-
-  <!-- Activités créatives EHPAD -->
-
-  <!-- Atelier botaniques géolocalisés -->
-
-  <!-- Ateliers créatifs école -->
-
-  <!-- EHPAD spécifiques -->
-
-  <!-- Activités pédagogiques -->
-
-  <!-- Team building variations -->
-
-  <!-- Autres activités -->
-
-  <!-- Pages redirects générales existantes -->
-
   <url>
     <loc>https://botaniqueludique.com/animation-collectivites-mairies</loc>
     <lastmod>2026-02-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Pages Intervenant Scientifique (Vague SEO 5) -->
-  <url>
-    <loc>https://botaniqueludique.com/intervenant-scientifique-ile-de-france</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/intervenant-scientifique-paris</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/intervenant-scientifique-yvelines</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/intervenant-scientifique-hauts-de-seine</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/intervenant-scientifique-val-d-oise</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Pages Atelier Botanique Enfant (Vague SEO 5) -->
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-enfant-ile-de-france</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-enfant-paris</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-enfant-yvelines</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-enfant-hauts-de-seine</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-enfant-val-d-oise</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Pages Atelier Botanique Adulte (Vague SEO 5) -->
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-adulte-ile-de-france</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-adulte-paris</loc>
-    <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -492,54 +228,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-adulte-yvelines</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-adulte-hauts-de-seine</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-adulte-val-d-oise</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Médiation scientifique -->
-  <url><loc>https://botaniqueludique.com/mediation-scientifique-ile-de-france</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://botaniqueludique.com/mediation-scientifique-paris</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/mediation-scientifique-yvelines</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/mediation-scientifique-hauts-de-seine</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/mediation-scientifique-val-d-oise</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
-  <!-- Médiation botanique -->
-  <url><loc>https://botaniqueludique.com/mediation-botanique-ile-de-france</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://botaniqueludique.com/mediation-botanique-paris</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/mediation-botanique-yvelines</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/mediation-botanique-hauts-de-seine</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/mediation-botanique-val-d-oise</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
-  <!-- Animation botanique -->
-  <url><loc>https://botaniqueludique.com/animation-botanique-ile-de-france</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://botaniqueludique.com/animation-botanique-paris</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/animation-botanique-yvelines</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/animation-botanique-hauts-de-seine</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/animation-botanique-val-d-oise</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
-  <!-- Médiation culturelle nature -->
-  <url><loc>https://botaniqueludique.com/mediation-culturelle-nature-ile-de-france</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://botaniqueludique.com/mediation-culturelle-nature-paris</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/mediation-culturelle-nature-yvelines</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/mediation-culturelle-nature-hauts-de-seine</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/mediation-culturelle-nature-val-d-oise</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
-  <!-- Pages manquantes ajoutées -->
   <url>
     <loc>https://botaniqueludique.com/association</loc>
     <lastmod>2026-03-23</lastmod>
@@ -637,30 +325,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://botaniqueludique.com/balade-botanique-paris</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/balade-botanique-yvelines</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/balade-botanique-hauts-de-seine</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/balade-botanique-val-d-oise</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://botaniqueludique.com/balade-botanique-entreprise-cse</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -690,8 +354,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Vague SEO 6 : Produits, occasions, guides, B2B, social, départements -->
   <url><loc>https://botaniqueludique.com/atelier-teinture-vegetale-paris</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://botaniqueludique.com/atelier-kombucha-cuir-vegetal</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://botaniqueludique.com/atelier-evjf-botanique-paris</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -714,11 +376,6 @@
   <url><loc>https://botaniqueludique.com/animation-foyer-jeunes-travailleurs</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://botaniqueludique.com/atelier-therapeutique-jardin</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://botaniqueludique.com/atelier-residence-seniors-paris</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/balade-botanique-seine-saint-denis</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/balade-botanique-val-de-marne</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/balade-botanique-essonne</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://botaniqueludique.com/balade-botanique-seine-et-marne</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <!-- Pages déclinées par département (mai 2026) -->
   <url>
     <loc>https://botaniqueludique.com/atelier-terrarium-yvelines</loc>
     <lastmod>2026-05-02</lastmod>
@@ -990,12 +647,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://botaniqueludique.com/cadeau-original-nature-paris</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://botaniqueludique.com/cadeau-original-nature-yvelines</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -1019,11 +670,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://botaniqueludique.com/atelier-botanique-rambouillet</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://botaniqueludique.com/team-building-vegetal-rambouillet</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1036,24 +682,6 @@
   <url><loc>https://botaniqueludique.com/animation-vegetale-hotel-evenementiel</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://botaniqueludique.com/balade-ethnobotanique-office-tourisme</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://botaniqueludique.com/atelier-vegetal-cabinet-rh-coach</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url>
-    <loc>https://botaniqueludique.com/inscription/terrarium-6-juin</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/inscription/mauvaises-herbes</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/inscription/teintures-vegetales</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <url>
     <loc>https://botaniqueludique.com/blog/10-films-nature-idees-fausses</loc>
     <lastmod>2026-06-04</lastmod>
@@ -1104,12 +732,6 @@
   </url>
   <url>
     <loc>https://botaniqueludique.com/atelier-developpement-durable-entreprise</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://botaniqueludique.com/animation-soiree-entreprise-vegetale</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -1252,8 +874,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Landings saisonnières -->
   <url>
     <loc>https://botaniqueludique.com/atelier-fete-des-meres-entreprise</loc>
     <lastmod>2026-06-06</lastmod>
