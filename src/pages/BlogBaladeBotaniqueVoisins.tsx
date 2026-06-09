@@ -52,22 +52,19 @@ const BlogBaladeBotaniqueVoisins = () => {
             Rendez-vous aux jardins 2026 · Voisins-le-Bretonneux · Musée de la Ville
           </p>
 
-          <AnimatedSection delay={80}>
-            <figure className="mb-10 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
-              <img
-                src={afficheVoisins.url}
-                alt="Affiche Au fil des jardins de Voisins, dimanche 7 juin 2026, Musée de la Ville de Saint-Quentin-en-Yvelines"
-                className="w-full h-auto"
-                loading="lazy"
-              />
-              <figcaption className="p-4 font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/70 border-t-[3px] border-[hsl(var(--black))]">
-                Affiche officielle, Au fil des jardins de Voisins, 7 juin 2026, © Musée de la Ville de SQY.
-              </figcaption>
-            </figure>
-          </AnimatedSection>
+          <figure className="mb-10 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
+            <img
+              src={afficheVoisins.url}
+              alt="Affiche Au fil des jardins de Voisins, dimanche 7 juin 2026, Musée de la Ville de Saint-Quentin-en-Yvelines"
+              className="w-full h-auto"
+              loading="lazy"
+            />
+            <figcaption className="p-4 font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/70 border-t-[3px] border-[hsl(var(--black))]">
+              Affiche officielle, Au fil des jardins de Voisins, 7 juin 2026, © Musée de la Ville de SQY.
+            </figcaption>
+          </figure>
 
-          <AnimatedSection delay={120}>
-            <div className="prose prose-lg max-w-none text-[hsl(var(--black))]/85 space-y-6">
+          <div className="prose prose-lg max-w-none text-[hsl(var(--black))]/85 space-y-6">
               <p>
                 Dimanche 7 juin 2026, à l'occasion des Rendez-vous aux jardins et de l'événement « Au fil des jardins de Voisins, des jardins et des hommes » proposé par le Musée de la Ville de Saint-Quentin-en-Yvelines, j'ai parcouru Voisins-le-Bretonneux avec un regard d'<Link to="/guide-ethnobotanique" className="underline decoration-[3px] underline-offset-2 decoration-[hsl(var(--olive))] hover:text-[hsl(var(--olive))] transition-colors">anthropologue de la nature</Link>. L'itinéraire reliait quatre lieux qui, mis bout à bout, racontent toute l'histoire du rapport européen au végétal, du Moyen Âge à l'écoquartier contemporain.
               </p>
