@@ -9,7 +9,18 @@ interface SEOProps {
   type?: string;
   city?: string;
   region?: string;
+  noindex?: boolean;
 }
+
+const AUTO_NOINDEX_PATTERNS: RegExp[] = [
+  /^\/animation-botanique-/,
+  /^\/animatrice-(nature|botanique)-/,
+  /^\/intervenant-scientifique-/,
+  /^\/mediation-(scientifique|botanique|culturelle-nature)-/,
+  /^\/atelier-botanique-(enfant|adulte)-/,
+  /^\/atelier-botanique-(rambouillet|saint-germain-en-laye|le-pecq|le-vesinet|chatou|versailles|nanterre|boulogne-billancourt|cergy|rueil-malmaison|conflans-sainte-honorine)$/,
+  /^\/balade-botanique-(paris|yvelines|hauts-de-seine|val-d-oise|seine-saint-denis|val-de-marne|essonne|seine-et-marne)$/,
+];
 
 export const SEO = ({ 
   title, 
@@ -19,11 +30,23 @@ export const SEO = ({
   canonical,
   type = "website",
   city = "Paris",
-  region = "FR-IDF"
+  region = "FR-IDF",
+  noindex,
 }: SEOProps) => {
   const fullTitle = title.includes('Botanique Ludique') ? title : `${title} | Botanique Ludique`;
   const siteUrl = "https://botaniqueludique.com";
-  const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
+  const normalizedPath = canonical
+    ? canonical.startsWith("http")
+      ? new URL(canonical).pathname
+      : canonical
+    : "/";
+  const canonicalUrl = canonical
+    ? canonical.startsWith("http")
+      ? canonical
+      : `${siteUrl}${canonical}`
+    : siteUrl;
+  const resolvedNoindex = noindex ?? AUTO_NOINDEX_PATTERNS.some((pattern) => pattern.test(normalizedPath));
+  const robotsContent = resolvedNoindex ? "noindex, follow" : "index, follow";
 
   return (
     <Helmet>
@@ -36,7 +59,8 @@ export const SEO = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={robotsContent} />
+      <meta name="googlebot" content={robotsContent} />
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Language Meta */}
