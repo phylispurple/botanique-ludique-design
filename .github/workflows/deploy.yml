@@ -16,18 +16,21 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: npm
+          node-version: 22
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - name: Install Chromium for prerendering
         run: |
           sudo apt-get update
           sudo apt-get install -y chromium-browser || sudo apt-get install -y chromium
-      - run: npm ci
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
       - name: Build + prerender
         env:
           PRERENDER: "1"
           PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
-        run: npm run build
+        run: bun run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
