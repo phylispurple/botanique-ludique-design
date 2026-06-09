@@ -312,8 +312,8 @@ const Workshops = () => {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
       <SEO 
-        title="Ateliers de botanique pour tous — Enfants, adultes, scolaires · Botanique Ludique"
-        description="Ateliers ludiques et pédagogiques autour des plantes. Pour collèges, lycées, familles et entreprises en Île-de-France. Réservation en ligne."
+        title="Ateliers botaniques à Paris et en Île-de-France"
+        description="Découvrez nos ateliers botaniques à Paris et en Île-de-France, terrarium, kokedama, teinture végétale, herbier et créations florales pour adultes, enfants, écoles et entreprises."
         keywords="atelier botanique Paris, atelier botanique Yvelines, atelier botanique Hauts-de-Seine, atelier botanique Val-d'Oise, kokedama Paris, teinture végétale Paris, atelier scolaire botanique"
         canonical="/workshops"
       />
