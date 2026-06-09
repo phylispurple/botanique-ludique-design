@@ -253,8 +253,8 @@ const Agenda = () => {
   return (
     <div className="min-h-screen bg-cream">
       <SEO
-        title="Agenda des Ateliers Botaniques | Paris & Île-de-France"
-        description="Retrouvez tous les prochains ateliers et balades botaniques de Botanique Ludique à Paris et en Île-de-France. Kokedama, terrarium, teinture végétale."
+        title="Agenda des ateliers et balades botaniques"
+        description="Consultez l'agenda Botanique Ludique, prochains ateliers, balades botaniques et événements autour des plantes à Paris et en Île-de-France."
         keywords="agenda atelier botanique, réservation atelier Paris, dates ateliers Yvelines, planning ateliers botaniques"
         canonical="/agenda"
       />

@@ -138,8 +138,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO
-        title="Contact & Réservation ✦ Devis Gratuit"
-        description="✉️ Contactez Botanique Ludique pour réserver votre atelier. Devis gratuit pour entreprises, écoles, particuliers. Paris & IDF."
+        title="Contact et réservation d'atelier botanique"
+        description="Contactez Botanique Ludique pour réserver un atelier botanique, une balade ou une intervention sur mesure à Paris et en Île-de-France."
         keywords="contact atelier botanique, réserver kokedama, devis formation botanique, contact Botanique Ludique"
         canonical="/contact"
       />
