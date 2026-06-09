@@ -85,7 +85,8 @@ async function startServer(port) {
     dev: false,
     etag: true,
     single: true, // SPA fallback to index.html
-    extensions: ["html"],
+    // NOTE: no `extensions: ["html"]` — legacy /<slug>.html redirect files
+    // would otherwise shadow SPA routes like /contact.
   });
   return new Promise((resolveP, rejectP) => {
     const server = createServer((req, res) => handler(req, res));
