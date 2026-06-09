@@ -15,7 +15,7 @@ const BlogBaladeBotaniqueVoisins = () => {
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO
-        title="Balade botanique à Voisins-le-Bretonneux : jardins, roses et pouvoirs"
+        title="Balade botanique Voisins-le-Bretonneux : jardins, pouvoir et histoire coloniale | Botanique Ludique"
         description="Retour ethnobotanique sur Au fil des jardins de Voisins, 7 juin 2026. Parc de la Croix du Bois, Decauville, Versailles du peuple de Bofill et écoquartier."
         keywords="balade botanique Voisins-le-Bretonneux, Au fil des jardins de Voisins, parc de la Croix du Bois, distillerie Decauville, Versailles du peuple Bofill, écoquartier Saint-Quentin-en-Yvelines, anthropologie de la nature, rosomanie, roses Bourbon, roses Austin"
         canonical="/blog/balade-botanique-voisins-le-bretonneux"
