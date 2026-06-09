@@ -220,7 +220,7 @@ const BlogBaladeBotaniqueVoisins = () => {
               </p>
 
               <h2 className="font-display text-2xl uppercase tracking-[-1px] text-[hsl(var(--black))] mt-10 mb-4">
-                Fil anthropologique : ce que ce territoire dit en plusieurs langues
+                Fil anthropologique : ce que ce territoire dit à travers les âges
               </h2>
               <p>
                 Mis bout à bout, ces quatre lieux racontent la même histoire en plusieurs ontologies successives. Au Moyen Âge, la plante est un signe divin à lire, l'analogisme de Descola. À la Renaissance, elle devient un partenaire de la contemplation humaine, l'humanisme. Au XIXe industriel, elle bascule en ressource à transformer, le naturalisme. À l'époque coloniale, elle devient une marchandise à extraire à l'échelle mondiale, des roses chinoises aux betteraves antillaises. À l'époque contemporaine, elle redevient un indicateur de qualité de vie urbaine et, parfois, dans les interstices d'un verger participatif ou d'une noue plantée, un commun à reconstruire.
