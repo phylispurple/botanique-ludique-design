@@ -123,7 +123,7 @@ async function main() {
   console.log(`[prerender] Using Chromium at ${executablePath}`);
 
   const port = 4173 + Math.floor(Math.random() * 1000);
-  const server = await startServer(port);
+  const server = await startServer(port, routes);
   const base = `http://127.0.0.1:${port}`;
 
   const puppeteer = (await import("puppeteer-core")).default;
