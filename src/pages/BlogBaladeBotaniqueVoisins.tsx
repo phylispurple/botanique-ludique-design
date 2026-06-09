@@ -2,7 +2,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
-import AnimatedSection from "@/components/AnimatedSection";
 import BackToTop from "@/components/BackToTop";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
