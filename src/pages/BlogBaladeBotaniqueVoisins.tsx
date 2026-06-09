@@ -42,17 +42,15 @@ const BlogBaladeBotaniqueVoisins = () => {
 
       <article className="pt-32 pb-20 px-6 md:px-16 lg:px-[120px]">
         <div className="max-w-3xl mx-auto">
-          <AnimatedSection>
-            <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-5">
-              Retour d'expérience · Anthropologie de la nature
-            </span>
-            <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-2px] text-[hsl(var(--black))] mb-6">
-              Au fil des jardins de Voisins : une lecture anthropologique du paysage de Saint-Quentin-en-Yvelines
-            </h1>
-            <p className="font-mono-brand text-xs uppercase tracking-[2px] text-[hsl(var(--black))]/60 mb-10">
-              Rendez-vous aux jardins 2026 · Voisins-le-Bretonneux · Musée de la Ville
-            </p>
-          </AnimatedSection>
+          <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-5">
+            Retour d'expérience · Anthropologie de la nature
+          </span>
+          <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-2px] text-[hsl(var(--black))] mb-6">
+            Au fil des jardins de Voisins : une lecture anthropologique du paysage de Saint-Quentin-en-Yvelines
+          </h1>
+          <p className="font-mono-brand text-xs uppercase tracking-[2px] text-[hsl(var(--black))]/60 mb-10">
+            Rendez-vous aux jardins 2026 · Voisins-le-Bretonneux · Musée de la Ville
+          </p>
 
           <AnimatedSection delay={80}>
             <figure className="mb-10 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
