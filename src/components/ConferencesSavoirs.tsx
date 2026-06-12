@@ -48,6 +48,12 @@ const balades = [
     desc: "Une balade pensée comme une conférence en mouvement. Croiser anthropologie, histoire des sciences et études postcoloniales pour redonner voix aux savoirs autochtones et aux figures invisibilisées de la botanique mondiale.",
     season: "Sur demande · Adapté au groupe et au lieu",
   },
+  {
+    icon: Sprout,
+    title: "Parcs Historiques & Jardins de Banlieue",
+    desc: "De l'École Du Breuil au parc de la Croix-du-Bois à Voisins-le-Bretonneux, une lecture comparée des jardins franciliens : collections impériales, roseraies de notables et plantations municipales racontent l'histoire sociale du végétal en Île-de-France. Inspiré de nos terrains publiés sur le blog.",
+    season: "Printemps · Été · Automne · 2h à 2h30",
+  },
 ];
 
 const modules = [
@@ -125,7 +131,7 @@ const ConferencesSavoirs = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-0">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0">
             {balades.map((balade, idx) => (
               <AnimatedSection key={idx} delay={idx * 120} className="h-full">
                 <div className="h-full p-9 border border-white/10 -mt-px -ml-px transition-colors duration-300 hover:bg-white/[0.06] flex flex-col">

@@ -121,7 +121,7 @@ const Index = () => {
               </button>
               <button
                 onClick={() => navigate('/#mediation')}
-                className="btn-brutal bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--cream))] text-sm px-9 py-4"
+                className="btn-brutal bg-[hsl(var(--orange))] text-[hsl(var(--cream))] border-[hsl(var(--orange))] hover:bg-primary-foreground hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--orange))] text-sm px-9 py-4"
               >
                 Médiation & Savoirs →
               </button>
