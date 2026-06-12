@@ -85,34 +85,22 @@ const AteliersBotaniquesYvelines = () => {
                 Nos Ateliers par Ville dans les Yvelines
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                <Link 
-                  to="/atelier-botanique-saint-germain-en-laye"
-                  className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
-                >
-                  <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 Saint-Germain-en-Laye</span>
-                  <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">Forêt domaniale & patrimoine</span>
-                </Link>
-                <Link 
-                  to="/atelier-botanique-chatou"
-                  className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
-                >
-                  <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 Chatou</span>
-                  <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">Île des Impressionnistes</span>
-                </Link>
-                <Link 
-                  to="/atelier-botanique-le-vesinet"
-                  className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
-                >
-                  <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 Le Vésinet</span>
-                  <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">Ville-parc classée</span>
-                </Link>
-                <Link 
-                  to="/atelier-botanique-le-pecq"
-                  className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center hover:bg-sage hover:text-[hsl(var(--cream))] transition-all shadow-brutal group border-brutal shadow-brutal"
-                >
-                  <span className="block text-sage-dark font-semibold group-hover:text-[hsl(var(--cream))]">📍 Le Pecq</span>
-                  <span className="text-xs text-charcoal/60 group-hover:text-[hsl(var(--cream))]/80">Bords de Seine</span>
-                </Link>
+                <div className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center shadow-brutal border-brutal">
+                  <span className="block text-sage-dark font-semibold">📍 Saint-Germain-en-Laye</span>
+                  <span className="text-xs text-charcoal/60">Forêt domaniale et patrimoine</span>
+                </div>
+                <div className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center shadow-brutal border-brutal">
+                  <span className="block text-sage-dark font-semibold">📍 Chatou</span>
+                  <span className="text-xs text-charcoal/60">Île des Impressionnistes</span>
+                </div>
+                <div className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center shadow-brutal border-brutal">
+                  <span className="block text-sage-dark font-semibold">📍 Le Vésinet</span>
+                  <span className="text-xs text-charcoal/60">Ville-parc classée</span>
+                </div>
+                <div className="bg-[hsl(var(--yellow))]/15 px-4 py-3 text-center shadow-brutal border-brutal">
+                  <span className="block text-sage-dark font-semibold">📍 Le Pecq</span>
+                  <span className="text-xs text-charcoal/60">Bords de Seine</span>
+                </div>
               </div>
               <p className="text-center text-charcoal/70">
                 Nous intervenons également à Croissy-sur-Seine, Montesson et dans toute l'Île-de-France
