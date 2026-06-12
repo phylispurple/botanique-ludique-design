@@ -119,6 +119,12 @@ const Index = () => {
               >
                 Agenda & Inscriptions →
               </button>
+              <button
+                onClick={() => navigate('/#mediation')}
+                className="btn-brutal bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--cream))] text-sm px-9 py-4"
+              >
+                Médiation & Savoirs →
+              </button>
             </div>
           </AnimatedSection>
         </div>
