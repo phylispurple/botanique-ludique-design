@@ -131,7 +131,7 @@ const ConferencesSavoirs = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-0">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0">
             {balades.map((balade, idx) => (
               <AnimatedSection key={idx} delay={idx * 120} className="h-full">
                 <div className="h-full p-9 border border-white/10 -mt-px -ml-px transition-colors duration-300 hover:bg-white/[0.06] flex flex-col">
