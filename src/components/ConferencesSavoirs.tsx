@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
-import { GraduationCap, Sprout, Microscope, Landmark, Users, BookOpen, Compass, TreePine } from "lucide-react";
+import { GraduationCap, Sprout, Microscope, Landmark, Users, BookOpen, Compass, TreePine, ArrowUpRight } from "lucide-react";
 
 const conferences = [
   {
