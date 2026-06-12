@@ -48,6 +48,12 @@ const balades = [
     desc: "Une balade pensée comme une conférence en mouvement. Croiser anthropologie, histoire des sciences et études postcoloniales pour redonner voix aux savoirs autochtones et aux figures invisibilisées de la botanique mondiale.",
     season: "Sur demande · Adapté au groupe et au lieu",
   },
+  {
+    icon: Sprout,
+    title: "Parcs Historiques & Jardins de Banlieue",
+    desc: "De l'École Du Breuil au parc de la Croix-du-Bois à Voisins-le-Bretonneux, une lecture comparée des jardins franciliens : collections impériales, roseraies de notables et plantations municipales racontent l'histoire sociale du végétal en Île-de-France. Inspiré de nos terrains publiés sur le blog.",
+    season: "Printemps · Été · Automne · 2h à 2h30",
+  },
 ];
 
 const modules = [
