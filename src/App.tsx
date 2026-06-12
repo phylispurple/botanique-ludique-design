@@ -159,6 +159,7 @@ import IdeeCadeauAmoureuxPlantes from "./pages/IdeeCadeauAmoureuxPlantes";
 import GuideTerrarium from "./pages/GuideTerrarium";
 import GuideKokedama from "./pages/GuideKokedama";
 import GuideEthnobotanique from "./pages/GuideEthnobotanique";
+import GuideEthnobotaniqueRegard from "./pages/GuideEthnobotaniqueRegard";
 import GuidePlantesTinctoriales from "./pages/GuidePlantesTinctoriales";
 import AnimationSeminaireParis from "./pages/AnimationSeminaireParis";
 import AtelierOnboarding from "./pages/AtelierOnboarding";
@@ -393,6 +394,7 @@ const App = () => (
                  <Route path="/guide/comment-faire-un-terrarium" element={<GuideTerrarium />} />
                  <Route path="/guide/comment-faire-un-kokedama" element={<GuideKokedama />} />
                  <Route path="/guide/ethnobotanique-definition" element={<GuideEthnobotanique />} />
+                 <Route path="/guide-ethnobotanique" element={<GuideEthnobotaniqueRegard />} />
                  <Route path="/guide/plantes-tinctoriales-ile-de-france" element={<GuidePlantesTinctoriales />} />
                  <Route path="/animation-seminaire-entreprise-paris" element={<AnimationSeminaireParis />} />
                  <Route path="/atelier-onboarding-collaborateurs" element={<AtelierOnboarding />} />
