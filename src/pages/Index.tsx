@@ -114,16 +114,16 @@ const Index = () => {
                 Découvrir les ateliers →
               </button>
               <button
+                onClick={() => navigate('/#mediation')}
+                className="btn-brutal bg-[hsl(var(--blue))] text-[hsl(var(--cream))] border-[hsl(var(--blue))] hover:bg-primary-foreground hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--blue))] text-sm px-9 py-4"
+              >
+                Médiation & Savoirs →
+              </button>
+              <button
                 onClick={() => navigate('/agenda')}
                 className="btn-brutal bg-primary text-primary-foreground border-primary hover:bg-primary/80 hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--olive))] text-sm px-9 py-4"
               >
                 Agenda & Inscriptions →
-              </button>
-              <button
-                onClick={() => navigate('/#mediation')}
-                className="btn-brutal bg-[hsl(var(--orange))] text-[hsl(var(--cream))] border-[hsl(var(--orange))] hover:bg-primary-foreground hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--orange))] text-sm px-9 py-4"
-              >
-                Médiation & Savoirs →
               </button>
             </div>
           </AnimatedSection>
@@ -132,7 +132,7 @@ const Index = () => {
 
       {/* ===== MARQUEE ===== */}
       <Marquee
-        items={["Kokedama", "Teinture végétale", "Terrarium", "Vannerie", "Couronne de fleurs", "Sachet de senteurs"]}
+        items={["Kokedama", "Teinture végétale", "Terrarium", "Vannerie", "Couronne de fleurs", "Sachet de senteurs", "Ethnographie", "Médiation", "Balade botanique"]}
         color="green"
         speed={25}
       />
