@@ -191,7 +191,82 @@ const ConferencesSavoirs = () => {
         </div>
       </div>
 
-      {/* CTA bar */}
+      {/* Lectures associées — articles du blog */}
+      <div className="border-t border-white/[0.12] px-6 md:px-16 lg:px-[120px] py-16">
+        <AnimatedSection>
+          <span className="section-label block mb-4" style={{ color: 'hsl(73 44% 67%)' }}>
+            Pour aller plus loin
+          </span>
+          <h3 className="font-display text-3xl md:text-4xl uppercase leading-[0.95] mb-4 text-white">
+            Lectures<br />Associées
+          </h3>
+          <p className="text-base text-white/70 max-w-[640px] leading-[1.7] mb-12">
+            Une sélection d'articles qui prolongent nos conférences et balades : histoire coloniale du végétal, anthropologie des plantes et médiation scientifique.
+          </p>
+        </AnimatedSection>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0">
+          {[
+            {
+              to: "/blog/balade-botanique-voisins-le-bretonneux",
+              eyebrow: "Balade · Yvelines",
+              title: "Voisins-le-Bretonneux : jardins, pouvoir et histoire coloniale",
+              desc: "Lire un parc comme une archive vivante : roses, pouvoir et circulations végétales.",
+            },
+            {
+              to: "/blog/monstera-colonialisme",
+              eyebrow: "Anthropologie",
+              title: "Monstera deliciosa : une plante d'intérieur née du colonialisme",
+              desc: "Comment une liane d'Amérique centrale est devenue l'icône déco mondiale.",
+            },
+            {
+              to: "/blog/palmiers-haussmann",
+              eyebrow: "Histoire urbaine",
+              title: "Palmiers, platanes, ginkgos : la botanique impériale d'Haussmann",
+              desc: "Le végétal parisien comme document de l'histoire coloniale française.",
+            },
+            {
+              to: "/blog/terrarium-biopiraterie",
+              eyebrow: "Histoire des sciences",
+              title: "Du terrarium à la biopiraterie : la caisse de Ward",
+              desc: "Quand un bocal de verre a changé la géographie économique du monde.",
+            },
+            {
+              to: "/blog/mediation-scientifique-definition-exemples",
+              eyebrow: "Ressources",
+              title: "Qu'est-ce que la médiation scientifique ? Définition et exemples",
+              desc: "Vulgarisation, conférences, ateliers : panorama d'une pratique en plein essor.",
+            },
+            {
+              to: "/blog",
+              eyebrow: "Tous les articles",
+              title: "Explorer le blog",
+              desc: "Ethnobotanique, histoire des plantes, pédagogie : nos publications.",
+            },
+          ].map((art, idx) => (
+            <AnimatedSection key={idx} delay={idx * 80} className="h-full">
+              <Link
+                to={art.to}
+                className="h-full p-8 md:p-9 border border-white/[0.12] -mt-px -ml-px transition-colors duration-300 hover:bg-white/[0.06] flex flex-col group"
+              >
+                <div className="flex items-start justify-between mb-4 gap-3">
+                  <span className="font-mono-brand text-[10px] tracking-[3px] uppercase text-[hsl(73_44%_67%)]">
+                    {art.eyebrow}
+                  </span>
+                  <ArrowUpRight className="w-4 h-4 text-white/40 group-hover:text-[hsl(73_44%_67%)] group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
+                </div>
+                <h4 className="font-display text-lg md:text-[19px] uppercase leading-[1.15] mb-3 text-white">
+                  {art.title}
+                </h4>
+                <p className="text-[13px] leading-[1.65] text-white/60 text-justify flex-1">
+                  {art.desc}
+                </p>
+              </Link>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+
       <div className="bg-[hsl(var(--olive))] py-9 px-6 md:px-16 lg:px-[120px] flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
           <h3 className="font-display text-xl md:text-[22px] uppercase text-[hsl(var(--black))]">
