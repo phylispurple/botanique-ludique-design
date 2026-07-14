@@ -121,8 +121,8 @@ const AtelierTeintureVegetale = () => {
             </section>
 
             <section className="mb-20 animate-fade-in">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {[teintureEnfants1, teintureEnfants2, teintureEnfants3].map((img, i) => (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[teintureEnfants1, teintureEnfants2, teintureEnfants3, teintureEnfantsTshirt, teintureEnfants4, teintureEnfants5, teintureEnfants6, teintureEnfantsTshirtRose].map((img, i) => (
                   <div key={i} className="aspect-[4/3] overflow-hidden border-brutal shadow-brutal">
                     <img
                       src={img.url}
