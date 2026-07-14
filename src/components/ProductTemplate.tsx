@@ -23,6 +23,7 @@ export interface ProductTemplateData {
   faqs: { q: string; a: string }[];
   videoSrc?: string;
   videoCaption?: string;
+  photos?: { src: string; alt: string; caption?: string }[];
 
 }
 
