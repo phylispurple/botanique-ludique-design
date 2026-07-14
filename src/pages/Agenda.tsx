@@ -54,6 +54,39 @@ const upcomingEvents: UpcomingEvent[] = [];
 
 const pastEvents: PastEvent[] = [
   {
+    id: "stage-botanique-chatou-juillet",
+    name: "Stage Botanique, Vacances d'Été",
+    date: "Du 7 au 10 juillet 2026",
+    parsedDate: d(2026, 7, 7),
+    time: "10h30 / 12h00",
+    location: "MJC de Chatou",
+    audience: "8 / 15 ans",
+    description:
+      "Une semaine de découverte botanique pendant les vacances d'été. Inscriptions et informations sur le site de la MJC de Chatou.",
+  },
+  {
+    id: "kokedama-franconville",
+    name: "Atelier Kokedama, Les Jardins Suspendus",
+    date: "Samedi 5 juillet 2026",
+    parsedDate: d(2026, 7, 5),
+    time: "10h30 / 12h30",
+    location: "Buttes du Parisis, Franconville",
+    audience: "Tout public",
+    description:
+      "Atelier en partenariat avec la Région Île-de-France Nature. Créez votre propre kokedama dans un cadre naturel exceptionnel. Inscriptions ouvertes à partir du 5 juin.",
+  },
+  {
+    id: "au-fil-des-jardins-voisins",
+    name: "Au fil des jardins de Voisins",
+    date: "Dimanche 7 juin 2026",
+    parsedDate: d(2026, 6, 7),
+    time: "16h00",
+    location: "Domaine de la Croix du Bois, chemin de la Croix du Bois, Voisins-le-Bretonneux (parking sur place)",
+    audience: "Tout public à partir de 10 ans, durée 2h",
+    description:
+      "Des jardins et des hommes. En compagnie de Vanessa Charlery, médiatrice culturelle et ethnobotaniste formée en anthropologie de la nature à l'EHESS, partez à la rencontre des jardins de Voisins-le-Bretonneux comme vous ne les avez jamais vus. Vous saurez tout de ce qu'ils nous disent de notre rapport au vivant à travers les époques, mais aussi de ce qu'ils nous disent de nos sociétés.",
+  },
+  {
     id: "wardian-case-6-juin",
     name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
     date: "Samedi 6 juin 2026",
