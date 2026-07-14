@@ -9,7 +9,7 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link, useLocation } from "react-router-dom";
-import dyeingAsset from "@/assets/gallery-teinture-enfants-tshirt.jpg.asset.json";
+import dyeingAsset from "@/assets/gallery-teinture-vegetale-workshop.jpg.asset.json";
 import terrariumAsset from "@/assets/gallery-terrarium-bocal-fittonia.jpg.asset.json";
 import kokedamaAsset from "@/assets/gallery-kokedama-collection.jpg.asset.json";
 const dyeingImage = dyeingAsset.url;
