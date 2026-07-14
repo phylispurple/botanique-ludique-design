@@ -40,6 +40,9 @@ const AtelierKokedamaParis = () => (
       { q: "L'atelier est-il accessible aux débutant·e·s ?", a: "Oui, totalement. Aucune expérience préalable n'est nécessaire, le geste est expliqué et accompagné." },
       { q: "Peut-on suspendre n'importe où ?", a: "Préférez un endroit lumineux sans soleil direct, et accessible pour le trempage hebdomadaire." },
     ],
+    videoSrc: "/videos/workshop-kokedama-atelier.mp4",
+    videoCaption: "Atelier kokedama, gestes et matières",
+
   }} />
 );
 export default AtelierKokedamaParis;

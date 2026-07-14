@@ -5,7 +5,7 @@ const allVideos = [
   { src: "/videos/workshop-dyeing.mp4", tag: "Teinture", title: "Teinture Végétale" },
   { src: "/videos/workshop-epoxy-floral.mp4", tag: "Époxy", title: "Époxy Floral" },
   { src: "/videos/workshop-demo-2.mp4", tag: "Création", title: "Création Botanique" },
-  { src: "/videos/workshop-demo-3.mp4", tag: "Nature", title: "Éléments Naturels" },
+  { src: "/videos/workshop-kokedama-atelier.mp4", tag: "Kokedama", title: "Atelier Kokedama" },
   { src: "/videos/workshop-demo-4.mp4", tag: "Participatif", title: "Atelier Participatif" },
 ];
 

@@ -21,6 +21,9 @@ export interface ProductTemplateData {
   bookingLabel?: string;
   related: { to: string; label: string }[];
   faqs: { q: string; a: string }[];
+  videoSrc?: string;
+  videoCaption?: string;
+
 }
 
 const ProductTemplate = ({ data }: { data: ProductTemplateData }) => {
@@ -73,6 +76,32 @@ const ProductTemplate = ({ data }: { data: ProductTemplateData }) => {
             ))}
           </div>
         </section>
+
+        {data.videoSrc && (
+          <section className="border-t-[3px] border-[hsl(var(--black))] bg-[hsl(var(--cream))] py-16 px-6 md:px-16 lg:px-[120px]">
+            <span className="font-mono-brand text-[11px] tracking-[3px] uppercase opacity-60 block mb-4">
+              En vidéo
+            </span>
+            <h2 className="font-display text-2xl md:text-4xl uppercase mb-8 leading-[1]">
+              L'atelier en mouvement
+            </h2>
+            <div className="border-[3px] border-[hsl(var(--black))] shadow-brutal overflow-hidden max-w-[1100px]">
+              <video
+                src={data.videoSrc}
+                className="w-full h-auto block"
+                controls
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              />
+            </div>
+            {data.videoCaption && (
+              <p className="font-mono-brand text-xs uppercase tracking-[2px] mt-4 opacity-70">{data.videoCaption}</p>
+            )}
+          </section>
+        )}
+
 
         {/* Étapes - format vertical numéroté */}
         <section className="bg-[hsl(var(--black))] text-[hsl(var(--cream))] py-20 px-6 md:px-16 lg:px-[120px]">
