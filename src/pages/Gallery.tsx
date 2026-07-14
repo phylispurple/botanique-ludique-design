@@ -45,6 +45,8 @@ import terrariumEnfantsMousseImage from "@/assets/gallery-terrarium-enfants-mous
 import teintureEnfants1 from "@/assets/gallery-teinture-enfants-1.jpg.asset.json";
 import teintureEnfants2 from "@/assets/gallery-teinture-enfants-2.jpg.asset.json";
 import teintureEnfants3 from "@/assets/gallery-teinture-enfants-3.jpg.asset.json";
+import terrariumAdultesGroupe from "@/assets/gallery-terrarium-adultes-groupe.jpg.asset.json";
+
 
 
 const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string; className?: string; style?: React.CSSProperties }) => {
