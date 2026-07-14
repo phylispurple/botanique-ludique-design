@@ -43,6 +43,11 @@ const AtelierTerrariumParis = () => (
       { q: "Combien de temps vit un terrarium ?", a: "Un terrarium fermé bien équilibré peut vivre plusieurs années sans intervention majeure, parfois plus de cinq ans." },
       { q: "Peut-on organiser un atelier privatisé ?", a: "Oui. Anniversaire, EVJF, séminaire d'entreprise : nous proposons des formats privatisés à partir de six personnes." },
     ],
+    photos: [
+      { src: terrariumBocalFittonia.url, alt: "Terrarium en bocal avec fittonia et tradescantia", caption: "Terrarium en bocal" },
+      { src: terrariumFittoniaPrep.url, alt: "Composition d'un terrarium fittonia", caption: "Composition en cours" },
+      { src: terrariumAdultesGroupe.url, alt: "Atelier terrarium en groupe adultes", caption: "Atelier en groupe" },
+    ],
   }} />
 );
 export default AtelierTerrariumParis;
