@@ -84,7 +84,9 @@ const Gallery = () => {
     { src: teintureEnfants1.url, alt: "Atelier teinture végétale enfants, t-shirt orange", caption: "Atelier teinture végétale enfants, T-shirt teint aux pigments naturels", type: "image" },
     { src: teintureEnfants2.url, alt: "Enfant peignant un t-shirt à la betterave", caption: "Atelier teinture végétale enfants, Application de pigment de betterave", type: "image" },
     { src: teintureEnfants3.url, alt: "Application de teinture végétale au pinceau", caption: "Atelier teinture végétale enfants, Teinture au pinceau", type: "image" },
+    { src: terrariumAdultesGroupe.url, alt: "Atelier terrarium en groupe, adultes", caption: "Atelier terrarium, Création en groupe entre collègues", type: "image" },
     { src: portraitVanessaImage, alt: "Vanessa Charlery, ethnobotaniste", caption: "Portrait, Vanessa Charlery, fondatrice", type: "image" },
+
 
     { src: terrariumEnfantsMousseImage, alt: "Atelier terrarium enfants avec mousse", caption: "Atelier enfants, Préparation de la mousse pour terrariums", type: "image" },
     { src: fittoniaPotsImage, alt: "Plantules de Fittonia en pots", caption: "Fittonia, plantules prêtes pour les terrariums", type: "image" },
