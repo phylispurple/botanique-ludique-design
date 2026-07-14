@@ -103,8 +103,33 @@ const ProductTemplate = ({ data }: { data: ProductTemplateData }) => {
           </section>
         )}
 
+        {data.photos && data.photos.length > 0 && (
+          <section className="border-t-[3px] border-[hsl(var(--black))] bg-[hsl(var(--cream))] py-16 px-6 md:px-16 lg:px-[120px]">
+            <span className="font-mono-brand text-[11px] tracking-[3px] uppercase opacity-60 block mb-4">
+              En images
+            </span>
+            <h2 className="font-display text-2xl md:text-4xl uppercase mb-8 leading-[1]">
+              L'atelier en photos
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-[1200px]">
+              {data.photos.map((p, i) => (
+                <figure key={i} className="border-[3px] border-[hsl(var(--black))] shadow-brutal overflow-hidden bg-[hsl(var(--cream))]">
+                  <div className="aspect-[4/5] overflow-hidden">
+                    <img src={p.src} alt={p.alt} loading="lazy" className="w-full h-full object-cover" />
+                  </div>
+                  {p.caption && (
+                    <figcaption className="font-mono-brand text-[10px] uppercase tracking-[1.5px] p-3 border-t-[3px] border-[hsl(var(--black))]">
+                      {p.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              ))}
+            </div>
+          </section>
+        )}
 
-        {/* Étapes - format vertical numéroté */}
+
+
         <section className="bg-[hsl(var(--black))] text-[hsl(var(--cream))] py-20 px-6 md:px-16 lg:px-[120px]">
           <span className="font-mono-brand text-[11px] tracking-[3px] uppercase opacity-60 block mb-4">
             Pas à pas
