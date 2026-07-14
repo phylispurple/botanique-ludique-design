@@ -83,6 +83,7 @@ const workshops: Workshop[] = [
     duration: "2h30",
     public: "Adultes, enfants dès 10 ans",
     image: kokedamaWorkshopImage,
+    video: "/videos/workshop-kokedama-atelier.mp4",
     icon: Sprout,
     category: "jardinage",
     tag: "populaire",
