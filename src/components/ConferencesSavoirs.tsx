@@ -220,19 +220,19 @@ const ConferencesSavoirs = () => {
               desc: "Lire un parc comme une archive vivante : roses, pouvoir et circulations végétales.",
             },
             {
-              to: "/blog/monstera-colonialisme",
+              to: "/blog/monstera-plante-coloniale-distinction-sociale",
               eyebrow: "Anthropologie",
               title: "Monstera deliciosa : une plante d'intérieur née du colonialisme",
               desc: "Comment une liane d'Amérique centrale est devenue l'icône déco mondiale.",
             },
             {
-              to: "/blog/palmiers-haussmann",
+              to: "/blog/palmiers-architecture-haussmannienne-colonialisme",
               eyebrow: "Histoire urbaine",
               title: "Palmiers, platanes, ginkgos : la botanique impériale d'Haussmann",
               desc: "Le végétal parisien comme document de l'histoire coloniale française.",
             },
             {
-              to: "/blog/terrarium-biopiraterie",
+              to: "/blog/terrarium-biopiraterie-histoire-coloniale",
               eyebrow: "Histoire des sciences",
               title: "Du terrarium à la biopiraterie : la caisse de Ward",
               desc: "Quand un bocal de verre a changé la géographie économique du monde.",
