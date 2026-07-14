@@ -50,21 +50,19 @@ type PastEvent = {
 
 const d = (year: number, month: number, day: number) => new Date(year, month - 1, day);
 
-const upcomingEvents: UpcomingEvent[] = [
+const upcomingEvents: UpcomingEvent[] = [];
+
+const pastEvents: PastEvent[] = [
   {
-    id: "au-fil-des-jardins-voisins",
-    name: "Au fil des jardins de Voisins",
-    date: "Dimanche 7 juin 2026",
-    parsedDate: d(2026, 6, 7),
-    time: "16h00",
-    location: "Domaine de la Croix du Bois, chemin de la Croix du Bois, Voisins-le-Bretonneux (parking sur place)",
-    audience: "Tout public à partir de 10 ans, durée 2h",
-    spots: "Inscription par mail : museedelaville@sqy.fr",
+    id: "stage-botanique-chatou-juillet",
+    name: "Stage Botanique, Vacances d'Été",
+    date: "Du 7 au 10 juillet 2026",
+    parsedDate: d(2026, 7, 7),
+    time: "10h30 / 12h00",
+    location: "MJC de Chatou",
+    audience: "8 / 15 ans",
     description:
-      "Des jardins et des hommes. En compagnie de Vanessa Charlery, médiatrice culturelle et ethnobotaniste formée en anthropologie de la nature à l'EHESS, partez à la rencontre des jardins de Voisins-le-Bretonneux comme vous ne les avez jamais vus. Vous saurez tout de ce qu'ils nous disent de notre rapport au vivant à travers les époques, mais aussi de ce qu'ils nous disent de nos sociétés.",
-    linkType: "external",
-    externalUrl: "mailto:museedelaville@sqy.fr?subject=Inscription%20-%20Au%20fil%20des%20jardins%20de%20Voisins%20-%207%20juin%202026",
-    buttonLabel: "S'inscrire par mail",
+      "Une semaine de découverte botanique pendant les vacances d'été. Inscriptions et informations sur le site de la MJC de Chatou.",
   },
   {
     id: "kokedama-franconville",
@@ -74,32 +72,20 @@ const upcomingEvents: UpcomingEvent[] = [
     time: "10h30 / 12h30",
     location: "Buttes du Parisis, Franconville",
     audience: "Tout public",
-    spots: "",
     description:
       "Atelier en partenariat avec la Région Île-de-France Nature. Créez votre propre kokedama dans un cadre naturel exceptionnel. Inscriptions ouvertes à partir du 5 juin.",
-    linkType: "external",
-    externalUrl:
-      "https://openagenda.com/fr/ile-de-france/events/atelier-creation-dun-kokedama",
-    buttonLabel: "En savoir plus",
   },
   {
-    id: "stage-botanique-chatou-juillet",
-    name: "Stage Botanique, Vacances d'Été",
-    date: "Du 7 au 10 juillet 2026",
-    parsedDate: d(2026, 7, 7),
-    time: "10h30 / 12h00",
-    location: "MJC de Chatou",
-    audience: "8 / 15 ans",
-    spots: "",
+    id: "au-fil-des-jardins-voisins",
+    name: "Au fil des jardins de Voisins",
+    date: "Dimanche 7 juin 2026",
+    parsedDate: d(2026, 6, 7),
+    time: "16h00",
+    location: "Domaine de la Croix du Bois, chemin de la Croix du Bois, Voisins-le-Bretonneux (parking sur place)",
+    audience: "Tout public à partir de 10 ans, durée 2h",
     description:
-      "Une semaine de découverte botanique pendant les vacances d'été. Inscriptions et informations sur le site de la MJC de Chatou.",
-    linkType: "external",
-    externalUrl: "https://mjcchatou.org/",
-    buttonLabel: "S'inscrire",
+      "Des jardins et des hommes. En compagnie de Vanessa Charlery, médiatrice culturelle et ethnobotaniste formée en anthropologie de la nature à l'EHESS, partez à la rencontre des jardins de Voisins-le-Bretonneux comme vous ne les avez jamais vus. Vous saurez tout de ce qu'ils nous disent de notre rapport au vivant à travers les époques, mais aussi de ce qu'ils nous disent de nos sociétés.",
   },
-];
-
-const pastEvents: PastEvent[] = [
   {
     id: "wardian-case-6-juin",
     name: "Wardian Case : histoire culturelle et politique du terrarium + fabrication",
