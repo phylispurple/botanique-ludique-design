@@ -6,6 +6,10 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Palette, Users, BookOpen, CheckCircle2, Lightbulb } from "lucide-react";
+import teintureEnfants1 from "@/assets/gallery-teinture-enfants-1.jpg.asset.json";
+import teintureEnfants2 from "@/assets/gallery-teinture-enfants-2.jpg.asset.json";
+import teintureEnfants3 from "@/assets/gallery-teinture-enfants-3.jpg.asset.json";
+
 
 const AtelierTeintureScolaire = () => {
   return (
@@ -56,6 +60,25 @@ const AtelierTeintureScolaire = () => {
         </div>
       </section>
       <LandingPhotoStrip />
+
+      {/* Galerie photos atelier enfants */}
+      <section className="py-12 px-4 bg-background">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[teintureEnfants1, teintureEnfants2, teintureEnfants3].map((img, i) => (
+              <div key={i} className="aspect-[4/3] overflow-hidden border-brutal shadow-brutal">
+                <img
+                  src={img.url}
+                  alt={`Atelier teinture végétale enfants ${i + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Educational Value */}
       <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">

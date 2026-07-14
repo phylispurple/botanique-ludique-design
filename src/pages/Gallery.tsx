@@ -42,6 +42,10 @@ import bougieFleursSecheesImage from "@/assets/gallery-bougie-fleurs-sechees.jpg
 import fittoniaPotsImage from "@/assets/gallery-fittonia-pots.jpg";
 import terrariumEnfantsFabricationImage from "@/assets/gallery-terrarium-enfants-fabrication.jpg";
 import terrariumEnfantsMousseImage from "@/assets/gallery-terrarium-enfants-mousse.jpg";
+import teintureEnfants1 from "@/assets/gallery-teinture-enfants-1.jpg.asset.json";
+import teintureEnfants2 from "@/assets/gallery-teinture-enfants-2.jpg.asset.json";
+import teintureEnfants3 from "@/assets/gallery-teinture-enfants-3.jpg.asset.json";
+
 
 const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string; className?: string; style?: React.CSSProperties }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -75,7 +79,11 @@ const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string
 
 const Gallery = () => {
   const items = [
+    { src: teintureEnfants1.url, alt: "Atelier teinture végétale enfants, t-shirt orange", caption: "Atelier teinture végétale enfants, T-shirt teint aux pigments naturels", type: "image" },
+    { src: teintureEnfants2.url, alt: "Enfant peignant un t-shirt à la betterave", caption: "Atelier teinture végétale enfants, Application de pigment de betterave", type: "image" },
+    { src: teintureEnfants3.url, alt: "Application de teinture végétale au pinceau", caption: "Atelier teinture végétale enfants, Teinture au pinceau", type: "image" },
     { src: portraitVanessaImage, alt: "Vanessa Charlery, ethnobotaniste", caption: "Portrait, Vanessa Charlery, fondatrice", type: "image" },
+
     { src: terrariumEnfantsMousseImage, alt: "Atelier terrarium enfants avec mousse", caption: "Atelier enfants, Préparation de la mousse pour terrariums", type: "image" },
     { src: fittoniaPotsImage, alt: "Plantules de Fittonia en pots", caption: "Fittonia, plantules prêtes pour les terrariums", type: "image" },
     { src: terrariumEnfantsFabricationImage, alt: "Enfants fabriquant un terrarium", caption: "Atelier enfants, Fabrication de terrariums en bocaux", type: "image" },
