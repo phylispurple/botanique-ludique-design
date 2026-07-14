@@ -1,5 +1,8 @@
 import ProductTemplate from "@/components/ProductTemplate";
 import { Leaf } from "lucide-react";
+import kokedamaCollection from "@/assets/gallery-kokedama-collection.jpg.asset.json";
+import kokedamaTradescantia from "@/assets/gallery-kokedama-tradescantia.jpg";
+import workshopGroup from "@/assets/gallery-workshop-group.webp";
 
 const AtelierKokedamaParis = () => (
   <ProductTemplate data={{
