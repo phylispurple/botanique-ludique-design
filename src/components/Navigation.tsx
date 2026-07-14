@@ -50,6 +50,8 @@ const Navigation = () => {
       workshops: [
         { name: "Sachets Senteur", id: "sachets-senteur-&-pots-pourris" },
         { name: "Eaux Florales", id: "creation-d'eaux-florales" },
+        { name: "Cueillette Sauvage & Cuisine de Plantes Comestibles", id: "cueillette-sauvage-&-cuisine-de-plantes-comestibles" },
+        { name: "Tisanes, Sirops & Élixirs Botaniques", id: "tisanes,-sirops-&-elixirs-botaniques" },
       ]
     },
   ];
