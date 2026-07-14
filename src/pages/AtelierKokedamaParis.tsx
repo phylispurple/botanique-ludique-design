@@ -1,5 +1,8 @@
 import ProductTemplate from "@/components/ProductTemplate";
 import { Leaf } from "lucide-react";
+import kokedamaCollection from "@/assets/gallery-kokedama-collection.jpg.asset.json";
+import kokedamaTradescantia from "@/assets/gallery-kokedama-tradescantia.jpg";
+import workshopGroup from "@/assets/gallery-workshop-group.webp";
 
 const AtelierKokedamaParis = () => (
   <ProductTemplate data={{
@@ -42,6 +45,11 @@ const AtelierKokedamaParis = () => (
     ],
     videoSrc: "/videos/workshop-kokedama-atelier.mp4",
     videoCaption: "Atelier kokedama, gestes et matières",
+    photos: [
+      { src: kokedamaCollection.url, alt: "Collection de kokedamas réalisés en atelier", caption: "Collection d'ateliers" },
+      { src: kokedamaTradescantia, alt: "Kokedama tradescantia zebrina", caption: "Tradescantia zebrina" },
+      { src: workshopGroup, alt: "Atelier kokedama en groupe", caption: "Atelier en groupe" },
+    ],
 
   }} />
 );

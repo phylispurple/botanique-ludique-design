@@ -1,5 +1,8 @@
 import ProductTemplate from "@/components/ProductTemplate";
 import { Sprout } from "lucide-react";
+import terrariumAdultesGroupe from "@/assets/gallery-terrarium-adultes-groupe.jpg.asset.json";
+import terrariumBocalFittonia from "@/assets/gallery-terrarium-bocal-fittonia.jpg.asset.json";
+import terrariumFittoniaPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg.asset.json";
 
 const AtelierTerrariumParis = () => (
   <ProductTemplate data={{
@@ -39,6 +42,11 @@ const AtelierTerrariumParis = () => (
       { q: "Repart-on avec son terrarium ?", a: "Oui, chaque participant·e repart avec son terrarium fini, ses plantes et un guide d'entretien." },
       { q: "Combien de temps vit un terrarium ?", a: "Un terrarium fermé bien équilibré peut vivre plusieurs années sans intervention majeure, parfois plus de cinq ans." },
       { q: "Peut-on organiser un atelier privatisé ?", a: "Oui. Anniversaire, EVJF, séminaire d'entreprise : nous proposons des formats privatisés à partir de six personnes." },
+    ],
+    photos: [
+      { src: terrariumBocalFittonia.url, alt: "Terrarium en bocal avec fittonia et tradescantia", caption: "Terrarium en bocal" },
+      { src: terrariumFittoniaPrep.url, alt: "Composition d'un terrarium fittonia", caption: "Composition en cours" },
+      { src: terrariumAdultesGroupe.url, alt: "Atelier terrarium en groupe adultes", caption: "Atelier en groupe" },
     ],
   }} />
 );
