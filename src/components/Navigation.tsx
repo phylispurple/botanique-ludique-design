@@ -32,6 +32,7 @@ const Navigation = () => {
         { name: "Couronnes de Fleurs", id: "couronnes-de-fleurs" },
         { name: "Herbier", id: "herbier" },
         { name: "Époxy Floral", id: "epoxy-floral" },
+        { name: "Bougies & Fleurs Séchées", id: "bougies-&-fleurs-sechees" },
       ]
     },
     {
