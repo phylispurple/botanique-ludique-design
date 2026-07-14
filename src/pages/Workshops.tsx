@@ -52,7 +52,6 @@ const workshops: Workshop[] = [
     duration: "3h",
     public: "Tout public",
     image: dyeingImage,
-    video: "/videos/workshop-dyeing.mp4",
     icon: Palette,
     category: "textiles",
     tag: "populaire",
