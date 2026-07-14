@@ -45,7 +45,15 @@ import terrariumEnfantsMousseImage from "@/assets/gallery-terrarium-enfants-mous
 import teintureEnfants1 from "@/assets/gallery-teinture-enfants-1.jpg.asset.json";
 import teintureEnfants2 from "@/assets/gallery-teinture-enfants-2.jpg.asset.json";
 import teintureEnfants3 from "@/assets/gallery-teinture-enfants-3.jpg.asset.json";
+import teintureEnfants4 from "@/assets/gallery-teinture-enfants-4.jpg.asset.json";
+import teintureEnfants5 from "@/assets/gallery-teinture-enfants-5.jpg.asset.json";
+import teintureEnfants6 from "@/assets/gallery-teinture-enfants-6.jpg.asset.json";
+import teintureEnfantsTshirt from "@/assets/gallery-teinture-enfants-tshirt.jpg.asset.json";
+import teintureEnfantsTshirtRose from "@/assets/gallery-teinture-enfants-tshirt-rose.jpg.asset.json";
 import terrariumAdultesGroupe from "@/assets/gallery-terrarium-adultes-groupe.jpg.asset.json";
+import terrariumFittoniaPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg.asset.json";
+import terrariumBocalFittonia from "@/assets/gallery-terrarium-bocal-fittonia.jpg.asset.json";
+import kokedamaCollection from "@/assets/gallery-kokedama-collection.jpg.asset.json";
 
 
 
