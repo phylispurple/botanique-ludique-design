@@ -26,9 +26,8 @@ const AtelierTerrariumParis = () => (
     ],
     formats: [
       { label: "Durée", value: "2h" },
-      { label: "Groupe", value: "6 à 12 pers." },
+      { label: "Groupe", value: "6 à 25 pers. max" },
       { label: "Lieu", value: "Paris et IDF" },
-      { label: "Prix", value: "À partir de 45 €" },
     ],
     bookingTo: "/contact",
     bookingLabel: "Réserver un atelier",
