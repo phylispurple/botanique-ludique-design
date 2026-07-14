@@ -9,8 +9,12 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link, useLocation } from "react-router-dom";
-import dyeingImage from "@/assets/gallery-teinture-2.jpg";
-import terrariumImage from "@/assets/gallery-terrarium.webp";
+import dyeingAsset from "@/assets/gallery-teinture-enfants-tshirt.jpg.asset.json";
+import terrariumAsset from "@/assets/gallery-terrarium-bocal-fittonia.jpg.asset.json";
+import kokedamaAsset from "@/assets/gallery-kokedama-collection.jpg.asset.json";
+const dyeingImage = dyeingAsset.url;
+const terrariumImage = terrariumAsset.url;
+const kokedamaWorkshopImage = kokedamaAsset.url;
 import muralImage from "@/assets/workshop-mural.jpg";
 import seedBombsImage from "@/assets/gallery-seed-bombs.webp";
 import flowerCrownImage from "@/assets/gallery-flower-crown.webp";
@@ -78,9 +82,8 @@ const workshops: Workshop[] = [
     description: "Découvrez l'art japonais du jardinage en boules de mousse, héritage de la tradition bonsaï. Créez vos propres sculptures végétales suspendues en explorant cette pratique séculaire qui unit esthétique et philosophie du vivant.",
     duration: "2h30",
     public: "Adultes, enfants dès 10 ans",
-    image: "/videos/workshop-kokedama.mp4",
+    image: kokedamaWorkshopImage,
     icon: Sprout,
-    type: "video",
     category: "jardinage",
     tag: "populaire",
   },
