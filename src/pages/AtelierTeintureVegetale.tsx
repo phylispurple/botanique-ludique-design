@@ -7,6 +7,10 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { MapPin, Calendar, Users, Leaf, Clock, CheckCircle, Star, Phone, Mail, Sparkles, Palette } from "lucide-react";
 import dyeingImage from "@/assets/gallery-teinture-1.webp";
+import teintureEnfants1 from "@/assets/gallery-teinture-enfants-1.jpg.asset.json";
+import teintureEnfants2 from "@/assets/gallery-teinture-enfants-2.jpg.asset.json";
+import teintureEnfants3 from "@/assets/gallery-teinture-enfants-3.jpg.asset.json";
+
 
 const AtelierTeintureVegetale = () => {
   return (
@@ -110,6 +114,22 @@ const AtelierTeintureVegetale = () => {
                 </div>
               </div>
             </section>
+
+            <section className="mb-20 animate-fade-in">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[teintureEnfants1, teintureEnfants2, teintureEnfants3].map((img, i) => (
+                  <div key={i} className="aspect-[4/3] overflow-hidden border-brutal shadow-brutal">
+                    <img
+                      src={img.url}
+                      alt={`Atelier teinture végétale, création à partir de pigments naturels ${i + 1}`}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </section>
+
 
             <section className="mb-20 animate-fade-in">
               <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
