@@ -42,9 +42,7 @@ import bougieFleursSecheesImage from "@/assets/gallery-bougie-fleurs-sechees.jpg
 import fittoniaPotsImage from "@/assets/gallery-fittonia-pots.jpg";
 import terrariumEnfantsFabricationImage from "@/assets/gallery-terrarium-enfants-fabrication.jpg";
 import terrariumEnfantsMousseImage from "@/assets/gallery-terrarium-enfants-mousse.jpg";
-import teintureEnfants1 from "@/assets/gallery-teinture-enfants-1.jpg.asset.json";
 import teintureEnfants2 from "@/assets/gallery-teinture-enfants-2.jpg.asset.json";
-import teintureEnfants3 from "@/assets/gallery-teinture-enfants-3.jpg.asset.json";
 import teintureEnfants4 from "@/assets/gallery-teinture-enfants-4.jpg.asset.json";
 import teintureEnfants5 from "@/assets/gallery-teinture-enfants-5.jpg.asset.json";
 import teintureEnfants6 from "@/assets/gallery-teinture-enfants-6.jpg.asset.json";
