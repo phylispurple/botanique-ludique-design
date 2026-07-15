@@ -7,9 +7,7 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { MapPin, Calendar, Users, Leaf, Clock, CheckCircle, Star, Phone, Mail, Sparkles, Palette } from "lucide-react";
 import dyeingImage from "@/assets/gallery-teinture-1.webp";
-import teintureEnfants1 from "@/assets/gallery-teinture-enfants-1.jpg.asset.json";
 import teintureEnfants2 from "@/assets/gallery-teinture-enfants-2.jpg.asset.json";
-import teintureEnfants3 from "@/assets/gallery-teinture-enfants-3.jpg.asset.json";
 import teintureEnfants4 from "@/assets/gallery-teinture-enfants-4.jpg.asset.json";
 import teintureEnfants5 from "@/assets/gallery-teinture-enfants-5.jpg.asset.json";
 import teintureEnfants6 from "@/assets/gallery-teinture-enfants-6.jpg.asset.json";
@@ -122,7 +120,7 @@ const AtelierTeintureVegetale = () => {
 
             <section className="mb-20 animate-fade-in">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {[teintureEnfants1, teintureEnfants2, teintureEnfants3, teintureEnfantsTshirt, teintureEnfants4, teintureEnfants5, teintureEnfants6, teintureEnfantsTshirtRose].map((img, i) => (
+                {[teintureEnfants2, teintureEnfantsTshirt, teintureEnfants4, teintureEnfants5, teintureEnfants6, teintureEnfantsTshirtRose].map((img, i) => (
                   <div key={i} className="aspect-[4/3] overflow-hidden border-brutal shadow-brutal">
                     <img
                       src={img.url}
