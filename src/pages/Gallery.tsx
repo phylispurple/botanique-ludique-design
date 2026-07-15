@@ -42,9 +42,7 @@ import bougieFleursSecheesImage from "@/assets/gallery-bougie-fleurs-sechees.jpg
 import fittoniaPotsImage from "@/assets/gallery-fittonia-pots.jpg";
 import terrariumEnfantsFabricationImage from "@/assets/gallery-terrarium-enfants-fabrication.jpg";
 import terrariumEnfantsMousseImage from "@/assets/gallery-terrarium-enfants-mousse.jpg";
-import teintureEnfants1 from "@/assets/gallery-teinture-enfants-1.jpg.asset.json";
 import teintureEnfants2 from "@/assets/gallery-teinture-enfants-2.jpg.asset.json";
-import teintureEnfants3 from "@/assets/gallery-teinture-enfants-3.jpg.asset.json";
 import teintureEnfants4 from "@/assets/gallery-teinture-enfants-4.jpg.asset.json";
 import teintureEnfants5 from "@/assets/gallery-teinture-enfants-5.jpg.asset.json";
 import teintureEnfants6 from "@/assets/gallery-teinture-enfants-6.jpg.asset.json";
@@ -89,9 +87,7 @@ const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string
 
 const Gallery = () => {
   const items = [
-    { src: teintureEnfants1.url, alt: "Atelier teinture végétale enfants, t-shirt orange", caption: "Atelier teinture végétale enfants, T-shirt teint aux pigments naturels", type: "image" },
     { src: teintureEnfants2.url, alt: "Enfant peignant un t-shirt à la betterave", caption: "Atelier teinture végétale enfants, Application de pigment de betterave", type: "image" },
-    { src: teintureEnfants3.url, alt: "Application de teinture végétale au pinceau", caption: "Atelier teinture végétale enfants, Teinture au pinceau", type: "image" },
     { src: teintureEnfantsTshirt.url, alt: "T-shirt teint aux pigments naturels", caption: "Atelier teinture végétale enfants, T-shirt tie and dye végétal", type: "image" },
     { src: teintureEnfants4.url, alt: "Préparation des pigments végétaux", caption: "Atelier teinture végétale enfants, Préparation des pigments", type: "image" },
     { src: teintureEnfants5.url, alt: "T-shirts en cours de teinture", caption: "Atelier teinture végétale enfants, Tie and dye végétal en cours", type: "image" },
