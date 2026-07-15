@@ -10,11 +10,8 @@ import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "luci
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link, useLocation } from "react-router-dom";
 import dyeingAsset from "@/assets/gallery-teinture-vegetale-workshop.jpg.asset.json";
-import terrariumAsset from "@/assets/gallery-terrarium-bocal-fittonia.jpg.asset.json";
 import kokedamaAsset from "@/assets/gallery-kokedama-collection.jpg.asset.json";
-const dyeingImage = dyeingAsset.url;
-const terrariumImage = terrariumAsset.url;
-const kokedamaWorkshopImage = kokedamaAsset.url;
+import terrariumImage from "@/assets/gallery-terrarium.webp";
 import muralImage from "@/assets/workshop-mural.jpg";
 import seedBombsImage from "@/assets/gallery-seed-bombs.webp";
 import flowerCrownImage from "@/assets/gallery-flower-crown.webp";
@@ -30,6 +27,9 @@ import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.jpg";
 import floralWatersImage from "@/assets/workshop-floral-waters.jpg";
 import recycledPaperImage from "@/assets/workshop-recycled-paper.jpg";
 import plantChalkImage from "@/assets/workshop-plant-chalk.jpg";
+
+const dyeingImage = dyeingAsset.url;
+const kokedamaWorkshopImage = kokedamaAsset.url;
 
 interface Workshop {
   title: string;
