@@ -1,5 +1,6 @@
 import ProductTemplate from "@/components/ProductTemplate";
 import { Sprout } from "lucide-react";
+import terrariumHome from "@/assets/gallery-terrarium.webp";
 import terrariumAdultesGroupe from "@/assets/gallery-terrarium-adultes-groupe.jpg.asset.json";
 import terrariumBocalFittonia from "@/assets/gallery-terrarium-bocal-fittonia.jpg.asset.json";
 import terrariumFittoniaPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg.asset.json";
@@ -43,6 +44,7 @@ const AtelierTerrariumParis = () => (
       { q: "Peut-on organiser un atelier privatisé ?", a: "Oui. Anniversaire, EVJF, séminaire d'entreprise : nous proposons des formats privatisés à partir de six personnes." },
     ],
     photos: [
+      { src: terrariumHome, alt: "Terrarium végétal avec succulentes et fougères", caption: "Terrarium végétal" },
       { src: terrariumBocalFittonia.url, alt: "Terrarium en bocal avec fittonia et tradescantia", caption: "Terrarium en bocal" },
       { src: terrariumFittoniaPrep.url, alt: "Composition d'un terrarium fittonia", caption: "Composition en cours" },
       { src: terrariumAdultesGroupe.url, alt: "Atelier terrarium en groupe adultes", caption: "Atelier en groupe" },
