@@ -1,6 +1,5 @@
 import ProductTemplate from "@/components/ProductTemplate";
 import { Sprout } from "lucide-react";
-import terrariumHome from "@/assets/gallery-terrarium.webp";
 import terrariumAdultesGroupe from "@/assets/gallery-terrarium-adultes-groupe.jpg.asset.json";
 import terrariumBocalFittonia from "@/assets/gallery-terrarium-bocal-fittonia.jpg.asset.json";
 import terrariumFittoniaPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg.asset.json";
