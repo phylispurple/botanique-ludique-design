@@ -38,6 +38,7 @@ interface Workshop {
   duration: string;
   public: string;
   image: string;
+  images?: string[];
   video?: string;
   icon: any;
   type?: string;
