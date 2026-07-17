@@ -463,6 +463,8 @@ const Workshops = () => {
                               preload="metadata"
                             />
                           </div>
+                        ) : workshop.images && workshop.images.length > 1 ? (
+                          <AutoSlideshow images={workshop.images} alt={`Atelier ${workshop.title}`} />
                         ) : (
                           <div className="overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-500">
                             <img
