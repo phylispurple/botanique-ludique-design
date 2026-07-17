@@ -54,6 +54,7 @@ const workshops: Workshop[] = [
     duration: "3h",
     public: "Tout public",
     image: dyeingImage,
+    images: [dyeingImage, teintureIndigoImage],
     icon: Palette,
     category: "textiles",
     tag: "populaire",
