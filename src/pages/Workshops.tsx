@@ -41,14 +41,14 @@ const AutoSlideshow = ({ images, alt }: { images: string[]; alt: string }) => {
     return () => clearInterval(id);
   }, [images.length]);
   return (
-    <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+    <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-lg bg-sand">
       {images.map((src, idx) => (
         <img
           key={idx}
           src={src}
           alt={alt}
           loading="lazy"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
         />
       ))}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
