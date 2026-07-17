@@ -28,6 +28,8 @@ import floralWatersImage from "@/assets/workshop-floral-waters.jpg";
 import recycledPaperImage from "@/assets/workshop-recycled-paper.jpg";
 import plantChalkImage from "@/assets/workshop-plant-chalk.jpg";
 import teintureIndigoImage from "@/assets/gallery-teinture-1.webp";
+import teintureBocalIndigo from "@/assets/blog-carousel-bocal-indigo.jpg";
+import teintureFilIndigo from "@/assets/blog-carousel-fil-indigo.jpg";
 
 const dyeingImage = dyeingAsset.url;
 const kokedamaWorkshopImage = kokedamaAsset.url;
@@ -39,14 +41,14 @@ const AutoSlideshow = ({ images, alt }: { images: string[]; alt: string }) => {
     return () => clearInterval(id);
   }, [images.length]);
   return (
-    <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+    <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-lg bg-sand">
       {images.map((src, idx) => (
         <img
           key={idx}
           src={src}
           alt={alt}
           loading="lazy"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
         />
       ))}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
@@ -83,7 +85,7 @@ const workshops: Workshop[] = [
     duration: "3h",
     public: "Tout public",
     image: dyeingImage,
-    images: [dyeingImage, teintureIndigoImage],
+    images: [dyeingImage, teintureIndigoImage, teintureBocalIndigo, teintureFilIndigo],
     icon: Palette,
     category: "textiles",
     tag: "populaire",
