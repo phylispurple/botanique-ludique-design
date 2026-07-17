@@ -64,6 +64,63 @@ const AutoSlideshow = ({ images, alt }: { images: string[]; alt: string }) => {
   );
 };
 
+type MediaItem = { type: "image"; src: string } | { type: "video"; src: string };
+
+const MediaSlideshow = ({ items, alt }: { items: MediaItem[]; alt: string }) => {
+  const [i, setI] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const current = items[i];
+    if (current.type === "image") {
+      const id = setTimeout(() => setI((v) => (v + 1) % items.length), 3500);
+      return () => clearTimeout(id);
+    }
+    const v = videoRef.current;
+    if (v) {
+      v.currentTime = 0;
+      v.play().catch(() => {});
+    }
+  }, [i, items]);
+
+  const next = () => setI((v) => (v + 1) % items.length);
+
+  return (
+    <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-lg bg-sand">
+      {items.map((item, idx) =>
+        item.type === "image" ? (
+          <img
+            key={idx}
+            src={item.src}
+            alt={alt}
+            loading="lazy"
+            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+          />
+        ) : (
+          <video
+            key={idx}
+            ref={idx === i ? videoRef : undefined}
+            src={item.src}
+            muted
+            playsInline
+            preload="metadata"
+            onEnded={next}
+            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+          />
+        )
+      )}
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+        {items.map((_, idx) => (
+          <span
+            key={idx}
+            className={`h-1.5 rounded-full transition-all ${idx === i ? "w-6 bg-white" : "w-1.5 bg-white/60"}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 interface Workshop {
   title: string;
   description: string;
@@ -71,6 +128,7 @@ interface Workshop {
   public: string;
   image: string;
   images?: string[];
+  media?: MediaItem[];
   video?: string;
   icon: any;
   type?: string;
