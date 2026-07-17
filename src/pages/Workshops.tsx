@@ -30,6 +30,7 @@ import plantChalkImage from "@/assets/workshop-plant-chalk.jpg";
 import teintureIndigoImage from "@/assets/gallery-teinture-1.webp";
 import teintureBocalIndigo from "@/assets/blog-carousel-bocal-indigo.jpg";
 import teintureFilIndigo from "@/assets/blog-carousel-fil-indigo.jpg";
+import kokedamaTradescantia from "@/assets/gallery-kokedama-tradescantia.jpg";
 
 const dyeingImage = dyeingAsset.url;
 const kokedamaWorkshopImage = kokedamaAsset.url;
