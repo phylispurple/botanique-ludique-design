@@ -175,7 +175,11 @@ const workshops: Workshop[] = [
     duration: "2h30",
     public: "Adultes, enfants dès 10 ans",
     image: kokedamaWorkshopImage,
-    video: "/videos/workshop-kokedama-atelier.mp4",
+    media: [
+      { type: "image", src: kokedamaWorkshopImage },
+      { type: "video", src: "/videos/workshop-kokedama-atelier.mp4" },
+      { type: "image", src: kokedamaTradescantia },
+    ],
     icon: Sprout,
     category: "jardinage",
     tag: "populaire",
