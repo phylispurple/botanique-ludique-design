@@ -31,6 +31,9 @@ import teintureIndigoImage from "@/assets/gallery-teinture-1.webp";
 import teintureBocalIndigo from "@/assets/blog-carousel-bocal-indigo.jpg";
 import teintureFilIndigo from "@/assets/blog-carousel-fil-indigo.jpg";
 import kokedamaTradescantia from "@/assets/gallery-kokedama-tradescantia.jpg";
+import terrariumBocalFittonia from "@/assets/gallery-terrarium-bocal-fittonia.jpg.asset.json";
+import terrariumFittoniaPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg.asset.json";
+import terrariumEnfantsFabrication from "@/assets/gallery-terrarium-enfants-fabrication.jpg";
 
 const dyeingImage = dyeingAsset.url;
 const kokedamaWorkshopImage = kokedamaAsset.url;
