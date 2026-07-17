@@ -528,6 +528,8 @@ const Workshops = () => {
                               preload="metadata"
                             />
                           </div>
+                        ) : workshop.media && workshop.media.length > 1 ? (
+                          <MediaSlideshow items={workshop.media} alt={`Atelier ${workshop.title}`} />
                         ) : workshop.images && workshop.images.length > 1 ? (
                           <AutoSlideshow images={workshop.images} alt={`Atelier ${workshop.title}`} />
                         ) : (
