@@ -193,6 +193,7 @@ const workshops: Workshop[] = [
     duration: "2h",
     public: "Tout public, enfants dès 8 ans",
     image: terrariumImage,
+    images: [terrariumImage, terrariumBocalFittonia.url, terrariumFittoniaPrep.url, terrariumEnfantsFabrication],
     icon: Sparkles,
     category: "jardinage",
   },
