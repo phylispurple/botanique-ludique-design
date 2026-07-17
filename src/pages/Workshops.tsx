@@ -27,9 +27,39 @@ import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.jpg";
 import floralWatersImage from "@/assets/workshop-floral-waters.jpg";
 import recycledPaperImage from "@/assets/workshop-recycled-paper.jpg";
 import plantChalkImage from "@/assets/workshop-plant-chalk.jpg";
+import teintureIndigoImage from "@/assets/gallery-teinture-1.webp";
 
 const dyeingImage = dyeingAsset.url;
 const kokedamaWorkshopImage = kokedamaAsset.url;
+
+const AutoSlideshow = ({ images, alt }: { images: string[]; alt: string }) => {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setI((v) => (v + 1) % images.length), 3500);
+    return () => clearInterval(id);
+  }, [images.length]);
+  return (
+    <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+      {images.map((src, idx) => (
+        <img
+          key={idx}
+          src={src}
+          alt={alt}
+          loading="lazy"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
+        />
+      ))}
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+        {images.map((_, idx) => (
+          <span
+            key={idx}
+            className={`h-1.5 rounded-full transition-all ${idx === i ? "w-6 bg-white" : "w-1.5 bg-white/60"}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 interface Workshop {
   title: string;
@@ -37,6 +67,7 @@ interface Workshop {
   duration: string;
   public: string;
   image: string;
+  images?: string[];
   video?: string;
   icon: any;
   type?: string;
@@ -52,6 +83,7 @@ const workshops: Workshop[] = [
     duration: "3h",
     public: "Tout public",
     image: dyeingImage,
+    images: [dyeingImage, teintureIndigoImage],
     icon: Palette,
     category: "textiles",
     tag: "populaire",
@@ -431,6 +463,8 @@ const Workshops = () => {
                               preload="metadata"
                             />
                           </div>
+                        ) : workshop.images && workshop.images.length > 1 ? (
+                          <AutoSlideshow images={workshop.images} alt={`Atelier ${workshop.title}`} />
                         ) : (
                           <div className="overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-500">
                             <img
