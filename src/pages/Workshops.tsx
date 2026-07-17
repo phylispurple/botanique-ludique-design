@@ -27,6 +27,7 @@ import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.jpg";
 import floralWatersImage from "@/assets/workshop-floral-waters.jpg";
 import recycledPaperImage from "@/assets/workshop-recycled-paper.jpg";
 import plantChalkImage from "@/assets/workshop-plant-chalk.jpg";
+import teintureIndigoImage from "@/assets/gallery-teinture-1.webp";
 
 const dyeingImage = dyeingAsset.url;
 const kokedamaWorkshopImage = kokedamaAsset.url;
