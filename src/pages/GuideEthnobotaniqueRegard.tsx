@@ -133,7 +133,7 @@ const GuideEthnobotaniqueRegard = () => {
                 Nos <strong>balades ethnobotaniques</strong> durent entre 1h30 et 2h30 et s'adaptent au lieu, au public et à la saison. Quatre grandes familles structurent notre offre :
               </p>
               <ul className="space-y-3 pl-6 list-disc marker:text-[hsl(var(--olive))]">
-                <li><strong>Balades coloniales</strong> : circulations végétales depuis les empires (palmiers haussmanniens, plantes de salon, café et cacao). <Link to="/balade-botanique-coloniale" className="underline decoration-[3px] underline-offset-2 decoration-[hsl(var(--olive))]">En savoir plus</Link>.</li>
+                <li><strong>Balades coloniales</strong> : circulations végétales depuis les empires (palmiers haussmanniens, plantes de salon, café et cacao). <Link to="/balade-botanique-coloniale-paris" className="underline decoration-[3px] underline-offset-2 decoration-[hsl(var(--olive))]">En savoir plus</Link>.</li>
                 <li><strong>Jardins patrimoniaux</strong> : parcs municipaux, roseraies, jardins d'écoquartiers lus à travers leur histoire sociale. <Link to="/balade-botanique-jardin-patrimonial" className="underline decoration-[3px] underline-offset-2 decoration-[hsl(var(--olive))]">Voir le format</Link>.</li>
                 <li><strong>Balades urbaines</strong> : végétation spontanée, friches, plantations municipales et politiques de la ville.</li>
                 <li><strong>Balades en musée ou médiathèque</strong> : interventions liées à une exposition, un fonds documentaire ou une programmation culturelle.</li>
