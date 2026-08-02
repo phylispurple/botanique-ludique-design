@@ -236,13 +236,21 @@ const Navigation = () => {
 
           {/* Team Building link */}
           <li>
-            <Link to="/atelier-terrarium-team-building"
-              className={`font-mono text-[12.5px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/atelier-terrarium-team-building') ? 'border-b border-olive-light' : ''}`}
-              style={{ color: isActive('/atelier-terrarium-team-building') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+            <Link to="/team-building-nature-entreprise"
+              className={`font-mono text-[12.5px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/team-building-nature-entreprise') ? 'border-b border-olive-light' : ''}`}
+              style={{ color: isActive('/team-building-nature-entreprise') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
               Team Building
             </Link>
           </li>
 
+          {/* Balades Botaniques link */}
+          <li>
+            <Link to="/balades-botaniques"
+              className={`font-mono text-[12.5px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/balades-botaniques') ? 'border-b border-olive-light' : ''}`}
+              style={{ color: isActive('/balades-botaniques') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Balades Botaniques
+            </Link>
+          </li>
 
           {/* Regular links */}
           <li>
@@ -376,13 +384,17 @@ const Navigation = () => {
               Médiation
             </Link>
 
-            <Link to="/atelier-terrarium-team-building" onClick={() => setIsOpen(false)}
+            <Link to="/team-building-nature-entreprise" onClick={() => setIsOpen(false)}
               className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
-              style={{ color: isActive('/atelier-terrarium-team-building') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              style={{ color: isActive('/team-building-nature-entreprise') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
               Team Building
             </Link>
 
-
+            <Link to="/balades-botaniques" onClick={() => setIsOpen(false)}
+              className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
+              style={{ color: isActive('/balades-botaniques') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Balades Botaniques
+            </Link>
 
             <Link to="/gallery" onClick={() => setIsOpen(false)}
               className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"

@@ -64,6 +64,8 @@ const Footer = () => {
                 { name: "À propos", path: "/about" },
                 { name: "Ateliers", path: "/workshops" },
                 { name: "Pro & Entreprises", path: "/pro" },
+                { name: "Team Building", path: "/team-building-nature-entreprise" },
+                { name: "Balades Botaniques", path: "/balades-botaniques" },
                 { name: "Galerie", path: "/gallery" },
                 { name: "Blog", path: "/blog" },
                 { name: "FAQ", path: "/faq" },
