@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run prerender",
+    "build": "vite build && node scripts/inject-meta.mjs",
     "build:no-prerender": "vite build",
-    "prerender": "(puppeteer browsers install chrome || echo 'Chrome non telecharge, on tentera un Chrome systeme') && node scripts/prerender.mjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "seo:capture": "vite build && node scripts/capture-meta.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
