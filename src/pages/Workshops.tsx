@@ -9,8 +9,8 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link, useLocation } from "react-router-dom";
-import dyeingAsset from "@/assets/gallery-teinture-vegetale-workshop.jpg.asset.json";
-import kokedamaAsset from "@/assets/gallery-kokedama-collection.jpg.asset.json";
+import dyeingAsset from "@/assets/gallery-teinture-vegetale-workshop.jpg";
+import kokedamaAsset from "@/assets/gallery-kokedama-collection.jpg";
 import terrariumImage from "@/assets/gallery-terrarium.webp";
 import muralImage from "@/assets/workshop-mural.jpg";
 import seedBombsImage from "@/assets/gallery-seed-bombs.webp";
@@ -31,12 +31,12 @@ import teintureIndigoImage from "@/assets/gallery-teinture-1.webp";
 import teintureBocalIndigo from "@/assets/blog-carousel-bocal-indigo.jpg";
 import teintureFilIndigo from "@/assets/blog-carousel-fil-indigo.jpg";
 import kokedamaTradescantia from "@/assets/gallery-kokedama-tradescantia.jpg";
-import terrariumBocalFittonia from "@/assets/gallery-terrarium-bocal-fittonia.jpg.asset.json";
-import terrariumFittoniaPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg.asset.json";
+import terrariumBocalFittonia from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
+import terrariumFittoniaPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg";
 import terrariumEnfantsFabrication from "@/assets/gallery-terrarium-enfants-fabrication.jpg";
 
-const dyeingImage = dyeingAsset.url;
-const kokedamaWorkshopImage = kokedamaAsset.url;
+const dyeingImage = dyeingAsset;
+const kokedamaWorkshopImage = kokedamaAsset;
 
 const AutoSlideshow = ({ images, alt }: { images: string[]; alt: string }) => {
   const [i, setI] = useState(0);
@@ -193,7 +193,7 @@ const workshops: Workshop[] = [
     duration: "2h",
     public: "Tout public, enfants dès 8 ans",
     image: terrariumImage,
-    images: [terrariumImage, terrariumBocalFittonia.url, terrariumFittoniaPrep.url, terrariumEnfantsFabrication],
+    images: [terrariumImage, terrariumBocalFittonia, terrariumFittoniaPrep, terrariumEnfantsFabrication],
     icon: Sparkles,
     category: "jardinage",
   },

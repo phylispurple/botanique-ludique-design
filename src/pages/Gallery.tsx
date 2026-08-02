@@ -42,16 +42,16 @@ import bougieFleursSecheesImage from "@/assets/gallery-bougie-fleurs-sechees.jpg
 import fittoniaPotsImage from "@/assets/gallery-fittonia-pots.jpg";
 import terrariumEnfantsFabricationImage from "@/assets/gallery-terrarium-enfants-fabrication.jpg";
 import terrariumEnfantsMousseImage from "@/assets/gallery-terrarium-enfants-mousse.jpg";
-import teintureEnfants2 from "@/assets/gallery-teinture-enfants-2.jpg.asset.json";
-import teintureEnfants4 from "@/assets/gallery-teinture-enfants-4.jpg.asset.json";
-import teintureEnfants5 from "@/assets/gallery-teinture-enfants-5.jpg.asset.json";
-import teintureEnfants6 from "@/assets/gallery-teinture-enfants-6.jpg.asset.json";
-import teintureEnfantsTshirt from "@/assets/gallery-teinture-enfants-tshirt.jpg.asset.json";
-import teintureEnfantsTshirtRose from "@/assets/gallery-teinture-enfants-tshirt-rose.jpg.asset.json";
-import terrariumAdultesGroupe from "@/assets/gallery-terrarium-adultes-groupe.jpg.asset.json";
-import terrariumFittoniaPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg.asset.json";
-import terrariumBocalFittonia from "@/assets/gallery-terrarium-bocal-fittonia.jpg.asset.json";
-import kokedamaCollection from "@/assets/gallery-kokedama-collection.jpg.asset.json";
+import teintureEnfants2 from "@/assets/gallery-teinture-enfants-2.jpg";
+import teintureEnfants4 from "@/assets/gallery-teinture-enfants-4.jpg";
+import teintureEnfants5 from "@/assets/gallery-teinture-enfants-5.jpg";
+import teintureEnfants6 from "@/assets/gallery-teinture-enfants-6.jpg";
+import teintureEnfantsTshirt from "@/assets/gallery-teinture-enfants-tshirt.jpg";
+import teintureEnfantsTshirtRose from "@/assets/gallery-teinture-enfants-tshirt-rose.jpg";
+import terrariumAdultesGroupe from "@/assets/gallery-terrarium-adultes-groupe.jpg";
+import terrariumFittoniaPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg";
+import terrariumBocalFittonia from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
+import kokedamaCollection from "@/assets/gallery-kokedama-collection.jpg";
 
 
 
@@ -87,16 +87,16 @@ const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string
 
 const Gallery = () => {
   const items = [
-    { src: teintureEnfants2.url, alt: "Enfant peignant un t-shirt à la betterave", caption: "Atelier teinture végétale enfants, Application de pigment de betterave", type: "image" },
-    { src: teintureEnfantsTshirt.url, alt: "T-shirt teint aux pigments naturels", caption: "Atelier teinture végétale enfants, T-shirt tie and dye végétal", type: "image" },
-    { src: teintureEnfants4.url, alt: "Préparation des pigments végétaux", caption: "Atelier teinture végétale enfants, Préparation des pigments", type: "image" },
-    { src: teintureEnfants5.url, alt: "T-shirts en cours de teinture", caption: "Atelier teinture végétale enfants, Tie and dye végétal en cours", type: "image" },
-    { src: teintureEnfants6.url, alt: "T-shirt orange en cours de teinture", caption: "Atelier teinture végétale enfants, Pigment orange sur coton", type: "image" },
-    { src: teintureEnfantsTshirtRose.url, alt: "T-shirt rose et jaune motif soleil", caption: "Atelier teinture végétale enfants, Motif soleil aux pigments naturels", type: "image" },
-    { src: terrariumAdultesGroupe.url, alt: "Atelier terrarium en groupe, adultes", caption: "Atelier terrarium, Création en groupe entre collègues", type: "image" },
-    { src: terrariumBocalFittonia.url, alt: "Terrarium en bocal avec fittonia", caption: "Terrarium, Bocal avec fittonia et tradescantia", type: "image" },
-    { src: terrariumFittoniaPrep.url, alt: "Préparation d'un terrarium fittonia", caption: "Terrarium, Composition mousse, fittonia et graviers", type: "image" },
-    { src: kokedamaCollection.url, alt: "Collection de kokedamas", caption: "Kokedamas, Collection de créations en atelier", type: "image" },
+    { src: teintureEnfants2, alt: "Enfant peignant un t-shirt à la betterave", caption: "Atelier teinture végétale enfants, Application de pigment de betterave", type: "image" },
+    { src: teintureEnfantsTshirt, alt: "T-shirt teint aux pigments naturels", caption: "Atelier teinture végétale enfants, T-shirt tie and dye végétal", type: "image" },
+    { src: teintureEnfants4, alt: "Préparation des pigments végétaux", caption: "Atelier teinture végétale enfants, Préparation des pigments", type: "image" },
+    { src: teintureEnfants5, alt: "T-shirts en cours de teinture", caption: "Atelier teinture végétale enfants, Tie and dye végétal en cours", type: "image" },
+    { src: teintureEnfants6, alt: "T-shirt orange en cours de teinture", caption: "Atelier teinture végétale enfants, Pigment orange sur coton", type: "image" },
+    { src: teintureEnfantsTshirtRose, alt: "T-shirt rose et jaune motif soleil", caption: "Atelier teinture végétale enfants, Motif soleil aux pigments naturels", type: "image" },
+    { src: terrariumAdultesGroupe, alt: "Atelier terrarium en groupe, adultes", caption: "Atelier terrarium, Création en groupe entre collègues", type: "image" },
+    { src: terrariumBocalFittonia, alt: "Terrarium en bocal avec fittonia", caption: "Terrarium, Bocal avec fittonia et tradescantia", type: "image" },
+    { src: terrariumFittoniaPrep, alt: "Préparation d'un terrarium fittonia", caption: "Terrarium, Composition mousse, fittonia et graviers", type: "image" },
+    { src: kokedamaCollection, alt: "Collection de kokedamas", caption: "Kokedamas, Collection de créations en atelier", type: "image" },
     { src: "/videos/workshop-kokedama-atelier.mp4", alt: "Atelier kokedama en vidéo", caption: "Atelier kokedama, gestes et matières", type: "video" },
     { src: portraitVanessaImage, alt: "Vanessa Charlery, ethnobotaniste", caption: "Portrait, Vanessa Charlery, fondatrice", type: "image" },
 

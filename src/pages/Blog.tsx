@@ -20,15 +20,15 @@ import blogFilmsPoster from "@/assets/blog-films-nature-poster.jpg";
 import blogBotaniqueCollege from "@/assets/blog-botanique-college.jpg";
 import blogPlantesSauvages from "@/assets/blog-plantes-sauvages.jpg";
 import blogMediationScientifique from "@/assets/blog-mediation-scientifique.jpg";
-import blogDuBreuilAffiche from "@/assets/du-breuil-en-fete-2026-affiche.png.asset.json";
-import blogVoisinsAffiche from "@/assets/au-fil-jardins-voisins-affiche.jpeg.asset.json";
+import blogDuBreuilAffiche from "@/assets/du-breuil-en-fete-2026-affiche.png";
+import blogVoisinsAffiche from "@/assets/au-fil-jardins-voisins-affiche.jpeg";
 
 const blogPosts = [
   {
     slug: "balade-botanique-voisins-le-bretonneux",
     title: "Au fil des jardins de Voisins : une lecture anthropologique du paysage de SQY",
     excerpt: "Retour ethnobotanique sur la balade du 7 juin 2026 à Voisins-le-Bretonneux. Croix du Bois, distillerie Decauville, Versailles du peuple de Bofill, écoquartier.",
-    images: [blogVoisinsAffiche.url],
+    images: [blogVoisinsAffiche],
     date: "2026-06-09",
     category: "Retour d'expérience"
   },
@@ -36,7 +36,7 @@ const blogPosts = [
     slug: "balade-botanique-ecole-du-breuil",
     title: "Plantes voyageuses, histoires oubliées : balade botanique à l'École Du Breuil",
     excerpt: "Retour sur la balade ethnobotanique animée lors de Du Breuil en fête 2026, au cœur du Bois de Vincennes. Jardins de simples, plantes voyageuses et Wardian Cases.",
-    images: [blogDuBreuilAffiche.url],
+    images: [blogDuBreuilAffiche],
     date: "2026-06-06",
     category: "Retour d'expérience"
   },

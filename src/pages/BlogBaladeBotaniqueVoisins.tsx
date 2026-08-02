@@ -5,11 +5,11 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import BackToTop from "@/components/BackToTop";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import afficheVoisins from "@/assets/au-fil-jardins-voisins-affiche.jpeg.asset.json";
-import panneauRoseraie from "@/assets/roseraie-croix-du-bois-panneau.png.asset.json";
-import versaillesPeuple from "@/assets/versailles-du-peuple-bofill.jpg.asset.json";
-import kiosqueCroixDuBois from "@/assets/croix-du-bois-kiosque.jpg.asset.json";
-import josephineImperatrice from "@/assets/josephine-imperatrice.webp.asset.json";
+import afficheVoisins from "@/assets/au-fil-jardins-voisins-affiche.jpeg";
+import panneauRoseraie from "@/assets/roseraie-croix-du-bois-panneau.png";
+import versaillesPeuple from "@/assets/versailles-du-peuple-bofill.jpg";
+import kiosqueCroixDuBois from "@/assets/croix-du-bois-kiosque.jpg";
+import josephineImperatrice from "@/assets/josephine-imperatrice.webp";
 
 const BlogBaladeBotaniqueVoisins = () => {
   return (
@@ -54,7 +54,7 @@ const BlogBaladeBotaniqueVoisins = () => {
 
           <figure className="mb-10 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
             <img
-              src={afficheVoisins.url}
+              src={afficheVoisins}
               alt="Affiche Au fil des jardins de Voisins, dimanche 7 juin 2026, Musée de la Ville de Saint-Quentin-en-Yvelines"
               className="w-full h-auto"
               loading="lazy"
@@ -84,7 +84,7 @@ const BlogBaladeBotaniqueVoisins = () => {
 
               <figure className="my-8 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
                 <img
-                  src={kiosqueCroixDuBois.url}
+                  src={kiosqueCroixDuBois}
                   alt="Kiosque en pierre du parc de la Croix du Bois à Voisins-le-Bretonneux, coupole en ferronnerie dorée, sculptures et perspective à l'italienne"
                   className="w-full h-auto"
                   loading="lazy"
@@ -113,7 +113,7 @@ const BlogBaladeBotaniqueVoisins = () => {
 
               <figure className="my-8 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
                 <img
-                  src={panneauRoseraie.url}
+                  src={panneauRoseraie}
                   alt="Panneau pédagogique de la roseraie de la Croix du Bois à Voisins-le-Bretonneux, classification des rosiers grimpants, anglais, romantiques, anciens et à fleurs coupées"
                   className="w-full h-auto"
                   loading="lazy"
@@ -135,7 +135,7 @@ const BlogBaladeBotaniqueVoisins = () => {
 
               <figure className="my-8 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
                 <img
-                  src={josephineImperatrice.url}
+                  src={josephineImperatrice}
                   alt="Portrait de l'impératrice Joséphine de Beauharnais, fondatrice de la roseraie de Malmaison, figure centrale de la rosomanie du XIXe siècle"
                   className="w-full h-auto"
                   loading="lazy"
@@ -180,7 +180,7 @@ const BlogBaladeBotaniqueVoisins = () => {
 
               <figure className="my-8 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
                 <img
-                  src={versaillesPeuple.url}
+                  src={versaillesPeuple}
                   alt="Vue aérienne des Arcades du Lac et du Viaduc à Montigny-le-Bretonneux et Voisins-le-Bretonneux, ensemble postmoderne de logements sociaux dessiné par Ricardo Bofill autour du bassin de la Sourderie, surnommé le Versailles du peuple"
                   className="w-full h-auto"
                   loading="lazy"

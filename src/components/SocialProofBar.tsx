@@ -1,8 +1,8 @@
 import { Users, Calendar, Building2, Award, Quote } from "lucide-react";
-import assuranceMaladieLogo from "@/assets/logo-assurance-maladie.png.asset.json";
+import assuranceMaladieLogo from "@/assets/logo-assurance-maladie.png";
 
 const PARTNER_LOGOS = [
-  { src: assuranceMaladieLogo.url, alt: "l'Assurance Maladie" },
+  { src: assuranceMaladieLogo, alt: "l'Assurance Maladie" },
   { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
   { src: "/logos/bezons.svg", alt: "Ville de Bezons" },
   { src: "/logos/maurepas.png", alt: "Ville de Maurepas" },

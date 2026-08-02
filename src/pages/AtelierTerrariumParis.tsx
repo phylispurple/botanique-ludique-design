@@ -1,9 +1,9 @@
 import ProductTemplate from "@/components/ProductTemplate";
 import { Sprout } from "lucide-react";
 import terrariumCarousel from "@/assets/gallery-terrarium.webp";
-import terrariumAdultesGroupe from "@/assets/gallery-terrarium-adultes-groupe.jpg.asset.json";
-import terrariumBocalFittonia from "@/assets/gallery-terrarium-bocal-fittonia.jpg.asset.json";
-import terrariumFittoniaPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg.asset.json";
+import terrariumAdultesGroupe from "@/assets/gallery-terrarium-adultes-groupe.jpg";
+import terrariumBocalFittonia from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
+import terrariumFittoniaPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg";
 
 const AtelierTerrariumParis = () => (
   <ProductTemplate data={{
@@ -45,9 +45,9 @@ const AtelierTerrariumParis = () => (
     ],
     photos: [
       { src: terrariumCarousel, alt: "Terrarium végétal avec succulentes et fougères", caption: "Terrarium végétal" },
-      { src: terrariumBocalFittonia.url, alt: "Terrarium en bocal avec fittonia et tradescantia", caption: "Terrarium en bocal" },
-      { src: terrariumFittoniaPrep.url, alt: "Composition d'un terrarium fittonia", caption: "Composition en cours" },
-      { src: terrariumAdultesGroupe.url, alt: "Atelier terrarium en groupe adultes", caption: "Atelier en groupe" },
+      { src: terrariumBocalFittonia, alt: "Terrarium en bocal avec fittonia et tradescantia", caption: "Terrarium en bocal" },
+      { src: terrariumFittoniaPrep, alt: "Composition d'un terrarium fittonia", caption: "Composition en cours" },
+      { src: terrariumAdultesGroupe, alt: "Atelier terrarium en groupe adultes", caption: "Atelier en groupe" },
     ],
   }} />
 );

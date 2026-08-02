@@ -6,7 +6,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import BackToTop from "@/components/BackToTop";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import affiche from "@/assets/du-breuil-en-fete-2026-affiche.png.asset.json";
+import affiche from "@/assets/du-breuil-en-fete-2026-affiche.png";
 
 const BlogBaladeBotaniqueDuBreuil = () => {
   return (
@@ -74,7 +74,7 @@ const BlogBaladeBotaniqueDuBreuil = () => {
           <AnimatedSection delay={80}>
             <figure className="mb-10 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
               <img
-                src={affiche.url}
+                src={affiche}
                 alt="Affiche officielle Du Breuil en fête 2026, 30 et 31 mai, Bois de Vincennes, Paris 12e"
                 className="w-full h-auto"
                 loading="lazy"

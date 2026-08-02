@@ -7,12 +7,12 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { MapPin, Calendar, Users, Leaf, Clock, CheckCircle, Star, Phone, Mail, Sparkles, Palette } from "lucide-react";
 import dyeingImage from "@/assets/gallery-teinture-1.webp";
-import teintureEnfants2 from "@/assets/gallery-teinture-enfants-2.jpg.asset.json";
-import teintureEnfants4 from "@/assets/gallery-teinture-enfants-4.jpg.asset.json";
-import teintureEnfants5 from "@/assets/gallery-teinture-enfants-5.jpg.asset.json";
-import teintureEnfants6 from "@/assets/gallery-teinture-enfants-6.jpg.asset.json";
-import teintureEnfantsTshirt from "@/assets/gallery-teinture-enfants-tshirt.jpg.asset.json";
-import teintureEnfantsTshirtRose from "@/assets/gallery-teinture-enfants-tshirt-rose.jpg.asset.json";
+import teintureEnfants2 from "@/assets/gallery-teinture-enfants-2.jpg";
+import teintureEnfants4 from "@/assets/gallery-teinture-enfants-4.jpg";
+import teintureEnfants5 from "@/assets/gallery-teinture-enfants-5.jpg";
+import teintureEnfants6 from "@/assets/gallery-teinture-enfants-6.jpg";
+import teintureEnfantsTshirt from "@/assets/gallery-teinture-enfants-tshirt.jpg";
+import teintureEnfantsTshirtRose from "@/assets/gallery-teinture-enfants-tshirt-rose.jpg";
 
 
 const AtelierTeintureVegetale = () => {
@@ -123,7 +123,7 @@ const AtelierTeintureVegetale = () => {
                 {[teintureEnfants2, teintureEnfantsTshirt, teintureEnfants4, teintureEnfants5, teintureEnfants6, teintureEnfantsTshirtRose].map((img, i) => (
                   <div key={i} className="aspect-[4/3] overflow-hidden border-brutal shadow-brutal">
                     <img
-                      src={img.url}
+                      src={img}
                       alt={`Atelier teinture végétale, création à partir de pigments naturels ${i + 1}`}
                       loading="lazy"
                       className="w-full h-full object-cover"
