@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
-import { GraduationCap, Sprout, Microscope, Landmark, Users, BookOpen, Compass, TreePine, ArrowUpRight } from "lucide-react";
+import { GraduationCap, Sprout, Microscope, Landmark, Users, BookOpen, Compass, TreePine, ArrowUpRight, ArrowRight } from "lucide-react";
+import imgTerrarium from "@/assets/gallery-terrarium.webp";
+import imgSachet from "@/assets/gallery-sachet-senteur.webp";
+import imgTeinture from "@/assets/gallery-teinture-1.webp";
 
 const conferences = [
   {
@@ -56,6 +59,36 @@ const balades = [
   },
 ];
 
+const hybrides = [
+  {
+    img: imgTerrarium,
+    eyebrow: "Histoire des sciences · 1829",
+    title: "Terrarium : la caisse de Ward et la biopiraterie de l'hévéa",
+    desc: "En 1829, le médecin londonien Nathaniel Ward invente par accident le terrarium moderne : une mini-serre en verre scellée capable de faire voyager des plantes vivantes à travers le monde. Cette invention permettra, quelques décennies plus tard, le vol de 70 000 graines d'hévéa au Brésil vers les colonies britanniques d'Asie, bouleversant l'économie mondiale du caoutchouc. Le temps d'un atelier, on retrace ce récit avant de fabriquer, ensemble, son propre écosystème en bocal.",
+    tags: ["Wardian Case", "Biopiraterie", "Fabrication"],
+    to: "/blog/terrarium-biopiraterie-histoire-coloniale",
+    linkLabel: "Lire l'histoire complète",
+  },
+  {
+    img: imgSachet,
+    eyebrow: "Histoire des épices",
+    title: "Sachets de senteurs : sur les routes des épices",
+    desc: "Poivre, cannelle, girofle, safran : pendant des siècles, les épices ont valu plus cher que l'or et redessiné les routes commerciales entre l'Asie, le monde arabe et l'Europe, jusqu'à motiver des explorations et des colonisations entières. On revisite cette histoire des sens et du pouvoir avant de composer, chacun·e, son sachet de senteurs à partir de plantes et d'épices séchées.",
+    tags: ["Routes commerciales", "Sens & mémoire", "Fabrication"],
+    to: "/workshops?reset=true#sachets-senteur-&-pots-pourris",
+    linkLabel: "Découvrir l'atelier",
+  },
+  {
+    img: imgTeinture,
+    eyebrow: "Histoire des couleurs",
+    title: "Teinture végétale : une histoire de couleurs et de pouvoir",
+    desc: "Indigo, garance, cochenille : les teintures végétales ont longtemps été un enjeu économique et colonial majeur, de la route de l'indigo en Inde aux plantations de garance en Europe. Après un temps de récit sur cette histoire des couleurs, chaque participant·e teint sa propre étoffe avec des pigments naturels.",
+    tags: ["Indigo", "Teintures naturelles", "Fabrication"],
+    to: "/atelier-teinture-vegetale",
+    linkLabel: "Découvrir l'atelier",
+  },
+];
+
 const modules = [
   { icon: Landmark, label: "Conférence pour institutions", duration: "1h à 1h30" },
   { icon: Compass, label: "Balade ethnobotanique guidée", duration: "1h à 2h" },
@@ -71,7 +104,7 @@ const ConferencesSavoirs = () => {
       <div className="py-20 px-6 md:px-16 lg:px-[120px]">
         <AnimatedSection>
           <span className="section-label block mb-5" style={{ color: 'hsl(73 44% 67%)' }}>
-            Médiation ethnobotanique pour institutions
+            Médiation ethnobotanique & balades botaniques
           </span>
           <h2 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.95] tracking-[-2px] text-white mb-5">
             Conférences<br />& Savoirs
@@ -117,6 +150,65 @@ const ConferencesSavoirs = () => {
           ))}
         </div>
 
+        {/* Ateliers hybrides : récit + fabrication */}
+        <div className="border-t border-white/[0.12] pt-16 mt-0">
+          <AnimatedSection>
+            <span className="section-label block mb-4" style={{ color: 'hsl(73 44% 67%)' }}>
+              Une signature Botanique Ludique
+            </span>
+            <h3 className="font-display text-3xl md:text-4xl uppercase leading-[0.95] mb-4 text-white">
+              Ateliers Hybrides<br />Récit & Création
+            </h3>
+            <p className="text-base text-white/70 max-w-[640px] leading-[1.7] mb-12">
+              Certains de nos ateliers vont plus loin que la simple activité manuelle : ils racontent une histoire avant de faire naître un objet. Une manière de tisser ensemble médiation scientifique et pratique artistique, pour les publics curieux comme pour les institutions.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-3 gap-0">
+            {hybrides.map((h, idx) => (
+              <AnimatedSection key={idx} delay={idx * 120} className="h-full">
+                <Link
+                  to={h.to}
+                  className="h-full border border-white/[0.12] -mt-px -ml-px flex flex-col group transition-colors duration-300 hover:bg-white/5"
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={h.img}
+                      alt={h.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col flex-1">
+                    <span className="font-mono-brand text-[10px] tracking-[3px] text-[hsl(73_44%_67%)] mb-4 block">
+                      {h.eyebrow}
+                    </span>
+                    <h4 className="font-display text-lg md:text-xl uppercase leading-[1.1] mb-3.5 text-white">
+                      {h.title}
+                    </h4>
+                    <p className="text-sm leading-[1.7] text-white/70 mb-5 text-justify flex-1">
+                      {h.desc}
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 mb-5">
+                      {h.tags.map(tag => (
+                        <span
+                          key={tag}
+                          className="font-mono-brand text-[9px] uppercase tracking-[1.5px] px-2.5 py-1 border border-white/25 text-white/60 rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="inline-flex items-center gap-1.5 font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(73_44%_67%)] mt-auto">
+                      {h.linkLabel} <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </div>
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+
         {/* Balades botaniques */}
         <div className="border-t border-white/[0.12] pt-16 mt-0">
           <AnimatedSection>
@@ -126,9 +218,15 @@ const ConferencesSavoirs = () => {
             <h3 className="font-display text-3xl md:text-4xl uppercase leading-[0.95] mb-4 text-white">
               Balades<br />Ethnobotaniques
             </h3>
-            <p className="text-base text-white/70 max-w-[560px] leading-[1.7] mb-12">
+            <p className="text-base text-white/70 max-w-[560px] leading-[1.7] mb-8">
               Des visites guidées qui transforment chaque jardin, chaque serre, chaque parc en une archive vivante. Une approche unique en Île-de-France qui croise botanique, anthropologie et histoire sociale du végétal, à destination des institutions culturelles et patrimoniales.
             </p>
+            <Link
+              to="/balades-botaniques"
+              className="inline-flex items-center gap-2 font-mono-brand text-[11px] uppercase tracking-[2px] text-[hsl(73_44%_67%)] hover:text-white transition-colors mb-12"
+            >
+              Voir toutes nos balades botaniques <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0">

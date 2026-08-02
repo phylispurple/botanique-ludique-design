@@ -2,10 +2,16 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import LandingPhotoStrip from "@/components/LandingPhotoStrip";
+import PhotoCarousel from "@/components/PhotoCarousel";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
-import { TreePine, Compass, Building2, ArrowRight, BookOpen, Landmark } from "lucide-react";
+import { TreePine, Compass, Building2, ArrowRight, BookOpen, Landmark, GraduationCap, Sun, MapPin, Users } from "lucide-react";
+import galleryForestWalk from "@/assets/gallery-forest-walk.webp";
+import galleryAutumnLeaves from "@/assets/gallery-autumn-leaves.webp";
+import workshopSharedGarden from "@/assets/workshop-shared-garden.jpg";
+import blogTerrariumKewGardens from "@/assets/blog-terrarium-kew-gardens.jpg";
+import galleryCollegeEee1 from "@/assets/gallery-college-eee-1.webp";
 
 const formats = [
   {
@@ -31,6 +37,69 @@ const formats = [
     title: "Déambulation botanique urbaine à Paris et en Île-de-France",
     desc: "Une lecture politique et historique du végétal urbain. Pensée pour les villes, mairies d'arrondissement et collectivités. Déjà menée pour la Mairie du 14e arrondissement de Paris.",
     refs: "Mairies, collectivités, services culturels",
+  },
+];
+
+const reasons = [
+  {
+    icon: GraduationCap,
+    title: "Rigueur académique",
+    desc: "Formée en anthropologie de la nature à l'EHESS, une approche qui croise recherche universitaire et médiation accessible à tous les publics.",
+  },
+  {
+    icon: BookOpen,
+    title: "Récit vivant",
+    desc: "Chaque plante devient une porte d'entrée vers une histoire sociale, politique et culturelle, jamais un simple nom latin à retenir.",
+  },
+  {
+    icon: MapPin,
+    title: "Adaptée à votre lieu",
+    desc: "Jardin patrimonial, musée, rue ou parc de quartier : chaque balade est construite sur mesure pour votre terrain et vos collections.",
+  },
+  {
+    icon: Users,
+    title: "Déjà éprouvée",
+    desc: "Des parcours déjà menés pour le Musée de la Ville de Saint-Quentin-en-Yvelines, l'École Du Breuil et la Mairie du 14e arrondissement de Paris.",
+  },
+];
+
+const explore = [
+  {
+    label: "Par département",
+    icon: MapPin,
+    links: [
+      { to: "/balade-botanique-paris", name: "Paris (75)" },
+      { to: "/balade-botanique-yvelines", name: "Yvelines (78)" },
+      { to: "/balade-botanique-hauts-de-seine", name: "Hauts-de-Seine (92)" },
+      { to: "/balade-botanique-val-d-oise", name: "Val-d'Oise (95)" },
+    ],
+  },
+  {
+    label: "Par public",
+    icon: Users,
+    links: [
+      { to: "/balade-botanique-musee", name: "Musées et institutions" },
+      { to: "/balade-botanique-jardin-patrimonial", name: "Jardins patrimoniaux" },
+      { to: "/balade-botanique-entreprise-cse", name: "Entreprises et CSE" },
+      { to: "/balade-botanique-scolaire", name: "Écoles et collèges" },
+    ],
+  },
+  {
+    label: "Par thématique",
+    icon: Compass,
+    links: [
+      { to: "/balade-botanique-urbaine-paris", name: "Botanique urbaine" },
+      { to: "/balade-plantes-sauvages-comestibles-paris", name: "Plantes sauvages comestibles" },
+      { to: "/balade-botanique-coloniale-paris", name: "Botanique coloniale" },
+    ],
+  },
+  {
+    label: "Par saison",
+    icon: Sun,
+    links: [
+      { to: "/balade-botanique-printemps-ete", name: "Printemps et été" },
+      { to: "/agenda", name: "Agenda complet" },
+    ],
   },
 ];
 
@@ -69,6 +138,30 @@ const BaladesBotaniques = () => {
           </AnimatedSection>
         </section>
       <LandingPhotoStrip />
+
+        {/* Carrousel photos */}
+        <section className="py-12 bg-[hsl(var(--black))] border-y-[3px] border-[hsl(var(--black))] overflow-hidden">
+          <div className="mb-8 px-6 md:px-16 lg:px-[120px] flex items-end justify-between gap-4 flex-wrap">
+            <div>
+              <span className="font-mono-brand text-[10px] tracking-[3px] uppercase text-[hsl(73_44%_67%)]">Sur le terrain</span>
+              <h2 className="font-display text-2xl md:text-4xl uppercase leading-[0.95] tracking-[-1px] text-[hsl(var(--cream))] mt-2">
+                Nos balades en <span className="text-[hsl(73_44%_67%)]">images</span>
+              </h2>
+            </div>
+            <Link to="/gallery" className="font-mono-brand text-[11px] uppercase tracking-[1.5px] text-[hsl(var(--cream))] border-b-2 border-[hsl(73_44%_67%)] hover:text-[hsl(73_44%_67%)] transition-colors pb-1">
+              Voir toute la galerie →
+            </Link>
+          </div>
+          <PhotoCarousel
+            images={[
+              { src: galleryForestWalk, alt: "Balade botanique en forêt — Botanique Ludique" },
+              { src: blogTerrariumKewGardens, alt: "Jardins botaniques patrimoniaux — Botanique Ludique" },
+              { src: workshopSharedGarden, alt: "Balade dans un jardin partagé — Botanique Ludique" },
+              { src: galleryAutumnLeaves, alt: "Balade botanique d'automne — Botanique Ludique" },
+              { src: galleryCollegeEee1, alt: "Balade botanique scolaire — Botanique Ludique" },
+            ]}
+          />
+        </section>
 
         {/* Trois formats */}
         <section className="px-6 md:px-16 lg:px-[120px] py-20">
@@ -113,6 +206,29 @@ const BaladesBotaniques = () => {
           </div>
         </section>
 
+        {/* Pourquoi nous */}
+        <section className="px-6 md:px-16 lg:px-[120px] py-20 bg-[hsl(var(--cream))] border-t border-[hsl(var(--black))]/15">
+          <AnimatedSection>
+            <span className="font-mono-brand text-[11px] tracking-[3px] uppercase text-[hsl(var(--black))]/60 block mb-4">
+              Pourquoi nous
+            </span>
+            <h2 className="font-display text-2xl md:text-4xl uppercase leading-[1] mb-12 max-w-[700px]">
+              Une approche <span className="italic font-editorial normal-case">différente</span> du végétal
+            </h2>
+          </AnimatedSection>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0">
+            {reasons.map((r, idx) => (
+              <AnimatedSection key={r.title} delay={idx * 100} className="h-full">
+                <div className="h-full p-8 border-[3px] border-[hsl(var(--black))] -mt-[3px] -ml-[3px] hover:bg-[hsl(var(--black))] hover:text-[hsl(var(--cream))] transition-colors duration-200">
+                  <r.icon className="w-7 h-7 mb-4" strokeWidth={1.5} />
+                  <h3 className="font-display text-lg uppercase mb-2.5 leading-tight">{r.title}</h3>
+                  <p className="text-sm leading-[1.7] opacity-75">{r.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </section>
+
         {/* CTA bar sobre */}
         <section className="bg-[hsl(var(--black))] text-[hsl(var(--cream))] py-14 px-6 md:px-16 lg:px-[120px]">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
@@ -134,52 +250,38 @@ const BaladesBotaniques = () => {
         </section>
 
         {/* Explorer par territoire et thématique */}
-        <section className="px-6 md:px-16 lg:px-[120px] py-20 border-t border-[hsl(var(--black))]/15">
+        <section className="px-6 md:px-16 lg:px-[120px] py-20 border-t border-[hsl(var(--black))]/15 bg-[hsl(var(--cream))]">
           <span className="font-mono-brand text-[11px] tracking-[3px] uppercase text-[hsl(var(--black))]/60 block mb-4">
             Explorer
           </span>
           <h2 className="font-display text-2xl md:text-4xl uppercase leading-[1] mb-12 max-w-[700px]">
             Toutes les balades<br />par angle
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-            <div>
-              <p className="font-mono-brand text-[10px] tracking-[2.5px] uppercase mb-4 text-[hsl(var(--black))]/60">Par département</p>
-              <ul className="space-y-2 text-sm">
-                <li><Link to="/balade-botanique-paris" className="underline hover:no-underline">Paris (75)</Link></li>
-                <li><Link to="/balade-botanique-yvelines" className="underline hover:no-underline">Yvelines (78)</Link></li>
-                <li><Link to="/balade-botanique-hauts-de-seine" className="underline hover:no-underline">Hauts-de-Seine (92)</Link></li>
-                <li><Link to="/balade-botanique-val-d-oise" className="underline hover:no-underline">Val-d'Oise (95)</Link></li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-mono-brand text-[10px] tracking-[2.5px] uppercase mb-4 text-[hsl(var(--black))]/60">Par public</p>
-              <ul className="space-y-2 text-sm">
-                <li><Link to="/balade-botanique-musee" className="underline hover:no-underline">Musées et institutions</Link></li>
-                <li><Link to="/balade-botanique-jardin-patrimonial" className="underline hover:no-underline">Jardins patrimoniaux</Link></li>
-                <li><Link to="/balade-botanique-entreprise-cse" className="underline hover:no-underline">Entreprises et CSE</Link></li>
-                <li><Link to="/balade-botanique-scolaire" className="underline hover:no-underline">Écoles et collèges</Link></li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-mono-brand text-[10px] tracking-[2.5px] uppercase mb-4 text-[hsl(var(--black))]/60">Par thématique</p>
-              <ul className="space-y-2 text-sm">
-                <li><Link to="/balade-botanique-urbaine-paris" className="underline hover:no-underline">Botanique urbaine</Link></li>
-                <li><Link to="/balade-plantes-sauvages-comestibles-paris" className="underline hover:no-underline">Plantes sauvages comestibles</Link></li>
-                <li><Link to="/balade-botanique-coloniale-paris" className="underline hover:no-underline">Botanique coloniale</Link></li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-mono-brand text-[10px] tracking-[2.5px] uppercase mb-4 text-[hsl(var(--black))]/60">Par saison</p>
-              <ul className="space-y-2 text-sm">
-                <li><Link to="/balade-botanique-printemps-ete" className="underline hover:no-underline">Printemps et été</Link></li>
-                <li><Link to="/agenda" className="underline hover:no-underline">Agenda complet</Link></li>
-              </ul>
-              <p className="font-mono-brand text-[10px] tracking-[2.5px] uppercase mb-4 mt-8 text-[hsl(var(--black))]/60">Voir aussi</p>
-              <ul className="space-y-2 text-sm">
-                <li><Link to="/#mediation" className="underline hover:no-underline">Conférences et savoirs</Link></li>
-                <li><Link to="/workshops" className="underline hover:no-underline">Ateliers tous publics</Link></li>
-              </ul>
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0">
+            {explore.map((cat) => (
+              <div key={cat.label} className="border-[3px] border-[hsl(var(--black))] -mt-[3px] -ml-[3px] p-7 flex flex-col hover:bg-[hsl(var(--black))] hover:text-[hsl(var(--cream))] transition-colors duration-200 group">
+                <cat.icon className="w-6 h-6 mb-4" strokeWidth={1.5} />
+                <p className="font-mono-brand text-[10px] tracking-[2.5px] uppercase mb-4 opacity-60">{cat.label}</p>
+                <ul className="space-y-2.5 text-sm flex-1">
+                  {cat.links.map((l) => (
+                    <li key={l.to}>
+                      <Link to={l.to} className="inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">
+                        {l.name} <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 flex flex-wrap gap-4">
+            <Link to="/#mediation" className="inline-flex items-center gap-2 font-mono-brand text-[11px] uppercase tracking-[2px] border-b-2 border-[hsl(var(--black))] hover:opacity-60 transition-opacity pb-1">
+              Conférences et savoirs →
+            </Link>
+            <Link to="/workshops" className="inline-flex items-center gap-2 font-mono-brand text-[11px] uppercase tracking-[2px] border-b-2 border-[hsl(var(--black))] hover:opacity-60 transition-opacity pb-1">
+              Ateliers tous publics →
+            </Link>
           </div>
         </section>
       </main>
