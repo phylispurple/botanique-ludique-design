@@ -234,6 +234,16 @@ const Navigation = () => {
             </Link>
           </li>
 
+          {/* Team Building link */}
+          <li>
+            <Link to="/atelier-terrarium-team-building"
+              className={`font-mono text-[12.5px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/atelier-terrarium-team-building') ? 'border-b border-olive-light' : ''}`}
+              style={{ color: isActive('/atelier-terrarium-team-building') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Team Building
+            </Link>
+          </li>
+
+
           {/* Regular links */}
           <li>
             <Link to="/gallery"
