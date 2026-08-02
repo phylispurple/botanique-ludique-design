@@ -274,20 +274,6 @@ const Navigation = () => {
             </Link>
           </li>
 
-          <li className="text-white/70 text-[6px] leading-none">●</li>
-
-          {/* Association — tout à droite */}
-          <li>
-            <Link
-              to="/association"
-              className={`font-mono text-[12.5px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${
-                isActive('/association') ? 'border-b border-olive-light' : ''
-              }`}
-              style={{ color: isActive('/association') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}
-            >
-              Association
-            </Link>
-          </li>
         </ul>
 
         {/* Mobile burger */}
@@ -304,12 +290,6 @@ const Navigation = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden border-t border-olive/30 px-6 py-6 space-y-4" style={{ background: 'hsl(0 0% 10%)' }}>
-          {/* Association — highlighted */}
-          <Link to="/association" onClick={() => setIsOpen(false)}
-            className="block font-mono text-[10px] uppercase tracking-[2px] px-3 py-2 border border-white/15 transition-colors w-fit"
-            style={{ color: isActive('/association') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
-            🌿 Association
-          </Link>
           <Link to="/about" onClick={() => setIsOpen(false)}
             className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
             style={{ color: isActive('/about') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>

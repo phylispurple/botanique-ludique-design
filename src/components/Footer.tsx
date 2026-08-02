@@ -64,7 +64,6 @@ const Footer = () => {
                 { name: "À propos", path: "/about" },
                 { name: "Ateliers", path: "/workshops" },
                 { name: "Pro & Entreprises", path: "/pro" },
-                { name: "L'association", path: "/association" },
                 { name: "Galerie", path: "/gallery" },
                 { name: "Blog", path: "/blog" },
                 { name: "FAQ", path: "/faq" },

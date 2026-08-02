@@ -168,14 +168,8 @@ const About = () => {
               <Link
                 to="/workshops"
                 className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3 inline-flex items-center gap-2">
-                
+
                 Voir les ateliers <ArrowRight size={14} />
-              </Link>
-              <Link
-                to="/association"
-                className="btn-brutal bg-transparent text-[hsl(var(--black))] border-[hsl(var(--black))] hover:bg-[hsl(var(--black))] hover:text-[hsl(var(--cream))] text-xs px-7 py-3 inline-flex items-center gap-2">
-                
-                L'association <ArrowRight size={14} />
               </Link>
             </div>
           </AnimatedSection>

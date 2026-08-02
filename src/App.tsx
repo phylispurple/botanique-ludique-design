@@ -10,7 +10,6 @@ import FloatingContactButton from "@/components/FloatingContactButton";
 // Core
 import Index from "./pages/Index";
 import About from "./pages/About";
-import Association from "./pages/Association";
 import EtablissementsScolaires from "./pages/EtablissementsScolaires";
 import Workshops from "./pages/Workshops";
 import Pro from "./pages/Pro";
@@ -289,7 +288,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/index.html" element={<Navigate to="/" replace />} />
             <Route path="/about" element={<About />} />
-            <Route path="/association" element={<Association />} />
             <Route path="/etablissements-scolaires" element={<EtablissementsScolaires />} />
             <Route path="/workshops" element={<Workshops />} />
             <Route path="/pro" element={<Pro />} />

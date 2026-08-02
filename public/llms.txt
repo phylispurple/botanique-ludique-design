@@ -10,7 +10,6 @@ Contact : contact@botaniqueludique.com, 06 09 83 16 06.
 
 - [Accueil](/): Présentation de Botanique Ludique et de son approche ethnobotanique.
 - [À propos](/about): Parcours de Vanessa Charlery, anthropologue et fondatrice.
-- [Association](/association): Mission associative, financement de chercheur·es et artistes.
 - [Ateliers](/workshops): Catalogue complet des ateliers botaniques (terrarium, kokedama, teinture, herbier, vannerie, bougies, tisanes).
 - [Galerie](/gallery): Photographies des ateliers, créations et interventions.
 - [Agenda](/agenda): Prochains ateliers, balades et événements publics en Île-de-France.
