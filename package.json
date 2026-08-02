@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build && npm run prerender",
     "build:no-prerender": "vite build",
-    "prerender": "puppeteer browsers install chrome && node scripts/prerender.mjs",
+    "prerender": "(puppeteer browsers install chrome || echo 'Chrome non telecharge, on tentera un Chrome systeme') && node scripts/prerender.mjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"

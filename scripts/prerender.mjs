@@ -28,14 +28,21 @@ const PORT = 4179;
  * Netlify), sinon une variable d'environnement, sinon le Chrome du Mac.
  */
 function trouverChrome() {
-  if (process.env.PUPPETEER_EXECUTABLE_PATH) return process.env.PUPPETEER_EXECUTABLE_PATH;
-  try {
-    const p = puppeteer.executablePath();
-    if (typeof p === "string" && existsSync(p)) return p;
-  } catch { /* pas de navigateur embarqué */ }
-  const mac = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
-  if (existsSync(mac)) return mac;
-  throw new Error("Chrome introuvable. Lancez : npx puppeteer browsers install chrome");
+  const candidats = [
+    process.env.PUPPETEER_EXECUTABLE_PATH,
+    process.env.CHROME_PATH,
+    // Chrome téléchargé par puppeteer (local comme sur un serveur de build)
+    (() => { try { const p = puppeteer.executablePath(); return typeof p === "string" ? p : null; } catch { return null; } })(),
+    // Images de build Linux (Netlify, CI)
+    "/usr/bin/google-chrome-stable",
+    "/usr/bin/google-chrome",
+    "/usr/bin/chromium-browser",
+    "/usr/bin/chromium",
+    // macOS
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  ].filter(Boolean);
+  for (const c of candidats) if (existsSync(c)) return c;
+  return null;
 }
 
 // Les balises que l'on fige. Tout le reste de <head> vient de index.html.
@@ -76,11 +83,33 @@ const server = createServer(async (req, res) => {
 await new Promise((r) => server.listen(PORT, r));
 
 // 3. Chrome
-const browser = await puppeteer.launch({
-  executablePath: trouverChrome(),
-  headless: "new",
-  args: ["--no-sandbox", "--disable-dev-shm-usage"], // requis sur les serveurs de build
-});
+// Le pré-rendu est une amélioration, jamais un bloquant : s'il échoue, on
+// laisse le site se déployer sans (comportement d'avant) plutôt que de casser
+// la mise en ligne. L'échec est signalé bien visiblement dans le journal.
+function abandon(raison) {
+  console.warn("\n" + "!".repeat(64));
+  console.warn("PRE-RENDU IGNORE : " + raison);
+  console.warn("Le site se deploie normalement, mais les apercus de partage");
+  console.warn("(LinkedIn, WhatsApp, mail) afficheront le titre generique.");
+  console.warn("!".repeat(64) + "\n");
+  server.close();
+  process.exit(0);
+}
+
+const chromePath = trouverChrome();
+if (!chromePath) abandon("aucun Chrome trouve sur cette machine");
+console.log("Chrome utilise : " + chromePath);
+
+let browser;
+try {
+  browser = await puppeteer.launch({
+    executablePath: chromePath,
+    headless: "new",
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage", "--disable-gpu"],
+  });
+} catch (err) {
+  abandon("Chrome n'a pas demarre — " + err.message.split("\n")[0].slice(0, 120));
+}
 const page = await browser.newPage();
 const shell = await readFile(path.join(DIST, "index.html"), "utf-8");
 
@@ -134,7 +163,9 @@ server.close();
 
 console.log(`Pré-rendu : ${ok}/${routes.length} routes`);
 if (failures.length) {
-  console.log(`\nEchecs (${failures.length}) :`);
+  console.log(`\nRoutes non pré-rendues (${failures.length}) — elles resteront en rendu JavaScript :`);
   failures.forEach((f) => console.log("   " + f));
-  process.exit(1);
 }
+// On ne fait jamais echouer le build : mieux vaut un site en ligne sans
+// pre-rendu qu'un deploiement bloque.
+process.exit(0);
