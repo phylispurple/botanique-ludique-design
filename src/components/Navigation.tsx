@@ -396,6 +396,14 @@ const Navigation = () => {
               Médiation
             </Link>
 
+            <Link to="/atelier-terrarium-team-building" onClick={() => setIsOpen(false)}
+              className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
+              style={{ color: isActive('/atelier-terrarium-team-building') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Team Building
+            </Link>
+
+
+
             <Link to="/gallery" onClick={() => setIsOpen(false)}
               className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
               style={{ color: isActive('/gallery') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
