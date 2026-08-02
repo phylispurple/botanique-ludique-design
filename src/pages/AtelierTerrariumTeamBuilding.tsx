@@ -5,11 +5,48 @@ import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Leaf, Users, Clock, MapPin, Check } from "lucide-react";
+import { Users, Clock, MapPin, Check } from "lucide-react";
+import heroTerrarium from "@/assets/gallery-terrarium.webp";
+
+const INFOS = [
+  { icon: Users, label: "10 à 100 participants", desc: "Groupes flexibles" },
+  { icon: Clock, label: "1h à 2h30", desc: "Selon le format" },
+  { icon: MapPin, label: "Déplacement sur site", desc: "Partout en Île-de-France" },
+];
+
+const INCLUS = [
+  "Matériel et fournitures (pots, substrat, plantes, mousse, sable, pierres)",
+  "Animation par un·e médiateur·ice en botanique et créativité",
+  "Apprentissage du concept écologique du terrarium",
+  "Création personnalisée de chaque participant",
+  "Chacun repart avec le terrarium créé",
+  "Photos de groupe et moments partagés",
+  "Conseils d'entretien individuels",
+  "Déplacement inclus dans les zones de couverture",
+];
+
+const POURQUOI = [
+  {
+    title: "Créativité collective",
+    desc: "Chaque participant crée son propre terrarium, ce qui encourage l'expression personnelle tout en renforçant le sentiment d'appartenance.",
+  },
+  {
+    title: "Bien-être et nature",
+    desc: "Le contact avec les plantes réduit le stress, apaise l'esprit et favorise un environnement professionnel plus sain.",
+  },
+  {
+    title: "Durabilité et RSE",
+    desc: "Une activité écologique et responsable, alignée avec les valeurs de bien-être au travail et de conscience environnementale.",
+  },
+  {
+    title: "Souvenir concret",
+    desc: "Contrairement à d'autres team buildings, les participants repartent avec un objet qu'ils ont créé, un vrai souvenir de l'événement.",
+  },
+];
 
 const AtelierTerrariumTeamBuilding = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO
         title="Atelier Terrarium Team Building Paris | Créatif & Naturel"
         description="Ateliers terrarium pour team building en entreprise à Paris et Île-de-France. Activité créative, écologique et cohésive pour 10-100 participants. Déplacement sur site."
@@ -28,184 +65,133 @@ const AtelierTerrariumTeamBuilding = () => {
 
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="min-h-[600px] flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-sage/30 to-background py-20">
-        <div className="container mx-auto px-4 max-w-4xl relative z-10">
-          <AnimatedSection className="text-center space-y-6">
-            <div className="flex justify-center mb-4">
-              <div className="p-3 bg-sage/20">
-                <Leaf className="w-12 h-12 text-sage" />
+      {/* Hero */}
+      <section className="relative border-b-[3px] border-[hsl(var(--black))]">
+        <div className="grid lg:grid-cols-2">
+          <div className="px-6 md:px-16 py-16 md:py-24 flex flex-col justify-center bg-[hsl(var(--cream))]">
+            <AnimatedSection>
+              <span className="font-mono-brand text-[10px] tracking-[3px] uppercase text-[hsl(var(--terracotta))] block mb-5">
+                ★ Entreprises · Île-de-France
+              </span>
+              <h1 className="font-display text-[clamp(2.2rem,5.5vw,4.2rem)] uppercase leading-[0.95] tracking-[-1.5px] mb-6">
+                Atelier Terrarium<br />Team Building
+              </h1>
+              <p className="font-body text-base md:text-lg text-[hsl(var(--black))]/75 max-w-xl mb-8">
+                Créez ensemble un mini-écosystème végétal. Une activité créative, écologique
+                et fédératrice pour renforcer la cohésion de vos équipes.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  to="/contact"
+                  className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] inline-flex"
+                >
+                  Nous écrire
+                </Link>
+                <Link
+                  to="/workshops"
+                  className="btn-brutal bg-[hsl(var(--cream))] text-[hsl(var(--black))] inline-flex"
+                >
+                  Voir tous les ateliers
+                </Link>
               </div>
-            </div>
-            <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide"
-              style={{ fontFamily: "Fraunces, serif", color: "#5D653A" }}
-            >
-              Atelier Terrarium Team Building
-            </h1>
-            <p className="text-xl text-charcoal/70 max-w-2xl mx-auto">
-              Créez ensemble un mini-écosystème végétal. Une activité créative, écologique et cohésive pour renforcer la cohésion de vos équipes.
-            </p>
-            <div className="pt-6">
-              <Link
-                to="/contact"
-                className="inline-block px-8 py-4 bg-sage hover:bg-sage-dark text-white font-semibold transition-all hover:scale-105 hover:shadow-brutal-lg"
-              >
-                Demander un devis
-              </Link>
-            </div>
-          </AnimatedSection>
+            </AnimatedSection>
+          </div>
+          <div className="relative min-h-[320px] lg:min-h-[520px] border-t-[3px] lg:border-t-0 lg:border-l-[3px] border-[hsl(var(--black))]">
+            <img
+              src={heroTerrarium}
+              alt="Terrarium végétal créé lors d'un atelier team building en entreprise"
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
         </div>
       </section>
+
+      {/* Infos clés */}
+      <section className="bg-[hsl(var(--yellow))]/30 border-b-[3px] border-[hsl(var(--black))]">
+        <div className="max-w-[1400px] mx-auto grid md:grid-cols-3">
+          {INFOS.map((item, i) => (
+            <div
+              key={i}
+              className={`px-6 py-10 text-center ${i > 0 ? "md:border-l-[3px] border-[hsl(var(--black))]" : ""}`}
+            >
+              <item.icon className="w-7 h-7 mx-auto mb-4 text-[hsl(var(--olive))]" strokeWidth={2.2} />
+              <p className="font-display uppercase text-sm tracking-[-0.5px] mb-1">{item.label}</p>
+              <p className="font-mono-brand text-[10px] uppercase tracking-[2px] opacity-60">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <LandingPhotoStrip />
 
-      {/* Info Section */}
-      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection className="grid md:grid-cols-3 gap-8">
-            {[
-              { icon: Users, label: "10 à 100 participants", desc: "Groupes flexibles" },
-              { icon: Clock, label: "1h à 2h30", desc: "Selon le format" },
-              { icon: MapPin, label: "Déplacement sur site", desc: "Partout en Île-de-France" },
-            ].map((item, i) => (
-              <div key={i} className="text-center">
-                <item.icon className="w-8 h-8 text-sage mx-auto mb-3" />
-                <h3 className="font-semibold text-charcoal mb-1">{item.label}</h3>
-                <p className="text-sm text-muted-foreground">{item.desc}</p>
+      {/* Ce qui est inclus */}
+      <section className="py-20 md:py-28 px-6 md:px-16 border-b-[3px] border-[hsl(var(--black))]">
+        <div className="max-w-[1200px] mx-auto">
+          <AnimatedSection>
+            <span className="font-mono-brand text-[11px] tracking-[3px] uppercase opacity-60 block mb-3">
+              Formule tout compris
+            </span>
+            <h2 className="font-display text-2xl md:text-4xl uppercase mb-10 leading-[1]">
+              Ce qui est inclus
+            </h2>
+          </AnimatedSection>
+          <AnimatedSection delay={100} className="grid md:grid-cols-2 gap-x-10 gap-y-4">
+            {INCLUS.map((item, i) => (
+              <div key={i} className="flex gap-4 items-start border-b-2 border-[hsl(var(--black))]/10 pb-4">
+                <Check className="w-5 h-5 text-[hsl(var(--olive))] flex-shrink-0 mt-1" strokeWidth={3} />
+                <p className="font-body text-[hsl(var(--black))]/80">{item}</p>
               </div>
             ))}
           </AnimatedSection>
         </div>
       </section>
 
-      {/* What's Included */}
-      <section className="py-16 px-4 bg-sand/30">
-        <div className="container mx-auto max-w-4xl">
+      {/* Pourquoi */}
+      <section className="py-20 md:py-28 px-6 md:px-16 bg-[hsl(var(--yellow))]/20 border-b-[3px] border-[hsl(var(--black))]">
+        <div className="max-w-[1200px] mx-auto">
           <AnimatedSection>
-            <h2
-              className="text-3xl md:text-4xl font-light text-center mb-12"
-              style={{ fontFamily: "Fraunces, serif", color: "#5D653A" }}
-            >
-              Qu'est-ce qui est inclus ?
+            <span className="font-mono-brand text-[11px] tracking-[3px] uppercase opacity-60 block mb-3">
+              Notre différence
+            </span>
+            <h2 className="font-display text-2xl md:text-4xl uppercase mb-12 leading-[1]">
+              Pourquoi le terrarium pour votre team building&nbsp;?
             </h2>
           </AnimatedSection>
-
-          <AnimatedSection delay={100} className="space-y-4">
-            {[
-              "Matériel et fournitures (pots, substrat, plantes, mousse, sable, pierres)",
-              "Animation par un expert en botanique et créativité",
-              "Apprentissage du concept écologique du terrarium",
-              "Création personnalisée de chaque participant",
-              "Emportage du terrarium créé",
-              "Photos de groupe et moments partagés",
-              "Conseil d'entretien individuel pour chacun",
-              "Déplacement inclus dans les zones de couverture",
-            ].map((item, i) => (
-              <div key={i} className="flex gap-4 items-start">
-                <Check className="w-5 h-5 text-sage flex-shrink-0 mt-1" />
-                <p className="text-charcoal/80">{item}</p>
+          <AnimatedSection delay={100} className="grid md:grid-cols-2 gap-6">
+            {POURQUOI.map((item, i) => (
+              <div
+                key={i}
+                className="card-brutal h-full flex flex-col bg-[hsl(var(--cream))] p-7"
+              >
+                <span className="font-display text-3xl opacity-30 mb-3">0{i + 1}</span>
+                <h3 className="font-display text-base uppercase mb-3 leading-tight">{item.title}</h3>
+                <p className="font-body text-sm text-[hsl(var(--black))]/70 flex-1">{item.desc}</p>
               </div>
             ))}
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Why Choose */}
-      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">
-        <div className="container mx-auto max-w-4xl">
+      {/* CTA final */}
+      <section className="py-20 md:py-28 px-6 md:px-16 bg-[hsl(var(--blue))] text-[hsl(var(--cream))]">
+        <div className="max-w-[900px] mx-auto text-center">
           <AnimatedSection>
-            <h2
-              className="text-3xl md:text-4xl font-light text-center mb-12"
-              style={{ fontFamily: "Fraunces, serif", color: "#5D653A" }}
-            >
-              Pourquoi l'atelier terrarium pour votre team building ?
+            <span className="font-mono-brand text-[11px] tracking-[3px] uppercase opacity-70 block mb-4">
+              Organisons votre atelier
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl uppercase leading-[1] mb-6">
+              Prêt à créer ensemble&nbsp;?
             </h2>
-          </AnimatedSection>
-
-          <AnimatedSection delay={100} className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Créativité collectée",
-                desc: "Chaque participant crée son propre terrarium, ce qui encourage l'expression personnelle tout en renforçant le sentiment d'appartenance.",
-              },
-              {
-                title: "Bien-être et nature",
-                desc: "Le contact avec les plantes réduit le stress, apaise l'esprit et favorise un environnement professionnel plus sain.",
-              },
-              {
-                title: "Durabilité et RSE",
-                desc: "Une activité écologique et responsable, parfaitement alignée avec les valeurs de bien-être au travail et de conscience environnementale.",
-              },
-              {
-                title: "Souvenir concret",
-                desc: "Contrairement à d'autres team buildings, les participants repartent avec un objet qu'ils ont créé, un vrai souvenir de l'événement.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="p-6 bg-sage/10 border border-sage/20 border-brutal shadow-brutal">
-                <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
-                <p className="text-sm text-charcoal/70">{item.desc}</p>
-              </div>
-            ))}
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-4 bg-sand/30">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2
-              className="text-3xl md:text-4xl font-light text-center mb-12"
-              style={{ fontFamily: "Fraunces, serif", color: "#5D653A" }}
-            >
-              Tarifs et formules
-            </h2>
-          </AnimatedSection>
-
-          <AnimatedSection delay={100} className="grid md:grid-cols-3 gap-6">
-            {[
-              { participants: "10-20", price: "45€/pers", duration: "1h30" },
-              { participants: "20-50", price: "35€/pers", duration: "2h" },
-              { participants: "50-100", price: "28€/pers", duration: "2h30" },
-            ].map((item, i) => (
-              <div key={i} className="p-6 bg-[hsl(var(--yellow))]/15 border-[3px] border-sage/30 text-center hover:border-sage/60 transition-colors border-brutal shadow-brutal">
-                <p className="text-sm text-muted-foreground mb-2">{item.participants} personnes</p>
-                <p className="text-3xl font-bold text-sage mb-2">{item.price}</p>
-                <p className="text-sm text-charcoal/70">Atelier de {item.duration}</p>
-              </div>
-            ))}
-          </AnimatedSection>
-
-          <AnimatedSection delay={200} className="mt-8 p-6 bg-[hsl(var(--yellow))]/15 border-[3px] border-sage/20 text-center border-brutal shadow-brutal">
-            <p className="text-charcoal/70 mb-4">Tarifs dégressifs pour groupes importants. Devis personnalisé sur demande.</p>
-            <Link
-              to="/contact"
-              className="inline-block px-8 py-3 bg-sage hover:bg-sage-dark text-white font-semibold transition-all"
-            >
-              Demander un devis personnalisé
-            </Link>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* CTA Final */}
-      <section className="py-16 px-4 bg-sage/10 border-brutal shadow-brutal">
-        <div className="container mx-auto max-w-4xl text-center">
-          <AnimatedSection>
-            <h2
-              className="text-3xl md:text-4xl font-light mb-6"
-              style={{ fontFamily: "Fraunces, serif", color: "#5D653A" }}
-            >
-              Prêt à créer ensemble ?
-            </h2>
-            <p className="text-lg text-charcoal/70 mb-8 max-w-2xl mx-auto">
-              Contactez-nous pour organiser votre atelier terrarium. Réponse sous 24h garantie.
+            <p className="font-body text-base md:text-lg opacity-85 mb-9 max-w-2xl mx-auto">
+              Chaque atelier est construit sur mesure selon votre effectif, votre lieu et votre
+              temps disponible. Parlons de votre projet.
             </p>
             <Link
               to="/contact"
-              className="inline-block px-10 py-4 bg-sage hover:bg-sage-dark text-white font-semibold text-lg transition-all hover:scale-105 hover:shadow-brutal-lg"
+              className="btn-brutal bg-[hsl(var(--cream))] text-[hsl(var(--black))] border-[hsl(var(--cream))] text-sm px-10 py-4 inline-flex"
             >
-              Nous contacter
+              Nous écrire
             </Link>
           </AnimatedSection>
         </div>
