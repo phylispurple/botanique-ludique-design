@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,136 +10,136 @@ import FloatingContactButton from "@/components/FloatingContactButton";
 
 // Core
 import Index from "./pages/Index";
-import About from "./pages/About";
-import EtablissementsScolaires from "./pages/EtablissementsScolaires";
-import Workshops from "./pages/Workshops";
-import Pro from "./pages/Pro";
-import Gallery from "./pages/Gallery";
-import Contact from "./pages/Contact";
-import LegalNotice from "./pages/LegalNotice";
-import SalesTerms from "./pages/SalesTerms";
-import FAQ from "./pages/FAQ";
+const About = lazy(() => import("./pages/About"));
+const EtablissementsScolaires = lazy(() => import("./pages/EtablissementsScolaires"));
+const Workshops = lazy(() => import("./pages/Workshops"));
+const Pro = lazy(() => import("./pages/Pro"));
+const Gallery = lazy(() => import("./pages/Gallery"));
+const Contact = lazy(() => import("./pages/Contact"));
+const LegalNotice = lazy(() => import("./pages/LegalNotice"));
+const SalesTerms = lazy(() => import("./pages/SalesTerms"));
+const FAQ = lazy(() => import("./pages/FAQ"));
 import NotFound from "./pages/NotFound";
-import AdminTestimonials from "./pages/AdminTestimonials";
-import Agenda from "./pages/Agenda";
-import Unsubscribe from "./pages/Unsubscribe";
-import MarchesPublics from "./pages/MarchesPublics";
-import ReferencesCollectivites from "./pages/ReferencesCollectivites";
+const AdminTestimonials = lazy(() => import("./pages/AdminTestimonials"));
+const Agenda = lazy(() => import("./pages/Agenda"));
+const Unsubscribe = lazy(() => import("./pages/Unsubscribe"));
+const MarchesPublics = lazy(() => import("./pages/MarchesPublics"));
+const ReferencesCollectivites = lazy(() => import("./pages/ReferencesCollectivites"));
 
 // Inscriptions
-import InscriptionWardianCase from "./pages/InscriptionWardianCase";
-import InscriptionTerrariumJuin from "./pages/InscriptionTerrariumJuin";
-import InscriptionMauvaisesHerbes from "./pages/InscriptionMauvaisesHerbes";
-import InscriptionTeinturesVegetales from "./pages/InscriptionTeinturesVegetales";
+const InscriptionWardianCase = lazy(() => import("./pages/InscriptionWardianCase"));
+const InscriptionTerrariumJuin = lazy(() => import("./pages/InscriptionTerrariumJuin"));
+const InscriptionMauvaisesHerbes = lazy(() => import("./pages/InscriptionMauvaisesHerbes"));
+const InscriptionTeinturesVegetales = lazy(() => import("./pages/InscriptionTeinturesVegetales"));
 
 // Blog
-import Blog from "./pages/Blog";
-import BlogTeintureChouRouge from "./pages/BlogTeintureChouRouge";
-import BlogMonsteraColonialisme from "./pages/BlogMonsteraColonialisme";
-import BlogPalmiersHaussmann from "./pages/BlogPalmiersHaussmann";
-import BlogTerrariumBiopiraterie from "./pages/BlogTerrariumBiopiraterie";
-import BlogFilmsNature from "./pages/BlogFilmsNature";
-import BlogBotaniqueCollege from "./pages/BlogBotaniqueCollege";
-import BlogPlantesSauvagesSortie from "./pages/BlogPlantesSauvagesSortie";
-import BlogMediationScientifique from "./pages/BlogMediationScientifique";
-import BlogFinancerAnimationCCAS from "./pages/BlogFinancerAnimationCCAS";
-import BlogFeteNatureMairie from "./pages/BlogFeteNatureMairie";
-import BlogJourneesPatrimoineVegetal from "./pages/BlogJourneesPatrimoineVegetal";
-import BlogSemaineDDMairie from "./pages/BlogSemaineDDMairie";
-import BlogBaladeBotaniqueDuBreuil from "./pages/BlogBaladeBotaniqueDuBreuil";
-import BlogBaladeBotaniqueVoisins from "./pages/BlogBaladeBotaniqueVoisins";
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogTeintureChouRouge = lazy(() => import("./pages/BlogTeintureChouRouge"));
+const BlogMonsteraColonialisme = lazy(() => import("./pages/BlogMonsteraColonialisme"));
+const BlogPalmiersHaussmann = lazy(() => import("./pages/BlogPalmiersHaussmann"));
+const BlogTerrariumBiopiraterie = lazy(() => import("./pages/BlogTerrariumBiopiraterie"));
+const BlogFilmsNature = lazy(() => import("./pages/BlogFilmsNature"));
+const BlogBotaniqueCollege = lazy(() => import("./pages/BlogBotaniqueCollege"));
+const BlogPlantesSauvagesSortie = lazy(() => import("./pages/BlogPlantesSauvagesSortie"));
+const BlogMediationScientifique = lazy(() => import("./pages/BlogMediationScientifique"));
+const BlogFinancerAnimationCCAS = lazy(() => import("./pages/BlogFinancerAnimationCCAS"));
+const BlogFeteNatureMairie = lazy(() => import("./pages/BlogFeteNatureMairie"));
+const BlogJourneesPatrimoineVegetal = lazy(() => import("./pages/BlogJourneesPatrimoineVegetal"));
+const BlogSemaineDDMairie = lazy(() => import("./pages/BlogSemaineDDMairie"));
+const BlogBaladeBotaniqueDuBreuil = lazy(() => import("./pages/BlogBaladeBotaniqueDuBreuil"));
+const BlogBaladeBotaniqueVoisins = lazy(() => import("./pages/BlogBaladeBotaniqueVoisins"));
 
 // Guides
-import GuideTerrarium from "./pages/GuideTerrarium";
-import GuideKokedama from "./pages/GuideKokedama";
-import GuideEthnobotanique from "./pages/GuideEthnobotanique";
-import GuideEthnobotaniqueRegard from "./pages/GuideEthnobotaniqueRegard";
-import GuidePlantesTinctoriales from "./pages/GuidePlantesTinctoriales";
+const GuideTerrarium = lazy(() => import("./pages/GuideTerrarium"));
+const GuideKokedama = lazy(() => import("./pages/GuideKokedama"));
+const GuideEthnobotanique = lazy(() => import("./pages/GuideEthnobotanique"));
+const GuideEthnobotaniqueRegard = lazy(() => import("./pages/GuideEthnobotaniqueRegard"));
+const GuidePlantesTinctoriales = lazy(() => import("./pages/GuidePlantesTinctoriales"));
 
 // Hubs ateliers
-import AteliersBotaniquesYvelines from "./pages/AteliersBotaniquesYvelines";
-import TeamBuildingRSEParis from "./pages/TeamBuildingRSEParis";
-import AteliersBotaniqueEntrepriseIDF from "./pages/AteliersBotaniqueEntrepriseIDF";
-import AteliersIDF from "./pages/AteliersIDF";
-import AteliersBotaniquesComplets from "./pages/AteliersBotaniquesComplets";
+const AteliersBotaniquesYvelines = lazy(() => import("./pages/AteliersBotaniquesYvelines"));
+const TeamBuildingRSEParis = lazy(() => import("./pages/TeamBuildingRSEParis"));
+const AteliersBotaniqueEntrepriseIDF = lazy(() => import("./pages/AteliersBotaniqueEntrepriseIDF"));
+const AteliersIDF = lazy(() => import("./pages/AteliersIDF"));
+const AteliersBotaniquesComplets = lazy(() => import("./pages/AteliersBotaniquesComplets"));
 
 // Landings (conservés mais hors sitemap)
-import LandingSeniorsEHPAD from "./pages/LandingSeniorsEHPAD";
-import LandingCSE from "./pages/LandingCSE";
-import LandingEcoles from "./pages/LandingEcoles";
-import LandingMJC from "./pages/LandingMJC";
-import LandingTeamBuilding from "./pages/LandingTeamBuilding";
-import LandingCollectivites from "./pages/LandingCollectivites";
+const LandingSeniorsEHPAD = lazy(() => import("./pages/LandingSeniorsEHPAD"));
+const LandingCSE = lazy(() => import("./pages/LandingCSE"));
+const LandingEcoles = lazy(() => import("./pages/LandingEcoles"));
+const LandingMJC = lazy(() => import("./pages/LandingMJC"));
+const LandingTeamBuilding = lazy(() => import("./pages/LandingTeamBuilding"));
+const LandingCollectivites = lazy(() => import("./pages/LandingCollectivites"));
 
 // Pro dynamiques
-import ProLandingPage from "./pages/ProLandingPage";
-import ProBlogArticle from "./pages/ProBlogArticle";
+const ProLandingPage = lazy(() => import("./pages/ProLandingPage"));
+const ProBlogArticle = lazy(() => import("./pages/ProBlogArticle"));
 import { PRO_LANDINGS } from "@/data/proLandings";
 import { PRO_ARTICLES } from "@/data/proBlogArticles";
 
 // Pages thématiques uniques (non géo)
-import AtelierTerrariumTeamBuilding from "./pages/AtelierTerrariumTeamBuilding";
-import AtelierEthnobotaniqueEntreprise from "./pages/AtelierEthnobotaniqueEntreprise";
-import HortitherapieHopitalClinique from "./pages/HortitherapieHopitalClinique";
-import AnimationNatureUniversiteBDE from "./pages/AnimationNatureUniversiteBDE";
-import MediationVegetaleArchitectesPaysagistes from "./pages/MediationVegetaleArchitectesPaysagistes";
-import AnimationNatureBailleursSociaux from "./pages/AnimationNatureBailleursSociaux";
-import AtelierVegetalParentaliteNaissance from "./pages/AtelierVegetalParentaliteNaissance";
-import AnimationVegetaleHotelEvenementiel from "./pages/AnimationVegetaleHotelEvenementiel";
-import BaladeEthnobotaniqueOfficeTourisme from "./pages/BaladeEthnobotaniqueOfficeTourisme";
-import AtelierVegetalCabinetRHCoach from "./pages/AtelierVegetalCabinetRHCoach";
-import AtelierBienEtreNatureEntreprise from "./pages/AtelierBienEtreNatureEntreprise";
-import AnimationSemaineQVCT from "./pages/AnimationSemaineQVCT";
-import ActiviteIntergenerationnelle from "./pages/ActiviteIntergenerationnelle";
-import AtelierKokedamaTeamBuilding from "./pages/AtelierKokedamaTeamBuilding";
-import AtelierTeintureScolaire from "./pages/AtelierTeintureScolaire";
-import AnimationNatureEHPAD from "./pages/AnimationNatureEHPAD";
-import AtelierBotaniqueEvenement from "./pages/AtelierBotaniqueEvenement";
-import AtelierKokedamaParis from "./pages/AtelierKokedamaParis";
-import AtelierTerrariumParis from "./pages/AtelierTerrariumParis";
-import AtelierTeintureVegetale from "./pages/AtelierTeintureVegetale";
-import AnimationCentreSocial from "./pages/AnimationCentreSocial";
-import AtelierFloralParis from "./pages/AtelierFloralParis";
-import AtelierTeintureVegetaleParis from "./pages/AtelierTeintureVegetaleParis";
-import AtelierKombuchaCuirVegetal from "./pages/AtelierKombuchaCuirVegetal";
-import AtelierEvjfBotaniqueParis from "./pages/AtelierEvjfBotaniqueParis";
-import AtelierAnniversaireEnfantParis from "./pages/AtelierAnniversaireEnfantParis";
-import AtelierAnniversaireAdulteParis from "./pages/AtelierAnniversaireAdulteParis";
-import AtelierBabyShowerVegetal from "./pages/AtelierBabyShowerVegetal";
-import AtelierNoelCouronneVegetale from "./pages/AtelierNoelCouronneVegetale";
-import AtelierCoupleNatureParis from "./pages/AtelierCoupleNatureParis";
-import CadeauOriginalNatureParis from "./pages/CadeauOriginalNatureParis";
-import IdeeCadeauAmoureuxPlantes from "./pages/IdeeCadeauAmoureuxPlantes";
-import AnimationSeminaireParis from "./pages/AnimationSeminaireParis";
-import AtelierOnboarding from "./pages/AtelierOnboarding";
-import AnimationSoireeEntreprise from "./pages/AnimationSoireeEntreprise";
-import InterventionMediatheque from "./pages/InterventionMediatheque";
-import InterventionFestivalCulturel from "./pages/InterventionFestivalCulturel";
-import AnimationFoyerJeunes from "./pages/AnimationFoyerJeunes";
-import AtelierTherapeutiqueJardin from "./pages/AtelierTherapeutiqueJardin";
-import AtelierResidenceSeniors from "./pages/AtelierResidenceSeniors";
+const AtelierTerrariumTeamBuilding = lazy(() => import("./pages/AtelierTerrariumTeamBuilding"));
+const AtelierEthnobotaniqueEntreprise = lazy(() => import("./pages/AtelierEthnobotaniqueEntreprise"));
+const HortitherapieHopitalClinique = lazy(() => import("./pages/HortitherapieHopitalClinique"));
+const AnimationNatureUniversiteBDE = lazy(() => import("./pages/AnimationNatureUniversiteBDE"));
+const MediationVegetaleArchitectesPaysagistes = lazy(() => import("./pages/MediationVegetaleArchitectesPaysagistes"));
+const AnimationNatureBailleursSociaux = lazy(() => import("./pages/AnimationNatureBailleursSociaux"));
+const AtelierVegetalParentaliteNaissance = lazy(() => import("./pages/AtelierVegetalParentaliteNaissance"));
+const AnimationVegetaleHotelEvenementiel = lazy(() => import("./pages/AnimationVegetaleHotelEvenementiel"));
+const BaladeEthnobotaniqueOfficeTourisme = lazy(() => import("./pages/BaladeEthnobotaniqueOfficeTourisme"));
+const AtelierVegetalCabinetRHCoach = lazy(() => import("./pages/AtelierVegetalCabinetRHCoach"));
+const AtelierBienEtreNatureEntreprise = lazy(() => import("./pages/AtelierBienEtreNatureEntreprise"));
+const AnimationSemaineQVCT = lazy(() => import("./pages/AnimationSemaineQVCT"));
+const ActiviteIntergenerationnelle = lazy(() => import("./pages/ActiviteIntergenerationnelle"));
+const AtelierKokedamaTeamBuilding = lazy(() => import("./pages/AtelierKokedamaTeamBuilding"));
+const AtelierTeintureScolaire = lazy(() => import("./pages/AtelierTeintureScolaire"));
+const AnimationNatureEHPAD = lazy(() => import("./pages/AnimationNatureEHPAD"));
+const AtelierBotaniqueEvenement = lazy(() => import("./pages/AtelierBotaniqueEvenement"));
+const AtelierKokedamaParis = lazy(() => import("./pages/AtelierKokedamaParis"));
+const AtelierTerrariumParis = lazy(() => import("./pages/AtelierTerrariumParis"));
+const AtelierTeintureVegetale = lazy(() => import("./pages/AtelierTeintureVegetale"));
+const AnimationCentreSocial = lazy(() => import("./pages/AnimationCentreSocial"));
+const AtelierFloralParis = lazy(() => import("./pages/AtelierFloralParis"));
+const AtelierTeintureVegetaleParis = lazy(() => import("./pages/AtelierTeintureVegetaleParis"));
+const AtelierKombuchaCuirVegetal = lazy(() => import("./pages/AtelierKombuchaCuirVegetal"));
+const AtelierEvjfBotaniqueParis = lazy(() => import("./pages/AtelierEvjfBotaniqueParis"));
+const AtelierAnniversaireEnfantParis = lazy(() => import("./pages/AtelierAnniversaireEnfantParis"));
+const AtelierAnniversaireAdulteParis = lazy(() => import("./pages/AtelierAnniversaireAdulteParis"));
+const AtelierBabyShowerVegetal = lazy(() => import("./pages/AtelierBabyShowerVegetal"));
+const AtelierNoelCouronneVegetale = lazy(() => import("./pages/AtelierNoelCouronneVegetale"));
+const AtelierCoupleNatureParis = lazy(() => import("./pages/AtelierCoupleNatureParis"));
+const CadeauOriginalNatureParis = lazy(() => import("./pages/CadeauOriginalNatureParis"));
+const IdeeCadeauAmoureuxPlantes = lazy(() => import("./pages/IdeeCadeauAmoureuxPlantes"));
+const AnimationSeminaireParis = lazy(() => import("./pages/AnimationSeminaireParis"));
+const AtelierOnboarding = lazy(() => import("./pages/AtelierOnboarding"));
+const AnimationSoireeEntreprise = lazy(() => import("./pages/AnimationSoireeEntreprise"));
+const InterventionMediatheque = lazy(() => import("./pages/InterventionMediatheque"));
+const InterventionFestivalCulturel = lazy(() => import("./pages/InterventionFestivalCulturel"));
+const AnimationFoyerJeunes = lazy(() => import("./pages/AnimationFoyerJeunes"));
+const AtelierTherapeutiqueJardin = lazy(() => import("./pages/AtelierTherapeutiqueJardin"));
+const AtelierResidenceSeniors = lazy(() => import("./pages/AtelierResidenceSeniors"));
 
 // Médiation botanique (conservées : Paris indexée + IDF maillée)
-import MediationBotaniqueIDF from "./pages/MediationBotaniqueIDF";
-import MediationBotaniqueParis from "./pages/MediationBotaniqueParis";
+const MediationBotaniqueIDF = lazy(() => import("./pages/MediationBotaniqueIDF"));
+const MediationBotaniqueParis = lazy(() => import("./pages/MediationBotaniqueParis"));
 
 // Balades (hub + thématiques + 4 geo maillées)
-import BaladesBotaniques from "./pages/BaladesBotaniques";
-import BaladeBotaniqueMusee from "./pages/BaladeBotaniqueMusee";
-import BaladeBotaniqueJardinPatrimonial from "./pages/BaladeBotaniqueJardinPatrimonial";
-import BaladeBotaniqueUrbaineParis from "./pages/BaladeBotaniqueUrbaineParis";
-import BaladeBotaniqueParis from "./pages/BaladeBotaniqueParis";
-import BaladeBotaniqueYvelines from "./pages/BaladeBotaniqueYvelines";
-import BaladeBotaniqueHautsDeSeine from "./pages/BaladeBotaniqueHautsDeSeine";
-import BaladeBotaniqueValDOise from "./pages/BaladeBotaniqueValDOise";
-import BaladeBotaniqueEntreprise from "./pages/BaladeBotaniqueEntreprise";
-import BaladeBotaniqueScolaire from "./pages/BaladeBotaniqueScolaire";
-import BaladePlantesSauvagesParis from "./pages/BaladePlantesSauvagesParis";
-import BaladeBotaniqueColoniale from "./pages/BaladeBotaniqueColoniale";
-import BaladeBotaniquePrintempsEte from "./pages/BaladeBotaniquePrintempsEte";
+const BaladesBotaniques = lazy(() => import("./pages/BaladesBotaniques"));
+const BaladeBotaniqueMusee = lazy(() => import("./pages/BaladeBotaniqueMusee"));
+const BaladeBotaniqueJardinPatrimonial = lazy(() => import("./pages/BaladeBotaniqueJardinPatrimonial"));
+const BaladeBotaniqueUrbaineParis = lazy(() => import("./pages/BaladeBotaniqueUrbaineParis"));
+const BaladeBotaniqueParis = lazy(() => import("./pages/BaladeBotaniqueParis"));
+const BaladeBotaniqueYvelines = lazy(() => import("./pages/BaladeBotaniqueYvelines"));
+const BaladeBotaniqueHautsDeSeine = lazy(() => import("./pages/BaladeBotaniqueHautsDeSeine"));
+const BaladeBotaniqueValDOise = lazy(() => import("./pages/BaladeBotaniqueValDOise"));
+const BaladeBotaniqueEntreprise = lazy(() => import("./pages/BaladeBotaniqueEntreprise"));
+const BaladeBotaniqueScolaire = lazy(() => import("./pages/BaladeBotaniqueScolaire"));
+const BaladePlantesSauvagesParis = lazy(() => import("./pages/BaladePlantesSauvagesParis"));
+const BaladeBotaniqueColoniale = lazy(() => import("./pages/BaladeBotaniqueColoniale"));
+const BaladeBotaniquePrintempsEte = lazy(() => import("./pages/BaladeBotaniquePrintempsEte"));
 
 // Géo conservées (indexées Google)
-import BabyShowerVegetalHautsDeSeine from "./pages/BabyShowerVegetalHautsDeSeine";
+const BabyShowerVegetalHautsDeSeine = lazy(() => import("./pages/BabyShowerVegetalHautsDeSeine"));
 
 const queryClient = new QueryClient();
 
@@ -274,6 +275,21 @@ const REDIRECTS: Array<[string, string]> = [
   ["/demo-manus", "/"],
 ];
 
+// Affiché le temps qu'une page se télécharge (chargement à la demande).
+const ChargementPage = () => (
+  <div
+    className="min-h-screen flex items-center justify-center bg-[hsl(var(--cream))]"
+    role="status"
+    aria-live="polite"
+  >
+    <span className="sr-only">Chargement de la page…</span>
+    <div
+      aria-hidden="true"
+      className="w-8 h-8 rounded-full border-[3px] border-[hsl(var(--black))]/15 border-t-[hsl(var(--olive))] animate-spin"
+    />
+  </div>
+);
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
@@ -283,6 +299,7 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <FloatingContactButton />
+          <Suspense fallback={<ChargementPage />}>
           <Routes>
             {/* Core */}
             <Route path="/" element={<Index />} />
@@ -437,6 +454,7 @@ const App = () => (
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </Suspense>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

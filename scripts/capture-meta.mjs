@@ -14,6 +14,7 @@
  * À relancer après avoir modifié un titre, une description, ou ajouté une page.
  */
 import puppeteer from "puppeteer";
+import { empreinteSEO } from "./seo-fingerprint.mjs";
 import { createServer } from "node:http";
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync, statSync } from "node:fs";
@@ -108,8 +109,11 @@ for (const route of routes) {
 await browser.close();
 server.close();
 
-await writeFile(SNAPSHOT, JSON.stringify(snapshot, null, 2) + "\n", "utf-8");
+// L'empreinte permet de detecter plus tard que cet instantane est perime.
+const sortie = { __empreinte: await empreinteSEO(), routes: snapshot };
+await writeFile(SNAPSHOT, JSON.stringify(sortie, null, 2) + "\n", "utf-8");
 console.log(`Capturé : ${Object.keys(snapshot).length}/${routes.length} routes -> seo-snapshot.json`);
+console.log(`Empreinte SEO : ${sortie.__empreinte}`);
 if (echecs.length) {
   console.log(`\nEchecs (${echecs.length}) :`);
   echecs.forEach((e) => console.log("   " + e));

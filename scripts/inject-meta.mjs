@@ -14,6 +14,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { empreinteSEO } from "./seo-fingerprint.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
@@ -31,7 +32,20 @@ function avertir(msg) {
 if (!existsSync(DIST)) { console.error("dist/ absent."); process.exit(1); }
 if (!existsSync(SNAPSHOT)) { avertir("seo-snapshot.json introuvable"); process.exit(0); }
 
-const snapshot = JSON.parse(await readFile(SNAPSHOT, "utf-8"));
+const brut = JSON.parse(await readFile(SNAPSHOT, "utf-8"));
+// Ancien format (routes à la racine) ou nouveau format (avec empreinte)
+const snapshot = brut.routes ?? brut;
+const empreinteInstantane = brut.__empreinte ?? null;
+
+// Garde-fou : l'instantané correspond-il encore aux textes présents dans le code ?
+const empreinteActuelle = await empreinteSEO();
+if (empreinteInstantane && empreinteInstantane !== empreinteActuelle) {
+  avertir(
+    `seo-snapshot.json est perime (empreinte ${empreinteInstantane} != ${empreinteActuelle}).\n` +
+    "  Des titres ou descriptions ont change depuis la derniere capture."
+  );
+}
+
 const shell = await readFile(path.join(DIST, "index.html"), "utf-8");
 
 // Routes actuellement declarees, pour reperer celles absentes de l'instantane

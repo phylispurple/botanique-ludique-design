@@ -1,0 +1,55 @@
+#!/bin/sh
+#
+# Garde-fou : empêche de commiter des titres/descriptions modifiés sans avoir
+# régénéré seo-snapshot.json — sinon les aperçus LinkedIn / WhatsApp / mail
+# resteraient périmés sans que personne ne s'en aperçoive.
+#
+# Installé via : git config core.hooksPath .githooks
+# Contournement ponctuel : git commit --no-verify
+
+[ -f scripts/seo-fingerprint.mjs ] || exit 0
+[ -f seo-snapshot.json ] || exit 0
+command -v node >/dev/null 2>&1 || exit 0
+
+actuelle=$(node scripts/seo-fingerprint.mjs 2>/dev/null) || exit 0
+instantane=$(node -e "
+  try {
+    const d = require('./seo-snapshot.json');
+    process.stdout.write(d.__empreinte || '');
+  } catch { }
+" 2>/dev/null)
+
+# Instantané à l'ancien format (sans empreinte) : on laisse passer.
+[ -n "$instantane" ] || exit 0
+[ "$actuelle" = "$instantane" ] && exit 0
+
+# Si la capture vient d'être relancée, le fichier est dans le commit : on laisse passer.
+if git diff --cached --name-only | grep -q '^seo-snapshot\.json$'; then
+  exit 0
+fi
+
+cat <<'MSG'
+
+================================================================
+  COMMIT BLOQUE — metadonnees de partage perimees
+================================================================
+
+  Un titre, une description ou une page a change, mais
+  seo-snapshot.json n'a pas ete regenere.
+
+  Sans cela, les apercus sur LinkedIn, WhatsApp et dans les
+  mails afficheront l'ancien texte.
+
+  A faire :
+
+      npm run seo:capture
+      git add seo-snapshot.json
+
+  puis relancer le commit.
+
+  (Pour passer outre volontairement : git commit --no-verify)
+
+================================================================
+
+MSG
+exit 1
