@@ -1,5 +1,5 @@
 {
-  "__empreinte": "75332ab6edf9e26c",
+  "__empreinte": "daca794afe6807d6",
   "routes": {
     "/": {
       "title": "Botanique Ludique — Ateliers de botanique, conférences & balades guidées · Le Pecq (78)",
@@ -2914,7 +2914,7 @@
         "<meta property=\"og:description\" content=\"Balade botanique guidée à Paris. Lecture ethnobotanique des jardins, parcs et rues parisiennes pour mairies, musées et médiathèques.\" data-rh=\"true\">",
         "<meta name=\"twitter:description\" content=\"Balade botanique guidée à Paris. Lecture ethnobotanique des jardins, parcs et rues parisiennes pour mairies, musées et médiathèques.\" data-rh=\"true\">",
         "<link rel=\"canonical\" href=\"https://botaniqueludique.com/balade-botanique-paris\" data-rh=\"true\">",
-        "<meta name=\"robots\" content=\"noindex, follow\" data-rh=\"true\">"
+        "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
       "ld": [
         "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"serviceType\":\"Balade botanique guidée\",\"name\":\"Balade botanique en Paris\",\"description\":\"Une lecture vivante du végétal parisien, des serres patrimoniales aux herbes des trottoirs. Une balade qui fait du Paris végétal une archive en plein air.\",\"provider\":{\"@type\":\"EducationalOrganization\",\"name\":\"Botanique Ludique\",\"url\":\"https://botaniqueludique.com\"},\"areaServed\":[\"Paris\"]}",
@@ -2941,7 +2941,7 @@
         "<meta property=\"og:description\" content=\"Balade botanique guidée dans les Yvelines. Médiation ethnobotanique pour musées, jardins patrimoniaux et collectivités du 78.\" data-rh=\"true\">",
         "<meta name=\"twitter:description\" content=\"Balade botanique guidée dans les Yvelines. Médiation ethnobotanique pour musées, jardins patrimoniaux et collectivités du 78.\" data-rh=\"true\">",
         "<link rel=\"canonical\" href=\"https://botaniqueludique.com/balade-botanique-yvelines\" data-rh=\"true\">",
-        "<meta name=\"robots\" content=\"noindex, follow\" data-rh=\"true\">"
+        "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
       "ld": [
         "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"serviceType\":\"Balade botanique guidée\",\"name\":\"Balade botanique en Yvelines\",\"description\":\"Des grands parcs royaux aux paysages ruraux, les Yvelines offrent un terrain rare pour relire le végétal à travers l'histoire sociale, scientifique et culturelle.\",\"provider\":{\"@type\":\"EducationalOrganization\",\"name\":\"Botanique Ludique\",\"url\":\"https://botaniqueludique.com\"},\"areaServed\":[\"Yvelines\"]}",
@@ -2968,7 +2968,7 @@
         "<meta property=\"og:description\" content=\"Balade botanique guidée dans les Hauts-de-Seine. Lecture ethnobotanique des parcs, jardins et villes du 92 pour collectivités et institutions.\" data-rh=\"true\">",
         "<meta name=\"twitter:description\" content=\"Balade botanique guidée dans les Hauts-de-Seine. Lecture ethnobotanique des parcs, jardins et villes du 92 pour collectivités et institutions.\" data-rh=\"true\">",
         "<link rel=\"canonical\" href=\"https://botaniqueludique.com/balade-botanique-hauts-de-seine\" data-rh=\"true\">",
-        "<meta name=\"robots\" content=\"noindex, follow\" data-rh=\"true\">"
+        "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
       "ld": [
         "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"serviceType\":\"Balade botanique guidée\",\"name\":\"Balade botanique en Hauts-de-Seine\",\"description\":\"Boulogne, Sèvres, Nanterre, Saint-Cloud : un département dense en parcs historiques et en lieux de culture, propice à des balades ethnobotaniques sur mesure.\",\"provider\":{\"@type\":\"EducationalOrganization\",\"name\":\"Botanique Ludique\",\"url\":\"https://botaniqueludique.com\"},\"areaServed\":[\"Hauts-de-Seine\"]}",
@@ -2995,7 +2995,7 @@
         "<meta property=\"og:description\" content=\"Balade botanique dans le Val-d'Oise. Médiation ethnobotanique pour mairies, musées et écoles du 95, du Vexin à Cergy.\" data-rh=\"true\">",
         "<meta name=\"twitter:description\" content=\"Balade botanique dans le Val-d'Oise. Médiation ethnobotanique pour mairies, musées et écoles du 95, du Vexin à Cergy.\" data-rh=\"true\">",
         "<link rel=\"canonical\" href=\"https://botaniqueludique.com/balade-botanique-val-d-oise\" data-rh=\"true\">",
-        "<meta name=\"robots\" content=\"noindex, follow\" data-rh=\"true\">"
+        "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
       "ld": [
         "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"serviceType\":\"Balade botanique guidée\",\"name\":\"Balade botanique en Val-d'Oise\",\"description\":\"Du Vexin français aux villes nouvelles, le Val-d'Oise offre une mosaïque de paysages et une vie culturelle dynamique pour faire entrer la botanique dans la programmation.\",\"provider\":{\"@type\":\"EducationalOrganization\",\"name\":\"Botanique Ludique\",\"url\":\"https://botaniqueludique.com\"},\"areaServed\":[\"Val-d'Oise\"]}",

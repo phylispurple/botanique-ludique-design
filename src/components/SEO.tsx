@@ -19,7 +19,12 @@ const AUTO_NOINDEX_PATTERNS: RegExp[] = [
   /^\/mediation-(scientifique|botanique|culturelle-nature)-/,
   /^\/atelier-botanique-(enfant|adulte)-/,
   /^\/atelier-botanique-(rambouillet|saint-germain-en-laye|le-pecq|le-vesinet|chatou|versailles|nanterre|boulogne-billancourt|cergy|rueil-malmaison|conflans-sainte-honorine)$/,
-  /^\/balade-botanique-(paris|yvelines|hauts-de-seine|val-d-oise|seine-saint-denis|val-de-marne|essonne|seine-et-marne)$/,
+  // Les 4 pages balade-botanique par département (paris, yvelines,
+  // hauts-de-seine, val-d-oise) ont été rendues indexables : leur contenu est
+  // réellement différencié (lieux, références clients, publics propres à
+  // chaque territoire) et ce sont des pages d'entrée locales utiles.
+  // Les autres départements de l'ancienne règle sont de simples redirections
+  // vers /balades-botaniques : ils n'affichent aucune balise SEO.
 ];
 
 export const SEO = ({ 
