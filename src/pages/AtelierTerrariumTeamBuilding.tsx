@@ -130,7 +130,7 @@ const AtelierTerrariumTeamBuilding = () => {
               },
               {
                 title: "Bien-être et nature",
-                desc: "Le contact avec les plantes réduces le stress, apaise l'esprit et favorise un environnement professionnel plus sain.",
+                desc: "Le contact avec les plantes réduit le stress, apaise l'esprit et favorise un environnement professionnel plus sain.",
               },
               {
                 title: "Durabilité et RSE",
@@ -138,7 +138,7 @@ const AtelierTerrariumTeamBuilding = () => {
               },
               {
                 title: "Souvenir concret",
-                desc: "Contrairement à d'autres team buildings, les participants repartent avec un objet qu'ils créé, un vrai souvenir de l'événement.",
+                desc: "Contrairement à d'autres team buildings, les participants repartent avec un objet qu'ils ont créé, un vrai souvenir de l'événement.",
               },
             ].map((item, i) => (
               <div key={i} className="p-6 bg-sage/10 border border-sage/20 border-brutal shadow-brutal">

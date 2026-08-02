@@ -58,6 +58,7 @@ const Navigation = () => {
 
   const proCategories = [
     { name: "Entreprises & Team Building", id: "entreprises", href: "/pro#entreprises" },
+    { name: "Atelier Terrarium Team Building", id: "terrarium-team-building", href: "/atelier-terrarium-team-building" },
     { name: "Établissements Scolaires", id: "scolaires", href: "/etablissements-scolaires" },
     { name: "Collectivités & Associations", id: "collectivites", href: "/pro#collectivites" },
     { name: "EHPAD & Santé", id: "ehpad", href: "/pro#ehpad" },
