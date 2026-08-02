@@ -17,6 +17,7 @@ import VideoSection from "@/components/VideoSection";
 import BackToTop from "@/components/BackToTop";
 
 import { Calendar, Users, Building2, Award } from "lucide-react";
+import assuranceMaladieLogo from "@/assets/logo-assurance-maladie.png";
 import galleryTerrarium from "@/assets/gallery-terrarium.webp";
 import ctaWorkshopGroup from "@/assets/cta-workshop-group.jpg";
 import galleryTeinture from "@/assets/gallery-teinture-1.webp";
@@ -273,7 +274,7 @@ const Index = () => {
         <div className="overflow-hidden">
           <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '20s' }}>
             {[
-              { src: "/__l5e/assets-v1/fb62c308-08de-46dc-ae21-03b1cf70c8c2/logo-assurance-maladie.png", alt: "l'Assurance Maladie" },
+              { src: assuranceMaladieLogo, alt: "l'Assurance Maladie" },
               { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
               { src: "/logos/mjc-vesinet.jpg", alt: "MJC du Vésinet" },
               { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
@@ -289,7 +290,7 @@ const Index = () => {
               </div>
             )).concat(
               [
-                { src: "/__l5e/assets-v1/fb62c308-08de-46dc-ae21-03b1cf70c8c2/logo-assurance-maladie.png", alt: "" },
+                { src: assuranceMaladieLogo, alt: "" },
                 { src: "/logos/region-idf.webp", alt: "" },
                 { src: "/logos/mjc-vesinet.jpg", alt: "" },
                 { src: "/logos/jappy-senior.svg", alt: "" },
