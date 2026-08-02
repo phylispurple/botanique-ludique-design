@@ -60,7 +60,9 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           "telephone": "+33609831606",
           "sameAs": [
             "https://www.instagram.com/botanique.ludique/",
-            "https://www.linkedin.com/in/vanessa-charlery-a988a8319/"
+            "https://www.linkedin.com/in/vanessa-charlery-a988a8319/",
+            // Fiche d'établissement Google (identifiant d'entité stable)
+            "https://www.google.com/search?kgmid=/g/11yr39lw07"
           ],
           ...data
         };
@@ -136,7 +138,9 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           },
           "sameAs": [
             "https://www.instagram.com/botanique.ludique/",
-            "https://www.linkedin.com/in/vanessa-charlery-a988a8319/"
+            "https://www.linkedin.com/in/vanessa-charlery-a988a8319/",
+            // Fiche d'établissement Google (identifiant d'entité stable)
+            "https://www.google.com/search?kgmid=/g/11yr39lw07"
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
