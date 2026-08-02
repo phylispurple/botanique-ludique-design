@@ -161,6 +161,13 @@ const Index = () => {
                 associations, entreprises et collectivités. Chaque pratique explore les relations culturelles entre humains et plantes,
                 de l'Asie à l'Europe.
               </p>
+              <p className="text-base leading-[1.8] text-foreground/70 mb-6 text-justify">
+                Pour les entreprises et CSE, nous concevons des animations végétales clés en main :{" "}
+                <Link to="/atelier-terrarium-team-building" className="underline underline-offset-4 text-foreground hover:text-primary transition-colors">
+                  découvrir notre atelier team building
+                </Link>.
+              </p>
+
               <div className="flex flex-wrap gap-2 mb-6">
                 {["Kokedama", "Teinture végétale", "Vannerie", "Terrarium", "Ethnobotanique"].map((tag) => (
                   <span

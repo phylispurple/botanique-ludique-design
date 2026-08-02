@@ -58,6 +58,7 @@ const Navigation = () => {
 
   const proCategories = [
     { name: "Entreprises & Team Building", id: "entreprises", href: "/pro#entreprises" },
+    { name: "Atelier Terrarium Team Building", id: "terrarium-team-building", href: "/atelier-terrarium-team-building" },
     { name: "Établissements Scolaires", id: "scolaires", href: "/etablissements-scolaires" },
     { name: "Collectivités & Associations", id: "collectivites", href: "/pro#collectivites" },
     { name: "EHPAD & Santé", id: "ehpad", href: "/pro#ehpad" },
@@ -233,6 +234,16 @@ const Navigation = () => {
             </Link>
           </li>
 
+          {/* Team Building link */}
+          <li>
+            <Link to="/atelier-terrarium-team-building"
+              className={`font-mono text-[12.5px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90 ${isActive('/atelier-terrarium-team-building') ? 'border-b border-olive-light' : ''}`}
+              style={{ color: isActive('/atelier-terrarium-team-building') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Team Building
+            </Link>
+          </li>
+
+
           {/* Regular links */}
           <li>
             <Link to="/gallery"
@@ -384,6 +395,14 @@ const Navigation = () => {
               style={{ color: 'rgba(255,255,255,0.55)' }}>
               Médiation
             </Link>
+
+            <Link to="/atelier-terrarium-team-building" onClick={() => setIsOpen(false)}
+              className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
+              style={{ color: isActive('/atelier-terrarium-team-building') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
+              Team Building
+            </Link>
+
+
 
             <Link to="/gallery" onClick={() => setIsOpen(false)}
               className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"

@@ -83,7 +83,7 @@ const ConferencesSavoirs = () => {
             Il n'existe pas de meilleur témoin historique qu'une plante. Une plante porte en elle son origine géographique, les routes qu'elle a empruntées, les mains qui l'ont cultivée, les noms qu'on lui a donnés et ceux qu'on lui a effacés. Botanique Ludique propose aux musées, jardins botaniques, médiathèques et universités de raconter les plantes autrement : par leur histoire sociale, politique et culturelle, en complément du regard botanique classique.
           </p>
           <p className="text-sm leading-[1.7] text-white/60 max-w-[680px] mb-14 text-justify">
-            Découvrez nos <Link to="/workshops" className="underline text-[hsl(73_44%_67%)] hover:text-white transition-colors">ateliers botaniques pour tous publics</Link> ou nos <Link to="/etablissements-scolaires" className="underline text-[hsl(73_44%_67%)] hover:text-white transition-colors">interventions pédagogiques pour établissements scolaires</Link>.
+            Découvrez nos <Link to="/workshops" className="underline text-[hsl(73_44%_67%)] hover:text-white transition-colors">ateliers botaniques pour tous publics</Link>, nos <Link to="/etablissements-scolaires" className="underline text-[hsl(73_44%_67%)] hover:text-white transition-colors">interventions pédagogiques pour établissements scolaires</Link>, ou <Link to="/atelier-terrarium-team-building" className="underline text-[hsl(73_44%_67%)] hover:text-white transition-colors">découvrir notre atelier team building</Link> pour les entreprises.
           </p>
         </AnimatedSection>
 
