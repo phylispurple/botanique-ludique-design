@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/accordion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import PhotoCarousel from "@/components/PhotoCarousel";
@@ -134,8 +133,6 @@ const LandingTeamBuilding = () => {
           </div>
         </div>
       </section>
-      <LandingPhotoStrip />
-
       {/* CARROUSEL PHOTOS */}
       <section className="py-12 bg-foreground border-y-[3px] border-foreground overflow-hidden">
         <div className="mb-8 px-4 container mx-auto max-w-6xl flex items-end justify-between gap-4 flex-wrap">
