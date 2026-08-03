@@ -131,7 +131,7 @@ const Index = () => {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-gentle">
+        <div className="absolute bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-gentle z-10">
           <span className="font-mono-brand text-[9px] uppercase tracking-[3px] text-primary-foreground/50">
             Explorer
           </span>
@@ -139,23 +139,20 @@ const Index = () => {
             <path d="M10 0v22M2 16l8 8 8-8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
-      </section>
 
-      {/* ===== ORGANIC DIVIDER ===== */}
-      <div className="relative h-16 md:h-24 bg-background -mt-1">
+        {/* Organic wave transition — the hero background (dandelion video) continues behind */}
         <svg
-          viewBox="0 0 1440 96"
+          viewBox="0 0 1440 120"
           preserveAspectRatio="none"
-          className="absolute inset-0 w-full h-full"
+          className="absolute bottom-0 left-0 w-full h-16 md:h-24"
           aria-hidden="true"
         >
           <path
-            d="M0,0 C240,80 480,96 720,64 C960,32 1200,80 1440,0 L1440,0 L0,0 Z"
-            fill="hsl(var(--black))"
-            fillOpacity="0.85"
+            d="M0,120 C240,40 480,20 720,50 C960,80 1200,30 1440,120 L1440,120 L0,120 Z"
+            fill="hsl(var(--cream))"
           />
         </svg>
-      </div>
+      </section>
 
       {/* ===== MARQUEE ===== */}
       <Marquee
