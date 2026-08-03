@@ -320,9 +320,9 @@ const Contact = () => {
                 {/* Guarantee */}
                 <div className="border-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] p-8 shadow-brutal">
                   <span className="font-display text-3xl leading-none mb-3 block">🍀</span>
-                  <p className="font-mono-brand text-[10px] uppercase tracking-[2px] mb-3">On vous répond au plus vite</p>
+                  <p className="font-mono-brand text-[10px] uppercase tracking-[2px] mb-3">Réponse sous 24h ouvrées</p>
                   <p className="text-sm text-[hsl(var(--cream))]/70 leading-relaxed">
-                    Nous étudions chaque demande avec attention et vous recontactons dans les meilleurs délais.
+                    Chaque demande reçoit une réponse personnalisée sous 24 heures ouvrées.
                   </p>
                 </div>
 

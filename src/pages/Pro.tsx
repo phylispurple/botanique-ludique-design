@@ -141,7 +141,7 @@ const Pro = () => {
       <SEO 
         title="Interventions pédagogiques pour collèges, lycées & entreprises — Botanique Ludique"
         description="Ateliers de botanique sur mesure pour établissements scolaires, collectivités et entreprises. Team building nature, animations SVT. Île-de-France."
-        keywords="team building botanique, intervention scolaire botanique 78, atelier nature entreprise, animation SVT plantes, sortie pédagogique plantes sauvages"
+        keywords="team building botanique, team building RSE Paris, team building végétal, animation développement durable, intervention scolaire botanique 78, atelier nature entreprise, animation SVT plantes, sortie pédagogique plantes sauvages"
         canonical="/pro"
       />
       <SchemaOrg 

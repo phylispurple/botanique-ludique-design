@@ -32,6 +32,7 @@ const PARTNERS = [
   "École Du Breuil",
   "MJC partenaires IDF",
   "Aurore (insertion sociale)",
+  "UGECAM (Assurance Maladie)",
 ];
 
 export const SEASONAL_LANDINGS: ProLandingConfig[] = [
@@ -327,13 +328,15 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
     formats: [
       { title: "Couronne végétale de Noël", description: "Pin, eucalyptus, baies. À accrocher à la porte.", duration: "1h30" },
       { title: "Terrarium hivernal", description: "Mousse, mini conifère, scène d'hiver.", duration: "2h" },
+      { title: "Kokedama de fêtes", description: "Plante d'intérieur habillée de mousse et déco de saison.", duration: "1h30" },
+      { title: "Teinture végétale d'hiver", description: "Pigments de saison (brou de noix, baies), création textile à offrir.", duration: "2h30" },
       { title: "Sachet d'épices de Noël", description: "Cannelle, orange, clou de girofle, badiane.", duration: "45 min" },
       { title: "Centre de table végétal", description: "Composition à emporter ou laisser au bureau.", duration: "1h30" },
     ],
     faq: [
       {
-        question: "Jusqu'à quand peut-on réserver pour décembre ?",
-        answer: "Notre planning décembre se ferme mi-octobre. Au-delà, nous acceptons les demandes selon créneaux résiduels.",
+        question: "Jusqu'à quand peut-on réserver pour décembre 2026 ?",
+        answer: "Notre planning décembre se ferme mi-octobre. Réservez dès septembre pour garantir le créneau souhaité.",
       },
       {
         question: "Quel budget pour un atelier Noël à Paris pour 25 personnes ?",
@@ -349,8 +352,8 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
       author: "Office Manager, fintech Paris 9e",
     },
     city: "Paris",
-    ctaTitle: "Réservez votre atelier Noël entreprise",
-    ctaText: "Planning décembre limité. Devis détaillé sous 48h.",
+    ctaTitle: "Réservez votre atelier Noël 2026",
+    ctaText: "Planning décembre limité. Réservez dès septembre.",
     heroImage: heroAutumn,
     gallery: [heroTerrarium, heroWorkshopTable, heroFleurCrown],
     partners: PARTNERS,
@@ -393,6 +396,8 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
     formats: [
       { title: "Couronne végétale", description: "Pin et eucalyptus, format pause déjeuner.", duration: "1h30" },
       { title: "Terrarium hivernal", description: "Pour les bureaux, format soirée.", duration: "2h" },
+      { title: "Kokedama de fêtes", description: "Plante d'intérieur en mousse, cadeau à offrir.", duration: "1h30" },
+      { title: "Teinture végétale d'hiver", description: "Pigments de saison, création textile.", duration: "2h30" },
       { title: "Centre de table", description: "À emporter ou décorer les espaces communs.", duration: "1h30" },
     ],
     faq: [
@@ -402,16 +407,16 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
       },
       {
         question: "Quel délai de réservation pour décembre 2026 ?",
-        answer: "Réservez avant le 1er novembre 2026 pour garantir le créneau souhaité.",
+        answer: "Réservez dès septembre pour garantir le créneau souhaité.",
       },
     ],
     testimonial: {
-      text: "Logistique nickel sur notre campus de Versailles. Animatrice ponctuelle, atelier rythmé.",
+      text: "Logistique nickel sur notre campus de Versailles. Animatrice ponctuelle, atelier rythmé, salle impeccable après.",
       author: "Responsable événementiel, ETI Yvelines",
     },
     city: "Versailles",
-    ctaTitle: "Votre atelier Noël en Yvelines",
-    ctaText: "Devis sous 48h, déplacement inclus en 78.",
+    ctaTitle: "Votre atelier Noël 2026 en Yvelines",
+    ctaText: "Réservez dès septembre, déplacement inclus en 78.",
     heroImage: heroFleurCrown,
     gallery: [heroAutumn, heroTerrarium, heroWorkshopTable],
     partners: PARTNERS,
@@ -926,7 +931,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
     h1Highlight: "Rentrée",
     tagline: "Septembre : poser une base d'année plutôt que courir.",
     intro:
-      "La rentrée de septembre concentre les enjeux RH : intégration des nouveaux arrivants, relance des projets Q4, cohésion post-vacances. Un atelier collectif d'1h30 à 2h, calé sur la première ou deuxième semaine de septembre, sert de marqueur de saison et facilite la reprise.",
+      "La rentrée de septembre concentre les enjeux RH : intégration des nouveaux arrivants, relance des projets Q4, cohésion post-vacances. En 2026, RSE et bien-être au travail sont devenus les critères déterminants dans le choix des séminaires de rentrée. Un atelier collectif d'1h30 à 3h, calé sur la première ou deuxième semaine de septembre, sert de marqueur de saison, facilite la reprise et coche les cases RSE sans effort.",
     benefits: [
       {
         title: "Intégration des nouveaux",
@@ -934,38 +939,48 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
           "Idéal pour souder une équipe qui vient d'accueillir des arrivées d'été. Atelier où tout le monde part au même niveau.",
       },
       {
-        title: "Lancement d'année",
+        title: "Ancrage RSE & bien-être",
         description:
-          "Marqueur symbolique. Annoncer un atelier rentrée dès août pose une dynamique positive pour la saison.",
+          "L'atelier valorise la reconnexion au vivant et les savoirs durables. Un temps fort QVCT concret, pas un affichage.",
+      },
+      {
+        title: "Clé en main, zéro contrainte",
+        description:
+          "Matériel fourni, installation et nettoyage par nos soins. Rien à préparer, rien à ranger : l'office manager n'a qu'à réserver la salle.",
       },
       {
         title: "Format compact",
         description:
-          "1h30 à 2h, compatible avec un planning post-vacances déjà chargé.",
+          "1h30 à 3h, compatible avec un planning post-vacances déjà chargé.",
       },
     ],
     formats: [
       { title: "Kokedama de rentrée", description: "Plante d'intérieur, format collectif.", duration: "1h30" },
       { title: "Terrarium intégration", description: "Métaphore visuelle de l'équipe.", duration: "2h" },
+      { title: "Teinture végétale de rentrée", description: "Histoire des pigments et création textile, fil rouge cohésion.", duration: "3h" },
       { title: "Balade botanique de rentrée", description: "Sortie de bureau en parc parisien.", duration: "2h" },
     ],
     faq: [
       {
         question: "Quel est le meilleur moment en septembre ?",
-        answer: "Deuxième semaine de septembre : les vacances sont closes, l'année n'est pas encore engagée à fond. Réservez avant fin juin.",
+        answer: "Deuxième semaine de septembre : les vacances sont closes, l'année n'est pas encore engagée à fond. Les créneaux partent vite, réservez dès août.",
       },
       {
         question: "Tarif pour 25 participants ?",
         answer: "À partir de 950 EUR HT pour 25 personnes, format kokedama 1h30, matériel inclus.",
       },
+      {
+        question: "Vous intervenez dans le secteur santé ?",
+        answer: "Oui, nous avons notamment accompagné l'UGECAM (Assurance Maladie) et des établissements de santé en Île-de-France.",
+      },
     ],
     testimonial: {
-      text: "Atelier kokedama première semaine de septembre, parfait pour intégrer nos 4 nouveaux.",
+      text: "Atelier kokedama première semaine de septembre, parfait pour intégrer nos 4 nouveaux. Animatrice ponctuelle, tout le matériel fourni et la salle laissée impeccable.",
       author: "Responsable People, scale-up Paris 2e",
     },
     city: "Paris",
     ctaTitle: "Lancez votre rentrée d'équipe",
-    ctaText: "Format septembre, réservation conseillée avant fin juin.",
+    ctaText: "Les créneaux de septembre partent vite. Réservez dès août.",
     heroImage: heroKokedamaGarden,
     gallery: [heroForestWalk, heroAtelierAdulte, heroWorkshopTable],
     partners: PARTNERS,
@@ -1080,8 +1095,8 @@ export const SEASONAL_LANDING_CONTEXT: Record<string, LandingContext> = {
   "atelier-rentree-entreprise-paris": {
     heading: "Septembre à Paris, le marqueur de saison qui change l'année",
     paragraphs: [
-      "Les psychologues du travail observent que la qualité de la première semaine de septembre détermine en grande partie le climat d'équipe du dernier trimestre. Une rentrée silencieuse, où chacun reprend son poste sans temps fort collectif, produit des trimestres ternes. Une rentrée marquée par un événement collectif (déjeuner d'équipe enrichi, atelier de cohésion, séminaire court) lance une dynamique qui se prolonge sur trois mois. C'est un investissement à fort effet de levier.",
-      "Notre atelier de rentrée à Paris, calé sur la deuxième semaine de septembre, sert exactement ce rôle de marqueur. Le kokedama collectif fonctionne particulièrement bien parce qu'il est facile (personne ne se sent en difficulté technique), photographique, et produit un objet vivant qui reste sur les bureaux pendant tout le trimestre, faisant office de rappel discret de l'atelier vécu. Pour les équipes qui viennent d'accueillir de nouveaux arrivants pendant l'été, c'est aussi un excellent dispositif d'intégration informelle.",
+      "Les études sectorielles 2026 confirment ce que les psychologues du travail observent depuis longtemps : la qualité de la première semaine de septembre détermine en grande partie le climat d'équipe du dernier trimestre. RSE et bien-être au travail sont devenus les critères déterminants dans le choix d'un séminaire de rentrée. Une rentrée marquée par un atelier de cohésion ancré dans le vivant lance une dynamique qui se prolonge sur trois mois, tout en cochant les cases RSE sans effort.",
+      "Notre atelier de rentrée à Paris, calé sur la deuxième semaine de septembre, sert exactement ce rôle de marqueur. Kokedama, terrarium ou teinture végétale : chaque format est clé en main (matériel fourni, installation et nettoyage par nos soins, salle rendue impeccable). L'animatrice, formée en anthropologie de la nature à l'EHESS, apporte une dimension de médiation ethnobotanique que les ateliers DIY concurrents ne proposent pas. Pour les équipes qui viennent d'accueillir de nouveaux arrivants pendant l'été, c'est aussi un excellent dispositif d'intégration informelle — nous accompagnons notamment des établissements de santé (UGECAM) et des entreprises d'Île-de-France.",
     ],
   },
 };

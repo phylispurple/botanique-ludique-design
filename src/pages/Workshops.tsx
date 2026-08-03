@@ -143,7 +143,7 @@ const workshops: Workshop[] = [
   // Créations Textiles & Teintures
   {
     title: "Teinture Végétale",
-    description: "Explorez l'alchimie ancestrale de la teinture naturelle pratiquée depuis des millénaires. Extrayez des pigments végétaux selon des techniques traditionnelles pour créer des textiles durables aux tons terreux et authentiques.",
+    description: "Au-delà de la technique, une plongée dans l'histoire des pigments et des circulations coloniales des plantes tinctoriales. Extrayez des pigments végétaux selon des techniques traditionnelles pour créer des textiles durables aux tons terreux et authentiques. Médiation adossée à la recherche EHESS.",
     duration: "3h",
     public: "Tout public",
     image: dyeingImage,
@@ -174,7 +174,7 @@ const workshops: Workshop[] = [
   // Jardinage & Plantations
   {
     title: "Kokedama",
-    description: "Découvrez l'art japonais du jardinage en boules de mousse, héritage de la tradition bonsaï. Créez vos propres sculptures végétales suspendues en explorant cette pratique séculaire qui unit esthétique et philosophie du vivant.",
+    description: "Art japonais revisité avec un éclairage ethnobotanique : chaque plante raconte une histoire de domestication et d'usage. Créez vos propres sculptures végétales suspendues en explorant cette pratique séculaire qui unit esthétique et philosophie du vivant.",
     duration: "2h30",
     public: "Adultes, enfants dès 10 ans",
     image: kokedamaWorkshopImage,
@@ -189,7 +189,7 @@ const workshops: Workshop[] = [
   },
   {
     title: "Terrariums",
-    description: "Composez des écosystèmes miniatures sous verre en s'inspirant des caisses de Ward victoriennes. Créez des paysages en couches avec mousses, pierres et plantes délicates, des mondes minuscules qui prospèrent avec peu d'entretien.",
+    description: "Plus qu'un terrarium : un écosystème miniature expliqué par une animatrice formée en anthropologie de la nature. Inspiré des caisses de Ward victoriennes, créez des paysages en couches avec mousses, pierres et plantes délicates, des mondes minuscules qui prospèrent avec peu d'entretien.",
     duration: "2h",
     public: "Tout public, enfants dès 8 ans",
     image: terrariumImage,

@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import { Gift, Snowflake } from "lucide-react";
 
 const SeasonalBanner = () => {
-  // Message saisonnier - À mettre à jour selon la saison
-  const currentSeason = "winter"; // "winter" | "spring" | "summer" | "autumn"
+  const now = new Date();
+  const month = now.getMonth();
+  const currentSeason: "winter" | "spring" | "summer" | "autumn" =
+    month >= 2 && month <= 4 ? "spring" :
+    month >= 5 && month <= 7 ? "summer" :
+    month >= 8 && month <= 10 ? "autumn" : "winter";
   
   const seasonalContent = {
     winter: {

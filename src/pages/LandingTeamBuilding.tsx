@@ -94,7 +94,7 @@ const LandingTeamBuilding = () => {
       <SEO
         title="Team Building Nature Entreprise Paris & Île-de-France"
         description="Team building botanique en entreprise à Paris et en Île-de-France. Ateliers terrarium, kokedama, teinture végétale. Cohésion, RSE, bien-être. Devis sur mesure."
-        keywords="team building nature paris, team building botanique entreprise, atelier terrarium entreprise, atelier kokedama entreprise, team building rse, cohésion équipe nature île-de-france"
+        keywords="team building nature paris, team building RSE Paris, team building végétal, team building botanique entreprise, atelier terrarium Paris, atelier terrarium entreprise, atelier kokedama Paris, atelier kokedama entreprise, animation développement durable, team building rse, cohésion équipe nature île-de-france"
         canonical="/team-building-nature-entreprise"
       />
       <SchemaOrg
