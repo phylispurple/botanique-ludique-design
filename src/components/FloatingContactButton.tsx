@@ -116,11 +116,9 @@ const FloatingContactButton = () => {
           )}
         </button>
         
-        {/* Badge notification */}
+        {/* Pulse ring — subtle attention without fake notification */}
         {!isOpen && !hasBeenOpened && (
-          <span className="absolute -top-1 -right-1 w-5 h-5 bg-[hsl(var(--orange))] rounded-full flex items-center justify-center animate-pulse shadow-lg">
-            <span className="text-[11px] text-white font-bold">1</span>
-          </span>
+          <span className="absolute inset-0 rounded-full animate-pulse-ring pointer-events-none" />
         )}
       </div>
     </>

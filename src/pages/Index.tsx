@@ -129,7 +129,33 @@ const Index = () => {
             </div>
           </AnimatedSection>
         </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-gentle">
+          <span className="font-mono-brand text-[9px] uppercase tracking-[3px] text-primary-foreground/50">
+            Explorer
+          </span>
+          <svg width="20" height="28" viewBox="0 0 20 28" fill="none" className="text-primary-foreground/40">
+            <path d="M10 0v22M2 16l8 8 8-8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
       </section>
+
+      {/* ===== ORGANIC DIVIDER ===== */}
+      <div className="relative h-16 md:h-24 bg-background -mt-1">
+        <svg
+          viewBox="0 0 1440 96"
+          preserveAspectRatio="none"
+          className="absolute inset-0 w-full h-full"
+          aria-hidden="true"
+        >
+          <path
+            d="M0,0 C240,80 480,96 720,64 C960,32 1200,80 1440,0 L1440,0 L0,0 Z"
+            fill="hsl(var(--black))"
+            fillOpacity="0.85"
+          />
+        </svg>
+      </div>
 
       {/* ===== MARQUEE ===== */}
       <Marquee
@@ -190,10 +216,11 @@ const Index = () => {
                 return (
                   <div
                     key={index}
-                    className="p-6 md:p-8 border-brutal text-center -mt-[3px] -ml-[3px] hover:bg-green-pale transition-colors duration-300"
+                    className="p-6 md:p-8 border-brutal text-center -mt-[3px] -ml-[3px] hover:bg-green-pale transition-colors duration-300 relative overflow-hidden group"
                   >
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     <div className="flex justify-center mb-3">
-                      <IconComponent className="w-5 h-5 text-primary" />
+                      <IconComponent className="w-5 h-5 text-primary group-hover:scale-110 transition-transform duration-300" />
                     </div>
                     <AnimatedCounter
                       value={stat.value}
@@ -285,8 +312,8 @@ const Index = () => {
               { src: "/logos/la-roche.png", alt: "La Roche" },
               { src: "/logos/ecole-du-breuil.jpg", alt: "École Du Breuil" },
             ].map((logo, index) => (
-              <div key={`a-${index}`} className="flex-shrink-0 aspect-square flex items-center justify-center p-5 border-brutal bg-[hsl(var(--cream))] hover:-translate-y-1 hover:shadow-brutal transition-all duration-200" style={{ width: 140, height: 140 }}>
-                <img src={logo.src} alt={logo.alt} className="max-h-16 max-w-[100px] w-auto h-auto object-contain" loading="lazy" />
+              <div key={`a-${index}`} className="flex-shrink-0 aspect-square flex items-center justify-center p-5 border-brutal bg-[hsl(var(--cream))] hover:-translate-y-2 hover:shadow-brutal-lg transition-all duration-300 group" style={{ width: 140, height: 140 }}>
+                <img src={logo.src} alt={logo.alt} className="max-h-16 max-w-[100px] w-auto h-auto object-contain grayscale-[30%] group-hover:grayscale-0 transition-all duration-300" loading="lazy" />
               </div>
             )).concat(
               [
@@ -302,7 +329,7 @@ const Index = () => {
                 { src: "/logos/ecole-du-breuil.jpg", alt: "" },
               ].map((logo, index) => (
                 <div key={`b-${index}`} className="flex-shrink-0 aspect-square flex items-center justify-center p-5 border-brutal bg-[hsl(var(--cream))]" style={{ width: 140, height: 140 }} aria-hidden="true">
-                  <img src={logo.src} alt="" className="max-h-16 max-w-[100px] w-auto h-auto object-contain" loading="lazy" />
+                  <img src={logo.src} alt="" className="max-h-16 max-w-[100px] w-auto h-auto object-contain grayscale-[30%]" loading="lazy" />
                 </div>
               ))
             )}
@@ -348,7 +375,8 @@ const Index = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={200} direction="right">
-            <div className="border-brutal bg-primary-foreground text-foreground p-8 shadow-brutal-lg">
+            <div className="border-brutal bg-primary-foreground text-foreground p-8 shadow-brutal-lg relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-accent to-primary" />
               <h3 className="font-display text-lg uppercase mb-2">Restez informé·e</h3>
               <p className="text-sm text-foreground/60 mb-5">
                 Recevez nos actualités et les dates des prochains ateliers.

@@ -11,6 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "seo:capture": "vite build && node scripts/capture-meta.mjs",
+    "audit": "node scripts/audit.mjs",
     "prepare": "git config core.hooksPath .githooks || true"
   },
   "dependencies": {

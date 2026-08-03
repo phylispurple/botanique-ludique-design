@@ -172,16 +172,17 @@ const PhotoCarousel = ({ images, speed = 0.8 }: PhotoCarouselProps) => {
         {tripled.map((img, i) => (
           <div
             key={i}
-            className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal"
+            className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal group/photo relative"
           >
             <img
               src={img.src}
               alt={i < shuffled.length ? img.alt : ""}
-              className="w-full h-full object-cover pointer-events-none"
+              className="w-full h-full object-cover pointer-events-none transition-transform duration-500 group-hover/photo:scale-105"
               loading="lazy"
               draggable={false}
               aria-hidden={i >= shuffled.length ? true : undefined}
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--black))]/40 via-transparent to-transparent opacity-0 group-hover/photo:opacity-100 transition-opacity duration-500 pointer-events-none" />
           </div>
         ))}
       </div>
