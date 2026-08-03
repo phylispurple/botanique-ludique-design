@@ -74,6 +74,8 @@ const Index = () => {
           <video
             autoPlay loop muted playsInline
             preload="auto"
+            poster="/videos/hero-poster.jpg"
+            controls={false}
             className="w-full h-full object-cover opacity-60"
             src="/videos/hero-bg.mp4"
           />
@@ -110,19 +112,19 @@ const Index = () => {
             <div className="flex flex-wrap gap-6 justify-center">
               <button
                 onClick={() => navigate('/workshops')}
-                className="btn-brutal bg-accent text-accent-foreground border-accent hover:bg-primary-foreground hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--accent))] text-xs px-6 py-2.5"
+                className="btn-brutal bg-accent text-foreground border-accent hover:bg-primary-foreground hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--accent))] px-6 py-2.5"
               >
                 Découvrir les ateliers →
               </button>
               <button
                 onClick={() => navigate('/#mediation')}
-                className="btn-brutal bg-[hsl(210_41%_24%)] text-[hsl(var(--cream))] border-[hsl(210_41%_24%)] hover:bg-[hsl(var(--cream))] hover:text-[hsl(210_41%_24%)] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(210_41%_24%)] text-xs px-6 py-2.5"
+                className="btn-brutal !border-[hsl(var(--cream)/0.5)] bg-transparent text-primary-foreground hover:bg-[hsl(var(--cream))] hover:text-foreground hover:!border-[hsl(var(--cream))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--cream)/0.3)] px-6 py-2.5"
               >
                 Médiation & Savoirs →
               </button>
               <button
                 onClick={() => navigate('/agenda')}
-                className="btn-brutal bg-primary text-primary-foreground border-primary hover:bg-primary/80 hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--olive))] text-xs px-6 py-2.5"
+                className="btn-brutal !border-[hsl(var(--cream)/0.5)] bg-transparent text-primary-foreground hover:bg-[hsl(var(--cream))] hover:text-foreground hover:!border-[hsl(var(--cream))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--cream)/0.3)] px-6 py-2.5"
               >
                 Agenda & Inscriptions →
               </button>

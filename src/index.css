@@ -26,7 +26,7 @@
     --muted-foreground: 0 0% 40%;
 
     --accent: 13 76% 61%;
-    --accent-foreground: 36 33% 93%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 65% 50%;
     --destructive-foreground: 36 33% 93%;
@@ -46,6 +46,7 @@
     --green-light: 146 40% 71%;
     --green-pale: 138 52% 85%;
     --olive: 73 37% 44%;
+    --olive-text: 73 45% 27%;
     --olive-light: 73 44% 67%;
     --orange: 13 76% 61%;
     --orange-light: 29 87% 67%;
@@ -172,7 +173,7 @@
     font-family: 'Space Mono', monospace;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
     padding: 12px 28px;
     transition: transform 0.15s ease, box-shadow 0.15s ease;

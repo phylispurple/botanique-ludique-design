@@ -126,7 +126,7 @@ const CookieConsent = () => {
           {showDetails ? (
             <button
               onClick={handleSavePreferences}
-              className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:border-[hsl(var(--black))] text-[11px] px-5 py-2.5"
+              className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--black))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:border-[hsl(var(--black))] text-[11px] px-5 py-2.5"
             >
               Enregistrer mes choix
             </button>
@@ -134,7 +134,7 @@ const CookieConsent = () => {
             <>
               <button
                 onClick={handleAcceptAll}
-                className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:border-[hsl(var(--black))] text-[11px] px-5 py-2.5"
+                className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--black))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:border-[hsl(var(--black))] text-[11px] px-5 py-2.5"
               >
                 Tout accepter
               </button>

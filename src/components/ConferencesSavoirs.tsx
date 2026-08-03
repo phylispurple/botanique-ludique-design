@@ -382,7 +382,7 @@ const ConferencesSavoirs = () => {
         </div>
         <Link
           to="/contact"
-          className="btn-brutal bg-[hsl(var(--orange))] text-[hsl(var(--cream))] border-[hsl(var(--orange))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--orange))] text-sm px-9 py-4 flex-shrink-0"
+          className="btn-brutal bg-[hsl(var(--orange))] text-[hsl(var(--black))] border-[hsl(var(--orange))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--orange))] text-sm px-9 py-4 flex-shrink-0"
         >
           Nous écrire →
         </Link>
