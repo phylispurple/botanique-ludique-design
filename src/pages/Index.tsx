@@ -156,13 +156,6 @@ const Index = () => {
         </svg>
       </section>
 
-      {/* ===== MARQUEE ===== */}
-      <Marquee
-        items={["Kokedama", "Teinture végétale", "Terrarium", "Vannerie", "Couronne de fleurs", "Sachet de senteurs", "Ethnographie", "Médiation", "Balade botanique"]}
-        color="green"
-        speed={25}
-      />
-
       {/* ===== PRÉSENTATION + STATS ===== */}
       <section className="py-32 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
