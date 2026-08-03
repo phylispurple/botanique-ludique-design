@@ -28,6 +28,22 @@ import gallerySachetSenteur from "@/assets/gallery-sachet-senteur.webp";
 import galleryMiniTerrarium from "@/assets/gallery-mini-terrarium.jpeg";
 import PhotoCarousel from "@/components/PhotoCarousel";
 
+const WaveDivider = ({ from, to, flip = false }: { from: string; to: string; flip?: boolean }) => (
+  <div className="relative h-12 md:h-20 -mt-px" style={{ backgroundColor: from }}>
+    <svg
+      viewBox="0 0 1440 120"
+      preserveAspectRatio="none"
+      className={`absolute bottom-0 left-0 w-full h-full ${flip ? 'scale-x-[-1]' : ''}`}
+      aria-hidden="true"
+    >
+      <path
+        d="M0,120 C240,40 480,20 720,50 C960,80 1200,30 1440,120 L1440,120 L0,120 Z"
+        fill={to}
+      />
+    </svg>
+  </div>
+);
+
 const Index = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -118,13 +134,13 @@ const Index = () => {
               </button>
               <button
                 onClick={() => navigate('/#mediation')}
-                className="btn-brutal !border-[hsl(var(--cream)/0.5)] bg-transparent text-primary-foreground hover:bg-[hsl(var(--cream))] hover:text-foreground hover:!border-[hsl(var(--cream))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--cream)/0.3)] px-6 py-2.5"
+                className="btn-brutal bg-[hsl(210_41%_24%)] text-[hsl(var(--cream))] border-[hsl(210_41%_24%)] hover:bg-[hsl(var(--cream))] hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(210_41%_24%)] px-6 py-2.5"
               >
                 Médiation & Savoirs →
               </button>
               <button
                 onClick={() => navigate('/agenda')}
-                className="btn-brutal !border-[hsl(var(--cream)/0.5)] bg-transparent text-primary-foreground hover:bg-[hsl(var(--cream))] hover:text-foreground hover:!border-[hsl(var(--cream))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--cream)/0.3)] px-6 py-2.5"
+                className="btn-brutal bg-primary text-foreground border-primary hover:bg-[hsl(var(--cream))] hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--olive))] px-6 py-2.5"
               >
                 Agenda & Inscriptions →
               </button>
@@ -157,7 +173,7 @@ const Index = () => {
       </section>
 
       {/* ===== PRÉSENTATION + STATS ===== */}
-      <section className="py-32 px-6">
+      <section className="py-20 md:py-32 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
           {/* Text */}
           <AnimatedSection direction="left">
@@ -229,8 +245,10 @@ const Index = () => {
         </div>
       </section>
 
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
+
       {/* ===== GALERIE — Défilement continu ===== */}
-      <section className="py-28 bg-secondary">
+      <section className="py-20 md:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
             <span className="section-label block mb-3">Portfolio</span>
@@ -264,8 +282,12 @@ const Index = () => {
         </div>
       </section>
 
+      <WaveDivider from="hsl(36,25%,88%)" to="hsl(210,41%,24%)" flip />
+
       {/* ===== CONFÉRENCES & SAVOIRS ===== */}
       <ConferencesSavoirs />
+
+      <WaveDivider from="hsl(210,41%,24%)" to="hsl(36,33%,93%)" />
 
       {/* ===== TESTIMONIALS ===== */}
       <Testimonials />
@@ -278,11 +300,15 @@ const Index = () => {
         separator="●"
       />
 
+      <WaveDivider from="hsl(73,37%,44%)" to="hsl(0,0%,10%)" flip />
+
       {/* ===== VIDEO SECTION ===== */}
       <VideoSection />
 
+      <WaveDivider from="hsl(0,0%,10%)" to="hsl(36,33%,93%)" />
+
       {/* ===== PARTENAIRES — Défilement continu ===== */}
-      <section className="py-24">
+      <section className="py-20 md:py-24">
         <div className="max-w-5xl mx-auto px-6">
           <AnimatedSection>
             <h3 className="font-display text-2xl md:text-3xl uppercase text-center mb-12 tracking-[-1px]">
@@ -329,8 +355,10 @@ const Index = () => {
         </div>
       </section>
 
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
+
       {/* ===== CTA + NEWSLETTER ===== */}
-      <section className="py-24 px-6 text-primary-foreground relative overflow-hidden">
+      <section className="py-20 md:py-24 px-6 text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 bg-foreground">
           <img
             src={ctaWorkshopGroup}
