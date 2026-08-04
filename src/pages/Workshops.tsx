@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import WorkshopFilters, { WorkshopCategory } from "@/components/WorkshopFilters";
 import BackToTop from "@/components/BackToTop";
+import AnimatedSection from "@/components/AnimatedSection";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "lucide-react";
@@ -45,7 +46,7 @@ const AutoSlideshow = ({ images, alt }: { images: string[]; alt: string }) => {
     return () => clearInterval(id);
   }, [images.length]);
   return (
-    <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-lg bg-sand">
+    <div className="relative w-full aspect-[4/3] overflow-hidden border-brutal bg-[hsl(var(--cream))]">
       {images.map((src, idx) => (
         <img
           key={idx}
@@ -59,7 +60,7 @@ const AutoSlideshow = ({ images, alt }: { images: string[]; alt: string }) => {
         {images.map((_, idx) => (
           <span
             key={idx}
-            className={`h-1.5 rounded-full transition-all ${idx === i ? "w-6 bg-white" : "w-1.5 bg-white/60"}`}
+            className={`h-1.5 transition-all ${idx === i ? "w-6 bg-foreground" : "w-1.5 bg-foreground/40"}`}
           />
         ))}
       </div>
@@ -89,7 +90,7 @@ const MediaSlideshow = ({ items, alt }: { items: MediaItem[]; alt: string }) => 
   const next = () => setI((v) => (v + 1) % items.length);
 
   return (
-    <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-lg bg-sand">
+    <div className="relative w-full aspect-[4/3] overflow-hidden border-brutal bg-[hsl(var(--cream))]">
       {items.map((item, idx) =>
         item.type === "image" ? (
           <img
@@ -116,7 +117,7 @@ const MediaSlideshow = ({ items, alt }: { items: MediaItem[]; alt: string }) => 
         {items.map((_, idx) => (
           <span
             key={idx}
-            className={`h-1.5 rounded-full transition-all ${idx === i ? "w-6 bg-white" : "w-1.5 bg-white/60"}`}
+            className={`h-1.5 transition-all ${idx === i ? "w-6 bg-foreground" : "w-1.5 bg-foreground/40"}`}
           />
         ))}
       </div>
@@ -140,7 +141,6 @@ interface Workshop {
 }
 
 const workshops: Workshop[] = [
-  // Créations Textiles & Teintures
   {
     title: "Teinture Végétale",
     description: "Au-delà de la technique, une plongée dans l'histoire des pigments et des circulations coloniales des plantes tinctoriales. Extrayez des pigments végétaux selon des techniques traditionnelles pour créer des textiles durables aux tons terreux et authentiques. Médiation adossée à la recherche EHESS.",
@@ -170,8 +170,6 @@ const workshops: Workshop[] = [
     icon: Palette,
     category: "textiles",
   },
-
-  // Jardinage & Plantations
   {
     title: "Kokedama",
     description: "Art japonais revisité avec un éclairage ethnobotanique : chaque plante raconte une histoire de domestication et d'usage. Créez vos propres sculptures végétales suspendues en explorant cette pratique séculaire qui unit esthétique et philosophie du vivant.",
@@ -216,8 +214,6 @@ const workshops: Workshop[] = [
     icon: Sprout,
     category: "jardinage",
   },
-
-  // Art Floral & Compositions
   {
     title: "Couronnes de Fleurs",
     description: "Tressez des couronnes végétales avec fleurs sauvages et feuillages de saison. Un savoir-faire ancestral qui traverse les cultures, des rituels celtes aux traditions méditerranéennes, pour célébrer la beauté éphémère de la nature.",
@@ -248,8 +244,6 @@ const workshops: Workshop[] = [
     category: "floral",
     tag: "nouveau",
   },
-
-  // Artisanat & Techniques Ancestrales
   {
     title: "Vannerie",
     description: "Apprenez l'art du tressage avec osier et fibres naturelles, pratique artisanale millénaire commune à toutes les civilisations. Créez des paniers fonctionnels et esthétiques en reconnectant avec des gestes universels et intemporels.",
@@ -277,8 +271,6 @@ const workshops: Workshop[] = [
     icon: Hammer,
     category: "artisanat",
   },
-
-  // Bien-être & Aromathérapie
   {
     title: "Sachets Senteur & Pots-Pourris",
     description: "Composez vos propres mélanges aromatiques avec fleurs séchées, herbes et épices selon des recettes traditionnelles européennes et orientales. Créez des objets parfumés pour la maison ancrés dans l'histoire des usages domestiques des plantes.",
@@ -327,7 +319,6 @@ const workshops: Workshop[] = [
     category: "floral",
     tag: "nouveau",
   },
-
   {
     title: "Papier Recyclé & Carnets",
     description: "Fabriquez votre propre papier recyclé à partir de fibres végétales et reliez votre carnet artisanal selon des techniques ancestrales. De la pulpe à la reliure, explorez tout le processus de création d'un objet unique, écologique et personnalisé.",
@@ -350,27 +341,18 @@ const workshops: Workshop[] = [
 
 const categoryTitles: Record<WorkshopCategory, string> = {
   all: "Tous les ateliers",
-  textiles: "🎨 Créations Textiles & Teintures",
-  jardinage: "🌱 Jardinage & Plantations",
-  floral: "🌸 Art Floral & Compositions",
-  artisanat: "🪵 Artisanat & Techniques Ancestrales",
-  "bien-etre": "🌿 Bien-être & Aromathérapie",
-};
-
-const categoryColors: Record<WorkshopCategory, { bg: string; text: string; border: string }> = {
-  all: { bg: "bg-sage/90", text: "text-white", border: "border-sage" },
-  textiles: { bg: "bg-purple-600/90", text: "text-white", border: "border-purple-400" },
-  jardinage: { bg: "bg-emerald-600/90", text: "text-white", border: "border-emerald-400" },
-  floral: { bg: "bg-pink-500/90", text: "text-white", border: "border-pink-400" },
-  artisanat: { bg: "bg-amber-600/90", text: "text-white", border: "border-amber-400" },
-  "bien-etre": { bg: "bg-teal-600/90", text: "text-white", border: "border-teal-400" },
+  textiles: "Créations Textiles & Teintures",
+  jardinage: "Jardinage & Plantations",
+  floral: "Art Floral & Compositions",
+  artisanat: "Artisanat & Techniques Ancestrales",
+  "bien-etre": "Bien-être & Aromathérapie",
 };
 
 const categoryLabels: Record<WorkshopCategory, string> = {
   all: "Tous",
-  textiles: "Textiles & Teintures",
+  textiles: "Textiles",
   jardinage: "Jardinage",
-  floral: "Art Floral",
+  floral: "Floral",
   artisanat: "Artisanat",
   "bien-etre": "Bien-être",
 };
@@ -379,11 +361,9 @@ const Workshops = () => {
   const [activeCategory, setActiveCategory] = useState<WorkshopCategory>("all");
   const location = useLocation();
 
-  // Reset filter and scroll to element when navigating with hash
   useEffect(() => {
     if (location.hash) {
       setActiveCategory("all");
-      // Wait for DOM to update then scroll to element
       setTimeout(() => {
         const elementId = location.hash.substring(1);
         const element = document.getElementById(elementId);
@@ -394,8 +374,8 @@ const Workshops = () => {
     }
   }, [location.hash]);
 
-  const filteredWorkshops = activeCategory === "all" 
-    ? workshops 
+  const filteredWorkshops = activeCategory === "all"
+    ? workshops
     : workshops.filter(w => w.category === activeCategory);
 
   const workshopCounts = workshops.reduce((acc, workshop) => {
@@ -403,7 +383,7 @@ const Workshops = () => {
     return acc;
   }, { all: workshops.length } as Record<WorkshopCategory, number>);
 
-  const groupedWorkshops = activeCategory === "all" 
+  const groupedWorkshops = activeCategory === "all"
     ? Object.keys(categoryTitles).filter(cat => cat !== "all").reduce((acc, category) => {
         const categoryWorkshops = workshops.filter(w => w.category === category);
         if (categoryWorkshops.length > 0) {
@@ -414,8 +394,8 @@ const Workshops = () => {
     : { [activeCategory]: filteredWorkshops };
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
-      <SEO 
+    <div className="min-h-screen bg-[hsl(var(--cream))]">
+      <SEO
         title="Ateliers botaniques à Paris et en Île-de-France"
         description="Découvrez nos ateliers botaniques à Paris et en Île-de-France, terrarium, kokedama, teinture végétale, herbier et créations florales pour adultes, enfants, écoles et entreprises."
         keywords="atelier botanique Paris, atelier botanique Yvelines, atelier botanique Hauts-de-Seine, atelier botanique Val-d'Oise, kokedama Paris, teinture végétale Paris, atelier scolaire botanique"
@@ -431,168 +411,184 @@ const Workshops = () => {
       <FloatingIllustrations />
       <Navigation />
 
-      <main className="pt-32 pb-20" style={{ backgroundColor: '#F7F7EB' }}>
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-            <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
-              Ateliers Botaniques à Paris, Yvelines, Hauts-de-Seine & Val-d'Oise
+      {/* ===== HERO ===== */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <AnimatedSection>
+            <span className="section-label block mb-3">Ateliers · Créations · Savoirs</span>
+            <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mb-6">
+              Ateliers Botaniques
             </h1>
-            <p className="subtitle-italic text-lg mb-6">
+            <p className="font-body text-xl italic text-foreground/70 max-w-[650px] mx-auto mb-4">
               Des expériences botaniques pour éveiller vos sens à Paris, Chatou, Le Pecq, Nanterre, Boulogne.
             </p>
-            <p className="text-base text-charcoal/80 leading-relaxed">
-              Expériences botaniques immersives pour particuliers et groupes en Île-de-France. Ateliers disponibles à Paris, dans les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95) : Chatou, Le Pecq, Le Vésinet, Saint-Germain-en-Laye, Nanterre, Boulogne-Billancourt, Cergy, Pontoise, Argenteuil. Chaque atelier est conçu pour vous reconnecter avec la nature à travers la créativité manuelle et la pratique consciente.
+            <p className="text-base text-foreground/60 leading-relaxed max-w-2xl mx-auto">
+              Expériences botaniques immersives pour particuliers et groupes en Île-de-France. Ateliers disponibles à Paris, dans les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95). Chaque atelier est conçu pour vous reconnecter avec la nature à travers la créativité manuelle et la pratique consciente.
             </p>
-          </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
-          <WorkshopFilters 
+      {/* ===== FILTRES ===== */}
+      <section className="px-6">
+        <div className="max-w-5xl mx-auto">
+          <WorkshopFilters
             activeCategory={activeCategory}
             onCategoryChange={setActiveCategory}
             workshopCounts={workshopCounts}
           />
+        </div>
+      </section>
 
-          <div className="space-y-24">
+      {/* ===== ATELIERS ===== */}
+      <main className="pb-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="space-y-28">
             {Object.entries(groupedWorkshops).map(([category, categoryWorkshops]) => (
               <section key={category} className="scroll-mt-32">
-                <h2 
-                  className="text-3xl md:text-4xl text-center mb-12 animate-fade-in"
-                  style={{ fontFamily: 'Fraunces, serif', fontWeight: 500, color: '#3D3D2E' }}
-                >
-                  {categoryTitles[category as WorkshopCategory]}
-                </h2>
-                
-                <div className="space-y-20">
+                <AnimatedSection className="text-center mb-14">
+                  <span className="section-label block mb-3">{categoryLabels[category as WorkshopCategory]}</span>
+                  <h2 className="font-display text-[clamp(1.8rem,4vw,2.5rem)] uppercase leading-[0.95] tracking-[-1px]">
+                    {categoryTitles[category as WorkshopCategory]}
+                  </h2>
+                </AnimatedSection>
+
+                <div className="space-y-16">
                   {categoryWorkshops.map((workshop, index) => (
-                    <div
+                    <AnimatedSection
                       key={workshop.title}
-                      id={workshop.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "-")}
-                      className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center animate-fade-in card-premium bg-white/40 p-6 md:p-8 rounded-2xl ${
-                        index % 2 === 1 ? "md:flex-row-reverse" : ""
-                      }`}
-                      style={{ animationDelay: `${index * 100}ms` }}
+                      delay={index * 80}
+                      direction={index % 2 === 0 ? "left" : "right"}
                     >
-                      <div className={`${index % 2 === 1 ? "md:order-2" : ""} group relative rounded-xl overflow-visible`}>
-                        {/* Badges container */}
-                        <div className="absolute top-3 left-3 right-3 z-10 flex flex-wrap gap-2">
-                          {/* Category Badge */}
-                          <div className={`px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide border shadow-md ${categoryColors[workshop.category].bg} ${categoryColors[workshop.category].text} ${categoryColors[workshop.category].border}`}>
-                            {categoryLabels[workshop.category]}
+                      <div
+                        id={workshop.title.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, "-")}
+                        className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center border-brutal p-6 md:p-8 bg-[hsl(var(--cream))] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300 group`}
+                      >
+                        <div className={`${index % 2 === 1 ? "md:order-2" : ""} relative`}>
+                          {/* Badges */}
+                          <div className="absolute top-3 left-3 z-10 flex flex-wrap gap-2">
+                            <span className="font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 border-brutal-thin bg-[hsl(var(--cream))]">
+                              {categoryLabels[workshop.category]}
+                            </span>
+                            {workshop.tag && (
+                              <span className={`font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 border-brutal-thin ${
+                                workshop.tag === "populaire"
+                                  ? "bg-[hsl(var(--orange))] text-primary-foreground"
+                                  : "bg-[hsl(var(--olive))] text-primary-foreground"
+                              }`}>
+                                {workshop.tag === "populaire" ? "Populaire" : "Nouveau"}
+                              </span>
+                            )}
                           </div>
-                          
-                          {/* Tag Badge (Populaire / Nouveau) */}
-                          {workshop.tag && (
-                            <div className={`px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide shadow-lg ${
-                              workshop.tag === "populaire" 
-                                ? "bg-gradient-to-r from-orange-500 to-red-500 text-white" 
-                                : "bg-gradient-to-r from-blue-500 to-indigo-500 text-white"
-                            }`}>
-                              {workshop.tag === "populaire" ? "⭐ Populaire" : "✨ Nouveau"}
+
+                          {workshop.video && workshop.type !== "video" ? (
+                            <Carousel className="w-full">
+                              <CarouselContent>
+                                <CarouselItem>
+                                  <div className="overflow-hidden border-brutal">
+                                    <img
+                                      src={workshop.image}
+                                      alt={`Atelier ${workshop.title}`}
+                                      className="w-full transition-transform duration-700 group-hover:scale-105"
+                                      loading="lazy"
+                                    />
+                                  </div>
+                                </CarouselItem>
+                                <CarouselItem>
+                                  <div className="overflow-hidden border-brutal">
+                                    <video
+                                      src={workshop.video}
+                                      className="w-full"
+                                      muted
+                                      loop
+                                      playsInline
+                                      autoPlay
+                                      preload="metadata"
+                                    />
+                                  </div>
+                                </CarouselItem>
+                              </CarouselContent>
+                              <CarouselPrevious className="left-4" />
+                              <CarouselNext className="right-4" />
+                            </Carousel>
+                          ) : workshop.type === "video" ? (
+                            <div className="overflow-hidden border-brutal shadow-brutal">
+                              <video
+                                src={workshop.image}
+                                className="w-full transition-transform duration-700 group-hover:scale-105"
+                                muted
+                                loop
+                                playsInline
+                                autoPlay
+                                preload="metadata"
+                              />
+                            </div>
+                          ) : workshop.media && workshop.media.length > 1 ? (
+                            <MediaSlideshow items={workshop.media} alt={`Atelier ${workshop.title}`} />
+                          ) : workshop.images && workshop.images.length > 1 ? (
+                            <AutoSlideshow images={workshop.images} alt={`Atelier ${workshop.title}`} />
+                          ) : (
+                            <div className="overflow-hidden border-brutal shadow-brutal">
+                              <img
+                                src={workshop.image}
+                                alt={`Atelier ${workshop.title}`}
+                                className="w-full img-zoom"
+                                loading="lazy"
+                              />
                             </div>
                           )}
                         </div>
-                        {workshop.video && workshop.type !== "video" ? (
-                          <Carousel className="w-full">
-                            <CarouselContent>
-                              <CarouselItem>
-                                <div className="overflow-hidden rounded-xl">
-                                  <img
-                                    src={workshop.image}
-                                    alt={`Atelier ${workshop.title}`}
-                                    className="w-full rounded-xl shadow-lg transition-all duration-700 group-hover:scale-110 group-hover:brightness-105"
-                                    loading="lazy"
-                                  />
-                                </div>
-                              </CarouselItem>
-                              <CarouselItem>
-                                <div className="overflow-hidden rounded-xl">
-                                  <video
-                                    src={workshop.video}
-                                    className="w-full rounded-xl shadow-lg transition-all duration-500"
-                                    muted
-                                    loop
-                                    playsInline
-                                    autoPlay
-                                    preload="metadata"
-                                  />
-                                </div>
-                              </CarouselItem>
-                            </CarouselContent>
-                            <CarouselPrevious className="left-4" />
-                            <CarouselNext className="right-4" />
-                          </Carousel>
-                        ) : workshop.type === "video" ? (
-                          <div className="overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
-                            <video
-                              src={workshop.image}
-                              className="w-full rounded-xl transition-all duration-700 group-hover:scale-105"
-                              muted
-                              loop
-                              playsInline
-                              autoPlay
-                              preload="metadata"
-                            />
-                          </div>
-                        ) : workshop.media && workshop.media.length > 1 ? (
-                          <MediaSlideshow items={workshop.media} alt={`Atelier ${workshop.title}`} />
-                        ) : workshop.images && workshop.images.length > 1 ? (
-                          <AutoSlideshow images={workshop.images} alt={`Atelier ${workshop.title}`} />
-                        ) : (
-                          <div className="overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-500">
-                            <img
-                              src={workshop.image}
-                              alt={`Atelier ${workshop.title}`}
-                              className="w-full rounded-xl img-zoom"
-                              loading="lazy"
-                            />
-                          </div>
-                        )}
-                      </div>
 
-                      <div className={`space-y-4 ${index % 2 === 1 ? "md:order-1" : ""}`}>
-                        <div className="flex items-center gap-3 mb-2">
-                          <workshop.icon size={24} className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" style={{ color: '#A7B795' }} />
-                          <div className="inline-block px-4 py-1 bg-sage/20 text-sage-dark text-xs uppercase tracking-wider rounded-full font-semibold transition-all duration-300 group-hover:bg-sage/30 group-hover:scale-105">
-                            {workshop.duration}
+                        <div className={`space-y-4 ${index % 2 === 1 ? "md:order-1" : ""}`}>
+                          <div className="flex items-center gap-3">
+                            <workshop.icon size={20} className="text-primary" />
+                            <span className="font-mono-brand text-[10px] uppercase tracking-[2px] px-3 py-1 border-brutal-thin">
+                              {workshop.duration}
+                            </span>
                           </div>
+                          <h3 className="font-display text-2xl md:text-3xl uppercase leading-[0.95] tracking-[-1px]">
+                            {workshop.title}
+                          </h3>
+                          <p className="font-mono-brand text-[10px] uppercase tracking-[2px] text-primary">
+                            Public : {workshop.public}
+                          </p>
+                          <p className="text-base text-foreground/70 leading-[1.8]">
+                            {workshop.description}
+                          </p>
+                          <Link
+                            to={`/agenda?atelier=${encodeURIComponent(workshop.title)}`}
+                            className="btn-brutal bg-primary text-primary-foreground border-primary hover:bg-primary-foreground hover:text-foreground text-xs px-7 py-3 inline-block mt-2"
+                          >
+                            Demande d'information →
+                          </Link>
                         </div>
-                        <h3 className="text-3xl md:text-4xl transition-colors duration-300 group-hover:text-sage-dark" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-                          {workshop.title}
-                        </h3>
-                        <p className="text-sm text-sage-dark font-semibold mb-2">
-                          Public : {workshop.public}
-                        </p>
-                        <p className="text-lg text-charcoal/80 leading-relaxed">
-                          {workshop.description}
-                        </p>
-                        <Link 
-                          to={`/agenda?atelier=${encodeURIComponent(workshop.title)}`}
-                          className="inline-flex items-center px-6 py-3 bg-sage text-off-white text-sm uppercase tracking-wider font-semibold rounded-full btn-premium"
-                        >
-                          Demande d'information et réservation
-                        </Link>
                       </div>
-                    </div>
+                    </AnimatedSection>
                   ))}
                 </div>
               </section>
             ))}
           </div>
 
-          {/* CTA Section - Formations */}
-          <div className="mt-12 bg-sand rounded-2xl p-8 md:p-12 text-center animate-fade-in card-premium">
-            <h3 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Fraunces, serif', fontWeight: 400, color: '#3D3D2E' }}>
-              Vous êtes un établissement scolaire ou une entreprise ?
-            </h3>
-            <p className="text-lg text-charcoal/80 leading-relaxed mb-6 max-w-2xl mx-auto">
-              Découvrez nos formations professionnelles et interventions éducatives sur mesure pour collèges, lycées, BTS et entreprises.
-            </p>
-            <Link
-              to="/pro"
-              className="inline-flex items-center px-8 py-4 bg-sage text-off-white text-sm uppercase tracking-wider font-semibold rounded-full btn-premium"
-            >
-              Voir les offres professionnelles
-            </Link>
-          </div>
+          {/* ===== CTA PRO ===== */}
+          <AnimatedSection className="mt-20">
+            <div className="border-brutal p-10 md:p-14 text-center bg-[hsl(var(--cream))] shadow-brutal-lg">
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-primary" />
+              <span className="section-label block mb-3">Professionnels</span>
+              <h3 className="font-display text-2xl md:text-3xl uppercase leading-[0.95] tracking-[-1px] mb-4">
+                Vous êtes un établissement scolaire ou une entreprise ?
+              </h3>
+              <p className="text-base text-foreground/70 leading-relaxed mb-8 max-w-2xl mx-auto">
+                Découvrez nos formations professionnelles et interventions éducatives sur mesure pour collèges, lycées, BTS et entreprises.
+              </p>
+              <Link
+                to="/pro"
+                className="btn-brutal bg-foreground text-primary-foreground border-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
+              >
+                Voir les offres professionnelles →
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </main>
 
