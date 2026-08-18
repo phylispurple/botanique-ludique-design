@@ -124,12 +124,6 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
           "priceRange": "€€",
           "paymentAccepted": "Cash, Credit Card, Bank Transfer",
           "currenciesAccepted": "EUR",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "50",
-            "bestRating": "5"
-          },
           "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
