@@ -22,6 +22,7 @@ const FAQ = lazy(() => import("./pages/FAQ"));
 import NotFound from "./pages/NotFound";
 const AdminTestimonials = lazy(() => import("./pages/AdminTestimonials"));
 const Agenda = lazy(() => import("./pages/Agenda"));
+const FeteScienceEpicesVersailles = lazy(() => import("./pages/FeteScienceEpicesVersailles"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe"));
 const MarchesPublics = lazy(() => import("./pages/MarchesPublics"));
 const ReferencesCollectivites = lazy(() => import("./pages/ReferencesCollectivites"));
@@ -317,6 +318,10 @@ const App = () => (
             <Route path="/agenda" element={<Agenda />} />
             <Route path="/calendar" element={<Agenda />} />
             <Route path="/calendrier" element={<Agenda />} />
+            <Route
+              path="/evenement/fete-de-la-science-versailles-route-des-epices"
+              element={<FeteScienceEpicesVersailles />}
+            />
             <Route path="/mentions-legales" element={<LegalNotice />} />
             <Route path="/conditions-de-vente" element={<SalesTerms />} />
             <Route path="/admin/testimonials" element={<AdminTestimonials />} />
