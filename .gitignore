@@ -26,3 +26,6 @@ dist-ssr
 # Environment variables
 .env
 .env.local
+
+# Réglages Claude Code propres à la machine
+.claude/settings.local.json

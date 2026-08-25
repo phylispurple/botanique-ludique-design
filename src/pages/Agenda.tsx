@@ -16,6 +16,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import afficheEpices from "@/assets/fete-science-epices-versailles-affiche.jpg";
 
 type EventLink =
   | { linkType: "internal"; internalUrl: string; buttonLabel?: string }
@@ -62,6 +63,7 @@ const upcomingEvents: UpcomingEvent[] = [
     location: "Bibliothèque Choiseul, 5 rue de l'Indépendance américaine, 78000 Versailles",
     audience: "Tout public dès 11 ans",
     spots: "Gratuit · places limitées",
+    image: afficheEpices,
     description:
       "Dans le cadre de la Fête de la Science, un atelier de découverte ethnobotanique animé par Vanessa Charlery. D'où viennent les épices que nous utilisons tous les jours, quelle histoire culturelle et politique portent-elles, et pourquoi leurs odeurs nous touchent-elles autant ? Apports théoriques, reconnaissance à l'aveugle, puis fabrication d'un sachet senteur à emporter. Gratuit, sur inscription auprès de la bibliothèque au 01 30 97 28 90 dès le 3 septembre.",
     linkType: "internal",

@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import BackToTop from "@/components/BackToTop";
 import { Link } from "react-router-dom";
+import affiche from "@/assets/fete-science-epices-versailles-affiche.jpg";
 import {
   ArrowLeft,
   ArrowRight,
@@ -102,6 +103,7 @@ const FeteScienceEpicesVersailles = () => {
         description="Samedi 3 octobre 2026, 15h30, bibliothèque Choiseul à Versailles : atelier ethnobotanique « Sur la route des épices, odeurs et saveurs » animé par Vanessa Charlery. Histoire des épices, odorat, goût et fabrication d'un sachet senteur. Gratuit, dès 11 ans, sur inscription."
         keywords="Fête de la Science Versailles 2026, atelier épices Versailles, bibliothèque Choiseul Versailles, route des épices atelier, atelier ethnobotanique Yvelines, odeurs et saveurs, Vanessa Charlery, Botanique Ludique, atelier science famille Versailles, sachet senteur épices"
         canonical="/evenement/fete-de-la-science-versailles-route-des-epices"
+        ogImage="https://botaniqueludique.com/og-fete-science-epices-versailles.jpg"
         type="article"
         city="Versailles"
       />
@@ -114,6 +116,7 @@ const FeteScienceEpicesVersailles = () => {
           startDate: "2026-10-03T15:30:00+02:00",
           endDate: "2026-10-03T17:30:00+02:00",
           url: EVENT_URL,
+          image: "https://botaniqueludique.com/og-fete-science-epices-versailles.jpg",
           inLanguage: "fr",
           typicalAgeRange: "11-",
           location: {
@@ -202,6 +205,21 @@ const FeteScienceEpicesVersailles = () => {
             leurs saveurs nous touchent-elles autant ? Deux heures gratuites pour croiser histoire
             culturelle, botanique et sciences des sens — et repartir avec son propre sachet senteur.
           </p>
+
+          <figure className="mt-10 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
+            <img
+              src={affiche}
+              alt="Affiche de l'atelier Sur la route des épices, odeurs et saveurs, samedi 3 octobre 2026 à 15h30, bibliothèque Choiseul de Versailles, Fête de la Science, Botanique Ludique"
+              className="w-full h-auto"
+              width={1080}
+              height={1526}
+              loading="lazy"
+            />
+            <figcaption className="p-4 font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--black))]/70 border-t-[3px] border-[hsl(var(--black))] leading-relaxed">
+              Affiche de l'atelier · Fête de la Science 2026, réseau des bibliothèques de Versailles.
+              L'âge minimum retenu par la bibliothèque est de 11 ans.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
