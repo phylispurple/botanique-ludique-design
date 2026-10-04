@@ -45,6 +45,7 @@ const BlogPlantesSauvagesSortie = lazy(() => import("./pages/BlogPlantesSauvages
 const BlogMediationScientifique = lazy(() => import("./pages/BlogMediationScientifique"));
 const BlogFinancerAnimationCCAS = lazy(() => import("./pages/BlogFinancerAnimationCCAS"));
 const BlogFeteNatureMairie = lazy(() => import("./pages/BlogFeteNatureMairie"));
+const BlogAtelierRouteDesEpicesVersailles = lazy(() => import("./pages/BlogAtelierRouteDesEpicesVersailles"));
 const BlogJourneesPatrimoineVegetal = lazy(() => import("./pages/BlogJourneesPatrimoineVegetal"));
 const BlogSemaineDDMairie = lazy(() => import("./pages/BlogSemaineDDMairie"));
 const BlogBaladeBotaniqueDuBreuil = lazy(() => import("./pages/BlogBaladeBotaniqueDuBreuil"));
@@ -352,6 +353,7 @@ const App = () => (
             <Route path="/blog/semaine-developpement-durable-mairie" element={<BlogSemaineDDMairie />} />
             <Route path="/blog/balade-botanique-ecole-du-breuil" element={<BlogBaladeBotaniqueDuBreuil />} />
             <Route path="/blog/balade-botanique-voisins-le-bretonneux" element={<BlogBaladeBotaniqueVoisins />} />
+            <Route path="/blog/atelier-route-des-epices-fete-de-la-science-versailles" element={<BlogAtelierRouteDesEpicesVersailles />} />
 
             {/* Guides */}
             <Route path="/guide/comment-faire-un-terrarium" element={<GuideTerrarium />} />

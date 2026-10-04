@@ -92,6 +92,7 @@ Le site est une SPA : les crawlers (LinkedIn, WhatsApp) ne voient que le HTML st
 ## Ce qui reste à faire
 
 - **Analytics** : aucun outil de mesure installé. `src/lib/analytics.ts` existe et est branché sur 7 points de conversion, mais n'envoie nulle part. Plausible recommandé (cookie-less). Le bandeau cookies a un toggle "analytics" qui ne pilote rien.
-- **45 pages sans `<SEO>`** : pages événementielles et géographiques qui n'ont ni titre ni description. Visibles avec `npm run audit`.
-- **27 routes indexables absentes du sitemap** : pages légitimes (team building, ateliers par ville, etc.) à ajouter sélectivement.
+- **Titres trop longs** : environ 90 pages ont un titre de plus de 70 caractères (le suffixe « | Botanique Ludique » en ajoute 20), tronqué par Google. À raccourcir progressivement.
+- **Routes indexables absentes du sitemap** : pages légitimes (ateliers par ville, cadeaux, etc.) à ajouter sélectivement. Les 6 pages institutionnelles (collectivités, scolaire, seniors, CSE, MJC, team building) y sont depuis le 4 octobre 2026.
+- **Page `/references-collectivites`** : contient encore des études de cas et témoignages provisoires (commentaire « placeholders » dans le code) à remplacer par des éléments réels et autorisés.
 - **Images lourdes** : 7 images > 500 Ko (dont un GIF de 5 Mo). Plaquette PDF de 8 Mo.

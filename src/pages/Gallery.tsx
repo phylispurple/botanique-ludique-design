@@ -16,6 +16,8 @@ import autumnLeavesImage from "@/assets/gallery-autumn-leaves.webp";
 import basketryImage from "@/assets/gallery-basketry.webp";
 import atelierAdulteImage from "@/assets/gallery-atelier-adulte.webp";
 import sachetSenteurImage from "@/assets/gallery-sachet-senteur.webp";
+import epicesSachets1 from "@/assets/gallery-atelier-epices-sachets-1.webp";
+import epicesSachets2 from "@/assets/gallery-atelier-epices-sachets-2.webp";
 import flowerCrownImage from "@/assets/gallery-flower-crown.webp";
 import collegeEee1Image from "@/assets/gallery-college-eee-1.webp";
 import collegeEee2Image from "@/assets/gallery-college-eee-2.webp";
@@ -87,6 +89,8 @@ const GalleryImage = ({ src, alt, className, style }: { src: string; alt: string
 
 const Gallery = () => {
   const items = [
+    { src: epicesSachets1, alt: "Participants composant leur sachet senteur avec des épices entières lors de l'atelier Sur la route des épices", caption: "Atelier Sur la route des épices, Fête de la Science, bibliothèque Choiseul, Versailles", type: "image" },
+    { src: epicesSachets2, alt: "Sachets senteur terminés et bols d'épices (cannelle, girofle, anis étoilé, cardamome) sur la table d'atelier", caption: "Sachets senteur aux épices, Fête de la Science 2026, Versailles", type: "image" },
     { src: teintureEnfants2, alt: "Enfant peignant un t-shirt à la betterave", caption: "Atelier teinture végétale enfants, Application de pigment de betterave", type: "image" },
     { src: teintureEnfantsTshirt, alt: "T-shirt teint aux pigments naturels", caption: "Atelier teinture végétale enfants, T-shirt tie and dye végétal", type: "image" },
     { src: teintureEnfants4, alt: "Préparation des pigments végétaux", caption: "Atelier teinture végétale enfants, Préparation des pigments", type: "image" },

@@ -58,12 +58,16 @@ const seoSrc = await readFile(path.join(ROOT, "src/components/SEO.tsx"), "utf-8"
 const noindexPatterns = [];
 const patternBlock = seoSrc.match(/AUTO_NOINDEX_PATTERNS[^=]*=\s*\[([\s\S]*?)\];/);
 if (patternBlock) {
-  const regexes = [...patternBlock[1].matchAll(/\/([^/]+)\//g)];
-  regexes.forEach((m) => {
+  // Une regex littérale par ligne dans SEO.tsx. On garde le motif tel quel
+  // (ancres ^ et $ comprises) : sans elles, « /blog/mediation-scientifique-… »
+  // était pris à tort pour une page satellite noindex.
+  for (const line of patternBlock[1].split("\n")) {
+    const m = line.trim().match(/^\/(.+)\/([a-z]*),?$/);
+    if (!m) continue;
     try {
-      noindexPatterns.push(new RegExp(m[0].replace(/\//g, "")));
+      noindexPatterns.push(new RegExp(m[1], m[2]));
     } catch { /* skip invalid */ }
-  });
+  }
 }
 
 const noindexExplicit = new Set();
@@ -168,20 +172,30 @@ if (heavyPdfs) {
 // ─── 5. Pages sans titre ni description ─────────────────────────────────────
 console.log("\n🔍 5/7 — Pages sans titre ou description\n");
 
-const pageFiles = await readdir(path.join(ROOT, "src/pages"));
+// On lit le snapshot (ce que le navigateur affiche réellement) plutôt que le
+// code source : beaucoup de pages passent par un gabarit (OccasionTemplate…)
+// qui pose la balise <SEO> à leur place, et étaient signalées à tort.
 let missingMeta = 0;
-for (const f of pageFiles) {
-  if (!f.endsWith(".tsx")) continue;
-  const src = await readFile(path.join(ROOT, "src/pages", f), "utf-8");
-  const hasTitle = /title=/.test(src);
-  const hasDesc = /description=/.test(src);
-  if (!hasTitle && !hasDesc) {
-    const isAdmin = f.startsWith("Admin");
-    if (!isAdmin) {
-      warn(`${f} — pas de balise <SEO> (ni titre ni description)`);
+const snapshotPath = path.join(ROOT, "seo-snapshot.json");
+if (existsSync(snapshotPath)) {
+  const { routes } = JSON.parse(await readFile(snapshotPath, "utf-8"));
+  const descOf = (r) =>
+    (r.tags || []).map((t) => t.match(/name="description" content="([^"]*)"/)?.[1]).find(Boolean) || "";
+  const home = routes["/"];
+  for (const [route, r] of Object.entries(routes)) {
+    if (route === "/" || route.startsWith("/admin")) continue;
+    const desc = descOf(r);
+    if (!r.title || !desc) {
+      warn(`${route} — titre ou description manquant`);
+      missingMeta++;
+    } else if (home && (r.title === home.title || desc === descOf(home))) {
+      warn(`${route} — titre ou description par défaut (ceux de l'accueil)`);
       missingMeta++;
     }
   }
+} else {
+  warn("seo-snapshot.json absent — lancez npm run seo:capture");
+  missingMeta++;
 }
 
 if (missingMeta) {
@@ -193,7 +207,6 @@ if (missingMeta) {
 // ─── 6. Fraîcheur du snapshot SEO ───────────────────────────────────────────
 console.log("\n🔍 6/7 — Fraîcheur de seo-snapshot.json\n");
 
-const snapshotPath = path.join(ROOT, "seo-snapshot.json");
 if (!existsSync(snapshotPath)) {
   fail("seo-snapshot.json introuvable — les aperçus de partage ne fonctionnent pas");
   problems++;

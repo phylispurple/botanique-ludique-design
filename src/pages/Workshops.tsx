@@ -22,6 +22,7 @@ import herbariumImage from "@/assets/workshop-herbarium.jpg";
 import sharedGardenImage from "@/assets/workshop-shared-garden.jpg";
 import sachetSenteurImage from "@/assets/gallery-sachet-senteur.jpg";
 import bougieFleursSecheesImage from "@/assets/gallery-bougie-fleurs-sechees.jpg";
+import epicesSachets2 from "@/assets/gallery-atelier-epices-sachets-2.webp";
 import tatakiZomeImage from "@/assets/workshop-tataki-zome.jpg";
 import veganLeatherImage from "@/assets/workshop-vegan-leather.jpg";
 import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.jpg";
@@ -277,6 +278,7 @@ const workshops: Workshop[] = [
     duration: "1h30",
     public: "Tout public",
     image: sachetSenteurImage,
+    images: [sachetSenteurImage, epicesSachets2],
     icon: Droplets,
     category: "bien-etre",
   },
@@ -361,17 +363,31 @@ const Workshops = () => {
   const [activeCategory, setActiveCategory] = useState<WorkshopCategory>("all");
   const location = useLocation();
 
+  // Défilement vers l'atelier choisi dans le menu. Les images en lazy-loading
+  // et les animations décalent la mise en page après le premier scroll : on
+  // recale la position pendant 3 s, sauf si la personne reprend la main.
   useEffect(() => {
-    if (location.hash) {
-      setActiveCategory("all");
-      setTimeout(() => {
-        const elementId = location.hash.substring(1);
-        const element = document.getElementById(elementId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    }
+    if (!location.hash) return;
+    setActiveCategory("all");
+    const elementId = decodeURIComponent(location.hash.substring(1));
+    let stopped = false;
+    const scrollToTarget = () => {
+      const element = document.getElementById(elementId);
+      if (!element || stopped) return;
+      const top = element.getBoundingClientRect().top + window.scrollY - 120;
+      if (Math.abs(window.scrollY - top) > 4) window.scrollTo({ top, behavior: "auto" });
+    };
+    const stop = () => { stopped = true; };
+    window.addEventListener("wheel", stop, { passive: true });
+    window.addEventListener("touchstart", stop, { passive: true });
+    window.addEventListener("keydown", stop);
+    const timers = [50, 200, 500, 900, 1400, 2000, 3000].map((ms) => setTimeout(scrollToTarget, ms));
+    return () => {
+      timers.forEach(clearTimeout);
+      window.removeEventListener("wheel", stop);
+      window.removeEventListener("touchstart", stop);
+      window.removeEventListener("keydown", stop);
+    };
   }, [location.hash]);
 
   const filteredWorkshops = activeCategory === "all"
@@ -556,7 +572,7 @@ const Workshops = () => {
                             {workshop.description}
                           </p>
                           <Link
-                            to={`/agenda?atelier=${encodeURIComponent(workshop.title)}`}
+                            to={`/contact?subject=${encodeURIComponent(`Demande d'information : ${workshop.title}`)}`}
                             className="btn-brutal bg-primary text-primary-foreground border-primary hover:bg-primary-foreground hover:text-foreground text-xs px-7 py-3 inline-block mt-2"
                           >
                             Demande d'information →

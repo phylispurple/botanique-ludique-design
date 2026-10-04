@@ -16,7 +16,6 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import afficheEpices from "@/assets/fete-science-epices-versailles-affiche.jpg";
 
 type EventLink =
   | { linkType: "internal"; internalUrl: string; buttonLabel?: string }
@@ -49,61 +48,28 @@ type PastEvent = {
   location: string;
   audience: string;
   description: string;
+  /** Page de l'événement, conservée en ligne après la date. */
+  internalUrl?: string;
 };
 
 const d = (year: number, month: number, day: number) => new Date(year, month - 1, day);
 
-const upcomingEvents: UpcomingEvent[] = [
+// Aucun événement public à venir pour le moment.
+const upcomingEvents: UpcomingEvent[] = [];
+
+const pastEvents: PastEvent[] = [
   {
     id: "fete-science-epices-versailles",
     name: "Fête de la Science : Sur la route des épices, odeurs et saveurs",
     date: "Samedi 3 octobre 2026",
     parsedDate: d(2026, 10, 3),
-    time: "15h30 / 17h30",
-    location: "Bibliothèque Choiseul, 5 rue de l'Indépendance américaine, 78000 Versailles",
+    time: "15h30",
+    location: "Bibliothèque Choiseul, Versailles",
     audience: "Tout public dès 11 ans",
-    spots: "Gratuit · places limitées",
-    image: afficheEpices,
     description:
-      "Dans le cadre de la Fête de la Science, un atelier de découverte ethnobotanique animé par Vanessa Charlery. D'où viennent les épices que nous utilisons tous les jours, quelle histoire culturelle et politique portent-elles, et pourquoi leurs odeurs nous touchent-elles autant ? Apports théoriques, reconnaissance à l'aveugle, puis fabrication d'un sachet senteur à emporter. Gratuit, sur inscription auprès de la bibliothèque au 01 30 97 28 90 dès le 3 septembre.",
-    linkType: "internal",
+      "Atelier ethnobotanique de la Fête de la Science : histoire des épices, anthropologie des sens et fabrication d'un sachet senteur. Événement passé, reprogrammable dans votre ville.",
     internalUrl: "/evenement/fete-de-la-science-versailles-route-des-epices",
-    schema: {
-      startDate: "2026-10-03T15:30:00+02:00",
-      endDate: "2026-10-03T17:30:00+02:00",
-      url: "https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices",
-      typicalAgeRange: "11-",
-      location: {
-        "@type": "Place",
-        name: "Bibliothèque Choiseul",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "5 rue de l'Indépendance américaine",
-          addressLocality: "Versailles",
-          postalCode: "78000",
-          addressRegion: "Île-de-France",
-          addressCountry: "FR",
-        },
-      },
-      organizer: {
-        "@type": "Organization",
-        name: "Réseau des bibliothèques de Versailles",
-        url: "https://www.versailles.fr/762-11162/culture/reseau-des-bibliotheques/agenda/fiche/fete-de-la-science-sur-la-route-des-epices.htm",
-      },
-      isAccessibleForFree: true,
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "EUR",
-        availability: "https://schema.org/InStock",
-        url: "https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices",
-        validFrom: "2026-09-03T00:00:00+02:00",
-      },
-    },
   },
-];
-
-const pastEvents: PastEvent[] = [
   {
     id: "stage-botanique-chatou-juillet",
     name: "Stage Botanique, Vacances d'Été",
@@ -363,6 +329,24 @@ const Agenda = () => {
       {view === "list" && (
         <section className="py-10 px-4 bg-cream">
           <div className="container mx-auto max-w-5xl">
+            {upcomingEvents.length === 0 && (
+              <div className="border-brutal bg-green-pale shadow-brutal p-8">
+                <h3 className="font-display text-xl md:text-2xl uppercase leading-tight tracking-tight mb-3">
+                  Pas d'événement public programmé pour le moment
+                </h3>
+                <p className="font-body text-sm md:text-base text-foreground/80 leading-relaxed mb-5">
+                  Les prochaines dates seront annoncées ici. Vous souhaitez organiser un atelier, une balade ou une
+                  conférence dans votre ville, votre médiathèque ou votre structure ? N'hésitez pas à nous contacter.
+                </p>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 bg-foreground text-primary-foreground border-brutal shadow-brutal px-5 py-3 font-display uppercase text-xs tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                >
+                  Nous contacter
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            )}
             <div className="space-y-0">
               {upcomingEvents.map((event, index) => (
                 <article
@@ -664,6 +648,15 @@ const Agenda = () => {
                   {event.name}
                 </h3>
                 <p className="font-body text-sm text-foreground/70 mb-4">{event.description}</p>
+                {event.internalUrl && (
+                  <Link
+                    to={event.internalUrl}
+                    className="inline-flex items-center gap-2 mb-4 font-mono text-[11px] uppercase tracking-[1.5px] underline decoration-[2px] underline-offset-2 decoration-primary hover:text-primary transition-colors"
+                  >
+                    Voir la page de l'événement
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                )}
                 <div className="flex flex-wrap gap-3 font-mono text-[10px] uppercase tracking-[1.5px] text-foreground/60 pt-3 border-t-[3px] border-foreground/20">
                   <span className="flex items-center gap-1">
                     <MapPin className="w-3 h-3" />

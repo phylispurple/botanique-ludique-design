@@ -19,7 +19,7 @@ const LandingMJC = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Ateliers MJC & Associations - Cours Botanique Adultes" description="Ateliers botaniques pour MJC et associations en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Kokedama, teinture végétale, vannerie." keywords="atelier mjc botanique, cours nature association, atelier adultes plantes, atelier mjc val d'oise" canonical="/mjc-associations" />
+      <SEO title="Ateliers MJC & Associations - Cours Botanique Adultes" description="Ateliers botaniques pour MJC et associations en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Kokedama, teinture végétale, vannerie." keywords="atelier mjc botanique, cours nature association, atelier adultes plantes, atelier mjc val d'oise" canonical="/ateliers-mjc-association" />
       <Navigation />
       
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">

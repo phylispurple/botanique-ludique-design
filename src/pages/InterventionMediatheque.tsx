@@ -28,6 +28,7 @@ const InterventionMediatheque = () => (
       { label: "Tarif", value: "Sur devis" },
     ],
     related: [
+      { to: "/blog/atelier-route-des-epices-fete-de-la-science-versailles", label: "Récit : Fête de la Science à Versailles" },
       { to: "/balade-botanique-musee", label: "Balade musée" },
       { to: "/balades-botaniques", label: "Tous les formats" },
       { to: "/#mediation", label: "Conférences" },

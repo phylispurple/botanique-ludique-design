@@ -12,7 +12,6 @@ import {
   Clock,
   ExternalLink,
   MapPin,
-  Phone,
   Ticket,
   Users,
 } from "lucide-react";
@@ -23,24 +22,24 @@ const OFFICIAL_URL =
 
 const faq = [
   {
-    question: "Quand a lieu l'atelier « Sur la route des épices » à Versailles ?",
+    question: "Quand a eu lieu l'atelier « Sur la route des épices » à Versailles ?",
     answer:
-      "Le samedi 3 octobre 2026, de 15h30 à 17h30, à la bibliothèque Choiseul, 5 rue de l'Indépendance américaine, 78000 Versailles, dans le cadre de la Fête de la Science.",
+      "Le samedi 3 octobre 2026, à 15h30, à la bibliothèque Choiseul, 5 rue de l'Indépendance américaine, 78000 Versailles, dans le cadre de la Fête de la Science. Dix personnes y ont participé.",
   },
   {
-    question: "Comment s'inscrire à cet atelier de la Fête de la Science ?",
+    question: "Cet atelier sera-t-il reproposé ?",
     answer:
-      "L'inscription est obligatoire et ouvre le 3 septembre 2026. Elle se fait par téléphone auprès de la bibliothèque Choiseul au 01 30 97 28 90, ou directement sur la fiche événement du réseau des bibliothèques de Versailles.",
+      "Cet événement est passé, mais l'atelier peut être reprogrammé dans votre ville : médiathèque, bibliothèque, école, mairie, musée, association ou entreprise. Écrivez-nous via la page contact pour organiser une nouvelle séance.",
   },
   {
-    question: "L'atelier est-il payant ?",
+    question: "L'atelier était-il payant ?",
     answer:
-      "Non, l'atelier est entièrement gratuit. Seule l'inscription préalable auprès de la bibliothèque Choiseul est obligatoire, les places étant limitées. Le matériel du sachet senteur est fourni.",
+      "Non, l'atelier de la Fête de la Science était gratuit pour les participants, sur inscription auprès de la bibliothèque Choiseul. Le matériel du sachet senteur était fourni. Pour une intervention dans votre structure, un devis sur mesure est établi.",
   },
   {
     question: "À partir de quel âge peut-on participer ?",
     answer:
-      "L'atelier est ouvert à tous à partir de 11 ans. Il est conçu pour être suivi aussi bien par des adolescents que par des adultes : le récit historique et la partie scientifique sont accessibles sans aucun prérequis.",
+      "L'atelier était ouvert à tous à partir de 11 ans. Il est conçu pour être suivi aussi bien par des adolescents que par des adultes : le récit historique et la partie scientifique sont accessibles sans aucun prérequis.",
   },
   {
     question: "Qui anime l'atelier ?",
@@ -99,8 +98,8 @@ const FeteScienceEpicesVersailles = () => {
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO
-        title="Fête de la Science 2026 à Versailles : atelier Sur la route des épices"
-        description="Samedi 3 octobre 2026, 15h30, bibliothèque Choiseul à Versailles : atelier ethnobotanique « Sur la route des épices, odeurs et saveurs » animé par Vanessa Charlery. Histoire des épices, odorat, goût et fabrication d'un sachet senteur. Gratuit, dès 11 ans, sur inscription."
+        title="Fête de la Science 2026 Versailles : la route des épices"
+        description="Atelier « Sur la route des épices » à la bibliothèque Choiseul de Versailles, Fête de la Science 2026. Événement passé, reprogrammable dans votre ville."
         keywords="Fête de la Science Versailles 2026, atelier épices Versailles, bibliothèque Choiseul Versailles, route des épices atelier, atelier ethnobotanique Yvelines, odeurs et saveurs, Vanessa Charlery, Botanique Ludique, atelier science famille Versailles, sachet senteur épices"
         canonical="/evenement/fete-de-la-science-versailles-route-des-epices"
         ogImage="https://botaniqueludique.com/og-fete-science-epices-versailles.jpg"
@@ -191,6 +190,23 @@ const FeteScienceEpicesVersailles = () => {
             Fête de la Science 2026 · Versailles
           </span>
 
+          <div className="border-[3px] border-[hsl(var(--black))] bg-white p-5 mb-6 shadow-brutal">
+            <p className="font-display text-sm md:text-base uppercase tracking-tight leading-tight mb-2">
+              Cet événement est déjà passé
+            </p>
+            <p className="font-body text-sm text-[hsl(var(--black))]/80 leading-relaxed">
+              L'atelier a eu lieu le 3 octobre 2026. Vous souhaitez en organiser un du même type dans
+              votre ville, votre médiathèque ou votre structure ? N'hésitez pas à nous contacter.{" "}
+              <Link
+                to="/contact"
+                className="underline decoration-[3px] underline-offset-2 decoration-[hsl(var(--olive))] hover:text-[hsl(var(--olive))] transition-colors"
+              >
+                Nous écrire
+              </Link>
+              .
+            </p>
+          </div>
+
           <h1 className="font-display text-[clamp(2rem,6vw,4rem)] uppercase leading-[0.95] tracking-[-2px] text-[hsl(var(--black))] mb-6">
             Sur la route des épices : odeurs et saveurs
           </h1>
@@ -202,8 +218,8 @@ const FeteScienceEpicesVersailles = () => {
           </p>
           <p className="font-body text-base text-[hsl(var(--black))]/70 leading-relaxed">
             D'où viennent les épices que nous utilisons tous les jours ? Pourquoi leurs odeurs et
-            leurs saveurs nous touchent-elles autant ? Deux heures gratuites pour croiser histoire
-            culturelle, botanique et sciences des sens — et repartir avec son propre sachet senteur.
+            leurs saveurs nous touchent-elles autant ? Un atelier gratuit pour croiser histoire
+            culturelle, botanique et sciences des sens, et repartir avec son propre sachet senteur.
           </p>
 
           <figure className="mt-10 border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
@@ -245,28 +261,27 @@ const FeteScienceEpicesVersailles = () => {
             ))}
           </div>
 
-          {/* INSCRIPTION */}
+          {/* ÉVÉNEMENT PASSÉ */}
           <div className="border-[3px] border-[hsl(var(--black))] bg-green-pale p-6 md:p-8 mt-8 shadow-brutal">
             <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--black))]/60 block mb-3">
-              Inscription
+              Événement terminé
             </span>
             <h2 className="font-display text-xl md:text-2xl uppercase tracking-[-1px] mb-4">
-              Gratuit, sur inscription dès le 3 septembre
+              Cet événement est déjà passé
             </h2>
             <p className="font-body text-sm text-[hsl(var(--black))]/80 leading-relaxed mb-5">
-              L'atelier est gratuit, mais les places sont limitées et l'inscription est
-              obligatoire. Elle se fait auprès de la bibliothèque Choiseul à partir du 3 septembre
-              2026. L'inscription ne passe pas par Botanique Ludique : c'est le réseau des
-              bibliothèques de Versailles qui gère les réservations.
+              Les inscriptions sont closes : l'atelier a eu lieu le 3 octobre 2026 à la bibliothèque
+              Choiseul. Si vous souhaitez organiser un atelier de ce type dans votre ville, votre
+              médiathèque, votre école ou votre structure, n'hésitez pas à nous contacter.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a
-                href="tel:+33130972890"
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-[3px] border-[hsl(var(--black))] shadow-brutal px-5 py-3 font-display uppercase text-xs tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
               >
-                <Phone className="w-3.5 h-3.5" />
-                01 30 97 28 90
-              </a>
+                Organiser cet atelier chez vous
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
               <a
                 href={OFFICIAL_URL}
                 target="_blank"
@@ -291,7 +306,7 @@ const FeteScienceEpicesVersailles = () => {
             Le déroulé
           </span>
           <h2 className="font-display text-[clamp(1.75rem,4vw,2.75rem)] uppercase leading-[0.95] tracking-[-1.5px] mb-8">
-            Ce que je propose pendant cet atelier
+            Ce que j'ai proposé pendant cet atelier
           </h2>
 
           <div className="prose prose-lg max-w-none text-[hsl(var(--black))]/85 space-y-5 mb-10">
@@ -365,6 +380,16 @@ const FeteScienceEpicesVersailles = () => {
                 className="underline decoration-[3px] underline-offset-2 decoration-[hsl(var(--olive))] hover:text-[hsl(var(--olive))] transition-colors"
               >
                 terrarium et la biopiraterie
+              </Link>
+              .
+            </p>
+            <p>
+              L'atelier a eu lieu : retrouvez le{" "}
+              <Link
+                to="/blog/atelier-route-des-epices-fete-de-la-science-versailles"
+                className="underline decoration-[3px] underline-offset-2 decoration-[hsl(var(--olive))] hover:text-[hsl(var(--olive))] transition-colors"
+              >
+                récit de l'atelier « Sur la route des épices » en images
               </Link>
               .
             </p>

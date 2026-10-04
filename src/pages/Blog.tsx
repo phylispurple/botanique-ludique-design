@@ -22,8 +22,17 @@ import blogPlantesSauvages from "@/assets/blog-plantes-sauvages.jpg";
 import blogMediationScientifique from "@/assets/blog-mediation-scientifique.jpg";
 import blogDuBreuilAffiche from "@/assets/du-breuil-en-fete-2026-affiche.png";
 import blogVoisinsAffiche from "@/assets/au-fil-jardins-voisins-affiche.jpeg";
+import blogEpicesAtelier from "@/assets/gallery-atelier-epices-sachets-1.webp";
 
 const blogPosts = [
+  {
+    slug: "atelier-route-des-epices-fete-de-la-science-versailles",
+    title: "Sur la route des épices : retour sur l'atelier de la Fête de la Science à Versailles",
+    excerpt: "Histoire des épices, anthropologie des sens et fabrication de sachets senteur : retour sur l'atelier animé le 3 octobre 2026 à la bibliothèque Choiseul.",
+    images: [blogEpicesAtelier],
+    date: "2026-10-04",
+    category: "Retour d'expérience"
+  },
   {
     slug: "balade-botanique-voisins-le-bretonneux",
     title: "Au fil des jardins de Voisins : une lecture anthropologique du paysage de SQY",

@@ -1,5 +1,5 @@
 {
-  "__empreinte": "39b8928b80b3dd46",
+  "__empreinte": "96a42766f05971ef",
   "routes": {
     "/": {
       "title": "Botanique Ludique — Ateliers de botanique, conférences & balades guidées · Le Pecq (78)",
@@ -326,9 +326,7 @@
         "<meta name=\"keywords\" content=\"agenda atelier botanique, réservation atelier Paris, dates ateliers Yvelines, planning ateliers botaniques\" data-rh=\"true\">",
         "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
-      "ld": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Event\",\"name\":\"Fête de la Science : Sur la route des épices, odeurs et saveurs\",\"description\":\"Dans le cadre de la Fête de la Science, un atelier de découverte ethnobotanique animé par Vanessa Charlery. D'où viennent les épices que nous utilisons tous les jours, quelle histoire culturelle et politique portent-elles, et pourquoi leurs odeurs nous touchent-elles autant ? Apports théoriques, reconnaissance à l'aveugle, puis fabrication d'un sachet senteur à emporter. Gratuit, sur inscription auprès de la bibliothèque au 01 30 97 28 90 dès le 3 septembre.\",\"startDate\":\"2026-10-03T15:30:00+02:00\",\"endDate\":\"2026-10-03T17:30:00+02:00\",\"eventAttendanceMode\":\"https://schema.org/OfflineEventAttendanceMode\",\"eventStatus\":\"https://schema.org/EventScheduled\",\"location\":{\"@type\":\"Place\",\"name\":\"Bibliothèque Choiseul\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"5 rue de l'Indépendance américaine\",\"addressLocality\":\"Versailles\",\"postalCode\":\"78000\",\"addressRegion\":\"Île-de-France\",\"addressCountry\":\"FR\"}},\"organizer\":{\"@type\":\"Organization\",\"name\":\"Réseau des bibliothèques de Versailles\",\"url\":\"https://www.versailles.fr/762-11162/culture/reseau-des-bibliotheques/agenda/fiche/fete-de-la-science-sur-la-route-des-epices.htm\"},\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"EUR\",\"availability\":\"https://schema.org/InStock\",\"url\":\"https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices\",\"validFrom\":\"2026-09-03T00:00:00+02:00\"},\"performer\":{\"@type\":\"Person\",\"name\":\"Vanessa Charlery\",\"url\":\"https://botaniqueludique.com/about\"},\"url\":\"https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices\",\"typicalAgeRange\":\"11-\",\"isAccessibleForFree\":true}"
-      ]
+      "ld": []
     },
     "/calendar": {
       "title": "Agenda des ateliers et balades botaniques | Botanique Ludique",
@@ -353,9 +351,7 @@
         "<meta name=\"keywords\" content=\"agenda atelier botanique, réservation atelier Paris, dates ateliers Yvelines, planning ateliers botaniques\" data-rh=\"true\">",
         "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
-      "ld": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Event\",\"name\":\"Fête de la Science : Sur la route des épices, odeurs et saveurs\",\"description\":\"Dans le cadre de la Fête de la Science, un atelier de découverte ethnobotanique animé par Vanessa Charlery. D'où viennent les épices que nous utilisons tous les jours, quelle histoire culturelle et politique portent-elles, et pourquoi leurs odeurs nous touchent-elles autant ? Apports théoriques, reconnaissance à l'aveugle, puis fabrication d'un sachet senteur à emporter. Gratuit, sur inscription auprès de la bibliothèque au 01 30 97 28 90 dès le 3 septembre.\",\"startDate\":\"2026-10-03T15:30:00+02:00\",\"endDate\":\"2026-10-03T17:30:00+02:00\",\"eventAttendanceMode\":\"https://schema.org/OfflineEventAttendanceMode\",\"eventStatus\":\"https://schema.org/EventScheduled\",\"location\":{\"@type\":\"Place\",\"name\":\"Bibliothèque Choiseul\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"5 rue de l'Indépendance américaine\",\"addressLocality\":\"Versailles\",\"postalCode\":\"78000\",\"addressRegion\":\"Île-de-France\",\"addressCountry\":\"FR\"}},\"organizer\":{\"@type\":\"Organization\",\"name\":\"Réseau des bibliothèques de Versailles\",\"url\":\"https://www.versailles.fr/762-11162/culture/reseau-des-bibliotheques/agenda/fiche/fete-de-la-science-sur-la-route-des-epices.htm\"},\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"EUR\",\"availability\":\"https://schema.org/InStock\",\"url\":\"https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices\",\"validFrom\":\"2026-09-03T00:00:00+02:00\"},\"performer\":{\"@type\":\"Person\",\"name\":\"Vanessa Charlery\",\"url\":\"https://botaniqueludique.com/about\"},\"url\":\"https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices\",\"typicalAgeRange\":\"11-\",\"isAccessibleForFree\":true}"
-      ]
+      "ld": []
     },
     "/calendrier": {
       "title": "Agenda des ateliers et balades botaniques | Botanique Ludique",
@@ -380,14 +376,12 @@
         "<meta name=\"keywords\" content=\"agenda atelier botanique, réservation atelier Paris, dates ateliers Yvelines, planning ateliers botaniques\" data-rh=\"true\">",
         "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
-      "ld": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Event\",\"name\":\"Fête de la Science : Sur la route des épices, odeurs et saveurs\",\"description\":\"Dans le cadre de la Fête de la Science, un atelier de découverte ethnobotanique animé par Vanessa Charlery. D'où viennent les épices que nous utilisons tous les jours, quelle histoire culturelle et politique portent-elles, et pourquoi leurs odeurs nous touchent-elles autant ? Apports théoriques, reconnaissance à l'aveugle, puis fabrication d'un sachet senteur à emporter. Gratuit, sur inscription auprès de la bibliothèque au 01 30 97 28 90 dès le 3 septembre.\",\"startDate\":\"2026-10-03T15:30:00+02:00\",\"endDate\":\"2026-10-03T17:30:00+02:00\",\"eventAttendanceMode\":\"https://schema.org/OfflineEventAttendanceMode\",\"eventStatus\":\"https://schema.org/EventScheduled\",\"location\":{\"@type\":\"Place\",\"name\":\"Bibliothèque Choiseul\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"5 rue de l'Indépendance américaine\",\"addressLocality\":\"Versailles\",\"postalCode\":\"78000\",\"addressRegion\":\"Île-de-France\",\"addressCountry\":\"FR\"}},\"organizer\":{\"@type\":\"Organization\",\"name\":\"Réseau des bibliothèques de Versailles\",\"url\":\"https://www.versailles.fr/762-11162/culture/reseau-des-bibliotheques/agenda/fiche/fete-de-la-science-sur-la-route-des-epices.htm\"},\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"EUR\",\"availability\":\"https://schema.org/InStock\",\"url\":\"https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices\",\"validFrom\":\"2026-09-03T00:00:00+02:00\"},\"performer\":{\"@type\":\"Person\",\"name\":\"Vanessa Charlery\",\"url\":\"https://botaniqueludique.com/about\"},\"url\":\"https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices\",\"typicalAgeRange\":\"11-\",\"isAccessibleForFree\":true}"
-      ]
+      "ld": []
     },
     "/evenement/fete-de-la-science-versailles-route-des-epices": {
-      "title": "Fête de la Science 2026 à Versailles : atelier Sur la route des épices | Botanique Ludique",
+      "title": "Fête de la Science 2026 Versailles : la route des épices | Botanique Ludique",
       "tags": [
-        "<meta name=\"description\" content=\"Samedi 3 octobre 2026, 15h30, bibliothèque Choiseul à Versailles : atelier ethnobotanique « Sur la route des épices, odeurs et saveurs » animé par Vanessa Charlery. Histoire des épices, odorat, goût et fabrication d'un sachet senteur. Gratuit, dès 11 ans, sur inscription.\" data-rh=\"true\">",
+        "<meta name=\"description\" content=\"Atelier « Sur la route des épices » à la bibliothèque Choiseul de Versailles, Fête de la Science 2026. Événement passé, reprogrammable dans votre ville.\" data-rh=\"true\">",
         "<meta property=\"og:type\" content=\"article\" data-rh=\"true\">",
         "<meta property=\"og:url\" content=\"https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices\" data-rh=\"true\">",
         "<meta property=\"og:image\" content=\"https://botaniqueludique.com/og-fete-science-epices-versailles.jpg\" data-rh=\"true\">",
@@ -399,17 +393,17 @@
         "<meta name=\"twitter:card\" content=\"summary_large_image\" data-rh=\"true\">",
         "<meta name=\"twitter:image\" content=\"https://botaniqueludique.com/og-fete-science-epices-versailles.jpg\" data-rh=\"true\">",
         "<meta name=\"twitter:image:alt\" content=\"Botanique Ludique - Ateliers botaniques créatifs\">",
-        "<meta property=\"og:title\" content=\"Fête de la Science 2026 à Versailles : atelier Sur la route des épices | Botanique Ludique\" data-rh=\"true\">",
-        "<meta name=\"twitter:title\" content=\"Fête de la Science 2026 à Versailles : atelier Sur la route des épices | Botanique Ludique\" data-rh=\"true\">",
-        "<meta property=\"og:description\" content=\"Samedi 3 octobre 2026, 15h30, bibliothèque Choiseul à Versailles : atelier ethnobotanique « Sur la route des épices, odeurs et saveurs » animé par Vanessa Charlery. Histoire des épices, odorat, goût et fabrication d'un sachet senteur. Gratuit, dès 11 ans, sur inscription.\" data-rh=\"true\">",
-        "<meta name=\"twitter:description\" content=\"Samedi 3 octobre 2026, 15h30, bibliothèque Choiseul à Versailles : atelier ethnobotanique « Sur la route des épices, odeurs et saveurs » animé par Vanessa Charlery. Histoire des épices, odorat, goût et fabrication d'un sachet senteur. Gratuit, dès 11 ans, sur inscription.\" data-rh=\"true\">",
+        "<meta property=\"og:title\" content=\"Fête de la Science 2026 Versailles : la route des épices | Botanique Ludique\" data-rh=\"true\">",
+        "<meta name=\"twitter:title\" content=\"Fête de la Science 2026 Versailles : la route des épices | Botanique Ludique\" data-rh=\"true\">",
+        "<meta property=\"og:description\" content=\"Atelier « Sur la route des épices » à la bibliothèque Choiseul de Versailles, Fête de la Science 2026. Événement passé, reprogrammable dans votre ville.\" data-rh=\"true\">",
+        "<meta name=\"twitter:description\" content=\"Atelier « Sur la route des épices » à la bibliothèque Choiseul de Versailles, Fête de la Science 2026. Événement passé, reprogrammable dans votre ville.\" data-rh=\"true\">",
         "<link rel=\"canonical\" href=\"https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices\" data-rh=\"true\">",
         "<meta name=\"keywords\" content=\"Fête de la Science Versailles 2026, atelier épices Versailles, bibliothèque Choiseul Versailles, route des épices atelier, atelier ethnobotanique Yvelines, odeurs et saveurs, Vanessa Charlery, Botanique Ludique, atelier science famille Versailles, sachet senteur épices\" data-rh=\"true\">",
         "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
       "ld": [
         "{\"@context\":\"https://schema.org\",\"@type\":\"Event\",\"name\":\"Fête de la Science — Sur la route des épices : odeurs et saveurs\",\"description\":\"Atelier ethnobotanique animé par Vanessa Charlery (Botanique Ludique) dans le cadre de la Fête de la Science : origines et histoire culturelle des épices, fonctionnement des systèmes olfactif et gustatif, puis fabrication d'un sachet senteur à emporter. Gratuit, tout public dès 11 ans, sur inscription.\",\"startDate\":\"2026-10-03T15:30:00+02:00\",\"endDate\":\"2026-10-03T17:30:00+02:00\",\"eventAttendanceMode\":\"https://schema.org/OfflineEventAttendanceMode\",\"eventStatus\":\"https://schema.org/EventScheduled\",\"location\":{\"@type\":\"Place\",\"name\":\"Bibliothèque Choiseul\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"5 rue de l'Indépendance américaine\",\"addressLocality\":\"Versailles\",\"postalCode\":\"78000\",\"addressRegion\":\"Île-de-France\",\"addressCountry\":\"FR\"},\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":48.802001,\"longitude\":2.121479}},\"organizer\":{\"@type\":\"Organization\",\"name\":\"Réseau des bibliothèques de Versailles\",\"url\":\"https://www.versailles.fr/762-11162/culture/reseau-des-bibliotheques/agenda/fiche/fete-de-la-science-sur-la-route-des-epices.htm\"},\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"EUR\",\"availability\":\"https://schema.org/InStock\",\"url\":\"https://www.versailles.fr/762-11162/culture/reseau-des-bibliotheques/agenda/fiche/fete-de-la-science-sur-la-route-des-epices.htm\",\"validFrom\":\"2026-09-03T00:00:00+02:00\"},\"url\":\"https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices\",\"image\":\"https://botaniqueludique.com/og-fete-science-epices-versailles.jpg\",\"inLanguage\":\"fr\",\"typicalAgeRange\":\"11-\",\"performer\":{\"@type\":\"Person\",\"name\":\"Vanessa Charlery\",\"jobTitle\":\"Animatrice ethnobotaniste\",\"url\":\"https://botaniqueludique.com/about\",\"affiliation\":{\"@type\":\"Organization\",\"name\":\"Botanique Ludique\",\"url\":\"https://botaniqueludique.com\"}},\"superEvent\":{\"@type\":\"Event\",\"name\":\"Fête de la Science 2026\"},\"isAccessibleForFree\":true}",
-        "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Quand a lieu l'atelier « Sur la route des épices » à Versailles ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Le samedi 3 octobre 2026, de 15h30 à 17h30, à la bibliothèque Choiseul, 5 rue de l'Indépendance américaine, 78000 Versailles, dans le cadre de la Fête de la Science.\"}},{\"@type\":\"Question\",\"name\":\"Comment s'inscrire à cet atelier de la Fête de la Science ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"L'inscription est obligatoire et ouvre le 3 septembre 2026. Elle se fait par téléphone auprès de la bibliothèque Choiseul au 01 30 97 28 90, ou directement sur la fiche événement du réseau des bibliothèques de Versailles.\"}},{\"@type\":\"Question\",\"name\":\"L'atelier est-il payant ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Non, l'atelier est entièrement gratuit. Seule l'inscription préalable auprès de la bibliothèque Choiseul est obligatoire, les places étant limitées. Le matériel du sachet senteur est fourni.\"}},{\"@type\":\"Question\",\"name\":\"À partir de quel âge peut-on participer ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"L'atelier est ouvert à tous à partir de 11 ans. Il est conçu pour être suivi aussi bien par des adolescents que par des adultes : le récit historique et la partie scientifique sont accessibles sans aucun prérequis.\"}},{\"@type\":\"Question\",\"name\":\"Qui anime l'atelier ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Vanessa Charlery, animatrice ethnobotaniste et fondatrice de Botanique Ludique, formée en anthropologie de la nature à l'EHESS. Elle conçoit et anime des ateliers, conférences et balades ethnobotaniques à Paris et en Île-de-France.\"}},{\"@type\":\"Question\",\"name\":\"Repart-on avec quelque chose ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui. Après la partie découverte, chaque participant compose et emporte son propre sachet senteur, réalisé à partir d'épices entières choisies pendant l'atelier.\"}},{\"@type\":\"Question\",\"name\":\"Peut-on faire venir cet atelier dans sa médiathèque ou sa structure ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui. « Sur la route des épices » fait partie du catalogue d'interventions de Botanique Ludique et peut être programmé en médiathèque, en école, en entreprise ou en collectivité, en Île-de-France. Le format et la durée sont adaptés au public accueilli.\"}}]}",
+        "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Quand a eu lieu l'atelier « Sur la route des épices » à Versailles ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Le samedi 3 octobre 2026, à 15h30, à la bibliothèque Choiseul, 5 rue de l'Indépendance américaine, 78000 Versailles, dans le cadre de la Fête de la Science. Dix personnes y ont participé.\"}},{\"@type\":\"Question\",\"name\":\"Cet atelier sera-t-il reproposé ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Cet événement est passé, mais l'atelier peut être reprogrammé dans votre ville : médiathèque, bibliothèque, école, mairie, musée, association ou entreprise. Écrivez-nous via la page contact pour organiser une nouvelle séance.\"}},{\"@type\":\"Question\",\"name\":\"L'atelier était-il payant ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Non, l'atelier de la Fête de la Science était gratuit pour les participants, sur inscription auprès de la bibliothèque Choiseul. Le matériel du sachet senteur était fourni. Pour une intervention dans votre structure, un devis sur mesure est établi.\"}},{\"@type\":\"Question\",\"name\":\"À partir de quel âge peut-on participer ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"L'atelier était ouvert à tous à partir de 11 ans. Il est conçu pour être suivi aussi bien par des adolescents que par des adultes : le récit historique et la partie scientifique sont accessibles sans aucun prérequis.\"}},{\"@type\":\"Question\",\"name\":\"Qui anime l'atelier ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Vanessa Charlery, animatrice ethnobotaniste et fondatrice de Botanique Ludique, formée en anthropologie de la nature à l'EHESS. Elle conçoit et anime des ateliers, conférences et balades ethnobotaniques à Paris et en Île-de-France.\"}},{\"@type\":\"Question\",\"name\":\"Repart-on avec quelque chose ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui. Après la partie découverte, chaque participant compose et emporte son propre sachet senteur, réalisé à partir d'épices entières choisies pendant l'atelier.\"}},{\"@type\":\"Question\",\"name\":\"Peut-on faire venir cet atelier dans sa médiathèque ou sa structure ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui. « Sur la route des épices » fait partie du catalogue d'interventions de Botanique Ludique et peut être programmé en médiathèque, en école, en entreprise ou en collectivité, en Île-de-France. Le format et la durée sont adaptés au public accueilli.\"}}]}",
         "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://botaniqueludique.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Agenda\",\"item\":\"https://botaniqueludique.com/agenda\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Fête de la Science 2026, Sur la route des épices\",\"item\":\"https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices\"}]}"
       ]
     },
@@ -610,9 +604,7 @@
         "<meta name=\"keywords\" content=\"agenda atelier botanique, réservation atelier Paris, dates ateliers Yvelines, planning ateliers botaniques\" data-rh=\"true\">",
         "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
-      "ld": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Event\",\"name\":\"Fête de la Science : Sur la route des épices, odeurs et saveurs\",\"description\":\"Dans le cadre de la Fête de la Science, un atelier de découverte ethnobotanique animé par Vanessa Charlery. D'où viennent les épices que nous utilisons tous les jours, quelle histoire culturelle et politique portent-elles, et pourquoi leurs odeurs nous touchent-elles autant ? Apports théoriques, reconnaissance à l'aveugle, puis fabrication d'un sachet senteur à emporter. Gratuit, sur inscription auprès de la bibliothèque au 01 30 97 28 90 dès le 3 septembre.\",\"startDate\":\"2026-10-03T15:30:00+02:00\",\"endDate\":\"2026-10-03T17:30:00+02:00\",\"eventAttendanceMode\":\"https://schema.org/OfflineEventAttendanceMode\",\"eventStatus\":\"https://schema.org/EventScheduled\",\"location\":{\"@type\":\"Place\",\"name\":\"Bibliothèque Choiseul\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"5 rue de l'Indépendance américaine\",\"addressLocality\":\"Versailles\",\"postalCode\":\"78000\",\"addressRegion\":\"Île-de-France\",\"addressCountry\":\"FR\"}},\"organizer\":{\"@type\":\"Organization\",\"name\":\"Réseau des bibliothèques de Versailles\",\"url\":\"https://www.versailles.fr/762-11162/culture/reseau-des-bibliotheques/agenda/fiche/fete-de-la-science-sur-la-route-des-epices.htm\"},\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"EUR\",\"availability\":\"https://schema.org/InStock\",\"url\":\"https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices\",\"validFrom\":\"2026-09-03T00:00:00+02:00\"},\"performer\":{\"@type\":\"Person\",\"name\":\"Vanessa Charlery\",\"url\":\"https://botaniqueludique.com/about\"},\"url\":\"https://botaniqueludique.com/evenement/fete-de-la-science-versailles-route-des-epices\",\"typicalAgeRange\":\"11-\",\"isAccessibleForFree\":true}"
-      ]
+      "ld": []
     },
     "/inscription/mauvaises-herbes": {
       "title": "Inscription Atelier Mauvaises herbes, 6 mai 2026 | Botanique Ludique",
@@ -1097,6 +1089,35 @@
         "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://botaniqueludique.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://botaniqueludique.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Balade botanique à Voisins-le-Bretonneux\",\"item\":\"https://botaniqueludique.com/blog/balade-botanique-voisins-le-bretonneux\"}]}"
       ]
     },
+    "/blog/atelier-route-des-epices-fete-de-la-science-versailles": {
+      "title": "Atelier route des épices, Fête de la Science à Versailles | Botanique Ludique",
+      "tags": [
+        "<meta name=\"description\" content=\"Retour sur l'atelier « Sur la route des épices », Fête de la Science 2026 à Versailles : histoire, anthropologie des sens et sachets senteur.\" data-rh=\"true\">",
+        "<meta property=\"og:type\" content=\"article\" data-rh=\"true\">",
+        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/blog/atelier-route-des-epices-fete-de-la-science-versailles\" data-rh=\"true\">",
+        "<meta property=\"og:image\" content=\"https://botaniqueludique.com/og-image.jpg\" data-rh=\"true\">",
+        "<meta property=\"og:image:width\" content=\"1200\">",
+        "<meta property=\"og:image:height\" content=\"630\">",
+        "<meta property=\"og:image:alt\" content=\"Botanique Ludique - Ateliers botaniques créatifs\">",
+        "<meta property=\"og:site_name\" content=\"Botanique Ludique\" data-rh=\"true\">",
+        "<meta property=\"og:locale\" content=\"fr_FR\" data-rh=\"true\">",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" data-rh=\"true\">",
+        "<meta name=\"twitter:image\" content=\"https://botaniqueludique.com/og-image.jpg\" data-rh=\"true\">",
+        "<meta name=\"twitter:image:alt\" content=\"Botanique Ludique - Ateliers botaniques créatifs\">",
+        "<meta property=\"og:title\" content=\"Atelier route des épices, Fête de la Science à Versailles | Botanique Ludique\" data-rh=\"true\">",
+        "<meta name=\"twitter:title\" content=\"Atelier route des épices, Fête de la Science à Versailles | Botanique Ludique\" data-rh=\"true\">",
+        "<meta property=\"og:description\" content=\"Retour sur l'atelier « Sur la route des épices », Fête de la Science 2026 à Versailles : histoire, anthropologie des sens et sachets senteur.\" data-rh=\"true\">",
+        "<meta name=\"twitter:description\" content=\"Retour sur l'atelier « Sur la route des épices », Fête de la Science 2026 à Versailles : histoire, anthropologie des sens et sachets senteur.\" data-rh=\"true\">",
+        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/blog/atelier-route-des-epices-fete-de-la-science-versailles\" data-rh=\"true\">",
+        "<meta name=\"keywords\" content=\"atelier route des épices, Fête de la Science Versailles, bibliothèque Choiseul Versailles, atelier sachet senteur, histoire des épices, anthropologie des sens, atelier ethnobotanique médiathèque, médiation scientifique bibliothèque, Vasco de Gama, Christophe Colomb, Edmond Albius, atelier épices Yvelines\" data-rh=\"true\">",
+        "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
+      ],
+      "ld": [
+        "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Sur la route des épices : retour sur l'atelier de la Fête de la Science à Versailles\",\"description\":\"Retour sur l'atelier « Sur la route des épices » animé à la bibliothèque Choiseul de Versailles pour la Fête de la Science 2026 : histoire des épices, anthropologie des sens et fabrication de sachets senteur.\",\"author\":{\"@type\":\"Person\",\"name\":\"Vanessa Charlery\",\"url\":\"https://botaniqueludique.com/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Botanique Ludique\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://botaniqueludique.com/favicon.png\"}},\"datePublished\":\"2026-10-04\",\"dateModified\":\"2026-10-04\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://botaniqueludique.com/blog/atelier-route-des-epices-fete-de-la-science-versailles\"},\"image\":\"https://botaniqueludique.com/og-image.jpg\",\"slug\":\"atelier-route-des-epices-fete-de-la-science-versailles\"}",
+        "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Qu'est-ce qu'une épice, au sens botanique ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Une épice est une partie séchée d'une plante, très odorante, utilisée en petite quantité : une écorce (cannelle), un bouton de fleur (clou de girofle), un fruit (vanille, anis étoilé, cardamome). Quand il s'agit de la feuille, on parle d'herbe aromatique, comme le thym ou le romarin. Le mot vient du latin species, qui a aussi donné « espèces » : les épices ont longtemps servi de monnaie.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi une odeur réveille-t-elle un souvenir ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"L'odorat est le seul sens relié directement aux zones du cerveau de la mémoire et des émotions. Le cerveau explique pourquoi une odeur fait remonter un souvenir, la culture explique lequel : on a tous le même nez, mais pas les mêmes souvenirs.\"}},{\"@type\":\"Question\",\"name\":\"Vasco de Gama a-t-il découvert la route des épices ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Non. Le poivre voyageait depuis l'Inde jusqu'en Égypte depuis des siècles, et l'océan Indien était déjà plein de marchands arabes, perses, indiens, chinois et africains. En 1498, Vasco de Gama a surtout trouvé un chemin maritime qui évite tous les intermédiaires, guidé à travers l'océan par un pilote local.\"}},{\"@type\":\"Question\",\"name\":\"Peut-on faire venir cet atelier dans une médiathèque, une école ou une entreprise ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui. « Sur la route des épices » fait partie des interventions proposées par Botanique Ludique en Île-de-France, pour les médiathèques, établissements scolaires, collectivités, musées, associations et entreprises. Le contenu et la durée sont adaptés au public. Il suffit de nous écrire via la page contact.\"}}]}",
+        "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://botaniqueludique.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://botaniqueludique.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Atelier Sur la route des épices\",\"item\":\"https://botaniqueludique.com/blog/atelier-route-des-epices-fete-de-la-science-versailles\"}]}"
+      ]
+    },
     "/guide/comment-faire-un-terrarium": {
       "title": "Comment faire un terrarium : guide complet pour débutant·e·s | Botanique Ludique",
       "tags": [
@@ -1360,7 +1381,7 @@
       "tags": [
         "<meta name=\"description\" content=\"Animations nature pour EHPAD et résidences seniors en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques adaptés.\" data-rh=\"true\">",
         "<meta property=\"og:type\" content=\"website\" data-rh=\"true\">",
-        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/seniors-ehpad\" data-rh=\"true\">",
+        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/animation-seniors-ehpad\" data-rh=\"true\">",
         "<meta property=\"og:image\" content=\"https://botaniqueludique.com/og-image.jpg\" data-rh=\"true\">",
         "<meta property=\"og:image:width\" content=\"1200\">",
         "<meta property=\"og:image:height\" content=\"630\">",
@@ -1374,7 +1395,7 @@
         "<meta name=\"twitter:title\" content=\"Animation EHPAD &amp; Seniors - Ateliers Botaniques Adaptés | Botanique Ludique\" data-rh=\"true\">",
         "<meta property=\"og:description\" content=\"Animations nature pour EHPAD et résidences seniors en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques adaptés.\" data-rh=\"true\">",
         "<meta name=\"twitter:description\" content=\"Animations nature pour EHPAD et résidences seniors en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques adaptés.\" data-rh=\"true\">",
-        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/seniors-ehpad\" data-rh=\"true\">",
+        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/animation-seniors-ehpad\" data-rh=\"true\">",
         "<meta name=\"keywords\" content=\"animation ehpad, atelier seniors nature, activité maison retraite, hortithérapie, animation ehpad val d'oise\" data-rh=\"true\">",
         "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
@@ -1385,7 +1406,7 @@
       "tags": [
         "<meta name=\"description\" content=\"Animations botaniques pour CSE en Île-de-France : Paris, Yvelines (78), Hauts-de-Seine (92), Val-d'Oise (95). Ateliers nature créatifs. Devis gratuit sous 24h.\" data-rh=\"true\">",
         "<meta property=\"og:type\" content=\"website\" data-rh=\"true\">",
-        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/cse-entreprise\" data-rh=\"true\">",
+        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/animation-cse-entreprise\" data-rh=\"true\">",
         "<meta property=\"og:image\" content=\"https://botaniqueludique.com/og-image.jpg\" data-rh=\"true\">",
         "<meta property=\"og:image:width\" content=\"1200\">",
         "<meta property=\"og:image:height\" content=\"630\">",
@@ -1399,7 +1420,7 @@
         "<meta name=\"twitter:title\" content=\"Animation CSE &amp; Comité d'Entreprise - Ateliers Nature | Botanique Ludique\" data-rh=\"true\">",
         "<meta property=\"og:description\" content=\"Animations botaniques pour CSE en Île-de-France : Paris, Yvelines (78), Hauts-de-Seine (92), Val-d'Oise (95). Ateliers nature créatifs. Devis gratuit sous 24h.\" data-rh=\"true\">",
         "<meta name=\"twitter:description\" content=\"Animations botaniques pour CSE en Île-de-France : Paris, Yvelines (78), Hauts-de-Seine (92), Val-d'Oise (95). Ateliers nature créatifs. Devis gratuit sous 24h.\" data-rh=\"true\">",
-        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/cse-entreprise\" data-rh=\"true\">",
+        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/animation-cse-entreprise\" data-rh=\"true\">",
         "<meta name=\"keywords\" content=\"animation cse, atelier comité entreprise, activité cse nature, team building cse paris, animation cse val d'oise\" data-rh=\"true\">",
         "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
@@ -1410,7 +1431,7 @@
       "tags": [
         "<meta name=\"description\" content=\"Interventions pédagogiques nature dans les écoles maternelles et primaires en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques.\" data-rh=\"true\">",
         "<meta property=\"og:type\" content=\"website\" data-rh=\"true\">",
-        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/ecoles-scolaire\" data-rh=\"true\">",
+        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/animation-scolaire-nature\" data-rh=\"true\">",
         "<meta property=\"og:image\" content=\"https://botaniqueludique.com/og-image.jpg\" data-rh=\"true\">",
         "<meta property=\"og:image:width\" content=\"1200\">",
         "<meta property=\"og:image:height\" content=\"630\">",
@@ -1424,7 +1445,7 @@
         "<meta name=\"twitter:title\" content=\"Animation Scolaire Nature - Ateliers Botaniques Écoles | Botanique Ludique\" data-rh=\"true\">",
         "<meta property=\"og:description\" content=\"Interventions pédagogiques nature dans les écoles maternelles et primaires en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques.\" data-rh=\"true\">",
         "<meta name=\"twitter:description\" content=\"Interventions pédagogiques nature dans les écoles maternelles et primaires en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques.\" data-rh=\"true\">",
-        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/ecoles-scolaire\" data-rh=\"true\">",
+        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/animation-scolaire-nature\" data-rh=\"true\">",
         "<meta name=\"keywords\" content=\"intervention scolaire nature, animation école botanique, atelier pédagogique plantes, intervention scolaire val d'oise\" data-rh=\"true\">",
         "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
@@ -1435,7 +1456,7 @@
       "tags": [
         "<meta name=\"description\" content=\"Ateliers botaniques pour MJC et associations en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Kokedama, teinture végétale, vannerie.\" data-rh=\"true\">",
         "<meta property=\"og:type\" content=\"website\" data-rh=\"true\">",
-        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/mjc-associations\" data-rh=\"true\">",
+        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/ateliers-mjc-association\" data-rh=\"true\">",
         "<meta property=\"og:image\" content=\"https://botaniqueludique.com/og-image.jpg\" data-rh=\"true\">",
         "<meta property=\"og:image:width\" content=\"1200\">",
         "<meta property=\"og:image:height\" content=\"630\">",
@@ -1449,7 +1470,7 @@
         "<meta name=\"twitter:title\" content=\"Ateliers MJC &amp; Associations - Cours Botanique Adultes | Botanique Ludique\" data-rh=\"true\">",
         "<meta property=\"og:description\" content=\"Ateliers botaniques pour MJC et associations en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Kokedama, teinture végétale, vannerie.\" data-rh=\"true\">",
         "<meta name=\"twitter:description\" content=\"Ateliers botaniques pour MJC et associations en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Kokedama, teinture végétale, vannerie.\" data-rh=\"true\">",
-        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/mjc-associations\" data-rh=\"true\">",
+        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/ateliers-mjc-association\" data-rh=\"true\">",
         "<meta name=\"keywords\" content=\"atelier mjc botanique, cours nature association, atelier adultes plantes, atelier mjc val d'oise\" data-rh=\"true\">",
         "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
@@ -1512,7 +1533,7 @@
       "tags": [
         "<meta name=\"description\" content=\"Animations nature pour EHPAD et résidences seniors en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques adaptés.\" data-rh=\"true\">",
         "<meta property=\"og:type\" content=\"website\" data-rh=\"true\">",
-        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/seniors-ehpad\" data-rh=\"true\">",
+        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/animation-seniors-ehpad\" data-rh=\"true\">",
         "<meta property=\"og:image\" content=\"https://botaniqueludique.com/og-image.jpg\" data-rh=\"true\">",
         "<meta property=\"og:image:width\" content=\"1200\">",
         "<meta property=\"og:image:height\" content=\"630\">",
@@ -1526,7 +1547,7 @@
         "<meta name=\"twitter:title\" content=\"Animation EHPAD &amp; Seniors - Ateliers Botaniques Adaptés | Botanique Ludique\" data-rh=\"true\">",
         "<meta property=\"og:description\" content=\"Animations nature pour EHPAD et résidences seniors en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques adaptés.\" data-rh=\"true\">",
         "<meta name=\"twitter:description\" content=\"Animations nature pour EHPAD et résidences seniors en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques adaptés.\" data-rh=\"true\">",
-        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/seniors-ehpad\" data-rh=\"true\">",
+        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/animation-seniors-ehpad\" data-rh=\"true\">",
         "<meta name=\"keywords\" content=\"animation ehpad, atelier seniors nature, activité maison retraite, hortithérapie, animation ehpad val d'oise\" data-rh=\"true\">",
         "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],
@@ -1537,7 +1558,7 @@
       "tags": [
         "<meta name=\"description\" content=\"Interventions pédagogiques nature dans les écoles maternelles et primaires en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques.\" data-rh=\"true\">",
         "<meta property=\"og:type\" content=\"website\" data-rh=\"true\">",
-        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/ecoles-scolaire\" data-rh=\"true\">",
+        "<meta property=\"og:url\" content=\"https://botaniqueludique.com/animation-scolaire-nature\" data-rh=\"true\">",
         "<meta property=\"og:image\" content=\"https://botaniqueludique.com/og-image.jpg\" data-rh=\"true\">",
         "<meta property=\"og:image:width\" content=\"1200\">",
         "<meta property=\"og:image:height\" content=\"630\">",
@@ -1551,7 +1572,7 @@
         "<meta name=\"twitter:title\" content=\"Animation Scolaire Nature - Ateliers Botaniques Écoles | Botanique Ludique\" data-rh=\"true\">",
         "<meta property=\"og:description\" content=\"Interventions pédagogiques nature dans les écoles maternelles et primaires en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques.\" data-rh=\"true\">",
         "<meta name=\"twitter:description\" content=\"Interventions pédagogiques nature dans les écoles maternelles et primaires en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques.\" data-rh=\"true\">",
-        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/ecoles-scolaire\" data-rh=\"true\">",
+        "<link rel=\"canonical\" href=\"https://botaniqueludique.com/animation-scolaire-nature\" data-rh=\"true\">",
         "<meta name=\"keywords\" content=\"intervention scolaire nature, animation école botanique, atelier pédagogique plantes, intervention scolaire val d'oise\" data-rh=\"true\">",
         "<meta name=\"robots\" content=\"index, follow\" data-rh=\"true\">"
       ],

@@ -16,7 +16,7 @@ const LandingEcoles = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Animation Scolaire Nature - Ateliers Botaniques Écoles" description="Interventions pédagogiques nature dans les écoles maternelles et primaires en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques." keywords="intervention scolaire nature, animation école botanique, atelier pédagogique plantes, intervention scolaire val d'oise" canonical="/ecoles-scolaire" />
+      <SEO title="Animation Scolaire Nature - Ateliers Botaniques Écoles" description="Interventions pédagogiques nature dans les écoles maternelles et primaires en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques." keywords="intervention scolaire nature, animation école botanique, atelier pédagogique plantes, intervention scolaire val d'oise" canonical="/animation-scolaire-nature" />
       <Navigation />
       
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">

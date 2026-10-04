@@ -24,7 +24,7 @@ const LandingCSE = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Animation CSE & Comité d'Entreprise - Ateliers Nature" description="Animations botaniques pour CSE en Île-de-France : Paris, Yvelines (78), Hauts-de-Seine (92), Val-d'Oise (95). Ateliers nature créatifs. Devis gratuit sous 24h." keywords="animation cse, atelier comité entreprise, activité cse nature, team building cse paris, animation cse val d'oise" canonical="/cse-entreprise" />
+      <SEO title="Animation CSE & Comité d'Entreprise - Ateliers Nature" description="Animations botaniques pour CSE en Île-de-France : Paris, Yvelines (78), Hauts-de-Seine (92), Val-d'Oise (95). Ateliers nature créatifs. Devis gratuit sous 24h." keywords="animation cse, atelier comité entreprise, activité cse nature, team building cse paris, animation cse val d'oise" canonical="/animation-cse-entreprise" />
       <Navigation />
       
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">

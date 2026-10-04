@@ -11,6 +11,15 @@ const ReferencesCollectivites = () => {
   // Études de cas (placeholders à compléter avec photos et détails réels)
   const caseStudies = [
     {
+      structure: "Bibliothèque Choiseul, Ville de Versailles",
+      department: "Yvelines (78)",
+      event: "Fête de la Science 2026, atelier « Sur la route des épices »",
+      participants: "10 personnes, adolescents et adultes",
+      format: "Causerie interactive (histoire, anthropologie des sens, science des épices) puis fabrication de sachets senteur",
+      result: "Atelier complet, carnet remis à chaque participant.",
+      link: { to: "/blog/atelier-route-des-epices-fete-de-la-science-versailles", label: "Lire le récit de l'atelier" },
+    },
+    {
       structure: "CCAS de Bezons",
       department: "Val-d'Oise (95)",
       event: "Atelier seniors, semaine de la fragilité",
@@ -104,6 +113,7 @@ const ReferencesCollectivites = () => {
           {/* Placeholder pour logos. À remplacer par les vrais logos quand disponibles */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
+              "Bibliothèque Choiseul, Versailles",
               "CCAS de Bezons",
               "Mairie de Maurepas",
               "Médiathèque",
@@ -111,7 +121,6 @@ const ReferencesCollectivites = () => {
               "EHPAD public",
               "Centre social",
               "MJC partenaire",
-              "Service culturel",
             ].map((name, i) => (
               <AnimatedSection key={i} delay={i * 40}>
                 <div className="border-[3px] border-[hsl(var(--black))] aspect-[3/2] flex items-center justify-center p-4 bg-white text-center">
@@ -171,6 +180,14 @@ const ReferencesCollectivites = () => {
                       <p className="font-body text-base text-[hsl(var(--black))]">{cs.result}</p>
                     </div>
                   </div>
+                  {"link" in cs && cs.link && (
+                    <Link
+                      to={cs.link.to}
+                      className="inline-flex items-center gap-2 font-mono-brand text-xs uppercase tracking-[2px] underline decoration-[3px] underline-offset-2 decoration-[hsl(var(--olive))] hover:text-[hsl(var(--olive))] transition-colors"
+                    >
+                      {cs.link.label} →
+                    </Link>
+                  )}
                 </article>
               </AnimatedSection>
             ))}
