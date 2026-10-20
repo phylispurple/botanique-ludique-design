@@ -14,7 +14,6 @@ import forestWalkImage from "@/assets/gallery-forest-walk.webp";
 import succulentsImage from "@/assets/gallery-succulents.webp";
 import autumnLeavesImage from "@/assets/gallery-autumn-leaves.webp";
 import basketryImage from "@/assets/gallery-basketry.webp";
-import atelierAdulteImage from "@/assets/gallery-atelier-adulte.webp";
 import sachetSenteurImage from "@/assets/gallery-sachet-senteur.webp";
 import epicesSachets1 from "@/assets/gallery-atelier-epices-sachets-1.webp";
 import epicesSachets2 from "@/assets/gallery-atelier-epices-sachets-2.webp";
@@ -24,7 +23,6 @@ import collegeEee1Image from "@/assets/gallery-college-eee-1.webp";
 import collegeEee2Image from "@/assets/gallery-college-eee-2.webp";
 import collegeEee3Image from "@/assets/gallery-college-eee-3.webp";
 import collegeEee4Image from "@/assets/gallery-college-eee-4.webp";
-import fresqueVegetaleImage from "@/assets/gallery-fresque-vegetale.webp";
 import tatakiZomeImage from "@/assets/workshop-tataki-zome.webp";
 import tatakiZomeTable from "@/assets/gallery-tataki-zome-atelier-table.webp";
 import kosovoConstruction1 from "@/assets/gallery-kosovo-construction-1.webp";
@@ -136,8 +134,6 @@ const Gallery = () => {
     { src: sachetSenteurImage, alt: "Sachets de senteur", caption: "Sachets de senteur aux plantes aromatiques", type: "image" },
     { src: autumnLeavesImage, alt: "Création avec feuilles d'automne", caption: "Création végétale automnale", type: "image" },
     { src: "/videos/workshop-demo-4.mp4", alt: "Atelier en groupe", caption: "Atelier participatif", type: "video" },
-    { src: atelierAdulteImage, alt: "Atelier herbier adulte", caption: "Atelier création d'herbier, Adultes", type: "image" },
-    { src: fresqueVegetaleImage, alt: "Fresque végétale", caption: "Fresques Végétales", type: "image" },
     { src: collegeEee1Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
     { src: collegeEee2Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
     { src: collegeEee3Image, alt: "Atelier collège", caption: "Atelier collège, Espèces exotiques envahissantes", type: "image" },
