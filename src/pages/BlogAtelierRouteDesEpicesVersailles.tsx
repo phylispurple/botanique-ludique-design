@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import photoAtelier1 from "@/assets/gallery-atelier-epices-sachets-1.webp";
 import photoAtelier2 from "@/assets/gallery-atelier-epices-sachets-2.webp";
+import photoAtelierTable from "@/assets/gallery-atelier-epices-table.webp";
 import colomb from "@/assets/blog-epices-colomb.webp";
 import vascoDeGama from "@/assets/blog-epices-vasco-de-gama.webp";
 import calicut from "@/assets/blog-epices-calicut-1498.webp";
@@ -319,6 +320,20 @@ const BlogAtelierRouteDesEpicesVersailles = () => {
               vanille, romarin) et <strong>une seule note forte</strong> (clou de girofle, anis étoilé, eucalyptus). Mortiers, cuillères, petits sachets en
               toile : on compose, on sent, on ajuste, puis on ferme le cordon d'un double nœud.
             </p>
+
+            <figure className={figureClass}>
+              <img
+                src={photoAtelierTable}
+                alt="Vue de dessus de la table de l'atelier : bols de curcuma, cannelle, clous de girofle, anis étoilé, cardamome, noix de muscade et pétales de rose, mortiers et participants remplissant leur sachet senteur"
+                className="w-full h-auto"
+                loading="lazy"
+                width={1600}
+                height={1200}
+              />
+              <figcaption className={captionClass}>
+                La table du parfumeur : épices entières, mortiers, carnets et sachets en toile
+              </figcaption>
+            </figure>
             <p>
               Chaque participant repart avec son sachet et un carnet de l'atelier qui rassemble ce qui a été senti, ce qui a été appris, le mode d'emploi
               et trois recettes pour commencer : Noël, sommeil, armoire fraîche. Un sachet bien conservé dure deux à trois mois. C'est un objet simple

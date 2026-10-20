@@ -23,6 +23,7 @@ import sharedGardenImage from "@/assets/workshop-shared-garden.jpg";
 import sachetSenteurImage from "@/assets/gallery-sachet-senteur.jpg";
 import bougieFleursSecheesImage from "@/assets/gallery-bougie-fleurs-sechees.jpg";
 import epicesSachets2 from "@/assets/gallery-atelier-epices-sachets-2.webp";
+import epicesTable from "@/assets/gallery-atelier-epices-table.webp";
 import tatakiZomeImage from "@/assets/workshop-tataki-zome.jpg";
 import veganLeatherImage from "@/assets/workshop-vegan-leather.jpg";
 import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.jpg";
@@ -278,7 +279,7 @@ const workshops: Workshop[] = [
     duration: "1h30",
     public: "Tout public",
     image: sachetSenteurImage,
-    images: [sachetSenteurImage, epicesSachets2],
+    images: [sachetSenteurImage, epicesTable, epicesSachets2],
     icon: Droplets,
     category: "bien-etre",
   },
