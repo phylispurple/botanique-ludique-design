@@ -25,6 +25,7 @@ import bougieFleursSecheesImage from "@/assets/gallery-bougie-fleurs-sechees.jpg
 import epicesSachets2 from "@/assets/gallery-atelier-epices-sachets-2.webp";
 import epicesTable from "@/assets/gallery-atelier-epices-table.webp";
 import tatakiZomeImage from "@/assets/workshop-tataki-zome.jpg";
+import tatakiZomeTable from "@/assets/gallery-tataki-zome-atelier-table.webp";
 import veganLeatherImage from "@/assets/workshop-vegan-leather.jpg";
 import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.jpg";
 import floralWatersImage from "@/assets/workshop-floral-waters.jpg";
@@ -160,6 +161,7 @@ const workshops: Workshop[] = [
     duration: "2h",
     public: "Tout public, enfants dès 10 ans",
     image: tatakiZomeImage,
+    images: [tatakiZomeImage, tatakiZomeTable],
     icon: Palette,
     category: "textiles",
   },

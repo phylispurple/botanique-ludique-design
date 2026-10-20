@@ -26,6 +26,7 @@ import collegeEee3Image from "@/assets/gallery-college-eee-3.webp";
 import collegeEee4Image from "@/assets/gallery-college-eee-4.webp";
 import fresqueVegetaleImage from "@/assets/gallery-fresque-vegetale.webp";
 import tatakiZomeImage from "@/assets/workshop-tataki-zome.webp";
+import tatakiZomeTable from "@/assets/gallery-tataki-zome-atelier-table.webp";
 import kosovoConstruction1 from "@/assets/gallery-kosovo-construction-1.webp";
 import kosovoConstruction2 from "@/assets/gallery-kosovo-construction-2.webp";
 import kosovoConstruction3 from "@/assets/gallery-kosovo-construction-3.webp";
@@ -127,6 +128,7 @@ const Gallery = () => {
     { src: "/videos/workshop-dyeing.mp4", alt: "Atelier teinture végétale", caption: "Atelier teinture végétale en vidéo", type: "video" },
     { src: forestWalkImage, alt: "Balade en forêt", caption: "Atelier sur les espèces exotiques envahissantes", type: "image" },
     { src: tatakiZomeImage, alt: "Atelier Tataki Zome", caption: "Atelier Tataki Zome, Impression végétale japonaise", type: "image" },
+    { src: tatakiZomeTable, alt: "Atelier tataki zomé : participants martelant feuilles d'érable, fougères et cosmos sur des tee-shirts et sacs en coton avec un galet", caption: "Tataki zomé, empreintes de feuilles et de fleurs sur tee-shirts et sacs en tissu", type: "image" },
     { src: "/videos/workshop-demo-2.mp4", alt: "Atelier botanique", caption: "Atelier de création botanique", type: "video" },
     { src: basketryImage, alt: "Atelier vannerie", caption: "Atelier vannerie et tressage", type: "image" },
     { src: succulentsImage, alt: "Atelier succulentes", caption: "Succulentes, Atelier Botanique Ludique", type: "image" },

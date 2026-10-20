@@ -23,8 +23,26 @@ import blogMediationScientifique from "@/assets/blog-mediation-scientifique.jpg"
 import blogDuBreuilAffiche from "@/assets/du-breuil-en-fete-2026-affiche.png";
 import blogVoisinsAffiche from "@/assets/au-fil-jardins-voisins-affiche.jpeg";
 import blogEpicesAtelier from "@/assets/gallery-atelier-epices-sachets-1.webp";
+import blogNoelEpices from "@/assets/gallery-atelier-epices-table.webp";
+import blogTatakiZome from "@/assets/gallery-tataki-zome-atelier-table.webp";
 
 const blogPosts = [
+  {
+    slug: "animation-noel-entreprise-atelier-sachet-senteur",
+    title: "Animation de Noël en entreprise : des sachets senteur en flux continu et des ateliers végétaux pour les fêtes",
+    excerpt: "Arbre de Noël CSE, marché de Noël, soirée de fin d'année : un stand de sachets senteur aux épices en flux continu et cinq autres formats pour les fêtes.",
+    images: [blogNoelEpices],
+    date: "2026-10-20",
+    category: "Entreprises & CSE"
+  },
+  {
+    slug: "tataki-zome-impression-vegetale-atelier",
+    title: "Tataki zomé : frapper une feuille pour en garder l'empreinte",
+    excerpt: "La technique japonaise d'impression végétale par martelage : chimie des pigments, plantes qui marchent, fixation et déroulé d'un atelier.",
+    images: [blogTatakiZome],
+    date: "2026-10-20",
+    category: "Tutoriels"
+  },
   {
     slug: "atelier-route-des-epices-fete-de-la-science-versailles",
     title: "Sur la route des épices : retour sur l'atelier de la Fête de la Science à Versailles",
