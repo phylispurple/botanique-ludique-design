@@ -93,6 +93,7 @@ const Gallery = () => {
   const items = [
     { src: epicesSachets1, alt: "Participants composant leur sachet senteur avec des épices entières lors de l'atelier Sur la route des épices", caption: "Atelier Sur la route des épices, Fête de la Science, bibliothèque Choiseul, Versailles", type: "image" },
     { src: epicesSachets2, alt: "Sachets senteur terminés et bols d'épices (cannelle, girofle, anis étoilé, cardamome) sur la table d'atelier", caption: "Sachets senteur aux épices, Fête de la Science 2026, Versailles", type: "image" },
+    { src: tatakiZomeTable, alt: "Atelier tataki zomé en MJC : participants martelant feuilles d'érable, fougères et cosmos sur des tee-shirts et sacs en coton avec un galet", caption: "Atelier tataki zomé en MJC, empreintes de feuilles et de fleurs sur tee-shirts et sacs en tissu", type: "image" },
     { src: epicesTable, alt: "Vue de dessus de la table de l'atelier Sur la route des épices : bols de curcuma, cannelle, girofle, anis étoilé, cardamome et muscade, mortiers et participants composant leur sachet senteur", caption: "La table aux épices, atelier Sur la route des épices, Versailles", type: "image" },
     { src: teintureEnfants2, alt: "Enfant peignant un t-shirt à la betterave", caption: "Atelier teinture végétale enfants, Application de pigment de betterave", type: "image" },
     { src: teintureEnfantsTshirt, alt: "T-shirt teint aux pigments naturels", caption: "Atelier teinture végétale enfants, T-shirt tie and dye végétal", type: "image" },
@@ -128,7 +129,6 @@ const Gallery = () => {
     { src: "/videos/workshop-dyeing.mp4", alt: "Atelier teinture végétale", caption: "Atelier teinture végétale en vidéo", type: "video" },
     { src: forestWalkImage, alt: "Balade en forêt", caption: "Atelier sur les espèces exotiques envahissantes", type: "image" },
     { src: tatakiZomeImage, alt: "Atelier Tataki Zome", caption: "Atelier Tataki Zome, Impression végétale japonaise", type: "image" },
-    { src: tatakiZomeTable, alt: "Atelier tataki zomé : participants martelant feuilles d'érable, fougères et cosmos sur des tee-shirts et sacs en coton avec un galet", caption: "Tataki zomé, empreintes de feuilles et de fleurs sur tee-shirts et sacs en tissu", type: "image" },
     { src: "/videos/workshop-demo-2.mp4", alt: "Atelier botanique", caption: "Atelier de création botanique", type: "video" },
     { src: basketryImage, alt: "Atelier vannerie", caption: "Atelier vannerie et tressage", type: "image" },
     { src: succulentsImage, alt: "Atelier succulentes", caption: "Succulentes, Atelier Botanique Ludique", type: "image" },

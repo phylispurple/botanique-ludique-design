@@ -98,7 +98,7 @@ const BlogTatakiZome = () => {
               height={1600}
             />
             <figcaption className={captionClass}>
-              En plein atelier : galets, fougères, cosmos et feuilles d'érable sur tee-shirts et sacs en coton
+              Atelier en MJC : galets, fougères, cosmos et feuilles d'érable sur tee-shirts et sacs en coton
             </figcaption>
           </figure>
 
