@@ -3,6 +3,7 @@ import assuranceMaladieLogo from "@/assets/logo-assurance-maladie.png";
 
 const PARTNER_LOGOS = [
   { src: assuranceMaladieLogo, alt: "l'Assurance Maladie" },
+  { src: "/logos/thales.svg", alt: "Thales" },
   { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
   { src: "/logos/bezons.svg", alt: "Ville de Bezons" },
   { src: "/logos/maurepas.png", alt: "Ville de Maurepas" },

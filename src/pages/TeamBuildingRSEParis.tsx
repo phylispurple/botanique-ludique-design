@@ -63,6 +63,7 @@ const TeamBuildingRSEParis = () => {
   ];
 
   const clients = [
+    { name: "Thales", type: "Groupe industriel" },
     { name: "Publicis", type: "Groupe de communication" },
     { name: "Région Île-de-France", type: "Collectivité" },
     { name: "MJC Chatou & Le Vésinet", type: "Centres sociaux" },
@@ -196,7 +197,7 @@ const TeamBuildingRSEParis = () => {
               <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
                 Ils Nous Font Confiance
               </h2>
-              <div className="grid md:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
                 {clients.map((client, index) => (
                   <div key={index} className="text-center p-4 bg-sage/5 ">
                     <p className="font-semibold text-charcoal mb-1">{client.name}</p>

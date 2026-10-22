@@ -320,6 +320,7 @@ const Index = () => {
           <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '20s' }}>
             {[
               { src: assuranceMaladieLogo, alt: "l'Assurance Maladie" },
+              { src: "/logos/thales.svg", alt: "Thales" },
               { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
               { src: "/logos/mjc-vesinet.jpg", alt: "MJC du Vésinet" },
               { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
@@ -336,6 +337,7 @@ const Index = () => {
             )).concat(
               [
                 { src: assuranceMaladieLogo, alt: "" },
+                { src: "/logos/thales.svg", alt: "" },
                 { src: "/logos/region-idf.webp", alt: "" },
                 { src: "/logos/mjc-vesinet.jpg", alt: "" },
                 { src: "/logos/jappy-senior.svg", alt: "" },
