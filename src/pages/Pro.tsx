@@ -119,7 +119,7 @@ const Pro = () => {
 
   const faqs = [
     { q: "Que fournissez-vous ?", a: "Tout est inclus et clé en main : matériel, outils, matières premières, protections et supports pédagogiques. Chaque participant repart avec sa création." },
-    { q: "Où intervenez-vous ?", a: "Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95). Nous nous déplaçons dans vos locaux." },
+    { q: "Où intervenez-vous ?", a: "Partout en Île-de-France : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94) et Val-d'Oise (95). Nous nous déplaçons dans vos locaux." },
     { q: "Comment sont calculés les tarifs ?", a: "Les tarifs dépendent du type d'atelier, durée, nombre de participants et lieu. Chaque devis est personnalisé et gratuit." },
     { q: "Quel délai de réservation ?", a: "Idéalement 3 à 4 semaines. Pour les périodes chargées (Noël, printemps), prévoyez 6 à 8 semaines." },
     { q: "Combien de participants ?", a: "10 à 15 par animateur. Pour les grands groupes (20-50), nous organisons des rotations ou mobilisons des animateurs supplémentaires." },
@@ -499,7 +499,7 @@ const Pro = () => {
                 </div>
 
                 <div className="mt-10 font-mono-brand text-[9px] uppercase tracking-[2px] text-[hsl(var(--black))]/40">
-                  Paris · Yvelines 78 · Hauts-de-Seine 92 · Val-d'Oise 95
+                  Paris 75 · Seine-et-Marne 77 · Yvelines 78 · Essonne 91 · Hauts-de-Seine 92 · Seine-Saint-Denis 93 · Val-de-Marne 94 · Val-d'Oise 95
                 </div>
               </AnimatedSection>
             </div>

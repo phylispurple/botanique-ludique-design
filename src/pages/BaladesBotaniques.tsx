@@ -5,6 +5,7 @@ import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import PhotoCarousel from "@/components/PhotoCarousel";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
+import { AREA_SERVED_IDF } from "@/data/areaServed";
 import AnimatedSection from "@/components/AnimatedSection";
 import { TreePine, Compass, Building2, ArrowRight, BookOpen, Landmark, GraduationCap, Sun, MapPin, Users } from "lucide-react";
 import galleryForestWalk from "@/assets/gallery-forest-walk.webp";
@@ -115,7 +116,7 @@ const BaladesBotaniques = () => {
         serviceType: "Balades botaniques pour institutions",
         name: "Balades botaniques en Île-de-France",
         description: "Visites guidées ethnobotaniques pour musées, jardins patrimoniaux et collectivités.",
-        areaServed: ["Paris", "Yvelines", "Hauts-de-Seine", "Val-d'Oise", "Île-de-France"],
+        areaServed: AREA_SERVED_IDF,
       }} />
       <Navigation />
 

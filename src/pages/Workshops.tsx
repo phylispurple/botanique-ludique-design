@@ -427,7 +427,7 @@ const Workshops = () => {
               Des expériences botaniques pour éveiller vos sens à Paris, Chatou, Le Pecq, Nanterre, Boulogne.
             </p>
             <p className="text-base text-foreground/60 leading-relaxed max-w-2xl mx-auto">
-              Expériences botaniques immersives pour particuliers et groupes en Île-de-France. Ateliers disponibles à Paris, dans les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95). Chaque atelier est conçu pour vous reconnecter avec la nature à travers la créativité manuelle et la pratique consciente.
+              Expériences botaniques immersives pour particuliers et groupes en Île-de-France. Ateliers disponibles partout en Île-de-France : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94) et Val-d'Oise (95). Chaque atelier est conçu pour vous reconnecter avec la nature à travers la créativité manuelle et la pratique consciente.
             </p>
           </AnimatedSection>
         </div>

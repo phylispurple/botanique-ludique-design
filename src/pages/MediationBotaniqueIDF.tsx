@@ -4,6 +4,7 @@ import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
+import { AREA_SERVED_IDF } from "@/data/areaServed";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Users, Leaf, GraduationCap, Heart, Building, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -30,7 +31,7 @@ const MediationBotaniqueIDF = () => {
     { question: "Qu'est-ce que la médiation botanique ?", answer: "La médiation botanique consiste à transmettre les savoirs sur les plantes de manière accessible et engageante. Nous utilisons des approches créatives — ateliers manuels, balades commentées, conférences illustrées — pour créer un lien sensible entre les participants et le monde végétal." },
     { question: "Quelle est la différence entre médiation botanique et animation nature ?", answer: "La médiation botanique se concentre spécifiquement sur le monde des plantes et intègre une dimension culturelle et scientifique approfondie. L'animation nature est plus large et peut couvrir la faune, les écosystèmes, etc. Notre approche ethnobotanique enrichit la médiation d'une perspective anthropologique unique." },
     { question: "Pour quels publics proposez-vous la médiation botanique ?", answer: "Nous intervenons auprès de tous les publics : enfants dès 3 ans, adolescents, adultes, seniors, personnes en situation de handicap. Chaque intervention est adaptée au public concerné." },
-    { question: "Quels sont vos lieux d'intervention en Île-de-France ?", answer: "Nous nous déplaçons dans toute l'Île-de-France : Paris (75), Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95). En extérieur (parcs, jardins) ou en intérieur (salles, médiathèques, écoles)." },
+    { question: "Quels sont vos lieux d'intervention en Île-de-France ?", answer: "Nous nous déplaçons dans toute l'Île-de-France : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94) et Val-d'Oise (95). En extérieur (parcs, jardins) ou en intérieur (salles, médiathèques, écoles)." },
     { question: "Comment réserver une intervention de médiation botanique ?", answer: "Contactez-nous via notre formulaire pour un devis gratuit sous 24h. Nous construisons ensemble un programme adapté à vos besoins, votre public et votre budget." },
   ];
 
@@ -46,7 +47,7 @@ const MediationBotaniqueIDF = () => {
         serviceType: "Médiation botanique",
         name: "Médiation Botanique - Botanique Ludique - Île-de-France",
         description: "Médiation botanique et ateliers autour des plantes pour tous publics en Île-de-France.",
-        areaServed: ["Paris", "Yvelines", "Hauts-de-Seine", "Val-d'Oise"]
+        areaServed: AREA_SERVED_IDF
       }} />
       <SchemaOrg type="FAQPage" data={{ questions: faqQuestions }} />
       <FloatingIllustrations />

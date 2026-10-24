@@ -23,7 +23,7 @@ const GuideEthnobotaniqueRegard = () => {
     },
     {
       q: "Sur quels territoires intervenez-vous ?",
-      a: "Nos balades et ateliers ethnobotaniques se déroulent à Paris (75), dans les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95). Nous intervenons également en Seine-Saint-Denis (93), Val-de-Marne (94), Essonne (91) et Seine-et-Marne (77) sur demande.",
+      a: "Nos balades et ateliers ethnobotaniques se déroulent partout en Île-de-France : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94) et Val-d'Oise (95).",
     },
     {
       q: "Quel public est concerné ?",

@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { AREA_SERVED_IDF } from '@/data/areaServed';
 
 interface SchemaOrgProps {
   type: 'LocalBusiness' | 'EducationalOrganization' | 'Course' | 'FAQPage' | 'Service' | 'Event' | 'Organization' | 'Person' | 'Article' | 'BreadcrumbList';
@@ -35,11 +36,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
             "addressCountry": "FR"
           },
           "areaServed": [
-            { "@type": "AdministrativeArea", "name": "Yvelines", "sameAs": "https://fr.wikipedia.org/wiki/Yvelines" },
-            { "@type": "AdministrativeArea", "name": "Île-de-France", "sameAs": "https://fr.wikipedia.org/wiki/%C3%8Ele-de-France" },
-            { "@type": "City", "name": "Paris", "sameAs": "https://fr.wikipedia.org/wiki/Paris" },
-            { "@type": "AdministrativeArea", "name": "Hauts-de-Seine", "sameAs": "https://fr.wikipedia.org/wiki/Hauts-de-Seine" },
-            { "@type": "AdministrativeArea", "name": "Val-d'Oise", "sameAs": "https://fr.wikipedia.org/wiki/Val-d%27Oise" },
+            ...AREA_SERVED_IDF,
             { "@type": "City", "name": "Le Pecq" },
             { "@type": "City", "name": "Chatou" },
             { "@type": "City", "name": "Saint-Germain-en-Laye" },
@@ -92,10 +89,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
             "addressCountry": "FR"
           },
           "areaServed": [
-            { "@type": "City", "name": "Paris", "sameAs": "https://fr.wikipedia.org/wiki/Paris" },
-            { "@type": "AdministrativeArea", "name": "Yvelines", "sameAs": "https://fr.wikipedia.org/wiki/Yvelines" },
-            { "@type": "AdministrativeArea", "name": "Hauts-de-Seine", "sameAs": "https://fr.wikipedia.org/wiki/Hauts-de-Seine" },
-            { "@type": "AdministrativeArea", "name": "Val-d'Oise", "sameAs": "https://fr.wikipedia.org/wiki/Val-d%27Oise" },
+            ...AREA_SERVED_IDF,
             { "@type": "City", "name": "Chatou" },
             { "@type": "City", "name": "Saint-Germain-en-Laye" },
             { "@type": "City", "name": "Le Vésinet" },
@@ -177,7 +171,7 @@ export const SchemaOrg = ({ type, data }: SchemaOrgProps) => {
             "name": "Botanique Ludique",
             "url": "https://botaniqueludique.com"
           },
-          "areaServed": ["Paris", "Yvelines (78)", "Hauts-de-Seine (92)", "Val-d'Oise (95)"],
+          "areaServed": AREA_SERVED_IDF,
           "hasOfferCatalog": data.offers,
           ...data
         };

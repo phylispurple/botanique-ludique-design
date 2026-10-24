@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
+import { AREA_SERVED_IDF } from "@/data/areaServed";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Leaf, Compass, BookOpen, ArrowRight } from "lucide-react";
 
@@ -27,7 +28,7 @@ const AtelierEthnobotaniqueEntreprise = () => {
     },
     {
       q: "Intervenez-vous partout en Île-de-France",
-      a: "Oui, à Paris (75), dans les Yvelines (78), les Hauts-de-Seine (92), le Val-d'Oise (95) et plus largement en Île-de-France. Nous nous déplaçons sur votre site ou organisons l'atelier dans un parc ou jardin proche.",
+      a: "Oui, partout en Île-de-France : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94) et Val-d'Oise (95). Nous nous déplaçons sur votre site ou organisons l'atelier dans un parc ou jardin proche.",
     },
   ];
 
@@ -46,7 +47,7 @@ const AtelierEthnobotaniqueEntreprise = () => {
           name: "Atelier ethnobotanique entreprise",
           description:
             "Atelier en entreprise mêlant botanique, anthropologie et manipulation végétale, animé par une médiatrice ethnobotanique.",
-          areaServed: ["Île-de-France", "Paris", "Yvelines", "Hauts-de-Seine", "Val-d'Oise"],
+          areaServed: AREA_SERVED_IDF,
         }}
       />
       <SchemaOrg type="FAQPage" data={{ questions: faqs.map((f) => ({ question: f.q, answer: f.a })) }} />

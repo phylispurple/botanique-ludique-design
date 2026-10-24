@@ -51,7 +51,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-2 text-sm font-body" style={{ color: 'rgba(255,255,255,0.5)' }}>
                 <MapPin size={14} className="mt-0.5 flex-shrink-0" />
-                <span>Le Pecq (78) · Paris · Île-de-France</span>
+                <span>Basée au Pecq (78) · Interventions partout en Île-de-France : 75, 77, 78, 91, 92, 93, 94, 95</span>
               </div>
             </div>
           </div>

@@ -74,9 +74,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Botanique Ludique — Ateliers de botanique, conférences & balades guidées · Le Pecq (78)"
-        description="Médiation culturelle autour du vivant. Ateliers pour scolaires, entreprises et grand public. Conférences avec chercheurs et artistes. Île-de-France."
-        keywords="ateliers botaniques Paris, ateliers nature Yvelines 78, ateliers Hauts-de-Seine 92, ateliers Val-d'Oise 95, kokedama Paris, teinture végétale Yvelines, médiation scientifique, conférence botanique Île-de-France"
+        title="Botanique Ludique — Ateliers botaniques & balades guidées en Île-de-France"
+        description="Médiation culturelle autour du vivant, partout en Île-de-France. Ateliers pour scolaires, entreprises et grand public, conférences avec chercheurs et artistes."
+        keywords="ateliers botaniques Île-de-France, ateliers botaniques Paris, ateliers nature Yvelines, ateliers Hauts-de-Seine, ateliers Val-d'Oise, ateliers Essonne, ateliers Val-de-Marne, ateliers Seine-Saint-Denis, ateliers Seine-et-Marne, kokedama Paris, teinture végétale Yvelines, médiation scientifique, conférence botanique Île-de-France"
         canonical="/"
       />
       <SchemaOrg type="EducationalOrganization" data={{}} />
@@ -120,7 +120,7 @@ const Index = () => {
               Enfants · Adultes · Seniors · Écoles · EHPAD · Entreprises
             </p>
             <p className="font-mono-brand text-[13px] uppercase tracking-[3px] text-olive-light mb-10">
-              Paris · Yvelines (78) · Hauts-de-Seine (92) · Val-d'Oise (95)
+              Partout en Île-de-France
             </p>
           </AnimatedSection>
 
@@ -187,8 +187,9 @@ const Index = () => {
               </p>
               <p className="text-base leading-[1.8] text-foreground/70 mb-4 text-justify">
                 Créée par <strong className="text-foreground">Vanessa Charlery</strong>, animatrice ethnobotaniste formée à l'EHESS,
-                Botanique Ludique propose des ateliers à Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95)
-                qui allient créativité artistique et transmission des savoirs ethnobotaniques.
+                Botanique Ludique propose des ateliers qui allient créativité artistique et transmission des savoirs ethnobotaniques,
+                partout en Île-de-France : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92),
+                Seine-Saint-Denis (93), Val-de-Marne (94) et Val-d'Oise (95).
               </p>
               <p className="text-base leading-[1.8] text-foreground/70 mb-6 text-justify">
                 Nos ateliers s'adressent à <strong className="text-foreground">tous les publics</strong> :
@@ -381,7 +382,7 @@ const Index = () => {
                 Prêt·e à explorer le monde végétal ?
               </h2>
               <p className="text-base text-primary-foreground/80 leading-relaxed">
-                Rejoignez-nous pour un atelier à Paris, Yvelines, Hauts-de-Seine ou Val-d'Oise.
+                Nous venons jusqu'à vous, partout en Île-de-France.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link

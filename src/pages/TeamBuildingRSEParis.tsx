@@ -96,7 +96,7 @@ const TeamBuildingRSEParis = () => {
                 Renforcez vos équipes avec des ateliers botaniques engagés
               </p>
               <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
-                Botanique Ludique accompagne les entreprises à Paris, dans les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95) dans leur démarche RSE avec des ateliers 
+                Botanique Ludique accompagne les entreprises à Paris et partout en Île-de-France dans leur démarche RSE avec des ateliers 
                 team building créatifs et éco-responsables. Cohésion d'équipe, bien-être au travail et engagement
                 environnemental au cœur de nos activités.
               </p>

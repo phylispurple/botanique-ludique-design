@@ -133,7 +133,7 @@ const _BASE_PRO_LANDINGS: ProLandingConfig[] = [
     benefits: [
       {
         title: "Couverture régionale complète",
-        description: "Paris, Yvelines, Hauts-de-Seine, Val-d'Oise, Essonne, Seine-et-Marne. Un seul interlocuteur.",
+        description: "Les 8 départements d'Île-de-France : Paris, Seine-et-Marne, Yvelines, Essonne, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne et Val-d'Oise. Un seul interlocuteur.",
       },
       {
         title: "Format adapté à votre site",

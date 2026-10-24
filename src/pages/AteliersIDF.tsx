@@ -47,7 +47,7 @@ const AteliersIDF = () => {
   const keyWorkshops = [
     {
       title: "Kokedama",
-      description: "L'art japonais du jardinage suspendu. Créez une boule de mousse végétale unique lors d'ateliers à Paris, Yvelines (78) et Hauts-de-Seine (92).",
+      description: "L'art japonais du jardinage suspendu. Créez une boule de mousse végétale unique lors d'ateliers partout en Île-de-France.",
       image: workshopKokedama,
       areas: "Paris, Chatou, Nanterre, Saint-Germain-en-Laye"
     },
@@ -59,7 +59,7 @@ const AteliersIDF = () => {
     },
     {
       title: "Terrarium",
-      description: "Concevez un écosystème miniature dans un bocal en verre. Ateliers créatifs nature proposés à Paris, Yvelines et Hauts-de-Seine pour tous les âges.",
+      description: "Concevez un écosystème miniature dans un bocal en verre. Ateliers créatifs nature proposés partout en Île-de-France pour tous les âges.",
       image: workshopTerrarium,
       areas: "Paris, Le Pecq, Rueil-Malmaison, Chatou"
     }
@@ -68,8 +68,8 @@ const AteliersIDF = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Ateliers Botaniques en Île-de-France - Paris, Yvelines (78), Hauts-de-Seine (92), Val-d'Oise (95)"
-        description="Ateliers botaniques créatifs dans toute l'Île-de-France : Paris, Yvelines (Chatou, Saint-Germain, Le Vésinet), Hauts-de-Seine (Nanterre, Boulogne) et Val-d'Oise (Cergy, Pontoise). Kokedama, teinture végétale, terrarium pour particuliers et entreprises."
+        title="Ateliers Botaniques partout en Île-de-France, dans les 8 départements"
+        description="Ateliers botaniques créatifs dans toute l'Île-de-France : Paris, Seine-et-Marne, Yvelines, Essonne, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne et Val-d'Oise. Kokedama, teinture végétale, terrarium pour particuliers et entreprises."
         keywords="atelier botanique Paris, atelier nature Yvelines 78, atelier végétal Hauts-de-Seine 92, atelier Val-d'Oise 95, kokedama Paris, teinture végétale Chatou, terrarium Nanterre, atelier botanique Saint-Germain-en-Laye, team building nature Île-de-France, atelier créatif Le Vésinet, vannerie Boulogne-Billancourt, atelier Cergy"
         canonical="/ateliers-idf"
       />
@@ -90,8 +90,8 @@ const AteliersIDF = () => {
               Ateliers Botaniques en Île-de-France
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Paris, Yvelines (78), Hauts-de-Seine (92) et Val-d'Oise (95) : Découvrez nos ateliers créatifs nature 
-              partout en Île-de-France
+              Découvrez nos ateliers créatifs nature partout en Île-de-France, 
+              dans les 8 départements de la région
             </p>
           </div>
       <LandingPhotoStrip />
@@ -127,7 +127,7 @@ const AteliersIDF = () => {
           <div className="prose prose-lg mx-auto text-charcoal/80">
             <p className="text-lg leading-relaxed mb-6">
               <strong>Botanique Ludique</strong> intervient dans toute l'Île-de-France pour proposer des ateliers botaniques créatifs 
-              et pédagogiques. Que vous soyez à Paris, dans les Yvelines (78) ou les Hauts-de-Seine (92), nos animations nature 
+              et pédagogiques. Où que vous soyez en Île-de-France, nos animations nature 
               s'adaptent à tous les publics : particuliers, familles, écoles, entreprises, MJC, EHPAD et collectivités.
             </p>
             <p className="text-lg leading-relaxed mb-6">
@@ -212,7 +212,7 @@ const AteliersIDF = () => {
             Nos Ateliers Phares en Île-de-France
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Découvrez nos ateliers les plus demandés, disponibles à Paris, Yvelines et Hauts-de-Seine
+            Découvrez nos ateliers les plus demandés, disponibles partout en Île-de-France
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -294,7 +294,7 @@ const AteliersIDF = () => {
             Envie d'organiser un atelier botanique en Île-de-France ?
           </h2>
           <p className="text-lg mb-8 opacity-90">
-            Que vous soyez à Paris, dans les Yvelines (78), les Hauts-de-Seine (92) ou le Val-d'Oise (95), 
+            Où que vous soyez en Île-de-France, 
             contactez-nous pour organiser votre atelier nature sur-mesure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -322,9 +322,9 @@ const AteliersIDF = () => {
               Ateliers botaniques créatifs dans toute l'Île-de-France
             </h3>
             <p className="leading-relaxed mb-4">
-              Botanique Ludique propose des <strong>ateliers botaniques à Paris</strong>, dans les <strong>Yvelines (78)</strong>, les <strong>Hauts-de-Seine (92)</strong> et le <strong>Val-d'Oise (95)</strong>. 
-              Nos interventions couvrent les villes de Chatou, Saint-Germain-en-Laye, Le Vésinet, Le Pecq, Nanterre, Boulogne-Billancourt, 
-              Rueil-Malmaison, Cergy, Pontoise, Argenteuil et de nombreuses autres communes d'Île-de-France.
+              Botanique Ludique propose des <strong>ateliers botaniques partout en Île-de-France</strong>, dans les 8 départements : <strong>Paris (75)</strong>, <strong>Seine-et-Marne (77)</strong>, <strong>Yvelines (78)</strong>, <strong>Essonne (91)</strong>, <strong>Hauts-de-Seine (92)</strong>, <strong>Seine-Saint-Denis (93)</strong>, <strong>Val-de-Marne (94)</strong> et <strong>Val-d'Oise (95)</strong>. 
+              Nous sommes notamment intervenus à Versailles, Saint-Quentin-en-Yvelines, La Celle-Saint-Cloud, Maurepas, Bezons, Taverny, 
+              Cachan, Maisons-Alfort et Paris, et nous nous déplaçons dans toutes les communes de la région.
             </p>
             <p className="leading-relaxed">
               Spécialisés en <strong>kokedama</strong>, <strong>teinture végétale</strong>, <strong>vannerie</strong>, <strong>terrarium</strong> 

@@ -19,7 +19,7 @@ const AtelierTeintureScolaire = () => {
     <div className="min-h-screen">
       <SEO
         title="Atelier Teinture Végétale École | Ateliers Botaniques Éducatifs"
-        description="Ateliers teinture végétale pour écoles. Apprentissage nature, art et écologie. TAP, sorties scolaires. Yvelines, Hauts-de-Seine, Val-d'Oise. À partir de 6 ans."
+        description="Ateliers teinture végétale pour écoles. Apprentissage nature, art et écologie. TAP, sorties scolaires. Partout en Île-de-France. À partir de 6 ans."
         keywords="atelier teinture végétale école, teinture naturelle enfants, atelier botanique école, TAP ateliers nature, apprentissage écologie"
         canonical="/atelier-teinture-vegetale-ecole"
       />

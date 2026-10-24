@@ -12,7 +12,7 @@ const ActiviteIntergenerationnelle = () => {
     <div className="min-h-screen">
       <SEO
         title="Activités Intergénérationnelles Nature | Écoles & EHPAD Île-de-France"
-        description="Ateliers botaniques intergénérationnels unissant enfants et seniors. EHPAD + écoles. Créer ensemble, partager, transmettre. Paris, Yvelines, Hauts-de-Seine, Val-d'Oise."
+        description="Ateliers botaniques intergénérationnels unissant enfants et seniors. EHPAD + écoles. Créer ensemble, partager, transmettre. Partout en Île-de-France."
         keywords="activité intergénérationnelle nature, atelier enfants seniors, EHPAD école ensemble, activité transmise, intergénérationnel botanique"
         canonical="/activite-intergenerationnelle-nature"
       />

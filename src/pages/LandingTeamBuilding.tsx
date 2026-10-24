@@ -78,7 +78,7 @@ const LandingTeamBuilding = () => {
 
   const faqs = [
     { q: "Combien de personnes peuvent participer ?", a: "Nos formats standards accueillent 6 à 12 personnes pour un moment convivial et qualitatif. Pour des groupes plus importants, jusqu'à 60 personnes, nous proposons des formats adaptés comme la teinture collaborative ou les bombes à graines." },
-    { q: "Où se déroulent les ateliers ?", a: "Nous nous déplaçons dans vos locaux à Paris, dans les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95). L'atelier peut aussi se tenir en extérieur, parc ou jardin, selon la météo." },
+    { q: "Où se déroulent les ateliers ?", a: "Nous nous déplaçons dans vos locaux partout en Île-de-France : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94) et Val-d'Oise (95). L'atelier peut aussi se tenir en extérieur, parc ou jardin, selon la météo." },
     { q: "Que repartent les participant·e·s avec ?", a: "Chaque personne repart avec sa création. Terrarium, kokedama, étoffe teinte ou bombes à graines, ainsi qu'une fiche d'entretien pour prolonger l'expérience au bureau ou à la maison." },
     { q: "Combien de temps à l'avance faut-il réserver ?", a: "Nous recommandons 3 à 4 semaines de délai pour préparer l'atelier dans les meilleures conditions. Pour des demandes urgentes, n'hésitez pas à nous contacter, nous étudions chaque demande." },
     { q: "Quel est le tarif ?", a: "Chaque atelier fait l'objet d'un devis personnalisé selon le nombre de participant·e·s, le format choisi, le lieu et les options. Demandez-nous votre devis, nous vous répondons rapidement." },
@@ -326,7 +326,7 @@ const LandingTeamBuilding = () => {
             Zone d'<span className="text-primary">intervention</span>
           </h2>
           <p className="font-body text-foreground/70 mb-10 max-w-2xl mx-auto">
-            Nous intervenons à Paris, dans les Yvelines (78), les Hauts-de-Seine (92) et le Val-d'Oise (95).
+            Nous intervenons partout en Île-de-France : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94) et Val-d'Oise (95).
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {cities.map((c) => (

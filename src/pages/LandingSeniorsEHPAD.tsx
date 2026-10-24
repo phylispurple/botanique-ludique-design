@@ -24,7 +24,7 @@ const LandingSeniorsEHPAD = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Animation EHPAD & Seniors - Ateliers Botaniques Adaptés" description="Animations nature pour EHPAD et résidences seniors en Île-de-France : Paris, Yvelines, Hauts-de-Seine, Val-d'Oise. Ateliers botaniques adaptés." keywords="animation ehpad, atelier seniors nature, activité maison retraite, hortithérapie, animation ehpad val d'oise" canonical="/animation-seniors-ehpad" />
+      <SEO title="Animation EHPAD & Seniors - Ateliers Botaniques Adaptés" description="Animations nature pour EHPAD et résidences seniors partout en Île-de-France. Ateliers botaniques adaptés, nous venons dans votre établissement." keywords="animation ehpad, atelier seniors nature, activité maison retraite, hortithérapie, animation ehpad val d'oise" canonical="/animation-seniors-ehpad" />
       <Navigation />
       
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">

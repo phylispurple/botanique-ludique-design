@@ -10,7 +10,7 @@ import { GraduationCap, BookOpen, MapPin, ArrowRight, CheckCircle, Clock, Users,
 const faqsScolaires = [
   {
     q: "Comment organiser une intervention dans notre établissement ?",
-    a: "Contactez-nous par email ou téléphone. Nous échangerons sur vos objectifs pédagogiques, le nombre d'élèves et les créneaux possibles. Nous vous envoyons un devis personnalisé sous 48 h. Nous intervenons dans les Yvelines (78), les Hauts-de-Seine (92), le Val-d'Oise (95) et à Paris."
+    a: "Contactez-nous par email ou téléphone. Nous échangerons sur vos objectifs pédagogiques, le nombre d'élèves et les créneaux possibles. Nous vous envoyons un devis personnalisé sous 48 h. Nous intervenons partout en Île-de-France : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94) et Val-d'Oise (95)."
   },
   {
     q: "Les ateliers sont-ils conformes aux programmes scolaires ?",
