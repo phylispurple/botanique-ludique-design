@@ -317,18 +317,22 @@ const Index = () => {
           </AnimatedSection>
         </div>
         <div className="overflow-hidden">
-          <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '20s' }}>
+          <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '30s' }}>
             {[
               { src: assuranceMaladieLogo, alt: "l'Assurance Maladie" },
               { src: "/logos/thales.svg", alt: "Thales" },
               { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
-              { src: "/logos/mjc-vesinet.jpg", alt: "MJC du Vésinet" },
               { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
-              { src: "/logos/mjc-chatou.jpeg", alt: "MJC Chatou" },
               { src: "/logos/f93.jpg", alt: "F93" },
               { src: "/logos/bezons.svg", alt: "Ville de Bezons" },
               { src: "/logos/maurepas.png", alt: "Ville de Maurepas" },
               { src: "/logos/cachan.svg", alt: "Ville de Cachan" },
+              { src: "/logos/104.svg", alt: "Le CENTQUATRE-Paris" },
+              { src: "/logos/sqy.svg", alt: "Saint-Quentin-en-Yvelines" },
+              { src: "/logos/versailles.svg", alt: "Ville de Versailles" },
+              { src: "/logos/la-celle-saint-cloud.svg", alt: "Ville de La Celle-Saint-Cloud" },
+              { src: "/logos/taverny.svg", alt: "Ville de Taverny" },
+              { src: "/logos/maisons-alfort.svg", alt: "Maison de l'environnement de Maisons-Alfort" },
               { src: "/logos/la-roche.png", alt: "La Roche" },
               { src: "/logos/ecole-du-breuil.jpg", alt: "École Du Breuil" },
             ].map((logo, index) => (
@@ -340,13 +344,17 @@ const Index = () => {
                 { src: assuranceMaladieLogo, alt: "" },
                 { src: "/logos/thales.svg", alt: "" },
                 { src: "/logos/region-idf.webp", alt: "" },
-                { src: "/logos/mjc-vesinet.jpg", alt: "" },
                 { src: "/logos/jappy-senior.svg", alt: "" },
-                { src: "/logos/mjc-chatou.jpeg", alt: "" },
                 { src: "/logos/f93.jpg", alt: "" },
                 { src: "/logos/bezons.svg", alt: "" },
                 { src: "/logos/maurepas.png", alt: "" },
                 { src: "/logos/cachan.svg", alt: "" },
+                { src: "/logos/104.svg", alt: "" },
+                { src: "/logos/sqy.svg", alt: "" },
+                { src: "/logos/versailles.svg", alt: "" },
+                { src: "/logos/la-celle-saint-cloud.svg", alt: "" },
+                { src: "/logos/taverny.svg", alt: "" },
+                { src: "/logos/maisons-alfort.svg", alt: "" },
                 { src: "/logos/la-roche.png", alt: "" },
                 { src: "/logos/ecole-du-breuil.jpg", alt: "" },
               ].map((logo, index) => (
