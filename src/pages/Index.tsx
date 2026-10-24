@@ -245,70 +245,8 @@ const Index = () => {
         </div>
       </section>
 
-      <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
-
-      {/* ===== GALERIE — Défilement continu ===== */}
-      <section className="py-20 md:py-28 bg-secondary">
-        <div className="max-w-6xl mx-auto px-6">
-          <AnimatedSection className="text-center mb-14">
-            <span className="section-label block mb-3">Portfolio</span>
-            <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
-              Les plus belles créations
-            </h2>
-          </AnimatedSection>
-        </div>
-
-        <PhotoCarousel
-          images={[
-            { src: galleryTerrarium, alt: "Atelier terrarium botanique — Botanique Ludique, Le Pecq" },
-            { src: galleryTeinture, alt: "Atelier teinture végétale naturelle — Botanique Ludique, Île-de-France" },
-            { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs — Botanique Ludique, Paris" },
-            { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin botanique — Botanique Ludique, Yvelines" },
-            { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama — Botanique Ludique" },
-            { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs naturels — Botanique Ludique" },
-            { src: galleryMiniTerrarium, alt: "Mini terrarium en bocal — Botanique Ludique" },
-          ]}
-        />
-
-        <div className="max-w-6xl mx-auto px-6">
-          <AnimatedSection delay={300} className="text-center mt-8">
-            <Link
-              to="/gallery"
-              className="btn-brutal bg-foreground text-primary-foreground border-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
-            >
-              Voir toute la galerie →
-            </Link>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      <WaveDivider from="hsl(36,25%,88%)" to="hsl(210,41%,24%)" flip />
-
-      {/* ===== CONFÉRENCES & SAVOIRS ===== */}
-      <ConferencesSavoirs />
-
-      <WaveDivider from="hsl(210,41%,24%)" to="hsl(36,33%,93%)" />
-
-      {/* ===== TESTIMONIALS ===== */}
-      <Testimonials />
-
-      {/* ===== MARQUEE 2 ===== */}
-      <Marquee
-        items={["Enfants", "Adultes", "Seniors", "Écoles", "Entreprises", "EHPAD", "Associations", "Collectivités"]}
-        color="olive"
-        speed={20}
-        separator="●"
-      />
-
-      <WaveDivider from="hsl(73,37%,44%)" to="hsl(0,0%,10%)" flip />
-
-      {/* ===== VIDEO SECTION ===== */}
-      <VideoSection />
-
-      <WaveDivider from="hsl(0,0%,10%)" to="hsl(36,33%,93%)" />
-
       {/* ===== PARTENAIRES — Défilement continu ===== */}
-      <section className="py-20 md:py-24">
+      <section className="pb-20 md:pb-28">
         <div className="max-w-5xl mx-auto px-6">
           <AnimatedSection>
             <h3 className="font-display text-2xl md:text-3xl uppercase text-center mb-12 tracking-[-1px]">
@@ -369,7 +307,65 @@ const Index = () => {
         </div>
       </section>
 
-      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
+
+      {/* ===== GALERIE — Défilement continu ===== */}
+      <section className="py-20 md:py-28 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6">
+          <AnimatedSection className="text-center mb-14">
+            <span className="section-label block mb-3">Portfolio</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
+              Les plus belles créations
+            </h2>
+          </AnimatedSection>
+        </div>
+
+        <PhotoCarousel
+          images={[
+            { src: galleryTerrarium, alt: "Atelier terrarium botanique — Botanique Ludique, Le Pecq" },
+            { src: galleryTeinture, alt: "Atelier teinture végétale naturelle — Botanique Ludique, Île-de-France" },
+            { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs — Botanique Ludique, Paris" },
+            { src: galleryKokedamaGarden, alt: "Kokedama dans un jardin botanique — Botanique Ludique, Yvelines" },
+            { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama — Botanique Ludique" },
+            { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs naturels — Botanique Ludique" },
+            { src: galleryMiniTerrarium, alt: "Mini terrarium en bocal — Botanique Ludique" },
+          ]}
+        />
+
+        <div className="max-w-6xl mx-auto px-6">
+          <AnimatedSection delay={300} className="text-center mt-8">
+            <Link
+              to="/gallery"
+              className="btn-brutal bg-foreground text-primary-foreground border-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
+            >
+              Voir toute la galerie →
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <WaveDivider from="hsl(36,25%,88%)" to="hsl(210,41%,24%)" flip />
+
+      {/* ===== CONFÉRENCES & SAVOIRS ===== */}
+      <ConferencesSavoirs />
+
+      <WaveDivider from="hsl(210,41%,24%)" to="hsl(36,33%,93%)" />
+
+      {/* ===== TESTIMONIALS ===== */}
+      <Testimonials />
+
+      {/* ===== MARQUEE 2 ===== */}
+      <Marquee
+        items={["Enfants", "Adultes", "Seniors", "Écoles", "Entreprises", "EHPAD", "Associations", "Collectivités"]}
+        color="olive"
+        speed={20}
+        separator="●"
+      />
+
+      <WaveDivider from="hsl(73,37%,44%)" to="hsl(0,0%,10%)" flip />
+
+      {/* ===== VIDEO SECTION ===== */}
+      <VideoSection />
 
       {/* ===== CTA + NEWSLETTER ===== */}
       <section className="py-20 md:py-24 px-6 text-primary-foreground relative overflow-hidden">
