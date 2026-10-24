@@ -255,13 +255,12 @@ const Index = () => {
           </AnimatedSection>
         </div>
         <div className="overflow-hidden">
-          <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '30s' }}>
+          <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '27s' }}>
             {[
               { src: assuranceMaladieLogo, alt: "l'Assurance Maladie" },
               { src: "/logos/thales.svg", alt: "Thales" },
               { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
               { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
-              { src: "/logos/f93.jpg", alt: "F93" },
               { src: "/logos/bezons.svg", alt: "Ville de Bezons" },
               { src: "/logos/maurepas.png", alt: "Ville de Maurepas" },
               { src: "/logos/cachan.svg", alt: "Ville de Cachan" },
@@ -272,7 +271,6 @@ const Index = () => {
               { src: "/logos/taverny.svg", alt: "Ville de Taverny" },
               { src: "/logos/maisons-alfort.svg", alt: "Maison de l'environnement de Maisons-Alfort" },
               { src: "/logos/chateau-ephemere.svg", alt: "Château Éphémère" },
-              { src: "/logos/la-roche.png", alt: "La Roche" },
               { src: "/logos/ecole-du-breuil.jpg", alt: "École Du Breuil" },
             ].map((logo, index) => (
               <div key={`a-${index}`} className="flex-shrink-0 aspect-square flex items-center justify-center p-5 border-brutal bg-[hsl(var(--cream))] hover:-translate-y-2 hover:shadow-brutal-lg transition-all duration-300 group" style={{ width: 140, height: 140 }}>
@@ -284,7 +282,6 @@ const Index = () => {
                 { src: "/logos/thales.svg", alt: "" },
                 { src: "/logos/region-idf.webp", alt: "" },
                 { src: "/logos/jappy-senior.svg", alt: "" },
-                { src: "/logos/f93.jpg", alt: "" },
                 { src: "/logos/bezons.svg", alt: "" },
                 { src: "/logos/maurepas.png", alt: "" },
                 { src: "/logos/cachan.svg", alt: "" },
@@ -295,7 +292,6 @@ const Index = () => {
                 { src: "/logos/taverny.svg", alt: "" },
                 { src: "/logos/maisons-alfort.svg", alt: "" },
                 { src: "/logos/chateau-ephemere.svg", alt: "" },
-                { src: "/logos/la-roche.png", alt: "" },
                 { src: "/logos/ecole-du-breuil.jpg", alt: "" },
               ].map((logo, index) => (
                 <div key={`b-${index}`} className="flex-shrink-0 aspect-square flex items-center justify-center p-5 border-brutal bg-[hsl(var(--cream))]" style={{ width: 140, height: 140 }} aria-hidden="true">
