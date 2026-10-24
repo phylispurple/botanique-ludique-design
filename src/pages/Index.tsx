@@ -333,6 +333,7 @@ const Index = () => {
               { src: "/logos/la-celle-saint-cloud.svg", alt: "Ville de La Celle-Saint-Cloud" },
               { src: "/logos/taverny.svg", alt: "Ville de Taverny" },
               { src: "/logos/maisons-alfort.svg", alt: "Maison de l'environnement de Maisons-Alfort" },
+              { src: "/logos/chateau-ephemere.svg", alt: "Château Éphémère" },
               { src: "/logos/la-roche.png", alt: "La Roche" },
               { src: "/logos/ecole-du-breuil.jpg", alt: "École Du Breuil" },
             ].map((logo, index) => (
@@ -355,6 +356,7 @@ const Index = () => {
                 { src: "/logos/la-celle-saint-cloud.svg", alt: "" },
                 { src: "/logos/taverny.svg", alt: "" },
                 { src: "/logos/maisons-alfort.svg", alt: "" },
+                { src: "/logos/chateau-ephemere.svg", alt: "" },
                 { src: "/logos/la-roche.png", alt: "" },
                 { src: "/logos/ecole-du-breuil.jpg", alt: "" },
               ].map((logo, index) => (

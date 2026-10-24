@@ -14,6 +14,7 @@ const PARTNER_LOGOS = [
   { src: "/logos/la-celle-saint-cloud.svg", alt: "Ville de La Celle-Saint-Cloud" },
   { src: "/logos/taverny.svg", alt: "Ville de Taverny" },
   { src: "/logos/maisons-alfort.svg", alt: "Maison de l'environnement de Maisons-Alfort" },
+  { src: "/logos/chateau-ephemere.svg", alt: "Château Éphémère" },
   { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
   { src: "/logos/f93.jpg", alt: "F93" },
   { src: "/logos/la-roche.png", alt: "La Roche" },
