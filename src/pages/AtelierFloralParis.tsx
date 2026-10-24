@@ -8,7 +8,7 @@ import { CheckCircle, Flower2, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import bougieFleursSecheesImage from "@/assets/gallery-bougie-fleurs-sechees.jpg";
 import floralWatersImage from "@/assets/workshop-floral-waters.jpg";
-import galleryKokedama from "@/assets/gallery-kokedama-tradescantia.jpg";
+import galleryKokedama from "@/assets/gallery-kokedama-collection.jpg";
 
 const AtelierFloralParis = () => {
   const faqQuestions = [

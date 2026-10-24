@@ -54,6 +54,7 @@ import terrariumFittoniaPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg"
 import terrariumBocalFittonia from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
 import kokedamaCollection from "@/assets/gallery-kokedama-collection.jpg";
 import papierRecycleFeuilles from "@/assets/gallery-papier-recycle-feuilles.webp";
+import papierRecycleSechage from "@/assets/gallery-papier-recycle-sechage.webp";
 
 
 
@@ -92,6 +93,7 @@ const Gallery = () => {
     { src: epicesSachets1, alt: "Participants composant leur sachet senteur avec des épices entières lors de l'atelier Sur la route des épices", caption: "Atelier Sur la route des épices, Fête de la Science, bibliothèque Choiseul, Versailles", type: "image" },
     { src: epicesSachets2, alt: "Sachets senteur terminés et bols d'épices (cannelle, girofle, anis étoilé, cardamome) sur la table d'atelier", caption: "Sachets senteur aux épices, Fête de la Science 2026, Versailles", type: "image" },
     { src: papierRecycleFeuilles, alt: "Feuilles de papier recyclé fait main en train de sécher : pulpe teintée rose, vert d'eau, bleu et crème, parsemée de pétales et de fragments de plantes", caption: "Atelier papier recyclé, feuilles colorées aux pétales en train de sécher", type: "image" },
+    { src: papierRecycleSechage, alt: "Longue table d'atelier couverte de feuilles de papier recyclé fait main qui sèchent : rose, vert, bleu, beige et blanc parsemé de pétales", caption: "Atelier papier recyclé, les feuilles sèchent sur la table", type: "image" },
     { src: tatakiZomeTable, alt: "Atelier tataki zomé en MJC : participants martelant feuilles d'érable, fougères et cosmos sur des tee-shirts et sacs en coton avec un galet", caption: "Atelier tataki zomé en MJC, empreintes de feuilles et de fleurs sur tee-shirts et sacs en tissu", type: "image" },
     { src: epicesTable, alt: "Vue de dessus de la table de l'atelier Sur la route des épices : bols de curcuma, cannelle, girofle, anis étoilé, cardamome et muscade, mortiers et participants composant leur sachet senteur", caption: "La table aux épices, atelier Sur la route des épices, Versailles", type: "image" },
     { src: teintureEnfants2, alt: "Enfant peignant un t-shirt à la betterave", caption: "Atelier teinture végétale enfants, Application de pigment de betterave", type: "image" },

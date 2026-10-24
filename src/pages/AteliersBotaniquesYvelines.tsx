@@ -6,7 +6,7 @@ import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Calendar, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import kokedamaImage from "@/assets/gallery-kokedama-tradescantia.jpg";
+import kokedamaImage from "@/assets/gallery-kokedama-collection.jpg";
 import dyeingImage from "@/assets/gallery-teinture-1.webp";
 import basketryImage from "@/assets/gallery-basketry.webp";
 

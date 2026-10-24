@@ -22,7 +22,7 @@ import galleryTerrarium from "@/assets/gallery-terrarium.webp";
 import ctaWorkshopGroup from "@/assets/cta-workshop-group.jpg";
 import galleryTeinture from "@/assets/gallery-teinture-1.webp";
 import galleryFlowerCrown from "@/assets/gallery-flower-crown.webp";
-import galleryKokedamaGarden from "@/assets/gallery-kokedama-tradescantia.jpg";
+import galleryKokedamaGarden from "@/assets/gallery-kokedama-collection.jpg";
 import galleryWorkshopGroup from "@/assets/gallery-workshop-group.webp";
 import gallerySachetSenteur from "@/assets/gallery-sachet-senteur.webp";
 import galleryMiniTerrarium from "@/assets/gallery-mini-terrarium.jpeg";
@@ -321,7 +321,7 @@ const Index = () => {
             { src: galleryTerrarium, alt: "Atelier terrarium botanique — Botanique Ludique, Le Pecq" },
             { src: galleryTeinture, alt: "Atelier teinture végétale naturelle — Botanique Ludique, Île-de-France" },
             { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs — Botanique Ludique, Paris" },
-            { src: galleryKokedamaGarden, alt: "Kokedama au Tradescantia zebrina réalisé en atelier — Botanique Ludique" },
+            { src: galleryKokedamaGarden, alt: "Kokedamas ficelés réalisés en atelier — Botanique Ludique" },
             { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama — Botanique Ludique" },
             { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs naturels — Botanique Ludique" },
             { src: galleryMiniTerrarium, alt: "Mini terrarium en bocal — Botanique Ludique" },

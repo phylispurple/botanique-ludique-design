@@ -31,6 +31,7 @@ import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.jpg";
 import floralWatersImage from "@/assets/workshop-floral-waters.jpg";
 import recycledPaperImage from "@/assets/workshop-recycled-paper.jpg";
 import papierRecycleFeuilles from "@/assets/gallery-papier-recycle-feuilles.webp";
+import papierRecycleSechage from "@/assets/gallery-papier-recycle-sechage.webp";
 import plantChalkImage from "@/assets/workshop-plant-chalk.jpg";
 import teintureIndigoImage from "@/assets/gallery-teinture-1.webp";
 import teintureBocalIndigo from "@/assets/blog-carousel-bocal-indigo.jpg";
@@ -172,7 +173,7 @@ const workshops: Workshop[] = [
     duration: "4 séances × 2h30",
     public: "Adultes",
     image: veganLeatherImage,
-    images: [veganLeatherImage, papierRecycleFeuilles],
+    images: [veganLeatherImage, papierRecycleFeuilles, papierRecycleSechage],
     icon: Palette,
     category: "textiles",
   },
@@ -313,7 +314,7 @@ const workshops: Workshop[] = [
     duration: "4h",
     public: "Adultes, adolescents",
     image: recycledPaperImage,
-    images: [recycledPaperImage, papierRecycleFeuilles],
+    images: [recycledPaperImage, papierRecycleFeuilles, papierRecycleSechage],
     icon: Hammer,
     category: "artisanat",
   },

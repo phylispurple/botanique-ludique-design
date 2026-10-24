@@ -22,6 +22,7 @@ import heroFresque from "@/assets/gallery-fresque-vegetale.jpg";
 import heroSucculents from "@/assets/gallery-succulents.jpg";
 import heroBasketry from "@/assets/gallery-basketry.jpg";
 import heroKokedamaTrad from "@/assets/gallery-kokedama-tradescantia.jpg";
+import heroKokedamaCollection from "@/assets/gallery-kokedama-collection.jpg";
 import heroFittonia from "@/assets/gallery-fittonia-pots.jpg";
 
 // Partenaires régulièrement cités (collectivités + lieux ressource).
@@ -220,7 +221,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
     ctaTitle: "Inscrivez votre événement à la Fête de la Nature",
     ctaText: "Brief gratuit, format adapté à votre public et à votre budget mairie.",
     heroImage: heroForestWalk,
-    gallery: [heroSeedBombs, heroAtelierAdulte, heroKokedamaTrad],
+    gallery: [heroSeedBombs, heroAtelierAdulte, heroKokedamaCollection],
     partners: PARTNERS,
     relatedWorkshops: [
       { label: "Balade botanique en Yvelines", path: "/balade-botanique-entreprise" },
@@ -605,7 +606,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
     ctaTitle: "Animez votre printemps d'équipe",
     ctaText: "Format outdoor ou indoor, devis sous 48h.",
     heroImage: heroSeedBombs,
-    gallery: [heroKokedamaTrad, heroForestWalk, heroAtelierAdulte],
+    gallery: [heroKokedamaCollection, heroForestWalk, heroAtelierAdulte],
     partners: PARTNERS,
     relatedWorkshops: [
       { label: "Balade botanique printemps-été", path: "/balade-botanique-printemps-ete" },
@@ -787,7 +788,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
     city: "Île-de-France",
     ctaTitle: "Programmez votre événement printemps",
     ctaText: "Format demi-journée ou journée complète. Devis sous 48h.",
-    heroImage: heroKokedamaTrad,
+    heroImage: heroKokedamaCollection,
     gallery: [heroSeedBombs, heroForestWalk, heroFresque],
     partners: PARTNERS,
     relatedWorkshops: [
@@ -980,7 +981,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
     city: "Paris",
     ctaTitle: "Lancez votre rentrée d'équipe",
     ctaText: "Les créneaux de septembre partent vite. Réservez dès août.",
-    heroImage: heroKokedamaTrad,
+    heroImage: heroKokedamaCollection,
     gallery: [heroForestWalk, heroAtelierAdulte, heroWorkshopTable],
     partners: PARTNERS,
     relatedWorkshops: [
