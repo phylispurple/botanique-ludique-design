@@ -9,7 +9,7 @@ import { MapPin, Users, Leaf, GraduationCap, Heart, Building, BookOpen } from "l
 import { Link } from "react-router-dom";
 import galleryTerrarium from "@/assets/gallery-terrarium.webp";
 import galleryTeinture from "@/assets/gallery-teinture-1.webp";
-import galleryKokedama from "@/assets/gallery-kokedama-garden.webp";
+import galleryKokedama from "@/assets/gallery-kokedama-tradescantia.jpg";
 
 const MediationBotaniqueIDF = () => {
   const publics = [

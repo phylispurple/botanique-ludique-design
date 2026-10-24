@@ -11,7 +11,6 @@ import type { LandingContext } from "./proLandingsContext";
 import heroFleurCrown from "@/assets/gallery-flower-crown.jpg";
 import heroBougieFleurs from "@/assets/gallery-bougie-fleurs-sechees.jpg";
 import heroAutumn from "@/assets/gallery-autumn-leaves.jpg";
-import heroKokedamaGarden from "@/assets/gallery-kokedama-garden.jpg";
 import heroTerrarium from "@/assets/gallery-terrarium.jpg";
 import heroAtelierAdulte from "@/assets/gallery-atelier-adulte.jpg";
 import heroWorkshopTable from "@/assets/gallery-workshop-table.jpg";
@@ -221,7 +220,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
     ctaTitle: "Inscrivez votre événement à la Fête de la Nature",
     ctaText: "Brief gratuit, format adapté à votre public et à votre budget mairie.",
     heroImage: heroForestWalk,
-    gallery: [heroSeedBombs, heroAtelierAdulte, heroKokedamaGarden],
+    gallery: [heroSeedBombs, heroAtelierAdulte, heroKokedamaTrad],
     partners: PARTNERS,
     relatedWorkshops: [
       { label: "Balade botanique en Yvelines", path: "/balade-botanique-entreprise" },
@@ -606,7 +605,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
     ctaTitle: "Animez votre printemps d'équipe",
     ctaText: "Format outdoor ou indoor, devis sous 48h.",
     heroImage: heroSeedBombs,
-    gallery: [heroKokedamaGarden, heroForestWalk, heroAtelierAdulte],
+    gallery: [heroKokedamaTrad, heroForestWalk, heroAtelierAdulte],
     partners: PARTNERS,
     relatedWorkshops: [
       { label: "Balade botanique printemps-été", path: "/balade-botanique-printemps-ete" },
@@ -788,7 +787,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
     city: "Île-de-France",
     ctaTitle: "Programmez votre événement printemps",
     ctaText: "Format demi-journée ou journée complète. Devis sous 48h.",
-    heroImage: heroKokedamaGarden,
+    heroImage: heroKokedamaTrad,
     gallery: [heroSeedBombs, heroForestWalk, heroFresque],
     partners: PARTNERS,
     relatedWorkshops: [
@@ -981,7 +980,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
     city: "Paris",
     ctaTitle: "Lancez votre rentrée d'équipe",
     ctaText: "Les créneaux de septembre partent vite. Réservez dès août.",
-    heroImage: heroKokedamaGarden,
+    heroImage: heroKokedamaTrad,
     gallery: [heroForestWalk, heroAtelierAdulte, heroWorkshopTable],
     partners: PARTNERS,
     relatedWorkshops: [

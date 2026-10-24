@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import LandingPhotoStrip from "@/components/LandingPhotoStrip";
 import { SEO } from "@/components/SEO";
 import { MapPin, Leaf, Users, Building2 } from "lucide-react";
-import workshopKokedama from "@/assets/gallery-kokedama-garden.webp";
+import workshopKokedama from "@/assets/gallery-kokedama-tradescantia.jpg";
 import workshopDyeing from "@/assets/gallery-teinture-1.webp";
 import workshopTerrarium from "@/assets/gallery-terrarium.webp";
 

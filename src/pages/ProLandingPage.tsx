@@ -13,7 +13,7 @@ import { PRO_LANDING_CONTEXT } from "@/data/proLandingsContext";
 // Ateliers phares mis en avant sur toutes les landings (terrarium en tête,
 // formats qui plaisent le plus selon les retours clients).
 import terrariumImg from "@/assets/gallery-terrarium.jpg";
-import kokedamaImg from "@/assets/gallery-kokedama-garden.jpg";
+import kokedamaImg from "@/assets/gallery-kokedama-tradescantia.jpg";
 import teintureImg from "@/assets/gallery-teinture-1.jpg";
 
 const FEATURED_WORKSHOPS = [

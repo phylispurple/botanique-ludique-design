@@ -32,7 +32,6 @@ import kosovoConstruction4 from "@/assets/gallery-kosovo-construction-4.webp";
 import kosovoConstruction5 from "@/assets/gallery-kosovo-construction-5.webp";
 import kosovoConstruction6 from "@/assets/gallery-kosovo-construction-6.webp";
 import kosovoConstruction7 from "@/assets/gallery-kosovo-construction-7.webp";
-import kokedamaGardenImage from "@/assets/gallery-kokedama-garden.webp";
 import portraitVanessaImage from "@/assets/portrait-vanessa.webp";
 import teinture1Image from "@/assets/gallery-teinture-1.webp";
 import teinture2Image from "@/assets/gallery-teinture-2.webp";
@@ -115,7 +114,6 @@ const Gallery = () => {
     { src: terrariumEnfantsFabricationImage, alt: "Enfants fabriquant un terrarium", caption: "Atelier enfants, Fabrication de terrariums en bocaux", type: "image" },
     { src: bougieFleursSecheesImage, alt: "Bougie aux fleurs séchées", caption: "Atelier bougie, Fleurs séchées en gel transparent", type: "image" },
     { src: kokedamaTradescantiaImage, alt: "Kokedama avec tradescantia", caption: "Kokedama, Tradescantia zebrina en cours de création", type: "image" },
-    { src: kokedamaGardenImage, alt: "Kokedama dans un jardin", caption: "Kokedama dans un jardin naturel", type: "image" },
     { src: "/videos/workshop-demo.mp4", alt: "Immersion dans nos ateliers", caption: "Immersion dans nos ateliers", type: "video" },
     { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium, Atelier Botanique Ludique", type: "image" },
     { src: flowerCrownImage, alt: "Couronne de fleurs", caption: "Atelier couronne de fleurs", type: "image" },

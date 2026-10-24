@@ -8,7 +8,6 @@ import fittoniaPots from "@/assets/gallery-fittonia-pots.jpg";
 import terrariumEnfantsFabrication from "@/assets/gallery-terrarium-enfants-fabrication.jpg";
 import bougieFleursSechees from "@/assets/gallery-bougie-fleurs-sechees.jpg";
 import kokedamaTradescantia from "@/assets/gallery-kokedama-tradescantia.jpg";
-import kokedamaGarden from "@/assets/gallery-kokedama-garden.webp";
 import terrarium from "@/assets/gallery-terrarium.webp";
 import flowerCrown from "@/assets/gallery-flower-crown.webp";
 import seedBombs from "@/assets/gallery-seed-bombs.webp";
@@ -24,7 +23,6 @@ const LANDING_PHOTOS = [
   { src: terrariumEnfantsFabrication, alt: "Enfants fabriquant un terrarium en bocal" },
   { src: bougieFleursSechees, alt: "Bougie aux fleurs séchées" },
   { src: kokedamaTradescantia, alt: "Kokedama avec Tradescantia zebrina" },
-  { src: kokedamaGarden, alt: "Kokedama dans un jardin naturel" },
   { src: terrarium, alt: "Terrarium végétal en bocal" },
   { src: flowerCrown, alt: "Couronne de fleurs naturelles" },
   { src: seedBombs, alt: "Bombes de graines en atelier" },
