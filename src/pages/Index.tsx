@@ -328,6 +328,7 @@ const Index = () => {
               { src: "/logos/f93.jpg", alt: "F93" },
               { src: "/logos/bezons.svg", alt: "Ville de Bezons" },
               { src: "/logos/maurepas.png", alt: "Ville de Maurepas" },
+              { src: "/logos/cachan.svg", alt: "Ville de Cachan" },
               { src: "/logos/la-roche.png", alt: "La Roche" },
               { src: "/logos/ecole-du-breuil.jpg", alt: "École Du Breuil" },
             ].map((logo, index) => (
@@ -345,6 +346,7 @@ const Index = () => {
                 { src: "/logos/f93.jpg", alt: "" },
                 { src: "/logos/bezons.svg", alt: "" },
                 { src: "/logos/maurepas.png", alt: "" },
+                { src: "/logos/cachan.svg", alt: "" },
                 { src: "/logos/la-roche.png", alt: "" },
                 { src: "/logos/ecole-du-breuil.jpg", alt: "" },
               ].map((logo, index) => (

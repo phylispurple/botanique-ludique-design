@@ -7,6 +7,7 @@ const PARTNER_LOGOS = [
   { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
   { src: "/logos/bezons.svg", alt: "Ville de Bezons" },
   { src: "/logos/maurepas.png", alt: "Ville de Maurepas" },
+  { src: "/logos/cachan.svg", alt: "Ville de Cachan" },
   { src: "/logos/mjc-vesinet.jpg", alt: "MJC du Vésinet" },
   { src: "/logos/mjc-chatou.jpeg", alt: "MJC Chatou" },
   { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
