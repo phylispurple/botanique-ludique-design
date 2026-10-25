@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoBL from "@/assets/logo-bl.webp";
 import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -29,10 +30,7 @@ const Footer = () => {
           {/* Brand + Contact */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-3 no-underline">
-              <svg width="28" height="36" viewBox="0 0 28 36" fill="none">
-                <path d="M14 0C14 0 0 12 0 22C0 29.732 6.268 36 14 36C21.732 36 28 29.732 28 22C28 12 14 0 14 0Z" fill="hsl(73 44% 67%)"/>
-                <path d="M14 8V30M14 14L8 20M14 18L20 24" stroke="hsl(0 0% 10%)" strokeWidth="1.5"/>
-              </svg>
+              <img src={logoBL} alt="" width={40} height={40} className="flex-shrink-0 w-10 h-10" />
               <div className="font-display text-[12px] uppercase tracking-[2.5px] leading-tight" style={{ color: 'hsl(36 33% 93%)' }}>
                 Botanique<br/><span style={{ color: 'hsl(73 44% 67%)' }}>Ludique</span>
               </div>
