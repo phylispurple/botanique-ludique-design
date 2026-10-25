@@ -83,7 +83,7 @@ const Navigation = () => {
 
   return (
     <nav className="sticky top-0 z-[999] border-b-2 border-olive" style={{ background: 'hsl(0 0% 10%)' }}>
-      <div className="px-6 md:px-[60px] h-16 flex items-center justify-between">
+      <div className="px-6 md:px-10 2xl:px-[60px] h-16 flex items-center justify-between gap-8">
         {/* Brand */}
         <Link 
           to="/" 
@@ -102,7 +102,7 @@ const Navigation = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden lg:flex items-baseline gap-6 list-none m-0 p-0">
+        <ul className="hidden xl:flex items-baseline gap-5 2xl:gap-6 list-none m-0 p-0 whitespace-nowrap">
           <li>
             <Link
               to="/about"
@@ -274,7 +274,7 @@ const Navigation = () => {
         {/* Mobile burger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden"
+          className="xl:hidden"
           style={{ color: 'hsl(36 33% 93%)' }}
           aria-label="Menu"
         >
@@ -284,7 +284,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden border-t border-olive/30 px-6 py-6 space-y-4" style={{ background: 'hsl(0 0% 10%)' }}>
+        <div className="xl:hidden border-t border-olive/30 px-6 py-6 space-y-4" style={{ background: 'hsl(0 0% 10%)' }}>
           <Link to="/about" onClick={() => setIsOpen(false)}
             className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
             style={{ color: isActive('/about') ? 'hsl(73 44% 67%)' : 'rgba(255,255,255,0.55)' }}>
