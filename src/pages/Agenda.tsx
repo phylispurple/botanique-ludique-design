@@ -54,8 +54,162 @@ type PastEvent = {
 
 const d = (year: number, month: number, day: number) => new Date(year, month - 1, day);
 
-// Aucun événement public à venir pour le moment.
-const upcomingEvents: UpcomingEvent[] = [];
+const upcomingEvents: UpcomingEvent[] = [
+  {
+    id: "bombes-graines-la-celle-28-oct",
+    name: "Atelier botanique « Bombes à graines »",
+    date: "Mercredi 28 octobre 2026",
+    parsedDate: d(2026, 10, 28),
+    time: "14h30 / 16h30",
+    location: "Médiathèque, La Celle-Saint-Cloud (78)",
+    audience: "À partir de 6 ans",
+    spots: "Réservation obligatoire",
+    description:
+      "Dans le cadre du festival « Sur la Route des Saisons, au cœur du climat et du vivant » de la Ville de La Celle-Saint-Cloud. Un temps d'échange sur les graines voyageuses et les jardins spontanés, puis chacun fabrique ses bombes à graines à semer chez soi. Réservation obligatoire au 01 30 78 10 75.",
+    linkType: "external", externalUrl: "https://lacellesaintcloud.fr/actualites/sur-la-route-des-saisons-au-coeur-du-climat-et-du-vivant/", buttonLabel: "Infos & réservation",
+    schema: {
+      startDate: "2026-10-28T14:30:00+01:00",
+      endDate: "2026-10-28T16:30:00+01:00",
+      location: {
+        "@type": "Place",
+        name: "Médiathèque de La Celle-Saint-Cloud",
+        address: { "@type": "PostalAddress", streetAddress: "8E avenue Charles de Gaulle", addressLocality: "La Celle-Saint-Cloud", postalCode: "78170", addressRegion: "Île-de-France", addressCountry: "FR" },
+      },
+    },
+  },
+  {
+    id: "epices-maisons-alfort-7-nov",
+    name: "Sachet senteur et pots-pourris",
+    date: "Samedi 7 novembre 2026",
+    parsedDate: d(2026, 11, 7),
+    time: "14h30 / 16h00",
+    location: "Maison de l'Environnement, Maisons-Alfort (94)",
+    audience: "À partir de 6 ans",
+    spots: "Sur inscription",
+    description:
+      "Après un temps d'échange sur les routes des épices et notre mémoire olfactive, chacun compose son sachet senteur ou son pot-pourri à partir d'épices et de plantes séchées, à emporter chez soi.",
+    linkType: "external", externalUrl: "mailto:maisondelenvironnement@maisons-alfort.fr?subject=Inscription%20atelier%20Sachet%20senteur%207%20novembre", buttonLabel: "S'inscrire par mail",
+    schema: {
+      startDate: "2026-11-07T14:30:00+01:00",
+      endDate: "2026-11-07T16:00:00+01:00",
+      location: {
+        "@type": "Place",
+        name: "Maison de l'Environnement de Maisons-Alfort",
+        address: { "@type": "PostalAddress", streetAddress: "2 avenue Foch", addressLocality: "Maisons-Alfort", postalCode: "94700", addressRegion: "Île-de-France", addressCountry: "FR" },
+      },
+    },
+  },
+  {
+    id: "bombes-graines-la-celle-14-nov",
+    name: "Atelier botanique « Bombes à graines »",
+    date: "Samedi 14 novembre 2026",
+    parsedDate: d(2026, 11, 14),
+    time: "10h00 / 12h00",
+    location: "Médiathèque, La Celle-Saint-Cloud (78)",
+    audience: "À partir de 6 ans",
+    spots: "Réservation obligatoire",
+    description:
+      "Dans le cadre du festival « Sur la Route des Saisons, au cœur du climat et du vivant » de la Ville de La Celle-Saint-Cloud. Un temps d'échange sur les graines voyageuses et les jardins spontanés, puis chacun fabrique ses bombes à graines à semer chez soi. Réservation obligatoire au 01 30 78 10 75.",
+    linkType: "external", externalUrl: "https://lacellesaintcloud.fr/actualites/sur-la-route-des-saisons-au-coeur-du-climat-et-du-vivant/", buttonLabel: "Infos & réservation",
+    schema: {
+      startDate: "2026-11-14T10:00:00+01:00",
+      endDate: "2026-11-14T12:00:00+01:00",
+      location: {
+        "@type": "Place",
+        name: "Médiathèque de La Celle-Saint-Cloud",
+        address: { "@type": "PostalAddress", streetAddress: "8E avenue Charles de Gaulle", addressLocality: "La Celle-Saint-Cloud", postalCode: "78170", addressRegion: "Île-de-France", addressCountry: "FR" },
+      },
+    },
+  },
+  {
+    id: "papier-carnets-chateau-ephemere-21-nov",
+    name: "Atelier famille : crée ton papier recyclé et ton carnet (partie 1)",
+    date: "Samedi 21 novembre 2026",
+    parsedDate: d(2026, 11, 21),
+    time: "14h30 / 16h30",
+    location: "Château Éphémère, Carrières-sous-Poissy (78)",
+    audience: "En duo, dès 6 ans",
+    spots: "8 € adulte · 6 € enfant",
+    description:
+      "L'histoire du papier et le parcours de la matière, de sa fabrication à son recyclage, puis place à la pratique : déchiquetage, préparation de la pâte, tirage des feuilles au tamis et mise au séchage. Les feuilles sèchent au château jusqu'à la seconde séance du 5 décembre. Dans le cadre de la Semaine européenne de la réduction des déchets.",
+    linkType: "external", externalUrl: "https://www.helloasso.com/associations/vanderlab/evenements/atelier-famille-cree-ton-papier-recycle-et-ton-carnet-partie-1", buttonLabel: "Réserver sur HelloAsso",
+    schema: {
+      startDate: "2026-11-21T14:30:00+01:00",
+      endDate: "2026-11-21T16:30:00+01:00",
+      location: {
+        "@type": "Place",
+        name: "Château Éphémère",
+        address: { "@type": "PostalAddress", streetAddress: "2 chemin des Grandes Terres", addressLocality: "Carrières-sous-Poissy", postalCode: "78955", addressRegion: "Île-de-France", addressCountry: "FR" },
+      },
+    },
+  },
+  {
+    id: "papier-carnets-chateau-ephemere-5-dec",
+    name: "Atelier famille : crée ton papier recyclé et ton carnet (partie 2)",
+    date: "Samedi 5 décembre 2026",
+    parsedDate: d(2026, 12, 5),
+    time: "14h30 / 16h30",
+    location: "Château Éphémère, Carrières-sous-Poissy (78)",
+    audience: "En duo, dès 6 ans",
+    spots: "8 € adulte · 6 € enfant",
+    description:
+      "L'histoire du livre et du carnet, puis chacun assemble et relie son propre carnet selon la technique traditionnelle de la reliure japonaise, à partir des feuilles fabriquées lors de la première séance. Les deux ateliers se complètent, mais peuvent aussi se vivre séparément.",
+    linkType: "external", externalUrl: "https://www.helloasso.com/associations/vanderlab/evenements/atelier-famille-cree-ton-papier-recycle-et-ton-carnet-partie-2", buttonLabel: "Réserver sur HelloAsso",
+    schema: {
+      startDate: "2026-12-05T14:30:00+01:00",
+      endDate: "2026-12-05T16:30:00+01:00",
+      location: {
+        "@type": "Place",
+        name: "Château Éphémère",
+        address: { "@type": "PostalAddress", streetAddress: "2 chemin des Grandes Terres", addressLocality: "Carrières-sous-Poissy", postalCode: "78955", addressRegion: "Île-de-France", addressCountry: "FR" },
+      },
+    },
+  },
+  {
+    id: "papier-carnets-maisons-alfort-decembre",
+    name: "Papier recyclé & carnets de Noël, en deux séances",
+    date: "Samedis 12 et 19 décembre 2026",
+    parsedDate: d(2026, 12, 12),
+    time: "14h30 / 16h30",
+    location: "Maison de l'Environnement, Maisons-Alfort (94)",
+    audience: "Tout public, les deux séances",
+    spots: "Sur inscription",
+    description:
+      "Un atelier de Noël en deux temps : le 12 décembre, on fabrique son papier à partir de papier recyclé, de pétales et de feuilles ; le 19 décembre, on relie et décore son carnet. Inscription pour les deux séances.",
+    linkType: "external", externalUrl: "mailto:maisondelenvironnement@maisons-alfort.fr?subject=Inscription%20atelier%20Papier%20recyclé%20et%20carnets%2012%20et%2019%20décembre", buttonLabel: "S'inscrire par mail",
+    schema: {
+      startDate: "2026-12-12T14:30:00+01:00",
+      endDate: "2026-12-19T16:30:00+01:00",
+      location: {
+        "@type": "Place",
+        name: "Maison de l'Environnement de Maisons-Alfort",
+        address: { "@type": "PostalAddress", streetAddress: "2 avenue Foch", addressLocality: "Maisons-Alfort", postalCode: "94700", addressRegion: "Île-de-France", addressCountry: "FR" },
+      },
+    },
+  },
+  {
+    id: "bougies-fleurs-sechees-maisons-alfort-janvier",
+    name: "Atelier Bougies & fleurs séchées",
+    date: "Samedi 23 janvier 2027",
+    parsedDate: d(2027, 1, 23),
+    time: "Après-midi, horaire à venir",
+    location: "Maison de l'Environnement, Maisons-Alfort (94)",
+    audience: "Tout public",
+    spots: "",
+    description:
+      "Fleurs et feuilles séchées prises dans la cire : un atelier pour composer sa propre bougie botanique, et découvrir au passage d'où viennent les plantes que l'on fait sécher.",
+    linkType: "coming",
+    schema: {
+      startDate: "2027-01-23",
+      endDate: "2027-01-23",
+      location: {
+        "@type": "Place",
+        name: "Maison de l'Environnement de Maisons-Alfort",
+        address: { "@type": "PostalAddress", streetAddress: "2 avenue Foch", addressLocality: "Maisons-Alfort", postalCode: "94700", addressRegion: "Île-de-France", addressCountry: "FR" },
+      },
+    },
+  },
+];
 
 const pastEvents: PastEvent[] = [
   {
