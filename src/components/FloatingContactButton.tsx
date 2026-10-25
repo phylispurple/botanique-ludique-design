@@ -80,7 +80,7 @@ const FloatingContactButton = () => {
               </a>
               
               <Link
-                to="/agenda"
+                to="/workshops"
                 className="flex items-center gap-3 p-3 bg-[hsl(var(--olive))]/10 hover:bg-[hsl(var(--olive))]/20 transition-colors group"
                 onClick={() => setIsOpen(false)}
               >
