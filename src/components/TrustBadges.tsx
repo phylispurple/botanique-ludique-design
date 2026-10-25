@@ -1,4 +1,4 @@
-import { MapPin, Users, Shield, Clock, Star, Leaf, Package } from "lucide-react";
+import { MapPin, Users, Shield, Clock, Leaf, Package } from "lucide-react";
 
 interface TrustBadgesProps {
   variant?: "horizontal" | "vertical" | "compact" | "premium";
@@ -29,13 +29,8 @@ const TrustBadges = ({ variant = "horizontal", showAll = true }: TrustBadgesProp
     },
     {
       icon: MapPin,
-      title: "Paris, 78, 92",
-      description: "Île-de-France",
-    },
-    {
-      icon: Star,
-      title: "5/5 étoiles",
-      description: "Satisfaction client",
+      title: "Île-de-France",
+      description: "8 départements",
     },
   ];
 

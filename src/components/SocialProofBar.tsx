@@ -1,4 +1,4 @@
-import { Users, Calendar, Building2, Award, Quote } from "lucide-react";
+import { Users, Calendar, Building2, MapPin, Quote } from "lucide-react";
 import assuranceMaladieLogo from "@/assets/logo-assurance-maladie.png";
 
 const PARTNER_LOGOS = [
@@ -23,7 +23,7 @@ const STATS = [
   { value: "+50", label: "ateliers réalisés", Icon: Calendar },
   { value: "+400", label: "participants accompagnés", Icon: Users },
   { value: "+15", label: "partenaires de confiance", Icon: Building2 },
-  { value: "100%", label: "satisfaction collaborateurs", Icon: Award },
+  { value: "8", label: "départements d'Île-de-France", Icon: MapPin },
 ];
 
 interface Props {

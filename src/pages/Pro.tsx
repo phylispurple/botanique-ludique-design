@@ -4,13 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
-import TrustBadges from "@/components/TrustBadges";
+import WaveDivider from "@/components/WaveDivider";
 import { Users, Building2, Heart, Calendar, Mail, Phone, Loader2, Clock, GraduationCap, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 import { trackFormSubmit } from "@/lib/analytics";
-import collegeEee1Image from "@/assets/gallery-college-eee-1.jpg";
+import heroPro from "@/assets/cta-workshop-group.webp";
+import imgEntreprises from "@/assets/gallery-terrarium-adultes-groupe.jpg";
+import imgEcoles from "@/assets/gallery-teinture-enfants-2.jpg";
+import imgCollectivites from "@/assets/gallery-atelier-epices-table.webp";
+import imgSeniors from "@/assets/gallery-kokedama-collection.jpg";
+import imgEvenements from "@/assets/gallery-tataki-zome-atelier-table.webp";
 import AnimatedSection from "@/components/AnimatedSection";
 import BackToTop from "@/components/BackToTop";
 import Testimonials from "@/components/Testimonials";
@@ -72,49 +77,71 @@ const Pro = () => {
   const clientTypes = [
     {
       icon: Building2,
-      title: "Entreprises",
+      title: "Entreprises & CSE",
       subtitle: "Team building & RSE",
-      description: "Cohésion d'équipe, séminaires nature, démarche RSE concrète et bien-être au travail. Nos ateliers de team building botanique sont conçus pour renforcer les liens entre collaborateurs tout en sensibilisant à l'écologie.",
-      benefits: ["Kokedama d'équipe — 2h30", "Teinture végétale collaborative — 3h", "Terrarium en équipe — 2h", "Vannerie & artisanat — 3h30"],
+      description: "Cohésion d'équipe, séminaires, démarche RSE et bien-être au travail : des ateliers où l'on fabrique ensemble, dans vos locaux ou en extérieur.",
+      formats: ["Kokedama d'équipe, 2h30", "Teinture végétale collaborative, 3h", "Terrarium en équipe, 2h"],
+      image: imgEntreprises,
+      imageAlt: "Collègues fabriquant des terrariums en bocal lors d'un atelier en entreprise",
+      to: "/team-building-nature-entreprise",
       id: "entreprises",
-      accent: "olive"
     },
     {
       icon: GraduationCap,
-      title: "Scolaires",
-      subtitle: "Collèges, lycées, BTS",
-      description: "Intervention scolaire botanique adaptée aux programmes SVT, EMC et géographie. Sortie pédagogique plantes sauvages et médiation scientifique scolaire pour collèges et lycées en Yvelines (78) et Île-de-France.",
-      benefits: ["Espèces exotiques envahissantes", "Biodiversité urbaine et sauvage", "Ethnobotanique", "Changement climatique"],
+      title: "Écoles & périscolaire",
+      subtitle: "Primaire, collège, lycée",
+      description: "Interventions adaptées aux programmes de SVT, d'EMC et de géographie, en classe, en sortie ou en temps périscolaire.",
+      formats: ["Espèces exotiques envahissantes", "Biodiversité urbaine et plantes sauvages", "Ethnobotanique et histoire des plantes"],
+      image: imgEcoles,
+      imageAlt: "Enfant peignant un tee-shirt avec un pigment végétal de betterave",
+      to: "/etablissements-scolaires",
       id: "scolaires",
-      accent: "green"
     },
     {
       icon: Users,
-      title: "Collectivités",
-      subtitle: "MJC, centres sociaux, mairies",
-      description: "Animations intergénérationnelles qui créent du lien social autour du végétal.",
-      benefits: ["Ateliers parent-enfant", "Animations de quartier", "Cycles sur l'année", "Événements ponctuels"],
+      title: "Collectivités & médiathèques",
+      subtitle: "Mairies, MJC, centres sociaux",
+      description: "Des temps forts qui créent du lien autour du végétal, pour vos habitants, vos lecteurs et vos événements de saison.",
+      formats: ["Ateliers parent-enfant et familles", "Fête de la Nature, Fête de la Science, Semaine Bleue", "Balades ethnobotaniques"],
+      image: imgCollectivites,
+      imageAlt: "Table d'atelier couverte de bols d'épices lors d'un atelier en bibliothèque",
+      to: "/animation-collectivites-mairies",
       id: "collectivites",
-      accent: "blue"
     },
     {
       icon: Heart,
-      title: "EHPAD & Santé",
-      subtitle: "Ateliers thérapeutiques",
-      description: "Stimulation sensorielle, travail de la mémoire et reconnexion à la nature.",
-      benefits: ["Stimulation cognitive", "Apaisement & bien-être", "Lien social", "Motricité fine"],
+      title: "EHPAD & seniors",
+      subtitle: "Ateliers sensoriels et bien-être",
+      description: "Toucher, odeurs, souvenirs de jardin : des ateliers adaptés aux résidents, seuls ou en rencontre avec des enfants.",
+      formats: ["Stimulation sensorielle", "Souvenirs et mémoire autour des plantes", "Rencontres intergénérationnelles"],
+      image: imgSeniors,
+      imageAlt: "Kokedamas ficelés réalisés en atelier, posés sur des assiettes",
+      to: "/animation-seniors-ehpad",
       id: "ehpad",
-      accent: "orange"
     },
     {
       icon: Calendar,
-      title: "Événementiel",
-      subtitle: "Festivals, salons, marchés",
-      description: "Animations botaniques sur mesure pour des expériences mémorables.",
-      benefits: ["Stands interactifs", "Inaugurations", "Noël & fêtes", "Sur mesure"],
+      title: "Événements",
+      subtitle: "Festivals, salons, fêtes",
+      description: "Des animations botaniques sur mesure pour un festival, une inauguration ou les fêtes de fin d'année.",
+      formats: ["Stands interactifs en flux continu", "Inaugurations et lancements", "Noël et fêtes de fin d'année"],
+      image: imgEvenements,
+      imageAlt: "Participants imprimant des feuilles et des fleurs sur tissu par martelage, technique du tataki zomé",
+      to: "/atelier-botanique-evenement",
       id: "evenementiel",
-      accent: "purple"
-    }
+    },
+  ];
+
+  const sectorPages = [
+    { to: "/hortitherapie-hopital-clinique", label: "Hôpital, clinique, hortithérapie" },
+    { to: "/animation-nature-universite-bde", label: "Université, grande école, BDE" },
+    { to: "/animation-nature-bailleurs-sociaux", label: "Bailleur social, ESH, ANRU" },
+    { to: "/mediation-vegetale-architectes-paysagistes", label: "Architecte, paysagiste, MOE" },
+    { to: "/atelier-vegetal-parentalite-naissance", label: "Maternité, PMI, parentalité" },
+    { to: "/animation-vegetale-hotel-evenementiel", label: "Hôtel, lieu événementiel premium" },
+    { to: "/balade-ethnobotanique-office-tourisme", label: "Office de tourisme, patrimoine" },
+    { to: "/atelier-vegetal-cabinet-rh-coach", label: "Cabinet RH, coach, consultant·e" },
+    { to: "/marches-publics", label: "Marchés publics : SIRET, RC Pro, Chorus Pro" },
   ];
 
   const faqs = [
@@ -125,16 +152,6 @@ const Pro = () => {
     { q: "Combien de participants ?", a: "10 à 15 par animateur. Pour les grands groupes (20-50), nous organisons des rotations ou mobilisons des animateurs supplémentaires." },
     { q: "Politique d'annulation ?", a: "Annulation gratuite jusqu'à 14 jours avant. Entre 14 et 7 jours : 50% conservé. Moins de 7 jours : acompte non remboursable." },
   ];
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 100;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    }
-  };
 
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
@@ -166,128 +183,99 @@ const Pro = () => {
         ]}}
       />
       <Navigation />
-      
+
       {/* ═══════════════════════════════════════════ */}
       {/* HERO */}
       {/* ═══════════════════════════════════════════ */}
-      <section className="pt-36 pb-20 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left */}
-            <div>
-              <span className="section-label block mb-6">Professionnels & Institutions</span>
-              <h1 className="font-display text-[clamp(2.5rem,6vw,5rem)] uppercase leading-[0.9] tracking-[-2px] text-[hsl(var(--black))] mb-6">
-                Botanique<br />
-                <span className="text-[hsl(var(--olive))]">sur mesure</span>
-              </h1>
-              <p className="text-lg md:text-xl leading-relaxed text-[hsl(var(--black))]/70 mb-4 max-w-lg">
-                Team building botanique, interventions scolaires, animations pour collectivités et EHPAD. 
-                Des ateliers nature pour entreprises à Paris et en Île-de-France.
-              </p>
-              <p className="text-sm leading-relaxed text-[hsl(var(--black))]/60 mb-8 max-w-lg">
-                Découvrez nos <Link to="/etablissements-scolaires" className="underline text-[hsl(var(--olive))] hover:text-[hsl(var(--black))] transition-colors">interventions pédagogiques pour collèges et lycées</Link> ou 
-                {" "}<Link to="/contact" className="underline text-[hsl(var(--olive))] hover:text-[hsl(var(--black))] transition-colors">contactez-nous pour un devis personnalisé</Link>.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                <a 
-                  href="#devis"
-                  className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--black))] inline-flex items-center gap-2 justify-center"
-                >
-                  Nous écrire <ArrowRight className="w-4 h-4" />
-                </a>
-                <a 
-                  href="mailto:contact@botaniqueludique.com"
-                  className="btn-brutal bg-[hsl(var(--cream))] text-[hsl(var(--black))] border-[hsl(var(--black))] inline-flex items-center gap-2 justify-center"
-                >
-                  <Mail className="w-4 h-4" /> Contact direct
-                </a>
-              </div>
-
-              <TrustBadges variant="compact" showAll={false} />
-            </div>
-
-            {/* Right — Hero image */}
-            <div className="relative">
-              <div className="border-brutal shadow-brutal-lg overflow-hidden">
-                <img 
-                  src={collegeEee1Image} 
-                  alt="Interventions botaniques professionnelles"
-                  className="w-full h-[400px] md:h-[500px] object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Quick nav pills */}
-          <div className="mt-16 flex flex-wrap gap-3 justify-center">
-            {clientTypes.map((client) => (
-              <button
-                key={client.id}
-                onClick={() => scrollToSection(client.id)}
-                className="btn-brutal bg-[hsl(var(--cream))] text-[hsl(var(--black))] border-[hsl(var(--black))] !text-[10px] !px-5 !py-2.5 inline-flex items-center gap-2"
+      <section className="relative overflow-hidden px-6 pt-24 pb-24 md:pt-32 md:pb-28">
+        <div className="absolute inset-0 bg-foreground">
+          <img src={heroPro} alt="" className="w-full h-full object-cover opacity-35" />
+        </div>
+        <div className="absolute inset-0 bg-foreground/40" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <AnimatedSection>
+            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[3px] text-olive-light mb-5">
+              Professionnels · Institutions · Collectivités
+            </p>
+            <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+              Botanique<br />
+              <span className="text-olive-light">sur mesure</span>
+            </h1>
+            <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[680px] mx-auto leading-relaxed mb-10">
+              Ateliers et médiations autour du vivant pour les entreprises, les écoles, les collectivités et les EHPAD, partout en Île-de-France.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="#devis"
+                className="btn-brutal bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
+                style={{ borderColor: "hsl(var(--cream))" }}
               >
-                <client.icon className="w-3.5 h-3.5" />
-                {client.title}
-              </button>
-            ))}
-          </div>
+                Demander un devis <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="tel:+33609831606"
+                className="btn-brutal bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
+                style={{ borderColor: "hsl(var(--cream))" }}
+              >
+                <Phone className="w-4 h-4" /> 06 09 83 16 06
+              </a>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
+      <WaveDivider from="hsl(0,0%,10%)" to="hsl(36,33%,93%)" />
+
       {/* ═══════════════════════════════════════════ */}
-      {/* CLIENT TYPES GRID */}
+      {/* PREUVE SOCIALE */}
       {/* ═══════════════════════════════════════════ */}
-      <section className="py-20 px-4 md:px-8 bg-[hsl(var(--black))] text-[hsl(var(--cream))]">
-        <div className="max-w-7xl mx-auto">
-          <AnimatedSection>
-            <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive-light))] block mb-4">Nos solutions</span>
-            <h2 className="font-display text-[clamp(2rem,4vw,3.5rem)] uppercase leading-[0.9] tracking-[-1px] mb-16">
-              Pour chaque<br />
-              <span className="text-[hsl(var(--olive-light))]">structure</span>
+      <SocialProofBar />
+
+      {/* ═══════════════════════════════════════════ */}
+      {/* PUBLICS */}
+      {/* ═══════════════════════════════════════════ */}
+      <section className="pt-20 pb-24 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection className="text-center mb-14">
+            <span className="section-label block mb-3">Nos solutions</span>
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
+              Pour chaque <span className="text-primary">structure</span>
             </h2>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {clientTypes.map((client, index) => {
-              const Icon = client.icon;
-              return (
-                <AnimatedSection key={index} delay={index * 0.1}>
-                  <div 
-                    id={client.id}
-                    className="border border-[hsl(var(--cream))]/20 p-8 hover:border-[hsl(var(--olive-light))] transition-colors group h-full flex flex-col cursor-pointer"
-                    onClick={() => scrollToSection('devis')}
+          <div className="flex flex-wrap justify-center gap-8">
+            {clientTypes.map((client) => (
+              <article
+                key={client.id}
+                id={client.id}
+                className="scroll-mt-28 w-full sm:w-[calc(50%-1rem)] lg:w-[calc((100%-4rem)/3)] flex flex-col border-brutal bg-[hsl(var(--cream))] transition-all duration-300 hover:-translate-y-1 hover:shadow-brutal-lg"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden border-b-[3px] border-foreground bg-secondary">
+                  <img src={client.image} alt={client.imageAlt} loading="lazy" className="w-full h-full object-cover" />
+                  <span className="absolute top-3 left-3 font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 border-brutal-thin bg-[hsl(var(--cream))] flex items-center gap-1.5">
+                    <client.icon className="w-3 h-3" /> {client.subtitle}
+                  </span>
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="font-display text-xl uppercase leading-[1.05] tracking-[-0.5px] mb-3">{client.title}</h3>
+                  <p className="text-sm text-foreground/70 leading-relaxed mb-5">{client.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {client.formats.map((format) => (
+                      <li key={format} className="flex items-start gap-2 text-sm text-foreground/80">
+                        <span className="mt-1.5 w-1.5 h-1.5 bg-primary flex-shrink-0" />
+                        {format}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to={client.to}
+                    className="mt-auto inline-flex items-center gap-2 font-mono-brand text-[11px] uppercase tracking-[2px] text-primary hover:gap-3 transition-all"
                   >
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 border border-[hsl(var(--olive-light))] flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-[hsl(var(--olive-light))]" />
-                      </div>
-                      <div>
-                        <h3 className="font-display text-xl uppercase tracking-[-0.5px]">{client.title}</h3>
-                        <p className="font-mono-brand text-[9px] uppercase tracking-[2px] text-[hsl(var(--cream))]/50">{client.subtitle}</p>
-                      </div>
-                    </div>
-
-                    <p className="text-[hsl(var(--cream))]/70 leading-relaxed mb-6 text-sm flex-1">
-                      {client.description}
-                    </p>
-
-                    <ul className="space-y-2 mb-6">
-                      {client.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-sm text-[hsl(var(--cream))]/60">
-                          <span className="w-1.5 h-1.5 bg-[hsl(var(--olive-light))] rounded-full flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="flex items-center gap-2 text-[hsl(var(--olive-light))] font-mono-brand text-[10px] uppercase tracking-[2px] group-hover:gap-3 transition-all mt-auto">
-                      En savoir plus <ArrowRight className="w-3.5 h-3.5" />
-                    </div>
-                  </div>
-                </AnimatedSection>
-              );
-            })}
+                    Voir la page dédiée <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -295,158 +283,91 @@ const Pro = () => {
       {/* ═══════════════════════════════════════════ */}
       {/* DÉROULEMENT */}
       {/* ═══════════════════════════════════════════ */}
-      <section className="py-20 px-4 md:px-8">
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
+      <section className="pt-10 pb-20 px-4 md:px-8 bg-secondary">
         <div className="max-w-5xl mx-auto">
-          <AnimatedSection>
-            <span className="section-label block mb-4">Comment ça marche</span>
-            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.9] tracking-[-1px] text-[hsl(var(--black))] mb-16">
-              Déroulement<br />
-              <span className="text-[hsl(var(--olive))]">d'un atelier</span>
+          <AnimatedSection className="text-center mb-14">
+            <span className="section-label block mb-3">Comment ça marche</span>
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
+              Déroulement <span className="text-primary">d'un atelier</span>
             </h2>
           </AnimatedSection>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-0">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { step: "01", title: "Accueil", duration: "10 min", desc: "Présentation du thème et des matériaux" },
-              { step: "02", title: "Démonstration", duration: "15-20 min", desc: "Explication des techniques pas à pas" },
-              { step: "03", title: "Création", duration: "1h — 2h30", desc: "Réalisation guidée avec accompagnement individuel" },
-              { step: "04", title: "Clôture", duration: "10 min", desc: "Photos de groupe, emballage, échanges" },
-            ].map((item, i) => (
-              <AnimatedSection key={i} delay={i * 0.15}>
-                <div className={`p-6 border-brutal bg-[hsl(var(--cream))] ${i > 0 ? 'md:-ml-[3px]' : ''} relative`}>
-                  <span className="font-display text-5xl text-[hsl(var(--olive))]/20 block mb-3">{item.step}</span>
-                  <h3 className="font-display text-lg uppercase tracking-[-0.5px] text-[hsl(var(--black))] mb-1">{item.title}</h3>
-                  <p className="font-mono-brand text-[9px] uppercase tracking-[2px] text-[hsl(var(--olive))] mb-3">{item.duration}</p>
-                  <p className="text-sm text-[hsl(var(--black))]/60 leading-relaxed">{item.desc}</p>
-                </div>
-              </AnimatedSection>
+              { step: "01", title: "Accueil", duration: "10 min", desc: "Présentation du thème, des plantes et des matériaux." },
+              { step: "02", title: "Récit et démonstration", duration: "15 à 20 min", desc: "L'histoire des plantes du jour, puis les gestes pas à pas." },
+              { step: "03", title: "Création", duration: "1h à 2h30", desc: "Réalisation guidée, avec un accompagnement individuel." },
+              { step: "04", title: "Clôture", duration: "10 min", desc: "Échanges, photos de groupe, chacun repart avec sa création." },
+            ].map((item) => (
+              <div key={item.step} className="p-6 border-brutal bg-[hsl(var(--cream))] -ml-[3px] -mt-[3px]">
+                <span className="font-display text-5xl text-primary/30 block mb-3">{item.step}</span>
+                <h3 className="font-display text-lg uppercase tracking-[-0.5px] mb-1">{item.title}</h3>
+                <p className="font-mono-brand text-[9px] uppercase tracking-[2px] text-primary mb-3">{item.duration}</p>
+                <p className="text-sm text-foreground/70 leading-relaxed">{item.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
+      <WaveDivider from="hsl(36,25%,88%)" to="hsl(36,33%,93%)" flip />
 
       {/* ═══════════════════════════════════════════ */}
-      {/* CTA ATELIERS PARTICULIERS */}
+      {/* TÉMOIGNAGES */}
       {/* ═══════════════════════════════════════════ */}
-      <section className="px-4 md:px-8 pb-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="border-brutal bg-[hsl(var(--green-pale))] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <p className="font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--olive))] mb-2">Particuliers</p>
-              <h3 className="font-display text-xl md:text-2xl uppercase tracking-[-0.5px] text-[hsl(var(--black))]">
-                Vous cherchez des ateliers créatifs ?
-              </h3>
-            </div>
-            <Link
-              to="/workshops"
-              className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--black))] inline-flex items-center gap-2 whitespace-nowrap"
-            >
-              Voir les ateliers <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════ */}
-      {/* FAQ */}
-      {/* ═══════════════════════════════════════════ */}
-      <section className="py-20 px-4 md:px-8 bg-[hsl(var(--cream-dark))]">
-        <div className="max-w-4xl mx-auto">
-          <AnimatedSection>
-            <span className="section-label block mb-4">FAQ</span>
-            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.9] tracking-[-1px] text-[hsl(var(--black))] mb-16">
-              Questions<br />
-              <span className="text-[hsl(var(--olive))]">fréquentes</span>
-            </h2>
-          </AnimatedSection>
-
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="border-brutal bg-[hsl(var(--cream))] p-6 md:p-8">
-                  <h3 className="font-display text-base md:text-lg uppercase tracking-[-0.5px] text-[hsl(var(--black))] mb-3 flex items-start gap-3">
-                    <span className="font-mono-brand text-[10px] text-[hsl(var(--olive))] mt-1 shrink-0">0{i + 1}</span>
-                    {faq.q}
-                  </h3>
-                  <p className="text-sm md:text-base text-[hsl(var(--black))]/70 leading-relaxed pl-8">{faq.a}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
+      <section className="pt-10 pb-20 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto">
+          <Testimonials />
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════ */}
       {/* SECTEURS SPÉCIALISÉS */}
       {/* ═══════════════════════════════════════════ */}
-      <section className="py-20 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <AnimatedSection>
-            <span className="section-label block mb-4">Pages dédiées par secteur</span>
-            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.9] tracking-[-1px] text-[hsl(var(--black))] mb-12">
-              Vous êtes<br />
-              <span className="text-[hsl(var(--olive))]">d'un secteur spécifique</span>
+      <section className="pb-20 px-4 md:px-8">
+        <div className="max-w-5xl mx-auto border-brutal bg-[hsl(var(--cream))] p-8 md:p-10">
+          <span className="section-label block mb-3">Votre secteur</span>
+          <h2 className="font-display text-xl md:text-2xl uppercase leading-[1.05] tracking-[-0.5px] mb-6">
+            Des pages dédiées à votre métier
+          </h2>
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+            {sectorPages.map((s) => (
+              <li key={s.to}>
+                <Link to={s.to} className="group flex items-start gap-2 text-sm leading-snug hover:text-primary transition-colors">
+                  <ArrowRight className="w-3.5 h-3.5 mt-0.5 text-primary flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                  <span>{s.label}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════ */}
+      {/* FAQ */}
+      {/* ═══════════════════════════════════════════ */}
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
+      <section className="pt-10 pb-20 px-4 md:px-8 bg-secondary">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection className="text-center mb-12">
+            <span className="section-label block mb-3">FAQ</span>
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
+              Questions <span className="text-primary">fréquentes</span>
             </h2>
           </AnimatedSection>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-0">
-            {[
-              { to: "/hortitherapie-hopital-clinique", label: "Hôpital, clinique, hortithérapie", desc: "Oncologie, gériatrie, psychiatrie, jardin thérapeutique." },
-              { to: "/animation-nature-universite-bde", label: "Université, grande école, BDE", desc: "Semaine DD, intégration, QVT étudiante, conférences." },
-              { to: "/animation-nature-bailleurs-sociaux", label: "Bailleur social, ESH, ANRU", desc: "Pied d'immeuble, jardin partagé, politique de la ville." },
-              { to: "/mediation-vegetale-architectes-paysagistes", label: "Architecte, paysagiste, MOE", desc: "Concertation, inauguration, sous-traitance médiation." },
-              { to: "/atelier-vegetal-parentalite-naissance", label: "Maternité, PMI, parentalité", desc: "Naissance, lieu d'accueil parents-enfants, sage-femme." },
-              { to: "/animation-vegetale-hotel-evenementiel", label: "Hôtel, lieu événementiel premium", desc: "Séminaire client, lobby, lancement, mariage privé." },
-              { to: "/balade-ethnobotanique-office-tourisme", label: "Office de tourisme, patrimoine", desc: "Programmation saisonnière, JEP, Rendez-vous aux jardins." },
-              { to: "/atelier-vegetal-cabinet-rh-coach", label: "Cabinet RH, coach, consultant·e", desc: "Co-animation, marque blanche, apport d'affaires." },
-              { to: "/marches-publics", label: "Marchés publics et collectivités", desc: "SIRET, RC Pro, Chorus Pro, dossier administratif." },
-            ].map((s, i) => (
-              <AnimatedSection key={s.to} delay={i * 60} className="h-full">
-                <Link
-                  to={s.to}
-                  className="group h-full p-6 md:p-7 border-[3px] border-[hsl(var(--black))] -mt-[3px] -ml-[3px] flex flex-col bg-[hsl(var(--cream))] hover:bg-[hsl(var(--olive))] transition-colors"
-                >
-                  <h3 className="font-display text-base md:text-lg uppercase leading-[1.15] mb-3 text-[hsl(var(--black))]">
-                    {s.label}
-                  </h3>
-                  <p className="text-sm leading-[1.6] text-[hsl(var(--black))]/70 flex-1">{s.desc}</p>
-                  <span className="mt-4 inline-flex items-center gap-2 font-mono-brand text-[11px] tracking-[2px] uppercase text-[hsl(var(--black))]">
-                    Voir la page <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
-              </AnimatedSection>
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <div key={faq.q} className="border-brutal bg-[hsl(var(--cream))] p-6 md:p-8">
+                <h3 className="font-display text-base md:text-lg uppercase tracking-[-0.5px] mb-3 flex items-start gap-3">
+                  <span className="font-mono-brand text-[10px] text-primary mt-1 shrink-0">0{i + 1}</span>
+                  {faq.q}
+                </h3>
+                <p className="text-sm md:text-base text-foreground/70 leading-relaxed pl-8">{faq.a}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* ═══════════════════════════════════════════ */}
-      {/* PREUVE SOCIALE — logos + témoignages */}
-      {/* ═══════════════════════════════════════════ */}
-      <section className="py-20 px-4 md:px-8 bg-[hsl(var(--green-pale))]">
-        <div className="max-w-7xl mx-auto">
-          <AnimatedSection>
-            <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4 text-center">Ils nous font confiance</span>
-            <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] uppercase leading-[0.9] tracking-[-1px] text-[hsl(var(--black))] mb-12 text-center">
-              Plus de 50 structures<br />
-              <span className="text-[hsl(var(--olive))]">accompagnées</span>
-            </h2>
-          </AnimatedSection>
-          <SocialProofBar />
-        </div>
-      </section>
-
-      <section className="py-20 px-4 md:px-8 bg-[hsl(var(--cream))]">
-        <div className="max-w-6xl mx-auto">
-          <AnimatedSection>
-            <span className="font-mono-brand text-[10px] uppercase tracking-[3px] text-[hsl(var(--olive))] block mb-4 text-center">Ce qu'elles et ils en disent</span>
-            <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] uppercase leading-[0.9] tracking-[-1px] text-[hsl(var(--black))] mb-12 text-center">
-              Témoignages clients
-            </h2>
-          </AnimatedSection>
-          <Testimonials />
-        </div>
-      </section>
+      <WaveDivider from="hsl(36,25%,88%)" to="hsl(36,33%,93%)" flip />
 
       {/* ═══════════════════════════════════════════ */}
       {/* DEVIS FORM */}
