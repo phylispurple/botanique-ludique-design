@@ -33,6 +33,7 @@ import recycledPaperImage from "@/assets/workshop-recycled-paper.jpg";
 import papierRecycleFeuilles from "@/assets/gallery-papier-recycle-feuilles.webp";
 import papierRecycleSechage from "@/assets/gallery-papier-recycle-sechage.webp";
 import herbierToiles from "@/assets/gallery-herbier-toiles.webp";
+import cuirKombucha from "@/assets/workshop-cuir-kombucha.webp";
 import plantChalkImage from "@/assets/workshop-plant-chalk.jpg";
 import teintureIndigoImage from "@/assets/gallery-teinture-1.webp";
 import teintureBocalIndigo from "@/assets/blog-carousel-bocal-indigo.jpg";
@@ -173,8 +174,8 @@ const workshops: Workshop[] = [
     description: "Programme immersif de 4 séances pour explorer la création à partir de matières végétales. Créez du cuir de kombucha (SCOBY), fabriquez du papier recyclé agrémenté de feuilles et fleurs pressées, et composez des tableaux botaniques avec des feuilles d'automne séchées et stabilisées à la glycérine. Une exploration complète des possibilités créatives offertes par le monde végétal.",
     duration: "4 séances × 2h30",
     public: "Adultes",
-    image: papierRecycleFeuilles,
-    images: [papierRecycleFeuilles, papierRecycleSechage],
+    image: cuirKombucha,
+    images: [cuirKombucha, papierRecycleFeuilles, papierRecycleSechage],
     icon: Palette,
     category: "textiles",
   },
