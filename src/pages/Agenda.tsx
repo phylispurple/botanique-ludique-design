@@ -187,28 +187,6 @@ const upcomingEvents: UpcomingEvent[] = [
       },
     },
   },
-  {
-    id: "bougies-fleurs-sechees-maisons-alfort-janvier",
-    name: "Atelier Bougies & fleurs séchées",
-    date: "Samedi 23 janvier 2027",
-    parsedDate: d(2027, 1, 23),
-    time: "Après-midi, horaire à venir",
-    location: "Maison de l'Environnement, Maisons-Alfort (94)",
-    audience: "Tout public",
-    spots: "",
-    description:
-      "Fleurs et feuilles séchées prises dans la cire : un atelier pour composer sa propre bougie botanique, et découvrir au passage d'où viennent les plantes que l'on fait sécher.",
-    linkType: "coming",
-    schema: {
-      startDate: "2027-01-23",
-      endDate: "2027-01-23",
-      location: {
-        "@type": "Place",
-        name: "Maison de l'Environnement de Maisons-Alfort",
-        address: { "@type": "PostalAddress", streetAddress: "2 avenue Foch", addressLocality: "Maisons-Alfort", postalCode: "94700", addressRegion: "Île-de-France", addressCountry: "FR" },
-      },
-    },
-  },
 ];
 
 const pastEvents: PastEvent[] = [
