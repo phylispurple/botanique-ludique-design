@@ -16,6 +16,9 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import WaveDivider from "@/components/WaveDivider";
+import AnimatedSection from "@/components/AnimatedSection";
+import heroAgenda from "@/assets/gallery-atelier-epices-table.webp";
 
 type EventLink =
   | { linkType: "internal"; internalUrl: string; buttonLabel?: string }
@@ -321,7 +324,6 @@ const pastEvents: PastEvent[] = [
   },
 ];
 
-const dateColors = ["bg-yellow", "bg-green-pale", "bg-orange-light", "bg-blue-light", "bg-yellow", "bg-green-pale"];
 const MONTHS_FR = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
 const DAYS_FR = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 const ARCHIVES_PER_PAGE = 4;
@@ -401,32 +403,31 @@ const Agenda = () => {
       <Navigation />
 
       {/* HERO */}
-      <section className="pt-32 pb-16 px-4 bg-green relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: "radial-gradient(circle, hsl(var(--foreground)) 1.5px, transparent 1.5px)",
-            backgroundSize: "24px 24px",
-          }}
-          aria-hidden
-        />
-        <div className="container mx-auto max-w-5xl relative">
-          <div className="inline-flex items-center gap-2 border-brutal bg-yellow px-4 py-2 mb-8 shadow-brutal">
-            <CalendarIcon className="w-4 h-4" />
-            <span className="font-mono text-[11px] uppercase tracking-[2px] font-bold">Agenda 2026</span>
-          </div>
-          <h1 className="font-display text-[clamp(2.5rem,8vw,6rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
-            Prochains<br />
-            <span className="bg-yellow text-foreground px-3 inline-block -rotate-1 border-brutal shadow-brutal">événements</span>
-          </h1>
-          <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl leading-relaxed">
-            Ateliers, stages et balades botaniques à Paris et en Île-de-France. Inscrivez-vous pour partager un moment avec le vivant.
-          </p>
+      <section className="relative overflow-hidden px-6 pt-24 pb-24 md:pt-32 md:pb-28">
+        <div className="absolute inset-0 bg-foreground">
+          <img src={heroAgenda} alt="" className="w-full h-full object-cover opacity-35" />
+        </div>
+        <div className="absolute inset-0 bg-foreground/40" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <AnimatedSection>
+            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[3px] text-olive-light mb-5">
+              Ateliers · Balades · Rencontres
+            </p>
+            <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+              Prochains<br />
+              <span className="text-olive-light">événements</span>
+            </h1>
+            <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[650px] mx-auto leading-relaxed">
+              Ateliers, stages et balades botaniques partout en Île-de-France. Inscrivez-vous pour partager un moment avec le vivant.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
+      <WaveDivider from="hsl(0,0%,10%)" to="hsl(36,33%,93%)" />
+
       {/* TOGGLE VUE */}
-      <section className="pt-12 px-4 bg-cream">
+      <section className="pt-6 px-4 bg-cream">
         <div className="container mx-auto max-w-5xl flex justify-between items-end gap-4 flex-wrap">
           <div>
             <span className="font-mono text-xs uppercase tracking-[2px] text-primary">/ 01</span>
@@ -438,7 +439,7 @@ const Agenda = () => {
             <button
               onClick={() => setView("list")}
               className={`flex items-center gap-2 px-4 py-3 font-mono text-[11px] uppercase tracking-[1.5px] transition-colors border-r-[3px] border-foreground ${
-                view === "list" ? "bg-foreground text-primary-foreground" : "bg-cream hover:bg-yellow"
+                view === "list" ? "bg-foreground text-primary-foreground" : "bg-cream hover:bg-[hsl(var(--green-pale))]"
               }`}
             >
               <List className="w-3.5 h-3.5" />
@@ -447,7 +448,7 @@ const Agenda = () => {
             <button
               onClick={() => setView("calendar")}
               className={`flex items-center gap-2 px-4 py-3 font-mono text-[11px] uppercase tracking-[1.5px] transition-colors ${
-                view === "calendar" ? "bg-foreground text-primary-foreground" : "bg-cream hover:bg-yellow"
+                view === "calendar" ? "bg-foreground text-primary-foreground" : "bg-cream hover:bg-[hsl(var(--green-pale))]"
               }`}
             >
               <CalendarIcon className="w-3.5 h-3.5" />
@@ -480,14 +481,14 @@ const Agenda = () => {
               </div>
             )}
             <div className="space-y-0">
-              {upcomingEvents.map((event, index) => (
+              {upcomingEvents.map((event) => (
                 <article
                   key={event.id}
                   className="border-brutal bg-cream -mt-[3px] hover:-translate-y-1 hover:shadow-brutal transition-all"
                 >
                   <div className="flex flex-col md:flex-row">
                     <div
-                      className={`md:w-56 shrink-0 ${dateColors[index % dateColors.length]} border-b-[3px] md:border-b-0 md:border-r-[3px] border-foreground p-6 flex flex-col justify-center`}
+                      className={`md:w-56 shrink-0 bg-secondary border-b-[3px] md:border-b-0 md:border-r-[3px] border-foreground p-6 flex flex-col justify-center`}
                     >
                       <span className="font-mono text-[10px] uppercase tracking-[2px] text-foreground/60 mb-2">Date</span>
                       <span className="font-display text-lg uppercase leading-tight tracking-tight">{event.date}</span>
@@ -541,7 +542,7 @@ const Agenda = () => {
                             href={event.externalUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="ml-auto inline-flex items-center gap-2 bg-yellow text-foreground border-brutal shadow-brutal px-5 py-3 font-display uppercase text-xs tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all"
+                            className="ml-auto inline-flex items-center gap-2 bg-primary text-primary-foreground border-brutal shadow-brutal px-5 py-3 font-display uppercase text-xs tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all"
                           >
                             {event.buttonLabel || "S'inscrire"}
                             <ExternalLink className="w-3.5 h-3.5" />
@@ -606,7 +607,7 @@ const Agenda = () => {
           <div className="container mx-auto max-w-5xl">
             <div className="border-brutal bg-cream shadow-brutal">
               {/* Header mois */}
-              <div className="flex items-center justify-between border-b-[3px] border-foreground p-4 bg-yellow">
+              <div className="flex items-center justify-between border-b-[3px] border-foreground p-4 bg-secondary">
                 <button
                   onClick={() => setCalMonth(new Date(calMonth.getFullYear(), calMonth.getMonth() - 1, 1))}
                   className="border-[3px] border-foreground bg-cream w-10 h-10 flex items-center justify-center hover:bg-foreground hover:text-primary-foreground transition-colors"
@@ -672,7 +673,7 @@ const Agenda = () => {
                                   ? ev.externalUrl
                                   : undefined;
                               const inner = (
-                                <span className="block bg-yellow border-[2px] border-foreground px-1.5 py-1 font-mono text-[9px] md:text-[10px] uppercase tracking-tight leading-tight truncate">
+                                <span className="block bg-primary text-primary-foreground border-[2px] border-foreground px-1.5 py-1 font-mono text-[9px] md:text-[10px] uppercase tracking-tight leading-tight truncate">
                                   {ev.name.split(":")[0].split(",")[0]}
                                 </span>
                               );
@@ -712,46 +713,10 @@ const Agenda = () => {
         </section>
       )}
 
-      {/* CTA SUR MESURE */}
-      <section className="py-20 px-4 bg-foreground text-primary-foreground relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: "radial-gradient(circle, hsl(var(--primary-foreground)) 1.5px, transparent 1.5px)",
-            backgroundSize: "24px 24px",
-          }}
-          aria-hidden
-        />
-        <div className="container mx-auto max-w-4xl text-center relative">
-          <span className="font-mono text-xs uppercase tracking-[2px] text-yellow">/ Sur mesure</span>
-          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2 mb-6">
-            Organiser un<br />
-            <span className="bg-yellow text-foreground px-3 inline-block -rotate-1 border-brutal">atelier ?</span>
-          </h2>
-          <p className="font-body text-lg text-primary-foreground/80 mb-10 max-w-xl mx-auto">
-            Nous organisons des ateliers sur mesure pour les entreprises, collectivités, écoles et EHPAD partout en Île-de-France.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-yellow text-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all"
-            >
-              <Mail className="w-4 h-4" />
-              Nous écrire
-            </Link>
-            <Link
-              to="/pro"
-              className="inline-flex items-center gap-2 bg-cream text-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all"
-            >
-              Offres professionnelles
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
 
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
       {/* ARCHIVES */}
-      <section className="py-20 px-4 bg-cream">
+      <section className="pt-10 pb-20 px-4 bg-secondary">
         <div className="container mx-auto max-w-5xl">
           <div className="mb-10 flex justify-between items-end gap-4 flex-wrap">
             <div>
@@ -819,7 +784,7 @@ const Agenda = () => {
                   key={i}
                   onClick={() => setArchivePage(i)}
                   className={`border-[3px] border-foreground -ml-[3px] w-12 h-12 font-display text-sm uppercase transition-colors ${
-                    archivePage === i ? "bg-foreground text-primary-foreground" : "bg-cream hover:bg-yellow"
+                    archivePage === i ? "bg-foreground text-primary-foreground" : "bg-cream hover:bg-[hsl(var(--green-pale))]"
                   }`}
                 >
                   {String(i + 1).padStart(2, "0")}
@@ -835,6 +800,45 @@ const Agenda = () => {
               </button>
             </div>
           )}
+        </div>
+      </section>
+
+      <WaveDivider from="hsl(36,25%,88%)" to="hsl(0,0%,10%)" flip />
+      {/* CTA SUR MESURE */}
+      <section className="pt-10 pb-24 px-4 bg-foreground text-primary-foreground relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "radial-gradient(circle, hsl(var(--primary-foreground)) 1.5px, transparent 1.5px)",
+            backgroundSize: "24px 24px",
+          }}
+          aria-hidden
+        />
+        <div className="container mx-auto max-w-4xl text-center relative">
+          <span className="font-mono text-xs uppercase tracking-[2px] text-olive-light">/ Sur mesure</span>
+          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mt-2 mb-6">
+            Organiser un<br />
+            <span className="text-olive-light">atelier&nbsp;?</span>
+          </h2>
+          <p className="font-body text-lg text-primary-foreground/80 mb-10 max-w-xl mx-auto">
+            Nous organisons des ateliers sur mesure pour les entreprises, collectivités, écoles et EHPAD partout en Île-de-France.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all"
+            >
+              <Mail className="w-4 h-4" />
+              Nous écrire
+            </Link>
+            <Link
+              to="/pro"
+              className="inline-flex items-center gap-2 bg-cream text-foreground border-brutal shadow-brutal px-6 py-4 font-display uppercase text-sm tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-hover transition-all"
+            >
+              Offres professionnelles
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
