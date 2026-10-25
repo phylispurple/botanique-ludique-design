@@ -32,6 +32,7 @@ import floralWatersImage from "@/assets/workshop-floral-waters.jpg";
 import recycledPaperImage from "@/assets/workshop-recycled-paper.jpg";
 import papierRecycleFeuilles from "@/assets/gallery-papier-recycle-feuilles.webp";
 import papierRecycleSechage from "@/assets/gallery-papier-recycle-sechage.webp";
+import herbierToiles from "@/assets/gallery-herbier-toiles.webp";
 import plantChalkImage from "@/assets/workshop-plant-chalk.jpg";
 import teintureIndigoImage from "@/assets/gallery-teinture-1.webp";
 import teintureBocalIndigo from "@/assets/blog-carousel-bocal-indigo.jpg";
@@ -235,9 +236,9 @@ const workshops: Workshop[] = [
     description: "Constituez votre collection botanique personnelle selon les méthodes des naturalistes. Apprenez à sécher, presser et conserver les plantes tout en développant votre regard d'observation et votre compréhension des espèces locales.",
     duration: "2h",
     public: "Tout public, enfants dès 8 ans",
-    image: "/videos/workshop-fresque-herbier.mp4",
+    image: herbierToiles,
+    video: "/videos/workshop-fresque-herbier.mp4",
     icon: Leaf,
-    type: "video",
     category: "floral",
   },
   {
