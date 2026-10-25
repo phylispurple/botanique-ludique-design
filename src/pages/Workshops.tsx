@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FloatingIllustrations from "@/components/FloatingIllustrations";
+import WaveDivider from "@/components/WaveDivider";
+import heroAteliers from "@/assets/gallery-workshop-group.webp";
 import WorkshopFilters, { WorkshopCategory } from "@/components/WorkshopFilters";
 import BackToTop from "@/components/BackToTop";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -332,8 +333,8 @@ const workshops: Workshop[] = [
 
 const categoryTitles: Record<WorkshopCategory, string> = {
   all: "Tous les ateliers",
-  textiles: "Créations Textiles & Teintures",
   jardinage: "Jardinage & Plantations",
+  textiles: "Créations Textiles & Teintures",
   floral: "Art Floral & Compositions",
   artisanat: "Artisanat & Techniques Ancestrales",
   "bien-etre": "Bien-être & Aromathérapie",
@@ -341,12 +342,14 @@ const categoryTitles: Record<WorkshopCategory, string> = {
 
 const categoryLabels: Record<WorkshopCategory, string> = {
   all: "Tous",
-  textiles: "Textiles",
   jardinage: "Jardinage",
+  textiles: "Textiles",
   floral: "Floral",
   artisanat: "Artisanat",
   "bien-etre": "Bien-être",
 };
+
+const bandColor = (i: number) => (i % 2 === 0 ? "hsl(36,33%,93%)" : "hsl(36,25%,88%)");
 
 const Workshops = () => {
   const [activeCategory, setActiveCategory] = useState<WorkshopCategory>("all");
@@ -413,29 +416,37 @@ const Workshops = () => {
           { name: "Ateliers", url: "https://botaniqueludique.com/workshops" }
         ]}}
       />
-      <FloatingIllustrations />
       <Navigation />
 
       {/* ===== HERO ===== */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative overflow-hidden px-6 pt-24 pb-24 md:pt-32 md:pb-28">
+        <div className="absolute inset-0 bg-foreground">
+          <img src={heroAteliers} alt="" className="w-full h-full object-cover opacity-35" />
+        </div>
+        <div className="absolute inset-0 bg-foreground/40" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <AnimatedSection>
-            <span className="section-label block mb-3">Ateliers · Créations · Savoirs</span>
-            <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mb-6">
-              Ateliers Botaniques
-            </h1>
-            <p className="font-body text-xl italic text-foreground/70 max-w-[650px] mx-auto mb-4">
-              Des expériences botaniques pour éveiller vos sens à Paris, Chatou, Le Pecq, Nanterre, Boulogne.
+            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[3px] text-olive-light mb-5">
+              Ateliers · Créations · Savoirs
             </p>
-            <p className="text-base text-foreground/60 leading-relaxed max-w-2xl mx-auto">
+            <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+              Ateliers<br />
+              <span className="text-olive-light">Botaniques</span>
+            </h1>
+            <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[650px] mx-auto mb-4 leading-relaxed">
+              Des expériences botaniques pour éveiller vos sens, partout en Île-de-France.
+            </p>
+            <p className="font-body text-[15px] md:text-base text-primary-foreground/70 max-w-2xl mx-auto leading-relaxed">
               Expériences botaniques immersives pour particuliers et groupes en Île-de-France. Ateliers disponibles partout en Île-de-France : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94) et Val-d'Oise (95). Chaque atelier est conçu pour vous reconnecter avec la nature à travers la créativité manuelle et la pratique consciente.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
+      <WaveDivider from="hsl(0,0%,10%)" to="hsl(36,33%,93%)" />
+
       {/* ===== FILTRES ===== */}
-      <section className="px-6">
+      <section className="px-6 pt-6">
         <div className="max-w-5xl mx-auto">
           <WorkshopFilters
             activeCategory={activeCategory}
@@ -446,11 +457,15 @@ const Workshops = () => {
       </section>
 
       {/* ===== ATELIERS ===== */}
-      <main className="pb-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="space-y-28">
-            {Object.entries(groupedWorkshops).map(([category, categoryWorkshops]) => (
-              <section key={category} className="scroll-mt-32">
+      <main>
+          <div>
+            {Object.entries(groupedWorkshops).map(([category, categoryWorkshops], catIndex) => (
+              <div key={category} style={{ backgroundColor: bandColor(catIndex) }}>
+              {catIndex > 0 && (
+                <WaveDivider from={bandColor(catIndex - 1)} to={bandColor(catIndex)} flip={catIndex % 2 === 0} />
+              )}
+              <section className="scroll-mt-32 px-6 pt-16 pb-24">
+              <div className="max-w-6xl mx-auto">
                 <AnimatedSection className="text-center mb-14">
                   <span className="section-label block mb-3">{categoryLabels[category as WorkshopCategory]}</span>
                   <h2 className="font-display text-[clamp(1.8rem,4vw,2.5rem)] uppercase leading-[0.95] tracking-[-1px]">
@@ -467,7 +482,7 @@ const Workshops = () => {
                     >
                       <div
                         id={workshop.title.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, "-")}
-                        className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center border-brutal p-6 md:p-8 bg-[hsl(var(--cream))] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300 group`}
+                        className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center border-brutal shadow-brutal p-6 md:p-8 bg-[hsl(var(--cream))] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300 group`}
                       >
                         <div className={`${index % 2 === 1 ? "md:order-2" : ""} relative`}>
                           {/* Badges */}
@@ -571,13 +586,18 @@ const Workshops = () => {
                     </AnimatedSection>
                   ))}
                 </div>
+              </div>
               </section>
+              </div>
             ))}
           </div>
 
           {/* ===== CTA PRO ===== */}
-          <AnimatedSection className="mt-20">
-            <div className="border-brutal p-10 md:p-14 text-center bg-[hsl(var(--cream))] shadow-brutal-lg">
+          <WaveDivider from={bandColor(Object.keys(groupedWorkshops).length - 1)} to="hsl(0,0%,10%)" flip />
+          <div className="bg-foreground px-6 pt-10 pb-24">
+          <div className="max-w-6xl mx-auto">
+          <AnimatedSection>
+            <div className="relative border-brutal p-10 md:p-14 text-center bg-[hsl(var(--cream))] shadow-brutal-lg">
               <div className="absolute top-0 left-0 right-0 h-1.5 bg-primary" />
               <span className="section-label block mb-3">Professionnels</span>
               <h3 className="font-display text-2xl md:text-3xl uppercase leading-[0.95] tracking-[-1px] mb-4">
@@ -594,7 +614,8 @@ const Workshops = () => {
               </Link>
             </div>
           </AnimatedSection>
-        </div>
+          </div>
+          </div>
       </main>
 
       <BackToTop />

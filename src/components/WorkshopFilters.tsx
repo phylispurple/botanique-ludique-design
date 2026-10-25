@@ -16,8 +16,8 @@ interface WorkshopFiltersProps {
 
 const categories = [
   { id: "all" as WorkshopCategory, label: "Tous", icon: null },
-  { id: "textiles" as WorkshopCategory, label: "Textiles", icon: Palette },
   { id: "jardinage" as WorkshopCategory, label: "Jardinage", icon: Sprout },
+  { id: "textiles" as WorkshopCategory, label: "Textiles", icon: Palette },
   { id: "floral" as WorkshopCategory, label: "Art Floral", icon: Flower2 },
   { id: "artisanat" as WorkshopCategory, label: "Artisanat", icon: Hammer },
   { id: "bien-etre" as WorkshopCategory, label: "Bien-être", icon: Droplets },
