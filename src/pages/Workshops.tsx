@@ -34,6 +34,7 @@ import papierRecycleFeuilles from "@/assets/gallery-papier-recycle-feuilles.webp
 import papierRecycleSechage from "@/assets/gallery-papier-recycle-sechage.webp";
 import herbierToiles from "@/assets/gallery-herbier-toiles.webp";
 import cuirKombucha from "@/assets/workshop-cuir-kombucha.webp";
+import tableauFeuillesAutomne from "@/assets/gallery-tableau-feuilles-automne.webp";
 import plantChalkImage from "@/assets/workshop-plant-chalk.jpg";
 import teintureIndigoImage from "@/assets/gallery-teinture-1.webp";
 import teintureBocalIndigo from "@/assets/blog-carousel-bocal-indigo.jpg";
@@ -175,7 +176,7 @@ const workshops: Workshop[] = [
     duration: "4 séances × 2h30",
     public: "Adultes",
     image: cuirKombucha,
-    images: [cuirKombucha, papierRecycleFeuilles, papierRecycleSechage],
+    images: [cuirKombucha, papierRecycleFeuilles, papierRecycleSechage, tableauFeuillesAutomne],
     icon: Palette,
     category: "textiles",
   },
@@ -238,6 +239,7 @@ const workshops: Workshop[] = [
     duration: "2h",
     public: "Tout public, enfants dès 8 ans",
     image: herbierToiles,
+    images: [herbierToiles, tableauFeuillesAutomne],
     video: "/videos/workshop-fresque-herbier.mp4",
     icon: Leaf,
     category: "floral",
@@ -504,16 +506,18 @@ const Workshops = () => {
                           {workshop.video && workshop.type !== "video" ? (
                             <Carousel className="w-full">
                               <CarouselContent>
-                                <CarouselItem>
-                                  <div className="overflow-hidden border-brutal">
-                                    <img
-                                      src={workshop.image}
-                                      alt={`Atelier ${workshop.title}`}
-                                      className="w-full transition-transform duration-700 group-hover:scale-105"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                </CarouselItem>
+                                {(workshop.images ?? [workshop.image]).map((src, i) => (
+                                  <CarouselItem key={src}>
+                                    <div className="overflow-hidden border-brutal">
+                                      <img
+                                        src={src}
+                                        alt={`Atelier ${workshop.title}${i > 0 ? `, photo ${i + 1}` : ""}`}
+                                        className="w-full transition-transform duration-700 group-hover:scale-105"
+                                        loading="lazy"
+                                      />
+                                    </div>
+                                  </CarouselItem>
+                                ))}
                                 <CarouselItem>
                                   <div className="overflow-hidden border-brutal">
                                     <video

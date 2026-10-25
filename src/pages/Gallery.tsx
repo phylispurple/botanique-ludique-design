@@ -56,6 +56,8 @@ import kokedamaCollection from "@/assets/gallery-kokedama-collection.jpg";
 import papierRecycleFeuilles from "@/assets/gallery-papier-recycle-feuilles.webp";
 import papierRecycleSechage from "@/assets/gallery-papier-recycle-sechage.webp";
 import herbierToiles from "@/assets/gallery-herbier-toiles.webp";
+import tableauFeuillesAutomne from "@/assets/gallery-tableau-feuilles-automne.webp";
+import cuirKombucha from "@/assets/workshop-cuir-kombucha.webp";
 
 
 
@@ -93,6 +95,8 @@ const Gallery = () => {
   const items = [
     { src: epicesSachets1, alt: "Participants composant leur sachet senteur avec des épices entières lors de l'atelier Sur la route des épices", caption: "Atelier Sur la route des épices, Fête de la Science, bibliothèque Choiseul, Versailles", type: "image" },
     { src: epicesSachets2, alt: "Sachets senteur terminés et bols d'épices (cannelle, girofle, anis étoilé, cardamome) sur la table d'atelier", caption: "Sachets senteur aux épices, Fête de la Science 2026, Versailles", type: "image" },
+    { src: tableauFeuillesAutomne, alt: "Tableau de feuilles d'automne et de fleurs pressées collées sur une toile : érable rouge, feuilles pourpres, pensées et marguerite", caption: "Tableau de feuilles d'automne pressées sur toile", type: "image" },
+    { src: cuirKombucha, alt: "Bandes de cuir végétal de kombucha séchées, brun ambré, posées à côté d'une paire de ciseaux", caption: "Cycle matières végétales, cuir de kombucha séché", type: "image" },
     { src: herbierToiles, alt: "Trois toiles d'herbier posées contre une fenêtre : fougère, achillée, graminées et feuilles de monnaie-du-pape pressées, avec leurs étiquettes manuscrites", caption: "Atelier herbier, planches de plantes pressées sur toile", type: "image" },
     { src: papierRecycleFeuilles, alt: "Feuilles de papier recyclé fait main en train de sécher : pulpe teintée rose, vert d'eau, bleu et crème, parsemée de pétales et de fragments de plantes", caption: "Atelier papier recyclé, feuilles colorées aux pétales en train de sécher", type: "image" },
     { src: papierRecycleSechage, alt: "Longue table d'atelier couverte de feuilles de papier recyclé fait main qui sèchent : rose, vert, bleu, beige et blanc parsemé de pétales", caption: "Atelier papier recyclé, les feuilles sèchent sur la table", type: "image" },
