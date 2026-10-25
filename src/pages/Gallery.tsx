@@ -58,6 +58,7 @@ import papierRecycleSechage from "@/assets/gallery-papier-recycle-sechage.webp";
 import herbierToiles from "@/assets/gallery-herbier-toiles.webp";
 import tableauFeuillesAutomne from "@/assets/gallery-tableau-feuilles-automne.webp";
 import cuirKombucha from "@/assets/workshop-cuir-kombucha.webp";
+import teintureTshirtsTable from "@/assets/gallery-teinture-tshirts-table.webp";
 
 
 
@@ -95,6 +96,7 @@ const Gallery = () => {
   const items = [
     { src: epicesSachets1, alt: "Participants composant leur sachet senteur avec des épices entières lors de l'atelier Sur la route des épices", caption: "Atelier Sur la route des épices, Fête de la Science, bibliothèque Choiseul, Versailles", type: "image" },
     { src: epicesSachets2, alt: "Sachets senteur terminés et bols d'épices (cannelle, girofle, anis étoilé, cardamome) sur la table d'atelier", caption: "Sachets senteur aux épices, Fête de la Science 2026, Versailles", type: "image" },
+    { src: teintureTshirtsTable, alt: "Table d'atelier de teinture végétale : tee-shirts tie and dye violet, vert, rose et ocre, bols de pigments, pinceaux et passoire", caption: "Atelier teinture végétale, tee-shirts tie and dye aux pigments naturels", type: "image" },
     { src: tableauFeuillesAutomne, alt: "Tableau de feuilles d'automne et de fleurs pressées collées sur une toile : érable rouge, feuilles pourpres, pensées et marguerite", caption: "Tableau de feuilles d'automne pressées sur toile", type: "image" },
     { src: cuirKombucha, alt: "Bandes de cuir végétal de kombucha séchées, brun ambré, posées à côté d'une paire de ciseaux", caption: "Cycle matières végétales, cuir de kombucha séché", type: "image" },
     { src: herbierToiles, alt: "Trois toiles d'herbier posées contre une fenêtre : fougère, achillée, graminées et feuilles de monnaie-du-pape pressées, avec leurs étiquettes manuscrites", caption: "Atelier herbier, planches de plantes pressées sur toile", type: "image" },

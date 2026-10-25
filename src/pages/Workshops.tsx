@@ -8,7 +8,7 @@ import BackToTop from "@/components/BackToTop";
 import AnimatedSection from "@/components/AnimatedSection";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
-import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer } from "lucide-react";
+import { Leaf, Droplets, Flower2, Palette, Sprout, Sparkles, Hammer, ChevronLeft, ChevronRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link, useLocation } from "react-router-dom";
 import dyeingAsset from "@/assets/gallery-teinture-vegetale-workshop.jpg";
@@ -35,6 +35,7 @@ import papierRecycleSechage from "@/assets/gallery-papier-recycle-sechage.webp";
 import herbierToiles from "@/assets/gallery-herbier-toiles.webp";
 import cuirKombucha from "@/assets/workshop-cuir-kombucha.webp";
 import tableauFeuillesAutomne from "@/assets/gallery-tableau-feuilles-automne.webp";
+import teintureTshirtsTable from "@/assets/gallery-teinture-tshirts-table.webp";
 import plantChalkImage from "@/assets/workshop-plant-chalk.jpg";
 import teintureIndigoImage from "@/assets/gallery-teinture-1.webp";
 import teintureBocalIndigo from "@/assets/blog-carousel-bocal-indigo.jpg";
@@ -47,12 +48,35 @@ import terrariumEnfantsFabrication from "@/assets/gallery-terrarium-enfants-fabr
 const dyeingImage = dyeingAsset;
 const kokedamaWorkshopImage = kokedamaAsset;
 
+const SlideArrows = ({ onPrev, onNext }: { onPrev: () => void; onNext: () => void }) => (
+  <>
+    <button
+      type="button"
+      onClick={onPrev}
+      aria-label="Photo précédente"
+      className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center border-brutal-thin bg-[hsl(var(--cream))] hover:bg-[hsl(var(--olive))] hover:text-primary-foreground transition-colors"
+    >
+      <ChevronLeft className="w-5 h-5" />
+    </button>
+    <button
+      type="button"
+      onClick={onNext}
+      aria-label="Photo suivante"
+      className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center border-brutal-thin bg-[hsl(var(--cream))] hover:bg-[hsl(var(--olive))] hover:text-primary-foreground transition-colors"
+    >
+      <ChevronRight className="w-5 h-5" />
+    </button>
+  </>
+);
+
 const AutoSlideshow = ({ images, alt }: { images: string[]; alt: string }) => {
   const [i, setI] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => setI((v) => (v + 1) % images.length), 3500);
-    return () => clearInterval(id);
-  }, [images.length]);
+    const id = setTimeout(() => setI((v) => (v + 1) % images.length), 3500);
+    return () => clearTimeout(id);
+  }, [i, images.length]);
+  const prev = () => setI((v) => (v - 1 + images.length) % images.length);
+  const next = () => setI((v) => (v + 1) % images.length);
   return (
     <div className="relative w-full aspect-[4/3] overflow-hidden border-brutal bg-[hsl(var(--cream))]">
       {images.map((src, idx) => (
@@ -64,6 +88,7 @@ const AutoSlideshow = ({ images, alt }: { images: string[]; alt: string }) => {
           className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
         />
       ))}
+      <SlideArrows onPrev={prev} onNext={next} />
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
         {images.map((_, idx) => (
           <span
@@ -96,6 +121,7 @@ const MediaSlideshow = ({ items, alt }: { items: MediaItem[]; alt: string }) => 
   }, [i, items]);
 
   const next = () => setI((v) => (v + 1) % items.length);
+  const prev = () => setI((v) => (v - 1 + items.length) % items.length);
 
   return (
     <div className="relative w-full aspect-[4/3] overflow-hidden border-brutal bg-[hsl(var(--cream))]">
@@ -121,6 +147,7 @@ const MediaSlideshow = ({ items, alt }: { items: MediaItem[]; alt: string }) => 
           />
         )
       )}
+      <SlideArrows onPrev={prev} onNext={next} />
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
         {items.map((_, idx) => (
           <span
@@ -155,7 +182,7 @@ const workshops: Workshop[] = [
     duration: "3h",
     public: "Tout public",
     image: dyeingImage,
-    images: [dyeingImage, teintureIndigoImage, teintureBocalIndigo, teintureFilIndigo],
+    images: [dyeingImage, teintureTshirtsTable, teintureIndigoImage, teintureBocalIndigo, teintureFilIndigo],
     icon: Palette,
     category: "textiles",
     tag: "populaire",
