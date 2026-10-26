@@ -7,7 +7,7 @@ import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { MapPin, Calendar, Users, Leaf, Clock, CheckCircle, Star, Phone, Mail, Building, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import seedBombsImage from "@/assets/gallery-seed-bombs.webp";
+import seedBombsImage from "@/assets/gallery-bombes-graines-sechage.webp";
 import dyeingImage from "@/assets/gallery-teinture-1.webp";
 import terrariumImage from "@/assets/gallery-terrarium.webp";
 import basketryImage from "@/assets/gallery-basketry.webp";

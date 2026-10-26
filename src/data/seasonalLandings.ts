@@ -16,7 +16,7 @@ import heroAtelierAdulte from "@/assets/gallery-atelier-adulte.jpg";
 import heroWorkshopTable from "@/assets/gallery-workshop-table.jpg";
 import heroTeinture1 from "@/assets/gallery-teinture-1.jpg";
 import heroForestWalk from "@/assets/gallery-forest-walk.jpg";
-import heroSeedBombs from "@/assets/gallery-seed-bombs.jpg";
+import heroSeedBombs from "@/assets/gallery-bombes-graines-sechage.webp";
 import heroSachet from "@/assets/gallery-sachet-senteur.jpg";
 import heroFresque from "@/assets/gallery-fresque-vegetale.jpg";
 import heroSucculents from "@/assets/gallery-succulents.jpg";

@@ -10,7 +10,7 @@ import SocialProofBar from "@/components/SocialProofBar";
 import { AREA_SERVED_IDF } from "@/data/areaServed";
 import { Clock, ArrowRight, CheckCircle, Phone, Landmark, HeartHandshake, Leaf, Palette } from "lucide-react";
 import heroImg from "@/assets/gallery-papier-recycle-sechage.webp";
-import imgBombes from "@/assets/gallery-seed-bombs.webp";
+import imgBombes from "@/assets/gallery-bombes-graines-sechage.webp";
 import imgEpices from "@/assets/gallery-atelier-epices-table.webp";
 import imgPapier from "@/assets/gallery-papier-recycle-feuilles.webp";
 import imgKokedama from "@/assets/gallery-kokedama-collection.jpg";

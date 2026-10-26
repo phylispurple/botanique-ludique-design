@@ -10,7 +10,7 @@ import bougieFleursSechees from "@/assets/gallery-bougie-fleurs-sechees.jpg";
 import kokedamaTradescantia from "@/assets/gallery-kokedama-tradescantia.jpg";
 import terrarium from "@/assets/gallery-terrarium.webp";
 import flowerCrown from "@/assets/gallery-flower-crown.webp";
-import seedBombs from "@/assets/gallery-seed-bombs.webp";
+import seedBombs from "@/assets/gallery-bombes-graines-sechage.webp";
 import workshopGroup from "@/assets/gallery-workshop-group.webp";
 import teinture1 from "@/assets/gallery-teinture-1.webp";
 import teinture2 from "@/assets/gallery-teinture-2.webp";

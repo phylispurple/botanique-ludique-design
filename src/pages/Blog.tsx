@@ -27,7 +27,7 @@ import blogNoelEpices from "@/assets/gallery-atelier-epices-table.webp";
 import blogTatakiZome from "@/assets/gallery-tataki-zome-atelier-table.webp";
 import blogSemaineBleue from "@/assets/gallery-kokedama-collection.jpg";
 import blogCcas from "@/assets/gallery-workshop-group.webp";
-import blogFeteNature from "@/assets/gallery-seed-bombs.webp";
+import blogFeteNature from "@/assets/gallery-bombes-graines-sechage.webp";
 import blogPatrimoine from "@/assets/gallery-herbier-toiles.webp";
 import blogSedd from "@/assets/gallery-papier-recycle-sechage.webp";
 import heroBlog from "@/assets/gallery-tableau-feuilles-automne.webp";

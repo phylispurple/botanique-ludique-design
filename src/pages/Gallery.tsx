@@ -9,7 +9,10 @@ import WaveDivider from "@/components/WaveDivider";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { X, ChevronLeft, ChevronRight, Play, Sprout, Palette, Flower2, Hammer, Droplets, Footprints, Camera } from "lucide-react";
 import terrariumImage from "@/assets/gallery-terrarium.webp";
-import seedBombsImage from "@/assets/gallery-seed-bombs.webp";
+import seedBombsImage from "@/assets/gallery-bombes-graines-sechage.webp";
+import teintureChouRougeBocal from "@/assets/gallery-teinture-chou-rouge-bocal.webp";
+import teintureChouRougeBain from "@/assets/gallery-teinture-chou-rouge-bain.webp";
+import chouRougePassoire from "@/assets/gallery-chou-rouge-passoire.webp";
 import workshopTableImage from "@/assets/gallery-workshop-table.webp";
 import forestWalkImage from "@/assets/gallery-forest-walk.webp";
 import succulentsImage from "@/assets/gallery-succulents.webp";
@@ -98,6 +101,10 @@ const items: GalleryItem[] = [
   { src: tableauFeuillesAutomne, alt: "Tableau de feuilles d'automne et de fleurs pressées collées sur une toile : érable rouge, feuilles pourpres, pensées et marguerite", caption: "Tableau de feuilles d'automne pressées sur toile", type: "image", category: "floral" },
   { src: kokedamaCollection, alt: "Collection de kokedamas", caption: "Kokedamas, Collection de créations en atelier", type: "image", category: "jardinage" },
   { src: teintureTshirtsTable, alt: "Table d'atelier de teinture végétale : tee-shirts tie and dye violet, vert, rose et ocre, bols de pigments, pinceaux et passoire", caption: "Atelier teinture végétale, tee-shirts tie and dye aux pigments naturels", type: "image", category: "textiles" },
+  { src: seedBombsImage, alt: "Dizaines de bombes de graines en argile et compost qui sèchent sur un carton après un atelier", caption: "Atelier bombes de graines, Séchage avant le semis", type: "image", category: "jardinage" },
+  { src: teintureChouRougeBocal, alt: "Bocal de teinture violette au chou rouge, bandes de coton blanc, ficelle de jute et tissu teint en rose", caption: "Teinture végétale au chou rouge, Le bain et les premiers tissus teints", type: "image", category: "textiles" },
+  { src: chouRougePassoire, alt: "Chou rouge émincé dans une passoire en métal, prêt pour la décoction", caption: "Teinture végétale au chou rouge, Préparation du chou", type: "image", category: "textiles" },
+  { src: teintureChouRougeBain, alt: "Bain de teinture violet foncé au chou rouge dans un saladier inox", caption: "Teinture végétale au chou rouge, Le bain de couleur", type: "image", category: "textiles" },
   { src: herbierToiles, alt: "Trois toiles d'herbier posées contre une fenêtre : fougère, achillée, graminées et feuilles de monnaie-du-pape pressées, avec leurs étiquettes manuscrites", caption: "Atelier herbier, planches de plantes pressées sur toile", type: "image", category: "floral" },
   { src: papierRecycleFeuilles, alt: "Feuilles de papier recyclé fait main en train de sécher : pulpe teintée rose, vert d'eau, bleu et crème, parsemée de pétales et de fragments de plantes", caption: "Atelier papier recyclé, feuilles colorées aux pétales en train de sécher", type: "image", category: "artisanat" },
   { src: cuirKombucha, alt: "Bandes de cuir végétal de kombucha séchées, brun ambré, posées à côté d'une paire de ciseaux", caption: "Cycle matières végétales, cuir de kombucha séché", type: "image", category: "artisanat" },
@@ -127,7 +134,6 @@ const items: GalleryItem[] = [
   { src: terrariumImage, alt: "Terrarium avec mousse", caption: "Terrarium, Atelier Botanique Ludique", type: "image", category: "jardinage" },
   { src: flowerCrownImage, alt: "Couronne de fleurs", caption: "Atelier couronne de fleurs", type: "image", category: "floral" },
   { src: "/videos/workshop-epoxy-floral.mp4", alt: "Création époxy floral", caption: "Atelier Époxy Floral, Plateaux et tables en résine", type: "video", category: "floral" },
-  { src: seedBombsImage, alt: "Atelier bombes de graines", caption: "Bombes de graines, Atelier Botanique Ludique", type: "image", category: "jardinage" },
   { src: workshopGroupImage, alt: "Atelier kokedama en groupe", caption: "Atelier kokedama, Participants en création", type: "image", category: "jardinage" },
   { src: workshopTableImage, alt: "Table d'atelier", caption: "Préparation d'atelier, MJC Le Vésinet", type: "image", category: "coulisses" },
   { src: teinture1Image, alt: "Atelier teinture végétale", caption: "Atelier teinture végétale, Préparation des tissus", type: "image", category: "textiles" },

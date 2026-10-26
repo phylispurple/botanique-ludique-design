@@ -13,7 +13,7 @@ import heroImg from "@/assets/gallery-terrarium-adultes-groupe.jpg";
 import imgTerrarium from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
 import imgKokedama from "@/assets/gallery-kokedama-collection.jpg";
 import imgTeinture from "@/assets/gallery-teinture-tshirts-table.webp";
-import imgBombes from "@/assets/gallery-seed-bombs.webp";
+import imgBombes from "@/assets/gallery-bombes-graines-sechage.webp";
 
 const SLUG = "/team-building-nature-entreprise";
 const PDF_URL = "/documents/plaquette-botanique-ludique-entreprise-2026-2027.pdf";
