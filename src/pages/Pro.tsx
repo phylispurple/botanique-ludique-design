@@ -246,19 +246,20 @@ const Pro = () => {
 
           <div className="flex flex-wrap justify-center gap-8">
             {clientTypes.map((client) => (
-              <article
+              <Link
                 key={client.id}
                 id={client.id}
-                className="scroll-mt-28 w-full sm:w-[calc(50%-1rem)] lg:w-[calc((100%-4rem)/3)] flex flex-col border-brutal bg-[hsl(var(--cream))] transition-all duration-300 hover:-translate-y-1 hover:shadow-brutal-lg"
+                to={client.to}
+                className="group scroll-mt-28 w-full sm:w-[calc(50%-1rem)] lg:w-[calc((100%-4rem)/3)] flex flex-col border-brutal bg-[hsl(var(--cream))] text-foreground transition-all duration-300 hover:-translate-y-1 hover:shadow-brutal-lg"
               >
                 <div className="relative aspect-[16/10] overflow-hidden border-b-[3px] border-foreground bg-secondary">
-                  <img src={client.image} alt={client.imageAlt} loading="lazy" className="w-full h-full object-cover" />
+                  <img src={client.image} alt={client.imageAlt} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <span className="absolute top-3 left-3 font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 border-brutal-thin bg-[hsl(var(--cream))] flex items-center gap-1.5">
                     <client.icon className="w-3 h-3" /> {client.subtitle}
                   </span>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 className="font-display text-xl uppercase leading-[1.05] tracking-[-0.5px] mb-3">{client.title}</h3>
+                  <h3 className="font-display text-xl uppercase leading-[1.05] tracking-[-0.5px] mb-3 group-hover:text-primary transition-colors">{client.title}</h3>
                   <p className="text-sm text-foreground/70 leading-relaxed mb-5">{client.description}</p>
                   <ul className="space-y-2 mb-6">
                     {client.formats.map((format) => (
@@ -268,14 +269,11 @@ const Pro = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to={client.to}
-                    className="mt-auto inline-flex items-center gap-2 font-mono-brand text-[11px] uppercase tracking-[2px] text-primary hover:gap-3 transition-all"
-                  >
+                  <span className="mt-auto inline-flex items-center gap-2 font-mono-brand text-[11px] uppercase tracking-[2px] text-primary group-hover:gap-3 transition-all">
                     Voir la page dédiée <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                  </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
