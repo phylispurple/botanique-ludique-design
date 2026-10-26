@@ -1,233 +1,311 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import LandingPhotoStrip from "@/components/LandingPhotoStrip";
+import BackToTop from "@/components/BackToTop";
 import { SEO } from "@/components/SEO";
-import { Building2, Leaf, Users, Calendar, Clock, MapPin, ArrowRight, CheckCircle, Landmark, HeartHandshake, Palette } from "lucide-react";
+import { SchemaOrg } from "@/components/SchemaOrg";
+import AnimatedSection from "@/components/AnimatedSection";
+import WaveDivider from "@/components/WaveDivider";
+import SocialProofBar from "@/components/SocialProofBar";
+import { AREA_SERVED_IDF } from "@/data/areaServed";
+import { Clock, ArrowRight, CheckCircle, Phone, Landmark, HeartHandshake, Leaf, Palette } from "lucide-react";
+import heroImg from "@/assets/gallery-papier-recycle-sechage.webp";
+import imgBombes from "@/assets/gallery-seed-bombs.webp";
+import imgEpices from "@/assets/gallery-atelier-epices-table.webp";
+import imgPapier from "@/assets/gallery-papier-recycle-feuilles.webp";
+import imgKokedama from "@/assets/gallery-kokedama-collection.jpg";
+import imgTerrarium from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
+import imgHerbier from "@/assets/gallery-herbier-toiles.webp";
+
+const SLUG = "/animation-collectivites-mairies";
+const CONTACT = `/contact?subject=${encodeURIComponent("Animation pour une collectivité")}`;
+
+const BENEFICES = [
+  { icon: Landmark, title: "Clé en main", desc: "Tout le matériel est apporté, installation et rangement compris. Nous nous adaptons à vos salles et à vos contraintes." },
+  { icon: HeartHandshake, title: "Lien social", desc: "Des ateliers ouverts à tous, familles, enfants, aînés, et souvent intergénérationnels." },
+  { icon: Leaf, title: "Sensibilisation", desc: "Biodiversité, nature en ville, sobriété : on en parle en faisant, sans discours moralisateur." },
+  { icon: Palette, title: "Culture", desc: "Chaque atelier raconte l'histoire humaine des plantes : une vraie médiation culturelle, pas seulement un loisir créatif." },
+];
+
+const ATELIERS = [
+  { title: "Bombes à graines", image: imgBombes, alt: "Bombes à graines fabriquées en atelier", duration: "1h30 à 2h", highlight: "Familles", desc: "Graines voyageuses et jardins spontanés, puis chacun fabrique ses bombes à semer." },
+  { title: "Sachets senteur, la route des épices", image: imgEpices, alt: "Table d'atelier couverte de bols d'épices lors d'un atelier en bibliothèque", duration: "1h30", highlight: "Médiathèques", desc: "L'histoire des épices racontée par le nez, puis chacun compose son sachet senteur." },
+  { title: "Papier recyclé & carnets", image: imgPapier, alt: "Feuilles de papier recyclé colorées aux pétales en train de sécher", duration: "2 séances de 2h", highlight: "Réduction des déchets", desc: "Fabriquer son papier à partir de papier usagé et de pétales, puis relier son carnet." },
+  { title: "Kokedama", image: imgKokedama, alt: "Kokedamas ficelés réalisés en atelier", duration: "2h", highlight: "Intergénérationnel", desc: "Une boule de mousse et de terre autour d'une plante : un geste lent qui réunit les âges." },
+  { title: "Terrarium parent-enfant", image: imgTerrarium, alt: "Terrarium en bocal avec fittonia réalisé en atelier", duration: "1h30", highlight: "Parentalité", desc: "Composer ensemble un écosystème miniature en bocal, et l'histoire de la Wardian case." },
+  { title: "Herbier créatif & cyanotype", image: imgHerbier, alt: "Toiles d'herbier avec fougère et plantes pressées", duration: "2h", highlight: "Art & nature", desc: "Presser, composer, imprimer : les plantes de la commune deviennent des œuvres." },
+];
+
+const OCCASIONS = [
+  "Fête de la Nature", "Semaine du développement durable", "Fête de la Science", "Journées du patrimoine",
+  "Semaine Bleue", "Semaine de la réduction des déchets", "Fête de quartier", "Programmation de médiathèque", "Vacances scolaires", "Marché de Noël",
+];
+
+const EXEMPLES = [
+  { label: "Semaine Bleue : un atelier kokedama intergénérationnel à Gif-sur-Yvette", to: "/blog/semaine-bleue-atelier-intergenerationnel-kokedama-ehpad" },
+  { label: "Fête de la Science : la route des épices à la bibliothèque de Versailles", to: "/blog/atelier-route-des-epices-fete-de-la-science-versailles" },
+  { label: "Au fil des jardins de Voisins-le-Bretonneux : une balade ethnobotanique", to: "/blog/balade-botanique-voisins-le-bretonneux" },
+];
+
+const ENGAGEMENTS = [
+  "Matériel naturel et réutilisable autant que possible",
+  "Contenu adapté à tous les âges",
+  "Bon de commande et facturation via Chorus Pro",
+  "Attestation d'intervention sur demande",
+  "SIRET et assurance responsabilité civile professionnelle",
+  "Réponse sous 24h ouvrées",
+];
+
+const FAQ = [
+  {
+    q: "Combien de participants par atelier ?",
+    a: "En général 12 à 15 participants par séance, pour que chacun soit bien accompagné. Sur un événement en plein air ou un marché, l'atelier peut fonctionner en flux continu : les habitants passent quand ils le souhaitent.",
+  },
+  {
+    q: "Comment se passent la commande et la facturation ?",
+    a: "Nous vous envoyons un devis, puis vous émettez un bon de commande. La facture est déposée sur Chorus Pro. Nous disposons d'un SIRET et d'une assurance responsabilité civile professionnelle.",
+  },
+  {
+    q: "Quel délai prévoir ?",
+    a: "Idéalement un à deux mois avant l'événement, et plus tôt pour les temps forts nationaux comme la Fête de la Nature, la Semaine Bleue ou la Fête de la Science.",
+  },
+];
 
 const LandingCollectivites = () => {
-  const benefits = [
-    { icon: Landmark, title: "Animation clé en main", description: "Nous nous adaptons à vos espaces et contraintes logistiques municipales." },
-    { icon: HeartHandshake, title: "Lien social & intergénérationnel", description: "Ateliers fédérateurs ouverts à tous les publics de votre commune." },
-    { icon: Leaf, title: "Sensibilisation écologique", description: "Éducation à l'environnement par la pratique créative et ludique." },
-    { icon: Palette, title: "Valorisation culturelle", description: "Découverte du patrimoine végétal local et des savoir-faire botaniques." }
-  ];
-
-  const workshops = [
-    { title: "Atelier Kokedama", duration: "2h", participants: "10-40 pers", highlight: "Tout public" },
-    { title: "Teinture végétale naturelle", duration: "2h30", participants: "10-30 pers", highlight: "Éco-citoyen" },
-    { title: "Terrarium miniature", duration: "1h30", participants: "10-40 pers", highlight: "Familial" },
-    { title: "Bombes à graines", duration: "1h30", participants: "10-60 pers", highlight: "Biodiversité" },
-    { title: "Herbier créatif & cyanotype", duration: "2h", participants: "10-30 pers", highlight: "Art & Nature" },
-    { title: "Atelier boutures & semis", duration: "1h30", participants: "10-40 pers", highlight: "Jardinage" }
-  ];
-
-  const occasions = [
-    "Fête de quartier",
-    "Journée du patrimoine",
-    "Semaine du développement durable",
-    "Fête de la nature",
-    "Événement municipal",
-    "Forum des associations",
-    "Marché de Noël",
-    "Fête de la science",
-    "Journée citoyenne",
-    "Animation estivale"
-  ];
-
-  const cities = [
-    "Paris (75)", "Versailles (78)", "Saint-Germain-en-Laye (78)", "Chatou (78)", "Le Pecq (78)",
-    "Nanterre (92)", "Boulogne-Billancourt (92)", "Rueil-Malmaison (92)", "Issy-les-Moulineaux (92)",
-    "Cergy (95)", "Pontoise (95)", "Franconville (95)", "Ermont (95)"
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO
         title="Animation Collectivités & Mairies - Ateliers Botaniques | Botanique Ludique"
         description="Animations botaniques pour collectivités et mairies en Île-de-France. Ateliers nature clé en main pour fêtes de quartier, journées du patrimoine, événements municipaux. Devis gratuit sous 24h."
         keywords="animation collectivité, atelier mairie, animation fête de quartier, atelier nature commune, animation municipale, atelier botanique collectivité, animation développement durable mairie, atelier nature île-de-france"
-        canonical="/animation-collectivites-mairies"
+        canonical={SLUG}
+      />
+      <SchemaOrg
+        type="Service"
+        data={{
+          serviceType: "Animation nature pour collectivités",
+          name: "Animations botaniques pour collectivités et mairies",
+          description: "Ateliers et médiations botaniques clé en main pour les communes, médiathèques et services municipaux d'Île-de-France.",
+          url: `https://botaniqueludique.com${SLUG}`,
+          areaServed: AREA_SERVED_IDF,
+        }}
+      />
+      <SchemaOrg type="FAQPage" data={{ questions: FAQ.map((f) => ({ question: f.q, answer: f.a })) }} />
+      <SchemaOrg
+        type="BreadcrumbList"
+        data={{
+          items: [
+            { name: "Accueil", url: "https://botaniqueludique.com/" },
+            { name: "Pro", url: "https://botaniqueludique.com/pro" },
+            { name: "Collectivités & mairies", url: `https://botaniqueludique.com${SLUG}` },
+          ],
+        }}
       />
       <Navigation />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-sage/20 to-background">
-        <div className="container mx-auto max-w-6xl text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-sage/20 text-sage-dark px-4 py-2 rounded-full text-sm font-medium">
-            <Building2 className="w-4 h-4" />
-            Collectivités & Mairies
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-charcoal">
-            Animations <span className="text-sage">Botaniques</span> pour vos Événements Municipaux
-          </h1>
-          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-            Bien plus que des ateliers créatifs : une approche ethnobotanique qui tisse des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes. Animations clé en main pour vos événements municipaux.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
-            <Button asChild size="lg" className="bg-sage hover:bg-sage-dark text-white">
-              <Link to="/contact">Devis gratuit sous 24h <ArrowRight className="ml-2 w-4 h-4" /></Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-sage text-sage hover:bg-sage/10">
-              <Link to="/references-collectivites">Voir nos références</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-sage text-sage hover:bg-sage/10">
-              <Link to="/marches-publics">Marchés publics</Link>
-            </Button>
-          </div>
+      {/* ===== HERO ===== */}
+      <section className="relative overflow-hidden px-6 pt-24 pb-24 md:pt-32 md:pb-28">
+        <div className="absolute inset-0 bg-foreground">
+          <img src={heroImg} alt="" className="w-full h-full object-cover opacity-35" />
+        </div>
+        <div className="absolute inset-0 bg-foreground/40" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <AnimatedSection>
+            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[3px] text-olive-light mb-5">
+              Mairies · Médiathèques · Centres sociaux · MJC
+            </p>
+            <h1 className="font-display text-[clamp(2.2rem,6vw,4.8rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+              Animations botaniques<br />
+              <span className="text-olive-light">pour votre commune</span>
+            </h1>
+            <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[700px] mx-auto leading-relaxed mb-10">
+              Des ateliers clé en main qui créent du lien autour du vivant, avec une médiation ethnobotanique : chaque plante raconte une histoire humaine.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to={CONTACT}
+                className="btn-brutal bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
+                style={{ borderColor: "hsl(var(--cream))" }}
+              >
+                Demander un devis gratuit <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/marches-publics"
+                className="btn-brutal bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
+                style={{ borderColor: "hsl(var(--cream))" }}
+              >
+                Marchés publics
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
-      <LandingPhotoStrip />
 
-      {/* Pourquoi */}
-      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-display text-charcoal mb-4 text-center">
-            Pourquoi choisir nos animations pour votre collectivité ?
-          </h2>
-          <p className="text-charcoal/60 text-center max-w-2xl mx-auto mb-10">
-            Botanique Ludique accompagne les communes, intercommunalités et services municipaux dans l'organisation d'animations nature accessibles et fédératrices.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((b, i) => (
-              <Card key={i} className="border-sage/20 hover:shadow-md transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <b.icon className="w-6 h-6 text-sage" />
-                  </div>
-                  <h3 className="font-display text-lg text-charcoal mb-2">{b.title}</h3>
-                  <p className="text-sm text-charcoal/70">{b.description}</p>
-                </CardContent>
-              </Card>
+      <WaveDivider from="hsl(0,0%,10%)" to="hsl(36,33%,93%)" />
+
+      <SocialProofBar />
+
+      {/* ===== ATELIERS ===== */}
+      <section className="px-6 pt-20 pb-20">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection className="text-center mb-12">
+            <span className="section-label block mb-3">Nos ateliers pour les collectivités</span>
+            <h2 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] uppercase leading-[0.95] tracking-[-1px] mb-4">
+              Des formats <span className="text-primary">qui ont fait leurs preuves</span>
+            </h2>
+            <p className="text-base text-foreground/70 max-w-2xl mx-auto">
+              En intérieur comme en extérieur, adaptés au public et à l'espace. En général 12 à 15 participants par séance, ou en flux continu sur un événement.
+            </p>
+          </AnimatedSection>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {ATELIERS.map((w) => (
+              <article key={w.title} className="flex flex-col border-brutal bg-[hsl(var(--cream))]">
+                <div className="relative aspect-[4/3] overflow-hidden border-b-[3px] border-foreground bg-secondary">
+                  <img src={w.image} alt={w.alt} loading="lazy" className="w-full h-full object-cover" />
+                  <span className="absolute top-3 left-3 font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 border-brutal-thin bg-[hsl(var(--cream))]">
+                    {w.highlight}
+                  </span>
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="font-display text-lg uppercase tracking-[-0.5px] mb-2">{w.title}</h3>
+                  <p className="text-sm text-foreground/70 leading-relaxed mb-4 flex-1">{w.desc}</p>
+                  <p className="font-mono-brand text-[11px] uppercase tracking-[1.5px] flex items-center gap-1.5 pt-3 border-t-[3px] border-foreground">
+                    <Clock className="w-3.5 h-3.5 text-primary" /> {w.duration}
+                  </p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Ateliers */}
-      <section className="py-16 px-4 bg-cream/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-display text-charcoal mb-4 text-center">
-            Nos ateliers pour les collectivités
-          </h2>
-          <p className="text-charcoal/60 text-center max-w-2xl mx-auto mb-10">
-            Chaque atelier est adaptable au nombre de participants, à l'espace disponible et au public visé. En intérieur comme en extérieur.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {workshops.map((w, i) => (
-              <Card key={i} className="border-sage/20 hover:shadow-md transition-shadow">
-                <CardContent className="p-6">
-                  <div className="flex justify-between items-start mb-3">
-                    <h3 className="font-display text-xl text-charcoal">{w.title}</h3>
-                    <span className="text-xs font-medium bg-sage text-white px-2 py-1 rounded whitespace-nowrap">{w.highlight}</span>
-                  </div>
-                  <div className="flex gap-4 text-sm text-charcoal/60">
-                    <span className="flex items-center gap-1"><Clock className="w-4 h-4" />{w.duration}</span>
-                    <span className="flex items-center gap-1"><Users className="w-4 h-4" />{w.participants}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Comment ça marche */}
-      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-display text-charcoal mb-10 text-center">Comment ça marche ?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { step: "1", title: "Échangeons sur votre projet", desc: "Décrivez votre événement, le public attendu et vos objectifs. Nous vous proposons les ateliers les plus adaptés." },
-              { step: "2", title: "Devis personnalisé", desc: "Recevez un devis détaillé sous 24h, adapté à votre budget municipal et au nombre de participants." },
-              { step: "3", title: "Animation clé en main", desc: "Nous apportons tout le matériel. Installation, animation et rangement inclus. Vous n'avez rien à prévoir." }
-            ].map((s, i) => (
-              <div key={i} className="text-center space-y-3">
-                <div className="w-12 h-12 bg-sage text-white rounded-full flex items-center justify-center mx-auto text-xl font-bold">{s.step}</div>
-                <h3 className="font-display text-lg text-charcoal">{s.title}</h3>
-                <p className="text-sm text-charcoal/70">{s.desc}</p>
+      {/* ===== POURQUOI + OCCASIONS ===== */}
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
+      <section className="pt-10 pb-20 px-6 bg-secondary">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection className="text-center mb-12">
+            <span className="section-label block mb-3">Pourquoi nous choisir</span>
+            <h2 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] uppercase leading-[0.95] tracking-[-1px]">
+              Plus qu'un <span className="text-primary">atelier créatif</span>
+            </h2>
+          </AnimatedSection>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {BENEFICES.map((b) => (
+              <div key={b.title} className="border-brutal bg-[hsl(var(--cream))] p-6">
+                <b.icon className="w-7 h-7 mb-3 text-primary" strokeWidth={2.2} />
+                <h3 className="font-display text-lg uppercase mb-2">{b.title}</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed">{b.desc}</p>
               </div>
             ))}
           </div>
+
+          <div className="text-center">
+            <h2 className="font-display text-[clamp(1.5rem,3vw,2.2rem)] uppercase leading-[0.95] tracking-[-1px] mb-6">
+              Pour quels <span className="text-primary">temps forts</span>
+            </h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              {OCCASIONS.map((o) => (
+                <span key={o} className="font-mono-brand text-[11px] uppercase tracking-[1.5px] px-4 py-2 border-brutal-thin bg-[hsl(var(--cream))]">
+                  {o}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
+      <WaveDivider from="hsl(36,25%,88%)" to="hsl(36,33%,93%)" flip />
 
-      {/* Occasions */}
-      <section className="py-16 px-4 bg-cream/30">
-        <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl font-display text-charcoal mb-6">Pour quelles occasions ?</h2>
-          <p className="text-charcoal/60 max-w-2xl mx-auto mb-8">
-            Nos ateliers s'intègrent dans tous les temps forts de votre collectivité.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {occasions.map((o, i) => (
-              <span key={i} className="inline-flex items-center gap-2 bg-[hsl(var(--yellow))]/15 px-4 py-2 rounded-full text-charcoal shadow-sm">
-                <CheckCircle className="w-4 h-4 text-sage" />{o}
-              </span>
-            ))}
+      {/* ===== EXEMPLES + ENGAGEMENTS ===== */}
+      <section className="pt-10 pb-20 px-6">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10">
+          <div className="border-brutal bg-[hsl(var(--cream))] p-8 shadow-brutal">
+            <span className="section-label block mb-3">Ils l'ont fait</span>
+            <h2 className="font-display text-xl md:text-2xl uppercase tracking-[-0.5px] mb-6">Retours d'expérience</h2>
+            <ul className="space-y-4">
+              {EXEMPLES.map((e) => (
+                <li key={e.to}>
+                  <Link to={e.to} className="group flex items-start gap-3 text-sm leading-snug hover:text-primary transition-colors">
+                    <ArrowRight className="w-4 h-4 mt-0.5 text-primary flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                    {e.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="border-brutal bg-[hsl(var(--cream))] p-8 shadow-brutal">
+            <span className="section-label block mb-3">Côté administratif</span>
+            <h2 className="font-display text-xl md:text-2xl uppercase tracking-[-0.5px] mb-6">Nos engagements</h2>
+            <ul className="space-y-3">
+              {ENGAGEMENTS.map((e) => (
+                <li key={e} className="flex items-start gap-3 text-sm text-foreground/80">
+                  <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  {e}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Engagements */}
-      <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-display text-charcoal mb-8 text-center">Nos engagements</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              "Matériaux naturels, bio ou recyclés — zéro plastique",
-              "Approche pédagogique adaptée à tous les âges",
-              "Sensibilisation au patrimoine végétal local",
-              "Facturation adaptée aux budgets publics",
-              "Attestation d'intervention fournie",
-              "Assurance responsabilité civile professionnelle"
-            ].map((e, i) => (
-              <div key={i} className="flex items-start gap-3 p-4 bg-sage/5 rounded-lg">
-                <CheckCircle className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
-                <p className="text-charcoal">{e}</p>
+      {/* ===== FAQ ===== */}
+      <section className="pb-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection className="text-center mb-10">
+            <span className="section-label block mb-3">FAQ</span>
+            <h2 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] uppercase leading-[0.95] tracking-[-1px]">
+              Questions <span className="text-primary">fréquentes</span>
+            </h2>
+          </AnimatedSection>
+          <div className="space-y-4">
+            {FAQ.map((f) => (
+              <div key={f.q} className="border-brutal bg-[hsl(var(--cream))] p-6 md:p-7">
+                <h3 className="font-display text-base md:text-lg uppercase tracking-[-0.5px] mb-2">{f.q}</h3>
+                <p className="text-sm md:text-base text-foreground/70 leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Zone d'intervention */}
-      <section className="py-16 px-4 bg-sage/10">
-        <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl font-display text-charcoal mb-6">Zone d'intervention</h2>
-          <p className="text-charcoal/60 max-w-2xl mx-auto mb-8">
-            Nous intervenons dans toute l'Île-de-France, avec une expertise particulière sur les départements 78, 92 et 95.
+          <p className="mt-8 text-center text-sm text-foreground/70">
+            À lire aussi :{" "}
+            <Link to="/blog/financer-animation-nature-ccas" className="underline decoration-2 underline-offset-2 hover:text-primary">financer une animation nature en CCAS</Link>
+            {" · "}
+            <Link to="/blog/organiser-fete-nature-mairie" className="underline decoration-2 underline-offset-2 hover:text-primary">organiser la Fête de la Nature</Link>
+            {" · "}
+            <Link to="/intervention-mediatheque-botanique" className="underline decoration-2 underline-offset-2 hover:text-primary">interventions en médiathèque</Link>
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {cities.map((city) => (
-              <span key={city} className="inline-flex items-center gap-1 bg-[hsl(var(--yellow))]/15 px-4 py-2 rounded-full text-sm text-charcoal shadow-sm">
-                <MapPin className="w-3 h-3 text-sage" />{city}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* CTA final */}
-      <section className="py-16 px-4 bg-charcoal text-white">
-        <div className="container mx-auto max-w-4xl text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-display">Organisez une animation nature dans votre commune</h2>
-          <p className="text-white/70 max-w-2xl mx-auto">
-            Contactez-nous pour recevoir un devis personnalisé et gratuit. Réponse garantie sous 24h.
+      {/* ===== CTA ===== */}
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
+      <section className="bg-foreground text-primary-foreground px-6 pt-10 pb-24">
+        <AnimatedSection className="max-w-3xl mx-auto text-center">
+          <p className="font-mono-brand text-[11px] uppercase tracking-[3px] text-olive-light mb-4">Votre prochain événement</p>
+          <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mb-6">
+            Une animation nature <span className="text-olive-light">dans votre commune&nbsp;?</span>
+          </h2>
+          <p className="text-base text-primary-foreground/75 leading-relaxed mb-10 max-w-xl mx-auto">
+            Décrivez-nous votre événement, votre public et votre date : réponse sous 24h ouvrées, devis gratuit.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-sage hover:bg-sage-dark">
-              <Link to="/contact">Demander un devis gratuit</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-[hsl(var(--yellow))]/15/10">
-              <a href="tel:0609831606">Appeler le 06 09 83 16 06</a>
-            </Button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to={CONTACT}
+              className="btn-brutal bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
+              style={{ borderColor: "hsl(var(--cream))" }}
+            >
+              Demander un devis <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a
+              href="tel:+33609831606"
+              className="btn-brutal bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
+              style={{ borderColor: "hsl(var(--cream))" }}
+            >
+              <Phone className="w-4 h-4" /> 06 09 83 16 06
+            </a>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
+      <BackToTop />
       <Footer />
     </div>
   );

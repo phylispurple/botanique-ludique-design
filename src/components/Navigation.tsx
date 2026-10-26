@@ -61,8 +61,7 @@ const Navigation = () => {
     { name: "Écoles & périscolaire", id: "scolaires", href: "/etablissements-scolaires" },
     { name: "Collectivités & médiathèques", id: "collectivites", href: "/animation-collectivites-mairies" },
     { name: "EHPAD & seniors", id: "ehpad", href: "/animation-seniors-ehpad" },
-    { name: "Événements", id: "evenementiel", href: "/atelier-botanique-evenement" },
-    { name: "Agences événementielles", id: "agences", href: "/animation-vegetale-agence-evenementielle" },
+    { name: "Événements & agences", id: "evenementiel", href: "/animation-vegetale-agence-evenementielle" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
