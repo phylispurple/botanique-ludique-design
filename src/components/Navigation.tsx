@@ -56,12 +56,13 @@ const Navigation = () => {
   ];
 
   const proCategories = [
-    { name: "Entreprises & Team Building", id: "entreprises", href: "/pro#entreprises" },
-    { name: "Atelier Terrarium Team Building", id: "terrarium-team-building", href: "/atelier-terrarium-team-building" },
-    { name: "Établissements Scolaires", id: "scolaires", href: "/etablissements-scolaires" },
-    { name: "Collectivités & Associations", id: "collectivites", href: "/pro#collectivites" },
-    { name: "EHPAD & Santé", id: "ehpad", href: "/pro#ehpad" },
-    { name: "Événementiel", id: "evenementiel", href: "/pro#evenementiel" },
+    // Mêmes publics et mêmes pages que les cartes de la page Pro
+    { name: "Entreprises & CSE", id: "entreprises", href: "/team-building-nature-entreprise" },
+    { name: "Écoles & périscolaire", id: "scolaires", href: "/etablissements-scolaires" },
+    { name: "Collectivités & médiathèques", id: "collectivites", href: "/animation-collectivites-mairies" },
+    { name: "EHPAD & seniors", id: "ehpad", href: "/animation-seniors-ehpad" },
+    { name: "Événements", id: "evenementiel", href: "/atelier-botanique-evenement" },
+    { name: "Agences événementielles", id: "agences", href: "/animation-vegetale-agence-evenementielle" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -181,6 +182,14 @@ const Navigation = () => {
               proOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
             }`} style={{ zIndex: 100 }}>
               <div className="py-2">
+                <Link
+                  to="/pro"
+                  className="block px-4 py-2 mb-1 text-sm font-body font-semibold border-b border-foreground/10 hover:bg-olive/10 transition-colors"
+                  style={{ color: 'hsl(73 37% 34%)' }}
+                  onClick={() => setProOpen(false)}
+                >
+                  → Toutes nos offres pro
+                </Link>
                 {proCategories.map((cat) => (
                     <Link
                       key={cat.id}
