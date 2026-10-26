@@ -138,6 +138,7 @@ const Pro = () => {
     { to: "/animation-nature-bailleurs-sociaux", label: "Bailleur social, ESH, ANRU" },
     { to: "/mediation-vegetale-architectes-paysagistes", label: "Architecte, paysagiste, MOE" },
     { to: "/atelier-vegetal-parentalite-naissance", label: "Maternité, PMI, parentalité" },
+    { to: "/animation-vegetale-agence-evenementielle", label: "Agence événementielle, presse, lancement" },
     { to: "/animation-vegetale-hotel-evenementiel", label: "Hôtel, lieu événementiel premium" },
     { to: "/balade-ethnobotanique-office-tourisme", label: "Office de tourisme, patrimoine" },
     { to: "/atelier-vegetal-cabinet-rh-coach", label: "Cabinet RH, coach, consultant·e" },

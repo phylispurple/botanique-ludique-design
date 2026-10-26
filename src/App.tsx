@@ -91,6 +91,7 @@ const MediationVegetaleArchitectesPaysagistes = lazy(() => import("./pages/Media
 const AnimationNatureBailleursSociaux = lazy(() => import("./pages/AnimationNatureBailleursSociaux"));
 const AtelierVegetalParentaliteNaissance = lazy(() => import("./pages/AtelierVegetalParentaliteNaissance"));
 const AnimationVegetaleHotelEvenementiel = lazy(() => import("./pages/AnimationVegetaleHotelEvenementiel"));
+const AnimationAgenceEvenementielle = lazy(() => import("./pages/AnimationAgenceEvenementielle"));
 const BaladeEthnobotaniqueOfficeTourisme = lazy(() => import("./pages/BaladeEthnobotaniqueOfficeTourisme"));
 const AtelierVegetalCabinetRHCoach = lazy(() => import("./pages/AtelierVegetalCabinetRHCoach"));
 const AtelierBienEtreNatureEntreprise = lazy(() => import("./pages/AtelierBienEtreNatureEntreprise"));
@@ -405,6 +406,7 @@ const App = () => (
             <Route path="/animation-nature-bailleurs-sociaux" element={<AnimationNatureBailleursSociaux />} />
             <Route path="/animation-nature-universite-bde" element={<AnimationNatureUniversiteBDE />} />
             <Route path="/animation-vegetale-hotel-evenementiel" element={<AnimationVegetaleHotelEvenementiel />} />
+            <Route path="/animation-vegetale-agence-evenementielle" element={<AnimationAgenceEvenementielle />} />
             <Route path="/animation-foyer-jeunes-travailleurs" element={<AnimationFoyerJeunes />} />
             <Route path="/animation-soiree-entreprise-vegetale" element={<AnimationSoireeEntreprise />} />
             <Route path="/animation-seminaire-entreprise-paris" element={<AnimationSeminaireParis />} />
