@@ -8,7 +8,9 @@ import AnimatedSection from "@/components/AnimatedSection";
 import WaveDivider from "@/components/WaveDivider";
 import SocialProofBar from "@/components/SocialProofBar";
 import { AREA_SERVED_IDF } from "@/data/areaServed";
-import { Clock, ArrowRight, CheckCircle, Phone, Landmark, HeartHandshake, Leaf, Palette } from "lucide-react";
+import { Clock, ArrowRight, CheckCircle, Phone, Landmark, HeartHandshake, Leaf, Palette, Download } from "lucide-react";
+
+const PDF_URL = "/docs/plaquette-botanique-ludique-ecoles-2027.pdf";
 import heroImg from "@/assets/gallery-papier-recycle-sechage.webp";
 import imgBombes from "@/assets/gallery-bombes-graines-sechage.webp";
 import imgEpices from "@/assets/gallery-atelier-epices-table.webp";
@@ -136,6 +138,15 @@ const LandingCollectivites = () => {
               >
                 Marchés publics
               </Link>
+              <a
+                href={PDF_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-brutal bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
+                style={{ borderColor: "hsl(var(--cream))" }}
+              >
+                <Download className="w-4 h-4" /> La plaquette (PDF)
+              </a>
             </div>
           </AnimatedSection>
         </div>
@@ -302,6 +313,14 @@ const LandingCollectivites = () => {
               <Phone className="w-4 h-4" /> 06 09 83 16 06
             </a>
           </div>
+          <a
+            href={PDF_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-10 font-mono-brand text-[11px] uppercase tracking-[2px] text-primary-foreground/70 hover:text-olive-light transition-colors"
+          >
+            <Download size={14} /> Télécharger la plaquette 2027 (PDF)
+          </a>
         </AnimatedSection>
       </section>
 
