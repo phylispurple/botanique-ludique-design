@@ -482,6 +482,14 @@ const Contact = () => {
               >
                 <Download className="w-3.5 h-3.5" /> Dossier événementiel (PDF)
               </a>
+              <a
+                href="/docs/plaquette-botanique-ludique-ecoles-2027.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 flex items-center gap-2 font-mono-brand text-[10px] uppercase tracking-[2px] text-foreground/70 hover:text-primary transition-colors"
+              >
+                <Download className="w-3.5 h-3.5" /> Plaquette écoles 2027 (PDF)
+              </a>
             </div>
           </aside>
         </div>

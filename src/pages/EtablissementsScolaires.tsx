@@ -6,7 +6,9 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
 import WaveDivider from "@/components/WaveDivider";
 import BackToTop from "@/components/BackToTop";
-import { GraduationCap, BookOpen, ArrowRight, CheckCircle, Clock, Users, Leaf, MapPin, Phone } from "lucide-react";
+import { GraduationCap, BookOpen, ArrowRight, CheckCircle, Clock, Users, Leaf, MapPin, Phone, Download } from "lucide-react";
+
+const PDF_URL = "/docs/plaquette-botanique-ludique-ecoles-2027.pdf";
 import heroImg from "@/assets/gallery-forest-walk.webp";
 import imgClasse from "@/assets/gallery-teinture-enfants-2.jpg";
 import imgTerrain from "@/assets/gallery-college-eee-2.webp";
@@ -141,6 +143,15 @@ const EtablissementsScolaires = () => {
                 style={{ borderColor: "hsl(var(--cream))" }}
               >
                 <Phone className="w-4 h-4" /> 06 09 83 16 06
+              </a>
+              <a
+                href={PDF_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-brutal bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
+                style={{ borderColor: "hsl(var(--cream))" }}
+              >
+                <Download className="w-4 h-4" /> La plaquette (PDF)
               </a>
             </div>
           </AnimatedSection>
@@ -307,6 +318,14 @@ const EtablissementsScolaires = () => {
               Voir tous les ateliers <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+          <a
+            href={PDF_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-10 font-mono-brand text-[11px] uppercase tracking-[2px] text-primary-foreground/70 hover:text-olive-light transition-colors"
+          >
+            <Download size={14} /> Télécharger la plaquette écoles 2027 (PDF)
+          </a>
         </AnimatedSection>
       </section>
 
