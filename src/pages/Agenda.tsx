@@ -19,11 +19,12 @@ import { Link } from "react-router-dom";
 import WaveDivider from "@/components/WaveDivider";
 import AnimatedSection from "@/components/AnimatedSection";
 import heroAgenda from "@/assets/gallery-atelier-epices-table.webp";
+import afficheFemmesBotanique from "@/assets/affiche-femmes-botanique-breuil.webp";
 
 type EventLink =
   | { linkType: "internal"; internalUrl: string; buttonLabel?: string }
   | { linkType: "external"; externalUrl: string; buttonLabel?: string }
-  | { linkType: "coming" }
+  | { linkType: "coming"; buttonLabel?: string }
   | { linkType: "soldOut" };
 
 type UpcomingEvent = {
@@ -187,6 +188,29 @@ const upcomingEvents: UpcomingEvent[] = [
         "@type": "Place",
         name: "Maison de l'Environnement de Maisons-Alfort",
         address: { "@type": "PostalAddress", streetAddress: "2 avenue Foch", addressLocality: "Maisons-Alfort", postalCode: "94700", addressRegion: "Île-de-France", addressCountry: "FR" },
+      },
+    },
+  },
+  {
+    id: "conference-femmes-botanique-breuil-16-jan",
+    name: "Conférence « Les femmes et la botanique »",
+    date: "Samedi 16 janvier 2027",
+    parsedDate: d(2027, 1, 16),
+    time: "13h00 / 16h00",
+    location: "École Du Breuil, Paris 12e",
+    audience: "Tout public",
+    spots: "36 € ou 25 €",
+    description:
+      "Découvreuses, illustratrices, jardinières et herboristes : ces femmes qui ont fait la botanique. Une conférence pour retrouver celles que l'histoire des sciences a souvent laissées dans l'ombre.",
+    image: afficheFemmesBotanique,
+    linkType: "coming", buttonLabel: "Infos & réservation à venir",
+    schema: {
+      startDate: "2027-01-16T13:00:00+01:00",
+      endDate: "2027-01-16T16:00:00+01:00",
+      location: {
+        "@type": "Place",
+        name: "École Du Breuil",
+        address: { "@type": "PostalAddress", streetAddress: "Route de la Pyramide, Bois de Vincennes", addressLocality: "Paris", postalCode: "75012", addressRegion: "Île-de-France", addressCountry: "FR" },
       },
     },
   },
@@ -559,7 +583,7 @@ const Agenda = () => {
                         )}
                         {event.linkType === "coming" && (
                           <span className="ml-auto inline-flex items-center gap-2 px-5 py-3 border-[3px] border-dashed border-foreground/40 font-display uppercase text-xs tracking-wide text-foreground/50 cursor-default">
-                            Inscription à venir
+                            {event.buttonLabel || "Inscription à venir"}
                           </span>
                         )}
                         {event.linkType === "soldOut" && (
