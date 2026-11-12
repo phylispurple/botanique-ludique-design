@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Mail } from "lucide-react";
+import { HoneypotField, useBotCheck } from "@/lib/antiSpam";
 
 interface NewsletterSignupProps {
   compact?: boolean;
@@ -12,6 +13,7 @@ interface NewsletterSignupProps {
 const NewsletterSignup = ({ compact = false }: NewsletterSignupProps) => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const botCheck = useBotCheck();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,6 +22,12 @@ const NewsletterSignup = ({ compact = false }: NewsletterSignupProps) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       toast.error("Veuillez entrer une adresse email valide");
+      return;
+    }
+
+    if (botCheck.isBot(e.currentTarget as HTMLFormElement)) {
+      toast.success("Merci pour votre inscription ! Nous vous contacterons bientôt.");
+      setEmail("");
       return;
     }
 
@@ -44,7 +52,8 @@ const NewsletterSignup = ({ compact = false }: NewsletterSignupProps) => {
 
   if (compact) {
     return (
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 relative">
+        <HoneypotField />
         <Input
           type="email"
           placeholder="Votre adresse email"
@@ -80,7 +89,8 @@ const NewsletterSignup = ({ compact = false }: NewsletterSignupProps) => {
         <p className="text-sm md:text-base text-charcoal/70 mb-4">
           Recevez nos actualités et nouveaux ateliers
         </p>
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto relative">
+          <HoneypotField />
           <Input
             type="email"
             placeholder="Votre adresse email"

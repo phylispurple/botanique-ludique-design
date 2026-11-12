@@ -122,6 +122,16 @@ const handler = async (req: Request): Promise<Response> => {
     }
     
     const { name, email, subject, message, sendConfirmation } = validationResult.data;
+
+    // Anti-arnaque : les spams glissent presque toujours un lien. Même règle que sur le site.
+    const LINK_RE = /(https?:\/\/|www\.|\b[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,}\/\S)/i;
+    if ([name, subject, message].some((t) => t && LINK_RE.test(t))) {
+      console.log("Message avec lien refusé, expéditeur :", email);
+      return new Response(
+        JSON.stringify({ success: false, error: "Les liens ne sont pas acceptés dans le formulaire." }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
     const firstName = extractFirstName(name);
 
     console.log("Sending contact email from:", email);

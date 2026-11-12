@@ -11,6 +11,7 @@ import { Loader2, Mail, MapPin, Phone, Send, Clock, Calendar as CalendarIcon, Sp
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 import { trackFormSubmit } from "@/lib/analytics";
+import { HoneypotField, useBotCheck, containsLink, LINK_ERROR_MESSAGE } from "@/lib/antiSpam";
 // Photo provisoire, à remplacer par l'image d'en-tête dédiée
 import heroContact from "@/assets/gallery-herbier-toiles.webp";
 
@@ -98,6 +99,7 @@ const Contact = () => {
   const [formData, setFormData] = useState(emptyForm);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
+  const botCheck = useBotCheck();
 
   useEffect(() => {
     const atelierFromUrl = searchParams.get('atelier');
@@ -139,6 +141,17 @@ const Contact = () => {
       if (error instanceof z.ZodError) {
         toast({ title: "Erreur de validation", description: error.errors[0].message, variant: "destructive" });
       }
+      return;
+    }
+
+    if (botCheck.isBot(e.currentTarget as HTMLFormElement)) {
+      setFormData(emptyForm);
+      setSent(true);
+      return;
+    }
+
+    if (containsLink(formData.message, formData.subject, formData.organization, formData.location, formData.name)) {
+      toast({ title: "Lien non accepté", description: LINK_ERROR_MESSAGE, variant: "destructive" });
       return;
     }
 
@@ -290,7 +303,8 @@ const Contact = () => {
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-10">
+                <form onSubmit={handleSubmit} className="space-y-10 relative">
+                  <HoneypotField />
                   {/* Coordonnées */}
                   <div>
                     <h2 className="font-display text-xl uppercase tracking-[-0.5px] mb-8 pb-3 border-b-2 border-[hsl(var(--black))]">

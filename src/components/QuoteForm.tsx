@@ -3,6 +3,7 @@ import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { trackFormSubmit } from "@/lib/analytics";
+import { HoneypotField, useBotCheck, containsLink, LINK_ERROR_MESSAGE } from "@/lib/antiSpam";
 
 const quoteSchema = z.object({
   firstName: z.string().trim().min(1, "Prénom requis").max(80),
@@ -29,6 +30,7 @@ const labelCls =
 const QuoteForm = ({ atelierTitle }: QuoteFormProps) => {
   const { toast } = useToast();
   const [submitting, setSubmitting] = useState(false);
+  const botCheck = useBotCheck();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -54,6 +56,16 @@ const QuoteForm = ({ atelierTitle }: QuoteFormProps) => {
       if (err instanceof z.ZodError) {
         toast({ title: "Erreur de validation", description: err.errors[0].message, variant: "destructive" });
       }
+      return;
+    }
+    const emptyQuote = { firstName: "", lastName: "", company: "", email: "", phone: "", participants: "", date: "", city: "", eventType: "", message: "" };
+    if (botCheck.isBot(e.currentTarget as HTMLFormElement)) {
+      toast({ title: "Demande envoyée 🍀", description: "Réponse sous 24 à 48 heures." });
+      setForm(emptyQuote);
+      return;
+    }
+    if (containsLink(form.message, form.company, form.city, form.eventType, form.firstName, form.lastName)) {
+      toast({ title: "Lien non accepté", description: LINK_ERROR_MESSAGE, variant: "destructive" });
       return;
     }
     setSubmitting(true);
@@ -89,7 +101,8 @@ const QuoteForm = ({ atelierTitle }: QuoteFormProps) => {
   };
 
   return (
-    <form onSubmit={onSubmit} className="space-y-3">
+    <form onSubmit={onSubmit} className="space-y-3 relative">
+      <HoneypotField />
       <h3 className="font-display text-xl uppercase leading-none mb-1">Demander un devis</h3>
       <div className="grid grid-cols-2 gap-3">
         <div>
