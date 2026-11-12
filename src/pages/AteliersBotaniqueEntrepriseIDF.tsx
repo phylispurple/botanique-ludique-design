@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import LandingPhotoStrip from "@/components/LandingPhotoStrip";
+import { EVENT_PHOTOS } from "@/data/eventPhotos";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
@@ -112,7 +113,7 @@ const AteliersBotaniqueEntrepriseIDF = () => {
                 locaux ou le lieu de votre choix.
               </p>
             </div>
-      <LandingPhotoStrip />
+      <LandingPhotoStrip photos={EVENT_PHOTOS} />
 
             {/* Zone d'intervention */}
             <div className="bg-[hsl(var(--yellow))]/15 p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">

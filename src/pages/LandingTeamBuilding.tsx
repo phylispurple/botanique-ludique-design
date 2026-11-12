@@ -12,10 +12,10 @@ import QuoteForm from "@/components/QuoteForm";
 import NoelEntrepriseBanner from "@/components/NoelEntrepriseBanner";
 import { AREA_SERVED_IDF } from "@/data/areaServed";
 import { Users, Leaf, Clock, MapPin, ArrowRight, Download, Phone, Sparkles, Award } from "lucide-react";
-import heroImg from "@/assets/gallery-terrarium-adultes-groupe.jpg";
-import imgTerrarium from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
-import imgKokedama from "@/assets/gallery-kokedama-collection.jpg";
-import imgTeinture from "@/assets/gallery-teinture-tshirts-table.webp";
+import heroImg from "@/assets/event-terrarium-table.webp";
+import imgTerrarium from "@/assets/event-terrarium-mains.webp";
+import imgKokedama from "@/assets/event-kokedama-mains.webp";
+import imgTeinture from "@/assets/event-teinture-petales.webp";
 import imgBombes from "@/assets/gallery-bombes-graines-sechage.webp";
 
 const SLUG = "/team-building-nature-entreprise";
@@ -41,7 +41,7 @@ const ATELIERS = [
     title: "Terrarium",
     tag: "Le plus demandé",
     image: imgTerrarium,
-    alt: "Terrarium en bocal de verre avec fittonia et tradescantia, réalisé lors d'un atelier",
+    alt: "Composition d'un terrarium en bocal pendant un atelier en entreprise",
     desc: "Chacun compose son écosystème miniature en bocal, et découvre l'histoire étonnante de la Wardian case.",
     duree: "2h",
     groupe: "Jusqu'à 15 par session",
@@ -51,7 +51,7 @@ const ATELIERS = [
     title: "Kokedama",
     tag: "Art végétal japonais",
     image: imgKokedama,
-    alt: "Plusieurs kokedamas ficelés posés sur des assiettes après un atelier",
+    alt: "Façonnage d'un kokedama lors d'un atelier en entreprise",
     desc: "Façonner une boule de terre et de mousse autour d'une plante, puis la nouer : un geste lent et apaisant.",
     duree: "2h",
     groupe: "Jusqu'à 15 par session",
@@ -61,7 +61,7 @@ const ATELIERS = [
     title: "Teinture végétale",
     tag: "Création collective",
     image: imgTeinture,
-    alt: "Table d'atelier de teinture végétale avec tee-shirts colorés aux pigments naturels et bols de plantes tinctoriales",
+    alt: "Impression végétale de pétales sur un carré de soie",
     desc: "Extraire la couleur des plantes et teindre ensemble, en découvrant l'histoire des couleurs végétales.",
     duree: "2h30",
     groupe: "Groupes plus larges possibles",
@@ -200,7 +200,7 @@ const LandingTeamBuilding = () => {
       <WaveDivider from="hsl(0,0%,10%)" to="hsl(36,33%,93%)" />
 
       {/* ===== INFOS CLÉS ===== */}
-      <section className="px-6 pt-6 pb-16">
+      <section className="px-6 pt-6 pb-8">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 pl-[3px] pt-[3px]">
           {INFOS.map((item) => (
             <div key={item.label} className="px-6 py-8 text-center border-brutal bg-[hsl(var(--cream))] -ml-[3px] -mt-[3px]">
@@ -212,8 +212,8 @@ const LandingTeamBuilding = () => {
         </div>
       </section>
 
-      <div className="pb-16">
-        <NoelEntrepriseBanner ctaTo={DEVIS_ANCHOR} />
+      <div className="px-6 pb-12">
+        <NoelEntrepriseBanner ctaTo={DEVIS_ANCHOR} className="max-w-5xl mx-auto" />
       </div>
 
       {/* ===== ATELIERS ===== */}

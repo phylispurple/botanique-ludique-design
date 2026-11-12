@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import LandingPhotoStrip from "@/components/LandingPhotoStrip";
+import { EVENT_PHOTOS } from "@/data/eventPhotos";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -64,7 +65,7 @@ const AnimationSemaineQVCT = () => {
           </AnimatedSection>
         </div>
       </section>
-      <LandingPhotoStrip />
+      <LandingPhotoStrip photos={EVENT_PHOTOS} />
 
       {/* What is QVCT */}
       <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15 border-brutal shadow-brutal">

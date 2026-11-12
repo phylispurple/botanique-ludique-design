@@ -36,11 +36,14 @@ const LANDING_PHOTOS = [
 interface LandingPhotoStripProps {
   title?: string;
   subtitle?: string;
+  /** Photos à afficher à la place de la sélection générale (ex. EVENT_PHOTOS pour les pages entreprises). */
+  photos?: { src: string; alt: string }[];
 }
 
 const LandingPhotoStrip = ({
   title = "Nos ateliers en images",
   subtitle = "Aperçu de nos interventions, créations et publics",
+  photos = LANDING_PHOTOS,
 }: LandingPhotoStripProps) => {
   return (
     <section className="py-12 md:py-16 border-b-[3px] border-[hsl(var(--black))] bg-[hsl(var(--yellow))]/40 relative overflow-hidden">
@@ -65,7 +68,7 @@ const LandingPhotoStrip = ({
           Voir toute la galerie <ArrowRight size={14} />
         </Link>
       </div>
-      <PhotoCarousel images={LANDING_PHOTOS} speed={0.6} />
+      <PhotoCarousel images={photos} speed={0.6} />
     </section>
   );
 };

@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import LandingPhotoStrip from "@/components/LandingPhotoStrip";
+import { EVENT_PHOTOS } from "@/data/eventPhotos";
 import FloatingIllustrations from "@/components/FloatingIllustrations";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
@@ -101,7 +102,7 @@ const TeamBuildingRSEParis = () => {
                 environnemental au cœur de nos activités.
               </p>
             </div>
-      <LandingPhotoStrip />
+      <LandingPhotoStrip photos={EVENT_PHOTOS} />
 
             {/* Benefits Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">

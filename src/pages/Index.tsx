@@ -29,6 +29,7 @@ import galleryMiniTerrarium from "@/assets/gallery-mini-terrarium.jpeg";
 import PhotoCarousel from "@/components/PhotoCarousel";
 import WaveDivider from "@/components/WaveDivider";
 import NoelEntrepriseBanner from "@/components/NoelEntrepriseBanner";
+import { EVENT_PHOTO } from "@/data/eventPhotos";
 
 
 const Index = () => {
@@ -167,24 +168,24 @@ const Index = () => {
 
       {/* ===== ENTREPRISES & CSE ===== */}
       <section className="px-6 pt-14 md:pt-20" aria-labelledby="bloc-entreprises">
-        <div className="max-w-5xl mx-auto space-y-6">
-          <NoelEntrepriseBanner />
-          <AnimatedSection>
-            <div className="border-brutal shadow-brutal bg-[hsl(var(--cream))] p-6 md:p-10 grid md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center">
-              <div>
-                <p className="section-label mb-2">Entreprises · CSE · Agences</p>
-                <h2 id="bloc-entreprises" className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] uppercase leading-[0.95] tracking-[-1px] mb-4">
-                  Un team building végétal, <span className="text-primary">clés en main</span>
-                </h2>
-                <p className="font-body text-base text-foreground/75 leading-relaxed mb-4 max-w-2xl">
-                  Terrarium, kokedama, teinture végétale ou bombes à graines, dans vos locaux partout en Île-de-France.
-                  J'apporte tout le matériel et chacun repart avec sa création.
-                </p>
-                <p className="font-mono-brand text-[10px] md:text-[11px] uppercase tracking-[2px] text-foreground/60">
-                  1h30 à 2h30 · Jusqu'à 15 par session, grands groupes en rotation · Devis gratuit
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row md:flex-col gap-3">
+        <AnimatedSection className="max-w-5xl mx-auto">
+          <div className="border-brutal bg-[hsl(var(--cream))] grid md:grid-cols-[2fr_3fr] overflow-hidden">
+            <img
+              src={EVENT_PHOTO.terrariumTable}
+              alt="Terrariums en bocal et sacs kraft prêts pour une animation en entreprise"
+              className="w-full h-56 md:h-full object-cover border-b-[3px] md:border-b-0 md:border-r-[3px] border-foreground"
+              loading="lazy"
+            />
+            <div className="p-6 md:p-10">
+              <p className="section-label mb-2">Entreprises · CSE · Agences</p>
+              <h2 id="bloc-entreprises" className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] uppercase leading-[0.95] tracking-[-1px] mb-4">
+                Un team building végétal, <span className="text-primary">clés en main</span>
+              </h2>
+              <p className="font-body text-base text-foreground/75 leading-relaxed mb-6">
+                Terrarium, kokedama, teinture végétale ou sachets de senteurs, dans vos locaux partout en Île-de-France.
+                J'apporte tout le matériel et chacun repart avec sa création.
+              </p>
+              <div className="flex flex-wrap gap-3 mb-6">
                 <Link
                   to="/team-building-nature-entreprise#devis"
                   className="btn-brutal bg-accent text-foreground border-foreground text-xs px-6 py-3 text-center whitespace-nowrap"
@@ -198,9 +199,10 @@ const Index = () => {
                   Voir les formules
                 </Link>
               </div>
+              <NoelEntrepriseBanner />
             </div>
-          </AnimatedSection>
-        </div>
+          </div>
+        </AnimatedSection>
       </section>
 
       {/* ===== PRÉSENTATION + STATS ===== */}

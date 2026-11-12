@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import LandingPhotoStrip from "@/components/LandingPhotoStrip";
+import { EVENT_PHOTOS } from "@/data/eventPhotos";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { AREA_SERVED_IDF } from "@/data/areaServed";
@@ -74,7 +75,7 @@ const AtelierEthnobotaniqueEntreprise = () => {
             </p>
           </AnimatedSection>
         </section>
-      <LandingPhotoStrip />
+      <LandingPhotoStrip photos={EVENT_PHOTOS} />
 
         <section className="py-16 px-6 md:px-16 lg:px-[120px]">
           <span className="font-mono-brand text-[11px] tracking-[3px] uppercase text-[hsl(var(--black))]/60 block mb-4">

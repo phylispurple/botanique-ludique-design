@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import LandingPhotoStrip from "@/components/LandingPhotoStrip";
+import { EVENT_PHOTOS } from "@/data/eventPhotos";
 import { SEO } from "@/components/SEO";
 import { Building2, Users, Gift, Leaf, Clock, MapPin, ArrowRight, CheckCircle, Euro } from "lucide-react";
 
@@ -35,7 +36,7 @@ const LandingCSE = () => {
           <Button asChild size="lg" className="bg-sage hover:bg-sage-dark text-white"><Link to="/contact">Devis gratuit sous 24h<ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
         </div>
       </section>
-      <LandingPhotoStrip />
+      <LandingPhotoStrip photos={EVENT_PHOTOS} />
 
       <section className="py-16 px-4 bg-[hsl(var(--yellow))]/15">
         <div className="container mx-auto max-w-6xl">
