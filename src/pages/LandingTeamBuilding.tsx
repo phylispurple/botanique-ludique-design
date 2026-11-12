@@ -24,7 +24,7 @@ const PDF_URL = "/documents/plaquette-botanique-ludique-entreprise-2026-2027.pdf
 const DEVIS_ANCHOR = "#devis";
 
 const INFOS = [
-  { icon: Users, label: "Jusqu'à 15 par session", desc: "Grands groupes en rotation" },
+  { icon: Users, label: "À partir de 8 participants", desc: "Grands groupes en rotation" },
   { icon: Clock, label: "1h30 à 2h30", desc: "Selon l'atelier choisi" },
   { icon: MapPin, label: "Dans vos locaux", desc: "Ou en extérieur, partout en Île-de-France" },
 ];
@@ -44,7 +44,7 @@ const ATELIERS = [
     alt: "Composition d'un terrarium en bocal pendant un atelier en entreprise",
     desc: "Chacun compose son écosystème miniature en bocal, et découvre l'histoire étonnante de la Wardian case.",
     duree: "2h",
-    groupe: "Jusqu'à 15 par session",
+    groupe: "À partir de 8 participants",
     to: "/atelier-terrarium-team-building",
   },
   {
@@ -54,7 +54,7 @@ const ATELIERS = [
     alt: "Façonnage d'un kokedama lors d'un atelier en entreprise",
     desc: "Façonner une boule de terre et de mousse autour d'une plante, puis la nouer : un geste lent et apaisant.",
     duree: "2h",
-    groupe: "Jusqu'à 15 par session",
+    groupe: "À partir de 8 participants",
     to: "/atelier-kokedama-team-building",
   },
   {
@@ -91,7 +91,7 @@ const OCCASIONS = ["Séminaire", "Journée cohésion", "Journée RSE", "Semaine 
 const FAQ = [
   {
     q: "Combien de personnes peuvent participer ?",
-    a: "Jusqu'à 15 personnes par session pour que chacun soit bien accompagné. Pour un groupe plus important, nous organisons plusieurs sessions en rotation, ou un format collectif comme la teinture végétale ou les bombes à graines.",
+    a: "À partir de 8 participants, sans limite haute. Pour que chacun soit bien accompagné, les grands groupes sont répartis en plusieurs sessions en rotation, ou un format collectif comme la teinture végétale ou les bombes à graines.",
   },
   {
     q: "Où se déroulent les ateliers ?",

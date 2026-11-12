@@ -16,7 +16,7 @@ const SLUG = "/atelier-kokedama-team-building";
 const CONTACT = `/contact?subject=${encodeURIComponent("Devis atelier kokedama team building")}`;
 
 const INFOS = [
-  { icon: Users, label: "Jusqu'à 15 par session", desc: "Au-delà, ateliers en rotation" },
+  { icon: Users, label: "À partir de 8 participants", desc: "Grands groupes en rotation" },
   { icon: Clock, label: "1h30 à 2h", desc: "Selon le format choisi" },
   { icon: MapPin, label: "Dans vos locaux", desc: "Partout en Île-de-France" },
 ];
@@ -59,7 +59,7 @@ const POURQUOI = [
 const FAQ = [
   {
     q: "Combien de participants pour un atelier kokedama ?",
-    a: "Jusqu'à 15 personnes par session pour que chacun soit bien accompagné. Pour un groupe plus important, nous organisons plusieurs sessions en rotation, sur devis.",
+    a: "À partir de 8 participants, sans limite haute. Pour que chacun soit bien accompagné, les grands groupes sont répartis en plusieurs sessions en rotation, sur devis.",
   },
   {
     q: "Combien de temps dure l'atelier ?",

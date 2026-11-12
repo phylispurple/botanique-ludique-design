@@ -91,7 +91,7 @@ const _BASE_PRO_LANDINGS: ProLandingConfig[] = [
       {
         question: "Combien coûte un atelier QVCT pour une entreprise à Paris ?",
         answer:
-          "Le tarif dépend du format, du nombre de participants et du lieu. Un atelier kokedama pour 15 personnes commence à 600 EUR HT, matériel inclus. Devis gratuit sous 48h.",
+          "Le tarif dépend de l'atelier, du nombre de participants et du lieu. Chaque demande fait l'objet d'un devis gratuit, envoyé sous 24 à 48 heures. Prix nets, TVA non applicable, matériel et déplacement en Île-de-France inclus.",
       },
       {
         question: "Pouvez-vous intervenir dans nos locaux à Paris ?",
@@ -326,7 +326,7 @@ const _BASE_PRO_LANDINGS: ProLandingConfig[] = [
       },
       {
         question: "Quel budget prévoir ?",
-        answer: "Comptez 40 à 80 EUR HT par participant selon le format et le nombre. Matériel inclus.",
+        answer: "Le tarif dépend de l'atelier, du nombre de participants et du lieu. Chaque demande fait l'objet d'un devis gratuit, envoyé sous 24 à 48 heures. Prix nets, TVA non applicable, matériel et déplacement en Île-de-France inclus.",
       },
     ],
     testimonial: {

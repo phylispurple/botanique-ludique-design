@@ -79,7 +79,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
       },
       {
         question: "Combien coûte un atelier fête des mères pour 20 personnes ?",
-        answer: "À partir de 800 EUR HT pour 20 participants, matériel inclus, animatrice et installation comprises. Devis détaillé sous 48h.",
+        answer: "Le tarif dépend de l'atelier, du nombre de participants et du lieu. Chaque demande fait l'objet d'un devis gratuit, envoyé sous 24 à 48 heures. Prix nets, TVA non applicable, matériel et déplacement en Île-de-France inclus.",
       },
       {
         question: "Les hommes participent aussi ?",
@@ -144,7 +144,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
       },
       {
         question: "Quel est le tarif pour 15 participants ?",
-        answer: "À partir de 550 EUR HT pour 15 participants, format 1h, matériel inclus.",
+        answer: "Le tarif dépend de l'atelier, du nombre de participants et du lieu. Chaque demande fait l'objet d'un devis gratuit, envoyé sous 24 à 48 heures. Prix nets, TVA non applicable, matériel et déplacement en Île-de-France inclus.",
       },
     ],
     testimonial: {
@@ -340,7 +340,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
       },
       {
         question: "Quel budget pour un atelier Noël à Paris pour 25 personnes ?",
-        answer: "À partir de 1100 EUR HT pour 25 participants, couronne ou terrarium, matériel premium inclus.",
+        answer: "Le tarif dépend de l'atelier, du nombre de participants et du lieu. Chaque demande fait l'objet d'un devis gratuit, envoyé sous 24 à 48 heures. Prix nets, TVA non applicable, matériel et déplacement en Île-de-France inclus.",
       },
       {
         question: "Pouvez-vous animer une soirée à 100 personnes ?",
@@ -468,7 +468,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
       },
       {
         question: "Quel budget pour 20 participants ?",
-        answer: "À partir de 700 EUR HT pour 20 personnes, format 1h, matériel premium inclus.",
+        answer: "Le tarif dépend de l'atelier, du nombre de participants et du lieu. Chaque demande fait l'objet d'un devis gratuit, envoyé sous 24 à 48 heures. Prix nets, TVA non applicable, matériel et déplacement en Île-de-France inclus.",
       },
     ],
     testimonial: {
@@ -595,7 +595,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
       },
       {
         question: "Quel tarif pour 30 personnes en outdoor ?",
-        answer: "À partir de 1300 EUR HT pour 30 participants en balade ou bombes de graines, matériel inclus.",
+        answer: "Le tarif dépend de l'atelier, du nombre de participants et du lieu. Chaque demande fait l'objet d'un devis gratuit, envoyé sous 24 à 48 heures. Prix nets, TVA non applicable, matériel et déplacement en Île-de-France inclus.",
       },
     ],
     testimonial: {
@@ -656,7 +656,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
       },
       {
         question: "Tarif pour 15 personnes ?",
-        answer: "À partir de 650 EUR HT pour 15 participants, fleurs locales de saison incluses.",
+        answer: "Le tarif dépend de l'atelier, du nombre de participants et du lieu. Chaque demande fait l'objet d'un devis gratuit, envoyé sous 24 à 48 heures. Prix nets, TVA non applicable, matériel et déplacement en Île-de-France inclus.",
       },
     ],
     testimonial: {
@@ -778,7 +778,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
       },
       {
         question: "Quel budget pour 80 participants en demi-journée ?",
-        answer: "À partir de 2400 EUR HT animation, hors logistique. Devis détaillé sur brief.",
+        answer: "Le tarif dépend de l'atelier, du nombre de participants et du lieu. Chaque demande fait l'objet d'un devis gratuit, envoyé sous 24 à 48 heures. Prix nets, TVA non applicable, matériel et déplacement en Île-de-France inclus.",
       },
     ],
     testimonial: {
@@ -839,7 +839,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
       },
       {
         question: "Tarif pour 20 participants en atelier feuilles ?",
-        answer: "À partir de 900 EUR HT, matériel premium et encadrement inclus.",
+        answer: "Le tarif dépend de l'atelier, du nombre de participants et du lieu. Chaque demande fait l'objet d'un devis gratuit, envoyé sous 24 à 48 heures. Prix nets, TVA non applicable, matériel et déplacement en Île-de-France inclus.",
       },
     ],
     testimonial: {
@@ -900,7 +900,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
       },
       {
         question: "Tarif pour 15 participants ?",
-        answer: "À partir de 650 EUR HT en janvier-février, matériel inclus.",
+        answer: "Le tarif dépend de l'atelier, du nombre de participants et du lieu. Chaque demande fait l'objet d'un devis gratuit, envoyé sous 24 à 48 heures. Prix nets, TVA non applicable, matériel et déplacement en Île-de-France inclus.",
       },
     ],
     testimonial: {
@@ -967,7 +967,7 @@ export const SEASONAL_LANDINGS: ProLandingConfig[] = [
       },
       {
         question: "Tarif pour 25 participants ?",
-        answer: "À partir de 950 EUR HT pour 25 personnes, format kokedama 1h30, matériel inclus.",
+        answer: "Le tarif dépend de l'atelier, du nombre de participants et du lieu. Chaque demande fait l'objet d'un devis gratuit, envoyé sous 24 à 48 heures. Prix nets, TVA non applicable, matériel et déplacement en Île-de-France inclus.",
       },
       {
         question: "Vous intervenez dans le secteur santé ?",
@@ -998,7 +998,7 @@ export const SEASONAL_LANDING_CONTEXT: Record<string, LandingContext> = {
     heading: "La fête des mères en entreprise, un terrain à manipuler avec soin",
     paragraphs: [
       "La fête des mères dans le contexte professionnel pose un vrai sujet de cohérence interne. La célébrer sans réfléchir, c'est risquer de mettre à l'écart les collaboratrices sans enfant, les pères qui s'occupent autant des leurs, et plus largement toutes les configurations familiales contemporaines. La passer sous silence, c'est laisser tomber une marque d'attention que vos équipes attendent. Notre approche tranche cette tension par le format : un atelier collectif où tout le monde fabrique un objet, qu'il offrira ou gardera selon ce qui lui convient. La dimension cadeau personnel n'est pas imposée, elle est offerte comme une possibilité.",
-      "Sur le plan opérationnel, un atelier fête des mères en entreprise se prépare comme un événement court. Nous arrivons 30 à 45 minutes avant pour installer le matériel sur des tables protégées. L'animation dure 1h à 1h30 selon le format (couronne, bougie, kokedama, sachet aromatique). Le démontage est de notre responsabilité, vos locaux sont rendus impeccables. Sur le plan budgétaire, comptez 35 à 50 EUR HT par participant tout compris (matériel premium, animatrice formée, déplacement Paris IDF). Les commandes sont à passer idéalement avant fin mars pour garantir le créneau de mai.",
+      "Sur le plan opérationnel, un atelier fête des mères en entreprise se prépare comme un événement court. Nous arrivons 30 à 45 minutes avant pour installer le matériel sur des tables protégées. L'animation dure 1h à 1h30 selon le format (couronne, bougie, kokedama, sachet aromatique). Le démontage est de notre responsabilité, vos locaux sont rendus impeccables. Sur le plan budgétaire, chaque atelier fait l'objet d'un devis gratuit selon le format et le nombre de participants, tout compris (matériel, animatrice, déplacement en Île-de-France), prix nets, TVA non applicable. Les commandes sont à passer idéalement avant fin mars pour garantir le créneau de mai.",
     ],
   },
   "atelier-fete-des-peres-entreprise": {
