@@ -289,7 +289,7 @@ const Index = () => {
                 Voir les formules
               </Link>
             </div>
-            <NoelEntrepriseBanner className="!bg-[hsl(var(--cream))] rounded-r-2xl" />
+            <NoelEntrepriseBanner />
           </div>
         </AnimatedSection>
       </section>
