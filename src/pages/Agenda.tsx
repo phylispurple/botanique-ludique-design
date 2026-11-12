@@ -256,7 +256,7 @@ const EVENTS: UpcomingEvent[] = [
       location: {
         "@type": "Place",
         name: "Médiathèque Jules-Verne",
-        address: { "@type": "PostalAddress", addressLocality: "Houilles", postalCode: "78800", addressRegion: "Île-de-France", addressCountry: "FR" },
+        address: { "@type": "PostalAddress", streetAddress: "7 rue du Capitaine-Guise", addressLocality: "Houilles", postalCode: "78800", addressRegion: "Île-de-France", addressCountry: "FR" },
       },
     },
   },
@@ -278,7 +278,7 @@ const EVENTS: UpcomingEvent[] = [
       location: {
         "@type": "Place",
         name: "Médiathèque Jules-Verne",
-        address: { "@type": "PostalAddress", addressLocality: "Houilles", postalCode: "78800", addressRegion: "Île-de-France", addressCountry: "FR" },
+        address: { "@type": "PostalAddress", streetAddress: "7 rue du Capitaine-Guise", addressLocality: "Houilles", postalCode: "78800", addressRegion: "Île-de-France", addressCountry: "FR" },
       },
     },
   },
@@ -419,6 +419,14 @@ const ARCHIVED_EVENTS: PastEvent[] = [
 const MONTHS_FR = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
 const DAYS_FR = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 const ARCHIVES_PER_PAGE = 4;
+
+/** Adresse postale précise tirée du balisage (rue, code postal, ville), si elle est renseignée. */
+const eventAddress = (ev: UpcomingEvent): string | null => {
+  const loc = ev.schema?.location as { address?: Record<string, string> } | undefined;
+  const a = loc?.address;
+  if (!a?.streetAddress) return null;
+  return [a.streetAddress, [a.postalCode, a.addressLocality].filter(Boolean).join(" ")].filter(Boolean).join(", ");
+};
 
 /** Fin d'un événement : endDate du balisage si elle existe, sinon fin de la journée. */
 const eventEnd = (ev: UpcomingEvent): Date | null => {
@@ -632,6 +640,17 @@ const Agenda = () => {
                           {event.time}
                         </span>
                       )}
+                      <span className="font-mono text-xs uppercase tracking-[1.5px] text-foreground/80 mt-3 flex items-start gap-1.5 leading-snug">
+                        <MapPin className="w-3.5 h-3.5 mt-[1px] shrink-0 text-primary" />
+                        <span>
+                          {event.location}
+                          {eventAddress(event) && (
+                            <span className="block normal-case tracking-normal font-body text-[13px] text-foreground/65 mt-1">
+                              {eventAddress(event)}
+                            </span>
+                          )}
+                        </span>
+                      </span>
                     </div>
 
                     <div className="flex-1 p-6 md:p-8 flex flex-col gap-4">
@@ -654,10 +673,6 @@ const Agenda = () => {
                       <p className="font-body text-sm text-foreground/80 leading-relaxed">{event.description}</p>
 
                       <div className="flex flex-wrap gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[1.5px] text-foreground/70">
-                        <span className="flex items-center gap-1.5">
-                          <MapPin className="w-3.5 h-3.5 text-primary" />
-                          {event.location}
-                        </span>
                         {event.spots && (
                           <span className="flex items-center gap-1.5">
                             <Users className="w-3.5 h-3.5 text-primary" />
