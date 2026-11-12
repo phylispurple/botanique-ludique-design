@@ -16,10 +16,10 @@ const LandingCSE = () => {
   ];
 
   const workshops = [
-    { title: "Kokedama d'équipe", price: "45€/pers", duration: "2h", participants: "10-30 pers" },
-    { title: "Terrarium collectif", price: "50€/pers", duration: "1h30", participants: "10-30 pers" },
-    { title: "Teinture végétale", price: "55€/pers", duration: "2h30", participants: "10-20 pers" },
-    { title: "Bombes à graines", price: "25€/pers", duration: "1h30", participants: "10-40 pers" }
+    { title: "Kokedama d'équipe", price: "Sur devis", duration: "2h", participants: "10-30 pers" },
+    { title: "Terrarium collectif", price: "Sur devis", duration: "1h30", participants: "10-30 pers" },
+    { title: "Teinture végétale", price: "Sur devis", duration: "2h30", participants: "10-20 pers" },
+    { title: "Bombes à graines", price: "Sur devis", duration: "1h30", participants: "10-40 pers" }
   ];
 
   return (

@@ -257,9 +257,6 @@ const AnimationSemaineQVCT = () => {
             <p className="text-charcoal/80 mb-6">
               Les tarifs varient selon le nombre de participants, la durée et le type d'atelier choisi. 
             </p>
-            <p className="text-charcoal/80 mb-6">
-              <strong>Exemple :</strong> Atelier kokedama pour 30 personnes = 35€/pers
-            </p>
             <div className="bg-[hsl(var(--yellow))]/15 p-6 mb-6 border-brutal shadow-brutal">
               <p className="text-sm text-charcoal/70 mb-4">
                 📌 Tarifs dégressifs pour groupes importants
