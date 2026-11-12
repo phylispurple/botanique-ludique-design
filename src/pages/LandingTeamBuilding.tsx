@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
@@ -8,6 +9,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import WaveDivider from "@/components/WaveDivider";
 import SocialProofBar from "@/components/SocialProofBar";
 import QuoteForm from "@/components/QuoteForm";
+import NoelEntrepriseBanner from "@/components/NoelEntrepriseBanner";
 import { AREA_SERVED_IDF } from "@/data/areaServed";
 import { Users, Leaf, Clock, MapPin, ArrowRight, Download, Phone, Sparkles, Award } from "lucide-react";
 import heroImg from "@/assets/gallery-terrarium-adultes-groupe.jpg";
@@ -110,6 +112,20 @@ const FAQ = [
 ];
 
 const LandingTeamBuilding = () => {
+  const location = useLocation();
+
+  // Arrivée depuis une autre page sur /team-building-nature-entreprise#devis : descendre au formulaire
+  useEffect(() => {
+    if (location.hash !== DEVIS_ANCHOR) return;
+    let tries = 0;
+    const go = () => {
+      const el = document.getElementById("devis");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+      else if (tries++ < 15) setTimeout(go, 150);
+    };
+    setTimeout(go, 200);
+  }, [location.hash]);
+
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
       <SEO
@@ -195,6 +211,10 @@ const LandingTeamBuilding = () => {
           ))}
         </div>
       </section>
+
+      <div className="pb-16">
+        <NoelEntrepriseBanner ctaTo={DEVIS_ANCHOR} />
+      </div>
 
       {/* ===== ATELIERS ===== */}
       <section className="px-6 pb-20">

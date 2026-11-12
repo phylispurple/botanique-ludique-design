@@ -28,6 +28,7 @@ import gallerySachetSenteur from "@/assets/gallery-sachet-senteur.webp";
 import galleryMiniTerrarium from "@/assets/gallery-mini-terrarium.jpeg";
 import PhotoCarousel from "@/components/PhotoCarousel";
 import WaveDivider from "@/components/WaveDivider";
+import NoelEntrepriseBanner from "@/components/NoelEntrepriseBanner";
 
 
 const Index = () => {
@@ -130,6 +131,12 @@ const Index = () => {
               >
                 Agenda & Inscriptions →
               </button>
+              <button
+                onClick={() => navigate('/team-building-nature-entreprise')}
+                className="btn-brutal bg-[hsl(var(--cream))] text-foreground border-[hsl(var(--cream))] hover:bg-accent hover:border-accent hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--cream))] px-6 py-2.5"
+              >
+                Entreprises & CSE →
+              </button>
             </div>
           </AnimatedSection>
         </div>
@@ -156,6 +163,44 @@ const Index = () => {
             fill="hsl(var(--cream))"
           />
         </svg>
+      </section>
+
+      {/* ===== ENTREPRISES & CSE ===== */}
+      <section className="px-6 pt-14 md:pt-20" aria-labelledby="bloc-entreprises">
+        <div className="max-w-5xl mx-auto space-y-6">
+          <NoelEntrepriseBanner />
+          <AnimatedSection>
+            <div className="border-brutal shadow-brutal bg-[hsl(var(--cream))] p-6 md:p-10 grid md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center">
+              <div>
+                <p className="section-label mb-2">Entreprises · CSE · Agences</p>
+                <h2 id="bloc-entreprises" className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] uppercase leading-[0.95] tracking-[-1px] mb-4">
+                  Un team building végétal, <span className="text-primary">clés en main</span>
+                </h2>
+                <p className="font-body text-base text-foreground/75 leading-relaxed mb-4 max-w-2xl">
+                  Terrarium, kokedama, teinture végétale ou bombes à graines, dans vos locaux partout en Île-de-France.
+                  J'apporte tout le matériel et chacun repart avec sa création.
+                </p>
+                <p className="font-mono-brand text-[10px] md:text-[11px] uppercase tracking-[2px] text-foreground/60">
+                  1h30 à 2h30 · Jusqu'à 15 par session, grands groupes en rotation · Devis gratuit
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row md:flex-col gap-3">
+                <Link
+                  to="/team-building-nature-entreprise#devis"
+                  className="btn-brutal bg-accent text-foreground border-foreground text-xs px-6 py-3 text-center whitespace-nowrap"
+                >
+                  Demander un devis →
+                </Link>
+                <Link
+                  to="/team-building-nature-entreprise"
+                  className="btn-brutal bg-transparent text-foreground border-foreground text-xs px-6 py-3 text-center whitespace-nowrap"
+                >
+                  Voir les formules
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
       </section>
 
       {/* ===== PRÉSENTATION + STATS ===== */}
