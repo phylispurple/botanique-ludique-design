@@ -5,6 +5,7 @@ import { z } from "zod";
 import { Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { trackFormSubmit } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -82,6 +83,8 @@ const TestimonialForm = () => {
       if (response && !response.success) {
         throw new Error(response.error || "Une erreur s'est produite.");
       }
+
+      trackFormSubmit("temoignage", { workshop: data.workshop || "non précisé" });
 
       toast({
         title: "Témoignage envoyé !",

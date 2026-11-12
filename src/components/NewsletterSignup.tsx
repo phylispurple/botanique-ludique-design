@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Mail } from "lucide-react";
 import { HoneypotField, useBotCheck } from "@/lib/antiSpam";
+import { trackFormSubmit } from "@/lib/analytics";
 
 interface NewsletterSignupProps {
   compact?: boolean;
@@ -40,6 +41,7 @@ const NewsletterSignup = ({ compact = false }: NewsletterSignupProps) => {
 
       if (error) throw error;
 
+      trackFormSubmit("newsletter");
       toast.success("Merci pour votre inscription ! Nous vous contacterons bientôt.");
       setEmail("");
     } catch (error) {
