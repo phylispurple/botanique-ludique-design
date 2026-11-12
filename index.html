@@ -8,14 +8,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
     
-    <!-- Mesure d'audience Plausible (script propre au site) : sans cookies, pas de consentement requis.
-         Téléchargements et clics sortants s'activent dans Plausible > Site settings > Site installation.
+    <!-- Mesure d'audience Umami Cloud (offre gratuite) : sans cookies, pas de consentement requis.
+         data-domains : ne compte que le vrai site (ni localhost, ni les aperçus Netlify).
          Les conversions (formulaires, CTA blog) passent par src/lib/analytics.ts. -->
-    <script async src="https://plausible.io/js/pa-UHjy2Dtd0tzWumu6Bcuj_.js"></script>
-    <script>
-      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init()
-    </script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="58fcf240-0295-4576-9a40-e42240e3c564" data-domains="botaniqueludique.com"></script>
 
     <!-- Hreflang pour ciblage français -->
     <link rel="alternate" hreflang="fr" href="https://botaniqueludique.com" />

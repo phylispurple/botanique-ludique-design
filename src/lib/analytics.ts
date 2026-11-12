@@ -2,6 +2,7 @@
  * Vendor-agnostic analytics layer.
  *
  * Pushes events to whatever is installed at runtime:
+ *  - Umami (window.umami) — installé le 12 novembre 2026 (index.html)
  *  - Plausible (window.plausible)
  *  - Google Analytics 4 / gtag (window.gtag)
  *  - Google Tag Manager (window.dataLayer)
@@ -26,6 +27,7 @@ const DEBUG_MAX = 50;
 
 declare global {
   interface Window {
+    umami?: { track: (event: string, data?: EventProps) => void };
     plausible?: (event: string, opts?: { props?: EventProps }) => void;
     gtag?: (command: string, eventName: string, params?: EventProps) => void;
     dataLayer?: Array<Record<string, unknown>>;
@@ -98,6 +100,11 @@ export function trackEvent(name: string, props: EventProps = {}) {
     ...(blogSource && !props.blog_source ? { blog_source: blogSource } : {}),
   };
 
+  try {
+    window.umami?.track(name, enriched);
+  } catch {
+    /* ignore */
+  }
   try {
     window.plausible?.(name, { props: enriched });
   } catch {

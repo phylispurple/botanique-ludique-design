@@ -91,7 +91,7 @@ Le site est une SPA : les crawlers (LinkedIn, WhatsApp) ne voient que le HTML st
 
 ## Ce qui reste à faire
 
-- **Analytics** : script Plausible propre au site (`pa-…js`) installé dans `index.html` le 12 novembre 2026, compte créé (sans cookies ; téléchargements et clics sortants à activer dans Site settings > Site installation). `src/lib/analytics.ts` lui envoie les 7 points de conversion (`form_submit`, `blog_cta_click`). Il reste à déclarer dans Plausible les objectifs personnalisés `form_submit` et `blog_cta_click`. Le toggle « analytics » du bandeau cookies ne pilote toujours rien (inutile avec Plausible).
+- **Analytics** : Umami Cloud (offre gratuite Hobby, sans cookies) installé dans `index.html` le 12 novembre 2026, limité au domaine `botaniqueludique.com` (`data-domains`). `src/lib/analytics.ts` lui envoie les conversions (`form_submit`, `blog_cta_click`), visibles dans Umami > Events. Plausible a été essayé puis retiré le même jour (payant). Umami ne compte pas automatiquement téléchargements PDF ni clics sortants. Le toggle « analytics » du bandeau cookies ne pilote rien (inutile sans cookies).
 - **Titres trop longs** : environ 90 pages ont un titre de plus de 70 caractères (le suffixe « | Botanique Ludique » en ajoute 20), tronqué par Google. À raccourcir progressivement.
 - **Routes indexables absentes du sitemap** : pages légitimes (ateliers par ville, cadeaux, etc.) à ajouter sélectivement. Les 6 pages institutionnelles (collectivités, scolaire, seniors, CSE, MJC, team building) y sont depuis le 4 octobre 2026.
 - **Page `/references-collectivites`** : contient encore des études de cas et témoignages provisoires (commentaire « placeholders » dans le code) à remplacer par des éléments réels et autorisés.
