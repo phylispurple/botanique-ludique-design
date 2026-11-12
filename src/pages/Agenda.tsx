@@ -58,7 +58,9 @@ type PastEvent = {
 
 const d = (year: number, month: number, day: number) => new Date(year, month - 1, day);
 
-const upcomingEvents: UpcomingEvent[] = [
+// Saisie des événements : on les ajoute ici sans se soucier de la date ;
+// ceux qui sont terminés passent tout seuls dans « Événements passés » (voir splitEvents).
+const EVENTS: UpcomingEvent[] = [
   {
     id: "bombes-graines-la-celle-28-oct",
     name: "Atelier botanique « Bombes à graines »",
@@ -170,6 +172,28 @@ const upcomingEvents: UpcomingEvent[] = [
     },
   },
   {
+    id: "sachets-senteur-croissy-12-dec",
+    name: "Stand sachets senteur de Noël",
+    date: "Samedi 12 décembre 2026",
+    parsedDate: d(2026, 12, 12),
+    time: "10h00 / 13h00",
+    location: "Parc Leclerc, Croissy-sur-Seine (78)",
+    audience: "Tout public, tous âges",
+    spots: "Sans inscription",
+    description:
+      "Dans le cadre des festivités de Noël de la Ville de Croissy-sur-Seine, sur le stand de la Clé Verte. Passez quand vous voulez et repartez avec votre sachet senteur : sachet de Noël, bien-être ou fraîcheur, composé avec des épices et des plantes aromatiques, autour d'une petite médiation sur leurs usages et leur histoire.",
+    linkType: "coming", buttonLabel: "Sans inscription, sur le stand",
+    schema: {
+      startDate: "2026-12-12T10:00:00+01:00",
+      endDate: "2026-12-12T13:00:00+01:00",
+      location: {
+        "@type": "Place",
+        name: "Parc Leclerc",
+        address: { "@type": "PostalAddress", addressLocality: "Croissy-sur-Seine", postalCode: "78290", addressRegion: "Île-de-France", addressCountry: "FR" },
+      },
+    },
+  },
+  {
     id: "papier-carnets-maisons-alfort-decembre",
     name: "Papier recyclé & carnets de Noël, en deux séances",
     date: "Samedis 12 et 19 décembre 2026",
@@ -214,9 +238,53 @@ const upcomingEvents: UpcomingEvent[] = [
       },
     },
   },
+  {
+    id: "bombes-graines-houilles-20-mars",
+    name: "Atelier « Bombes à graines »",
+    date: "Samedi 20 mars 2027",
+    parsedDate: d(2027, 3, 20),
+    time: "10h00 / 11h30",
+    location: "Médiathèque Jules-Verne, Houilles (78)",
+    audience: "Enfants à partir de 6 ans",
+    spots: "10 places",
+    description:
+      "Pendant la journée jardinage de la médiathèque. Avec l'ethnobotaniste Vanessa Charlery, les enfants découvrent comment les graines voyagent et pourquoi elles sont précieuses pour la biodiversité. Puis ils mettent les mains dans la terre pour fabriquer leurs propres bombes à graines, à semer au jardin, sur un balcon ou dans un coin de nature pour faire fleurir la ville.",
+    linkType: "coming", buttonLabel: "Inscription à venir",
+    schema: {
+      startDate: "2027-03-20T10:00:00+01:00",
+      endDate: "2027-03-20T11:30:00+01:00",
+      location: {
+        "@type": "Place",
+        name: "Médiathèque Jules-Verne",
+        address: { "@type": "PostalAddress", addressLocality: "Houilles", postalCode: "78800", addressRegion: "Île-de-France", addressCountry: "FR" },
+      },
+    },
+  },
+  {
+    id: "terrarium-houilles-20-mars",
+    name: "Atelier terrarium",
+    date: "Samedi 20 mars 2027",
+    parsedDate: d(2027, 3, 20),
+    time: "14h30 / 16h00",
+    location: "Médiathèque Jules-Verne, Houilles (78)",
+    audience: "Adultes",
+    spots: "10 places",
+    description:
+      "Pendant la journée jardinage de la médiathèque. Avec l'ethnobotaniste Vanessa Charlery, chaque participant compose son propre jardin miniature sous verre de 3 litres, en superposant les couches de drainage, de terre et de mousse autour de plantes choisies, tout en découvrant l'histoire de ces plantes voyageuses et le petit écosystème qui se recrée dans le bocal. Chacun repart avec son terrarium et ses conseils d'entretien.",
+    linkType: "coming", buttonLabel: "Inscription à venir",
+    schema: {
+      startDate: "2027-03-20T14:30:00+01:00",
+      endDate: "2027-03-20T16:00:00+01:00",
+      location: {
+        "@type": "Place",
+        name: "Médiathèque Jules-Verne",
+        address: { "@type": "PostalAddress", addressLocality: "Houilles", postalCode: "78800", addressRegion: "Île-de-France", addressCountry: "FR" },
+      },
+    },
+  },
 ];
 
-const pastEvents: PastEvent[] = [
+const ARCHIVED_EVENTS: PastEvent[] = [
   {
     id: "fete-science-epices-versailles",
     name: "Fête de la Science : Sur la route des épices, odeurs et saveurs",
@@ -352,9 +420,51 @@ const MONTHS_FR = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juill
 const DAYS_FR = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 const ARCHIVES_PER_PAGE = 4;
 
+/** Fin d'un événement : endDate du balisage si elle existe, sinon fin de la journée. */
+const eventEnd = (ev: UpcomingEvent): Date | null => {
+  const end = ev.schema?.endDate;
+  if (typeof end === "string") return new Date(end);
+  if (!ev.parsedDate) return null;
+  const e = new Date(ev.parsedDate);
+  e.setHours(23, 59, 59, 999);
+  return e;
+};
+
+/**
+ * Range automatiquement les événements : tout ce qui est terminé passe dans
+ * « Événements passés », comme le bandeau de Noël qui disparaît seul après la date.
+ */
+const splitEvents = (now: Date) => {
+  const upcoming: UpcomingEvent[] = [];
+  const finished: PastEvent[] = [];
+  for (const ev of EVENTS) {
+    const end = eventEnd(ev);
+    if (end && end < now) {
+      finished.push({
+        id: ev.id,
+        name: ev.name,
+        date: ev.date,
+        parsedDate: ev.parsedDate,
+        time: ev.time,
+        location: ev.location,
+        audience: ev.audience,
+        description: ev.description,
+        internalUrl: ev.linkType === "internal" ? ev.internalUrl : undefined,
+      });
+    } else {
+      upcoming.push(ev);
+    }
+  }
+  const t = (x: { parsedDate: Date | null }) => x.parsedDate?.getTime() ?? 0;
+  upcoming.sort((a, b) => t(a) - t(b));
+  const past = [...finished, ...ARCHIVED_EVENTS].sort((a, b) => t(b) - t(a));
+  return { upcomingEvents: upcoming, pastEvents: past };
+};
+
 const Agenda = () => {
   const [view, setView] = useState<"list" | "calendar">("list");
   const [archivePage, setArchivePage] = useState(0);
+  const { upcomingEvents, pastEvents } = useMemo(() => splitEvents(new Date()), []);
   const firstUpcoming = upcomingEvents.find((e) => e.parsedDate);
   const [calMonth, setCalMonth] = useState<Date>(() => {
     const base = firstUpcoming?.parsedDate ?? new Date();
@@ -377,7 +487,7 @@ const Agenda = () => {
       map.set(k, arr);
     });
     return map;
-  }, []);
+  }, [upcomingEvents]);
 
   const calendarCells = useMemo(() => {
     const year = calMonth.getFullYear();
