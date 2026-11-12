@@ -7,6 +7,7 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
 import WaveDivider from "@/components/WaveDivider";
 import SocialProofBar from "@/components/SocialProofBar";
+import QuoteForm from "@/components/QuoteForm";
 import { AREA_SERVED_IDF } from "@/data/areaServed";
 import { Users, Leaf, Clock, MapPin, ArrowRight, Download, Phone, Sparkles, Award } from "lucide-react";
 import heroImg from "@/assets/gallery-terrarium-adultes-groupe.jpg";
@@ -17,7 +18,8 @@ import imgBombes from "@/assets/gallery-bombes-graines-sechage.webp";
 
 const SLUG = "/team-building-nature-entreprise";
 const PDF_URL = "/documents/plaquette-botanique-ludique-entreprise-2026-2027.pdf";
-const CONTACT = `/contact?subject=${encodeURIComponent("Devis team building nature")}`;
+// Le formulaire de devis est intégré en bas de page (section #devis)
+const DEVIS_ANCHOR = "#devis";
 
 const INFOS = [
   { icon: Users, label: "Jusqu'à 15 par session", desc: "Grands groupes en rotation" },
@@ -158,13 +160,13 @@ const LandingTeamBuilding = () => {
               Des ateliers végétaux pour renforcer la cohésion, stimuler la créativité et parler du vivant, dans vos locaux partout en Île-de-France.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to={CONTACT}
+              <a
+                href={DEVIS_ANCHOR}
                 className="btn-brutal bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
                 style={{ borderColor: "hsl(var(--cream))" }}
               >
                 Demander un devis <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
               <a
                 href={PDF_URL}
                 target="_blank"
@@ -329,40 +331,38 @@ const LandingTeamBuilding = () => {
 
       {/* ===== CTA ===== */}
       <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
-      <section className="bg-foreground text-primary-foreground px-6 pt-10 pb-24">
-        <AnimatedSection className="max-w-3xl mx-auto text-center">
-          <p className="font-mono-brand text-[11px] uppercase tracking-[3px] text-olive-light mb-4">Organisons votre atelier</p>
-          <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mb-6">
-            Parlons de <span className="text-olive-light">votre projet</span>
-          </h2>
-          <p className="text-base text-primary-foreground/75 leading-relaxed mb-10 max-w-xl mx-auto">
-            Nombre de participants, lieu, envies : nous vous proposons un format sur mesure, avec un devis gratuit.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to={CONTACT}
-              className="btn-brutal bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
-              style={{ borderColor: "hsl(var(--cream))" }}
-            >
-              Demander un devis <ArrowRight className="w-4 h-4" />
-            </Link>
+      <section id="devis" className="bg-foreground text-primary-foreground px-6 pt-10 pb-24 scroll-mt-20">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_440px] gap-10 lg:gap-16 items-start">
+          <AnimatedSection className="text-center lg:text-left lg:pt-6">
+            <p className="font-mono-brand text-[11px] uppercase tracking-[3px] text-olive-light mb-4">Organisons votre atelier</p>
+            <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mb-6">
+              Parlons de <span className="text-olive-light">votre projet</span>
+            </h2>
+            <p className="text-base text-primary-foreground/75 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+              Nombre de participants, lieu, envies : nous vous proposons un format sur mesure, avec un devis gratuit. Réponse sous 24 à 48 heures.
+            </p>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+              <a
+                href="tel:+33609831606"
+                className="btn-brutal bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
+                style={{ borderColor: "hsl(var(--cream))" }}
+              >
+                <Phone className="w-4 h-4" /> 06 09 83 16 06
+              </a>
+            </div>
             <a
-              href="tel:+33609831606"
-              className="btn-brutal bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
-              style={{ borderColor: "hsl(var(--cream))" }}
+              href={PDF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-8 font-mono-brand text-[11px] uppercase tracking-[2px] text-primary-foreground/70 hover:text-olive-light transition-colors"
             >
-              <Phone className="w-4 h-4" /> 06 09 83 16 06
+              <Download size={14} /> Télécharger la plaquette entreprises (PDF)
             </a>
+          </AnimatedSection>
+          <div className="border-[3px] border-[hsl(var(--cream))] bg-[hsl(var(--cream))] text-[hsl(var(--black))] p-6 md:p-8 text-left">
+            <QuoteForm atelierTitle="Team building nature" />
           </div>
-          <a
-            href={PDF_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-10 font-mono-brand text-[11px] uppercase tracking-[2px] text-primary-foreground/70 hover:text-olive-light transition-colors"
-          >
-            <Download size={14} /> Télécharger la plaquette entreprises (PDF)
-          </a>
-        </AnimatedSection>
+        </div>
       </section>
 
       <BackToTop />
