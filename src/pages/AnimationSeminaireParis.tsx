@@ -23,7 +23,7 @@ const AnimationSeminaireParis = () => (
     ],
     practical: [
       { label: "Durée", value: "2h à 1 journée" },
-      { label: "Groupe", value: "10 à 60 pers." },
+      { label: "Groupe", value: "Tous effectifs" },
       { label: "Lieu", value: "Paris et IDF" },
       { label: "Tarif", value: "Sur devis" },
     ],

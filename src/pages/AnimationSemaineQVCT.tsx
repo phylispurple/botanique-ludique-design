@@ -171,31 +171,31 @@ const AnimationSemaineQVCT = () => {
                 title: "🌱 Atelier Kokedama",
                 desc: "L'art japonais de la boule de mousse. Parfait pour la méditation en créant.",
                 timing: "1h30",
-                participants: "15-50",
+                participants: "Tous effectifs",
               },
               {
                 title: "🌿 Atelier Terrarium",
                 desc: "Créez un mini-écosystème sous verre. Fascinant et apaisante.",
                 timing: "2h",
-                participants: "10-60",
+                participants: "Tous effectifs",
               },
               {
                 title: "🎨 Teinture Végétale",
                 desc: "Explorez les couleurs naturelles des plantes. Très créatif et médtatif.",
                 timing: "2h30",
-                participants: "12-40",
+                participants: "Tous effectifs",
               },
               {
                 title: "🌾 Vannerie Nature",
                 desc: "Tressage d'osier et fibres naturelles. Ancestral et relaxant.",
                 timing: "2h à 3h",
-                participants: "10-30",
+                participants: "Tous effectifs",
               },
               {
                 title: "🌼 Journée entière (combinée)",
                 desc: "Plusieurs ateliers sur la journée pour un impact maximal.",
                 timing: "4h à 6h",
-                participants: "30-200+",
+                participants: "Tous effectifs",
               },
             ].map((item, i) => (
               <div key={i} className="p-6 bg-blue-50 border-l-4 border-blue-600 hover:border-blue-800 transition-colors">
@@ -203,7 +203,7 @@ const AnimationSemaineQVCT = () => {
                 <p className="text-charcoal/80 mb-3">{item.desc}</p>
                 <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                   <span>⏱️ {item.timing}</span>
-                  <span>👥 {item.participants} pers.</span>
+                  <span>👥 {item.participants}</span>
                 </div>
               </div>
             ))}

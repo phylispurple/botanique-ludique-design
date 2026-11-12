@@ -51,21 +51,21 @@ const AteliersBotaniqueEntrepriseIDF = () => {
     {
       title: "Atelier Express",
       duration: "1h - 1h30",
-      participants: "15-50 personnes",
+      participants: "Tous effectifs",
       description: "Format court idéal pour une pause dans la journée",
       examples: ["Bombes de graines", "Mini-terrarium", "Sachets senteur"]
     },
     {
       title: "Atelier Standard",
       duration: "2h - 2h30",
-      participants: "10-30 personnes",
+      participants: "Tous effectifs",
       description: "Format équilibré pour une expérience complète",
       examples: ["Kokedama", "Couronne de fleurs", "Teinture végétale"]
     },
     {
       title: "Atelier Immersif",
       duration: "Demi-journée",
-      participants: "8-20 personnes",
+      participants: "Tous effectifs",
       description: "Expérience approfondie avec partie théorique",
       examples: ["Vannerie", "Éco-construction", "Jardin partagé"]
     }

@@ -13,28 +13,28 @@ const TeamBuildingRSEParis = () => {
     {
       title: "Kokedama d'Équipe",
       duration: "2h30",
-      participants: "10-30 personnes",
+      participants: "Tous effectifs",
       description: "Créez ensemble des jardins suspendus japonais. Activité collaborative qui renforce la cohésion tout en sensibilisant à la nature urbaine.",
       benefits: ["Créativité collective", "Démarche RSE visible", "Œuvre végétale à conserver"]
     },
     {
       title: "Teinture Végétale Collaborative",
       duration: "3h",
-      participants: "8-25 personnes",
+      participants: "Tous effectifs",
       description: "Atelier éco-responsable de teinture naturelle sur textile. Vos équipes repartent avec des créations uniques et durables.",
       benefits: ["Sensibilisation éco-textile", "Process collaboratif", "Résultat tangible"]
     },
     {
       title: "Bombes de Graines Urbaines",
       duration: "1h30",
-      participants: "15-50 personnes",
+      participants: "Tous effectifs",
       description: "Fabriquez des bombes de graines pour végétaliser la ville. Parfait pour les entreprises engagées dans la biodiversité urbaine.",
       benefits: ["Action environnementale", "Rapide et ludique", "Impact mesurable"]
     },
     {
       title: "Terrarium de Bureau",
       duration: "2h",
-      participants: "10-30 personnes",
+      participants: "Tous effectifs",
       description: "Chaque collaborateur crée son écosystème miniature à ramener au bureau. Bien-être au travail garanti !",
       benefits: ["Végétalise l'espace de travail", "Zen et apaisant", "Entretien minimal"]
     }
