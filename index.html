@@ -11,6 +11,26 @@
     <!-- Mesure d'audience Umami Cloud (offre gratuite) : sans cookies, pas de consentement requis.
          data-domains : ne compte que le vrai site (ni localhost, ni les aperçus Netlify).
          Les conversions (formulaires, CTA blog) passent par src/lib/analytics.ts. -->
+    <!-- Exclure ses propres visites : ouvrir une fois botaniqueludique.com/?moi sur chaque appareil
+         (méthode officielle Umami, réglage par navigateur). /?moi=off pour être de nouveau comptée. -->
+    <script>
+      (function () {
+        try {
+          var p = new URLSearchParams(location.search);
+          if (!p.has("moi")) return;
+          if (p.get("moi") === "off") {
+            localStorage.removeItem("umami.disabled");
+            alert("Vos visites sont de nouveau comptées dans Umami sur ce navigateur.");
+          } else {
+            localStorage.setItem("umami.disabled", "1");
+            alert("C'est noté : vos visites ne seront plus comptées dans Umami sur ce navigateur.");
+          }
+          p.delete("moi");
+          var q = p.toString();
+          history.replaceState(null, "", location.pathname + (q ? "?" + q : "") + location.hash);
+        } catch (e) {}
+      })();
+    </script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="58fcf240-0295-4576-9a40-e42240e3c564" data-domains="botaniqueludique.com"></script>
 
     <!-- Hreflang pour ciblage français -->
