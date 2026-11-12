@@ -3,12 +3,24 @@ import { useRef, useEffect, useState, useCallback } from "react";
 interface PhotoCarouselImage {
   src: string;
   alt: string;
+  /** Petite étiquette affichée sur la photo (mode organique). */
+  label?: string;
 }
 
 interface PhotoCarouselProps {
   images: PhotoCarouselImage[];
   speed?: number;
+  /** Style organique de l'accueil : formes irrégulières, inclinaisons, étiquettes. */
+  organic?: boolean;
 }
+
+// Formes et inclinaisons qui tournent d'une photo à l'autre (mode organique).
+const ORGANIC_SHAPES = [
+  { radius: "48% 52% 44% 56% / 52% 46% 54% 48%", tilt: "-rotate-2", drop: "mt-0" },
+  { radius: "36px 72px 40px 80px / 80px 44px 72px 36px", tilt: "rotate-[1.5deg]", drop: "mt-10" },
+  { radius: "60% 40% 55% 45% / 45% 58% 42% 55%", tilt: "rotate-1", drop: "mt-4" },
+  { radius: "80px 36px 76px 44px / 44px 76px 36px 80px", tilt: "-rotate-[1.5deg]", drop: "mt-12" },
+];
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -19,7 +31,7 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-const PhotoCarousel = ({ images, speed = 0.8 }: PhotoCarouselProps) => {
+const PhotoCarousel = ({ images, speed = 0.8, organic = false }: PhotoCarouselProps) => {
   const [shuffled] = useState(() => shuffle(images));
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef(0);
@@ -155,36 +167,65 @@ const PhotoCarousel = ({ images, speed = 0.8 }: PhotoCarouselProps) => {
 
   return (
     <div
-      className="overflow-hidden cursor-grab active:cursor-grabbing select-none"
+      className={`overflow-hidden cursor-grab active:cursor-grabbing select-none ${organic ? "pt-4 pb-12" : ""}`}
       onMouseEnter={() => { isPausedRef.current = true; }}
       onMouseLeave={() => { isPausedRef.current = false; }}
       onWheel={onWheel}
     >
       <div
         ref={containerRef}
-        className="flex gap-4 will-change-transform"
+        className={`flex gap-4 will-change-transform ${organic ? "items-start" : ""}`}
         onMouseDown={onMouseDown}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
         style={{ width: "max-content" }}
       >
-        {tripled.map((img, i) => (
-          <div
-            key={i}
-            className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal group/photo relative"
-          >
+        {tripled.map((img, i) => {
+          const hidden = i >= shuffled.length;
+          const imgEl = (
             <img
               src={img.src}
-              alt={i < shuffled.length ? img.alt : ""}
+              alt={hidden ? "" : img.alt}
               className="w-full h-full object-cover pointer-events-none transition-transform duration-500 group-hover/photo:scale-105"
               loading="lazy"
               draggable={false}
-              aria-hidden={i >= shuffled.length ? true : undefined}
+              aria-hidden={hidden ? true : undefined}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--black))]/40 via-transparent to-transparent opacity-0 group-hover/photo:opacity-100 transition-opacity duration-500 pointer-events-none" />
-          </div>
-        ))}
+          );
+          if (organic) {
+            const shape = ORGANIC_SHAPES[i % ORGANIC_SHAPES.length];
+            return (
+              <div key={i} className={`flex-shrink-0 px-2 ${shape.drop}`}>
+                <div className={`relative group/photo transition-transform duration-500 hover:rotate-0 hover:-translate-y-2 ${shape.tilt}`}>
+                  <div
+                    className="w-[280px] md:w-[340px] aspect-[4/5] overflow-hidden border-brutal shadow-brutal"
+                    style={{ borderRadius: shape.radius }}
+                  >
+                    {imgEl}
+                  </div>
+                  {img.label && (
+                    <span
+                      className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono-brand text-[10px] uppercase tracking-[2px] bg-[hsl(var(--cream))] border-brutal-thin rounded-full px-4 py-1.5 shadow-[3px_3px_0_hsl(var(--black))]"
+                      aria-hidden={hidden ? true : undefined}
+                    >
+                      {img.label}
+                    </span>
+                  )}
+                </div>
+              </div>
+            );
+          }
+          return (
+            <div
+              key={i}
+              className="flex-shrink-0 w-[300px] md:w-[380px] aspect-square overflow-hidden border-brutal group/photo relative"
+            >
+              {imgEl}
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--black))]/40 via-transparent to-transparent opacity-0 group-hover/photo:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -119,7 +119,7 @@ const BlogMediationScientifique = () => {
               <div className="border-brutal bg-[hsl(var(--green-pale))] p-8 mt-10">
                 <h3 className="font-display text-lg uppercase text-[hsl(var(--black))] mb-3">Envie de médiation scientifique ?</h3>
                 <p className="text-sm text-[hsl(var(--black))]/70 mb-4">
-                  Découvrez nos <Link to="/#mediation" className="underline text-[hsl(var(--olive))]">conférences et balades botaniques</Link>, 
+                  Découvrez nos <Link to="/mediation" className="underline text-[hsl(var(--olive))]">conférences et balades botaniques</Link>, 
                   nos <Link to="/workshops" className="underline text-[hsl(var(--olive))]">ateliers de médiation par la pratique</Link>, 
                   ou nos <Link to="/etablissements-scolaires" className="underline text-[hsl(var(--olive))]">interventions pédagogiques pour collèges et lycées</Link>.
                 </p>

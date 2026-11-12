@@ -31,7 +31,7 @@ const InterventionMediatheque = () => (
       { to: "/blog/atelier-route-des-epices-fete-de-la-science-versailles", label: "Récit : Fête de la Science à Versailles" },
       { to: "/balade-botanique-musee", label: "Balade musée" },
       { to: "/balades-botaniques", label: "Tous les formats" },
-      { to: "/#mediation", label: "Conférences" },
+      { to: "/mediation", label: "Conférences" },
     ],
     faqs: [
       { q: "Quel public dans une médiathèque ?", a: "Tous publics, du jeune adulte au senior. Possibilité de cibler un public familial ou un public d'expert·e·s amateur·ice·s." },

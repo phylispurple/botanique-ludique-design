@@ -277,7 +277,7 @@ const BaladesBotaniques = () => {
           </div>
 
           <div className="mt-12 flex flex-wrap gap-4">
-            <Link to="/#mediation" className="inline-flex items-center gap-2 font-mono-brand text-[11px] uppercase tracking-[2px] border-b-2 border-[hsl(var(--black))] hover:opacity-60 transition-opacity pb-1">
+            <Link to="/mediation" className="inline-flex items-center gap-2 font-mono-brand text-[11px] uppercase tracking-[2px] border-b-2 border-[hsl(var(--black))] hover:opacity-60 transition-opacity pb-1">
               Conférences et savoirs →
             </Link>
             <Link to="/workshops" className="inline-flex items-center gap-2 font-mono-brand text-[11px] uppercase tracking-[2px] border-b-2 border-[hsl(var(--black))] hover:opacity-60 transition-opacity pb-1">

@@ -180,7 +180,7 @@ const GuideEthnobotaniqueRegard = () => {
                 Conférences avec chercheurs et artistes, balades commentées, ateliers en lien avec une exposition ou un programme : découvrez l'ensemble de notre offre de médiation pour collectivités, médiathèques, musées et entreprises.
               </p>
               <Link
-                to="/#mediation"
+                to="/mediation"
                 className="btn-brutal bg-[hsl(var(--cream))] text-[hsl(210_41%_24%)] border-[hsl(var(--cream))] hover:bg-transparent hover:text-[hsl(var(--cream))] text-xs px-6 py-2.5 inline-flex items-center gap-2"
               >
                 Voir la médiation <ArrowRight className="w-4 h-4" />

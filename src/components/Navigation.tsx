@@ -218,19 +218,7 @@ const Navigation = () => {
           {/* Médiation link */}
           <li>
             <Link
-              to="/#mediation"
-              onClick={(e) => {
-                e.preventDefault();
-                if (location.pathname === '/') {
-                  const el = document.getElementById('mediation');
-                  if (el) {
-                    const pos = el.getBoundingClientRect().top + window.pageYOffset - 64;
-                    window.scrollTo({ top: pos, behavior: 'smooth' });
-                  }
-                } else {
-                  window.location.href = '/#mediation';
-                }
-              }}
+              to="/mediation"
               className="font-mono text-[12.5px] font-bold uppercase tracking-[2px] no-underline pb-[2px] transition-colors hover:text-white/90"
               style={{ color: 'rgba(255,255,255,0.55)' }}
             >
@@ -361,19 +349,7 @@ const Navigation = () => {
               )}
             </div>
 
-            <Link to="/#mediation" onClick={(e) => {
-                e.preventDefault();
-                setIsOpen(false);
-                if (location.pathname === '/') {
-                  const el = document.getElementById('mediation');
-                  if (el) {
-                    const pos = el.getBoundingClientRect().top + window.pageYOffset - 64;
-                    window.scrollTo({ top: pos, behavior: 'smooth' });
-                  }
-                } else {
-                  window.location.href = '/#mediation';
-                }
-              }}
+            <Link to="/mediation" onClick={() => setIsOpen(false)}
               className="block font-mono text-[10px] uppercase tracking-[2px] transition-colors"
               style={{ color: 'rgba(255,255,255,0.55)' }}>
               Médiation &amp; Balades

@@ -119,7 +119,7 @@ const BlogPlantesSauvagesSortie = () => {
                 <h3 className="font-display text-lg uppercase text-[hsl(var(--black))] mb-3">Organiser une sortie botanique</h3>
                 <p className="text-sm text-[hsl(var(--black))]/70 mb-4">
                   Découvrez nos <Link to="/etablissements-scolaires" className="underline text-[hsl(var(--olive))]">interventions pour collèges et lycées</Link> ou 
-                  explorez la <Link to="/#mediation" className="underline text-[hsl(var(--olive))]">section médiation et balades botaniques</Link>.
+                  explorez la <Link to="/mediation" className="underline text-[hsl(var(--olive))]">section médiation et balades botaniques</Link>.
                 </p>
                 <Link
                   to="/contact"

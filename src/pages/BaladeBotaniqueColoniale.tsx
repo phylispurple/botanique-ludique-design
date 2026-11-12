@@ -32,7 +32,7 @@ const BaladeBotaniqueColoniale = () => (
     related: [
       { to: "/balade-botanique-musee", label: "Balade en musée" },
       { to: "/balade-botanique-paris", label: "Balade Paris" },
-      { to: "/#mediation", label: "Conférences" },
+      { to: "/mediation", label: "Conférences" },
     ],
   }} />
 );

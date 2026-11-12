@@ -15,6 +15,7 @@ const EtablissementsScolaires = lazy(() => import("./pages/EtablissementsScolair
 const Workshops = lazy(() => import("./pages/Workshops"));
 const Pro = lazy(() => import("./pages/Pro"));
 const Gallery = lazy(() => import("./pages/Gallery"));
+const Mediation = lazy(() => import("./pages/Mediation"));
 const Contact = lazy(() => import("./pages/Contact"));
 const LegalNotice = lazy(() => import("./pages/LegalNotice"));
 const SalesTerms = lazy(() => import("./pages/SalesTerms"));
@@ -318,6 +319,7 @@ const App = () => (
             <Route path="/training" element={<Navigate to="/pro" replace />} />
             <Route path="/devis-entreprise" element={<Navigate to="/pro#devis" replace />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/mediation" element={<Mediation />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/agenda" element={<Agenda />} />

@@ -97,18 +97,19 @@ const modules = [
   { icon: Users, label: "Atelier de médiation pour équipes", duration: "Musées, médiathèques" },
 ];
 
-const ConferencesSavoirs = () => {
+const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
+  const Heading = asPage ? "h1" : "h2";
   return (
     <section id="mediation" className="bg-[hsl(210_41%_24%)] text-[hsl(var(--cream))]">
       {/* Main content */}
-      <div className="py-20 px-6 md:px-16 lg:px-[120px]">
+      <div className={`${asPage ? "pt-32 md:pt-40" : "pt-20"} pb-20 px-6 md:px-16 lg:px-[120px]`}>
         <AnimatedSection>
           <span className="section-label block mb-5" style={{ color: 'hsl(73 44% 67%)' }}>
             Médiation ethnobotanique & balades botaniques
           </span>
-          <h2 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.95] tracking-[-2px] text-white mb-5">
+          <Heading className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.95] tracking-[-2px] text-white mb-5">
             Conférences<br />& Savoirs
-          </h2>
+          </Heading>
           <p className="text-lg leading-[1.7] text-white/80 max-w-[680px] mb-6 text-justify">
             Formée en anthropologie de la nature à l'EHESS sous la direction de Florence Brunois-Pasina, Vanessa Charlery propose aux institutions une médiation ethnobotanique qui prend les plantes au sérieux comme témoins de l'histoire. Une approche qui croise rigueur académique et pédagogie accessible, et qui mobilise les travaux contemporains en anthropologie de la nature, en histoire des sciences coloniales et en études de genre.
           </p>

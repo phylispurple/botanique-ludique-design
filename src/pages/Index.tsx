@@ -5,18 +5,14 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import Testimonials from "@/components/Testimonials";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import Marquee from "@/components/Marquee";
 
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import TrustBadges from "@/components/TrustBadges";
-import ConferencesSavoirs from "@/components/ConferencesSavoirs";
-import VideoSection from "@/components/VideoSection";
 import BackToTop from "@/components/BackToTop";
 
-import { Calendar, Users, Building2, Award } from "lucide-react";
 import assuranceMaladieLogo from "@/assets/logo-assurance-maladie.png";
 import galleryTerrarium from "@/assets/gallery-terrarium.webp";
 import ctaWorkshopGroup from "@/assets/cta-workshop-group.jpg";
@@ -31,6 +27,24 @@ import WaveDivider from "@/components/WaveDivider";
 import NoelEntrepriseBanner from "@/components/NoelEntrepriseBanner";
 import { EVENT_PHOTO } from "@/data/eventPhotos";
 
+
+const PARTNER_LOGOS = [
+  { src: assuranceMaladieLogo, alt: "l'Assurance Maladie" },
+  { src: "/logos/thales.svg", alt: "Thales" },
+  { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
+  { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
+  { src: "/logos/bezons.svg", alt: "Ville de Bezons" },
+  { src: "/logos/maurepas.png", alt: "Ville de Maurepas" },
+  { src: "/logos/cachan.svg", alt: "Ville de Cachan" },
+  { src: "/logos/104.svg", alt: "Le CENTQUATRE-Paris" },
+  { src: "/logos/sqy.svg", alt: "Saint-Quentin-en-Yvelines" },
+  { src: "/logos/versailles.svg", alt: "Ville de Versailles" },
+  { src: "/logos/la-celle-saint-cloud.svg", alt: "Ville de La Celle-Saint-Cloud" },
+  { src: "/logos/taverny.svg", alt: "Ville de Taverny" },
+  { src: "/logos/maisons-alfort.svg", alt: "Maison de l'environnement de Maisons-Alfort" },
+  { src: "/logos/chateau-ephemere.svg", alt: "Château Éphémère" },
+  { src: "/logos/ecole-du-breuil.jpg", alt: "École Du Breuil" },
+];
 
 const Index = () => {
   const navigate = useNavigate();
@@ -52,15 +66,20 @@ const Index = () => {
     }
   }, [location.hash]);
 
+  // Chaque chiffre est un « galet » : forme, couleur, inclinaison et place autour de la photo (ordinateur).
   const stats = [
-    { value: "50+", label: "Ateliers réalisés", icon: Calendar },
-    { value: "400+", label: "Participants accompagnés", icon: Users },
-    { value: "15+", label: "Partenaires de confiance", icon: Building2 },
-    { value: "2023", label: "Année de création", icon: Award },
+    { value: "50+", label: "Ateliers réalisés", radius: "62% 38% 55% 45% / 48% 60% 40% 52%",
+      tone: "bg-[hsl(var(--cream))] -rotate-6", className: "md:absolute md:-left-12 md:-top-4" },
+    { value: "400+", label: "Participants accompagnés", radius: "45% 55% 40% 60% / 55% 45% 58% 42%",
+      tone: "bg-accent rotate-3", className: "md:absolute md:-right-10 md:top-2" },
+    { value: "15+", label: "Partenaires de confiance", radius: "55% 45% 62% 38% / 42% 52% 48% 58%",
+      tone: "bg-[hsl(var(--olive-light))] rotate-2", className: "md:absolute md:-left-6 md:-bottom-8" },
+    { value: "2023", label: "Année de création", radius: "40% 60% 48% 52% / 60% 40% 55% 45%",
+      tone: "bg-[hsl(var(--green))] text-[hsl(var(--cream))] -rotate-3", className: "md:absolute md:right-10 md:-bottom-12" },
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-clip">
       <SEO
         title="Botanique Ludique — Ateliers botaniques & balades guidées en Île-de-France"
         description="Médiation culturelle autour du vivant, partout en Île-de-France. Ateliers pour scolaires, entreprises et grand public, conférences avec chercheurs et artistes."
@@ -95,20 +114,11 @@ const Index = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={150}>
-            <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[650px] mx-auto mb-3 leading-relaxed">
-              Quand l'atelier créatif rencontre l'anthropologie de la nature
+            <p className="font-editorial italic text-2xl md:text-[34px] leading-tight text-primary-foreground max-w-[700px] mx-auto mb-4">
+              Les plantes ont des histoires à raconter
             </p>
-            <p className="font-body text-[15px] md:text-base text-primary-foreground/70 max-w-[580px] mx-auto mb-4 leading-relaxed">
-              Des ateliers accessibles qui tissent des ponts entre création artistique, savoirs botaniques et histoire des relations humains-plantes.
-            </p>
-          </AnimatedSection>
-
-          <AnimatedSection delay={250}>
-            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[2px] text-olive-light/80 mb-2">
-              Enfants · Adultes · Seniors · Écoles · EHPAD · Entreprises
-            </p>
-            <p className="font-mono-brand text-[13px] uppercase tracking-[3px] text-olive-light mb-10">
-              Partout en Île-de-France
+            <p className="font-body text-[15px] md:text-[17px] text-primary-foreground/80 max-w-[560px] mx-auto mb-10 leading-relaxed">
+              Ateliers créatifs, balades et conférences autour du végétal, pour tous les publics, partout en Île-de-France.
             </p>
           </AnimatedSection>
 
@@ -116,25 +126,22 @@ const Index = () => {
             <div className="flex flex-wrap gap-6 justify-center">
               <button
                 onClick={() => navigate('/workshops')}
-                className="btn-brutal bg-accent text-foreground border-accent hover:bg-primary-foreground hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--accent))] px-6 py-2.5"
+                className="btn-brutal bg-accent text-foreground border-accent -rotate-2 hover:rotate-0 hover:bg-primary-foreground hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--accent))] px-7 py-3"
+                style={{ borderRadius: "28px 14px 26px 12px / 14px 26px 12px 28px" }}
               >
                 Découvrir les ateliers →
               </button>
               <button
-                onClick={() => navigate('/#mediation')}
-                className="btn-brutal bg-[hsl(210_41%_24%)] text-[hsl(var(--cream))] border-[hsl(210_41%_24%)] hover:bg-[hsl(var(--cream))] hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(210_41%_24%)] px-6 py-2.5"
+                onClick={() => navigate('/mediation')}
+                className="btn-brutal bg-[hsl(210_41%_24%)] text-[hsl(var(--cream))] border-[hsl(210_41%_24%)] rotate-1 hover:rotate-0 hover:bg-[hsl(var(--cream))] hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(210_41%_24%)] px-7 py-3"
+                style={{ borderRadius: "14px 30px 12px 26px / 26px 12px 30px 14px" }}
               >
                 Médiation & Savoirs →
               </button>
               <button
-                onClick={() => navigate('/agenda')}
-                className="btn-brutal bg-primary text-foreground border-primary hover:bg-[hsl(var(--cream))] hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--olive))] px-6 py-2.5"
-              >
-                Agenda & Inscriptions →
-              </button>
-              <button
                 onClick={() => navigate('/team-building-nature-entreprise')}
-                className="btn-brutal bg-[hsl(var(--cream))] text-foreground border-[hsl(var(--cream))] hover:bg-accent hover:border-accent hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--cream))] px-6 py-2.5"
+                className="btn-brutal bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-[hsl(var(--olive-light))] -rotate-1 hover:rotate-0 hover:bg-[hsl(var(--cream))] hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--green))] px-7 py-3"
+                style={{ borderRadius: "26px 12px 30px 16px / 12px 30px 16px 26px" }}
               >
                 Entreprises & CSE →
               </button>
@@ -166,120 +173,68 @@ const Index = () => {
         </svg>
       </section>
 
-      {/* ===== ENTREPRISES & CSE ===== */}
-      <section className="px-6 pt-14 md:pt-20" aria-labelledby="bloc-entreprises">
-        <AnimatedSection className="max-w-5xl mx-auto">
-          <div className="border-brutal bg-[hsl(var(--cream))] grid md:grid-cols-[2fr_3fr] overflow-hidden">
-            <img
-              src={EVENT_PHOTO.terrariumTable}
-              alt="Terrariums en bocal et sacs kraft prêts pour une animation en entreprise"
-              className="w-full h-56 md:h-full object-cover border-b-[3px] md:border-b-0 md:border-r-[3px] border-foreground"
-              loading="lazy"
-            />
-            <div className="p-6 md:p-10">
-              <p className="section-label mb-2">Entreprises · CSE · Agences</p>
-              <h2 id="bloc-entreprises" className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] uppercase leading-[0.95] tracking-[-1px] mb-4">
-                Un team building végétal, <span className="text-primary">clés en main</span>
-              </h2>
-              <p className="font-body text-base text-foreground/75 leading-relaxed mb-6">
-                Terrarium, kokedama, teinture végétale ou sachets de senteurs, dans vos locaux partout en Île-de-France.
-                J'apporte tout le matériel et chacun repart avec sa création.
-              </p>
-              <div className="flex flex-wrap gap-3 mb-6">
-                <Link
-                  to="/team-building-nature-entreprise#devis"
-                  className="btn-brutal bg-accent text-foreground border-foreground text-xs px-6 py-3 text-center whitespace-nowrap"
-                >
-                  Demander un devis →
-                </Link>
-                <Link
-                  to="/team-building-nature-entreprise"
-                  className="btn-brutal bg-transparent text-foreground border-foreground text-xs px-6 py-3 text-center whitespace-nowrap"
-                >
-                  Voir les formules
-                </Link>
-              </div>
-              <NoelEntrepriseBanner />
-            </div>
-          </div>
-        </AnimatedSection>
-      </section>
-
-      {/* ===== PRÉSENTATION + STATS ===== */}
+      {/* ===== BOTANIQUE LUDIQUE — photo de groupe en galet, chiffres en galets flottants ===== */}
       <section className="py-20 md:py-32 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-          {/* Text */}
-          <AnimatedSection direction="left">
-            <div>
-              <span className="section-label block mb-3">Ethnobotanique · Création · Transmission</span>
-              <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mb-3">
-                Vanessa<br />Charlery
-              </h2>
-              <p className="font-display text-[15px] uppercase tracking-[2px] text-primary mb-6">
-                Animatrice ethnobotaniste · Formée à l'EHESS
-              </p>
-              <p className="text-base leading-[1.8] text-foreground/70 mb-4 text-justify">
-                Créée par <strong className="text-foreground">Vanessa Charlery</strong>, animatrice ethnobotaniste formée à l'EHESS,
-                Botanique Ludique propose des ateliers qui allient créativité artistique et transmission des savoirs ethnobotaniques,
-                partout en Île-de-France : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92),
-                Seine-Saint-Denis (93), Val-de-Marne (94) et Val-d'Oise (95).
-              </p>
-              <p className="text-base leading-[1.8] text-foreground/70 mb-6 text-justify">
-                Nos ateliers s'adressent à <strong className="text-foreground">tous les publics</strong> :
-                enfants dès 4 ans, adultes, seniors en résidence ou EHPAD, écoles et centres de loisirs, MJC, centres sociaux,
-                associations, entreprises et collectivités. Chaque pratique explore les relations culturelles entre humains et plantes,
-                de l'Asie à l'Europe.
-              </p>
-              <p className="text-base leading-[1.8] text-foreground/70 mb-6 text-justify">
-                Pour les entreprises et CSE, nous concevons des animations végétales clés en main :{" "}
-                <Link to="/atelier-terrarium-team-building" className="underline underline-offset-4 text-foreground hover:text-primary transition-colors">
-                  découvrir notre atelier team building
-                </Link>.
-              </p>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[6fr_5fr] gap-14 md:gap-20 items-center">
+          {/* Photo de groupe + galets */}
+          <AnimatedSection direction="left" className="order-2 md:order-none">
+            <div className="relative max-w-[520px] mx-auto md:py-14">
+              {/* tache olive derrière la photo */}
+              <div
+                className="absolute -inset-4 md:-inset-8 bg-[hsl(var(--olive-light))]/35"
+                style={{ borderRadius: "42% 58% 63% 37% / 41% 44% 56% 59%" }}
+                aria-hidden="true"
+              />
+              <img
+                src={galleryWorkshopGroup}
+                alt="Participants façonnant leurs kokedamas autour d'une grande table d'atelier"
+                className="relative w-full aspect-[5/4] object-cover border-brutal shadow-brutal-lg"
+                style={{ borderRadius: "56% 44% 47% 53% / 50% 56% 44% 50%" }}
+                loading="lazy"
+              />
 
-              <div className="flex flex-wrap gap-2 mb-6">
-                {["Kokedama", "Teinture végétale", "Vannerie", "Terrarium", "Ethnobotanique"].map((tag) => (
-                  <span
-                    key={tag}
-                    className="font-mono-brand text-[10px] uppercase tracking-[1.5px] px-3.5 py-1.5 border-brutal-thin rounded-full hover:bg-foreground hover:text-primary-foreground transition-colors cursor-default"
-                  >
-                    {tag}
-                  </span>
+              {/* Chiffres : rangée sur mobile, galets flottants autour de la photo sur ordinateur */}
+              <div className="flex flex-wrap justify-center gap-4 mt-10 md:mt-0">
+                {stats.map((stat, i) => (
+                  <div key={stat.label} className={`pebble-float ${stat.className}`} style={{ animationDelay: `${i * -1.4}s` }}>
+                    <div
+                      className={`flex flex-col items-center justify-center text-center w-[132px] h-[132px] md:w-36 md:h-36 border-brutal shadow-brutal p-3 transition-transform duration-300 hover:rotate-0 hover:scale-110 ${stat.tone}`}
+                      style={{ borderRadius: stat.radius }}
+                    >
+                      <AnimatedCounter value={stat.value} className="font-display text-3xl md:text-[34px] leading-none mb-1" />
+                      <div className="font-mono-brand text-[9px] uppercase tracking-[1.5px] leading-snug opacity-80 max-w-[110px]">
+                        {stat.label}
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
           </AnimatedSection>
 
-          {/* Stats */}
-          <AnimatedSection direction="right" delay={150}>
-            <div className="grid grid-cols-2 gap-0">
-              {stats.map((stat, index) => {
-                const IconComponent = stat.icon;
-                return (
-                  <div
-                    key={index}
-                    className="p-6 md:p-8 border-brutal text-center -mt-[3px] -ml-[3px] hover:bg-green-pale transition-colors duration-300 relative overflow-hidden group"
-                  >
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                    <div className="flex justify-center mb-3">
-                      <IconComponent className="w-5 h-5 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <AnimatedCounter
-                      value={stat.value}
-                      className="font-display text-3xl md:text-4xl text-foreground mb-1"
-                    />
-                    <div className="font-mono-brand text-[10px] uppercase tracking-[2px] text-foreground/50">
-                      {stat.label}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+          {/* Texte */}
+          <AnimatedSection direction="right" delay={150} className="order-1 md:order-none">
+            <span className="section-label block mb-4">Ethnobotanique · Création · Transmission</span>
+            <h2 className="font-display text-[clamp(2rem,4.2vw,3.2rem)] uppercase leading-[0.92] tracking-[-2px] mb-4">
+              Créer avec<br />les plantes,<br /><span className="md:ml-14 text-primary">comprendre</span><br /><span className="md:ml-14 whitespace-nowrap">leurs histoires</span>
+            </h2>
+            <p className="font-editorial italic text-xl md:text-2xl text-foreground/60 mb-8 md:ml-14">
+              ateliers · balades · conférences
+            </p>
+            <p className="text-base md:text-lg leading-[1.8] text-foreground/75 mb-5 max-w-[500px]">
+              Botanique Ludique propose des ateliers qui allient <strong className="text-foreground">création artistique</strong> et
+              <strong className="text-foreground"> savoirs ethnobotaniques</strong> : on fabrique de ses mains, et l'on découvre ce que
+              les plantes racontent de nos cultures, partout en Île-de-France.
+            </p>
+            <p className="text-base md:text-lg leading-[1.8] text-foreground/75 max-w-[500px] md:ml-14 md:border-l-[3px] md:border-primary md:pl-6">
+              Pour <strong className="text-foreground">tous les publics</strong> : enfants dès 4 ans, adultes, seniors et EHPAD, écoles,
+              MJC, associations, entreprises et collectivités.
+            </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* ===== PARTENAIRES — Défilement continu ===== */}
+      {/* ===== PARTENAIRES — logos grisés, en couleur au survol ===== */}
       <section className="pb-20 md:pb-28">
         <div className="max-w-5xl mx-auto px-6">
           <AnimatedSection>
@@ -287,86 +242,93 @@ const Index = () => {
               Ils nous font confiance
             </h3>
           </AnimatedSection>
-        </div>
-        <div className="overflow-hidden">
-          <div className="flex gap-8 items-center animate-marquee" style={{ width: 'max-content', animationDuration: '27s' }}>
-            {[
-              { src: assuranceMaladieLogo, alt: "l'Assurance Maladie" },
-              { src: "/logos/thales.svg", alt: "Thales" },
-              { src: "/logos/region-idf.webp", alt: "Région Île-de-France" },
-              { src: "/logos/jappy-senior.svg", alt: "Happy Senior" },
-              { src: "/logos/bezons.svg", alt: "Ville de Bezons" },
-              { src: "/logos/maurepas.png", alt: "Ville de Maurepas" },
-              { src: "/logos/cachan.svg", alt: "Ville de Cachan" },
-              { src: "/logos/104.svg", alt: "Le CENTQUATRE-Paris" },
-              { src: "/logos/sqy.svg", alt: "Saint-Quentin-en-Yvelines" },
-              { src: "/logos/versailles.svg", alt: "Ville de Versailles" },
-              { src: "/logos/la-celle-saint-cloud.svg", alt: "Ville de La Celle-Saint-Cloud" },
-              { src: "/logos/taverny.svg", alt: "Ville de Taverny" },
-              { src: "/logos/maisons-alfort.svg", alt: "Maison de l'environnement de Maisons-Alfort" },
-              { src: "/logos/chateau-ephemere.svg", alt: "Château Éphémère" },
-              { src: "/logos/ecole-du-breuil.jpg", alt: "École Du Breuil" },
-            ].map((logo, index) => (
-              <div key={`a-${index}`} className="flex-shrink-0 aspect-square flex items-center justify-center p-5 border-brutal bg-[hsl(var(--cream))] hover:-translate-y-2 hover:shadow-brutal-lg transition-all duration-300 group" style={{ width: 140, height: 140 }}>
-                <img src={logo.src} alt={logo.alt} className="max-h-16 max-w-[100px] w-auto h-auto object-contain grayscale-[30%] group-hover:grayscale-0 transition-all duration-300" loading="lazy" />
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
+            {PARTNER_LOGOS.map((logo) => (
+              <div
+                key={logo.alt}
+                className="flex items-center justify-center h-14 w-28 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              >
+                <img src={logo.src} alt={logo.alt} className="max-h-14 max-w-full w-auto h-auto object-contain" loading="lazy" />
               </div>
-            )).concat(
-              [
-                { src: assuranceMaladieLogo, alt: "" },
-                { src: "/logos/thales.svg", alt: "" },
-                { src: "/logos/region-idf.webp", alt: "" },
-                { src: "/logos/jappy-senior.svg", alt: "" },
-                { src: "/logos/bezons.svg", alt: "" },
-                { src: "/logos/maurepas.png", alt: "" },
-                { src: "/logos/cachan.svg", alt: "" },
-                { src: "/logos/104.svg", alt: "" },
-                { src: "/logos/sqy.svg", alt: "" },
-                { src: "/logos/versailles.svg", alt: "" },
-                { src: "/logos/la-celle-saint-cloud.svg", alt: "" },
-                { src: "/logos/taverny.svg", alt: "" },
-                { src: "/logos/maisons-alfort.svg", alt: "" },
-                { src: "/logos/chateau-ephemere.svg", alt: "" },
-                { src: "/logos/ecole-du-breuil.jpg", alt: "" },
-              ].map((logo, index) => (
-                <div key={`b-${index}`} className="flex-shrink-0 aspect-square flex items-center justify-center p-5 border-brutal bg-[hsl(var(--cream))]" style={{ width: 140, height: 140 }} aria-hidden="true">
-                  <img src={logo.src} alt="" className="max-h-16 max-w-[100px] w-auto h-auto object-contain grayscale-[30%]" loading="lazy" />
-                </div>
-              ))
-            )}
+            ))}
           </div>
         </div>
       </section>
 
-      <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
-
-      {/* ===== GALERIE — Défilement continu ===== */}
-      <section className="py-20 md:py-28 bg-secondary">
-        <div className="max-w-6xl mx-auto px-6">
-          <AnimatedSection className="text-center mb-14">
-            <span className="section-label block mb-3">Portfolio</span>
-            <h2 className="font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
-              Les plus belles créations
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(153,40%,30%)" />
+      {/* ===== ENTREPRISES & CSE — bande organique entre deux vagues ===== */}
+      <section className="bg-[hsl(var(--green))] text-[hsl(var(--cream))] px-6 py-12 md:py-16" aria-labelledby="bloc-entreprises">
+        <AnimatedSection className="max-w-5xl mx-auto grid md:grid-cols-[2fr_3fr] gap-10 md:gap-14 items-center">
+          <img
+            src={EVENT_PHOTO.terrariumTable}
+            alt="Terrariums en bocal et sacs kraft prêts pour une animation en entreprise"
+            className="w-full max-w-sm mx-auto aspect-square object-cover border-4 border-[hsl(var(--cream))]"
+            style={{ borderRadius: "58% 42% 52% 48% / 46% 56% 44% 54%" }}
+            loading="lazy"
+          />
+          <div>
+            <p className="section-label mb-2" style={{ color: "hsl(73 44% 67%)" }}>Entreprises · CSE · Agences</p>
+            <h2 id="bloc-entreprises" className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] uppercase leading-[0.95] tracking-[-1px] mb-4">
+              Un team building végétal, <span className="text-[hsl(var(--olive-light))]">clés en main</span>
             </h2>
+            <p className="font-body text-base text-[hsl(var(--cream))]/85 leading-relaxed mb-6">
+              Terrarium, kokedama, teinture végétale ou sachets de senteurs, dans vos locaux partout en Île-de-France.
+              J'apporte tout le matériel et chacun repart avec sa création.
+            </p>
+            <div className="flex flex-wrap gap-3 mb-6">
+              <Link
+                to="/team-building-nature-entreprise#devis"
+                className="btn-brutal rounded-full bg-accent text-foreground border-accent text-xs px-6 py-3 text-center whitespace-nowrap"
+              >
+                Demander un devis →
+              </Link>
+              <Link
+                to="/team-building-nature-entreprise"
+                className="btn-brutal rounded-full bg-transparent text-[hsl(var(--cream))] border-[hsl(var(--cream))] text-xs px-6 py-3 text-center whitespace-nowrap"
+              >
+                Voir les formules
+              </Link>
+            </div>
+            <NoelEntrepriseBanner className="!bg-[hsl(var(--cream))] rounded-r-2xl" />
+          </div>
+        </AnimatedSection>
+      </section>
+      <WaveDivider from="hsl(153,40%,30%)" to="hsl(36,25%,88%)" flip />
+
+      {/* ===== GALERIE — photos en galets inclinés, étiquettes ===== */}
+      <section className="py-16 md:py-24 bg-secondary overflow-x-clip">
+        <div className="max-w-6xl mx-auto px-6">
+          <AnimatedSection className="mb-10 md:mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div>
+              <span className="section-label block mb-3">En atelier</span>
+              <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.92] tracking-[-1.5px]">
+                Ce qu'on fabrique<br /><span className="md:ml-16 text-primary">ensemble</span>
+              </h2>
+            </div>
+            <span className="self-start md:self-end -rotate-3 font-mono-brand text-[10px] uppercase tracking-[2px] bg-accent border-brutal-thin rounded-full px-4 py-2 shadow-[3px_3px_0_hsl(var(--black))]">
+              ← Faites glisser →
+            </span>
           </AnimatedSection>
         </div>
 
         <PhotoCarousel
+          organic
           images={[
-            { src: galleryTerrarium, alt: "Atelier terrarium botanique — Botanique Ludique, Le Pecq" },
-            { src: galleryTeinture, alt: "Atelier teinture végétale naturelle — Botanique Ludique, Île-de-France" },
-            { src: galleryFlowerCrown, alt: "Atelier couronne de fleurs — Botanique Ludique, Paris" },
-            { src: galleryKokedamaGarden, alt: "Kokedamas ficelés réalisés en atelier — Botanique Ludique" },
-            { src: galleryWorkshopGroup, alt: "Participants en atelier kokedama — Botanique Ludique" },
-            { src: gallerySachetSenteur, alt: "Atelier sachets de senteurs naturels — Botanique Ludique" },
-            { src: galleryMiniTerrarium, alt: "Mini terrarium en bocal — Botanique Ludique" },
+            { src: galleryTerrarium, alt: "Terrarium réalisé en atelier botanique", label: "Terrarium" },
+            { src: galleryTeinture, alt: "Tissus teints aux plantes en atelier teinture végétale", label: "Teinture végétale" },
+            { src: galleryFlowerCrown, alt: "Couronne de fleurs réalisée en atelier", label: "Couronne de fleurs" },
+            { src: galleryKokedamaGarden, alt: "Kokedamas ficelés réalisés en atelier", label: "Kokedama" },
+            { src: EVENT_PHOTO.soiesSuspendues, alt: "Carrés de soie teints aux plantes, suspendus à la fenêtre", label: "Soie teinte" },
+            { src: gallerySachetSenteur, alt: "Sachets de senteurs aux plantes et épices", label: "Sachets de senteurs" },
+            { src: galleryMiniTerrarium, alt: "Mini terrarium en bocal", label: "Mini terrarium" },
           ]}
         />
 
         <div className="max-w-6xl mx-auto px-6">
-          <AnimatedSection delay={300} className="text-center mt-8">
+          <AnimatedSection delay={300} className="text-center mt-2">
             <Link
               to="/gallery"
-              className="btn-brutal bg-foreground text-primary-foreground border-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
+              className="btn-brutal rounded-full bg-foreground text-primary-foreground border-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
             >
               Voir toute la galerie →
             </Link>
@@ -374,28 +336,12 @@ const Index = () => {
         </div>
       </section>
 
-      <WaveDivider from="hsl(36,25%,88%)" to="hsl(210,41%,24%)" flip />
-
-      {/* ===== CONFÉRENCES & SAVOIRS ===== */}
-      <ConferencesSavoirs />
-
-      <WaveDivider from="hsl(210,41%,24%)" to="hsl(36,33%,93%)" />
+      <WaveDivider from="hsl(36,25%,88%)" to="hsl(36,33%,93%)" flip />
 
       {/* ===== TESTIMONIALS ===== */}
       <Testimonials />
 
-      {/* ===== MARQUEE 2 ===== */}
-      <Marquee
-        items={["Enfants", "Adultes", "Seniors", "Écoles", "Entreprises", "EHPAD", "Associations", "Collectivités"]}
-        color="olive"
-        speed={20}
-        separator="●"
-      />
-
-      <WaveDivider from="hsl(73,37%,44%)" to="hsl(0,0%,10%)" flip />
-
-      {/* ===== VIDEO SECTION ===== */}
-      <VideoSection />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
 
       {/* ===== CTA + NEWSLETTER ===== */}
       <section className="py-20 md:py-24 px-6 text-primary-foreground relative overflow-hidden">
@@ -420,13 +366,13 @@ const Index = () => {
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   to="/workshops"
-                  className="btn-brutal bg-primary text-primary-foreground border-primary hover:bg-primary-foreground hover:text-foreground text-xs px-7 py-3"
+                  className="btn-brutal rounded-full bg-primary text-primary-foreground border-primary hover:bg-primary-foreground hover:text-foreground text-xs px-7 py-3"
                 >
                   Voir les ateliers →
                 </Link>
                 <Link
                   to="/contact"
-                  className="btn-brutal bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-7 py-3"
+                  className="btn-brutal rounded-full bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-7 py-3"
                 >
                   Nous contacter
                 </Link>
@@ -435,9 +381,8 @@ const Index = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={200} direction="right">
-            <div className="border-brutal bg-primary-foreground text-foreground p-8 shadow-brutal-lg relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-accent to-primary" />
-              <h3 className="font-display text-lg uppercase mb-2">Restez informé·e</h3>
+            <div className="border-brutal rounded-[2rem] bg-primary-foreground text-foreground p-8 shadow-brutal-lg relative overflow-hidden">
+                            <h3 className="font-display text-lg uppercase mb-2">Restez informé·e</h3>
               <p className="text-sm text-foreground/60 mb-5">
                 Recevez nos actualités et les dates des prochains ateliers.
               </p>
