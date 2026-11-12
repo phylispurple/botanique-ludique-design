@@ -23,7 +23,7 @@ const AnimationSoireeEntreprise = () => (
     ],
     practical: [
       { label: "Durée", value: "1h30 à 2h" },
-      { label: "Groupe", value: "Tous effectifs" },
+      { label: "Groupe", value: "À partir de 8 participants" },
       { label: "Lieu", value: "Paris et IDF" },
       { label: "Tarif", value: "Sur devis" },
     ],

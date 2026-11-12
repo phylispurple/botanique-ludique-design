@@ -23,7 +23,7 @@ const AnimationSeminaireParis = () => (
     ],
     practical: [
       { label: "Durée", value: "2h à 1 journée" },
-      { label: "Groupe", value: "Tous effectifs" },
+      { label: "Groupe", value: "À partir de 8 participants" },
       { label: "Lieu", value: "Paris et IDF" },
       { label: "Tarif", value: "Sur devis" },
     ],
@@ -33,7 +33,7 @@ const AnimationSeminaireParis = () => (
       { to: "/animation-soiree-entreprise-vegetale", label: "Soirée entreprise" },
     ],
     faqs: [
-      { q: "Pour combien de personnes ?", a: "À partir de dix personnes et jusqu'à soixante. Au-delà, nous proposons un format double animatrice." },
+      { q: "Pour combien de personnes ?", a: "À partir de 8 participants. Pour les grands groupes, l'atelier se fait en plusieurs sessions en rotation, ou en flux continu avec une aide sur place." },
       { q: "Format en région parisienne uniquement ?", a: "Nous intervenons principalement en Île-de-France. Sur demande, nous étudions des déplacements ailleurs en France." },
       { q: "Délai de réservation ?", a: "Idéalement six à huit semaines à l'avance pour caler les agendas." },
       { q: "Adaptation à votre charte ?", a: "Oui, sur devis. Nous adaptons la communication, les supports et certaines créations à votre identité." },
