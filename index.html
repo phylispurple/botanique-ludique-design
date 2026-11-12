@@ -31,7 +31,26 @@
         } catch (e) {}
       })();
     </script>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="58fcf240-0295-4576-9a40-e42240e3c564" data-domains="botaniqueludique.com"></script>
+    <!-- Chargement d'Umami, sauf pour :
+         - les navigateurs automatisés qui se déclarent comme tels (navigator.webdriver) ;
+         - les appareils réglés sur un fuseau horaire des États-Unis (beaucoup de robots,
+           et pas la clientèle visée). Les DOM-TOM et le Québec restent comptés. -->
+    <script>
+      (function () {
+        try {
+          if (navigator.webdriver) return;
+          var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || "");
+          var US = /^(US\/|Pacific\/Honolulu|America\/(New_York|Chicago|Denver|Los_Angeles|Phoenix|Anchorage|Detroit|Boise|Juneau|Sitka|Nome|Adak|Metlakatla|Yakutat|Menominee|Indiana\/|Kentucky\/|North_Dakota\/))/;
+          if (US.test(tz)) return;
+          var s = document.createElement("script");
+          s.defer = true;
+          s.src = "https://cloud.umami.is/script.js";
+          s.setAttribute("data-website-id", "58fcf240-0295-4576-9a40-e42240e3c564");
+          s.setAttribute("data-domains", "botaniqueludique.com");
+          document.head.appendChild(s);
+        } catch (e) {}
+      })();
+    </script>
 
     <!-- Hreflang pour ciblage français -->
     <link rel="alternate" hreflang="fr" href="https://botaniqueludique.com" />
