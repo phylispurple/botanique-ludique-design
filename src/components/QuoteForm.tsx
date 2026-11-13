@@ -20,6 +20,8 @@ const quoteSchema = z.object({
 
 interface QuoteFormProps {
   atelierTitle: string;
+  /** Bouton en forme de galet orange (style organique). */
+  organic?: boolean;
 }
 
 const inputCls =
@@ -27,7 +29,7 @@ const inputCls =
 const labelCls =
   "block font-mono-brand text-[9px] uppercase tracking-[2px] text-[hsl(var(--olive))] mb-0.5";
 
-const QuoteForm = ({ atelierTitle }: QuoteFormProps) => {
+const QuoteForm = ({ atelierTitle, organic = false }: QuoteFormProps) => {
   const { toast } = useToast();
   const [submitting, setSubmitting] = useState(false);
   const botCheck = useBotCheck();
@@ -153,7 +155,12 @@ const QuoteForm = ({ atelierTitle }: QuoteFormProps) => {
       <button
         type="submit"
         disabled={submitting}
-        className="btn-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-[hsl(var(--black))] text-xs px-6 py-3 w-full justify-center inline-flex disabled:opacity-60"
+        className={
+          organic
+            ? "btn-brutal bg-accent text-foreground border-foreground text-xs px-6 py-3.5 w-full justify-center inline-flex disabled:opacity-60"
+            : "btn-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-[hsl(var(--black))] text-xs px-6 py-3 w-full justify-center inline-flex disabled:opacity-60"
+        }
+        style={organic ? { borderRadius: "28px 14px 26px 12px / 14px 26px 12px 28px" } : undefined}
       >
         {submitting ? "Envoi…" : "Recevoir mon devis →"}
       </button>

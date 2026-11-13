@@ -19,10 +19,10 @@ const LandingCSE = () => {
   ];
 
   const workshops = [
-    { title: "Kokedama d'équipe", price: "Sur devis", duration: "2h", participants: "À partir de 8 participants" },
-    { title: "Terrarium collectif", price: "Sur devis", duration: "1h30", participants: "À partir de 8 participants" },
-    { title: "Teinture végétale", price: "Sur devis", duration: "2h30", participants: "À partir de 8 participants" },
-    { title: "Bombes à graines", price: "Sur devis", duration: "1h30", participants: "À partir de 8 participants" }
+    { title: "Kokedama d'équipe", price: "Sur devis", duration: "2h", participants: "12 à 40 participants par session" },
+    { title: "Terrarium collectif", price: "Sur devis", duration: "1h30", participants: "12 à 40 participants par session" },
+    { title: "Teinture végétale", price: "Sur devis", duration: "2h30", participants: "12 à 40 participants par session" },
+    { title: "Bombes à graines", price: "Sur devis", duration: "1h30", participants: "12 à 40 participants par session" }
   ];
 
   const tons = ["bg-accent", "bg-[hsl(var(--olive-light))]", "bg-[hsl(var(--cream))]", "bg-[hsl(var(--green))] text-[hsl(var(--cream))]"];

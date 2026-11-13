@@ -171,31 +171,31 @@ const AnimationSemaineQVCT = () => {
                 title: "🌱 Atelier Kokedama",
                 desc: "L'art japonais de la boule de mousse. Parfait pour la méditation en créant.",
                 timing: "1h30",
-                participants: "À partir de 8 participants",
+                participants: "12 à 40 participants par session",
               },
               {
                 title: "🌿 Atelier Terrarium",
                 desc: "Créez un mini-écosystème sous verre. Fascinant et apaisante.",
                 timing: "2h",
-                participants: "À partir de 8 participants",
+                participants: "12 à 40 participants par session",
               },
               {
                 title: "🎨 Teinture Végétale",
                 desc: "Explorez les couleurs naturelles des plantes. Très créatif et médtatif.",
                 timing: "2h30",
-                participants: "À partir de 8 participants",
+                participants: "12 à 40 participants par session",
               },
               {
                 title: "🌾 Vannerie Nature",
                 desc: "Tressage d'osier et fibres naturelles. Ancestral et relaxant.",
                 timing: "2h à 3h",
-                participants: "À partir de 8 participants",
+                participants: "12 à 40 participants par session",
               },
               {
                 title: "🌼 Journée entière (combinée)",
                 desc: "Plusieurs ateliers sur la journée pour un impact maximal.",
                 timing: "4h à 6h",
-                participants: "À partir de 8 participants",
+                participants: "12 à 40 participants par session",
               },
             ].map((item, i) => (
               <div key={i} className="p-6 bg-blue-50 border-l-4 border-blue-600 hover:border-blue-800 transition-colors">

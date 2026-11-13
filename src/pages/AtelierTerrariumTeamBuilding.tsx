@@ -17,7 +17,7 @@ import miniTerrarium from "@/assets/gallery-mini-terrarium.jpeg";
 const SLUG = "/atelier-terrarium-team-building";
 
 const INFOS = [
-  { icon: Users, label: "À partir de 8 participants", desc: "Grands groupes en rotation" },
+  { icon: Users, label: "12 à 40 participants", desc: "Par session · plus en rotation" },
   { icon: Clock, label: "1h30 à 2h30", desc: "Selon le format choisi" },
   { icon: MapPin, label: "Dans vos locaux", desc: "Partout en Île-de-France" },
 ];
@@ -67,7 +67,7 @@ const POURQUOI = [
 const FAQ = [
   {
     q: "Combien de participants pour un atelier terrarium ?",
-    a: "À partir de 8 participants, sans limite haute. Pour que chacun soit bien accompagné, les grands groupes sont répartis en plusieurs sessions en rotation, sur devis.",
+    a: "De 12 à 40 participants par session. Pour un groupe plus grand, nous organisons plusieurs sessions en rotation dans la journée, sur devis.",
   },
   {
     q: "Combien de temps dure l'atelier ?",
