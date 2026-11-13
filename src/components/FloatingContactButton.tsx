@@ -31,11 +31,11 @@ const lireVu = () => {
 
 const CHOIX = [
   {
-    href: `/contact?subject=${encodeURIComponent("Demande de devis")}`,
+    href: `/contact?subject=${encodeURIComponent("Demande d'information")}`,
     interne: true,
     icon: MessageCircle,
-    titre: "Demander un devis",
-    sous: "Réponse sous 48 h",
+    titre: "Poser une question",
+    sous: "Devis gratuit sous 48 h",
     ton: "bg-accent",
   },
   {
@@ -100,10 +100,20 @@ const FloatingContactButton = () => {
       {/* Menu ouvert */}
       {isOpen && (
         <div
-          className="absolute bottom-24 right-0 w-[264px] bg-[hsl(var(--cream))] border-brutal shadow-[6px_6px_0_hsl(var(--black))] p-5 animate-scale-in origin-bottom-right"
+          className="absolute bottom-24 right-0 w-[286px] bg-[hsl(var(--cream))] border-brutal shadow-[6px_6px_0_hsl(var(--black))] p-5 animate-scale-in origin-bottom-right"
           style={{ borderRadius: "34px 46px 30px 50px / 46px 30px 50px 34px" }}
         >
-          <p className="font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--olive))] mb-1">On en parle ?</p>
+          {/* Croix de fermeture du volet */}
+          <button
+            type="button"
+            onClick={() => setIsOpen(false)}
+            className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-[hsl(var(--cream))] border-brutal-thin hover:bg-accent transition-colors"
+            style={PASTILLE}
+            aria-label="Fermer le menu contact"
+          >
+            <X className="w-4 h-4" />
+          </button>
+          <p className="font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--olive))] mb-1 pr-9">On en parle ?</p>
           <p className="font-display text-lg uppercase leading-tight mb-4">Contactez-nous</p>
           <div className="space-y-2.5">
             {CHOIX.map((c) => {
