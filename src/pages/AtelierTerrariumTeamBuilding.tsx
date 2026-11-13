@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -7,7 +8,17 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
 import WaveDivider from "@/components/WaveDivider";
 import { AREA_SERVED_IDF } from "@/data/areaServed";
-import { Users, Clock, MapPin, Check, ArrowRight, Phone } from "lucide-react";
+import TraitDessine from "@/components/TraitDessine";
+import PhotoCarousel from "@/components/PhotoCarousel";
+import QuoteForm from "@/components/QuoteForm";
+import { galet, galetPhoto, PASTILLE } from "@/lib/organic";
+import { Users, Clock, MapPin, Check, ArrowRight, Phone, ChevronDown, Coffee, BookOpen, Leaf } from "lucide-react";
+import terrariumTable from "@/assets/event-terrarium-table.webp";
+import terrariumMains from "@/assets/event-terrarium-mains.webp";
+import terrariumSourire from "@/assets/event-terrarium-sourire.webp";
+import terrariumSucculentes from "@/assets/gallery-terrarium.webp";
+import wardPortrait from "@/assets/blog-terrarium-nathaniel-ward.png";
+import wardianCase from "@/assets/blog-terrarium-wardian-case.jpg";
 import heroTerrarium from "@/assets/gallery-terrarium-adultes-groupe.jpg";
 import terrariumBocal from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
 import terrariumPrep from "@/assets/gallery-terrarium-fittonia-prep.jpg";
@@ -23,10 +34,13 @@ const INFOS = [
 ];
 
 const PHOTOS = [
-  { src: terrariumBocal, alt: "Terrarium en bocal de verre avec fittonia et tradescantia, réalisé en atelier" },
-  { src: terrariumPrep, alt: "Préparation d'un terrarium : mousse, fittonia et graviers posés sur la table d'atelier" },
-  { src: fittoniaPots, alt: "Plantules de fittonia en godets, prêtes à être installées dans les terrariums" },
-  { src: miniTerrarium, alt: "Mini terrarium en bocal réalisé lors d'un atelier" },
+  { src: terrariumMains, alt: "Une participante dépose le substrat dans son bocal pendant l'atelier", label: "Composer" },
+  { src: heroTerrarium, alt: "Un groupe d'adultes réalise des terrariums autour d'une table", label: "En équipe" },
+  { src: terrariumSucculentes, alt: "Grand terrarium de succulentes, fougères et mousse", label: "Le résultat" },
+  { src: terrariumBocal, alt: "Terrarium en bocal de verre avec fittonia et tradescantia, réalisé en atelier", label: "Fittonia" },
+  { src: terrariumPrep, alt: "Préparation d'un terrarium : mousse, fittonia et graviers posés sur la table d'atelier", label: "Mousse & fittonia" },
+  { src: fittoniaPots, alt: "Plantules de fittonia en godets, prêtes à être installées dans les terrariums", label: "Les plantes du jour" },
+  { src: miniTerrarium, alt: "Mini terrarium en bocal réalisé lors d'un atelier", label: "Petit format" },
 ];
 
 const ETAPES = [
@@ -44,6 +58,13 @@ const INCLUS = [
   "Un terrarium par participant, à emporter",
   "Une fiche de conseils d'entretien",
 ];
+
+const POURQUOI_ICONES = [Users, Coffee, BookOpen, Leaf];
+
+const GARANTIES = ["Devis gratuit, réponse sous 48 h", "Tout le matériel fourni", "Un terrarium par participant", "Partout en Île-de-France"];
+
+const BTN_GALET_A = { borderRadius: "28px 14px 26px 12px / 14px 26px 12px 28px" };
+const BTN_GALET_B = { borderRadius: "14px 30px 12px 26px / 26px 12px 30px 14px" };
 
 const POURQUOI = [
   {
@@ -84,8 +105,28 @@ const FAQ = [
 ];
 
 const AtelierTerrariumTeamBuilding = () => {
+  const heroRef = useRef<HTMLElement>(null);
+  const devisRef = useRef<HTMLElement>(null);
+  const [heroVisible, setHeroVisible] = useState(true);
+  const [devisVisible, setDevisVisible] = useState(false);
+
+  // Bouton « Devis » flottant sur mobile : visible une fois le haut de page passé, caché sur le formulaire
+  useEffect(() => {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.target === heroRef.current) setHeroVisible(e.isIntersecting);
+        if (e.target === devisRef.current) setDevisVisible(e.isIntersecting);
+      });
+    });
+    if (heroRef.current) io.observe(heroRef.current);
+    if (devisRef.current) io.observe(devisRef.current);
+    return () => io.disconnect();
+  }, []);
+
+  const showFloating = !heroVisible && !devisVisible;
+
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen bg-[hsl(var(--cream))] overflow-x-clip">
       <SEO
         title="Atelier Terrarium Team Building Paris | Créatif & Naturel"
         description="Atelier terrarium pour team building en entreprise à Paris et en Île-de-France : chacun crée son mini-écosystème et découvre l'histoire du terrarium. Dans vos locaux."
@@ -118,51 +159,110 @@ const AtelierTerrariumTeamBuilding = () => {
       <Navigation />
 
       {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden px-6 pt-24 pb-24 md:pt-32 md:pb-28">
-        <div className="absolute inset-0 bg-foreground">
-          <img src={heroTerrarium} alt="" className="w-full h-full object-cover opacity-35" />
-        </div>
-        <div className="absolute inset-0 bg-foreground/40" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <section ref={heroRef} className="relative px-6 pt-28 pb-16 md:pt-36 md:pb-24">
+        <div
+          className="absolute -left-32 top-20 w-[460px] h-[460px] bg-[hsl(var(--olive-light))]/30 pointer-events-none"
+          style={{ borderRadius: "58% 42% 38% 62% / 45% 55% 45% 55%" }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -right-24 bottom-0 w-[380px] h-[380px] bg-accent/15 pointer-events-none"
+          style={{ borderRadius: "40% 60% 55% 45% / 60% 40% 60% 40%" }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-14 lg:gap-10 items-center">
           <AnimatedSection>
-            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[3px] text-olive-light mb-5">
+            <span className="inline-flex items-center gap-2 font-mono-brand text-[10px] md:text-[11px] uppercase tracking-[2px] bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal-thin rounded-full px-4 py-2 mb-7 -rotate-2 shadow-[3px_3px_0_hsl(var(--black))]">
               Entreprises · CSE · Séminaires
-            </p>
-            <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+            </span>
+            <h1 className="font-display text-[clamp(2.4rem,5.4vw,4.4rem)] uppercase leading-[0.9] tracking-[-2px] mb-4">
               Atelier terrarium<br />
-              <span className="text-olive-light">team building</span>
+              <span className="text-primary">team building</span>
             </h1>
-            <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[680px] mx-auto leading-relaxed mb-10">
+            <TraitDessine className="mb-7" />
+            <p className="font-editorial italic text-xl md:text-2xl text-foreground/80 max-w-[560px] leading-snug mb-9">
               Chacun crée son mini-écosystème en bocal, et toute l'équipe découvre l'étonnante histoire du terrarium.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to={`/contact?subject=${encodeURIComponent("Devis atelier terrarium team building")}`}
-                className="btn-brutal bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
-                style={{ borderColor: "hsl(var(--cream))" }}
+            <div className="flex flex-wrap gap-4 mb-9">
+              <a
+                href="#devis"
+                className="btn-brutal inline-flex items-center gap-2 bg-accent text-foreground border-foreground -rotate-1 hover:rotate-0 text-xs px-8 py-3.5"
+                style={BTN_GALET_A}
               >
-                Demander un devis <ArrowRight className="w-4 h-4" />
-              </Link>
+                Demander un devis gratuit <ArrowRight className="w-4 h-4" />
+              </a>
               <a
                 href="tel:+33609831606"
-                className="btn-brutal bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
-                style={{ borderColor: "hsl(var(--cream))" }}
+                className="btn-brutal inline-flex items-center gap-2 bg-[hsl(var(--cream))] text-foreground border-foreground rotate-1 hover:rotate-0 text-xs px-7 py-3.5"
+                style={BTN_GALET_B}
               >
                 <Phone className="w-4 h-4" /> 06 09 83 16 06
               </a>
+            </div>
+            <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2.5 max-w-[560px]">
+              {GARANTIES.map((g) => (
+                <li key={g} className="flex items-start gap-2 text-sm text-foreground/80">
+                  <span className="mt-0.5 w-5 h-5 flex-shrink-0 flex items-center justify-center bg-[hsl(var(--olive-light))] border-brutal-thin" style={PASTILLE}>
+                    <Check className="w-3 h-3" strokeWidth={3} />
+                  </span>
+                  {g}
+                </li>
+              ))}
+            </ul>
+          </AnimatedSection>
+
+          {/* collage */}
+          <AnimatedSection delay={150} className="relative h-[420px] sm:h-[500px] max-w-[520px] w-full mx-auto">
+            <img
+              src={terrariumSourire}
+              alt="Une participante compose son terrarium en souriant pendant un atelier en entreprise"
+              className="absolute right-0 top-0 w-[60%] h-[78%] object-cover border-brutal shadow-brutal rotate-2"
+              style={galetPhoto(1)}
+            />
+            <img
+              src={terrariumTable}
+              alt="Terrariums en bocal alignés et sacs kraft prêts à être emportés"
+              className="absolute left-0 bottom-0 w-[62%] h-[52%] object-cover border-brutal shadow-brutal -rotate-2"
+              style={galetPhoto(0)}
+              loading="lazy"
+            />
+            <img
+              src={terrariumSucculentes}
+              alt="Terrarium de succulentes et de mousse"
+              className="absolute left-[4%] top-[6%] w-[36%] aspect-square object-cover border-brutal -rotate-3"
+              style={{ borderRadius: "58% 42% 52% 48% / 46% 56% 44% 54%" }}
+              loading="lazy"
+            />
+            <div
+              className="absolute right-[-2%] bottom-[8%] w-[108px] h-[108px] flex flex-col items-center justify-center text-center bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float"
+              style={PASTILLE}
+            >
+              <span className="font-display text-xl leading-none">1 bocal</span>
+              <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1 leading-tight px-2">par personne,<br />à emporter</span>
+            </div>
+            <div
+              className="absolute left-[26%] top-[40%] w-[84px] h-[84px] flex flex-col items-center justify-center text-center bg-accent border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float [animation-delay:-2s]"
+              style={{ borderRadius: "48% 52% 44% 56% / 55% 45% 55% 45%" }}
+            >
+              <span className="font-display text-2xl leading-none">2h</span>
+              <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1">environ</span>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      <WaveDivider from="hsl(0,0%,10%)" to="hsl(36,33%,93%)" />
-
       {/* ===== INFOS CLÉS ===== */}
-      <section className="px-6 pt-6 pb-16">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 border-brutal bg-[hsl(var(--cream))]">
+      <section className="px-6 pb-14">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
           {INFOS.map((item, i) => (
-            <div key={item.label} className={`px-6 py-8 text-center ${i > 0 ? "border-t-[3px] md:border-t-0 md:border-l-[3px] border-foreground" : ""}`}>
-              <item.icon className="w-7 h-7 mx-auto mb-3 text-primary" strokeWidth={2.2} />
+            <div
+              key={item.label}
+              className={`px-6 py-7 text-center border-brutal shadow-brutal bg-[hsl(var(--cream))] ${["-rotate-1", "rotate-[0.6deg]", "-rotate-[0.4deg]"][i]}`}
+              style={galet(i)}
+            >
+              <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-[hsl(var(--olive-light))] border-brutal-thin" style={PASTILLE}>
+                <item.icon className="w-6 h-6" strokeWidth={2.2} />
+              </div>
               <p className="font-display uppercase text-base tracking-[-0.5px] mb-1">{item.label}</p>
               <p className="font-mono-brand text-[10px] uppercase tracking-[2px] text-foreground/60">{item.desc}</p>
             </div>
@@ -171,24 +271,33 @@ const AtelierTerrariumTeamBuilding = () => {
       </section>
 
       {/* ===== PHOTOS ===== */}
-      <section className="px-6 pb-20">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {PHOTOS.map((photo) => (
-            <figure key={photo.alt} className="m-0 border-brutal overflow-hidden bg-secondary aspect-[3/4]">
-              <img src={photo.src} alt={photo.alt} loading="lazy" className="w-full h-full object-cover" />
-            </figure>
-          ))}
-        </div>
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
+      <section className="bg-secondary pt-6 pb-10">
+        <AnimatedSection className="px-6 max-w-6xl mx-auto mb-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <div>
+            <span className="section-label block mb-3">En atelier</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3.4rem)] uppercase leading-[0.92] tracking-[-1.5px]">
+              Les mains<br /><span className="md:ml-16 text-primary">dans la mousse</span>
+            </h2>
+            <TraitDessine className="mt-3 md:ml-16" variant={1} />
+          </div>
+          <span className="self-start md:self-end font-mono-brand text-[10px] uppercase tracking-[2px] border-brutal-thin rounded-full px-4 py-2 bg-[hsl(var(--cream))] rotate-2">
+            ← Faites glisser →
+          </span>
+        </AnimatedSection>
+        <PhotoCarousel organic images={PHOTOS} />
       </section>
 
       {/* ===== HISTOIRE ===== */}
-      <section className="px-6 pb-20">
-        <div className="max-w-3xl mx-auto">
+      <WaveDivider from="hsl(36,25%,88%)" to="hsl(36,33%,93%)" flip />
+      <section className="px-6 pt-10 pb-20 md:pb-24">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[1.2fr_1fr] gap-14 items-center">
           <AnimatedSection>
             <span className="section-label block mb-3">Notre signature</span>
-            <h2 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] uppercase leading-[0.95] tracking-[-1px] mb-6">
+            <h2 className="font-display text-[clamp(1.9rem,4.5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
               Plus qu'un bocal : <span className="text-primary">une histoire</span>
             </h2>
+            <TraitDessine className="mt-3 mb-7" color="hsl(var(--orange))" variant={2} />
             <div className="space-y-4 text-base md:text-lg leading-relaxed text-foreground/80">
               <p>
                 Au XIXe siècle, le médecin londonien Nathaniel Ward remarque qu'une fougère pousse toute seule dans un bocal fermé. Sa
@@ -203,129 +312,243 @@ const AtelierTerrariumTeamBuilding = () => {
             </div>
             <Link
               to="/blog/terrarium-biopiraterie-histoire-coloniale"
-              className="mt-6 inline-flex items-center gap-2 font-mono-brand text-[11px] uppercase tracking-[2px] text-primary hover:gap-3 transition-all"
+              className="mt-7 btn-brutal inline-flex items-center gap-2 bg-[hsl(var(--cream))] text-foreground border-foreground -rotate-1 hover:rotate-0 text-xs px-6 py-3"
+              style={BTN_GALET_B}
             >
-              Lire l'histoire complète sur le blog <ArrowRight className="w-3.5 h-3.5" />
+              Lire l'histoire complète sur le blog <ArrowRight className="w-4 h-4" />
             </Link>
+          </AnimatedSection>
+          <AnimatedSection delay={150} className="relative max-w-[400px] w-full mx-auto">
+            <img
+              src={wardPortrait}
+              alt="Portrait gravé de Nathaniel Ward, inventeur de la Wardian case"
+              className="w-[82%] aspect-[4/5] object-cover border-brutal shadow-brutal bg-white rotate-2 grayscale"
+              style={galetPhoto(2)}
+              loading="lazy"
+            />
+            <div
+              className="absolute right-0 bottom-[-6%] w-[48%] aspect-square bg-white border-brutal shadow-[4px_4px_0_hsl(var(--black))] -rotate-3 overflow-hidden flex items-center justify-center"
+              style={PASTILLE}
+            >
+              <img src={wardianCase} alt="Gravure d'une Wardian case, l'ancêtre du terrarium" className="w-[80%] h-auto" loading="lazy" />
+            </div>
+            <span className="absolute left-2 -bottom-4 font-mono-brand text-[9px] uppercase tracking-[2px] bg-[hsl(var(--olive-light))] border-brutal-thin rounded-full px-3 py-1.5 -rotate-2 shadow-[2px_2px_0_hsl(var(--black))]">
+              Nathaniel Ward · 1829
+            </span>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* ===== DÉROULÉ + INCLUS ===== */}
-      <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
-      <section className="pt-10 pb-20 px-6 bg-secondary">
-        <div className="max-w-5xl mx-auto">
+      {/* ===== DÉROULÉ + INCLUS (bande verte) ===== */}
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(153,40%,30%)" />
+      <section className="bg-[hsl(var(--green))] text-[hsl(var(--cream))] px-6 pt-10 pb-20 md:pb-24">
+        <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-12">
-            <span className="section-label block mb-3">Comment ça marche</span>
-            <h2 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] uppercase leading-[0.95] tracking-[-1px]">
-              Déroulement <span className="text-primary">de l'atelier</span>
+            <span className="section-label block mb-3" style={{ color: "hsl(73 44% 67%)" }}>Comment ça marche</span>
+            <h2 className="font-display text-[clamp(1.9rem,4.5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
+              Déroulement <span className="text-[hsl(var(--olive-light))]">de l'atelier</span>
             </h2>
+            <TraitDessine className="mx-auto mt-3" color="hsl(var(--olive-light))" variant={1} />
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 mb-16">
-            {ETAPES.map((item) => (
-              <div key={item.step} className="p-6 border-brutal bg-[hsl(var(--cream))] -ml-[3px] -mt-[3px]">
-                <span className="font-display text-5xl text-primary/30 block mb-3">{item.step}</span>
-                <h3 className="font-display text-lg uppercase tracking-[-0.5px] mb-2">{item.title}</h3>
-                <p className="text-sm text-foreground/70 leading-relaxed">{item.desc}</p>
-              </div>
+          <div className="relative grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <svg className="hidden lg:block absolute left-[12%] right-[12%] top-[34px] w-[76%] h-6 pointer-events-none" viewBox="0 0 600 24" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0 12 C 100 0, 200 24, 300 12 S 500 0, 600 12" fill="none" stroke="hsl(var(--olive-light))" strokeWidth="2.5" strokeDasharray="7 8" strokeLinecap="round" />
+            </svg>
+            {ETAPES.map((d, i) => (
+              <AnimatedSection key={d.step} delay={i * 120}>
+                <div className="relative text-center h-full flex flex-col">
+                  <div
+                    className="relative z-10 w-[68px] h-[68px] mx-auto mb-5 flex items-center justify-center bg-[hsl(var(--cream))] text-foreground border-brutal shadow-[3px_3px_0_hsl(var(--black))]"
+                    style={PASTILLE}
+                  >
+                    <span className="font-display text-xl">{d.step}</span>
+                  </div>
+                  <div className="flex-1 bg-[hsl(var(--cream))] text-foreground border-brutal p-6" style={galet(i)}>
+                    <h3 className="font-display text-lg uppercase tracking-[-0.5px] mb-2">{d.title}</h3>
+                    <p className="text-sm text-foreground/70 leading-relaxed">{d.desc}</p>
+                  </div>
+                </div>
+              </AnimatedSection>
             ))}
           </div>
 
-          <div className="border-brutal bg-[hsl(var(--cream))] p-8 md:p-10">
-            <h2 className="font-display text-xl md:text-2xl uppercase tracking-[-0.5px] mb-6">Ce qui est inclus</h2>
-            <div className="grid md:grid-cols-2 gap-x-10 gap-y-4">
-              {INCLUS.map((item) => (
-                <div key={item} className="flex gap-3 items-start">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" strokeWidth={3} />
-                  <p className="text-sm md:text-base text-foreground/80">{item}</p>
-                </div>
-              ))}
+          <AnimatedSection>
+            <div className="relative max-w-5xl mx-auto bg-[hsl(var(--cream))] text-foreground border-brutal shadow-[6px_6px_0_hsl(var(--black))] p-8 md:p-11 -rotate-[0.4deg]" style={galet(3)}>
+              <span className="absolute -top-5 left-8 font-mono-brand text-[10px] uppercase tracking-[2px] bg-accent border-brutal-thin rounded-full px-4 py-2 rotate-2 shadow-[2px_2px_0_hsl(var(--black))]">
+                Tout est compris
+              </span>
+              <h2 className="font-display text-xl md:text-2xl uppercase tracking-[-0.5px] mb-6 mt-2">Ce qui est inclus</h2>
+              <div className="grid md:grid-cols-2 gap-x-10 gap-y-4">
+                {INCLUS.map((item) => (
+                  <div key={item} className="flex gap-3 items-start">
+                    <span className="mt-0.5 w-6 h-6 flex-shrink-0 flex items-center justify-center bg-[hsl(var(--olive-light))] border-brutal-thin" style={PASTILLE}>
+                      <Check className="w-3.5 h-3.5" strokeWidth={3} />
+                    </span>
+                    <p className="text-sm md:text-base text-foreground/80">{item}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
-      <WaveDivider from="hsl(36,25%,88%)" to="hsl(36,33%,93%)" flip />
+      <WaveDivider from="hsl(153,40%,30%)" to="hsl(36,33%,93%)" flip />
 
       {/* ===== POURQUOI ===== */}
       <section className="pt-10 pb-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <AnimatedSection className="text-center mb-12">
+          <AnimatedSection className="text-center mb-14">
             <span className="section-label block mb-3">Pourquoi ce format</span>
-            <h2 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] uppercase leading-[0.95] tracking-[-1px]">
+            <h2 className="font-display text-[clamp(1.9rem,4.5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
               Le terrarium pour <span className="text-primary">votre équipe</span>
             </h2>
+            <TraitDessine className="mx-auto mt-3" variant={0} />
           </AnimatedSection>
-          <div className="grid md:grid-cols-2 gap-6">
-            {POURQUOI.map((item, i) => (
-              <div key={item.title} className="border-brutal bg-[hsl(var(--cream))] p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-brutal-lg">
-                <span className="font-display text-3xl text-primary/30 block mb-3">0{i + 1}</span>
-                <h3 className="font-display text-base uppercase mb-3 leading-tight">{item.title}</h3>
-                <p className="text-sm text-foreground/70 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-x-8 gap-y-10">
+            {POURQUOI.map((item, i) => {
+              const Icone = POURQUOI_ICONES[i];
+              return (
+                <AnimatedSection key={item.title} delay={i * 100} className={i % 2 === 1 ? "md:mt-10" : ""}>
+                  <div
+                    className={`relative h-full bg-[hsl(var(--cream))] border-brutal shadow-brutal p-7 pt-11 ${["-rotate-1", "rotate-1", "rotate-[0.6deg]", "-rotate-[0.6deg]"][i]} hover:rotate-0 transition-transform duration-300`}
+                    style={galet(i + 1)}
+                  >
+                    <div
+                      className={`absolute -top-7 left-7 w-14 h-14 flex items-center justify-center border-brutal shadow-[3px_3px_0_hsl(var(--black))] ${["bg-[hsl(var(--olive-light))]", "bg-accent", "bg-[hsl(var(--cream))]", "bg-[hsl(var(--green))] text-[hsl(var(--cream))]"][i]}`}
+                      style={PASTILLE}
+                    >
+                      <Icone className="w-6 h-6" />
+                    </div>
+                    <h3 className="font-display text-lg uppercase mb-3 leading-tight">{item.title}</h3>
+                    <p className="text-sm md:text-base text-foreground/70 leading-relaxed">{item.desc}</p>
+                  </div>
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* ===== FAQ ===== */}
-      <section className="pb-20 px-6">
+      <section className="pt-4 pb-16 px-6">
         <div className="max-w-4xl mx-auto">
           <AnimatedSection className="text-center mb-10">
             <span className="section-label block mb-3">FAQ</span>
             <h2 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] uppercase leading-[0.95] tracking-[-1px]">
               Questions <span className="text-primary">fréquentes</span>
             </h2>
+            <TraitDessine className="mx-auto mt-3" variant={1} />
           </AnimatedSection>
-          <div className="space-y-4">
-            {FAQ.map((item) => (
-              <div key={item.q} className="border-brutal bg-[hsl(var(--cream))] p-6 md:p-7">
-                <h3 className="font-display text-base md:text-lg uppercase tracking-[-0.5px] mb-2">{item.q}</h3>
-                <p className="text-sm md:text-base text-foreground/70 leading-relaxed">{item.a}</p>
-              </div>
+          <div className="space-y-5">
+            {FAQ.map((f, i) => (
+              <details
+                key={f.q}
+                className={`group border-brutal bg-[hsl(var(--cream))] px-6 md:px-8 py-5 open:shadow-brutal transition-shadow ${i % 2 ? "rotate-[0.3deg]" : "-rotate-[0.3deg]"}`}
+                style={galet(i)}
+                open={i === 0}
+              >
+                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                  <h3 className="font-display text-base md:text-lg uppercase tracking-[-0.5px]">{f.q}</h3>
+                  <span className="w-9 h-9 flex-shrink-0 flex items-center justify-center bg-[hsl(var(--olive-light))] border-brutal-thin transition-transform group-open:rotate-180" style={PASTILLE}>
+                    <ChevronDown className="w-4 h-4" />
+                  </span>
+                </summary>
+                <p className="mt-3 text-sm md:text-base text-foreground/70 leading-relaxed">{f.a}</p>
+              </details>
             ))}
           </div>
-          <p className="mt-8 text-center text-sm text-foreground/70">
-            Vous cherchez un autre format ?{" "}
-            <Link to="/team-building-nature-entreprise" className="underline decoration-2 underline-offset-2 hover:text-primary">
-              Tous nos ateliers team building
-            </Link>{" "}
-            ·{" "}
-            <Link to="/pro" className="underline decoration-2 underline-offset-2 hover:text-primary">
-              Toutes nos offres pro
-            </Link>
-          </p>
         </div>
       </section>
 
-      {/* ===== CTA ===== */}
-      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
-      <section className="bg-foreground text-primary-foreground px-6 pt-10 pb-24">
-        <AnimatedSection className="max-w-3xl mx-auto text-center">
-          <p className="font-mono-brand text-[11px] uppercase tracking-[3px] text-olive-light mb-4">Organisons votre atelier</p>
-          <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mb-6">
-            Prêt·e à créer <span className="text-olive-light">ensemble&nbsp;?</span>
-          </h2>
-          <p className="text-base text-primary-foreground/75 leading-relaxed mb-10 max-w-xl mx-auto">
-            Dites-nous votre effectif, votre lieu et le temps dont vous disposez : nous vous envoyons une proposition sur mesure.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to={`/contact?subject=${encodeURIComponent("Devis atelier terrarium team building")}`}
-              className="btn-brutal bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
-              style={{ borderColor: "hsl(var(--cream))" }}
-            >
-              Demander un devis →
-            </Link>
-            <Link
-              to="/workshops"
-              className="btn-brutal bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
-              style={{ borderColor: "hsl(var(--cream))" }}
-            >
-              Voir tous les ateliers →
-            </Link>
+      {/* ===== AUTRES FORMATS ===== */}
+      <section className="px-6 pb-20">
+        <AnimatedSection>
+          <div
+            className="max-w-5xl mx-auto bg-[hsl(var(--cream))] border-[3px] border-dashed border-foreground px-7 py-9 md:px-12 md:py-10 grid md:grid-cols-[1fr_auto] gap-8 items-center rotate-[0.3deg]"
+            style={{ borderRadius: "46px 70px 40px 64px / 64px 40px 70px 46px" }}
+          >
+            <div className="text-center md:text-left">
+              <span className="section-label block mb-2">Envie d'autre chose ?</span>
+              <h3 className="font-display text-[clamp(1.4rem,3vw,2rem)] uppercase leading-[0.95] tracking-[-0.5px] mb-3">
+                D'autres ateliers <span className="text-primary">pour vos équipes</span>
+              </h3>
+              <p className="text-sm md:text-base text-foreground/75 leading-relaxed">
+                Kokedama, teinture végétale, bombes à graines, sachets de senteurs… Une vingtaine d'ateliers, tous adaptables à votre événement.
+              </p>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <Link
+                to="/team-building-nature-entreprise"
+                className="btn-brutal inline-flex items-center gap-2 bg-[hsl(var(--olive-light))] text-foreground border-foreground rotate-1 hover:rotate-0 text-xs px-7 py-3.5 whitespace-nowrap"
+                style={BTN_GALET_B}
+              >
+                Tous nos ateliers team building <ArrowRight className="w-4 h-4" />
+              </Link>
+              <div className="flex gap-4 font-mono-brand text-[10px] uppercase tracking-[2px]">
+                <Link to="/atelier-kokedama-team-building" className="underline underline-offset-4 decoration-2 hover:text-primary">Kokedama</Link>
+                <Link to="/workshops" className="underline underline-offset-4 decoration-2 hover:text-primary">Tous les ateliers</Link>
+                <Link to="/pro" className="underline underline-offset-4 decoration-2 hover:text-primary">Offres pro</Link>
+              </div>
+            </div>
           </div>
         </AnimatedSection>
       </section>
+
+      {/* ===== DEVIS (bande verte) ===== */}
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(153,40%,30%)" />
+      <section
+        id="devis"
+        ref={devisRef}
+        className="relative bg-[hsl(var(--green))] text-[hsl(var(--cream))] px-6 pt-8 pb-24 scroll-mt-20"
+      >
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_460px] gap-12 lg:gap-16 items-start">
+          <AnimatedSection className="lg:pt-6">
+            <span className="section-label block mb-3" style={{ color: "hsl(73 44% 67%)" }}>Organisons votre atelier</span>
+            <h2 className="font-display text-[clamp(2rem,4.5vw,3.2rem)] uppercase leading-[0.92] tracking-[-1px]">
+              Prêt·e à créer<br /><span className="text-[hsl(var(--olive-light))]">ensemble&nbsp;?</span>
+            </h2>
+            <TraitDessine className="mt-3 mb-7" color="hsl(var(--olive-light))" variant={2} />
+            <p className="text-base md:text-lg text-[hsl(var(--cream))]/85 leading-relaxed mb-8 max-w-xl">
+              Dites-nous votre effectif, votre lieu et le temps dont vous disposez : nous vous envoyons une proposition sur mesure.
+            </p>
+            <ul className="space-y-3 mb-9">
+              {GARANTIES.map((g) => (
+                <li key={g} className="flex items-start gap-3 text-[hsl(var(--cream))]/90">
+                  <span className="mt-0.5 w-6 h-6 flex-shrink-0 flex items-center justify-center bg-[hsl(var(--olive-light))] text-foreground border-brutal-thin" style={PASTILLE}>
+                    <Check className="w-3.5 h-3.5" strokeWidth={3} />
+                  </span>
+                  {g}
+                </li>
+              ))}
+            </ul>
+            <a
+              href="tel:+33609831606"
+              className="btn-brutal inline-flex items-center gap-2 bg-[hsl(var(--cream))] text-foreground border-foreground -rotate-1 hover:rotate-0 text-xs px-7 py-3.5"
+              style={BTN_GALET_A}
+            >
+              <Phone className="w-4 h-4" /> 06 09 83 16 06
+            </a>
+          </AnimatedSection>
+          <div
+            className="bg-[hsl(var(--cream))] text-[hsl(var(--black))] border-brutal shadow-[6px_6px_0_hsl(var(--black))] p-7 md:p-9 text-left lg:rotate-[0.6deg]"
+            style={galet(1)}
+          >
+            <QuoteForm atelierTitle="Atelier terrarium team building" organic />
+          </div>
+        </div>
+      </section>
+      <WaveDivider from="hsl(153,40%,30%)" to="hsl(0,0%,10%)" flip />
+
+      {/* Bouton devis flottant (mobile) */}
+      <a
+        href="#devis"
+        className={`md:hidden fixed left-4 bottom-4 z-40 btn-brutal inline-flex items-center gap-2 bg-accent text-foreground border-foreground text-xs px-6 py-3 shadow-brutal transition-all duration-300 ${showFloating ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6 pointer-events-none"}`}
+        style={BTN_GALET_A}
+        aria-hidden={!showFloating}
+        tabIndex={showFloating ? 0 : -1}
+      >
+        Devis gratuit <ArrowRight className="w-4 h-4" />
+      </a>
 
       <BackToTop />
       <Footer />

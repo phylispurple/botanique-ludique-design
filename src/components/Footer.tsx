@@ -24,7 +24,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="border-t-2 border-primary" style={{ background: 'hsl(0 0% 10%)' }}>
+    <footer style={{ background: 'hsl(0 0% 10%)' }}>
       <div className="px-6 md:px-16 lg:px-[120px] py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
           {/* Brand + Contact */}
