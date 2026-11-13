@@ -2,12 +2,12 @@ import AtelierTeamBuildingPage, { type AtelierTeamBuildingConfig } from "@/compo
 import { Users, Clock, MapPin, Sparkles, Palette, BookOpen, Leaf } from "lucide-react";
 import imgPetales from "@/assets/event-teinture-petales.webp";
 import imgSoies from "@/assets/event-soies-suspendues.webp";
-import imgFanions from "@/assets/teinture-fanions.webp";
 import imgPotFil from "@/assets/gallery-teinture-2.webp";
+import imgFanionsGalerie from "@/assets/gallery-teinture-1.webp";
+import imgFilBleu from "@/assets/gallery-teinture-3.webp";
+import imgBain from "@/assets/gallery-teinture-chou-rouge-bain.webp";
 import imgFanionMain from "@/assets/teinture-fanion-main.webp";
 import imgChouRouge from "@/assets/teinture-chou-rouge-filtre.webp";
-import imgBocalTissu from "@/assets/teinture-bocal-tissu.webp";
-import imgFicelle from "@/assets/teinture-ficelle-bocal.webp";
 import imgTshirts from "@/assets/gallery-teinture-tshirts-table.webp";
 
 const CONFIG: AtelierTeamBuildingConfig = {
@@ -49,9 +49,9 @@ const CONFIG: AtelierTeamBuildingConfig = {
       { src: imgPetales, alt: "Impression de pétales sur soie pendant l'atelier", label: "Imprimer" },
       { src: imgSoies, alt: "Carrés de soie teints aux plantes, suspendus à la fenêtre", label: "Le séchage" },
       { src: imgChouRouge, alt: "Chou rouge égoutté au-dessus d'un bain de teinture violet", label: "Chou rouge" },
-      { src: imgBocalTissu, alt: "Bocal de teinture violette et carré de coton prêt à teindre", label: "Le bain" },
-      { src: imgFicelle, alt: "Ficelle et bocal de teinture sur la table d'atelier", label: "Nouer" },
-      { src: imgFanions, alt: "Fanions teints en bleu, gris et rose", label: "Le résultat" },
+      { src: imgBain, alt: "Bain de teinture violet foncé au chou rouge dans un saladier inox", label: "Le bain" },
+      { src: imgFilBleu, alt: "Fil teint en bleu posé sur un carré de tissu", label: "Fil teint au bleu" },
+      { src: imgFanionsGalerie, alt: "Fanions de tissu teints en bleu et en rose aux couleurs végétales", label: "Le résultat" },
       { src: imgTshirts, alt: "T-shirts teints aux plantes sur la table d'atelier", label: "Sur textile" },
     ],
   },
