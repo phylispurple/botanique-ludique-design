@@ -9,12 +9,12 @@ import { Users, Palette, MapPin, ArrowRight, CheckCircle, Clock } from "lucide-r
 
 const LandingMJC = () => {
   const workshops = [
-    { title: "Kokedama", price: "45€/pers", duration: "2h-2h30", public: "Adultes" },
-    { title: "Teinture végétale", price: "55€/pers", duration: "2h30-3h", public: "Adultes" },
-    { title: "Terrarium", price: "50€/pers", duration: "1h30-2h", public: "Tout public" },
-    { title: "Vannerie sauvage", price: "60€/pers", duration: "2h30-3h", public: "Adultes" },
-    { title: "Herbier créatif", price: "40€/pers", duration: "2h", public: "Tout public" },
-    { title: "Bombes à graines", price: "25€/pers", duration: "1h30", public: "Familles" }
+    { title: "Kokedama", duration: "2h-2h30", public: "Adultes" },
+    { title: "Teinture végétale", duration: "2h30-3h", public: "Adultes" },
+    { title: "Terrarium", duration: "1h30-2h", public: "Tout public" },
+    { title: "Vannerie sauvage", duration: "2h30-3h", public: "Adultes" },
+    { title: "Herbier créatif", duration: "2h", public: "Tout public" },
+    { title: "Bombes à graines", duration: "1h30", public: "Familles" }
   ];
 
   return (
@@ -37,7 +37,7 @@ const LandingMJC = () => {
           <h2 className="text-3xl font-display text-charcoal mb-8 text-center">Catalogue d'ateliers</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {workshops.map((w, i) => (
-              <Card key={i} className="border-sage/20"><CardContent className="p-6"><div className="flex justify-between items-start mb-3"><h3 className="font-display text-xl text-charcoal">{w.title}</h3><span className="text-sage font-medium text-sm bg-sage/10 px-2 py-1 rounded">{w.price}</span></div><div className="flex gap-3 text-xs text-charcoal/60"><span className="flex items-center gap-1 bg-background px-2 py-1 rounded"><Clock className="w-3 h-3" />{w.duration}</span><span className="flex items-center gap-1 bg-background px-2 py-1 rounded"><Users className="w-3 h-3" />{w.public}</span></div></CardContent></Card>
+              <Card key={i} className="border-sage/20"><CardContent className="p-6"><div className="flex justify-between items-start mb-3"><h3 className="font-display text-xl text-charcoal">{w.title}</h3><span className="text-sage font-medium text-sm bg-sage/10 px-2 py-1 rounded">Sur devis</span></div><div className="flex gap-3 text-xs text-charcoal/60"><span className="flex items-center gap-1 bg-background px-2 py-1 rounded"><Clock className="w-3 h-3" />{w.duration}</span><span className="flex items-center gap-1 bg-background px-2 py-1 rounded"><Users className="w-3 h-3" />{w.public}</span></div></CardContent></Card>
             ))}
           </div>
         </div>
