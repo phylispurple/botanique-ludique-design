@@ -4,7 +4,8 @@ import Footer from "@/components/Footer";
 import WaveDivider from "@/components/WaveDivider";
 import TraitDessine from "@/components/TraitDessine";
 import { galet, galetPhoto } from "@/lib/organic";
-import heroAteliers from "@/assets/gallery-workshop-group.webp";
+import heroKokedama from "@/assets/event-kokedama-mains.webp";
+import heroTeinture from "@/assets/event-teinture-petales.webp";
 import WorkshopFilters, { WorkshopCategory } from "@/components/WorkshopFilters";
 import BackToTop from "@/components/BackToTop";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -83,14 +84,14 @@ const AutoSlideshow = ({ images, alt }: { images: string[]; alt: string }) => {
   const prev = () => setI((v) => (v - 1 + images.length) % images.length);
   const next = () => setI((v) => (v + 1) % images.length);
   return (
-    <div className="relative w-full aspect-[4/3] overflow-hidden border-brutal bg-[hsl(var(--cream))]" style={galetPhoto(1)}>
+    <div className="relative w-full aspect-[4/3] overflow-hidden border-brutal shadow-brutal bg-foreground" style={galetPhoto(1)}>
       {images.map((src, idx) => (
         <img
           key={idx}
           src={src}
           alt={alt}
           loading="lazy"
-          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
         />
       ))}
       <SlideArrows onPrev={prev} onNext={next} />
@@ -129,7 +130,7 @@ const MediaSlideshow = ({ items, alt }: { items: MediaItem[]; alt: string }) => 
   const prev = () => setI((v) => (v - 1 + items.length) % items.length);
 
   return (
-    <div className="relative w-full aspect-[4/3] overflow-hidden border-brutal bg-[hsl(var(--cream))]" style={galetPhoto(1)}>
+    <div className="relative w-full aspect-[4/3] overflow-hidden border-brutal shadow-brutal bg-foreground" style={galetPhoto(1)}>
       {items.map((item, idx) =>
         item.type === "image" ? (
           <img
@@ -137,7 +138,7 @@ const MediaSlideshow = ({ items, alt }: { items: MediaItem[]; alt: string }) => 
             src={item.src}
             alt={alt}
             loading="lazy"
-            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0 pointer-events-none"}`}
           />
         ) : (
           <video
@@ -148,7 +149,7 @@ const MediaSlideshow = ({ items, alt }: { items: MediaItem[]; alt: string }) => 
             playsInline
             preload="metadata"
             onEnded={next}
-            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0 pointer-events-none"}`}
           />
         )
       )}
@@ -384,6 +385,14 @@ const categoryLabels: Record<WorkshopCategory, string> = {
   "bien-etre": "Bien-être",
 };
 
+/** Ateliers qui ont une page dédiée pour les entreprises (team building). */
+const PAGE_ENTREPRISE: Record<string, string> = {
+  "Teinture Végétale": "/atelier-teinture-vegetale-team-building",
+  Kokedama: "/atelier-kokedama-team-building",
+  Terrariums: "/atelier-terrarium-team-building",
+  "Bombes de Graines": "/atelier-bombes-a-graines-team-building",
+};
+
 const bandColor = (i: number) => (i % 2 === 0 ? "hsl(36,33%,93%)" : "hsl(36,25%,88%)");
 
 const Workshops = () => {
@@ -437,7 +446,7 @@ const Workshops = () => {
     : { [activeCategory]: filteredWorkshops };
 
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen bg-[hsl(var(--cream))] overflow-x-clip">
       <SEO
         title="Ateliers botaniques à Paris et en Île-de-France"
         description="Découvrez nos ateliers botaniques à Paris et en Île-de-France, terrarium, kokedama, teinture végétale, herbier et créations florales pour adultes, enfants, écoles et entreprises."
@@ -453,33 +462,67 @@ const Workshops = () => {
       />
       <Navigation />
 
-      {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden px-6 pt-24 pb-24 md:pt-32 md:pb-28">
-        <div className="absolute inset-0 bg-foreground">
-          <img src={heroAteliers} alt="" className="w-full h-full object-cover opacity-35" />
-        </div>
-        <div className="absolute inset-0 bg-foreground/40" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
+      {/* ===== HERO : texte + collage en galets ===== */}
+      <section className="relative px-6 pt-28 pb-12 md:pt-36 md:pb-16">
+        <div
+          className="absolute -left-32 top-20 w-[460px] h-[460px] bg-[hsl(var(--olive-light))]/30 pointer-events-none"
+          style={{ borderRadius: "58% 42% 38% 62% / 45% 55% 45% 55%" }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -right-24 bottom-0 w-[380px] h-[380px] bg-accent/15 pointer-events-none"
+          style={{ borderRadius: "40% 60% 55% 45% / 60% 40% 60% 40%" }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-14 lg:gap-10 items-center">
           <AnimatedSection>
-            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[3px] text-olive-light mb-5">
+            <span className="inline-flex items-center gap-2 font-mono-brand text-[10px] md:text-[11px] uppercase tracking-[2px] bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal-thin rounded-full px-4 py-2 mb-7 -rotate-2 shadow-[3px_3px_0_hsl(var(--black))]">
               Ateliers · Créations · Savoirs
-            </p>
-            <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+            </span>
+            <h1 className="font-display text-[clamp(2.6rem,6vw,5rem)] uppercase leading-[0.9] tracking-[-2px] mb-4">
               Ateliers<br />
-              <span className="text-olive-light">Botaniques</span>
+              <span className="text-primary">Botaniques</span>
             </h1>
-            <TraitDessine className="mx-auto -mt-2 mb-6" color="hsl(var(--olive-light))" />
-            <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[650px] mx-auto mb-4 leading-relaxed">
+            <TraitDessine className="mb-7" />
+            <p className="font-editorial italic text-xl md:text-2xl text-foreground/80 max-w-[560px] leading-snug mb-5">
               Des expériences botaniques pour éveiller vos sens, partout en Île-de-France.
             </p>
-            <p className="font-body text-[15px] md:text-base text-primary-foreground/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="font-body text-[15px] text-foreground/65 max-w-[560px] leading-relaxed">
               Expériences botaniques immersives pour particuliers et groupes en Île-de-France. Ateliers disponibles partout en Île-de-France : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94) et Val-d'Oise (95). Chaque atelier est conçu pour vous reconnecter avec la nature à travers la créativité manuelle et la pratique consciente.
             </p>
           </AnimatedSection>
+
+          <AnimatedSection delay={150} className="relative h-[400px] sm:h-[480px] max-w-[520px] w-full mx-auto">
+            <img
+              src={heroKokedama}
+              alt="Façonnage d'un kokedama pendant un atelier"
+              className="absolute right-0 top-0 w-[60%] h-[74%] object-cover border-brutal shadow-brutal rotate-2"
+              style={galetPhoto(1)}
+            />
+            <img
+              src={heroTeinture}
+              alt="Impression de pétales sur soie pendant un atelier de teinture végétale"
+              className="absolute left-0 bottom-0 w-[60%] h-[52%] object-cover border-brutal shadow-brutal -rotate-2"
+              style={galetPhoto(0)}
+              loading="lazy"
+            />
+            <img
+              src={terrariumImage}
+              alt="Terrarium de succulentes réalisé en atelier"
+              className="absolute left-[4%] top-[4%] w-[36%] aspect-square object-cover border-brutal -rotate-3"
+              style={{ borderRadius: "58% 42% 52% 48% / 46% 56% 44% 54%" }}
+              loading="lazy"
+            />
+            <div
+              className="absolute right-[-2%] bottom-[6%] w-[104px] h-[104px] flex flex-col items-center justify-center text-center bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float"
+              style={{ borderRadius: "55% 45% 52% 48% / 46% 54% 46% 54%" }}
+            >
+              <span className="font-display text-2xl leading-none">{workshops.length}</span>
+              <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1">ateliers</span>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
-
-      <WaveDivider from="hsl(0,0%,10%)" to="hsl(36,33%,93%)" />
 
       {/* ===== FILTRES ===== */}
       <section className="px-6 pt-6">
@@ -510,7 +553,7 @@ const Workshops = () => {
                   <TraitDessine className="mx-auto mt-3" variant={catIndex} />
                 </AnimatedSection>
 
-                <div className="space-y-16">
+                <div className="space-y-20 md:space-y-24">
                   {categoryWorkshops.map((workshop, index) => (
                     <AnimatedSection
                       key={workshop.title}
@@ -519,17 +562,16 @@ const Workshops = () => {
                     >
                       <div
                         id={workshop.title.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, "-")}
-                        className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center border-brutal shadow-brutal p-6 md:p-8 bg-[hsl(var(--cream))] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300 group`}
-                        style={galet(index)}
+                        className="grid grid-cols-1 md:grid-cols-[1.15fr_1fr] gap-8 md:gap-14 items-center group"
                       >
-                        <div className={`${index % 2 === 1 ? "md:order-2" : ""} relative`}>
+                        <div className={`${index % 2 === 1 ? "md:order-2 md:rotate-1" : "md:-rotate-1"} relative`}>
                           {/* Badges */}
-                          <div className="absolute top-3 left-3 z-10 flex flex-wrap gap-2">
-                            <span className="font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 rounded-full border-brutal-thin bg-[hsl(var(--cream))]">
+                          <div className="absolute -top-4 left-6 z-20 flex flex-wrap gap-2">
+                            <span className="font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 rounded-full border-brutal-thin bg-[hsl(var(--cream))] shadow-[2px_2px_0_hsl(var(--black))] -rotate-2">
                               {categoryLabels[workshop.category]}
                             </span>
                             {workshop.tag && (
-                              <span className={`font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 rounded-full border-brutal-thin ${
+                              <span className={`font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 rounded-full border-brutal-thin shadow-[2px_2px_0_hsl(var(--black))] rotate-2 ${
                                 workshop.tag === "populaire"
                                   ? "bg-[hsl(var(--orange))] text-primary-foreground"
                                   : "bg-[hsl(var(--olive))] text-primary-foreground"
@@ -544,21 +586,21 @@ const Workshops = () => {
                               <CarouselContent>
                                 {(workshop.images ?? [workshop.image]).map((src, i) => (
                                   <CarouselItem key={src}>
-                                    <div className="overflow-hidden border-brutal" style={galetPhoto(index + 1)}>
+                                    <div className="overflow-hidden border-brutal shadow-brutal aspect-[4/3]" style={galetPhoto(index + 1)}>
                                       <img
                                         src={src}
                                         alt={`Atelier ${workshop.title}${i > 0 ? `, photo ${i + 1}` : ""}`}
-                                        className="w-full transition-transform duration-700 group-hover:scale-105"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                         loading="lazy"
                                       />
                                     </div>
                                   </CarouselItem>
                                 ))}
                                 <CarouselItem>
-                                  <div className="overflow-hidden border-brutal" style={galetPhoto(index + 1)}>
+                                  <div className="overflow-hidden border-brutal shadow-brutal aspect-[4/3]" style={galetPhoto(index + 1)}>
                                     <video
                                       src={workshop.video}
-                                      className="w-full"
+                                      className="w-full h-full object-cover"
                                       muted
                                       loop
                                       playsInline
@@ -572,10 +614,10 @@ const Workshops = () => {
                               <CarouselNext className="right-4" />
                             </Carousel>
                           ) : workshop.type === "video" ? (
-                            <div className="overflow-hidden border-brutal shadow-brutal" style={galetPhoto(index)}>
+                            <div className="overflow-hidden border-brutal shadow-brutal aspect-[4/3]" style={galetPhoto(index)}>
                               <video
                                 src={workshop.image}
-                                className="w-full transition-transform duration-700 group-hover:scale-105"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 muted
                                 loop
                                 playsInline
@@ -588,11 +630,11 @@ const Workshops = () => {
                           ) : workshop.images && workshop.images.length > 1 ? (
                             <AutoSlideshow images={workshop.images} alt={`Atelier ${workshop.title}`} />
                           ) : (
-                            <div className="overflow-hidden border-brutal shadow-brutal" style={galetPhoto(index)}>
+                            <div className="overflow-hidden border-brutal shadow-brutal aspect-[4/3]" style={galetPhoto(index)}>
                               <img
                                 src={workshop.image}
                                 alt={`Atelier ${workshop.title}`}
-                                className="w-full img-zoom"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 loading="lazy"
                               />
                             </div>
@@ -606,21 +648,33 @@ const Workshops = () => {
                               {workshop.duration}
                             </span>
                           </div>
-                          <h3 className="font-display text-2xl md:text-3xl uppercase leading-[0.95] tracking-[-1px]">
+                          <h3 className="font-display text-2xl md:text-[2.4rem] uppercase leading-[0.95] tracking-[-1px]">
                             {workshop.title}
                           </h3>
+                          <TraitDessine className="!w-24 md:!w-32 !h-2.5" variant={index} color={index % 2 ? "hsl(var(--orange))" : "hsl(var(--olive))"} />
                           <p className="font-mono-brand text-[10px] uppercase tracking-[2px] text-primary">
                             Public : {workshop.public}
                           </p>
                           <p className="text-base text-foreground/70 leading-[1.8]">
                             {workshop.description}
                           </p>
-                          <Link
-                            to={`/contact?subject=${encodeURIComponent(`Demande d'information : ${workshop.title}`)}`}
-                            className="btn-brutal rounded-full bg-primary text-primary-foreground border-primary hover:bg-primary-foreground hover:text-foreground text-xs px-7 py-3 inline-block mt-2"
-                          >
-                            Demande d'information →
-                          </Link>
+                          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-2">
+                            <Link
+                              to={`/contact?subject=${encodeURIComponent(`Demande d'information : ${workshop.title}`)}`}
+                              className={`btn-brutal inline-flex items-center bg-accent text-foreground border-foreground text-xs px-7 py-3 hover:rotate-0 ${index % 2 ? "rotate-1" : "-rotate-1"}`}
+                              style={{ borderRadius: index % 2 ? "14px 30px 12px 26px / 26px 12px 30px 14px" : "28px 14px 26px 12px / 14px 26px 12px 28px" }}
+                            >
+                              Demande d'information →
+                            </Link>
+                            {PAGE_ENTREPRISE[workshop.title] && (
+                              <Link
+                                to={PAGE_ENTREPRISE[workshop.title]}
+                                className="font-mono-brand text-[10px] uppercase tracking-[2px] underline underline-offset-4 decoration-2 hover:text-primary"
+                              >
+                                Version entreprise →
+                              </Link>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </AnimatedSection>

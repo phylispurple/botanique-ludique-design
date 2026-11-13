@@ -99,6 +99,8 @@ const AtelierBienEtreNatureEntreprise = lazy(() => import("./pages/AtelierBienEt
 const AnimationSemaineQVCT = lazy(() => import("./pages/AnimationSemaineQVCT"));
 const ActiviteIntergenerationnelle = lazy(() => import("./pages/ActiviteIntergenerationnelle"));
 const AtelierKokedamaTeamBuilding = lazy(() => import("./pages/AtelierKokedamaTeamBuilding"));
+const AtelierTeintureTeamBuilding = lazy(() => import("./pages/AtelierTeintureTeamBuilding"));
+const AtelierBombesGrainesTeamBuilding = lazy(() => import("./pages/AtelierBombesGrainesTeamBuilding"));
 const AtelierTeintureScolaire = lazy(() => import("./pages/AtelierTeintureScolaire"));
 const AnimationNatureEHPAD = lazy(() => import("./pages/AnimationNatureEHPAD"));
 const AtelierBotaniqueEvenement = lazy(() => import("./pages/AtelierBotaniqueEvenement"));
@@ -392,6 +394,8 @@ const App = () => (
             <Route path="/atelier-botanique-evenement" element={<AtelierBotaniqueEvenement />} />
             <Route path="/atelier-terrarium-team-building" element={<AtelierTerrariumTeamBuilding />} />
             <Route path="/atelier-kokedama-team-building" element={<AtelierKokedamaTeamBuilding />} />
+            <Route path="/atelier-teinture-vegetale-team-building" element={<AtelierTeintureTeamBuilding />} />
+            <Route path="/atelier-bombes-a-graines-team-building" element={<AtelierBombesGrainesTeamBuilding />} />
             <Route path="/atelier-bien-etre-nature-entreprise" element={<AtelierBienEtreNatureEntreprise />} />
             <Route path="/atelier-ethnobotanique-entreprise" element={<AtelierEthnobotaniqueEntreprise />} />
             <Route path="/atelier-kombucha-cuir-vegetal" element={<AtelierKombuchaCuirVegetal />} />

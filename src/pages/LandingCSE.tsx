@@ -60,7 +60,7 @@ const LandingCSE = () => {
             </Link>
           </AnimatedSection>
         </div>
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="absolute bottom-0 left-0 w-full h-16 md:h-24" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="absolute -bottom-1 left-0 w-full h-[68px] md:h-[100px]" aria-hidden="true">
           <path d="M0,120 C240,40 480,20 720,50 C960,80 1200,30 1440,120 L1440,120 L0,120 Z" fill="hsl(var(--cream))" />
         </svg>
       </section>

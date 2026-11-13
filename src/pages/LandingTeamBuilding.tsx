@@ -72,7 +72,7 @@ const ATELIERS = [
     desc: "Extraire la couleur des plantes et teindre ensemble, en découvrant l'histoire des couleurs végétales.",
     duree: "2h30",
     groupe: "12 à 40 par session",
-    to: null,
+    to: "/atelier-teinture-vegetale-team-building",
   },
   {
     title: "Bombes à graines",
@@ -82,7 +82,7 @@ const ATELIERS = [
     desc: "Fabriquer des bombes à graines mellifères à semer dans les friches, et parler de la nature en ville.",
     duree: "1h30",
     groupe: "12 à 40 par session",
-    to: null,
+    to: "/atelier-bombes-a-graines-team-building",
   },
 ];
 

@@ -164,7 +164,7 @@ const Index = () => {
         <svg
           viewBox="0 0 1440 120"
           preserveAspectRatio="none"
-          className="absolute bottom-0 left-0 w-full h-16 md:h-24"
+          className="absolute -bottom-1 left-0 w-full h-[68px] md:h-[100px]"
           aria-hidden="true"
         >
           <path
@@ -350,11 +350,9 @@ const Index = () => {
       {/* ===== TESTIMONIALS ===== */}
       <Testimonials />
 
-      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
-
-      {/* ===== CTA + NEWSLETTER ===== */}
-      <section className="py-20 md:py-24 px-6 text-primary-foreground relative overflow-hidden">
-        <div className="absolute inset-0 bg-foreground">
+      {/* ===== CTA + NEWSLETTER : la photo remplit la vague ===== */}
+      <section className="pt-32 md:pt-44 pb-20 md:pb-24 px-6 text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-x-0 bottom-0 top-1 bg-foreground">
           <img
             src={ctaWorkshopGroup}
             alt=""
@@ -362,7 +360,16 @@ const Index = () => {
             loading="lazy"
           />
         </div>
-        <div className="absolute inset-0 bg-foreground/40" />
+        <div className="absolute inset-x-0 bottom-0 top-1 bg-foreground/40" />
+        {/* découpe en vague : le crème au-dessus, la photo dessous */}
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          className="absolute -top-1 left-0 w-full h-[52px] md:h-[84px] z-[1] scale-x-[-1]"
+          aria-hidden="true"
+        >
+          <path d="M0,0 L1440,0 L1440,120 C1200,30 960,80 720,50 C480,20 240,40 0,120 Z" fill="hsl(36,33%,93%)" />
+        </svg>
         <div className="relative z-10 max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <AnimatedSection direction="left">
             <div className="space-y-5">
