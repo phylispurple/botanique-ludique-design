@@ -16,7 +16,7 @@ import imgTerrarium from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
 import imgKokedama from "@/assets/gallery-kokedama-collection.jpg";
 import imgTeinture from "@/assets/gallery-teinture-1.webp";
 import imgEpices from "@/assets/atelier-epices-choiseul.webp";
-import imgAnniversaire from "@/assets/gallery-terrarium-enfants-fabrication.jpg";
+import imgAnniversaire from "@/assets/illustration-gateau-anniversaire.webp";
 import imgCta from "@/assets/cta-workshop-group.jpg";
 
 const SLUG = "/ateliers-botaniques-yvelines";
@@ -359,8 +359,8 @@ const AteliersBotaniquesYvelines = () => {
         <AnimatedSection className="max-w-5xl mx-auto grid md:grid-cols-[2fr_3fr] gap-10 md:gap-14 items-center">
           <img
             src={imgAnniversaire}
-            alt="Enfants qui fabriquent leur terrarium pendant un atelier botanique"
-            className="w-full max-w-sm mx-auto aspect-square object-cover border-4 border-[hsl(var(--cream))]"
+            alt="Illustration d'un gâteau d'anniversaire couronné de marguerites et de fougères, à côté d'un terrarium sous cloche et d'un pot en terre cuite"
+            className="w-full max-w-sm mx-auto aspect-square object-cover border-4 border-[hsl(var(--cream))] rotate-2"
             style={{ borderRadius: GALETS[2] }}
             loading="lazy"
           />
