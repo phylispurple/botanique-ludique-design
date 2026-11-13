@@ -15,7 +15,7 @@ import imgGroupe from "@/assets/gallery-terrarium-adultes-groupe.jpg";
 import imgTerrarium from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
 import imgKokedama from "@/assets/gallery-kokedama-collection.jpg";
 import imgTeinture from "@/assets/gallery-teinture-1.webp";
-import imgEpices from "@/assets/atelier-epices-choiseul.webp";
+import imgEpices from "@/assets/gallery-sachet-senteur.webp";
 import imgAnniversaire from "@/assets/illustration-gateau-anniversaire.webp";
 import imgCta from "@/assets/cta-workshop-group.jpg";
 
@@ -69,7 +69,7 @@ const POPULAIRES = [
     tag: "Vécu à Versailles",
     title: "Sachet senteur aux épices",
     image: imgEpices,
-    alt: "Participants composant leur sachet senteur aux épices à la Bibliothèque Choiseul de Versailles, Fête de la Science 2026",
+    alt: "Sachets senteur en organza remplis de lavande, de camomille, de bleuet et de bâtons de cannelle",
     desc: "On sent, on mélange, on compose son sachet d'épices et de plantes séchées en remontant la route des épices. Un atelier que nous avons proposé à la Bibliothèque Choiseul de Versailles pour la Fête de la Science 2026.",
     href: CONTACT,
     tone: "bg-[hsl(var(--green))] text-[hsl(var(--cream))] rotate-3",
