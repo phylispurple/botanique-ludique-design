@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WaveDivider from "@/components/WaveDivider";
+import TraitDessine from "@/components/TraitDessine";
+import { galet, galetPhoto } from "@/lib/organic";
 import heroAteliers from "@/assets/gallery-workshop-group.webp";
 import WorkshopFilters, { WorkshopCategory } from "@/components/WorkshopFilters";
 import BackToTop from "@/components/BackToTop";
@@ -57,7 +59,7 @@ const SlideArrows = ({ onPrev, onNext }: { onPrev: () => void; onNext: () => voi
       type="button"
       onClick={onPrev}
       aria-label="Photo précédente"
-      className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center border-brutal-thin bg-[hsl(var(--cream))] hover:bg-[hsl(var(--olive))] hover:text-primary-foreground transition-colors"
+      className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center border-brutal-thin bg-[hsl(var(--cream))] hover:bg-[hsl(var(--olive))] hover:text-primary-foreground transition-colors"
     >
       <ChevronLeft className="w-5 h-5" />
     </button>
@@ -65,7 +67,7 @@ const SlideArrows = ({ onPrev, onNext }: { onPrev: () => void; onNext: () => voi
       type="button"
       onClick={onNext}
       aria-label="Photo suivante"
-      className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center border-brutal-thin bg-[hsl(var(--cream))] hover:bg-[hsl(var(--olive))] hover:text-primary-foreground transition-colors"
+      className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center border-brutal-thin bg-[hsl(var(--cream))] hover:bg-[hsl(var(--olive))] hover:text-primary-foreground transition-colors"
     >
       <ChevronRight className="w-5 h-5" />
     </button>
@@ -81,7 +83,7 @@ const AutoSlideshow = ({ images, alt }: { images: string[]; alt: string }) => {
   const prev = () => setI((v) => (v - 1 + images.length) % images.length);
   const next = () => setI((v) => (v + 1) % images.length);
   return (
-    <div className="relative w-full aspect-[4/3] overflow-hidden border-brutal bg-[hsl(var(--cream))]">
+    <div className="relative w-full aspect-[4/3] overflow-hidden border-brutal bg-[hsl(var(--cream))]" style={galetPhoto(1)}>
       {images.map((src, idx) => (
         <img
           key={idx}
@@ -96,7 +98,7 @@ const AutoSlideshow = ({ images, alt }: { images: string[]; alt: string }) => {
         {images.map((_, idx) => (
           <span
             key={idx}
-            className={`h-1.5 transition-all ${idx === i ? "w-6 bg-foreground" : "w-1.5 bg-foreground/40"}`}
+            className={`h-1.5 rounded-full transition-all ${idx === i ? "w-6 bg-foreground" : "w-1.5 bg-foreground/40"}`}
           />
         ))}
       </div>
@@ -127,7 +129,7 @@ const MediaSlideshow = ({ items, alt }: { items: MediaItem[]; alt: string }) => 
   const prev = () => setI((v) => (v - 1 + items.length) % items.length);
 
   return (
-    <div className="relative w-full aspect-[4/3] overflow-hidden border-brutal bg-[hsl(var(--cream))]">
+    <div className="relative w-full aspect-[4/3] overflow-hidden border-brutal bg-[hsl(var(--cream))]" style={galetPhoto(1)}>
       {items.map((item, idx) =>
         item.type === "image" ? (
           <img
@@ -155,7 +157,7 @@ const MediaSlideshow = ({ items, alt }: { items: MediaItem[]; alt: string }) => 
         {items.map((_, idx) => (
           <span
             key={idx}
-            className={`h-1.5 transition-all ${idx === i ? "w-6 bg-foreground" : "w-1.5 bg-foreground/40"}`}
+            className={`h-1.5 rounded-full transition-all ${idx === i ? "w-6 bg-foreground" : "w-1.5 bg-foreground/40"}`}
           />
         ))}
       </div>
@@ -466,6 +468,7 @@ const Workshops = () => {
               Ateliers<br />
               <span className="text-olive-light">Botaniques</span>
             </h1>
+            <TraitDessine className="mx-auto -mt-2 mb-6" color="hsl(var(--olive-light))" />
             <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[650px] mx-auto mb-4 leading-relaxed">
               Des expériences botaniques pour éveiller vos sens, partout en Île-de-France.
             </p>
@@ -504,6 +507,7 @@ const Workshops = () => {
                   <h2 className="font-display text-[clamp(1.8rem,4vw,2.5rem)] uppercase leading-[0.95] tracking-[-1px]">
                     {categoryTitles[category as WorkshopCategory]}
                   </h2>
+                  <TraitDessine className="mx-auto mt-3" variant={catIndex} />
                 </AnimatedSection>
 
                 <div className="space-y-16">
@@ -516,15 +520,16 @@ const Workshops = () => {
                       <div
                         id={workshop.title.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, "-")}
                         className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center border-brutal shadow-brutal p-6 md:p-8 bg-[hsl(var(--cream))] hover:bg-[hsl(var(--green-pale))] transition-colors duration-300 group`}
+                        style={galet(index)}
                       >
                         <div className={`${index % 2 === 1 ? "md:order-2" : ""} relative`}>
                           {/* Badges */}
                           <div className="absolute top-3 left-3 z-10 flex flex-wrap gap-2">
-                            <span className="font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 border-brutal-thin bg-[hsl(var(--cream))]">
+                            <span className="font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 rounded-full border-brutal-thin bg-[hsl(var(--cream))]">
                               {categoryLabels[workshop.category]}
                             </span>
                             {workshop.tag && (
-                              <span className={`font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 border-brutal-thin ${
+                              <span className={`font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 rounded-full border-brutal-thin ${
                                 workshop.tag === "populaire"
                                   ? "bg-[hsl(var(--orange))] text-primary-foreground"
                                   : "bg-[hsl(var(--olive))] text-primary-foreground"
@@ -539,7 +544,7 @@ const Workshops = () => {
                               <CarouselContent>
                                 {(workshop.images ?? [workshop.image]).map((src, i) => (
                                   <CarouselItem key={src}>
-                                    <div className="overflow-hidden border-brutal">
+                                    <div className="overflow-hidden border-brutal" style={galetPhoto(index + 1)}>
                                       <img
                                         src={src}
                                         alt={`Atelier ${workshop.title}${i > 0 ? `, photo ${i + 1}` : ""}`}
@@ -550,7 +555,7 @@ const Workshops = () => {
                                   </CarouselItem>
                                 ))}
                                 <CarouselItem>
-                                  <div className="overflow-hidden border-brutal">
+                                  <div className="overflow-hidden border-brutal" style={galetPhoto(index + 1)}>
                                     <video
                                       src={workshop.video}
                                       className="w-full"
@@ -567,7 +572,7 @@ const Workshops = () => {
                               <CarouselNext className="right-4" />
                             </Carousel>
                           ) : workshop.type === "video" ? (
-                            <div className="overflow-hidden border-brutal shadow-brutal">
+                            <div className="overflow-hidden border-brutal shadow-brutal" style={galetPhoto(index)}>
                               <video
                                 src={workshop.image}
                                 className="w-full transition-transform duration-700 group-hover:scale-105"
@@ -583,7 +588,7 @@ const Workshops = () => {
                           ) : workshop.images && workshop.images.length > 1 ? (
                             <AutoSlideshow images={workshop.images} alt={`Atelier ${workshop.title}`} />
                           ) : (
-                            <div className="overflow-hidden border-brutal shadow-brutal">
+                            <div className="overflow-hidden border-brutal shadow-brutal" style={galetPhoto(index)}>
                               <img
                                 src={workshop.image}
                                 alt={`Atelier ${workshop.title}`}
@@ -597,7 +602,7 @@ const Workshops = () => {
                         <div className={`space-y-4 ${index % 2 === 1 ? "md:order-1" : ""}`}>
                           <div className="flex items-center gap-3">
                             <workshop.icon size={20} className="text-primary" />
-                            <span className="font-mono-brand text-[10px] uppercase tracking-[2px] px-3 py-1 border-brutal-thin">
+                            <span className="font-mono-brand text-[10px] uppercase tracking-[2px] px-3 py-1 rounded-full border-brutal-thin">
                               {workshop.duration}
                             </span>
                           </div>
@@ -612,7 +617,7 @@ const Workshops = () => {
                           </p>
                           <Link
                             to={`/contact?subject=${encodeURIComponent(`Demande d'information : ${workshop.title}`)}`}
-                            className="btn-brutal bg-primary text-primary-foreground border-primary hover:bg-primary-foreground hover:text-foreground text-xs px-7 py-3 inline-block mt-2"
+                            className="btn-brutal rounded-full bg-primary text-primary-foreground border-primary hover:bg-primary-foreground hover:text-foreground text-xs px-7 py-3 inline-block mt-2"
                           >
                             Demande d'information →
                           </Link>
@@ -632,8 +637,7 @@ const Workshops = () => {
           <div className="bg-foreground px-6 pt-10 pb-24">
           <div className="max-w-6xl mx-auto">
           <AnimatedSection>
-            <div className="relative border-brutal p-10 md:p-14 text-center bg-[hsl(var(--cream))] shadow-brutal-lg">
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-primary" />
+            <div className="relative border-brutal p-10 md:p-14 text-center bg-[hsl(var(--cream))] shadow-brutal-lg" style={galet(2)}>
               <span className="section-label block mb-3">Professionnels</span>
               <h3 className="font-display text-2xl md:text-3xl uppercase leading-[0.95] tracking-[-1px] mb-4">
                 Vous êtes un établissement scolaire ou une entreprise ?
@@ -643,7 +647,7 @@ const Workshops = () => {
               </p>
               <Link
                 to="/pro"
-                className="btn-brutal bg-foreground text-primary-foreground border-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
+                className="btn-brutal rounded-full bg-foreground text-primary-foreground border-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
               >
                 Voir les offres professionnelles →
               </Link>

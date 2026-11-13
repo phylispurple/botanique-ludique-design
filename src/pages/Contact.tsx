@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import AnimatedSection from "@/components/AnimatedSection";
 import WaveDivider from "@/components/WaveDivider";
+import TraitDessine from "@/components/TraitDessine";
+import { galet } from "@/lib/organic";
 import { SEO } from "@/components/SEO";
 import { Loader2, Mail, MapPin, Phone, Send, Clock, Calendar as CalendarIcon, Sparkles, ArrowRight, CheckCircle2, Download } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -191,9 +193,9 @@ const Contact = () => {
   const dateFromUrl = searchParams.get('date');
   const lieuFromUrl = searchParams.get('lieu');
 
-  const inputClass = "w-full px-0 py-3 bg-transparent text-[hsl(var(--black))] border-0 border-b-2 border-[hsl(var(--black))]/20 focus:border-[hsl(var(--olive))] focus:outline-none transition-colors placeholder:text-[hsl(var(--black))]/30 font-body text-base";
-  const selectClass = "w-full px-0 py-3 bg-transparent text-[hsl(var(--black))] border-0 border-b-2 border-[hsl(var(--black))]/20 focus:border-[hsl(var(--olive))] focus:outline-none transition-colors font-body text-base appearance-none cursor-pointer";
-  const labelClass = "block font-mono-brand text-[10px] uppercase tracking-[2.5px] text-[hsl(var(--olive))] mb-1";
+  const inputClass = "w-full px-4 py-3 bg-white/60 text-[hsl(var(--black))] border-2 border-[hsl(var(--black))]/20 rounded-2xl focus:border-[hsl(var(--olive))] focus:bg-white focus:outline-none transition-colors placeholder:text-[hsl(var(--black))]/30 font-body text-base";
+  const selectClass = "w-full px-4 py-3 bg-white/60 text-[hsl(var(--black))] border-2 border-[hsl(var(--black))]/20 rounded-2xl focus:border-[hsl(var(--olive))] focus:bg-white focus:outline-none transition-colors font-body text-base appearance-none cursor-pointer";
+  const labelClass = "block font-mono-brand text-[10px] uppercase tracking-[2.5px] text-[hsl(var(--olive))] mb-2 ml-1";
 
   return (
     <div className="min-h-screen bg-[hsl(var(--cream))]">
@@ -220,6 +222,7 @@ const Contact = () => {
               Nous<br />
               <span className="text-olive-light">écrire</span>
             </h1>
+            <TraitDessine className="mx-auto -mt-2 mb-7" color="hsl(var(--olive-light))" />
             <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[620px] mx-auto leading-relaxed mb-10">
               Atelier, team building, conférence, balade ou événement : décrivez votre projet, je vous réponds rapidement.
             </p>
@@ -241,11 +244,11 @@ const Contact = () => {
       <WaveDivider from="hsl(0,0%,10%)" to="hsl(36,33%,93%)" />
 
       <main id="formulaire" className="px-6 md:px-16 lg:px-[120px] pt-10 pb-20 scroll-mt-24">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_380px] gap-16 items-start">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_380px] gap-12 lg:gap-14 items-start">
           {/* ===== FORMULAIRE ===== */}
-          <div>
+          <div className="bg-[hsl(var(--cream))] border-brutal shadow-brutal-lg p-6 sm:p-8 md:p-11" style={galet(0)}>
             {sent ? (
-              <div className="border-brutal bg-[hsl(var(--cream))] shadow-brutal-lg p-8 md:p-12" role="status">
+              <div className="p-1" role="status">
                 <CheckCircle2 className="w-10 h-10 text-primary mb-5" />
                 <h2 className="font-display text-2xl md:text-3xl uppercase leading-[1] tracking-[-1px] mb-4">
                   Merci, votre message <span className="text-primary">est bien parti</span>
@@ -257,13 +260,13 @@ const Contact = () => {
                 <div className="flex flex-wrap gap-4">
                   <Link
                     to="/gallery"
-                    className="btn-brutal bg-primary text-primary-foreground border-foreground hover:bg-foreground text-xs px-7 py-3 inline-flex items-center gap-2"
+                    className="btn-brutal rounded-full bg-primary text-primary-foreground border-foreground hover:bg-foreground text-xs px-7 py-3 inline-flex items-center gap-2"
                   >
                     Voir la galerie <ArrowRight className="w-4 h-4" />
                   </Link>
                   <Link
                     to="/agenda"
-                    className="btn-brutal bg-[hsl(var(--cream))] text-foreground border-foreground hover:bg-[hsl(var(--green-pale))] text-xs px-7 py-3 inline-flex items-center gap-2"
+                    className="btn-brutal rounded-full bg-[hsl(var(--cream))] text-foreground border-foreground hover:bg-[hsl(var(--green-pale))] text-xs px-7 py-3 inline-flex items-center gap-2"
                   >
                     Voir l'agenda <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -280,7 +283,7 @@ const Contact = () => {
               <>
                 {/* Bandeau réservation d'atelier */}
                 {atelierFromUrl && (
-                  <div className="mb-10 p-6 border-brutal bg-[hsl(var(--green-pale))]">
+                  <div className="mb-10 p-6 border-brutal bg-[hsl(var(--green-pale))] rounded-3xl">
                     <div className="flex items-start gap-4">
                       <Sparkles className="w-6 h-6 text-[hsl(var(--olive))] flex-shrink-0 mt-0.5" />
                       <div>
@@ -307,7 +310,7 @@ const Contact = () => {
                   <HoneypotField />
                   {/* Coordonnées */}
                   <div>
-                    <h2 className="font-display text-xl uppercase tracking-[-0.5px] mb-8 pb-3 border-b-2 border-[hsl(var(--black))]">
+                    <h2 className="font-display text-xl uppercase tracking-[-0.5px] mb-6">
                       Vos coordonnées
                     </h2>
                     <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
@@ -332,7 +335,7 @@ const Contact = () => {
 
                   {/* Projet */}
                   <div>
-                    <h2 className="font-display text-xl uppercase tracking-[-0.5px] mb-8 pb-3 border-b-2 border-[hsl(var(--black))]">
+                    <h2 className="font-display text-xl uppercase tracking-[-0.5px] mb-6">
                       Votre projet
                     </h2>
                     <div className="grid md:grid-cols-2 gap-x-8 gap-y-6 mb-6">
@@ -359,7 +362,7 @@ const Contact = () => {
                     </div>
 
                     {formData.profile === "Particulier" && (
-                      <div className="mb-8 p-5 border-brutal bg-[hsl(var(--green-pale))] flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+                      <div className="mb-8 p-5 border-brutal bg-[hsl(var(--green-pale))] rounded-3xl flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
                         <p className="text-sm text-foreground/80 leading-relaxed">
                           Vous cherchez un atelier ouvert à tous ? Les prochaines dates sont dans l'agenda, avec le lien d'inscription.
                         </p>
@@ -410,7 +413,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn-brutal bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:border-[hsl(var(--black))] text-xs px-10 py-4 inline-flex items-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="btn-brutal rounded-full bg-[hsl(var(--olive))] text-[hsl(var(--cream))] border-[hsl(var(--olive))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:border-[hsl(var(--black))] text-xs px-10 py-4 inline-flex items-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
@@ -431,7 +434,7 @@ const Contact = () => {
 
           {/* ===== COLONNE ===== */}
           <aside className="lg:sticky lg:top-28 space-y-6">
-            <div className="border-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] p-8 shadow-brutal">
+            <div className="border-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] p-8 shadow-brutal -rotate-1" style={galet(1)}>
               <span className="font-mono-brand text-[10px] uppercase tracking-[2.5px] text-[hsl(var(--olive-light))] block mb-5">
                 Coordonnées
               </span>
@@ -457,14 +460,14 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="border-brutal bg-[hsl(var(--cream))] p-8 shadow-brutal">
+            <div className="border-brutal bg-[hsl(var(--cream))] p-8 shadow-brutal rotate-[0.6deg]" style={galet(2)}>
               <span className="font-mono-brand text-[10px] uppercase tracking-[2.5px] text-[hsl(var(--olive))] block mb-5">
                 Comment ça se passe
               </span>
               <ol className="space-y-4">
                 {ETAPES.map((e) => (
                   <li key={e.step} className="flex gap-4">
-                    <span className="font-display text-2xl text-primary/40 leading-none">{e.step}</span>
+                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center font-display text-sm bg-[hsl(var(--olive-light))] border-brutal-thin" style={{ borderRadius: "55% 45% 52% 48% / 46% 54% 46% 54%" }}>{e.step}</span>
                     <div>
                       <p className="font-display text-sm uppercase">{e.title}</p>
                       <p className="text-sm text-foreground/70 leading-snug">{e.desc}</p>
@@ -474,7 +477,7 @@ const Contact = () => {
               </ol>
             </div>
 
-            <div className="border-brutal bg-[hsl(var(--cream))] p-8 shadow-brutal">
+            <div className="border-brutal bg-[hsl(var(--olive-light))]/40 p-8 shadow-brutal -rotate-[0.5deg]" style={galet(3)}>
               <span className="font-mono-brand text-[10px] uppercase tracking-[2.5px] text-[hsl(var(--olive))] block mb-4">
                 Vous êtes un professionnel
               </span>
@@ -518,10 +521,11 @@ const Contact = () => {
             <h2 className="font-display text-[clamp(1.8rem,4vw,2.6rem)] uppercase leading-[0.95] tracking-[-1px]">
               Questions <span className="text-primary">fréquentes</span>
             </h2>
+            <TraitDessine className="mx-auto mt-3" variant={2} />
           </AnimatedSection>
           <div className="grid md:grid-cols-3 gap-6">
-            {FAQ.map((item) => (
-              <div key={item.q} className="border-brutal bg-[hsl(var(--cream))] p-6">
+            {FAQ.map((item, i) => (
+              <div key={item.q} className={`border-brutal shadow-brutal bg-[hsl(var(--cream))] p-6 ${i % 2 ? "rotate-[0.6deg] md:mt-6" : "-rotate-[0.6deg]"} hover:rotate-0 transition-transform`} style={galet(i)}>
                 <h3 className="font-display text-base uppercase tracking-[-0.5px] mb-2">{item.q}</h3>
                 <p className="text-sm text-foreground/70 leading-relaxed">{item.a}</p>
               </div>

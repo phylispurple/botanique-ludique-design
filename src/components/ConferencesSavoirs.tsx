@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
+import TraitDessine from "@/components/TraitDessine";
+import WaveDivider from "@/components/WaveDivider";
+import { galet, galetPhoto } from "@/lib/organic";
 import { GraduationCap, Sprout, Microscope, Landmark, Users, BookOpen, Compass, TreePine, ArrowUpRight, ArrowRight } from "lucide-react";
 import imgTerrarium from "@/assets/gallery-terrarium.webp";
 import imgSachet from "@/assets/gallery-sachet-senteur.webp";
@@ -110,30 +113,30 @@ const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
           <Heading className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.95] tracking-[-2px] text-white mb-5">
             Conférences<br />& Savoirs
           </Heading>
-          <p className="text-lg leading-[1.7] text-white/80 max-w-[680px] mb-6 text-justify">
+          <TraitDessine className="-mt-1 mb-8" color="hsl(73 44% 67%)" />
+          <p className="text-lg leading-[1.7] text-white/80 max-w-[680px] mb-6">
             Formée en anthropologie de la nature à l'EHESS sous la direction de Florence Brunois-Pasina, Vanessa Charlery propose aux institutions une médiation ethnobotanique qui prend les plantes au sérieux comme témoins de l'histoire. Une approche qui croise rigueur académique et pédagogie accessible, et qui mobilise les travaux contemporains en anthropologie de la nature, en histoire des sciences coloniales et en études de genre.
           </p>
-          <p className="text-lg leading-[1.7] text-white/80 max-w-[680px] mb-6 text-justify">
+          <p className="text-lg leading-[1.7] text-white/80 max-w-[680px] mb-6">
             Il n'existe pas de meilleur témoin historique qu'une plante. Une plante porte en elle son origine géographique, les routes qu'elle a empruntées, les mains qui l'ont cultivée, les noms qu'on lui a donnés et ceux qu'on lui a effacés. Botanique Ludique propose aux musées, jardins botaniques, médiathèques et universités de raconter les plantes autrement : par leur histoire sociale, politique et culturelle, en complément du regard botanique classique.
           </p>
-          <p className="text-sm leading-[1.7] text-white/60 max-w-[680px] mb-14 text-justify">
+          <p className="text-sm leading-[1.7] text-white/60 max-w-[680px] mb-14">
             Découvrez nos <Link to="/workshops" className="underline text-[hsl(73_44%_67%)] hover:text-white transition-colors">ateliers botaniques pour tous publics</Link>, nos <Link to="/etablissements-scolaires" className="underline text-[hsl(73_44%_67%)] hover:text-white transition-colors">interventions pédagogiques pour établissements scolaires</Link>, ou <Link to="/atelier-terrarium-team-building" className="underline text-[hsl(73_44%_67%)] hover:text-white transition-colors">découvrir notre atelier team building</Link> pour les entreprises.
           </p>
         </AnimatedSection>
 
         {/* Conference cards grid */}
-        <div className="grid md:grid-cols-2 gap-0">
+        <div className="grid md:grid-cols-2 gap-5 md:gap-6">
           {conferences.map((conf, idx) => (
             <AnimatedSection key={idx} delay={idx * 100} className="h-full">
-              <div className="h-full p-10 md:p-11 border border-white/[0.12] -mt-px -ml-px relative overflow-hidden group transition-colors duration-300 hover:bg-white/5 flex flex-col">
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-[hsl(73_44%_67%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="font-mono-brand text-[10px] tracking-[3px] text-[hsl(73_44%_67%)] mb-4 block">
+              <div className="h-full p-10 md:p-11 border-2 border-white/20 relative overflow-hidden group transition-colors duration-300 hover:bg-white/[0.07] flex flex-col bg-white/[0.04] overflow-hidden" style={galet(idx + 1)}>
+                                <span className="font-mono-brand text-[10px] tracking-[3px] text-[hsl(73_44%_67%)] mb-4 block">
                   {conf.num}
                 </span>
                 <h3 className="font-display text-xl md:text-[22px] uppercase leading-[1.05] mb-3.5 text-white">
                   {conf.title}
                 </h3>
-                <p className="text-sm leading-[1.7] text-white/70 mb-5 text-justify flex-1">
+                <p className="text-sm leading-[1.7] text-white/70 mb-5 flex-1">
                   {conf.desc}
                 </p>
                 <div className="flex flex-wrap gap-1.5">
@@ -160,19 +163,20 @@ const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
             <h3 className="font-display text-3xl md:text-4xl uppercase leading-[0.95] mb-4 text-white">
               Ateliers Hybrides<br />Récit & Création
             </h3>
+            <TraitDessine className="-mt-2 mb-6" color="hsl(73 44% 67%)" variant={1} />
             <p className="text-base text-white/70 max-w-[640px] leading-[1.7] mb-12">
               Certains de nos ateliers vont plus loin que la simple activité manuelle : ils racontent une histoire avant de faire naître un objet. Une manière de tisser ensemble médiation scientifique et pratique artistique, pour les publics curieux comme pour les institutions.
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-0">
+          <div className="grid md:grid-cols-3 gap-5 md:gap-6">
             {hybrides.map((h, idx) => (
               <AnimatedSection key={idx} delay={idx * 120} className="h-full">
                 <Link
                   to={h.to}
-                  className="h-full border border-white/[0.12] -mt-px -ml-px flex flex-col group transition-colors duration-300 hover:bg-white/5"
+                  className="h-full border-2 border-white/20 flex flex-col group transition-colors duration-300 hover:bg-white/[0.07] bg-white/[0.04] overflow-hidden" style={galet(idx + 2)}
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden m-3 mb-0 border-2 border-white/20" style={galetPhoto(idx)}>
                     <img
                       src={h.img}
                       alt={h.title}
@@ -187,7 +191,7 @@ const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
                     <h4 className="font-display text-lg md:text-xl uppercase leading-[1.1] mb-3.5 text-white">
                       {h.title}
                     </h4>
-                    <p className="text-sm leading-[1.7] text-white/70 mb-5 text-justify flex-1">
+                    <p className="text-sm leading-[1.7] text-white/70 mb-5 flex-1">
                       {h.desc}
                     </p>
                     <div className="flex flex-wrap gap-1.5 mb-5">
@@ -219,6 +223,7 @@ const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
             <h3 className="font-display text-3xl md:text-4xl uppercase leading-[0.95] mb-4 text-white">
               Balades<br />Ethnobotaniques
             </h3>
+            <TraitDessine className="-mt-2 mb-6" color="hsl(73 44% 67%)" variant={2} />
             <p className="text-base text-white/70 max-w-[560px] leading-[1.7] mb-8">
               Des visites guidées qui transforment chaque jardin, chaque serre, chaque parc en une archive vivante. Une approche unique en Île-de-France qui croise botanique, anthropologie et histoire sociale du végétal, à destination des institutions culturelles et patrimoniales.
             </p>
@@ -230,15 +235,15 @@ const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
             </Link>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {balades.map((balade, idx) => (
               <AnimatedSection key={idx} delay={idx * 120} className="h-full">
-                <div className="h-full p-9 border border-white/10 -mt-px -ml-px transition-colors duration-300 hover:bg-white/[0.06] flex flex-col">
+                <div className="h-full p-9 border-2 border-white/20 transition-colors duration-300 hover:bg-white/[0.06] flex flex-col bg-white/[0.04] overflow-hidden" style={galet(idx + 3)}>
                   <balade.icon className="w-7 h-7 text-[hsl(73_44%_67%)] mb-4" strokeWidth={1.5} />
                   <h3 className="font-display text-lg uppercase mb-2.5 text-white leading-[1.15]">
                     {balade.title}
                   </h3>
-                  <p className="text-[13px] leading-[1.6] text-white/60 text-justify flex-1">
+                  <p className="text-[13px] leading-[1.6] text-white/60 flex-1">
                     {balade.desc}
                   </p>
                   <span className="inline-block mt-3.5 font-mono-brand text-[9px] uppercase tracking-[2px] text-[hsl(73_44%_67%)]">
@@ -260,12 +265,13 @@ const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
               <h3 className="font-display text-3xl md:text-4xl uppercase leading-[0.95] mb-4 text-white">
                 Formats<br />d'Intervention
               </h3>
-              <p className="text-[15px] leading-[1.7] text-white/70 mb-6 text-justify">
+            <TraitDessine className="-mt-2 mb-6" color="hsl(73 44% 67%)" variant={3} />
+              <p className="text-[15px] leading-[1.7] text-white/70 mb-6">
                 Conférences, balades guidées, cycles thématiques, ateliers de médiation pour vos équipes : des formats modulables conçus pour s'intégrer dans votre programmation culturelle, scientifique ou patrimoniale. Chaque intervention est adaptée à votre lieu, à votre public et à vos collections.
               </p>
               <Link
                 to="/contact"
-                className="btn-brutal bg-transparent text-white border-white/50 hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3 inline-flex"
+                className="btn-brutal rounded-full bg-transparent text-white border-white/50 hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] text-xs px-7 py-3 inline-flex"
               >
                 Demander un devis →
               </Link>
@@ -279,7 +285,7 @@ const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
                 return (
                   <div
                     key={idx}
-                    className="flex items-center gap-3.5 p-4 border border-white/10 hover:bg-white/5 transition-colors"
+                    className="flex items-center gap-3.5 px-5 py-4 rounded-full border-2 border-white/20 bg-white/[0.04] hover:bg-white/[0.08] transition-colors"
                   >
                     <Icon className="w-4 h-4 text-[hsl(73_44%_67%)] flex-shrink-0" />
                     <span className="font-display text-[13px] uppercase tracking-[1px] text-white">
@@ -305,12 +311,13 @@ const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
           <h3 className="font-display text-3xl md:text-4xl uppercase leading-[0.95] mb-4 text-white">
             Lectures<br />Associées
           </h3>
+            <TraitDessine className="-mt-2 mb-6" color="hsl(73 44% 67%)" variant={4} />
           <p className="text-base text-white/70 max-w-[640px] leading-[1.7] mb-12">
             Une sélection d'articles qui prolongent nos conférences et balades : histoire coloniale du végétal, anthropologie des plantes et médiation scientifique.
           </p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {[
             {
               to: "/blog/balade-botanique-voisins-le-bretonneux",
@@ -352,7 +359,7 @@ const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
             <AnimatedSection key={idx} delay={idx * 80} className="h-full">
               <Link
                 to={art.to}
-                className="h-full p-8 md:p-9 border border-white/[0.12] -mt-px -ml-px transition-colors duration-300 hover:bg-white/[0.06] flex flex-col group"
+                className="h-full p-8 md:p-9 border-2 border-white/20 transition-colors duration-300 hover:bg-white/[0.06] flex flex-col group bg-white/[0.04] overflow-hidden" style={galet(idx + 4)}
               >
                 <div className="flex items-start justify-between mb-4 gap-3">
                   <span className="font-mono-brand text-[10px] tracking-[3px] uppercase text-[hsl(73_44%_67%)]">
@@ -363,7 +370,7 @@ const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
                 <h4 className="font-display text-lg md:text-[19px] uppercase leading-[1.15] mb-3 text-white">
                   {art.title}
                 </h4>
-                <p className="text-[13px] leading-[1.65] text-white/60 text-justify flex-1">
+                <p className="text-[13px] leading-[1.65] text-white/60 flex-1">
                   {art.desc}
                 </p>
               </Link>
@@ -372,7 +379,8 @@ const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
         </div>
       </div>
 
-      <div className="bg-[hsl(var(--olive))] py-9 px-6 md:px-16 lg:px-[120px] flex flex-col md:flex-row items-center justify-between gap-6">
+      <WaveDivider from="hsl(210,41%,24%)" to="hsl(73,37%,44%)" />
+      <div className="bg-[hsl(var(--olive))] pt-4 pb-12 px-6 md:px-16 lg:px-[120px] flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
           <h3 className="font-display text-xl md:text-[22px] uppercase text-[hsl(var(--black))]">
             Une institution, un projet, une programmation à construire ?
@@ -383,7 +391,7 @@ const ConferencesSavoirs = ({ asPage = false }: { asPage?: boolean }) => {
         </div>
         <Link
           to="/contact"
-          className="btn-brutal bg-[hsl(var(--orange))] text-[hsl(var(--black))] border-[hsl(var(--orange))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--orange))] text-sm px-9 py-4 flex-shrink-0"
+          className="btn-brutal rounded-full bg-[hsl(var(--orange))] text-[hsl(var(--black))] border-[hsl(var(--orange))] hover:bg-[hsl(var(--cream))] hover:text-[hsl(var(--black))] hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--orange))] text-sm px-9 py-4 flex-shrink-0"
         >
           Nous écrire →
         </Link>

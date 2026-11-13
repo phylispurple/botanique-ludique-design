@@ -26,7 +26,7 @@ const categories = [
 const WorkshopFilters = ({ activeCategory, onCategoryChange, workshopCounts }: WorkshopFiltersProps) => {
   return (
     <div className="mb-12">
-      <div className="flex flex-wrap gap-0 justify-center">
+      <div className="flex flex-wrap gap-3 justify-center">
         {categories.map((category) => {
           const Icon = category.icon;
           const count = workshopCounts[category.id];
@@ -38,11 +38,11 @@ const WorkshopFilters = ({ activeCategory, onCategoryChange, workshopCounts }: W
               onClick={() => onCategoryChange(category.id)}
               className={`
                 font-mono-brand text-[10px] uppercase tracking-[2px] px-5 py-3
-                border-brutal -ml-[3px] first:ml-0
-                transition-colors duration-200
+                border-brutal rounded-full
+                transition-all duration-200
                 flex items-center gap-2
                 ${isActive
-                  ? "bg-foreground text-primary-foreground"
+                  ? "bg-foreground text-primary-foreground shadow-[3px_3px_0_hsl(var(--olive))] -rotate-1"
                   : "bg-[hsl(var(--cream))] text-foreground hover:bg-[hsl(var(--green-pale))]"
                 }
               `}
