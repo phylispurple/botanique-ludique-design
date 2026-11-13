@@ -25,7 +25,6 @@ const AtelierNoelCouronneVegetale = () => (
       { label: "Durée", value: "2h" },
       { label: "Période", value: "Novembre à décembre" },
       { label: "Groupe", value: "6 à 14 pers." },
-      { label: "Prix", value: "À partir de 55 €" },
     ],
     related: [
       { to: "/cadeau-original-nature-paris", label: "Idée cadeau" },

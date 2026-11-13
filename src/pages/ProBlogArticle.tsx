@@ -1,7 +1,8 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useLocation, Link, Navigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FloatingIllustrations from "@/components/FloatingIllustrations";
+import EnvieAtelier from "@/components/EnvieAtelier";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import SocialProofBar from "@/components/SocialProofBar";
@@ -11,7 +12,9 @@ import { findProLanding } from "@/data/proLandings";
 import { trackBlogCtaClick } from "@/lib/analytics";
 
 const ProBlogArticle = () => {
-  const { slug } = useParams<{ slug: string }>();
+  // Les routes sont déclarées une par une (/blog/<slug>) sans paramètre : on lit le slug dans l'adresse.
+  const { pathname } = useLocation();
+  const slug = pathname.replace(/^\/blog\//, "").replace(/\/+$/, "");
   const article = slug ? findProArticle(slug) : undefined;
 
   if (!article) {
@@ -39,7 +42,7 @@ const ProBlogArticle = () => {
   const otherArticles = PRO_ARTICLES.filter((a) => a.slug !== article.slug).slice(0, 3);
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: "#F7F7EB" }}>
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title={title}
         description={metaDescription}
@@ -56,7 +59,6 @@ const ProBlogArticle = () => {
           author: "Botanique Ludique",
         }}
       />
-      <FloatingIllustrations />
       <Navigation />
 
       <main className="pt-32 pb-20">
@@ -199,6 +201,8 @@ const ProBlogArticle = () => {
           </div>
         )}
       </main>
+      <EnvieAtelier pour={/entreprise|qvct|rse|cse|seminaire|team/.test(article.slug) ? "particuliers" : "institutions"} />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

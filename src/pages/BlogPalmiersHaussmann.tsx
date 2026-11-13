@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FloatingIllustrations from "@/components/FloatingIllustrations";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Calendar, ArrowLeft, User, Instagram, BookOpen, MapPin } from "lucide-react";
@@ -45,7 +45,7 @@ const BlogPalmiersHaussmann = () => {
   };
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO 
         title="Palmiers et Architecture Haussmannienne : Histoire Coloniale des Boulevards"
         description="Comment les palmiers sont devenus le logo de l'empire colonial français. Du Jardin d'Essai du Hamma à Alger aux boulevards de Casablanca. Références : Hélène Blais, Edward Said."
@@ -54,7 +54,6 @@ const BlogPalmiersHaussmann = () => {
         type="article"
       />
       <SchemaOrg type="Article" data={articleData} />
-      <FloatingIllustrations />
       <Navigation />
 
       <main className="pt-32 pb-20">
@@ -488,6 +487,7 @@ const BlogPalmiersHaussmann = () => {
         </article>
       </main>
 
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

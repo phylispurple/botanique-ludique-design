@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FloatingIllustrations from "@/components/FloatingIllustrations";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Calendar, User, ArrowLeft, Leaf, Droplets, Palette, BookOpen } from "lucide-react";
@@ -26,7 +26,7 @@ import blogPalmiersAvenue from "@/assets/blog-palmiers-avenue-coloniale.jpg";
 
 const BlogTeintureChouRouge = () => {
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO 
         title="Teinture végétale au chou rouge, indigo naturel"
         description="Tutoriel teinture végétale au chou rouge fermenté, indigo naturel, mordançage à l'alun et fixation sur lin et coton, étape par étape."
@@ -44,7 +44,6 @@ const BlogTeintureChouRouge = () => {
           dateModified: "2025-12-12"
         }}
       />
-      <FloatingIllustrations />
       <Navigation />
 
       <main className="pt-32 pb-20">
@@ -530,6 +529,7 @@ const BlogTeintureChouRouge = () => {
         </article>
       </main>
 
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import EnvieAtelier from "@/components/EnvieAtelier";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import BackToTop from "@/components/BackToTop";
@@ -50,7 +52,7 @@ const faq = [
 
 const BlogNoelEntrepriseSachetSenteur = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="Animation Noël entreprise : stand sachets senteur"
         description="Arbre de Noël CSE, marché de Noël, soirée de fin d'année : stand sachets senteur aux épices en flux continu et ateliers végétaux en Île-de-France."
@@ -323,6 +325,8 @@ const BlogNoelEntrepriseSachetSenteur = () => {
       </article>
 
       <BackToTop />
+      <EnvieAtelier />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

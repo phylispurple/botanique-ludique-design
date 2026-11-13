@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import EnvieAtelier from "@/components/EnvieAtelier";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import BackToTop from "@/components/BackToTop";
@@ -42,7 +44,7 @@ const faq = [
 
 const BlogTatakiZome = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="Tataki zomé, l'impression végétale japonaise"
         description="Tataki zomé : frapper feuilles et fleurs pour imprimer leurs pigments sur tissu. Technique, plantes qui marchent, fixation et atelier en Île-de-France."
@@ -281,6 +283,8 @@ const BlogTatakiZome = () => {
       </article>
 
       <BackToTop />
+      <EnvieAtelier />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

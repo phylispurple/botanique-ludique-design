@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import EnvieAtelier from "@/components/EnvieAtelier";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import BackToTop from "@/components/BackToTop";
@@ -47,7 +49,7 @@ const faq = [
 
 const BlogAtelierRouteDesEpicesVersailles = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="Atelier route des épices, Fête de la Science à Versailles"
         description="Retour sur l'atelier « Sur la route des épices », Fête de la Science 2026 à Versailles : histoire, anthropologie des sens et sachets senteur."
@@ -427,6 +429,8 @@ const BlogAtelierRouteDesEpicesVersailles = () => {
       </article>
 
       <BackToTop />
+      <EnvieAtelier />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

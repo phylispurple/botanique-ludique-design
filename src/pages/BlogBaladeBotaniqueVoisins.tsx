@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import EnvieAtelier from "@/components/EnvieAtelier";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import BackToTop from "@/components/BackToTop";
@@ -13,7 +15,7 @@ import josephineImperatrice from "@/assets/josephine-imperatrice.webp";
 
 const BlogBaladeBotaniqueVoisins = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="Balade botanique Voisins-le-Bretonneux : jardins, pouvoir et histoire coloniale | Botanique Ludique"
         description="Retour ethnobotanique sur Au fil des jardins de Voisins, 7 juin 2026. Parc de la Croix du Bois, Decauville, Versailles du peuple de Bofill et écoquartier."
@@ -278,6 +280,8 @@ const BlogBaladeBotaniqueVoisins = () => {
         </article>
 
       <BackToTop />
+      <EnvieAtelier />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

@@ -25,7 +25,6 @@ const IdeeCadeauAmoureuxPlantes = () => (
       { label: "Format", value: "Cartes cadeaux" },
       { label: "Validité", value: "12 mois" },
       { label: "Lieu", value: "Paris et IDF" },
-      { label: "Prix", value: "45 € à 200 €" },
     ],
     related: [
       { to: "/cadeau-original-nature-paris", label: "Cadeau original" },

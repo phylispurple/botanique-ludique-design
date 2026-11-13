@@ -25,20 +25,29 @@ const BlogTableOfContents = ({ items }: BlogTableOfContentsProps) => {
   };
 
   return (
-    <nav className="bg-sand/50 rounded-lg p-6 mb-10 animate-fade-in">
-      <h2 className="flex items-center gap-2 text-lg font-semibold text-charcoal mb-4" style={{ fontFamily: 'Fraunces, serif' }}>
-        <List className="w-5 h-5 text-sage" />
-        Sommaire
-      </h2>
-      <ol className="space-y-2">
+    <nav
+      className="toc-organique not-prose bg-[hsl(var(--cream))] border-brutal shadow-brutal p-6 md:p-8 mb-12 -rotate-[0.4deg]"
+      style={{ borderRadius: "40px 54px 34px 60px / 60px 36px 54px 40px" }}
+      aria-label="Sommaire"
+    >
+      <p className="flex items-center gap-2 font-mono-brand text-[10px] uppercase tracking-[2px] text-[hsl(var(--olive))] mb-4">
+        <List className="w-4 h-4" />
+        Au sommaire
+      </p>
+      <ol className="space-y-2.5">
         {items.map((item, index) => (
           <li key={item.id}>
             <button
               onClick={() => scrollToSection(item.id)}
-              className="text-left w-full text-charcoal/70 hover:text-sage transition-colors text-sm leading-relaxed flex items-start gap-2"
+              className="text-left w-full text-foreground/80 hover:text-primary transition-colors text-sm md:text-base leading-snug flex items-start gap-3"
             >
-              <span className="text-sage font-semibold">{index + 1}.</span>
-              <span className="hover:underline">{item.title}</span>
+              <span
+                className="w-6 h-6 flex-shrink-0 flex items-center justify-center font-display text-[11px] bg-foreground text-primary-foreground"
+                style={{ borderRadius: "55% 45% 52% 48% / 46% 54% 46% 54%" }}
+              >
+                {index + 1}
+              </span>
+              <span className="pt-0.5 underline-offset-4 hover:underline">{item.title}</span>
             </button>
           </li>
         ))}

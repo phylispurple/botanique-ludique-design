@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FloatingIllustrations from "@/components/FloatingIllustrations";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Calendar, User, ArrowLeft, ArrowRight, BookOpen, Instagram } from "lucide-react";
@@ -33,7 +33,7 @@ import blogCarouselBocal from "@/assets/blog-carousel-bocal-indigo.jpg";
 
 const BlogTerrariumBiopiraterie = () => {
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO 
         title="Histoire du terrarium : du Wardian Case à la biopiraterie victorienne"
         description="Histoire du terrarium et invention du Wardian Case en 1829. De Nathaniel Ward au vol de 70 000 graines d'hévéa : comment un bocal de verre a redessiné le monde."
@@ -62,7 +62,6 @@ const BlogTerrariumBiopiraterie = () => {
           ]
         }}
       />
-      <FloatingIllustrations />
       <Navigation />
 
       <main className="pt-32 pb-20">
@@ -835,6 +834,7 @@ const BlogTerrariumBiopiraterie = () => {
         </article>
       </main>
 
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

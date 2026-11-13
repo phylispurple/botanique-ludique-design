@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import EnvieAtelier from "@/components/EnvieAtelier";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -9,7 +11,7 @@ import { ArrowRight } from "lucide-react";
 
 const BlogFeteNatureMairie = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="Organiser la Fête de la Nature dans votre commune, guide pratique"
         description="Guide pour les mairies : organiser un évènement Fête de la Nature réussi. Calendrier 2026, ateliers possibles, partenariats, communication, retombées."
@@ -129,6 +131,8 @@ const BlogFeteNatureMairie = () => {
         </div>
       </article>
 
+      <EnvieAtelier pour="institutions" />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
       <BackToTop />
     </div>

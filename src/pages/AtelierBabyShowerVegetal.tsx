@@ -25,7 +25,6 @@ const AtelierBabyShowerVegetal = () => (
       { label: "Durée", value: "2h" },
       { label: "Groupe", value: "5 à 12 pers." },
       { label: "Lieu", value: "Paris et IDF" },
-      { label: "Prix", value: "À partir de 45 €" },
     ],
     related: [
       { to: "/atelier-evjf-botanique-paris", label: "Format EVJF" },

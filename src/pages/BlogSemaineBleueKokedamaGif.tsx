@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import EnvieAtelier from "@/components/EnvieAtelier";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import BackToTop from "@/components/BackToTop";
@@ -42,7 +44,7 @@ const faq = [
 
 const BlogSemaineBleueKokedamaGif = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="Semaine Bleue : atelier kokedama intergénérationnel en EHPAD"
         description="Atelier kokedama intergénérationnel pour la Semaine Bleue à l'EHPAD des Chênes Verts de Gif-sur-Yvette : enfants et résidents réunis autour du vivant."
@@ -305,6 +307,8 @@ const BlogSemaineBleueKokedamaGif = () => {
       </article>
 
       <BackToTop />
+      <EnvieAtelier />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

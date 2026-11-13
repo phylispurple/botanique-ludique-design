@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WaveDivider from "@/components/WaveDivider";
 import EnvieAtelier from "@/components/EnvieAtelier";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
@@ -10,7 +11,7 @@ import { ArrowRight } from "lucide-react";
 
 const BlogJourneesPatrimoineVegetal = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="Journées du Patrimoine, idées d'animations végétales pour collectivités"
         description="Cinq idées d'animations botaniques pour les Journées Européennes du Patrimoine. Balade dans les parcs historiques, conférence sur les jardins, atelier herbier, médiation."
@@ -125,6 +126,7 @@ const BlogJourneesPatrimoineVegetal = () => {
       </article>
 
       <EnvieAtelier pour="institutions" />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
       <BackToTop />
     </div>

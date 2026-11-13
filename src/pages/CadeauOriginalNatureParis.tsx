@@ -54,10 +54,6 @@ const CadeauOriginalNatureParis = () => (
         {
             "label": "Lieu",
             "value": "Paris (75)"
-        },
-        {
-            "label": "Prix",
-            "value": "À partir de 45 €"
         }
     ],
     "related": [

@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import EnvieAtelier from "@/components/EnvieAtelier";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -9,7 +11,7 @@ import { ArrowRight } from "lucide-react";
 
 const BlogBotaniqueCollege = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="Comment intégrer la botanique dans un projet pédagogique de collège — Botanique Ludique"
         description="Guide pratique pour enseignants : intégrer la botanique dans un projet pédagogique de collège. Liens avec les programmes SVT, EMC. Exemples concrets en Île-de-France."
@@ -127,6 +129,8 @@ const BlogBotaniqueCollege = () => {
       </article>
 
       <BackToTop />
+      <EnvieAtelier pour="institutions" />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

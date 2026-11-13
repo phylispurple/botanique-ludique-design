@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FloatingIllustrations from "@/components/FloatingIllustrations";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { ArrowLeft, Calendar, User, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -46,7 +46,7 @@ const BlogFilmsNature = () => {
   };
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO 
         title="Les 10 Films qui Nous Ont Raconté N'importe Quoi sur la Nature"
         description="Analyse ethnobotanique de 10 films cultes qui véhiculent des idées fausses sur le vivant. D'Avatar à Jurassic Park, décryptage des mythes cinématographiques sur la nature."
@@ -57,7 +57,6 @@ const BlogFilmsNature = () => {
       
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       
-      <FloatingIllustrations />
       <Navigation />
 
       <main className="pt-32 pb-20">
@@ -749,6 +748,7 @@ const BlogFilmsNature = () => {
         </article>
       </main>
 
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

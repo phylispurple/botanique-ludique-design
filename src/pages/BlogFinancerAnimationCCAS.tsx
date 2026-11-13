@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import EnvieAtelier from "@/components/EnvieAtelier";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -9,7 +11,7 @@ import { ArrowRight } from "lucide-react";
 
 const BlogFinancerAnimationCCAS = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="Comment financer une animation nature en CCAS, guide 2026"
         description="Lignes budgétaires, dispositifs et conseils pratiques pour financer une animation botanique en CCAS. Action sociale, Conférence des financeurs, ARS, mutuelles, mécénat."
@@ -123,6 +125,8 @@ const BlogFinancerAnimationCCAS = () => {
         </div>
       </article>
 
+      <EnvieAtelier pour="institutions" />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
       <BackToTop />
     </div>

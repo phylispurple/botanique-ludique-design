@@ -25,7 +25,6 @@ const AtelierEvjfBotaniqueParis = () => (
       { label: "Durée", value: "2h à 2h30" },
       { label: "Groupe", value: "6 à 14 amies" },
       { label: "Lieu", value: "Paris et IDF" },
-      { label: "Prix", value: "À partir de 45 €" },
     ],
     testimonialMood: "Le moment le plus apaisé et le plus joli du week-end.",
     related: [

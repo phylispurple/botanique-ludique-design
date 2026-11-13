@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FloatingIllustrations from "@/components/FloatingIllustrations";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { ArrowLeft, Calendar, User, BookOpen, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -54,7 +54,7 @@ const BlogMonsteraColonialisme = () => {
   };
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#F7F7EB' }}>
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO 
         title="La Monstera : Une Plante Déplacée. Histoire Coloniale et Distinction Sociale | Ethnobotanique"
         description="Analyse ethnobotanique : comment la Monstera est passée des forêts mexicaines aux salons bourgeois via l'histoire coloniale. Références : Guillaume Blanc, Bourdieu, jardins d'acclimatation."
@@ -65,7 +65,6 @@ const BlogMonsteraColonialisme = () => {
       
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       
-      <FloatingIllustrations />
       <Navigation />
 
       <main className="pt-32 pb-20">
@@ -596,6 +595,7 @@ const BlogMonsteraColonialisme = () => {
         </article>
       </main>
 
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

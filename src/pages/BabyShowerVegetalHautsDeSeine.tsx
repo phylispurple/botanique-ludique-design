@@ -54,10 +54,6 @@ const BabyShowerVegetalHautsDeSeine = () => (
         {
             "label": "Lieu",
             "value": "Hauts-de-Seine (92)"
-        },
-        {
-            "label": "Prix",
-            "value": "À partir de 45 €"
         }
     ],
     "related": [

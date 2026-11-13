@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import EnvieAtelier from "@/components/EnvieAtelier";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -10,7 +12,7 @@ import affiche from "@/assets/du-breuil-en-fete-2026-affiche.png";
 
 const BlogBaladeBotaniqueDuBreuil = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="Balade botanique École Du Breuil : plantes voyageuses"
         description="Retour sur la balade ethnobotanique du 31 mai 2026 à l'École Du Breuil. Plantes voyageuses, histoire des jardins et médiation pour écoles."
@@ -298,6 +300,8 @@ const BlogBaladeBotaniqueDuBreuil = () => {
       </article>
 
       <BackToTop />
+      <EnvieAtelier />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

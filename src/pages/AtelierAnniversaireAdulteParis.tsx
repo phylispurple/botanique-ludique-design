@@ -28,7 +28,6 @@ const AtelierAnniversaireAdulteParis = () => (
       { label: "Durée", value: "2h à 2h30" },
       { label: "Groupe", value: "6 à 14 pers." },
       { label: "Lieu", value: "Paris et IDF" },
-      { label: "Prix", value: "À partir de 45 €" },
     ],
     photos: [
       { src: imgSourire, alt: "Une invitée compose son terrarium en souriant" },

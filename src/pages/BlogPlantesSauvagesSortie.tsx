@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import EnvieAtelier from "@/components/EnvieAtelier";
+import WaveDivider from "@/components/WaveDivider";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -9,7 +11,7 @@ import { ArrowRight } from "lucide-react";
 
 const BlogPlantesSauvagesSortie = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="5 plantes sauvages à identifier lors d'une sortie scolaire en Île-de-France — Botanique Ludique"
         description="Découvrez 5 plantes sauvages faciles à identifier avec vos élèves lors d'une sortie nature en Île-de-France. Guide pratique pour enseignants et animateurs."
@@ -134,6 +136,8 @@ const BlogPlantesSauvagesSortie = () => {
       </article>
 
       <BackToTop />
+      <EnvieAtelier pour="institutions" />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );

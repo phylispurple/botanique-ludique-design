@@ -25,7 +25,6 @@ const AtelierCoupleNatureParis = () => (
       { label: "Durée", value: "2h" },
       { label: "Format", value: "À deux ou groupé" },
       { label: "Lieu", value: "Paris" },
-      { label: "Prix", value: "À partir de 45 € / pers." },
     ],
     related: [
       { to: "/atelier-terrarium-paris", label: "Terrarium" },

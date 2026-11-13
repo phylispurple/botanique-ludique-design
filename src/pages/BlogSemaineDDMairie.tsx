@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WaveDivider from "@/components/WaveDivider";
 import EnvieAtelier from "@/components/EnvieAtelier";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
@@ -10,7 +11,7 @@ import { ArrowRight } from "lucide-react";
 
 const BlogSemaineDDMairie = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="Semaine du Développement Durable, 5 ateliers nature pour mairies"
         description="Cinq ateliers botaniques clé en main pour la Semaine Européenne du Développement Durable en mairie. Bombes à graines, teinture, kokedama, terrarium, conférences."
@@ -127,6 +128,7 @@ const BlogSemaineDDMairie = () => {
       </article>
 
       <EnvieAtelier pour="institutions" />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
       <BackToTop />
     </div>

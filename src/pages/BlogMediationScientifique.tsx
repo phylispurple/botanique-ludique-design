@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WaveDivider from "@/components/WaveDivider";
 import EnvieAtelier from "@/components/EnvieAtelier";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
@@ -10,7 +11,7 @@ import { ArrowRight } from "lucide-react";
 
 const BlogMediationScientifique = () => {
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen article-organique overflow-x-clip">
       <SEO
         title="Qu'est-ce que la médiation scientifique ? Définition et exemples — Botanique Ludique"
         description="Définition de la médiation scientifique, ses objectifs et des exemples concrets en botanique. Vulgarisation, conférences, ateliers nature pour le grand public."
@@ -138,6 +139,7 @@ const BlogMediationScientifique = () => {
 
       <BackToTop />
       <EnvieAtelier pour="institutions" />
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       <Footer />
     </div>
   );
