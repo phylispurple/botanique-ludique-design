@@ -1,4 +1,5 @@
 import GuideTemplate from "@/components/GuideTemplate";
+import teintureImg from "@/assets/event-teinture-petales.webp";
 import { Sparkles } from "lucide-react";
 
 const GuidePlantesTinctoriales = () => (
@@ -66,6 +67,8 @@ const GuidePlantesTinctoriales = () => (
       },
     ],
     conclusion: "Les plantes tinctoriales sont une porte d'entrée fascinante dans l'histoire culturelle, scientifique et sociale du textile. Nos ateliers de teinture végétale à Paris permettent d'expérimenter concrètement avec ces plantes.",
+    image: { src: teintureImg, alt: "Impression de pétales sur soie pendant un atelier de teinture végétale" },
+    atelier: { sujet: "une teinture végétale", entreprise: "/atelier-teinture-vegetale-team-building" },
     related: [
       { to: "/atelier-teinture-vegetale-paris", label: "Atelier teinture" },
       { to: "/balade-plantes-sauvages-comestibles-paris", label: "Plantes sauvages" },

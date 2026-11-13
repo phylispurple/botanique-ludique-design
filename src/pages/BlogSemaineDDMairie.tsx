@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import EnvieAtelier from "@/components/EnvieAtelier";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -125,6 +126,7 @@ const BlogSemaineDDMairie = () => {
         </div>
       </article>
 
+      <EnvieAtelier pour="institutions" />
       <Footer />
       <BackToTop />
     </div>

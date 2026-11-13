@@ -1,4 +1,5 @@
 import GuideTemplate from "@/components/GuideTemplate";
+import terrariumImg from "@/assets/event-terrarium-mains.webp";
 import { Sprout } from "lucide-react";
 
 const GuideTerrarium = () => (
@@ -72,6 +73,8 @@ const GuideTerrarium = () => (
       },
     ],
     conclusion: "Un terrarium bien construit peut vivre plusieurs années sans intervention majeure. Si vous préférez apprendre en groupe, nos ateliers terrarium à Paris vous accompagnent pas à pas avec tout le matériel fourni.",
+    image: { src: terrariumImg, alt: "Composition d'un terrarium pendant un atelier" },
+    atelier: { sujet: "un terrarium", entreprise: "/atelier-terrarium-team-building" },
     related: [
       { to: "/atelier-terrarium-paris", label: "Atelier terrarium" },
       { to: "/guide/comment-faire-un-kokedama", label: "Guide kokedama" },

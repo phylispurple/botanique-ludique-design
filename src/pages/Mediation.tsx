@@ -38,6 +38,10 @@ interface Exemple {
   aVenir?: boolean;
   /** Article du blog qui raconte l'intervention. */
   lien?: string;
+  /** Texte du lien (par défaut « Lire le récit »). */
+  lienLabel?: string;
+  /** Une phrase qui raconte ce qu'on y a fait. */
+  resume?: string;
 }
 
 const FORMATS = [
@@ -48,22 +52,54 @@ const FORMATS = [
 ];
 
 const HYBRIDES: Exemple[] = [
-  { titre: "Sur la route des épices : odeurs et saveurs", lieu: "Fête de la Science, bibliothèque Choiseul, Versailles", date: "Octobre 2026" },
-  { titre: "Wardian case : histoire du terrarium + fabrication", lieu: "La Rochefoucauld, Paris 14e", date: "Avril et juin 2026" },
-  { titre: "Histoire culturelle et politique des teintures végétales", lieu: "La Rochefoucauld, Paris 14e", date: "Mai 2026" },
-  { titre: "Mauvaises herbes : jardins punk et bombes à graines", lieu: "La Rochefoucauld, Paris 14e", date: "Mai 2026" },
+  {
+    titre: "Sur la route des épices : odeurs et saveurs",
+    lieu: "Fête de la Science, bibliothèque Choiseul, Versailles",
+    date: "Octobre 2026",
+    resume: "Poivre, girofle, cannelle : les épices qui ont redessiné les routes du monde, puis chacun compose son sachet senteur.",
+    lien: "/blog/atelier-route-des-epices-fete-de-la-science-versailles",
+  },
+  {
+    titre: "Wardian case : histoire du terrarium + fabrication",
+    lieu: "La Rochefoucauld, Paris 14e",
+    date: "Avril et juin 2026",
+    resume: "Le bocal qui a fait voyager les plantes et permis le vol des graines d'hévéa, puis on fabrique son propre terrarium.",
+    lien: "/blog/terrarium-biopiraterie-histoire-coloniale",
+    lienLabel: "Lire l'histoire",
+  },
+  {
+    titre: "Histoire culturelle et politique des teintures végétales",
+    lieu: "La Rochefoucauld, Paris 14e",
+    date: "Mai 2026",
+    resume: "Indigo, garance, chou rouge : la guerre des couleurs racontée, puis chacun teint son étoffe aux plantes.",
+    lien: "/blog/teinture-vegetale-chou-rouge-indigo-naturel",
+    lienLabel: "Lire l'article",
+  },
+  {
+    titre: "Mauvaises herbes : jardins punk et bombes à graines",
+    lieu: "La Rochefoucauld, Paris 14e",
+    date: "Mai 2026",
+    resume: "Éloge des plantes qu'on arrache et des friches qui résistent, puis fabrication de bombes à graines à semer en ville.",
+  },
+  {
+    titre: "Kokedama intergénérationnel pour la Semaine bleue",
+    lieu: "EHPAD de Gif-sur-Yvette (91)",
+    date: "Octobre 2026",
+    resume: "Huit enfants du centre de loisirs et huit résidents fabriquent ensemble des kokedamas, en se racontant leurs plantes.",
+    lien: "/blog/semaine-bleue-atelier-intergenerationnel-kokedama-ehpad",
+  },
 ];
 
 const BALADES: Exemple[] = [
-  { titre: "Plantes voyageuses, histoires oubliées", lieu: "École Du Breuil, bois de Vincennes, Paris 12e", date: "31 mai 2026", lien: "/blog/balade-botanique-ecole-du-breuil" },
-  { titre: "Au fil des jardins de Voisins", lieu: "Domaine de la Croix du Bois, Voisins-le-Bretonneux", date: "7 juin 2026", lien: "/blog/balade-botanique-voisins-le-bretonneux" },
+  { titre: "Plantes voyageuses, histoires oubliées", lieu: "École Du Breuil, bois de Vincennes, Paris 12e", date: "31 mai 2026", lien: "/blog/balade-botanique-ecole-du-breuil", resume: "Dans les collections de l'École Du Breuil, lire les plantes comme des archives : voyages, empires et savoirs effacés." },
+  { titre: "Au fil des jardins de Voisins", lieu: "Domaine de la Croix du Bois, Voisins-le-Bretonneux", date: "7 juin 2026", lien: "/blog/balade-botanique-voisins-le-bretonneux", resume: "Du kiosque à la roseraie, une lecture des jardins de notables et de ce que leurs plantes disent du pouvoir." },
 ];
 
-const CONFERENCES_THEMES = [
-  { titre: "Plantes voyageuses, histoires oubliées", desc: "Ce que le café, le palmier ou la fougère racontent des circulations, du pouvoir et des savoirs effacés." },
+const CONFERENCES_THEMES: { titre: string; desc: string; lien?: string; lienLabel?: string }[] = [
+  { titre: "Plantes voyageuses, histoires oubliées", desc: "Ce que le café, le palmier ou la fougère racontent des circulations, du pouvoir et des savoirs effacés.", lien: "/blog/monstera-plante-coloniale-distinction-sociale", lienLabel: "Exemple : le monstera" },
   { titre: "Femmes, fougères & pouvoir", desc: "Des chasseuses de plantes oubliées à Jeanne Barret : l'histoire genrée de la botanique." },
   { titre: "Penser avec les plantes", desc: "Ce que les savoirs autochtones nous apprennent sur notre rapport au vivant." },
-  { titre: "Lire un jardin comme une archive", desc: "Visites de jardins et de serres où chaque collection devient une entrée dans l'histoire." },
+  { titre: "Lire un jardin comme une archive", desc: "Visites de jardins et de serres où chaque collection devient une entrée dans l'histoire.", lien: "/blog/palmiers-architecture-haussmannienne-colonialisme", lienLabel: "Exemple : les palmiers d'Haussmann" },
 ];
 
 const ECOLES: (Exemple & { desc: string })[] = [
@@ -71,6 +107,8 @@ const ECOLES: (Exemple & { desc: string })[] = [
     titre: "Les espèces exotiques envahissantes",
     lieu: "Collège de Bobigny (93), cycle de 6 séances",
     date: "Avril et mai 2025",
+    lien: "/blog/botanique-projet-pedagogique-college",
+    lienLabel: "Intégrer la botanique au collège",
     desc: "Espèce locale, exotique ou envahissante ? Jeux de classement, fabrication de bombes à graines, chasse au trésor naturaliste au parc de la Bergère, herbier, puis interview filmée d'un agent du parc par les élèves, et un panneau pour présenter le projet au collège.",
   },
   {
@@ -109,9 +147,10 @@ const CarteExemple = ({ ex, i, sombre = false }: { ex: Exemple; i: number; sombr
       <Calendar className="w-3.5 h-3.5 text-primary" aria-hidden="true" />
       {ex.date}
     </p>
+    {ex.resume && <p className="mt-3 text-sm text-foreground/75 leading-relaxed">{ex.resume}</p>}
     {ex.lien && (
       <span className="mt-3 inline-flex items-center gap-1.5 font-mono-brand text-[10px] uppercase tracking-[2px] text-primary underline underline-offset-4 decoration-2">
-        Lire le récit <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+        {ex.lienLabel ?? "Lire le récit"} <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
       </span>
     )}
     </>
@@ -228,18 +267,22 @@ const Mediation = () => (
             <p className="text-base md:text-lg text-foreground/75 leading-relaxed mb-8 max-w-xl">
               D'abord une histoire, ensuite un objet. On raconte la route des épices, l'invention du terrarium ou la guerre des couleurs, puis chacun fabrique de ses mains ce dont on vient de parler.
             </p>
-            <p className="section-label mb-4">Ils ont eu lieu</p>
-            <div className="grid sm:grid-cols-2 gap-5">
-              {HYBRIDES.map((ex, i) => (
-                <CarteExemple key={ex.titre} ex={ex} i={i} />
-              ))}
-            </div>
           </AnimatedSection>
           <AnimatedSection delay={150} className="relative grid grid-cols-2 gap-4 max-w-[520px] w-full mx-auto">
             <img src={imgEpicesTable} alt="Table d'atelier couverte de bols d'épices" className="col-span-2 w-full aspect-[16/10] object-cover border-brutal shadow-brutal -rotate-1" style={galetPhoto(0)} loading="lazy" />
             <img src={imgTerrarium} alt="Terrarium réalisé pendant l'atelier Wardian case" className="w-full aspect-square object-cover border-brutal shadow-brutal rotate-2" style={galetPhoto(1)} loading="lazy" />
             <img src={imgTeinture} alt="Tissus teints aux plantes pendant l'atelier sur les teintures végétales" className="w-full aspect-square object-cover border-brutal shadow-brutal -rotate-2" style={galetPhoto(2)} loading="lazy" />
           </AnimatedSection>
+        </div>
+        <div className="max-w-6xl mx-auto mt-14">
+          <p className="section-label mb-6">Ils ont eu lieu</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+            {HYBRIDES.map((ex, i) => (
+              <AnimatedSection key={ex.titre} delay={(i % 3) * 90} className={i % 3 === 1 ? "lg:mt-8" : ""}>
+                <CarteExemple ex={ex} i={i} />
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -281,6 +324,11 @@ const Mediation = () => (
                 <div key={c.titre} className="border-2 border-white/25 bg-white/[0.05] p-5" style={galet(i)}>
                   <h3 className="font-display text-sm md:text-base uppercase leading-tight mb-1.5 text-white">{c.titre}</h3>
                   <p className="text-[13px] leading-relaxed text-white/70">{c.desc}</p>
+                  {c.lien && (
+                    <Link to={c.lien} className="mt-3 inline-flex items-center gap-1.5 font-mono-brand text-[9px] uppercase tracking-[2px] text-[hsl(var(--olive-light))] underline underline-offset-4 decoration-2 hover:text-white">
+                      {c.lienLabel} <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>

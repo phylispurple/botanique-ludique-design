@@ -6,6 +6,8 @@ import { SEO } from "@/components/SEO";
 import BackToTop from "@/components/BackToTop";
 import AnimatedSection from "@/components/AnimatedSection";
 import WaveDivider from "@/components/WaveDivider";
+import TraitDessine from "@/components/TraitDessine";
+import { galetPhoto, PASTILLE } from "@/lib/organic";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { X, ChevronLeft, ChevronRight, Play, Sprout, Palette, Flower2, Hammer, Droplets, Footprints, Camera } from "lucide-react";
 import terrariumImage from "@/assets/gallery-terrarium.webp";
@@ -236,7 +238,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))]">
+    <div className="min-h-screen bg-[hsl(var(--cream))] overflow-x-clip">
       <SEO
         title="Galerie Photos & Vidéos | Nos Ateliers en Images ✦ Inspirations"
         description="📸 Découvrez nos créations en images : kokedama, teinture végétale, terrarium, vannerie. +50 ateliers réalisés. Trouvez l'inspiration pour votre prochain atelier !"
@@ -245,36 +247,71 @@ const Gallery = () => {
       />
       <Navigation />
 
-      {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden px-6 pt-24 pb-24 md:pt-32 md:pb-28">
-        <div className="absolute inset-0 bg-foreground">
-          <img src={teintureTshirtsTable} alt="" className="w-full h-full object-cover opacity-35" />
-        </div>
-        <div className="absolute inset-0 bg-foreground/40" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
+      {/* ===== HERO : texte + collage ===== */}
+      <section className="relative px-6 pt-28 pb-12 md:pt-36 md:pb-16">
+        <div
+          className="absolute -left-32 top-20 w-[460px] h-[460px] bg-[hsl(var(--olive-light))]/30 pointer-events-none"
+          style={{ borderRadius: "58% 42% 38% 62% / 45% 55% 45% 55%" }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -right-24 bottom-0 w-[380px] h-[380px] bg-accent/15 pointer-events-none"
+          style={{ borderRadius: "40% 60% 55% 45% / 60% 40% 60% 40%" }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-14 lg:gap-10 items-center">
           <AnimatedSection>
-            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[3px] text-olive-light mb-5">
+            <span className="inline-flex items-center gap-2 font-mono-brand text-[10px] md:text-[11px] uppercase tracking-[2px] bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal-thin rounded-full px-4 py-2 mb-7 -rotate-2 shadow-[3px_3px_0_hsl(var(--black))]">
               Ateliers · Matières · Rencontres
-            </p>
-            <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+            </span>
+            <h1 className="font-display text-[clamp(2.6rem,6vw,5rem)] uppercase leading-[0.9] tracking-[-2px] mb-4">
               Galerie<br />
-              <span className="text-olive-light">En images</span>
+              <span className="text-primary">en images</span>
             </h1>
-            <p className="font-body text-xl md:text-[22px] italic text-primary-foreground/90 max-w-[650px] mx-auto leading-relaxed">
+            <TraitDessine className="mb-7" />
+            <p className="font-editorial italic text-xl md:text-2xl text-foreground/80 max-w-[540px] leading-snug mb-6">
               Un voyage visuel à travers nos ateliers, rencontres botaniques et moments créatifs.
             </p>
-            <p className="font-mono-brand text-[10px] uppercase tracking-[2px] text-primary-foreground/60 mt-5">
-              Photographies : Vanessa Charlery
+            <p className="inline-flex items-center gap-2 font-mono-brand text-[10px] uppercase tracking-[2px] text-foreground/60">
+              <Camera size={14} /> © Botanique Ludique, toutes photographies
             </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={150} className="relative h-[400px] sm:h-[470px] max-w-[520px] w-full mx-auto">
+            <img
+              src={teintureTshirtsTable}
+              alt="Table d'atelier de teinture végétale avec tee-shirts teints"
+              className="absolute right-0 top-0 w-[58%] h-[72%] object-cover border-brutal shadow-brutal rotate-2"
+              style={galetPhoto(1)}
+            />
+            <img
+              src={kokedamaCollection}
+              alt="Collection de kokedamas"
+              className="absolute left-0 bottom-0 w-[60%] h-[54%] object-cover border-brutal shadow-brutal -rotate-2"
+              style={galetPhoto(0)}
+              loading="lazy"
+            />
+            <img
+              src={herbierToiles}
+              alt="Toiles d'herbier contre une fenêtre"
+              className="absolute left-[4%] top-[4%] w-[36%] aspect-square object-cover border-brutal -rotate-3"
+              style={{ borderRadius: "58% 42% 52% 48% / 46% 56% 44% 54%" }}
+              loading="lazy"
+            />
+            <div
+              className="absolute right-[-2%] bottom-[6%] w-[104px] h-[104px] flex flex-col items-center justify-center text-center bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float"
+              style={PASTILLE}
+            >
+              <span className="font-display text-2xl leading-none">{items.length}</span>
+              <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1 leading-tight">photos<br />& vidéos</span>
+            </div>
           </AnimatedSection>
         </div>
       </section>
 
-      <WaveDivider from="hsl(0,0%,10%)" to="hsl(36,33%,93%)" />
-
       {/* ===== FILTRES ===== */}
-      <section className="px-6 pt-6">
-        <div className="max-w-6xl mx-auto mb-12 flex flex-wrap justify-center">
+      <section className="px-6 pt-2">
+        <div className="max-w-6xl mx-auto mb-14 flex flex-wrap justify-center gap-2.5">
           {filters.map(({ id, label, icon: Icon }) => {
             const isActive = activeFilter === id;
             return (
@@ -283,10 +320,10 @@ const Gallery = () => {
                 type="button"
                 onClick={() => setActiveFilter(id)}
                 aria-pressed={isActive}
-                className={`font-mono-brand text-[10px] uppercase tracking-[2px] px-4 py-3 border-brutal -ml-[3px] -mt-[3px] first:ml-0 transition-colors duration-200 flex items-center gap-2 ${
+                className={`font-mono-brand text-[10px] uppercase tracking-[2px] px-4 py-2.5 border-brutal-thin rounded-full transition-all duration-200 flex items-center gap-2 ${
                   isActive
-                    ? "bg-foreground text-primary-foreground"
-                    : "bg-[hsl(var(--cream))] text-foreground hover:bg-[hsl(var(--green-pale))]"
+                    ? "bg-foreground text-primary-foreground -rotate-2 shadow-[3px_3px_0_hsl(var(--olive))]"
+                    : "bg-[hsl(var(--cream))] text-foreground hover:bg-[hsl(var(--olive-light))] shadow-[2px_2px_0_hsl(var(--black))]"
                 }`}
               >
                 {Icon && <Icon size={14} />}
@@ -302,16 +339,16 @@ const Gallery = () => {
 
       {/* ===== MOSAÏQUE ===== */}
       <main className="px-6 pb-24">
-        <div className="max-w-6xl mx-auto flex gap-6 items-start">
+        <div className="max-w-6xl mx-auto flex gap-7 items-start">
           {columns.map((column, colIndex) => (
-            <div key={colIndex} className="flex-1 min-w-0 flex flex-col gap-6">
+            <div key={colIndex} className={`flex-1 min-w-0 flex flex-col gap-8 ${colIndex === 1 ? "md:mt-10" : ""}`}>
           {column.map(({ item, index }) => (
             <figure key={item.src} className="m-0">
               <button
                 type="button"
                 onClick={() => setSelectedIndex(index)}
                 aria-label={`Agrandir : ${item.caption}`}
-                className="group block w-full text-left border-brutal bg-[hsl(var(--cream))] transition-all duration-300 hover:-translate-y-1 hover:shadow-brutal-lg"
+                className={`group block w-full text-left transition-transform duration-300 hover:-translate-y-1 hover:rotate-0 ${index % 3 === 0 ? "-rotate-[0.6deg]" : index % 3 === 1 ? "rotate-[0.5deg]" : "-rotate-[0.3deg]"}`}
                 onMouseEnter={(e) => {
                   e.currentTarget.querySelector("video")?.play().catch(() => {});
                 }}
@@ -323,7 +360,7 @@ const Gallery = () => {
                   }
                 }}
               >
-                <div className="relative overflow-hidden bg-secondary">
+                <div className="relative overflow-hidden bg-secondary border-brutal shadow-brutal group-hover:shadow-brutal-lg transition-shadow" style={galetPhoto(index)}>
                   {item.type === "video" ? (
                     <video src={item.src} className="block w-full h-auto" muted loop playsInline preload="metadata" />
                   ) : (
@@ -335,16 +372,16 @@ const Gallery = () => {
                     />
                   )}
                   {item.type === "video" && (
-                    <span className="absolute top-3 left-3 flex items-center gap-1.5 font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 border-brutal-thin bg-[hsl(var(--cream))]">
+                    <span className="absolute top-4 left-4 flex items-center gap-1.5 font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 border-brutal-thin rounded-full bg-accent">
                       <Play size={10} className="fill-current" /> Vidéo
                     </span>
                   )}
                 </div>
-                <figcaption className="border-t-[3px] border-foreground px-4 py-3">
-                  <span className="block font-mono-brand text-[9px] uppercase tracking-[2px] text-primary mb-1">
+                <figcaption className="px-2 pt-3">
+                  <span className={`inline-block font-mono-brand text-[9px] uppercase tracking-[2px] border-brutal-thin rounded-full px-2.5 py-1 mb-1.5 bg-[hsl(var(--cream))] ${index % 2 ? "rotate-1" : "-rotate-1"}`}>
                     {categoryLabels[item.category]}
                   </span>
-                  <span className="block text-sm text-foreground/80 leading-snug">{item.caption}</span>
+                  <span className="block text-sm text-foreground/75 leading-snug">{item.caption}</span>
                 </figcaption>
               </button>
             </figure>
@@ -355,27 +392,29 @@ const Gallery = () => {
       </main>
 
       {/* ===== CTA ===== */}
-      <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
-      <section className="bg-foreground text-primary-foreground px-6 pt-10 pb-24">
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(153,40%,30%)" />
+      <section className="bg-[hsl(var(--green))] text-[hsl(var(--cream))] px-6 pt-8 pb-20">
         <AnimatedSection className="max-w-3xl mx-auto text-center">
-          <p className="font-mono-brand text-[11px] uppercase tracking-[3px] text-olive-light mb-4">À vous de jouer</p>
-          <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] uppercase leading-[0.95] tracking-[-1px] mb-6">
-            Envie de vivre <span className="text-olive-light">un atelier&nbsp;?</span>
+          <span className="section-label block mb-3" style={{ color: "hsl(73 44% 67%)" }}>À vous de jouer</span>
+          <h2 className="font-display text-[clamp(1.9rem,4.5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
+            Envie de vivre <span className="text-[hsl(var(--olive-light))]">un atelier&nbsp;?</span>
           </h2>
-          <p className="text-base text-primary-foreground/75 leading-relaxed mb-10 max-w-xl mx-auto">
+          <TraitDessine className="mx-auto mt-3 mb-6" color="hsl(var(--olive-light))" variant={1} />
+          <p className="text-base md:text-lg text-[hsl(var(--cream))]/85 leading-relaxed mb-9 max-w-xl mx-auto">
             Kokedama, teinture végétale, herbier, papier recyclé… partout en Île-de-France, pour les particuliers, les écoles et les entreprises.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/workshops"
-              className="btn-brutal bg-primary text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
+              className="btn-brutal inline-flex items-center bg-accent text-foreground border-foreground -rotate-1 hover:rotate-0 text-xs px-8 py-3.5"
+              style={{ borderRadius: "28px 14px 26px 12px / 14px 26px 12px 28px" }}
             >
               Voir les ateliers →
             </Link>
             <Link
               to="/contact"
-              className="btn-brutal bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
-              style={{ borderColor: "hsl(var(--cream))" }}
+              className="btn-brutal inline-flex items-center bg-[hsl(var(--cream))] text-foreground border-foreground rotate-1 hover:rotate-0 text-xs px-7 py-3.5"
+              style={{ borderRadius: "14px 30px 12px 26px / 26px 12px 30px 14px" }}
             >
               Nous écrire →
             </Link>
@@ -384,12 +423,13 @@ const Gallery = () => {
             href="https://www.instagram.com/botanique.ludique/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-10 font-mono-brand text-[11px] uppercase tracking-[2px] text-primary-foreground/70 hover:text-olive-light transition-colors"
+            className="inline-flex items-center gap-2 mt-10 font-mono-brand text-[11px] uppercase tracking-[2px] text-[hsl(var(--cream))]/75 hover:text-[hsl(var(--olive-light))] transition-colors"
           >
             <Camera size={14} /> Plus de photos sur Instagram @botanique.ludique
           </a>
         </AnimatedSection>
       </section>
+      <WaveDivider from="hsl(153,40%,30%)" to="hsl(0,0%,10%)" flip />
 
       {/* ===== VUE PLEIN ÉCRAN ===== */}
       <Dialog open={!!selectedItem} onOpenChange={(open) => !open && setSelectedIndex(null)}>
@@ -398,7 +438,7 @@ const Gallery = () => {
           <button
             type="button"
             onClick={() => setSelectedIndex(null)}
-            className="absolute top-4 right-4 z-50 w-11 h-11 flex items-center justify-center border-2 border-[hsl(var(--cream))] text-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-foreground transition-colors"
+            className="absolute top-4 right-4 z-50 w-11 h-11 rounded-full flex items-center justify-center border-2 border-[hsl(var(--cream))] text-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-foreground transition-colors"
             aria-label="Fermer"
           >
             <X className="w-5 h-5" />
@@ -406,7 +446,7 @@ const Gallery = () => {
           <button
             type="button"
             onClick={handlePrev}
-            className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-50 w-11 h-11 flex items-center justify-center border-2 border-[hsl(var(--cream))] text-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-foreground transition-colors"
+            className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-50 w-11 h-11 rounded-full flex items-center justify-center border-2 border-[hsl(var(--cream))] text-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-foreground transition-colors"
             aria-label="Photo précédente"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -414,7 +454,7 @@ const Gallery = () => {
           <button
             type="button"
             onClick={handleNext}
-            className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-50 w-11 h-11 flex items-center justify-center border-2 border-[hsl(var(--cream))] text-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-foreground transition-colors"
+            className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-50 w-11 h-11 rounded-full flex items-center justify-center border-2 border-[hsl(var(--cream))] text-[hsl(var(--cream))] hover:bg-[hsl(var(--cream))] hover:text-foreground transition-colors"
             aria-label="Photo suivante"
           >
             <ChevronRight className="w-6 h-6" />
@@ -449,6 +489,7 @@ const Gallery = () => {
                   {categoryLabels[selectedItem.category]} · {(selectedIndex ?? 0) + 1} / {visibleItems.length}
                 </p>
                 <p className="text-sm md:text-base text-[hsl(var(--cream))]/85">{selectedItem.caption}</p>
+                <p className="mt-2 font-mono-brand text-[9px] uppercase tracking-[2px] text-[hsl(var(--cream))]/45">© Botanique Ludique</p>
               </div>
             </div>
           )}

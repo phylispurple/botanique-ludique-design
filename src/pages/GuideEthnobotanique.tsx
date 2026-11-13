@@ -66,6 +66,7 @@ const GuideEthnobotanique = () => (
       },
     ],
     conclusion: "L'ethnobotanique n'est pas qu'une discipline universitaire. C'est une manière de regarder les plantes qui change profondément notre rapport au monde. Nos balades et conférences en proposent une approche accessible et exigeante.",
+    atelier: {},
     related: [
       { to: "/balades-botaniques", label: "Balades ethnobotaniques" },
       { to: "/balade-botanique-coloniale-paris", label: "Balade coloniale" },

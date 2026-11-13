@@ -1,4 +1,5 @@
 import GuideTemplate from "@/components/GuideTemplate";
+import kokedamaImg from "@/assets/event-kokedama-mains.webp";
 import { Leaf } from "lucide-react";
 
 const GuideKokedama = () => (
@@ -66,6 +67,8 @@ const GuideKokedama = () => (
       },
     ],
     conclusion: "Le kokedama est une pratique simple à mettre en œuvre mais qui demande un peu de doigté. Pour le geste accompagné et le matériel fourni, nos ateliers kokedama à Paris vous guident pas à pas.",
+    image: { src: kokedamaImg, alt: "Façonnage d'un kokedama pendant un atelier" },
+    atelier: { sujet: "un kokedama", entreprise: "/atelier-kokedama-team-building" },
     related: [
       { to: "/atelier-kokedama-paris", label: "Atelier kokedama" },
       { to: "/guide/comment-faire-un-terrarium", label: "Guide terrarium" },
