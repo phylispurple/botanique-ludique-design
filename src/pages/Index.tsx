@@ -24,6 +24,9 @@ import gallerySachetSenteur from "@/assets/gallery-sachet-senteur.webp";
 import galleryMiniTerrarium from "@/assets/gallery-mini-terrarium.jpeg";
 import PhotoCarousel from "@/components/PhotoCarousel";
 import WaveDivider from "@/components/WaveDivider";
+import TraitDessine from "@/components/TraitDessine";
+import ProchainsAteliers from "@/components/ProchainsAteliers";
+import HeroPrairie, { PrairieAnimaux, CoccinelleTitre } from "@/components/HeroPrairie";
 import NoelEntrepriseBanner from "@/components/NoelEntrepriseBanner";
 import { EVENT_PHOTO } from "@/data/eventPhotos";
 
@@ -94,22 +97,20 @@ const Index = () => {
       {/* ===== HERO ===== */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-foreground">
-          <video
-            autoPlay loop muted playsInline
-            preload="auto"
-            poster="/videos/hero-poster.jpg"
-            controls={false}
-            className="w-full h-full object-cover opacity-60"
-            src="/videos/hero-bg.mp4"
-          />
+          <div className="absolute inset-0 opacity-80">
+            <HeroPrairie />
+          </div>
+          <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 55% 45% at 50% 58%, rgba(20,22,20,0.6), transparent 75%)" }} />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/20 to-foreground/55" />
+        <PrairieAnimaux />
 
         <div className="relative z-10 text-center px-6 max-w-[900px]">
           <AnimatedSection>
-            <h1 className="font-display text-[clamp(3rem,10vw,8rem)] uppercase leading-[0.9] tracking-[-3px] text-primary-foreground mb-6">
+            <h1 className="relative inline-block font-display text-[clamp(3rem,10vw,8rem)] uppercase leading-[0.9] tracking-[-3px] text-primary-foreground mb-6">
               Botanique<br />
               <span className="text-olive-light">Ludique</span>
+              <CoccinelleTitre />
             </h1>
           </AnimatedSection>
 
@@ -218,6 +219,7 @@ const Index = () => {
             <h2 className="font-display text-[clamp(2rem,4.2vw,3.2rem)] uppercase leading-[0.92] tracking-[-2px] mb-4">
               Créer avec<br />les plantes,<br /><span className="md:ml-14 text-primary">comprendre</span><br /><span className="md:ml-14 whitespace-nowrap">leurs histoires</span>
             </h2>
+            <TraitDessine className="-mt-1 mb-5 md:ml-14" />
             <p className="font-editorial italic text-xl md:text-2xl text-foreground/60 mb-8 md:ml-14">
               ateliers · balades · conférences
             </p>
@@ -271,6 +273,7 @@ const Index = () => {
             <h2 id="bloc-entreprises" className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] uppercase leading-[0.95] tracking-[-1px] mb-4">
               Un team building végétal, <span className="text-[hsl(var(--olive-light))]">clés en main</span>
             </h2>
+            <TraitDessine className="-mt-1 mb-5" color="hsl(var(--olive-light))" variant={1} />
             <p className="font-body text-base text-[hsl(var(--cream))]/85 leading-relaxed mb-6">
               Terrarium, kokedama, teinture végétale ou sachets de senteurs, dans vos locaux partout en Île-de-France.
               J'apporte tout le matériel et chacun repart avec sa création.
@@ -293,7 +296,12 @@ const Index = () => {
           </div>
         </AnimatedSection>
       </section>
-      <WaveDivider from="hsl(153,40%,30%)" to="hsl(36,25%,88%)" flip />
+      <WaveDivider from="hsl(153,40%,30%)" to="hsl(36,33%,93%)" flip />
+
+      {/* ===== PROCHAINS ATELIERS (lus dans l'agenda) ===== */}
+      <ProchainsAteliers />
+
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
 
       {/* ===== GALERIE — photos en galets inclinés, étiquettes ===== */}
       <section className="py-16 md:py-24 bg-secondary overflow-x-clip">
@@ -304,6 +312,7 @@ const Index = () => {
               <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.92] tracking-[-1.5px]">
                 Ce qu'on fabrique<br /><span className="md:ml-16 text-primary">ensemble</span>
               </h2>
+              <TraitDessine className="mt-3 md:ml-16" variant={2} />
             </div>
             <span className="self-start md:self-end -rotate-3 font-mono-brand text-[10px] uppercase tracking-[2px] bg-accent border-brutal-thin rounded-full px-4 py-2 shadow-[3px_3px_0_hsl(var(--black))]">
               ← Faites glisser →

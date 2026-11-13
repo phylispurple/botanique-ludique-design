@@ -331,3 +331,56 @@
 @media (prefers-reduced-motion: reduce) {
   .pebble-float { animation: none; }
 }
+
+/* ===== Prairie de l'accueil (HeroPrairie) ===== */
+/* Haut du ciel qui glisse lentement : même cadrage que l'image (cover, bas centré). */
+.prairie-ciel { background-position: 50% 100%; animation: prairie-ciel 60s ease-in-out infinite alternate; }
+@keyframes prairie-ciel {
+  from { background-position: calc(50% - 28px) 100%; }
+  to   { background-position: calc(50% + 28px) 100%; }
+}
+
+/* Abeille : arrive, butine trois fleurs, repart. Trajet évitant le texte et les boutons. */
+.prairie-abeille { left: -15%; top: 20%; animation: prairie-abeille-mobile 24s ease-in-out infinite; }
+@keyframes prairie-abeille-mobile {         /* téléphone : survole le titre, butine les marguerites des bords et du bas */
+  0%   { left: -15%; top: 14%; }
+  14%  { left: 62%;  top: 10%; }
+  28%  { left: 8%;   top: 63%; }
+  38%  { left: 9%;   top: 64%; }   /* butine */
+  48%  { left: 13%;  top: 85%; }
+  58%  { left: 14%;  top: 84%; }   /* butine */
+  70%  { left: 86%;  top: 71%; }
+  80%  { left: 87%;  top: 72%; }   /* butine */
+  94%  { left: 115%; top: 35%; }
+  100% { left: 115%; top: 35%; }
+}
+@media (min-width: 768px) {
+  .prairie-abeille { animation-name: prairie-abeille; animation-duration: 22s; }
+}
+@keyframes prairie-abeille {                /* ordinateur */
+  0%   { left: -6%;  top: 70%; }
+  10%  { left: 11%;  top: 63%; }
+  20%  { left: 11.5%; top: 64%; }  /* butine */
+  30%  { left: 30%;  top: 91%; }
+  40%  { left: 30.5%; top: 90%; }  /* butine */
+  52%  { left: 83%;  top: 62%; }
+  62%  { left: 83.5%; top: 63%; }  /* butine */
+  74%  { left: 108%; top: 50%; }
+  100% { left: 108%; top: 50%; }
+}
+.prairie-abeille-bob { animation: prairie-bob 0.9s ease-in-out infinite alternate; }
+@keyframes prairie-bob { from { transform: translateY(-3px) rotate(-4deg); } to { transform: translateY(3px) rotate(3deg); } }
+.prairie-ailes-abeille { transform-origin: 21px 13px; animation: prairie-battement 0.09s linear infinite alternate; }
+@keyframes prairie-battement { from { transform: scaleY(1); } to { transform: scaleY(0.35); } }
+
+
+.insecte-pattes-a, .insecte-pattes-b { transform-box: fill-box; transform-origin: 50% 0%; }
+.insecte-pattes-a { animation: insecte-pattes 0.28s ease-in-out infinite alternate; }
+.insecte-pattes-b { animation: insecte-pattes 0.28s ease-in-out infinite alternate-reverse; }
+@keyframes insecte-pattes { from { transform: rotate(-12deg); } to { transform: rotate(12deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .prairie-ciel, .prairie-abeille, .prairie-abeille-bob, .prairie-ailes-abeille,
+  .insecte-pattes-a, .insecte-pattes-b { animation: none; }
+  .prairie-abeille { display: none; }
+}

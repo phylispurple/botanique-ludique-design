@@ -3,6 +3,7 @@ import { Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import AnimatedSection from "@/components/AnimatedSection";
+import TraitDessine from "@/components/TraitDessine";
 
 interface Testimonial {
   id: string;
@@ -61,9 +62,10 @@ const Testimonials = () => {
       <div className="relative max-w-6xl mx-auto">
         <AnimatedSection>
           <span className="section-label block mb-3">Retours d'expérience</span>
-          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mb-16 md:mb-20">
+          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.95] tracking-[-1px] mb-3">
             Ce qu'ils<br /><span className="md:ml-16">en <span className="text-primary">disent</span></span>
           </h2>
+          <TraitDessine className="mb-16 md:mb-20 md:ml-16" color="hsl(var(--accent))" variant={2} />
         </AnimatedSection>
 
         {isLoading ? (
