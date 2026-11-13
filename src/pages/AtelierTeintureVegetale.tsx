@@ -20,7 +20,7 @@ const AtelierTeintureVegetale = () => {
     <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
       <SEO 
         title="Atelier Teinture Végétale Paris | Pigments Naturels ✦ 75 IDF"
-        description="🌿 Atelier teinture végétale à Paris et Île-de-France. Apprenez à teindre textiles et papiers avec des pigments 100% naturels. Particuliers et pros. Dès 55€."
+        description="🌿 Atelier teinture végétale à Paris et Île-de-France. Apprenez à teindre textiles et papiers avec des pigments 100% naturels. Particuliers et pros."
         keywords="atelier teinture végétale Paris, teinture naturelle cours, pigments naturels atelier, teinture plantes Paris, teinture indigo Paris, atelier eco-print, teinture textile naturel"
         canonical="/atelier-teinture-vegetale"
       />
@@ -29,8 +29,7 @@ const AtelierTeintureVegetale = () => {
         data={{
           "name": "Botanique Ludique - Atelier Teinture Végétale",
           "description": "Ateliers de teinture végétale et pigments naturels à Paris et en Île-de-France",
-          "areaServed": { "@type": "State", "name": "Île-de-France" },
-          "priceRange": "55€ - 200€"
+          "areaServed": { "@type": "State", "name": "Île-de-France" }
         }}
       />
       <FloatingIllustrations />
@@ -109,7 +108,6 @@ const AtelierTeintureVegetale = () => {
                     <div className="space-y-4">
                       <div className="flex items-center gap-3"><Clock className="w-5 h-5 text-sage" /><span className="text-charcoal/80"><strong>Durée :</strong> 3h</span></div>
                       <div className="flex items-center gap-3"><Users className="w-5 h-5 text-sage" /><span className="text-charcoal/80"><strong>Participants :</strong> 10 max</span></div>
-                      <div className="flex items-center gap-3"><Leaf className="w-5 h-5 text-sage" /><span className="text-charcoal/80"><strong>Prix :</strong> 55€ par personne</span></div>
                       <div className="flex items-center gap-3"><Calendar className="w-5 h-5 text-sage" /><span className="text-charcoal/80"><strong>Âge :</strong> Dès 6 ans</span></div>
                       <div className="flex items-center gap-3"><MapPin className="w-5 h-5 text-sage" /><span className="text-charcoal/80"><strong>Lieu :</strong> Chez vous ou dans un lieu de votre choix</span></div>
                     </div>

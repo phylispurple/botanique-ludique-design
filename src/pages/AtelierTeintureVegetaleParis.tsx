@@ -25,7 +25,6 @@ const AtelierTeintureVegetaleParis = () => (
       { label: "Durée", value: "2h30" },
       { label: "Groupe", value: "6 à 20 pers." },
       { label: "Lieu", value: "Paris et IDF" },
-      { label: "Prix", value: "À partir de 55 €" },
     ],
     bookingTo: "/contact",
     bookingLabel: "Réserver un atelier",
