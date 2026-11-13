@@ -7,7 +7,7 @@ import BackToTop from "@/components/BackToTop";
 import AnimatedSection from "@/components/AnimatedSection";
 import WaveDivider from "@/components/WaveDivider";
 import TraitDessine from "@/components/TraitDessine";
-import { galetPhoto, PASTILLE } from "@/lib/organic";
+import { galetPhoto } from "@/lib/organic";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { X, ChevronLeft, ChevronRight, Play, Sprout, Palette, Flower2, Hammer, Droplets, Footprints, Camera } from "lucide-react";
 import terrariumImage from "@/assets/gallery-terrarium.webp";
@@ -298,13 +298,6 @@ const Gallery = () => {
               style={{ borderRadius: "58% 42% 52% 48% / 46% 56% 44% 54%" }}
               loading="lazy"
             />
-            <div
-              className="absolute right-[-2%] bottom-[6%] w-[104px] h-[104px] flex flex-col items-center justify-center text-center bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float"
-              style={PASTILLE}
-            >
-              <span className="font-display text-2xl leading-none">{items.length}</span>
-              <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1 leading-tight">photos<br />& vidéos</span>
-            </div>
           </AnimatedSection>
         </div>
       </section>
