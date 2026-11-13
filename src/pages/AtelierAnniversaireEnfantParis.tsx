@@ -1,5 +1,8 @@
 import OccasionTemplate from "@/components/OccasionTemplate";
 import { Sparkles } from "lucide-react";
+import imgFabrication from "@/assets/gallery-terrarium-enfants-fabrication.jpg";
+import imgTshirt from "@/assets/gallery-teinture-enfants-tshirt-rose.jpg";
+import imgMousse from "@/assets/gallery-terrarium-enfants-mousse.jpg";
 
 const AtelierAnniversaireEnfantParis = () => (
   <OccasionTemplate data={{
@@ -12,7 +15,7 @@ const AtelierAnniversaireEnfantParis = () => (
     pitch: "Une animation d'anniversaire qui sort de l'ordinaire, sans écran ni paillettes. Les enfants plongent les mains dans la terre, observent, fabriquent et repartent avec leur création vivante.",
     why: [
       { title: "Ludique", desc: "Une animation pensée pour le rythme et la curiosité des enfants, avec un vrai contenu pédagogique caché derrière le jeu." },
-      { title: "Manuel", desc: "Les enfants manipulent, semblent, plantent. Un moment hors écran qui leur fait du bien." },
+      { title: "Manuel", desc: "Les enfants manipulent, sèment, plantent. Un moment hors écran qui leur fait du bien." },
       { title: "Souvenir", desc: "Chaque enfant repart avec sa création, mini terrarium, herbier ou bombes à graines mellifères." },
     ],
     formula: [
@@ -28,6 +31,11 @@ const AtelierAnniversaireEnfantParis = () => (
       { label: "Lieu", value: "Paris et IDF" },
     ],
     testimonialMood: "Les enfants en ont parlé pendant des semaines.",
+    photos: [
+      { src: imgFabrication, alt: "Des enfants fabriquent leur terrarium en bocal" },
+      { src: imgTshirt, alt: "T-shirt teint aux pigments végétaux avec un motif soleil" },
+      { src: imgMousse, alt: "Des enfants préparent la mousse pour leurs terrariums" },
+    ],
     related: [
       { to: "/atelier-botanique-enfant-paris", label: "Ateliers enfants" },
       { to: "/animation-scolaire-nature", label: "Animations scolaires" },

@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Heart, Sparkles, ArrowRight, LucideIcon } from "lucide-react";
+import WaveDivider from "@/components/WaveDivider";
+import TraitDessine from "@/components/TraitDessine";
+import { galet, galetPhoto, PASTILLE } from "@/lib/organic";
+import { Heart, Sparkles, ArrowRight, ChevronDown, Smile, Gift, LucideIcon } from "lucide-react";
 
 export interface OccasionTemplateData {
   slug: string;
@@ -20,115 +24,235 @@ export interface OccasionTemplateData {
   practical: { label: string; value: string }[];
   related: { to: string; label: string }[];
   faqs: { q: string; a: string }[];
+  /** Jusqu'à 3 photos pour le collage du haut de page (facultatif). */
+  photos?: { src: string; alt: string }[];
 }
+
+const BTN_A = { borderRadius: "28px 14px 26px 12px / 14px 26px 12px 28px" };
+const BTN_B = { borderRadius: "14px 30px 12px 26px / 26px 12px 30px 14px" };
+const TONS = ["bg-accent", "bg-[hsl(var(--olive-light))]", "bg-[hsl(var(--green))] text-[hsl(var(--cream))]", "bg-[hsl(210_41%_24%)] text-[hsl(var(--cream))]"];
+const TILTS = ["-rotate-1", "rotate-1", "-rotate-[0.6deg]", "rotate-[0.6deg]"];
+const ICONES_POURQUOI = [Sparkles, Heart, Smile, Gift];
 
 const OccasionTemplate = ({ data }: { data: OccasionTemplateData }) => {
   const Icon = data.icon || Heart;
+  const contact = `/contact?subject=${encodeURIComponent(`Demande : ${data.eyebrow}`)}`;
+  const photos = data.photos ?? [];
+
   return (
-    <div className="min-h-screen bg-[hsl(var(--cream))] text-[hsl(var(--black))]">
+    <div className="min-h-screen bg-[hsl(var(--cream))] text-[hsl(var(--black))] overflow-x-clip">
       <SEO title={data.metaTitle} description={data.metaDesc} canonical={`/${data.slug}`} />
-      <SchemaOrg type="FAQPage" data={{ questions: data.faqs.map(f => ({ question: f.q, answer: f.a })) }} />
+      <SchemaOrg type="FAQPage" data={{ questions: data.faqs.map((f) => ({ question: f.q, answer: f.a })) }} />
       <Navigation />
 
-      <main className="pt-24">
-        {/* Hero centré sobre */}
-        <section className="bg-[hsl(var(--olive))] border-b-[3px] border-[hsl(var(--black))] py-20 px-6 md:px-16 lg:px-[120px] text-center">
-          <Icon className="w-12 h-12 mx-auto mb-6" strokeWidth={1.5} />
-          <span className="font-mono-brand text-[11px] tracking-[3px] uppercase block mb-4">
-            {data.eyebrow}
-          </span>
-          <h1 className="font-display text-[clamp(2.2rem,6vw,5rem)] uppercase leading-[0.95] tracking-[-1.5px] mb-8 max-w-[1000px] mx-auto">
-            {data.title}
-          </h1>
-          <p className="text-lg leading-[1.7] max-w-[720px] mx-auto">{data.pitch}</p>
-        </section>
-
-        {/* Pourquoi - 3 ou 4 cartes */}
-        <section className="py-16 px-6 md:px-16 lg:px-[120px]">
-          <h2 className="font-display text-2xl md:text-4xl uppercase mb-10 leading-[1] text-center">
-            Pourquoi ce format ?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-0 max-w-[1100px] mx-auto">
-            {data.why.map((w, idx) => (
-              <AnimatedSection key={w.title} delay={idx * 80} className="h-full">
-                <div className="h-full p-7 border-[3px] border-[hsl(var(--black))] -mt-[3px] -ml-[3px] flex flex-col">
-                  <Sparkles className="w-5 h-5 mb-4" strokeWidth={1.5} />
-                  <h3 className="font-display text-lg uppercase mb-3 leading-[1.15]">{w.title}</h3>
-                  <p className="text-sm leading-[1.7] text-[hsl(var(--black))]/75">{w.desc}</p>
+      <main>
+        {/* ===== HERO ===== */}
+        <section className="relative px-6 pt-28 pb-16 md:pt-36 md:pb-20">
+          <div
+            className="absolute -left-32 top-20 w-[460px] h-[460px] bg-[hsl(var(--olive-light))]/30 pointer-events-none"
+            style={{ borderRadius: "58% 42% 38% 62% / 45% 55% 45% 55%" }}
+            aria-hidden="true"
+          />
+          <div
+            className="absolute -right-24 bottom-0 w-[380px] h-[380px] bg-accent/15 pointer-events-none"
+            style={{ borderRadius: "40% 60% 55% 45% / 60% 40% 60% 40%" }}
+            aria-hidden="true"
+          />
+          <div className={`relative max-w-6xl mx-auto grid gap-14 lg:gap-10 items-center ${photos.length ? "lg:grid-cols-[1.1fr_1fr]" : ""}`}>
+            <AnimatedSection>
+              <div className="flex items-center gap-4 mb-7">
+                <div className="w-14 h-14 flex items-center justify-center bg-[hsl(var(--olive-light))] border-brutal shadow-[3px_3px_0_hsl(var(--black))] -rotate-3" style={PASTILLE}>
+                  <Icon className="w-6 h-6" strokeWidth={2} />
                 </div>
+                <span className="inline-flex font-mono-brand text-[10px] md:text-[11px] uppercase tracking-[2px] bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal-thin rounded-full px-4 py-2 -rotate-1 shadow-[3px_3px_0_hsl(var(--black))]">
+                  {data.eyebrow}
+                </span>
+              </div>
+              <h1 className="font-display text-[clamp(2.3rem,5.4vw,4.4rem)] uppercase leading-[0.92] tracking-[-1.5px] mb-4 max-w-[900px]">{data.title}</h1>
+              <TraitDessine className="mb-7" />
+              <p className="font-editorial italic text-xl md:text-2xl text-foreground/80 max-w-[600px] leading-snug mb-8">{data.pitch}</p>
+              <div className="flex flex-wrap gap-4 mb-9">
+                <Link to={contact} className="btn-brutal inline-flex items-center gap-2 bg-accent text-foreground border-foreground -rotate-1 hover:rotate-0 text-xs px-8 py-3.5" style={BTN_A}>
+                  Réserver ou demander un devis <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link to="/workshops" className="btn-brutal inline-flex items-center gap-2 bg-[hsl(var(--cream))] text-foreground border-foreground rotate-1 hover:rotate-0 text-xs px-7 py-3.5" style={BTN_B}>
+                  Voir les ateliers
+                </Link>
+              </div>
+              <ul className="flex flex-wrap gap-2.5">
+                {data.practical.map((p, i) => (
+                  <li
+                    key={p.label}
+                    className={`inline-flex items-baseline gap-2 bg-[hsl(var(--cream))] border-brutal-thin rounded-full px-4 py-2 shadow-[2px_2px_0_hsl(var(--black))] ${i % 2 ? "rotate-1" : "-rotate-1"}`}
+                  >
+                    <span className="font-mono-brand text-[9px] uppercase tracking-[1.5px] text-foreground/55">{p.label}</span>
+                    <span className="font-display text-sm uppercase">{p.value}</span>
+                  </li>
+                ))}
+              </ul>
+            </AnimatedSection>
+
+            {photos.length > 0 && (
+              <AnimatedSection delay={150} className="relative h-[400px] sm:h-[470px] max-w-[520px] w-full mx-auto">
+                {photos[0] && (
+                  <img src={photos[0].src} alt={photos[0].alt} className="absolute right-0 top-0 w-[60%] h-[76%] object-cover border-brutal shadow-brutal rotate-2" style={galetPhoto(1)} />
+                )}
+                {photos[1] && (
+                  <img
+                    src={photos[1].src}
+                    alt={photos[1].alt}
+                    className="absolute left-0 bottom-0 w-[60%] h-[52%] object-cover border-brutal shadow-brutal -rotate-2"
+                    style={galetPhoto(0)}
+                    loading="lazy"
+                  />
+                )}
+                {photos[2] && (
+                  <img
+                    src={photos[2].src}
+                    alt={photos[2].alt}
+                    className="absolute left-[4%] top-[4%] w-[36%] aspect-square object-cover border-brutal -rotate-3"
+                    style={{ borderRadius: "58% 42% 52% 48% / 46% 56% 44% 54%" }}
+                    loading="lazy"
+                  />
+                )}
               </AnimatedSection>
-            ))}
+            )}
           </div>
         </section>
 
-        {/* Déroulé en formule */}
-        <section className="bg-[hsl(var(--black))] text-[hsl(var(--cream))] py-16 px-6 md:px-16 lg:px-[120px]">
-          <h2 className="font-display text-2xl md:text-4xl uppercase mb-12 leading-[1] max-w-[700px]">
-            Déroulé type
-          </h2>
-          <div className="space-y-0 max-w-[900px]">
-            {data.formula.map((f, i) => (
-              <AnimatedSection key={i} delay={i * 70}>
-                <div className="grid md:grid-cols-[140px_1fr] gap-4 py-5 border-t border-[hsl(var(--cream))]/15 last:border-b">
-                  <p className="font-display text-lg uppercase">{f.line}</p>
-                  <p className="text-sm leading-[1.7] opacity-80">{f.detail}</p>
+        {/* ===== POURQUOI ===== */}
+        <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
+        <section className="bg-secondary px-6 pt-8 pb-20 md:pb-24">
+          <div className="max-w-6xl mx-auto">
+            <AnimatedSection className="text-center mb-14">
+              <span className="section-label block mb-3">Pourquoi ce format</span>
+              <h2 className="font-display text-[clamp(1.9rem,4.5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
+                Un moment <span className="text-primary">qui a du sens</span>
+              </h2>
+              <TraitDessine className="mx-auto mt-3" variant={1} />
+            </AnimatedSection>
+            <div className={`grid gap-8 ${data.why.length >= 4 ? "md:grid-cols-2 lg:grid-cols-4" : "md:grid-cols-3"}`}>
+              {data.why.map((w, i) => {
+                const I = ICONES_POURQUOI[i % ICONES_POURQUOI.length];
+                return (
+                  <AnimatedSection key={w.title} delay={i * 100} className={i % 2 === 1 ? "md:mt-8" : ""}>
+                    <div className={`relative h-full bg-[hsl(var(--cream))] border-brutal shadow-brutal p-7 pt-12 ${TILTS[i % 4]} hover:rotate-0 transition-transform duration-300`} style={galet(i + 1)}>
+                      <div className={`absolute -top-7 left-7 w-14 h-14 flex items-center justify-center border-brutal shadow-[3px_3px_0_hsl(var(--black))] ${TONS[i % 4]}`} style={PASTILLE}>
+                        <I className="w-6 h-6" />
+                      </div>
+                      <h3 className="font-display text-lg uppercase leading-tight mb-2">{w.title}</h3>
+                      <p className="text-sm md:text-base text-foreground/75 leading-relaxed">{w.desc}</p>
+                    </div>
+                  </AnimatedSection>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ===== DÉROULÉ (bande verte) ===== */}
+        <WaveDivider from="hsl(36,25%,88%)" to="hsl(153,40%,30%)" />
+        <section className="bg-[hsl(var(--green))] text-[hsl(var(--cream))] px-6 pt-8 pb-20 md:pb-24">
+          <div className="max-w-6xl mx-auto">
+            <AnimatedSection className="text-center mb-12">
+              <span className="section-label block mb-3" style={{ color: "hsl(73 44% 67%)" }}>
+                Comment ça se passe
+              </span>
+              <h2 className="font-display text-[clamp(1.9rem,4.5vw,3rem)] uppercase leading-[0.95] tracking-[-1px]">
+                Déroulé <span className="text-[hsl(var(--olive-light))]">type</span>
+              </h2>
+              <TraitDessine className="mx-auto mt-3" color="hsl(var(--olive-light))" variant={2} />
+            </AnimatedSection>
+            <div className={`relative grid sm:grid-cols-2 gap-6 ${data.formula.length >= 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}>
+              <svg className="hidden lg:block absolute left-[12%] right-[12%] top-[34px] w-[76%] h-6 pointer-events-none" viewBox="0 0 600 24" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0 12 C 100 0, 200 24, 300 12 S 500 0, 600 12" fill="none" stroke="hsl(var(--olive-light))" strokeWidth="2.5" strokeDasharray="7 8" strokeLinecap="round" />
+              </svg>
+              {data.formula.map((f, i) => (
+                <AnimatedSection key={f.line} delay={i * 110}>
+                  <div className="relative text-center h-full flex flex-col">
+                    <div
+                      className="relative z-10 w-[68px] h-[68px] mx-auto mb-5 flex items-center justify-center bg-[hsl(var(--cream))] text-foreground border-brutal shadow-[3px_3px_0_hsl(var(--black))]"
+                      style={PASTILLE}
+                    >
+                      <span className="font-display text-xl">{String(i + 1).padStart(2, "0")}</span>
+                    </div>
+                    <div className="flex-1 bg-[hsl(var(--cream))] text-foreground border-brutal p-6" style={galet(i)}>
+                      <h3 className="font-display text-lg uppercase tracking-[-0.5px] mb-2">{f.line}</h3>
+                      <p className="text-sm text-foreground/70 leading-relaxed">{f.detail}</p>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+            {data.testimonialMood && (
+              <p className="font-editorial italic text-xl md:text-2xl text-center text-[hsl(var(--cream))]/90 mt-14 max-w-2xl mx-auto leading-snug">{data.testimonialMood}</p>
+            )}
+          </div>
+        </section>
+        <WaveDivider from="hsl(153,40%,30%)" to="hsl(36,33%,93%)" flip />
+
+        {/* ===== FAQ ===== */}
+        <section className="px-6 pt-8 pb-16">
+          <div className="max-w-4xl mx-auto">
+            <AnimatedSection className="text-center mb-10">
+              <span className="section-label block mb-3">FAQ</span>
+              <h2 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] uppercase leading-[0.95] tracking-[-1px]">
+                Questions <span className="text-primary">fréquentes</span>
+              </h2>
+              <TraitDessine className="mx-auto mt-3" variant={0} />
+            </AnimatedSection>
+            <div className="space-y-5">
+              {data.faqs.map((f, i) => (
+                <details
+                  key={f.q}
+                  className={`group border-brutal bg-[hsl(var(--cream))] px-6 md:px-8 py-5 open:shadow-brutal transition-shadow ${i % 2 ? "rotate-[0.3deg]" : "-rotate-[0.3deg]"}`}
+                  style={galet(i)}
+                  open={i === 0}
+                >
+                  <summary className="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    <h3 className="font-display text-base md:text-lg uppercase tracking-[-0.5px]">{f.q}</h3>
+                    <span className="w-9 h-9 flex-shrink-0 flex items-center justify-center bg-[hsl(var(--olive-light))] border-brutal-thin transition-transform group-open:rotate-180" style={PASTILLE}>
+                      <ChevronDown className="w-4 h-4" />
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-sm md:text-base text-foreground/70 leading-relaxed">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ===== RÉSERVER ===== */}
+        <section className="px-6 pb-20">
+          <AnimatedSection>
+            <div
+              className="max-w-5xl mx-auto bg-[hsl(var(--cream))] border-[3px] border-dashed border-foreground px-7 py-9 md:px-12 md:py-10 grid md:grid-cols-[1fr_auto] gap-8 items-center -rotate-[0.3deg]"
+              style={{ borderRadius: "46px 70px 40px 64px / 64px 40px 70px 46px" }}
+            >
+              <div className="text-center md:text-left">
+                <span className="section-label block mb-2">On s'organise ?</span>
+                <h2 className="font-display text-[clamp(1.5rem,3vw,2.2rem)] uppercase leading-[0.95] tracking-[-0.5px] mb-3">
+                  Réserver ou <span className="text-primary">poser une question</span>
+                </h2>
+                <p className="text-sm md:text-base text-foreground/75 leading-relaxed">Dites-nous la date, le lieu et le nombre de personnes : nous vous répondons sous 48 heures.</p>
+                <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 mt-4 font-mono-brand text-[10px] uppercase tracking-[2px]">
+                  <span className="text-foreground/55">Voir aussi :</span>
+                  {data.related.map((r) => (
+                    <Link key={r.to} to={r.to} className="underline underline-offset-4 decoration-2 hover:text-primary">
+                      {r.label}
+                    </Link>
+                  ))}
                 </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </section>
-
-        {/* Pratique */}
-        <section className="py-16 px-6 md:px-16 lg:px-[120px]">
-          <h2 className="font-display text-2xl md:text-3xl uppercase mb-8 text-center">En pratique</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-0 max-w-[1100px] mx-auto">
-            {data.practical.map(p => (
-              <div key={p.label} className="border-[3px] border-[hsl(var(--black))] p-6 -mt-[3px] -ml-[3px]">
-                <p className="font-mono-brand text-[10px] tracking-[2px] uppercase opacity-60 mb-2">{p.label}</p>
-                <p className="font-display text-base uppercase leading-[1.2]">{p.value}</p>
               </div>
-            ))}
-          </div>
-          {data.testimonialMood && (
-            <p className="font-display text-xl md:text-2xl uppercase italic text-center mt-12 max-w-[800px] mx-auto leading-[1.2]">
-              « {data.testimonialMood} »
-            </p>
-          )}
-        </section>
-
-        {/* FAQ */}
-        <section className="bg-[hsl(var(--olive))] py-16 px-6 md:px-16 lg:px-[120px] border-y-[3px] border-[hsl(var(--black))]">
-          <h2 className="font-display text-2xl md:text-3xl uppercase mb-10">Questions fréquentes</h2>
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-[1100px]">
-            {data.faqs.map((f, i) => (
-              <div key={i}>
-                <h3 className="font-display text-base uppercase mb-2 leading-[1.25]">{f.q}</h3>
-                <p className="text-sm leading-[1.7]">{f.a}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-14 px-6 md:px-16 lg:px-[120px]">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <h3 className="font-display text-2xl md:text-3xl uppercase leading-[1.05] max-w-[640px]">
-              Réserver ou poser une question
-            </h3>
-            <Link to="/contact" className="btn-brutal bg-[hsl(var(--black))] text-[hsl(var(--cream))] border-[hsl(var(--black))] text-sm px-8 py-4 flex-shrink-0">
-              Nous écrire →
-            </Link>
-          </div>
-          <p className="text-sm mt-6 text-[hsl(var(--black))]/60 flex flex-wrap gap-x-5 gap-y-2">
-            <span>Voir aussi :</span>
-            {data.related.map(r => (
-              <Link key={r.to} to={r.to} className="underline inline-flex items-center gap-1">
-                {r.label} <ArrowRight className="w-3 h-3" />
+              <Link to={contact} className="btn-brutal inline-flex items-center gap-2 bg-accent text-foreground border-foreground rotate-1 hover:rotate-0 text-xs px-8 py-3.5 whitespace-nowrap justify-self-center" style={BTN_B}>
+                Nous écrire <ArrowRight className="w-4 h-4" />
               </Link>
-            ))}
-          </p>
+            </div>
+          </AnimatedSection>
         </section>
+        <WaveDivider from="hsl(36,33%,93%)" to="hsl(0,0%,10%)" flip />
       </main>
+      <BackToTop />
       <Footer />
     </div>
   );

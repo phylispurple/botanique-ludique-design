@@ -1,5 +1,8 @@
 import OccasionTemplate from "@/components/OccasionTemplate";
 import { Heart } from "lucide-react";
+import imgSourire from "@/assets/event-terrarium-sourire.webp";
+import imgGroupe from "@/assets/gallery-terrarium-adultes-groupe.jpg";
+import imgCouronne from "@/assets/gallery-flower-crown.webp";
 
 const AtelierAnniversaireAdulteParis = () => (
   <OccasionTemplate data={{
@@ -26,6 +29,11 @@ const AtelierAnniversaireAdulteParis = () => (
       { label: "Groupe", value: "6 à 14 pers." },
       { label: "Lieu", value: "Paris et IDF" },
       { label: "Prix", value: "À partir de 45 €" },
+    ],
+    photos: [
+      { src: imgSourire, alt: "Une invitée compose son terrarium en souriant" },
+      { src: imgGroupe, alt: "Un groupe d'adultes réalise des terrariums autour d'une table" },
+      { src: imgCouronne, alt: "Couronne de fleurs réalisée en atelier" },
     ],
     related: [
       { to: "/atelier-terrarium-paris", label: "Terrarium" },
