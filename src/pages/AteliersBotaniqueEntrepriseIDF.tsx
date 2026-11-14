@@ -1,279 +1,554 @@
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import LandingPhotoStrip from "@/components/LandingPhotoStrip";
-import { EVENT_PHOTOS } from "@/data/eventPhotos";
-import FloatingIllustrations from "@/components/FloatingIllustrations";
+import BackToTop from "@/components/BackToTop";
 import { SEO } from "@/components/SEO";
-import { Card, CardContent } from "@/components/ui/card";
-import { Building2, MapPin, Calendar, Users, CheckCircle, Briefcase } from "lucide-react";
-import { Link } from "react-router-dom";
+import { SchemaOrg } from "@/components/SchemaOrg";
+import AnimatedSection from "@/components/AnimatedSection";
+import WaveDivider from "@/components/WaveDivider";
+import TraitDessine from "@/components/TraitDessine";
+import SocialProofBar from "@/components/SocialProofBar";
+import HeroPrairie from "@/components/HeroPrairie";
+import NoelEntrepriseBanner from "@/components/NoelEntrepriseBanner";
+import { AREA_SERVED_IDF } from "@/data/areaServed";
+import { EVENT_PHOTO } from "@/data/eventPhotos";
+import { MapPin, Phone, Check } from "lucide-react";
+import imgGroupe from "@/assets/gallery-workshop-group.webp";
+import imgTerrarium from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
+import imgKokedama from "@/assets/gallery-kokedama-collection.jpg";
+import imgTeinture from "@/assets/gallery-teinture-1.webp";
+import imgSachets from "@/assets/gallery-sachet-senteur.webp";
+import imgCta from "@/assets/cta-workshop-group.jpg";
+
+const SLUG = "/ateliers-botanique-entreprise-idf";
+const DEVIS = "/team-building-nature-entreprise#devis";
+
+/* Formes organiques en « galet », comme sur la page d'accueil */
+const GALETS = [
+  "56% 44% 47% 53% / 50% 56% 44% 50%",
+  "44% 56% 52% 48% / 56% 46% 54% 44%",
+  "58% 42% 52% 48% / 46% 56% 44% 54%",
+  "48% 52% 44% 56% / 52% 44% 56% 48%",
+];
+
+const PRINCIPE = [
+  { label: "Dans vos locaux", desc: "Ou dans le lieu de votre choix, partout en Île-de-France, déplacement compris." },
+  { label: "12 à 40 participants", desc: "Par session. Au-delà, nous organisons plusieurs sessions en rotation dans la journée." },
+  { label: "Clés en main", desc: "Matériel, végétaux, installation et rangement : vos équipes n'ont plus qu'à venir." },
+  { label: "Une histoire de plante", desc: "Chaque atelier s'accompagne d'une médiation ethnobotanique : on crée, et on comprend ce qu'on tient entre les mains." },
+];
+
+const OCCASIONS = [
+  { title: "Team building", desc: "Une activité qui rassemble, où chacun crée de ses mains et repart avec sa création.", href: "/team-building-nature-entreprise", tone: "bg-accent -rotate-2" },
+  { title: "Séminaire", desc: "Une pause créative qui ouvre, rythme ou clôt votre séminaire.", href: "/animation-seminaire-entreprise-paris", tone: "bg-[hsl(var(--olive-light))] rotate-1" },
+  { title: "Semaine QVCT", desc: "Un temps de respiration pour prendre soin de vos équipes, sur la pause déjeuner ou en fin de journée.", href: "/animation-semaine-qvct", tone: "bg-[hsl(var(--cream))] -rotate-1" },
+  { title: "CSE", desc: "Des ateliers pour les salariés et leurs familles, à l'occasion d'un temps fort ou d'une fête.", href: "/animation-cse-entreprise", tone: "bg-[hsl(var(--green))] text-[hsl(var(--cream))] rotate-2" },
+  { title: "Onboarding", desc: "Un moment convivial pour accueillir les nouveaux arrivants et créer du lien dès les premiers jours.", href: "/atelier-onboarding-collaborateurs", tone: "bg-[hsl(var(--olive-light))] -rotate-2" },
+  { title: "Événement de marque", desc: "Lancement, soirée presse, salon : une animation en flux continu pour vos invités.", href: "/animation-vegetale-agence-evenementielle", tone: "bg-accent rotate-1" },
+];
+
+const POPULAIRES = [
+  {
+    tag: "Le plus demandé",
+    title: "Terrarium",
+    image: imgTerrarium,
+    alt: "Terrarium en bocal de verre avec une fittonia et de la mousse, réalisé en atelier",
+    desc: "Chacun compose son jardin sous verre, couche après couche, et l'emporte au bureau ou à la maison. En prime, l'histoire des caisses de Ward, qui ont fait voyager les plantes à travers les océans.",
+    href: "/atelier-terrarium-team-building",
+    tone: "bg-accent -rotate-3",
+  },
+  {
+    tag: "Le plus apaisant",
+    title: "Kokedama",
+    image: imgKokedama,
+    alt: "Collection de kokedamas, boules de mousse nouées au fil, réalisés en atelier",
+    desc: "La technique japonaise du jardin en boule de mousse : on façonne, on habille, on noue. Un geste lent, les mains dans la terre, idéal pour décrocher le temps d'un atelier.",
+    href: "/atelier-kokedama-team-building",
+    tone: "bg-[hsl(var(--olive-light))] rotate-2",
+  },
+  {
+    tag: "Le plus surprenant",
+    title: "Teinture végétale",
+    image: imgTeinture,
+    alt: "Tissus teints avec des plantes lors d'un atelier de teinture végétale",
+    desc: "Des plantes, des fleurs, et le tissu change de couleur sous vos yeux. On découvre les plantes tinctoriales et les savoir-faire qui ont coloré le monde avant la chimie.",
+    href: "/atelier-teinture-vegetale-team-building",
+    tone: "bg-[hsl(var(--cream))] -rotate-2",
+  },
+  {
+    tag: "Le plus rapide",
+    title: "Sachet senteur aux épices",
+    image: imgSachets,
+    alt: "Sachets senteur en organza remplis de lavande, de camomille, de bleuet et de bâtons de cannelle",
+    desc: "On sent, on mélange, on compose son sachet d'épices et de plantes séchées en remontant la route des épices. Un format court, parfait pour les grands groupes.",
+    href: DEVIS,
+    tone: "bg-[hsl(var(--green))] text-[hsl(var(--cream))] rotate-3",
+  },
+];
+
+const AUTRES = [
+  "Couronne végétale",
+  "Bombes à graines",
+  "Tableau de feuilles d'automne",
+  "Tataki-zome",
+  "Bougie aux fleurs séchées",
+  "Fresque végétale",
+  "Boutures et plantes d'intérieur",
+];
+
+const APPORTE = [
+  "Tout le matériel et les végétaux",
+  "L'installation et le rangement",
+  "Les emballages et les cartes d'entretien",
+  "Le déplacement, partout en Île-de-France",
+];
+
+const DEPARTEMENTS = [
+  { dept: "Paris (75)", villes: "Tous les arrondissements" },
+  { dept: "Hauts-de-Seine (92)", villes: "La Défense, Boulogne, Issy, Nanterre…" },
+  { dept: "Yvelines (78)", villes: "Versailles, Saint-Germain, Saint-Quentin…" },
+  { dept: "Val-de-Marne (94)", villes: "Créteil, Vincennes, Ivry…" },
+  { dept: "Seine-Saint-Denis (93)", villes: "Saint-Denis, Montreuil, Pantin…" },
+  { dept: "Essonne (91)", villes: "Massy, Évry, Palaiseau…" },
+  { dept: "Val-d'Oise (95)", villes: "Cergy, Argenteuil, Pontoise…" },
+  { dept: "Seine-et-Marne (77)", villes: "Marne-la-Vallée, Melun…" },
+];
+
+const FAQ = [
+  {
+    q: "Combien de participants pouvez-vous accueillir ?",
+    a: "De 12 à 40 participants par session. Pour un groupe plus grand, nous organisons plusieurs sessions en rotation dans la journée, pour que chacun soit bien accompagné.",
+  },
+  {
+    q: "Où intervenez-vous ?",
+    a: "Dans vos locaux ou dans le lieu de votre choix, partout en Île-de-France : Paris, petite et grande couronne. Le déplacement est compris.",
+  },
+  {
+    q: "De quoi avez-vous besoin sur place ?",
+    a: "De tables, de chaises et d'un espace couvert. Pour la teinture végétale et le kokedama, un point d'eau à proximité. Nous apportons tout le reste.",
+  },
+  {
+    q: "Combien coûte un atelier ?",
+    a: "Chaque atelier fait l'objet d'un devis personnalisé selon l'atelier, le nombre de participants, la durée et le lieu. Le devis est gratuit et nous répondons sous 48 heures.",
+  },
+  {
+    q: "Combien de temps à l'avance faut-il réserver ?",
+    a: "Idéalement trois à quatre semaines avant la date, et six à huit semaines pour les périodes chargées comme Noël et le printemps.",
+  },
+];
 
 const AteliersBotaniqueEntrepriseIDF = () => {
-  const interventionTypes = [
-    {
-      title: "Séminaires d'Entreprise",
-      icon: Briefcase,
-      description: "Intégrez un atelier botanique créatif dans votre séminaire pour une pause nature ressourçante",
-      examples: ["Ouverture de séminaire créative", "Pause team building", "Clôture mémorable"]
-    },
-    {
-      title: "Événements de Bureau",
-      icon: Building2,
-      description: "Animations régulières dans vos locaux pour améliorer le bien-être de vos équipes",
-      examples: ["After-work botanique", "Pause déjeuner créative", "Journée QVT"]
-    },
-    {
-      title: "Journées RSE",
-      icon: CheckCircle,
-      description: "Ateliers éco-responsables pour sensibiliser vos collaborateurs à l'environnement",
-      examples: ["Biodiversité urbaine", "Économie circulaire", "Végétalisation des espaces"]
-    },
-    {
-      title: "Incentives & Récompenses",
-      icon: Users,
-      description: "Récompensez vos équipes avec des expériences botaniques uniques et mémorables",
-      examples: ["Atelier VIP", "Sortie nature", "Création sur-mesure"]
-    }
-  ];
-
-  const locations = [
-    { dept: "Paris (75)", cities: "Tous arrondissements" },
-    { dept: "Hauts-de-Seine (92)", cities: "Boulogne, Neuilly, Courbevoie, La Défense..." },
-    { dept: "Yvelines (78)", cities: "Chatou, Le Pecq, Saint-Germain, Versailles..." },
-    { dept: "Val-de-Marne (94)", cities: "Créteil, Saint-Maur, Vincennes..." },
-    { dept: "Seine-Saint-Denis (93)", cities: "Montreuil, Saint-Denis, Pantin..." },
-    { dept: "Essonne (91)", cities: "Évry, Massy, Palaiseau..." },
-    { dept: "Val-d'Oise (95)", cities: "Cergy, Argenteuil, Pontoise..." },
-    { dept: "Seine-et-Marne (77)", cities: "Marne-la-Vallée, Melun, Fontainebleau..." }
-  ];
-
-  const formats = [
-    {
-      title: "Atelier Express",
-      duration: "1h - 1h30",
-      participants: "12 à 40 participants par session",
-      description: "Format court idéal pour une pause dans la journée",
-      examples: ["Bombes de graines", "Mini-terrarium", "Sachets senteur"]
-    },
-    {
-      title: "Atelier Standard",
-      duration: "2h - 2h30",
-      participants: "12 à 40 participants par session",
-      description: "Format équilibré pour une expérience complète",
-      examples: ["Kokedama", "Couronne de fleurs", "Teinture végétale"]
-    },
-    {
-      title: "Atelier Immersif",
-      duration: "Demi-journée",
-      participants: "12 à 40 participants par session",
-      description: "Expérience approfondie avec partie théorique",
-      examples: ["Vannerie", "Éco-construction", "Jardin partagé"]
-    }
-  ];
-
-  const advantages = [
-    "Intervention dans vos locaux ou lieu de votre choix",
-    "Tout le matériel fourni et installé",
-    "Animation par animatrice ethnobotaniste formée à l'EHESS",
-    "Ateliers adaptés à tous les niveaux",
-    "Devis sur-mesure sous 48h",
-    "Facturation entreprise simplifiée",
-    "Assurance RC professionnelle",
-    "Respect des normes de sécurité"
-  ];
-
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: 'hsl(36 33% 93%)' }}>
-      <SEO 
-        title="Ateliers Botaniques pour Entreprises en Île-de-France"
-        description="Interventions botaniques dans toute l'Île-de-France pour vos séminaires, team building et événements d'entreprise. Paris, 92, 78, 94, 93, 91, 95, 77. Devis sur-mesure."
-        keywords="atelier entreprise Île-de-France, animation entreprise Paris, team building IDF, séminaire nature, intervention entreprise botanique, atelier bureau Paris"
-        canonical="/ateliers-botanique-entreprise-idf"
+    <div className="min-h-screen bg-background overflow-x-clip">
+      <SEO
+        title="Ateliers botaniques pour entreprises en Île-de-France"
+        description="Ateliers botaniques pour vos équipes, dans vos locaux partout en Île-de-France : terrarium, kokedama, teinture végétale, sachet senteur. Team building, séminaire, QVCT, CSE. De 12 à 40 participants, devis gratuit."
+        keywords="atelier entreprise Île-de-France, animation entreprise Paris, team building IDF, atelier botanique entreprise, séminaire nature, animation QVCT, atelier CSE, atelier terrarium entreprise"
+        canonical={SLUG}
       />
-      <FloatingIllustrations />
+      <SchemaOrg
+        type="Service"
+        data={{
+          serviceType: "Ateliers botaniques en entreprise",
+          name: "Ateliers botaniques pour entreprises en Île-de-France",
+          description:
+            "Ateliers botaniques clés en main dans les locaux des entreprises d'Île-de-France, de 12 à 40 participants par session : terrarium, kokedama, teinture végétale, sachet senteur, avec médiation ethnobotanique.",
+          url: `https://botaniqueludique.com${SLUG}`,
+          areaServed: AREA_SERVED_IDF,
+        }}
+      />
+      <SchemaOrg type="FAQPage" data={{ questions: FAQ.map((f) => ({ question: f.q, answer: f.a })) }} />
+      <SchemaOrg
+        type="BreadcrumbList"
+        data={{
+          items: [
+            { name: "Accueil", url: "https://botaniqueludique.com/" },
+            { name: "Pro", url: "https://botaniqueludique.com/pro" },
+            { name: "Entreprises en Île-de-France", url: `https://botaniqueludique.com${SLUG}` },
+          ],
+        }}
+      />
+
       <Navigation />
 
-      <main className="pt-32 pb-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
-            {/* Hero Section */}
-            <div className="text-center mb-16 animate-fade-in">
-              <div className="flex justify-center mb-6">
-                <Building2 className="w-16 h-16 text-sage" />
-              </div>
-              <h1 className="page-title text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6">
-                Ateliers Botaniques pour Entreprises
-              </h1>
-              <p className="subtitle-italic text-lg mb-6">
-                Interventions dans toute l'Île-de-France
-              </p>
-              <p className="text-base text-charcoal/80 leading-relaxed max-w-3xl mx-auto">
-                Botanique Ludique intervient dans toute l'Île-de-France pour animer vos séminaires, team building, 
-                événements d'entreprise et journées QVT. De Paris à la Grande Couronne, nous nous déplaçons dans vos 
-                locaux ou le lieu de votre choix.
-              </p>
-            </div>
-      <LandingPhotoStrip photos={EVENT_PHOTOS} />
+      {/* ===== HERO — la prairie illustrée de l'accueil ===== */}
+      <section className="min-h-[82vh] flex items-center justify-center relative overflow-hidden pt-24 pb-28">
+        <div className="absolute inset-0 bg-foreground">
+          <div className="absolute inset-0 opacity-80">
+            <HeroPrairie />
+          </div>
+          <div
+            className="absolute inset-0"
+            style={{ background: "radial-gradient(ellipse 55% 45% at 50% 55%, rgba(20,22,20,0.6), transparent 75%)" }}
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/20 to-foreground/55" />
 
-            {/* Zone d'intervention */}
-            <div className="bg-[hsl(var(--yellow))]/15 p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
-              <div className="flex items-center justify-center gap-3 mb-8">
-                <MapPin className="w-8 h-8 text-sage" />
-                <h2 className="text-2xl md:text-3xl text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
-                  Nos Zones d'Intervention en Île-de-France
-                </h2>
-              </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {locations.map((location, index) => (
-                  <div key={index} className="bg-sage/5 p-4 ">
-                    <p className="font-semibold text-sage-dark mb-1">{location.dept}</p>
-                    <p className="text-sm text-charcoal/70">{location.cities}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="text-center text-charcoal/60 mt-6 text-sm">
-                💡 Déplacement inclus partout en Île-de-France
-              </p>
-            </div>
-
-            {/* Types d'intervention */}
-            <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
-                Types d'Interventions
-              </h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {interventionTypes.map((type, index) => {
-                  const Icon = type.icon;
-                  return (
-                    <Card key={index} className="hover:shadow-brutal-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-                      <CardContent className="p-6">
-                        <div className="flex items-start gap-4 mb-4">
-                          <div className="bg-sage/10 p-3 border-brutal shadow-brutal">
-                            <Icon className="w-6 h-6 text-sage" />
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-xl font-semibold text-charcoal mb-2">{type.title}</h3>
-                            <p className="text-charcoal/70 mb-4">{type.description}</p>
-                            <div className="space-y-2">
-                              <p className="text-sm font-semibold text-sage-dark">Exemples :</p>
-                              <ul className="space-y-1">
-                                {type.examples.map((example, idx) => (
-                                  <li key={idx} className="text-sm text-charcoal/70 flex items-center gap-2">
-                                    <span className="text-sage">•</span>
-                                    {example}
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Formats */}
-            <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl mb-12 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
-                Formats Disponibles
-              </h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {formats.map((format, index) => (
-                  <Card key={index} className="hover:shadow-brutal-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-                    <CardContent className="p-6 space-y-4">
-                      <div className="text-center">
-                        <Calendar className="w-12 h-12 text-sage mx-auto mb-3" />
-                        <h3 className="text-xl font-semibold text-charcoal mb-1">{format.title}</h3>
-                        <p className="text-sage-dark font-semibold text-sm mb-2">{format.duration}</p>
-                        <p className="text-sm text-charcoal/60 mb-3">👥 {format.participants}</p>
-                      </div>
-                      <p className="text-sm text-charcoal/70 text-center">{format.description}</p>
-                      <div className="pt-3 border-t border-sage/20">
-                        <p className="text-xs font-semibold text-sage-dark mb-2">Ateliers suggérés :</p>
-                        <ul className="space-y-1">
-                          {format.examples.map((example, idx) => (
-                            <li key={idx} className="text-xs text-charcoal/70">• {example}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Advantages */}
-            <div className="bg-sand p-8 md:p-12 mb-16 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
-                Pourquoi Choisir Botanique Ludique ?
-              </h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                {advantages.map((advantage, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" />
-                    <span className="text-charcoal/80">{advantage}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Pricing */}
-            <div className="bg-[hsl(var(--yellow))]/15 p-8 md:p-12 mb-16 animate-fade-in border-brutal shadow-brutal">
-              <h2 className="text-2xl md:text-3xl mb-8 text-center" style={{ fontFamily: 'Archivo Black, sans-serif', color: 'hsl(0 0% 10%)', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
-                Tarification Transparente
-              </h2>
-              <div className="max-w-2xl mx-auto space-y-4 text-charcoal/80">
-                <p className="flex items-start gap-3">
-                  <span className="text-sage font-bold">→</span>
-                  <span><strong>Tarifs sur-mesure</strong> selon le format, nombre de participants et lieu d'intervention</span>
-                </p>
-                <p className="flex items-start gap-3">
-                  <span className="text-sage font-bold">→</span>
-                  <span><strong>Devis gratuit sous 48h</strong> après étude de votre demande</span>
-                </p>
-                <p className="flex items-start gap-3">
-                  <span className="text-sage font-bold">→</span>
-                  <span><strong>Tarifs dégressifs</strong> pour plusieurs ateliers ou événements récurrents</span>
-                </p>
-                <p className="flex items-start gap-3">
-                  <span className="text-sage font-bold">→</span>
-                  <span><strong>Frais de déplacement</strong> inclus en petite couronne (75, 92, 78, 94, 93)</span>
-                </p>
-              </div>
-            </div>
-
-            {/* Testimonial */}
-            <div className="bg-sage/10 border-l-4 border-sage p-8 mb-16 animate-fade-in border-brutal shadow-brutal">
-              <p className="text-lg text-charcoal/80 italic mb-4">
-                "Nous avons fait appel à Botanique Ludique pour notre séminaire annuel en Essonne. L'équipe s'est 
-                déplacée avec tout le matériel, l'animation était top et nos 35 collaborateurs ont adoré l'atelier 
-                kokedama. Je recommande vivement !"
-              </p>
-              <p className="text-sage-dark font-semibold">DRH, Groupe Tech Évry (91)</p>
-            </div>
-
-            {/* CTA */}
-            <div className="bg-sage text-[hsl(var(--cream))] p-8 md:p-12 text-center animate-fade-in">
-              <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: 'Archivo Black, sans-serif', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
-                Prêt à Organiser Votre Atelier en Entreprise ?
-              </h2>
-              <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">
-                Demandez votre devis personnalisé gratuit en 2 minutes
-              </p>
-              <Link 
-                to="/b2b"
-                className="inline-flex items-center px-8 py-4 bg-[hsl(var(--cream))] hover:bg-sand text-sage font-semibold uppercase tracking-wider transition-all text-lg"
+        <div className="relative z-10 text-center px-6 max-w-[900px]">
+          <AnimatedSection>
+            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[3px] text-olive-light mb-5">
+              Entreprises · CSE · Île-de-France
+            </p>
+            <h1 className="font-display text-[clamp(2.2rem,6vw,4.6rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+              Ateliers botaniques<br />
+              <span className="text-olive-light">pour les entreprises</span>
+            </h1>
+          </AnimatedSection>
+          <AnimatedSection delay={150}>
+            <p className="font-editorial italic text-2xl md:text-[32px] leading-tight text-primary-foreground max-w-[700px] mx-auto mb-4">
+              Vos équipes créent, écoutent et repartent avec du vivant
+            </p>
+            <p className="font-body text-[15px] md:text-[17px] text-primary-foreground/80 max-w-[580px] mx-auto mb-10 leading-relaxed">
+              Terrarium, kokedama, teinture végétale… Nous venons animer nos ateliers dans vos locaux, partout en Île-de-France.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection delay={300}>
+            <div className="flex flex-wrap gap-6 justify-center">
+              <Link
+                to={DEVIS}
+                className="btn-brutal bg-accent text-foreground border-accent -rotate-2 hover:rotate-0 hover:bg-primary-foreground hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--accent))] px-7 py-3"
+                style={{ borderRadius: "28px 14px 26px 12px / 14px 26px 12px 28px" }}
               >
-                Demander un devis
+                Demander un devis →
               </Link>
+              <a
+                href="#ateliers"
+                className="btn-brutal bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-[hsl(var(--olive-light))] rotate-1 hover:rotate-0 hover:bg-[hsl(var(--cream))] hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--green))] px-7 py-3"
+                style={{ borderRadius: "14px 30px 12px 26px / 26px 12px 30px 14px" }}
+              >
+                Voir nos ateliers →
+              </a>
             </div>
+          </AnimatedSection>
+        </div>
+
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          className="absolute -bottom-1 left-0 w-full h-[68px] md:h-[100px]"
+          aria-hidden="true"
+        >
+          <path d="M0,120 C240,40 480,20 720,50 C960,80 1200,30 1440,120 L1440,120 L0,120 Z" fill="hsl(var(--cream))" />
+        </svg>
+      </section>
+
+      {/* ===== LE PRINCIPE — photo en galet ===== */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[5fr_6fr] gap-14 md:gap-20 items-center">
+          <AnimatedSection direction="left" className="order-2 md:order-none">
+            <div className="relative max-w-[480px] mx-auto">
+              <div
+                className="absolute -inset-4 md:-inset-8 bg-[hsl(var(--olive-light))]/35"
+                style={{ borderRadius: "42% 58% 63% 37% / 41% 44% 56% 59%" }}
+                aria-hidden="true"
+              />
+              <img
+                src={imgGroupe}
+                alt="Participants qui façonnent leurs kokedamas autour d'une grande table d'atelier"
+                className="relative w-full aspect-[4/5] object-cover border-brutal shadow-brutal-lg"
+                style={{ borderRadius: GALETS[0] }}
+                loading="lazy"
+              />
+              <span className="absolute -bottom-4 right-2 md:-right-6 -rotate-6 font-mono-brand text-[10px] uppercase tracking-[2px] bg-accent border-brutal-thin rounded-full px-4 py-2 shadow-[3px_3px_0_hsl(var(--black))]">
+                Devis gratuit sous 48 h
+              </span>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection direction="right" delay={150} className="order-1 md:order-none">
+            <span className="section-label block mb-4">Le principe</span>
+            <h2 className="font-display text-[clamp(2rem,4.2vw,3.2rem)] uppercase leading-[0.92] tracking-[-2px] mb-4">
+              Nous venons<br /><span className="md:ml-14 text-primary">jusqu'à vous</span>
+            </h2>
+            <TraitDessine className="-mt-1 mb-5 md:ml-14" />
+            <p className="font-editorial italic text-xl md:text-2xl text-foreground/60 mb-8 md:ml-14">
+              créer · écouter · repartir avec sa création
+            </p>
+            <ul className="space-y-5 max-w-[520px]">
+              {PRINCIPE.map((item) => (
+                <li key={item.label} className="md:border-l-[3px] md:border-primary md:pl-6">
+                  <p className="font-display uppercase text-base tracking-[-0.5px] mb-1">{item.label}</p>
+                  <p className="text-base leading-relaxed text-foreground/75">{item.desc}</p>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm text-foreground/60 max-w-[520px]">
+              Ateliers animés par Vanessa Charlery, animatrice ethnobotaniste formée à l'EHESS.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ===== OCCASIONS ===== */}
+      <section className="pb-20 md:pb-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection className="mb-12">
+            <span className="section-label block mb-3">Pour quelle occasion ?</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.92] tracking-[-1.5px]">
+              Un atelier pour<br /><span className="md:ml-16 text-primary">chaque moment</span>
+            </h2>
+            <TraitDessine className="mt-3 md:ml-16" variant={1} />
+          </AnimatedSection>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {OCCASIONS.map((o, i) => (
+              <AnimatedSection key={o.title} delay={i * 80}>
+                <Link
+                  to={o.href}
+                  className="group relative block h-full border-brutal rounded-[1.75rem] bg-[hsl(var(--cream))] p-6 pt-9 shadow-brutal transition-transform hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-brutal-lg"
+                >
+                  <span
+                    className={`absolute -top-4 left-5 font-display uppercase text-sm tracking-[-0.3px] border-brutal-thin rounded-full px-4 py-1.5 shadow-[3px_3px_0_hsl(var(--black))] ${o.tone}`}
+                  >
+                    {o.title}
+                  </span>
+                  <p className="text-base text-foreground/75 leading-relaxed mb-4">{o.desc}</p>
+                  <span className="font-mono-brand text-[10px] uppercase tracking-[2px] text-primary group-hover:underline">
+                    En savoir plus →
+                  </span>
+                </Link>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
-      </main>
+      </section>
+
+      {/* ===== ATELIERS POPULAIRES ===== */}
+      <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
+      <section id="ateliers" className="py-16 md:py-24 bg-secondary px-6 scroll-mt-24">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection className="mb-14">
+            <span className="section-label block mb-3">Les plus demandés</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-[0.92] tracking-[-1.5px]">
+              Nos ateliers<br /><span className="md:ml-16 text-primary">populaires</span>
+            </h2>
+            <TraitDessine className="mt-3 md:ml-16" variant={2} />
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
+            {POPULAIRES.map((a, i) => (
+              <AnimatedSection key={a.title} delay={i * 100}>
+                <article className="flex flex-col h-full">
+                  <div className="relative max-w-[440px] w-full mx-auto mb-8">
+                    <img
+                      src={a.image}
+                      alt={a.alt}
+                      loading="lazy"
+                      className="w-full aspect-[5/4] object-cover border-brutal shadow-brutal"
+                      style={{ borderRadius: GALETS[i % GALETS.length] }}
+                    />
+                    <span
+                      className={`absolute -top-3 left-4 font-mono-brand text-[10px] uppercase tracking-[2px] border-brutal-thin rounded-full px-4 py-2 shadow-[3px_3px_0_hsl(var(--black))] ${a.tone}`}
+                    >
+                      {a.tag}
+                    </span>
+                  </div>
+                  <h3 className="font-display text-2xl md:text-[28px] uppercase tracking-[-0.5px] mb-3">{a.title}</h3>
+                  <p className="text-base text-foreground/75 leading-relaxed mb-6">{a.desc}</p>
+                  <Link
+                    to={a.href}
+                    className="mt-auto self-start btn-brutal rounded-full bg-foreground text-primary-foreground border-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-7 py-3"
+                  >
+                    {a.href === DEVIS ? "Demander un devis →" : "Découvrir l'atelier →"}
+                  </Link>
+                </article>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          {/* Et bien d'autres */}
+          <AnimatedSection className="mt-20 text-center">
+            <p className="font-editorial italic text-2xl md:text-3xl text-foreground/70 mb-6">… et bien d'autres ateliers</p>
+            <ul className="flex flex-wrap justify-center gap-3 mb-6 max-w-3xl mx-auto">
+              {AUTRES.map((item, i) => (
+                <li
+                  key={item}
+                  className={`font-mono-brand text-[11px] uppercase tracking-[1.5px] px-4 py-2 border-brutal-thin rounded-full bg-[hsl(var(--cream))] ${
+                    i % 2 ? "rotate-1" : "-rotate-1"
+                  }`}
+                >
+                  {item}
+                </li>
+              ))}
+              <li>
+                <Link
+                  to="/balade-botanique-entreprise-cse"
+                  className="block font-mono-brand text-[11px] uppercase tracking-[1.5px] px-4 py-2 border-brutal-thin rounded-full bg-[hsl(var(--olive-light))] rotate-1 hover:rotate-0 transition-transform"
+                >
+                  Balade botanique →
+                </Link>
+              </li>
+            </ul>
+            <p className="text-base text-foreground/70 max-w-xl mx-auto mb-8">
+              Selon la saison, la taille de votre groupe ou le thème de votre événement, nous vous proposons l'atelier qui convient, ou
+              nous en imaginons un sur mesure.
+            </p>
+            <Link
+              to="/ateliers-botaniques-tous"
+              className="btn-brutal rounded-full bg-primary text-primary-foreground border-primary hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-block"
+            >
+              Voir tous nos ateliers →
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+      <WaveDivider from="hsl(36,25%,88%)" to="hsl(153,40%,30%)" />
+
+      {/* ===== CLÉS EN MAIN — bande verte comme sur l'accueil ===== */}
+      <section className="bg-[hsl(var(--green))] text-[hsl(var(--cream))] px-6 py-12 md:py-16" aria-labelledby="bloc-cles-en-main">
+        <AnimatedSection className="max-w-5xl mx-auto grid md:grid-cols-[2fr_3fr] gap-10 md:gap-14 items-center">
+          <img
+            src={EVENT_PHOTO.terrariumTable}
+            alt="Terrariums en bocal et sacs kraft prêts pour une animation en entreprise"
+            className="w-full max-w-sm mx-auto aspect-square object-cover border-4 border-[hsl(var(--cream))] rotate-2"
+            style={{ borderRadius: GALETS[2] }}
+            loading="lazy"
+          />
+          <div>
+            <p className="section-label mb-2" style={{ color: "hsl(73 44% 67%)" }}>
+              Organisation
+            </p>
+            <h2 id="bloc-cles-en-main" className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] uppercase leading-[0.95] tracking-[-1px] mb-4">
+              Clés en main, <span className="text-[hsl(var(--olive-light))]">sans prise de tête</span>
+            </h2>
+            <TraitDessine className="-mt-1 mb-5" color="hsl(var(--olive-light))" variant={1} />
+            <ul className="space-y-2 mb-5">
+              {APPORTE.map((item) => (
+                <li key={item} className="flex gap-2 items-start text-base text-[hsl(var(--cream))]/90">
+                  <Check className="w-5 h-5 text-[hsl(var(--olive-light))] flex-shrink-0 mt-0.5" strokeWidth={3} />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="font-editorial italic text-xl text-[hsl(var(--cream))] mb-6">
+              Vous prévoyez des tables et un espace couvert, nous nous occupons du reste.
+            </p>
+            <div className="flex flex-wrap gap-3 mb-6">
+              <Link
+                to={DEVIS}
+                className="btn-brutal rounded-full bg-accent text-foreground border-accent text-xs px-6 py-3 text-center whitespace-nowrap"
+              >
+                Demander un devis →
+              </Link>
+              <Link
+                to="/team-building-nature-entreprise"
+                className="btn-brutal rounded-full bg-transparent text-[hsl(var(--cream))] border-[hsl(var(--cream))] text-xs px-6 py-3 text-center whitespace-nowrap"
+              >
+                Voir les formules
+              </Link>
+            </div>
+            <NoelEntrepriseBanner />
+          </div>
+        </AnimatedSection>
+      </section>
+      <WaveDivider from="hsl(153,40%,30%)" to="hsl(36,33%,93%)" flip />
+
+      {/* ===== PARTOUT EN IDF ===== */}
+      <section className="py-20 md:py-24 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-start">
+          <AnimatedSection direction="left">
+            <span className="section-label block mb-4">Partout en Île-de-France</span>
+            <h2 className="font-display text-[clamp(1.8rem,3.8vw,2.8rem)] uppercase leading-[0.92] tracking-[-1.5px] mb-4">
+              Ils nous ont<br /><span className="md:ml-12 text-primary">fait confiance</span>
+            </h2>
+            <TraitDessine className="-mt-1 mb-6 md:ml-12" variant={3} />
+            <p className="text-base md:text-lg leading-[1.8] text-foreground/75 mb-5">
+              Grandes entreprises, institutions, lieux culturels : nous avons notamment animé des ateliers pour
+            </p>
+            <ul className="space-y-2 md:border-l-[3px] md:border-primary md:pl-6 mb-5">
+              {["Thales", "l'Assurance Maladie", "la Région Île-de-France", "le CENTQUATRE-Paris"].map((ref) => (
+                <li key={ref} className="text-base text-foreground font-semibold">
+                  {ref}
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm text-foreground/60">Et de nombreuses villes, médiathèques et structures d'Île-de-France.</p>
+          </AnimatedSection>
+
+          <AnimatedSection direction="right" delay={150}>
+            <div className="border-brutal rounded-[2rem] bg-[hsl(var(--cream))] p-8 md:p-10 shadow-brutal-lg rotate-1">
+              <h3 className="font-display text-lg uppercase mb-6">Nous intervenons dans…</h3>
+              <ul className="space-y-3">
+                {DEPARTEMENTS.map((d) => (
+                  <li key={d.dept} className="flex items-start gap-2 text-sm">
+                    <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                    <span>
+                      <strong className="text-foreground">{d.dept}</strong>
+                      <span className="text-foreground/65"> · {d.villes}</span>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="font-editorial italic text-lg text-foreground/60 mt-6">Déplacement compris, partout en Île-de-France.</p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ===== LOGOS ===== */}
+      <SocialProofBar />
+
+      {/* ===== FAQ ===== */}
+      <section className="py-20 md:py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection className="mb-10">
+            <span className="section-label block mb-3">FAQ</span>
+            <h2 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] uppercase leading-[0.95] tracking-[-1px]">
+              Vos <span className="text-primary">questions</span>
+            </h2>
+            <TraitDessine className="mt-3" variant={1} />
+          </AnimatedSection>
+          <div className="space-y-5">
+            {FAQ.map((item) => (
+              <div key={item.q} className="border-brutal rounded-[1.75rem] bg-[hsl(var(--cream))] p-6 md:p-7 shadow-brutal">
+                <h3 className="font-display text-base md:text-lg uppercase tracking-[-0.5px] mb-2">{item.q}</h3>
+                <p className="text-sm md:text-base text-foreground/70 leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CTA : la photo remplit la vague, comme sur l'accueil ===== */}
+      <section className="pt-32 md:pt-44 pb-20 md:pb-24 px-6 text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-x-0 bottom-0 top-1 bg-foreground">
+          <img src={imgCta} alt="" className="w-full h-full object-cover opacity-35" loading="lazy" />
+        </div>
+        <div className="absolute inset-x-0 bottom-0 top-1 bg-foreground/40" />
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          className="absolute -top-1 left-0 w-full h-[52px] md:h-[84px] z-[1] scale-x-[-1]"
+          aria-hidden="true"
+        >
+          <path d="M0,0 L1440,0 L1440,120 C1200,30 960,80 720,50 C480,20 240,40 0,120 Z" fill="hsl(36,33%,93%)" />
+        </svg>
+        <AnimatedSection className="relative z-10 max-w-3xl mx-auto text-center">
+          <h2 className="font-display text-3xl md:text-5xl uppercase leading-[0.95] mb-5">
+            Un atelier pour <span className="text-olive-light">vos équipes</span> ?
+          </h2>
+          <p className="text-base md:text-lg text-primary-foreground/80 leading-relaxed mb-10 max-w-xl mx-auto">
+            Nombre de participants, lieu, date, envies : envoyez-nous l'essentiel et nous revenons vers vous sous 48 heures avec une
+            proposition et un devis gratuit.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to={DEVIS}
+              className="btn-brutal rounded-full bg-accent text-foreground border-accent hover:bg-primary-foreground text-xs px-8 py-3"
+            >
+              Demander un devis →
+            </Link>
+            <a
+              href="tel:+33609831606"
+              className="btn-brutal rounded-full bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-foreground text-xs px-8 py-3 inline-flex items-center gap-2"
+            >
+              <Phone className="w-4 h-4" /> 06 09 83 16 06
+            </a>
+          </div>
+        </AnimatedSection>
+      </section>
 
       <Footer />
+      <BackToTop />
     </div>
   );
 };
