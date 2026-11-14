@@ -5,7 +5,7 @@ import imgGroupe from "@/assets/gallery-workshop-group.webp";
 import imgMains from "@/assets/gallery-bombes-graines-mains.webp";
 import imgSeau from "@/assets/gallery-bombes-graines-seau.webp";
 import imgGermee from "@/assets/blog-bombes-graines-germee.webp";
-import imgGrainesBleuet from "@/assets/graines-bleuet-melliferes.webp";
+import imgGraines from "@/assets/graines-melange-melliferes.webp";
 
 const CONFIG: AtelierTeamBuildingConfig = {
   slug: "/atelier-bombes-a-graines-team-building",
@@ -45,12 +45,11 @@ const CONFIG: AtelierTeamBuildingConfig = {
     ligne2: "et graines",
     photos: [
       { src: imgMains, alt: "Mains couvertes de terre qui roulent une bombe à graines au-dessus d'un seau", label: "On roule la boule" },
-      { src: imgGrainesBleuet, alt: "Un tas de graines de bleuet, une fleur mellifère", label: "Les graines mellifères" },
+      { src: imgGraines, alt: "Mélange de graines de fleurs mellifères utilisé pour les bombes à graines", label: "Les graines mellifères" },
       { src: imgSechage, alt: "Bombes à graines en train de sécher sur la table", label: "Le séchage" },
       { src: imgSeau, alt: "Mains pleines de terre au-dessus d'un seau de mélange argile et compost", label: "Les mains dans la terre" },
       { src: imgGroupe, alt: "Un groupe réuni autour d'un atelier botanique", label: "En équipe" },
     ],
-    credit: "Graines de bleuet : photo Dennis Lamczak, CC BY-SA 3.0, Wikimedia Commons",
   },
   histoire: {
     label: "Notre signature",
