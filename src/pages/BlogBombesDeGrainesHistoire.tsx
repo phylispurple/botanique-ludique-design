@@ -11,7 +11,8 @@ import photoMains from "@/assets/gallery-bombes-graines-mains.webp";
 import photoSeau from "@/assets/gallery-bombes-graines-seau.webp";
 import photoSechage from "@/assets/gallery-bombes-graines-sechage.webp";
 import grenades1973 from "@/assets/blog-bombes-graines-green-guerillas-1973.webp";
-import lizChristyGarden from "@/assets/blog-bombes-graines-liz-christy-garden.webp";
+import lizChristyEntree from "@/assets/blog-bombes-graines-liz-christy-entree.webp";
+import lizChristy2025 from "@/assets/blog-bombes-graines-liz-christy-2025.webp";
 import bleuetBourdon from "@/assets/blog-bombes-graines-bleuet-bourdon.webp";
 import syrpheAchillee from "@/assets/blog-bombes-graines-syrphe-achillee.webp";
 import abeilleCoquelicot from "@/assets/blog-bombes-graines-abeille-coquelicot.webp";
@@ -215,19 +216,34 @@ const BlogBombesDeGrainesHistoire = () => {
               toujours, porte aujourd'hui le nom de Liz Christy, et des centaines de jardins communautaires ont suivi dans la ville.
             </p>
 
-            <figure className={figureClass}>
-              <img
-                src={lizChristyGarden}
-                alt="Le Liz Christy Garden aujourd'hui, jardin partagé arboré et fleuri dans l'East Village à Manhattan"
-                className="w-full h-auto"
-                loading="lazy"
-                width={1200}
-                height={900}
-              />
-              <figcaption className={captionClass}>
-                Le Liz Christy Garden, dans l'East Village à Manhattan, en 2022. Photo Kidfly182, CC BY-SA 4.0, Wikimedia Commons
-              </figcaption>
-            </figure>
+            <div className="grid sm:grid-cols-[2fr_3fr] gap-6 not-prose my-8 items-start">
+              <figure className="border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
+                <img
+                  src={lizChristyEntree}
+                  alt="Entrée du Liz Christy Garden : grille noire, panneau vert au nom du jardin et fleurs roses en cascade"
+                  className="w-full h-auto"
+                  loading="lazy"
+                  width={800}
+                  height={1067}
+                />
+                <figcaption className={captionClass}>
+                  L'entrée du jardin, au coin de Bowery et Houston Street. Photo Eden, Janine and Jim, CC BY 2.0, Wikimedia Commons
+                </figcaption>
+              </figure>
+              <figure className="border-[3px] border-[hsl(var(--black))] shadow-brutal bg-white">
+                <img
+                  src={lizChristy2025}
+                  alt="Le Liz Christy Garden au printemps : iris violets, arbustes, pins et une chaise en bois au milieu de la verdure, au pied des immeubles"
+                  className="w-full h-auto"
+                  loading="lazy"
+                  width={1000}
+                  height={750}
+                />
+                <figcaption className={captionClass}>
+                  Le jardin au printemps 2025, cinquante ans après sa création. Photo Jim Henderson, CC BY-SA 4.0, Wikimedia Commons
+                </figcaption>
+              </figure>
+            </div>
 
             <p>
               Pendant l'atelier, nous posons toujours la question : pourquoi parler de bombe ou de grenade pour un geste aussi doux ? C'est un
