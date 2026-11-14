@@ -13,7 +13,6 @@ import { X, ChevronLeft, ChevronRight, Play, Sprout, Palette, Flower2, Hammer, D
 import terrariumImage from "@/assets/gallery-terrarium.webp";
 import seedBombsImage from "@/assets/gallery-bombes-graines-sechage.webp";
 import seedBombsMains from "@/assets/gallery-bombes-graines-mains.webp";
-import seedBombsSeau from "@/assets/gallery-bombes-graines-seau.webp";
 import teintureChouRougeBocal from "@/assets/gallery-teinture-chou-rouge-bocal.webp";
 import teintureChouRougeBain from "@/assets/gallery-teinture-chou-rouge-bain.webp";
 import chouRougePassoire from "@/assets/gallery-chou-rouge-passoire.webp";
@@ -106,9 +105,7 @@ const items: GalleryItem[] = [
   { src: kokedamaCollection, alt: "Collection de kokedamas", caption: "Kokedamas, Collection de créations en atelier", type: "image", category: "jardinage" },
   { src: teintureTshirtsTable, alt: "Table d'atelier de teinture végétale : tee-shirts tie and dye violet, vert, rose et ocre, bols de pigments, pinceaux et passoire", caption: "Atelier teinture végétale, tee-shirts tie and dye aux pigments naturels", type: "image", category: "textiles" },
   { src: seedBombsImage, alt: "Dizaines de bombes de graines en argile et compost qui sèchent sur un carton après un atelier", caption: "Atelier bombes de graines, Séchage avant le semis", type: "image", category: "jardinage" },
-  { src: seedBombsMains, alt: "Mains couvertes de terre qui roulent une bombe à graines au-dessus d'un seau vert, des rangées de bombes à graines sur la table", caption: "Atelier bombes de graines, On roule la boule entre ses mains", type: "image", category: "jardinage" },
   { src: "/videos/bombes-graines-mains.mp4", alt: "Animation : des mains pleines de terre roulent une bombe à graines", caption: "Atelier bombes de graines, en mouvement", type: "video", category: "jardinage" },
-  { src: seedBombsSeau, alt: "Mains pleines de terre au-dessus d'un seau de mélange argile et compost, bombes à graines alignées sur la table", caption: "Atelier bombes de graines, Le mélange argile, compost et graines", type: "image", category: "jardinage" },
   { src: teintureChouRougeBocal, alt: "Bocal de teinture violette au chou rouge, bandes de coton blanc, ficelle de jute et tissu teint en rose", caption: "Teinture végétale au chou rouge, Le bain et les premiers tissus teints", type: "image", category: "textiles" },
   { src: chouRougePassoire, alt: "Chou rouge émincé dans une passoire en métal, prêt pour la décoction", caption: "Teinture végétale au chou rouge, Préparation du chou", type: "image", category: "textiles" },
   { src: teintureChouRougeBain, alt: "Bain de teinture violet foncé au chou rouge dans un saladier inox", caption: "Teinture végétale au chou rouge, Le bain de couleur", type: "image", category: "textiles" },
@@ -118,6 +115,7 @@ const items: GalleryItem[] = [
   { src: epicesTable, alt: "Vue de dessus de la table de l'atelier Sur la route des épices : bols de curcuma, cannelle, girofle, anis étoilé, cardamome et muscade, mortiers et participants composant leur sachet senteur", caption: "La table aux épices, atelier Sur la route des épices, Versailles", type: "image", category: "bien-etre" },
   { src: "/videos/workshop-kokedama-atelier.mp4", alt: "Atelier kokedama en vidéo", caption: "Atelier kokedama, gestes et matières", type: "video", category: "jardinage" },
   { src: tatakiZomeTable, alt: "Atelier tataki zomé en MJC : participants martelant feuilles d'érable, fougères et cosmos sur des tee-shirts et sacs en coton avec un galet", caption: "Atelier tataki zomé en MJC, empreintes de feuilles et de fleurs sur tee-shirts et sacs en tissu", type: "image", category: "textiles" },
+  { src: seedBombsMains, alt: "Mains couvertes de terre qui roulent une bombe à graines au-dessus d'un seau vert, des rangées de bombes à graines sur la table", caption: "Atelier bombes de graines, On roule la boule entre ses mains", type: "image", category: "jardinage" },
   { src: papierRecycleSechage, alt: "Longue table d'atelier couverte de feuilles de papier recyclé fait main qui sèchent : rose, vert, bleu, beige et blanc parsemé de pétales", caption: "Atelier papier recyclé, les feuilles sèchent sur la table", type: "image", category: "artisanat" },
   { src: terrariumBocalFittonia, alt: "Terrarium en bocal avec fittonia", caption: "Terrarium, Bocal avec fittonia et tradescantia", type: "image", category: "jardinage" },
   { src: teintureEnfantsTshirtRose, alt: "T-shirt rose et jaune motif soleil", caption: "Atelier teinture végétale enfants, Motif soleil aux pigments naturels", type: "image", category: "textiles" },
@@ -347,20 +345,10 @@ const Gallery = () => {
                 onClick={() => setSelectedIndex(index)}
                 aria-label={`Agrandir : ${item.caption}`}
                 className={`group block w-full text-left transition-transform duration-300 hover:-translate-y-1 hover:rotate-0 ${index % 3 === 0 ? "-rotate-[0.6deg]" : index % 3 === 1 ? "rotate-[0.5deg]" : "-rotate-[0.3deg]"}`}
-                onMouseEnter={(e) => {
-                  e.currentTarget.querySelector("video")?.play().catch(() => {});
-                }}
-                onMouseLeave={(e) => {
-                  const vid = e.currentTarget.querySelector("video");
-                  if (vid) {
-                    vid.pause();
-                    vid.currentTime = 0;
-                  }
-                }}
               >
                 <div className="relative overflow-hidden bg-secondary border-brutal shadow-brutal group-hover:shadow-brutal-lg transition-shadow" style={galetPhoto(index)}>
                   {item.type === "video" ? (
-                    <video src={item.src} className="block w-full h-auto" muted loop playsInline preload="metadata" />
+                    <video src={item.src} className="block w-full h-auto" autoPlay muted loop playsInline preload="metadata" aria-label={item.alt} />
                   ) : (
                     <img
                       src={item.src}
@@ -469,10 +457,11 @@ const Gallery = () => {
                   key={selectedItem.src}
                   src={selectedItem.src}
                   className="max-w-full max-h-[72vh] object-contain"
-                  controls
                   autoPlay
+                  muted
                   loop
                   playsInline
+                  aria-label={selectedItem.alt}
                 />
               ) : (
                 <img
