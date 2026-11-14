@@ -12,6 +12,8 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { X, ChevronLeft, ChevronRight, Play, Sprout, Palette, Flower2, Hammer, Droplets, Footprints, Camera } from "lucide-react";
 import terrariumImage from "@/assets/gallery-terrarium.webp";
 import seedBombsImage from "@/assets/gallery-bombes-graines-sechage.webp";
+import seedBombsMains from "@/assets/gallery-bombes-graines-mains.webp";
+import seedBombsSeau from "@/assets/gallery-bombes-graines-seau.webp";
 import teintureChouRougeBocal from "@/assets/gallery-teinture-chou-rouge-bocal.webp";
 import teintureChouRougeBain from "@/assets/gallery-teinture-chou-rouge-bain.webp";
 import chouRougePassoire from "@/assets/gallery-chou-rouge-passoire.webp";
@@ -104,6 +106,9 @@ const items: GalleryItem[] = [
   { src: kokedamaCollection, alt: "Collection de kokedamas", caption: "Kokedamas, Collection de créations en atelier", type: "image", category: "jardinage" },
   { src: teintureTshirtsTable, alt: "Table d'atelier de teinture végétale : tee-shirts tie and dye violet, vert, rose et ocre, bols de pigments, pinceaux et passoire", caption: "Atelier teinture végétale, tee-shirts tie and dye aux pigments naturels", type: "image", category: "textiles" },
   { src: seedBombsImage, alt: "Dizaines de bombes de graines en argile et compost qui sèchent sur un carton après un atelier", caption: "Atelier bombes de graines, Séchage avant le semis", type: "image", category: "jardinage" },
+  { src: seedBombsMains, alt: "Mains couvertes de terre qui roulent une bombe à graines au-dessus d'un seau vert, des rangées de bombes à graines sur la table", caption: "Atelier bombes de graines, On roule la boule entre ses mains", type: "image", category: "jardinage" },
+  { src: "/videos/bombes-graines-mains.mp4", alt: "Animation : des mains pleines de terre roulent une bombe à graines", caption: "Atelier bombes de graines, en mouvement", type: "video", category: "jardinage" },
+  { src: seedBombsSeau, alt: "Mains pleines de terre au-dessus d'un seau de mélange argile et compost, bombes à graines alignées sur la table", caption: "Atelier bombes de graines, Le mélange argile, compost et graines", type: "image", category: "jardinage" },
   { src: teintureChouRougeBocal, alt: "Bocal de teinture violette au chou rouge, bandes de coton blanc, ficelle de jute et tissu teint en rose", caption: "Teinture végétale au chou rouge, Le bain et les premiers tissus teints", type: "image", category: "textiles" },
   { src: chouRougePassoire, alt: "Chou rouge émincé dans une passoire en métal, prêt pour la décoction", caption: "Teinture végétale au chou rouge, Préparation du chou", type: "image", category: "textiles" },
   { src: teintureChouRougeBain, alt: "Bain de teinture violet foncé au chou rouge dans un saladier inox", caption: "Teinture végétale au chou rouge, Le bain de couleur", type: "image", category: "textiles" },

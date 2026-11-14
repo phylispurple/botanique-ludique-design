@@ -19,6 +19,8 @@ import kokedamaAsset from "@/assets/gallery-kokedama-collection.jpg";
 import terrariumImage from "@/assets/gallery-terrarium.webp";
 import muralImage from "@/assets/workshop-mural.jpg";
 import seedBombsImage from "@/assets/gallery-bombes-graines-sechage.webp";
+import seedBombsMains from "@/assets/gallery-bombes-graines-mains.webp";
+import seedBombsSeau from "@/assets/gallery-bombes-graines-seau.webp";
 import teintureChouRougeBocal from "@/assets/gallery-teinture-chou-rouge-bocal.webp";
 import teintureChouRougeBain from "@/assets/gallery-teinture-chou-rouge-bain.webp";
 import chouRougePassoire from "@/assets/gallery-chou-rouge-passoire.webp";
@@ -243,8 +245,8 @@ const workshops: Workshop[] = [
     description: "Fabriquez des bombes de graines artisanales avec argile, compost et graines sauvages selon la méthode nendo dango de Masanobu Fukuoka. Une pratique de guérilla verte enracinée dans la permaculture japonaise.",
     duration: "1h30",
     public: "Tout public, enfants dès 6 ans",
-    image: seedBombsImage,
-    images: [seedBombsImage],
+    image: seedBombsMains,
+    images: [seedBombsMains, seedBombsSeau, seedBombsImage],
     video: "/videos/workshop-seed-bombs.mp4",
     icon: Sprout,
     category: "jardinage",

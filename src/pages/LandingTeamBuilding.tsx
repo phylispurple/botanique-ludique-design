@@ -31,7 +31,7 @@ import imgHerbier from "@/assets/gallery-herbier-toiles.webp";
 import imgTerrarium from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
 import imgKokedama from "@/assets/gallery-kokedama-collection.jpg";
 import imgTeinture from "@/assets/gallery-teinture-1.webp";
-import imgBombes from "@/assets/gallery-bombes-graines-sechage.webp";
+import imgBombes from "@/assets/gallery-bombes-graines-mains.webp";
 
 const SLUG = "/team-building-nature-entreprise";
 const PDF_URL = "/documents/plaquette-botanique-ludique-entreprise-2026-2027.pdf";
@@ -86,7 +86,8 @@ const ATELIERS = [
     title: "Bombes à graines",
     tag: "Action biodiversité",
     image: imgBombes,
-    alt: "Bombes à graines fabriquées en atelier",
+    video: "/videos/bombes-graines-mains.mp4",
+    alt: "Des mains pleines de terre roulent une bombe à graines pendant un atelier",
     desc: "Fabriquer des bombes à graines mellifères à semer dans les friches, et parler de la nature en ville.",
     duree: "1h30",
     groupe: "12 à 40 par session",
@@ -383,13 +384,28 @@ const LandingTeamBuilding = () => {
               const inner = (
                 <>
                   <div className="relative mb-5">
-                    <img
-                      src={a.image}
-                      alt={a.alt}
-                      loading="lazy"
-                      className="w-full aspect-[5/4] object-cover border-brutal shadow-brutal transition-transform duration-500 group-hover:scale-[1.02]"
-                      style={{ borderRadius: GALETS_BLOB[i % GALETS_BLOB.length] }}
-                    />
+                    {"video" in a && a.video ? (
+                      <video
+                        src={a.video}
+                        poster={a.image}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                        aria-label={a.alt}
+                        className="w-full aspect-[5/4] object-cover border-brutal shadow-brutal transition-transform duration-500 group-hover:scale-[1.02]"
+                        style={{ borderRadius: GALETS_BLOB[i % GALETS_BLOB.length] }}
+                      />
+                    ) : (
+                      <img
+                        src={a.image}
+                        alt={a.alt}
+                        loading="lazy"
+                        className="w-full aspect-[5/4] object-cover border-brutal shadow-brutal transition-transform duration-500 group-hover:scale-[1.02]"
+                        style={{ borderRadius: GALETS_BLOB[i % GALETS_BLOB.length] }}
+                      />
+                    )}
                     <span className={`absolute -top-3 left-6 font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 border-brutal-thin rounded-full shadow-[2px_2px_0_hsl(var(--black))] ${i === 0 ? "bg-accent" : "bg-[hsl(var(--cream))]"} ${i % 2 ? "rotate-2" : "-rotate-2"}`}>
                       {a.tag}
                     </span>
