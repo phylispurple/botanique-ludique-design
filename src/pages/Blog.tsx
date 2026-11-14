@@ -32,8 +32,17 @@ import blogCcas from "@/assets/gallery-workshop-group.webp";
 import blogFeteNature from "@/assets/gallery-bombes-graines-sechage.webp";
 import blogPatrimoine from "@/assets/gallery-herbier-toiles.webp";
 import blogSedd from "@/assets/gallery-papier-recycle-sechage.webp";
+import blogBombesGraines from "@/assets/gallery-bombes-graines-mains.webp";
 
 const blogPosts = [
+  {
+    slug: "histoire-bombes-de-graines-atelier-la-celle-saint-cloud",
+    title: "Les bombes de graines : de Fukuoka à New York, l'histoire d'un geste qui fait pousser la vie",
+    excerpt: "Des boulettes d'argile de Masanobu Fukuoka aux grenades à graines des Green Guerillas, et pourquoi semer des fleurs mellifères : retour sur notre atelier à la bibliothèque de La Celle-Saint-Cloud, expo « Sur la route des saisons ».",
+    images: [blogBombesGraines],
+    date: "2026-11-14",
+    category: "Retour d'expérience"
+  },
   {
     slug: "semaine-bleue-atelier-intergenerationnel-kokedama-ehpad",
     title: "Semaine Bleue : un atelier kokedama intergénérationnel à l'EHPAD de Gif-sur-Yvette",

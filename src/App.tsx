@@ -47,6 +47,7 @@ const BlogMediationScientifique = lazy(() => import("./pages/BlogMediationScient
 const BlogFinancerAnimationCCAS = lazy(() => import("./pages/BlogFinancerAnimationCCAS"));
 const BlogFeteNatureMairie = lazy(() => import("./pages/BlogFeteNatureMairie"));
 const BlogAtelierRouteDesEpicesVersailles = lazy(() => import("./pages/BlogAtelierRouteDesEpicesVersailles"));
+const BlogBombesDeGrainesHistoire = lazy(() => import("./pages/BlogBombesDeGrainesHistoire"));
 const BlogSemaineBleueKokedamaGif = lazy(() => import("./pages/BlogSemaineBleueKokedamaGif"));
 const BlogTatakiZome = lazy(() => import("./pages/BlogTatakiZome"));
 const BlogNoelEntrepriseSachetSenteur = lazy(() => import("./pages/BlogNoelEntrepriseSachetSenteur"));
@@ -362,6 +363,7 @@ const App = () => (
             <Route path="/blog/balade-botanique-ecole-du-breuil" element={<BlogBaladeBotaniqueDuBreuil />} />
             <Route path="/blog/balade-botanique-voisins-le-bretonneux" element={<BlogBaladeBotaniqueVoisins />} />
             <Route path="/blog/atelier-route-des-epices-fete-de-la-science-versailles" element={<BlogAtelierRouteDesEpicesVersailles />} />
+            <Route path="/blog/histoire-bombes-de-graines-atelier-la-celle-saint-cloud" element={<BlogBombesDeGrainesHistoire />} />
             <Route path="/blog/semaine-bleue-atelier-intergenerationnel-kokedama-ehpad" element={<BlogSemaineBleueKokedamaGif />} />
             <Route path="/blog/tataki-zome-impression-vegetale-atelier" element={<BlogTatakiZome />} />
             <Route path="/blog/animation-noel-entreprise-atelier-sachet-senteur" element={<BlogNoelEntrepriseSachetSenteur />} />

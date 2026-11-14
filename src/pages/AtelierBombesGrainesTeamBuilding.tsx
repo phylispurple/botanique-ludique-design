@@ -2,9 +2,8 @@ import AtelierTeamBuildingPage, { type AtelierTeamBuildingConfig } from "@/compo
 import { Users, Clock, MapPin, Flower2, Smile, BookOpen, Sprout } from "lucide-react";
 import imgSechage from "@/assets/gallery-bombes-graines-sechage.webp";
 import imgGroupe from "@/assets/gallery-workshop-group.webp";
+import imgMainsTerre from "@/assets/cta-workshop-group.webp";
 import imgGodets from "@/assets/kokedama-plantes-godets.webp";
-import imgMains from "@/assets/gallery-bombes-graines-mains.webp";
-import imgSeau from "@/assets/gallery-bombes-graines-seau.webp";
 
 const CONFIG: AtelierTeamBuildingConfig = {
   slug: "/atelier-bombes-a-graines-team-building",
@@ -26,7 +25,7 @@ const CONFIG: AtelierTeamBuildingConfig = {
     label: "Entreprises · CSE · Journées RSE",
     titre: "Atelier bombes à graines",
     sousTitre: "Rouler l'argile, la terre et les graines entre ses mains, puis semer des fleurs pour les abeilles. Simple, joyeux et utile.",
-    grande: { src: imgMains, alt: "Mains couvertes de terre qui roulent une bombe à graines au-dessus d'un seau, des rangées de bombes à graines sur la table" },
+    grande: { src: imgSechage, alt: "Bombes à graines alignées sur des cartons en train de sécher" },
     moyenne: { src: imgGroupe, alt: "Un groupe de participants les mains dans la terre pendant un atelier" },
     ronde: { src: imgSechage, alt: "Vidéo : des mains roulent une bombe à graines pendant l'atelier", video: "/videos/workshop-seed-bombs.mp4" },
     pastilleA: { haut: "1 sachet", bas: <>de bombes<br />à semer</> },
@@ -43,7 +42,7 @@ const CONFIG: AtelierTeamBuildingConfig = {
     ligne2: "et graines",
     photos: [
       { src: imgSechage, alt: "Bombes à graines en train de sécher sur la table", label: "Le séchage" },
-      { src: imgSeau, alt: "Mains pleines de terre au-dessus d'un seau de mélange argile et compost", label: "Les mains dans la terre" },
+      { src: imgMainsTerre, alt: "Participants les mains dans la terre autour d'une table d'atelier", label: "Les mains dans la terre" },
       { src: imgGodets, alt: "Jeunes plantes en godets sur la table d'atelier", label: "Ce qui va pousser" },
       { src: imgGroupe, alt: "Un groupe réuni autour d'un atelier botanique", label: "En équipe" },
     ],
@@ -58,7 +57,7 @@ const CONFIG: AtelierTeamBuildingConfig = {
       </>,
       "Dans les années 1970 à New York, des jardiniers militants lançaient des bombes de graines par-dessus les grillages des terrains vagues pour y faire pousser des fleurs. Pendant l'atelier, nous partageons ces histoires avec vos équipes, et ce qu'elles disent de la nature en ville.",
     ],
-    visuel: { src: imgMains, alt: "Animation : des mains pleines de terre roulent une bombe à graines", video: "/videos/bombes-graines-mains.mp4" },
+    visuel: { src: imgSechage, alt: "Bombes à graines alignées sur des cartons en train de sécher" },
     rond: { src: imgGodets, alt: "Jeunes plantes en godets" },
     etiquette: "Nendo dango",
   },
