@@ -2,8 +2,10 @@ import AtelierTeamBuildingPage, { type AtelierTeamBuildingConfig } from "@/compo
 import { Users, Clock, MapPin, Flower2, Smile, BookOpen, Sprout } from "lucide-react";
 import imgSechage from "@/assets/gallery-bombes-graines-sechage.webp";
 import imgGroupe from "@/assets/gallery-workshop-group.webp";
-import imgMainsTerre from "@/assets/cta-workshop-group.webp";
-import imgGodets from "@/assets/kokedama-plantes-godets.webp";
+import imgMains from "@/assets/gallery-bombes-graines-mains.webp";
+import imgSeau from "@/assets/gallery-bombes-graines-seau.webp";
+import imgGermee from "@/assets/blog-bombes-graines-germee.webp";
+import imgGrainesBleuet from "@/assets/graines-bleuet-melliferes.webp";
 
 const CONFIG: AtelierTeamBuildingConfig = {
   slug: "/atelier-bombes-a-graines-team-building",
@@ -42,11 +44,13 @@ const CONFIG: AtelierTeamBuildingConfig = {
     ligne1: "Argile, terre",
     ligne2: "et graines",
     photos: [
+      { src: imgMains, alt: "Mains couvertes de terre qui roulent une bombe à graines au-dessus d'un seau", label: "On roule la boule" },
+      { src: imgGrainesBleuet, alt: "Un tas de graines de bleuet, une fleur mellifère", label: "Les graines mellifères" },
       { src: imgSechage, alt: "Bombes à graines en train de sécher sur la table", label: "Le séchage" },
-      { src: imgMainsTerre, alt: "Participants les mains dans la terre autour d'une table d'atelier", label: "Les mains dans la terre" },
-      { src: imgGodets, alt: "Jeunes plantes en godets sur la table d'atelier", label: "Ce qui va pousser" },
+      { src: imgSeau, alt: "Mains pleines de terre au-dessus d'un seau de mélange argile et compost", label: "Les mains dans la terre" },
       { src: imgGroupe, alt: "Un groupe réuni autour d'un atelier botanique", label: "En équipe" },
     ],
+    credit: "Graines de bleuet : photo Dennis Lamczak, CC BY-SA 3.0, Wikimedia Commons",
   },
   histoire: {
     label: "Notre signature",
@@ -60,7 +64,11 @@ const CONFIG: AtelierTeamBuildingConfig = {
     ],
     lien: { to: "/blog/histoire-bombes-de-graines-atelier-la-celle-saint-cloud", label: "Lire l'histoire des bombes de graines" },
     visuel: { src: imgSechage, alt: "Bombes à graines alignées sur des cartons en train de sécher" },
-    rond: { src: imgGodets, alt: "Jeunes plantes en godets" },
+    rond: {
+      src: imgGermee,
+      alt: "Une bombe à graines posée sur le sol, d'où sortent de jeunes pousses vertes",
+      credit: "Photo Bagusnyamuk, CC BY 3.0, Wikimedia Commons",
+    },
     etiquette: "Nendo dango",
   },
   etapes: [

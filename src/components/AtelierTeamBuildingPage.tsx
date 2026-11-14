@@ -50,14 +50,14 @@ export interface AtelierTeamBuildingConfig {
   };
   garanties: string[];
   infos: { icon: LucideIcon; label: string; desc: string }[];
-  galerie: { ligne1: string; ligne2: string; photos: Photo[] };
+  galerie: { ligne1: string; ligne2: string; photos: Photo[]; /** Crédits des photos sous licence libre, sous le carrousel. */ credit?: string };
   histoire: {
     label: string;
     titre: [string, string];
     paragraphes: ReactNode[];
     lien?: { to: string; label: string };
     visuel: Photo & { grayscale?: boolean; /** Vidéo muette en boucle à la place de la photo. */ video?: string };
-    rond?: Photo & { contain?: boolean };
+    rond?: Photo & { contain?: boolean; /** Crédit affiché sous l'image (photos sous licence libre). */ credit?: string };
     etiquette: string;
   };
   etapes: { step: string; title: string; desc: string }[];
@@ -360,6 +360,9 @@ const AtelierTeamBuildingPage = ({ c }: { c: AtelierTeamBuildingConfig }) => {
           </span>
         </AnimatedSection>
         <PhotoCarousel organic images={c.galerie.photos} />
+        {c.galerie.credit && (
+          <p className="px-6 max-w-6xl mx-auto text-right font-mono-brand text-[9px] uppercase tracking-[1px] text-foreground/50">{c.galerie.credit}</p>
+        )}
       </section>
 
       {/* ===== HISTOIRE ===== */}
@@ -426,6 +429,11 @@ const AtelierTeamBuildingPage = ({ c }: { c: AtelierTeamBuildingConfig }) => {
             <span className="absolute left-2 -bottom-4 font-mono-brand text-[9px] uppercase tracking-[2px] bg-[hsl(var(--olive-light))] border-brutal-thin rounded-full px-3 py-1.5 -rotate-2 shadow-[2px_2px_0_hsl(var(--black))]">
               {c.histoire.etiquette}
             </span>
+            {c.histoire.rond?.credit && (
+              <span className="absolute right-0 -bottom-[17%] w-[48%] text-center font-mono-brand text-[8px] uppercase tracking-[1px] text-foreground/50 leading-snug">
+                {c.histoire.rond.credit}
+              </span>
+            )}
           </AnimatedSection>
         </div>
       </section>
