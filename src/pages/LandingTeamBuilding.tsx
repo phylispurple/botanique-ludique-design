@@ -11,18 +11,26 @@ import TraitDessine from "@/components/TraitDessine";
 import Testimonials from "@/components/Testimonials";
 import QuoteForm from "@/components/QuoteForm";
 import NoelEntrepriseBanner from "@/components/NoelEntrepriseBanner";
+import HeroPrairie from "@/components/HeroPrairie";
 import { AREA_SERVED_IDF } from "@/data/areaServed";
-import { galet, galetPhoto, PASTILLE } from "@/lib/organic";
+import { galet, PASTILLE } from "@/lib/organic";
+
+/* Photos en forme de galet, comme sur la page d'accueil */
+const GALETS_BLOB = [
+  "56% 44% 47% 53% / 50% 56% 44% 50%",
+  "44% 56% 52% 48% / 56% 46% 54% 44%",
+  "58% 42% 52% 48% / 46% 56% 44% 54%",
+  "48% 52% 44% 56% / 52% 44% 56% 48%",
+];
 import { Users, Leaf, Clock, MapPin, ArrowRight, Download, Phone, Sparkles, Award, Check, PenLine, PackageCheck, ChevronDown } from "lucide-react";
 import assuranceMaladieLogo from "@/assets/logo-assurance-maladie.png";
 import imgGroupe from "@/assets/gallery-workshop-group.webp";
-import imgSachets from "@/assets/event-sachets-senteur.webp";
+import imgSachets from "@/assets/gallery-sachet-senteur.webp";
 import imgCouronne from "@/assets/gallery-flower-crown.webp";
 import imgHerbier from "@/assets/gallery-herbier-toiles.webp";
-import heroImg from "@/assets/event-terrarium-table.webp";
-import imgTerrarium from "@/assets/event-terrarium-mains.webp";
-import imgKokedama from "@/assets/event-kokedama-mains.webp";
-import imgTeinture from "@/assets/event-teinture-petales.webp";
+import imgTerrarium from "@/assets/gallery-terrarium-bocal-fittonia.jpg";
+import imgKokedama from "@/assets/gallery-kokedama-collection.jpg";
+import imgTeinture from "@/assets/gallery-teinture-1.webp";
 import imgBombes from "@/assets/gallery-bombes-graines-sechage.webp";
 
 const SLUG = "/team-building-nature-entreprise";
@@ -31,9 +39,9 @@ const PDF_URL = "/documents/plaquette-botanique-ludique-entreprise-2026-2027.pdf
 const DEVIS_ANCHOR = "#devis";
 
 const INFOS = [
-  { icon: Users, label: "12 à 40 participants", desc: "Par session · plus en rotation" },
-  { icon: Clock, label: "1h30 à 2h30", desc: "Selon l'atelier choisi" },
-  { icon: MapPin, label: "Dans vos locaux", desc: "Ou en extérieur, partout en Île-de-France" },
+  { icon: Users, label: "12 à 40 participants", desc: "Par session. Au-delà, nous organisons plusieurs sessions en rotation dans la journée." },
+  { icon: Clock, label: "1h30 à 2h30", desc: "Selon l'atelier choisi, avec une médiation ethnobotanique à chaque fois." },
+  { icon: MapPin, label: "Partout en Île-de-France", desc: "Dans vos locaux, ou en extérieur dans un parc ou un jardin selon la saison." },
 ];
 
 const BENEFICES = [
@@ -48,7 +56,7 @@ const ATELIERS = [
     title: "Terrarium",
     tag: "Le plus demandé",
     image: imgTerrarium,
-    alt: "Composition d'un terrarium en bocal pendant un atelier en entreprise",
+    alt: "Terrarium en bocal de verre avec une fittonia et de la mousse, réalisé en atelier",
     desc: "Chacun compose son écosystème miniature en bocal, et découvre l'histoire étonnante de la Wardian case.",
     duree: "2h",
     groupe: "12 à 40 par session",
@@ -58,7 +66,7 @@ const ATELIERS = [
     title: "Kokedama",
     tag: "Art végétal japonais",
     image: imgKokedama,
-    alt: "Façonnage d'un kokedama lors d'un atelier en entreprise",
+    alt: "Collection de kokedamas, boules de mousse nouées au fil, réalisés en atelier",
     desc: "Façonner une boule de terre et de mousse autour d'une plante, puis la nouer : un geste lent et apaisant.",
     duree: "2h",
     groupe: "12 à 40 par session",
@@ -68,7 +76,7 @@ const ATELIERS = [
     title: "Teinture végétale",
     tag: "Création collective",
     image: imgTeinture,
-    alt: "Impression végétale de pétales sur un carré de soie",
+    alt: "Tissus teints avec des plantes lors d'un atelier de teinture végétale",
     desc: "Extraire la couleur des plantes et teindre ensemble, en découvrant l'histoire des couleurs végétales.",
     duree: "2h30",
     groupe: "12 à 40 par session",
@@ -114,7 +122,7 @@ const ETAPES = [
 const GARANTIES = ["Devis gratuit, réponse sous 48 h", "Tout le matériel fourni", "Dans vos locaux, partout en Île-de-France", "Animatrice ethnobotaniste formée à l'EHESS"];
 
 const AUTRES_PHOTOS = [
-  { src: imgSachets, alt: "Sachets de senteurs aux épices" },
+  { src: imgSachets, alt: "Sachets senteur en organza remplis de plantes séchées et d'épices" },
   { src: imgCouronne, alt: "Couronne de fleurs réalisée en atelier" },
   { src: imgHerbier, alt: "Herbier sur toile réalisé en atelier" },
 ];
@@ -212,49 +220,121 @@ const LandingTeamBuilding = () => {
       />
       <Navigation />
 
-      {/* ===== HERO : texte + collage de photos en galets ===== */}
-      <section ref={heroRef} className="relative px-6 pt-28 pb-16 md:pt-36 md:pb-24">
-        <div
-          className="absolute -left-32 top-20 w-[460px] h-[460px] bg-[hsl(var(--olive-light))]/30 pointer-events-none"
-          style={{ borderRadius: "58% 42% 38% 62% / 45% 55% 45% 55%" }}
-          aria-hidden="true"
-        />
-        <div
-          className="absolute -right-24 bottom-0 w-[380px] h-[380px] bg-accent/15 pointer-events-none"
-          style={{ borderRadius: "40% 60% 55% 45% / 60% 40% 60% 40%" }}
-          aria-hidden="true"
-        />
-        <div className="relative max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-14 lg:gap-10 items-center">
+      {/* ===== HERO — la prairie illustrée de l'accueil ===== */}
+      <section ref={heroRef} className="min-h-[82vh] flex items-center justify-center relative overflow-hidden pt-24 pb-28">
+        <div className="absolute inset-0 bg-foreground">
+          <div className="absolute inset-0 opacity-80">
+            <HeroPrairie />
+          </div>
+          <div
+            className="absolute inset-0"
+            style={{ background: "radial-gradient(ellipse 55% 45% at 50% 55%, rgba(20,22,20,0.6), transparent 75%)" }}
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/20 to-foreground/55" />
+
+        <div className="relative z-10 text-center px-6 max-w-[900px]">
           <AnimatedSection>
-            <span className="inline-flex items-center gap-2 font-mono-brand text-[10px] md:text-[11px] uppercase tracking-[2px] bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal-thin rounded-full px-4 py-2 mb-7 -rotate-2 shadow-[3px_3px_0_hsl(var(--black))]">
+            <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[3px] text-olive-light mb-5">
               Entreprises · CSE · Team building
-            </span>
-            <h1 className="font-display text-[clamp(2.4rem,5.2vw,4.3rem)] uppercase leading-[0.9] tracking-[-2px] mb-4">
-              Des ateliers qui font<br />
-              <span className="text-primary">pousser les liens</span>
-            </h1>
-            <TraitDessine className="mb-7" />
-            <p className="font-editorial italic text-xl md:text-2xl text-foreground/80 max-w-[560px] leading-snug mb-9">
-              Des ateliers végétaux pour renforcer la cohésion, stimuler la créativité et parler du vivant, dans vos locaux partout en Île-de-France.
             </p>
-            <div className="flex flex-wrap gap-4 mb-9">
+            <h1 className="font-display text-[clamp(2.2rem,6vw,4.6rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+              Des ateliers qui font<br />
+              <span className="text-olive-light">pousser les liens</span>
+            </h1>
+          </AnimatedSection>
+          <AnimatedSection delay={150}>
+            <p className="font-editorial italic text-2xl md:text-[32px] leading-tight text-primary-foreground max-w-[720px] mx-auto mb-4">
+              Un team building végétal, clés en main
+            </p>
+            <p className="font-body text-[15px] md:text-[17px] text-primary-foreground/80 max-w-[580px] mx-auto mb-10 leading-relaxed">
+              Des ateliers pour renforcer la cohésion, stimuler la créativité et parler du vivant. Nous venons les animer dans vos locaux,
+              partout en Île-de-France.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection delay={300}>
+            <div className="flex flex-wrap gap-6 justify-center">
               <a
                 href={DEVIS_ANCHOR}
-                className="btn-brutal inline-flex items-center gap-2 bg-accent text-foreground border-foreground -rotate-1 hover:rotate-0 text-xs px-8 py-3.5"
+                className="btn-brutal bg-accent text-foreground border-accent -rotate-2 hover:rotate-0 hover:bg-primary-foreground hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--accent))] px-7 py-3"
                 style={BTN_GALET_A}
               >
-                Demander un devis gratuit <ArrowRight className="w-4 h-4" />
+                Demander un devis gratuit →
               </a>
               <a
                 href={PDF_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-brutal inline-flex items-center gap-2 bg-[hsl(var(--cream))] text-foreground border-foreground rotate-1 hover:rotate-0 text-xs px-7 py-3.5"
+                className="btn-brutal inline-flex items-center gap-2 bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-[hsl(var(--olive-light))] rotate-1 hover:rotate-0 hover:bg-[hsl(var(--cream))] hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--green))] px-7 py-3"
                 style={BTN_GALET_B}
               >
                 <Download className="w-4 h-4" /> La plaquette (PDF)
               </a>
             </div>
+          </AnimatedSection>
+        </div>
+
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          className="absolute -bottom-1 left-0 w-full h-[68px] md:h-[100px]"
+          aria-hidden="true"
+        >
+          <path d="M0,120 C240,40 480,20 720,50 C960,80 1200,30 1440,120 L1440,120 L0,120 Z" fill="hsl(var(--cream))" />
+        </svg>
+      </section>
+
+      {/* ===== LE PRINCIPE — photo en galet + chiffres flottants ===== */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[5fr_6fr] gap-14 md:gap-20 items-center">
+          <AnimatedSection direction="left" className="order-2 md:order-none">
+            <div className="relative max-w-[480px] mx-auto">
+              <div
+                className="absolute -inset-4 md:-inset-8 bg-[hsl(var(--olive-light))]/35"
+                style={{ borderRadius: "42% 58% 63% 37% / 41% 44% 56% 59%" }}
+                aria-hidden="true"
+              />
+              <img
+                src={imgGroupe}
+                alt="Participants qui façonnent leurs kokedamas autour d'une grande table d'atelier"
+                className="relative w-full aspect-[4/5] object-cover border-brutal shadow-brutal-lg"
+                style={{ borderRadius: "56% 44% 47% 53% / 50% 56% 44% 50%" }}
+                loading="lazy"
+              />
+              <div
+                className="absolute -right-2 md:-right-8 top-6 w-[104px] h-[104px] flex flex-col items-center justify-center text-center bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float rotate-3"
+                style={PASTILLE}
+              >
+                <span className="font-display text-2xl leading-none">+400</span>
+                <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1 leading-tight">participants</span>
+              </div>
+              <div
+                className="absolute -left-2 md:-left-8 bottom-10 w-[96px] h-[96px] flex flex-col items-center justify-center text-center bg-accent border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float [animation-delay:-2s] -rotate-3"
+                style={{ borderRadius: "48% 52% 44% 56% / 55% 45% 55% 45%" }}
+              >
+                <span className="font-display text-2xl leading-none">+50</span>
+                <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1 leading-tight">ateliers</span>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection direction="right" delay={150} className="order-1 md:order-none">
+            <span className="section-label block mb-4">Le principe</span>
+            <h2 className="font-display text-[clamp(2rem,4.2vw,3.2rem)] uppercase leading-[0.92] tracking-[-2px] mb-4">
+              Nous venons<br /><span className="md:ml-14 text-primary">dans vos locaux</span>
+            </h2>
+            <TraitDessine className="-mt-1 mb-5 md:ml-14" />
+            <p className="font-editorial italic text-xl md:text-2xl text-foreground/60 mb-8 md:ml-14">
+              créer · écouter · repartir avec sa création
+            </p>
+            <ul className="space-y-5 max-w-[520px] mb-8">
+              {INFOS.map((item) => (
+                <li key={item.label} className="md:border-l-[3px] md:border-primary md:pl-6">
+                  <p className="font-display uppercase text-base tracking-[-0.5px] mb-1">{item.label}</p>
+                  <p className="text-base leading-relaxed text-foreground/75">{item.desc}</p>
+                </li>
+              ))}
+            </ul>
             <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2.5 max-w-[560px]">
               {GARANTIES.map((g) => (
                 <li key={g} className="flex items-start gap-2 text-sm text-foreground/80">
@@ -265,44 +345,6 @@ const LandingTeamBuilding = () => {
                 </li>
               ))}
             </ul>
-          </AnimatedSection>
-
-          {/* collage */}
-          <AnimatedSection delay={150} className="relative h-[400px] sm:h-[480px] max-w-[520px] w-full mx-auto">
-            <img
-              src={heroImg}
-              alt="Terrariums en bocal prêts pour un team building en entreprise"
-              className="absolute left-0 top-0 w-[72%] h-[70%] object-cover border-brutal shadow-brutal -rotate-2"
-              style={galetPhoto(0)}
-            />
-            <img
-              src={imgGroupe}
-              alt="Un groupe de participants pendant un atelier botanique"
-              className="absolute right-0 bottom-0 w-[62%] h-[56%] object-cover border-brutal shadow-brutal rotate-2"
-              style={galetPhoto(1)}
-              loading="lazy"
-            />
-            <img
-              src={imgSachets}
-              alt="Sachets de senteurs aux épices réalisés lors d'un événement"
-              className="absolute left-[6%] bottom-[2%] w-[34%] aspect-square object-cover border-brutal -rotate-3 hidden sm:block"
-              style={{ borderRadius: "58% 42% 52% 48% / 46% 56% 44% 54%" }}
-              loading="lazy"
-            />
-            <div
-              className="absolute right-[4%] top-[6%] w-[104px] h-[104px] flex flex-col items-center justify-center text-center bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float"
-              style={PASTILLE}
-            >
-              <span className="font-display text-2xl leading-none">+400</span>
-              <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1 leading-tight">participants</span>
-            </div>
-            <div
-              className="absolute left-[44%] top-[58%] w-[92px] h-[92px] flex flex-col items-center justify-center text-center bg-accent border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float [animation-delay:-2s]"
-              style={{ borderRadius: "48% 52% 44% 56% / 55% 45% 55% 45%" }}
-            >
-              <span className="font-display text-2xl leading-none">+50</span>
-              <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1 leading-tight">ateliers</span>
-            </div>
           </AnimatedSection>
         </div>
       </section>
@@ -318,25 +360,6 @@ const LandingTeamBuilding = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ===== INFOS CLÉS ===== */}
-      <section className="px-6 pb-10">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-          {INFOS.map((item, i) => (
-            <div
-              key={item.label}
-              className={`px-6 py-7 text-center border-brutal shadow-brutal bg-[hsl(var(--cream))] ${["-rotate-1", "rotate-[0.6deg]", "-rotate-[0.4deg]"][i]}`}
-              style={galet(i)}
-            >
-              <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-[hsl(var(--olive-light))] border-brutal-thin" style={PASTILLE}>
-                <item.icon className="w-6 h-6" strokeWidth={2.2} />
-              </div>
-              <p className="font-display uppercase text-base tracking-[-0.5px] mb-1">{item.label}</p>
-              <p className="font-mono-brand text-[10px] uppercase tracking-[2px] text-foreground/60">{item.desc}</p>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -364,8 +387,8 @@ const LandingTeamBuilding = () => {
                       src={a.image}
                       alt={a.alt}
                       loading="lazy"
-                      className="w-full aspect-[16/11] object-cover border-brutal transition-transform duration-500 group-hover:scale-[1.02]"
-                      style={galetPhoto(i)}
+                      className="w-full aspect-[5/4] object-cover border-brutal shadow-brutal transition-transform duration-500 group-hover:scale-[1.02]"
+                      style={{ borderRadius: GALETS_BLOB[i % GALETS_BLOB.length] }}
                     />
                     <span className={`absolute -top-3 left-6 font-mono-brand text-[9px] uppercase tracking-[2px] px-3 py-1.5 border-brutal-thin rounded-full shadow-[2px_2px_0_hsl(var(--black))] ${i === 0 ? "bg-accent" : "bg-[hsl(var(--cream))]"} ${i % 2 ? "rotate-2" : "-rotate-2"}`}>
                       {a.tag}
@@ -425,7 +448,7 @@ const LandingTeamBuilding = () => {
                   Plein d'autres ateliers <span className="text-primary">à découvrir</span>
                 </h3>
                 <p className="text-sm md:text-base text-foreground/75 leading-relaxed">
-                  Sachets de senteurs, tataki zome, bougies et fleurs séchées, herbier, vannerie, tisanes… Une vingtaine d'ateliers, tous adaptables à vos équipes.
+                  Sachets senteur aux épices, tataki-zome, bougies aux fleurs séchées, herbier, couronne végétale… De nombreux ateliers, tous adaptables à vos équipes.
                 </p>
               </div>
               <div className="flex flex-col items-center gap-3">
