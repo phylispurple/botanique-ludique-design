@@ -7,6 +7,7 @@ import imgGodets from "@/assets/kokedama-plantes-godets.webp";
 
 const CONFIG: AtelierTeamBuildingConfig = {
   slug: "/atelier-bombes-a-graines-team-building",
+  prairie: true,
   seo: {
     title: "Atelier Bombes à Graines Team Building Paris & IDF",
     description:
@@ -33,9 +34,9 @@ const CONFIG: AtelierTeamBuildingConfig = {
   },
   garanties: ["Devis gratuit, réponse sous 48 h", "Tout le matériel fourni", "Des bombes à graines pour chacun", "Partout en Île-de-France"],
   infos: [
-    { icon: Users, label: "12 à 40 participants", desc: "Par session · plus en rotation" },
-    { icon: Clock, label: "1h à 1h30", desc: "Facile à caler" },
-    { icon: MapPin, label: "Dans vos locaux", desc: "Ou en extérieur, partout en IDF" },
+    { icon: Users, label: "12 à 40 participants", desc: "Par session. Au-delà, nous organisons plusieurs sessions en rotation dans la journée." },
+    { icon: Clock, label: "1h à 1h30", desc: "Un format court, facile à caler dans un séminaire ou une journée RSE." },
+    { icon: MapPin, label: "Partout en Île-de-France", desc: "Dans vos locaux, ou en extérieur dans un parc ou un jardin selon la saison." },
   ],
   galerie: {
     ligne1: "Argile, terre",
@@ -57,6 +58,7 @@ const CONFIG: AtelierTeamBuildingConfig = {
       </>,
       "Dans les années 1970 à New York, des jardiniers militants lançaient des bombes de graines par-dessus les grillages des terrains vagues pour y faire pousser des fleurs. Pendant l'atelier, nous partageons ces histoires avec vos équipes, et ce qu'elles disent de la nature en ville.",
     ],
+    lien: { to: "/blog/histoire-bombes-de-graines-atelier-la-celle-saint-cloud", label: "Lire l'histoire des bombes de graines" },
     visuel: { src: imgSechage, alt: "Bombes à graines alignées sur des cartons en train de sécher" },
     rond: { src: imgGodets, alt: "Jeunes plantes en godets" },
     etiquette: "Nendo dango",

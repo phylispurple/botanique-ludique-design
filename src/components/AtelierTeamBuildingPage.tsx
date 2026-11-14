@@ -14,6 +14,7 @@ import PhotoCarousel from "@/components/PhotoCarousel";
 import QuoteForm from "@/components/QuoteForm";
 import { AREA_SERVED_IDF } from "@/data/areaServed";
 import { galet, galetPhoto, PASTILLE } from "@/lib/organic";
+import HeroPrairie from "@/components/HeroPrairie";
 
 /**
  * Gabarit commun des pages « atelier X team building » (terrarium, kokedama,
@@ -28,6 +29,8 @@ export interface Photo {
 
 export interface AtelierTeamBuildingConfig {
   slug: string;
+  /** En-tête « prairie illustrée » de la page d'accueil, puis le collage dans une section « Le principe ». */
+  prairie?: boolean;
   seo: { title: string; description: string; keywords: string };
   schema: { serviceType: string; name: string; description: string };
   breadcrumbName: string;
@@ -89,6 +92,74 @@ const AtelierTeamBuildingPage = ({ c }: { c: AtelierTeamBuildingConfig }) => {
   }, []);
 
   const showFloating = !heroVisible && !devisVisible;
+
+  /* Collage de photos en galets, avec la vidéo ronde et les deux pastilles */
+  const collage = (
+            <AnimatedSection delay={150} className="relative h-[420px] sm:h-[500px] max-w-[520px] w-full mx-auto">
+              <img
+                src={c.hero.grande.src}
+                alt={c.hero.grande.alt}
+                className="absolute right-0 top-0 w-[60%] h-[78%] object-cover border-brutal shadow-brutal rotate-2"
+                style={galetPhoto(1)}
+              />
+              <img
+                src={c.hero.moyenne.src}
+                alt={c.hero.moyenne.alt}
+                className="absolute left-0 bottom-0 w-[62%] h-[52%] object-cover border-brutal shadow-brutal -rotate-2"
+                style={galetPhoto(0)}
+                loading="lazy"
+              />
+              {c.hero.ronde.video ? (
+                <video
+                  src={c.hero.ronde.video}
+                  poster={c.hero.ronde.src}
+                  className="absolute left-[4%] top-[6%] w-[36%] aspect-square object-cover border-brutal -rotate-3"
+                  style={{ borderRadius: "58% 42% 52% 48% / 46% 56% 44% 54%" }}
+                  muted
+                  loop
+                  playsInline
+                  autoPlay
+                  preload="metadata"
+                  aria-label={c.hero.ronde.alt}
+                />
+              ) : (
+                <img
+                  src={c.hero.ronde.src}
+                  alt={c.hero.ronde.alt}
+                  className="absolute left-[4%] top-[6%] w-[36%] aspect-square object-cover border-brutal -rotate-3"
+                  style={{ borderRadius: "58% 42% 52% 48% / 46% 56% 44% 54%" }}
+                  loading="lazy"
+                />
+              )}
+              <div
+                className="absolute right-[-2%] bottom-[8%] w-[108px] h-[108px] flex flex-col items-center justify-center text-center bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float"
+                style={PASTILLE}
+              >
+                <span className={`font-display leading-none whitespace-nowrap ${c.hero.pastilleA.haut.length > 7 ? "text-base" : "text-xl"}`}>{c.hero.pastilleA.haut}</span>
+                <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1 leading-tight px-2">{c.hero.pastilleA.bas}</span>
+              </div>
+              <div
+                className="absolute left-[26%] top-[40%] w-[84px] h-[84px] flex flex-col items-center justify-center text-center bg-accent border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float [animation-delay:-2s]"
+                style={{ borderRadius: "48% 52% 44% 56% / 55% 45% 55% 45%" }}
+              >
+                <span className={`font-display leading-none whitespace-nowrap ${c.hero.pastilleB.haut.length > 4 ? "text-lg" : "text-2xl"}`}>{c.hero.pastilleB.haut}</span>
+                <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1">{c.hero.pastilleB.bas}</span>
+              </div>
+            </AnimatedSection>
+  );
+
+  const garantiesList = (
+    <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2.5 max-w-[560px]">
+      {c.garanties.map((g) => (
+        <li key={g} className="flex items-start gap-2 text-sm text-foreground/80">
+          <span className="mt-0.5 w-5 h-5 flex-shrink-0 flex items-center justify-center bg-[hsl(var(--olive-light))] border-brutal-thin" style={PASTILLE}>
+            <Check className="w-3 h-3" strokeWidth={3} />
+          </span>
+          {g}
+        </li>
+      ))}
+    </ul>
+  );
   const url = `https://botaniqueludique.com${c.slug}`;
 
   return (
@@ -110,113 +181,148 @@ const AtelierTeamBuildingPage = ({ c }: { c: AtelierTeamBuildingConfig }) => {
       <Navigation />
 
       {/* ===== HERO ===== */}
-      <section ref={heroRef} className="relative px-6 pt-28 pb-16 md:pt-36 md:pb-24">
-        <div
-          className="absolute -left-32 top-20 w-[460px] h-[460px] bg-[hsl(var(--olive-light))]/30 pointer-events-none"
-          style={{ borderRadius: "58% 42% 38% 62% / 45% 55% 45% 55%" }}
-          aria-hidden="true"
-        />
-        <div
-          className="absolute -right-24 bottom-0 w-[380px] h-[380px] bg-accent/15 pointer-events-none"
-          style={{ borderRadius: "40% 60% 55% 45% / 60% 40% 60% 40%" }}
-          aria-hidden="true"
-        />
-        <div className="relative max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-14 lg:gap-10 items-center">
-          <AnimatedSection>
-            <span className="inline-flex items-center gap-2 font-mono-brand text-[10px] md:text-[11px] uppercase tracking-[2px] bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal-thin rounded-full px-4 py-2 mb-7 -rotate-2 shadow-[3px_3px_0_hsl(var(--black))]">
-              {c.hero.label}
-            </span>
-            <h1 className="font-display text-[clamp(2.4rem,5.4vw,4.4rem)] uppercase leading-[0.9] tracking-[-2px] mb-4">
-              {c.hero.titre}
-              <br />
-              <span className="text-primary">team building</span>
-            </h1>
-            <TraitDessine className="mb-7" />
-            <p className="font-editorial italic text-xl md:text-2xl text-foreground/80 max-w-[560px] leading-snug mb-9">{c.hero.sousTitre}</p>
-            <div className="flex flex-wrap gap-4 mb-9">
-              <a
-                href="#devis"
-                className="btn-brutal inline-flex items-center gap-2 bg-accent text-foreground border-foreground -rotate-1 hover:rotate-0 text-xs px-8 py-3.5"
-                style={BTN_GALET_A}
-              >
-                Demander un devis gratuit <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="tel:+33609831606"
-                className="btn-brutal inline-flex items-center gap-2 bg-[hsl(var(--cream))] text-foreground border-foreground rotate-1 hover:rotate-0 text-xs px-7 py-3.5"
-                style={BTN_GALET_B}
-              >
-                <Phone className="w-4 h-4" /> 06 09 83 16 06
-              </a>
+      {c.prairie ? (
+        <>
+          {/* En-tête : la prairie illustrée de l'accueil */}
+          <section ref={heroRef} className="min-h-[82vh] flex items-center justify-center relative overflow-hidden pt-24 pb-28">
+            <div className="absolute inset-0 bg-foreground">
+              <div className="absolute inset-0 opacity-80">
+                <HeroPrairie />
+              </div>
+              <div
+                className="absolute inset-0"
+                style={{ background: "radial-gradient(ellipse 55% 45% at 50% 55%, rgba(20,22,20,0.6), transparent 75%)" }}
+              />
             </div>
-            <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2.5 max-w-[560px]">
-              {c.garanties.map((g) => (
-                <li key={g} className="flex items-start gap-2 text-sm text-foreground/80">
-                  <span className="mt-0.5 w-5 h-5 flex-shrink-0 flex items-center justify-center bg-[hsl(var(--olive-light))] border-brutal-thin" style={PASTILLE}>
-                    <Check className="w-3 h-3" strokeWidth={3} />
-                  </span>
-                  {g}
-                </li>
-              ))}
-            </ul>
-          </AnimatedSection>
+            <div className="absolute inset-0 bg-gradient-to-b from-foreground/20 to-foreground/55" />
+            <div className="relative z-10 text-center px-6 max-w-[900px]">
+              <AnimatedSection>
+                <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[3px] text-olive-light mb-5">{c.hero.label}</p>
+                <h1 className="font-display text-[clamp(2.2rem,6vw,4.6rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+                  {c.hero.titre}
+                  <br />
+                  <span className="text-olive-light">team building</span>
+                </h1>
+              </AnimatedSection>
+              <AnimatedSection delay={150}>
+                <p className="font-editorial italic text-xl md:text-[28px] leading-snug text-primary-foreground max-w-[720px] mx-auto mb-10">
+                  {c.hero.sousTitre}
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={300}>
+                <div className="flex flex-wrap gap-6 justify-center">
+                  <a
+                    href="#devis"
+                    className="btn-brutal inline-flex items-center gap-2 bg-accent text-foreground border-accent -rotate-2 hover:rotate-0 hover:bg-primary-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--accent))] px-7 py-3"
+                    style={BTN_GALET_A}
+                  >
+                    Demander un devis gratuit <ArrowRight className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="tel:+33609831606"
+                    className="btn-brutal inline-flex items-center gap-2 bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-[hsl(var(--olive-light))] rotate-1 hover:rotate-0 hover:bg-[hsl(var(--cream))] hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--green))] px-7 py-3"
+                    style={BTN_GALET_B}
+                  >
+                    <Phone className="w-4 h-4" /> 06 09 83 16 06
+                  </a>
+                </div>
+              </AnimatedSection>
+            </div>
+            <svg
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              className="absolute -bottom-1 left-0 w-full h-[68px] md:h-[100px]"
+              aria-hidden="true"
+            >
+              <path d="M0,120 C240,40 480,20 720,50 C960,80 1200,30 1440,120 L1440,120 L0,120 Z" fill="hsl(var(--cream))" />
+            </svg>
+          </section>
 
-          {/* collage */}
-          <AnimatedSection delay={150} className="relative h-[420px] sm:h-[500px] max-w-[520px] w-full mx-auto">
-            <img
-              src={c.hero.grande.src}
-              alt={c.hero.grande.alt}
-              className="absolute right-0 top-0 w-[60%] h-[78%] object-cover border-brutal shadow-brutal rotate-2"
-              style={galetPhoto(1)}
-            />
-            <img
-              src={c.hero.moyenne.src}
-              alt={c.hero.moyenne.alt}
-              className="absolute left-0 bottom-0 w-[62%] h-[52%] object-cover border-brutal shadow-brutal -rotate-2"
-              style={galetPhoto(0)}
-              loading="lazy"
-            />
-            {c.hero.ronde.video ? (
-              <video
-                src={c.hero.ronde.video}
-                poster={c.hero.ronde.src}
-                className="absolute left-[4%] top-[6%] w-[36%] aspect-square object-cover border-brutal -rotate-3"
-                style={{ borderRadius: "58% 42% 52% 48% / 46% 56% 44% 54%" }}
-                muted
-                loop
-                playsInline
-                autoPlay
-                preload="metadata"
-                aria-label={c.hero.ronde.alt}
-              />
-            ) : (
-              <img
-                src={c.hero.ronde.src}
-                alt={c.hero.ronde.alt}
-                className="absolute left-[4%] top-[6%] w-[36%] aspect-square object-cover border-brutal -rotate-3"
-                style={{ borderRadius: "58% 42% 52% 48% / 46% 56% 44% 54%" }}
-                loading="lazy"
-              />
-            )}
-            <div
-              className="absolute right-[-2%] bottom-[8%] w-[108px] h-[108px] flex flex-col items-center justify-center text-center bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float"
-              style={PASTILLE}
-            >
-              <span className={`font-display leading-none whitespace-nowrap ${c.hero.pastilleA.haut.length > 7 ? "text-base" : "text-xl"}`}>{c.hero.pastilleA.haut}</span>
-              <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1 leading-tight px-2">{c.hero.pastilleA.bas}</span>
+          {/* Le principe : collage en galets + garanties */}
+          <section className="px-6 py-20 md:py-24">
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_1.1fr] gap-14 lg:gap-16 items-center">
+              {collage}
+              <AnimatedSection direction="right" delay={150}>
+                <span className="section-label block mb-4">Le principe</span>
+                <h2 className="font-display text-[clamp(2rem,4.2vw,3.2rem)] uppercase leading-[0.92] tracking-[-2px] mb-4">
+                  Nous venons<br /><span className="md:ml-14 text-primary">dans vos locaux</span>
+                </h2>
+                <TraitDessine className="-mt-1 mb-5 md:ml-14" />
+                <p className="font-editorial italic text-xl md:text-2xl text-foreground/60 mb-8 md:ml-14">
+                  créer · écouter · repartir avec sa création
+                </p>
+                <ul className="space-y-5 max-w-[520px] mb-8">
+                  {c.infos.map((item) => (
+                    <li key={item.label} className="md:border-l-[3px] md:border-primary md:pl-6">
+                      <p className="font-display uppercase text-base tracking-[-0.5px] mb-1">{item.label}</p>
+                      <p className="text-base leading-relaxed text-foreground/75">{item.desc}</p>
+                    </li>
+                  ))}
+                </ul>
+                {garantiesList}
+              </AnimatedSection>
             </div>
-            <div
-              className="absolute left-[26%] top-[40%] w-[84px] h-[84px] flex flex-col items-center justify-center text-center bg-accent border-brutal shadow-[3px_3px_0_hsl(var(--black))] pebble-float [animation-delay:-2s]"
-              style={{ borderRadius: "48% 52% 44% 56% / 55% 45% 55% 45%" }}
-            >
-              <span className={`font-display leading-none whitespace-nowrap ${c.hero.pastilleB.haut.length > 4 ? "text-lg" : "text-2xl"}`}>{c.hero.pastilleB.haut}</span>
-              <span className="font-mono-brand text-[8px] uppercase tracking-[1px] mt-1">{c.hero.pastilleB.bas}</span>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          </section>
+        </>
+      ) : (
+        <section ref={heroRef} className="relative px-6 pt-28 pb-16 md:pt-36 md:pb-24">
+          <div
+            className="absolute -left-32 top-20 w-[460px] h-[460px] bg-[hsl(var(--olive-light))]/30 pointer-events-none"
+            style={{ borderRadius: "58% 42% 38% 62% / 45% 55% 45% 55%" }}
+            aria-hidden="true"
+          />
+          <div
+            className="absolute -right-24 bottom-0 w-[380px] h-[380px] bg-accent/15 pointer-events-none"
+            style={{ borderRadius: "40% 60% 55% 45% / 60% 40% 60% 40%" }}
+            aria-hidden="true"
+          />
+          <div className="relative max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-14 lg:gap-10 items-center">
+            <AnimatedSection>
+              <span className="inline-flex items-center gap-2 font-mono-brand text-[10px] md:text-[11px] uppercase tracking-[2px] bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-brutal-thin rounded-full px-4 py-2 mb-7 -rotate-2 shadow-[3px_3px_0_hsl(var(--black))]">
+                {c.hero.label}
+              </span>
+              <h1 className="font-display text-[clamp(2.4rem,5.4vw,4.4rem)] uppercase leading-[0.9] tracking-[-2px] mb-4">
+                {c.hero.titre}
+                <br />
+                <span className="text-primary">team building</span>
+              </h1>
+              <TraitDessine className="mb-7" />
+              <p className="font-editorial italic text-xl md:text-2xl text-foreground/80 max-w-[560px] leading-snug mb-9">{c.hero.sousTitre}</p>
+              <div className="flex flex-wrap gap-4 mb-9">
+                <a
+                  href="#devis"
+                  className="btn-brutal inline-flex items-center gap-2 bg-accent text-foreground border-foreground -rotate-1 hover:rotate-0 text-xs px-8 py-3.5"
+                  style={BTN_GALET_A}
+                >
+                  Demander un devis gratuit <ArrowRight className="w-4 h-4" />
+                </a>
+                <a
+                  href="tel:+33609831606"
+                  className="btn-brutal inline-flex items-center gap-2 bg-[hsl(var(--cream))] text-foreground border-foreground rotate-1 hover:rotate-0 text-xs px-7 py-3.5"
+                  style={BTN_GALET_B}
+                >
+                  <Phone className="w-4 h-4" /> 06 09 83 16 06
+                </a>
+              </div>
+              <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2.5 max-w-[560px]">
+                {c.garanties.map((g) => (
+                  <li key={g} className="flex items-start gap-2 text-sm text-foreground/80">
+                    <span className="mt-0.5 w-5 h-5 flex-shrink-0 flex items-center justify-center bg-[hsl(var(--olive-light))] border-brutal-thin" style={PASTILLE}>
+                      <Check className="w-3 h-3" strokeWidth={3} />
+                    </span>
+                    {g}
+                  </li>
+                ))}
+              </ul>
+            </AnimatedSection>
+
+            {collage}
+          </div>
+        </section>
+      )}
 
       {/* ===== INFOS CLÉS ===== */}
+      {!c.prairie && (
       <section className="px-6 pb-14">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
           {c.infos.map((item, i) => (
@@ -234,6 +340,7 @@ const AtelierTeamBuildingPage = ({ c }: { c: AtelierTeamBuildingConfig }) => {
           ))}
         </div>
       </section>
+      )}
 
       {/* ===== PHOTOS ===== */}
       <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />
