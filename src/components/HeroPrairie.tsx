@@ -31,7 +31,10 @@ const HeroPrairie = ({ image = IMAGE }: { image?: string }) => (
   <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
     {/* image fixe */}
     <img src={image} alt="" className="absolute inset-0 w-full h-full object-cover object-bottom" />
-    {/* même image, haut du ciel seulement, qui glisse lentement */}
+    {/* même image, haut du ciel seulement, qui glisse lentement.
+        Réservé à la prairie de l'accueil : sur les autres illustrations, des arbres ou des objets
+        montent jusque dans cette zone et la copie décalée se verrait en double. */}
+    {image === IMAGE && (
     <div
       className="prairie-ciel absolute inset-0"
       style={{
@@ -42,6 +45,7 @@ const HeroPrairie = ({ image = IMAGE }: { image?: string }) => (
         maskImage: "linear-gradient(to bottom, #000 0%, #000 18%, transparent 34%)",
       }}
     />
+    )}
   </div>
 );
 
