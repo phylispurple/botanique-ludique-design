@@ -26,15 +26,16 @@ const Abeille = () => (
   </svg>
 );
 
-const HeroPrairie = () => (
+/** `image` : illustration propre à une page (même style que la prairie), sinon la prairie de l'accueil. */
+const HeroPrairie = ({ image = IMAGE }: { image?: string }) => (
   <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
     {/* image fixe */}
-    <img src={IMAGE} alt="" className="absolute inset-0 w-full h-full object-cover object-bottom" />
+    <img src={image} alt="" className="absolute inset-0 w-full h-full object-cover object-bottom" />
     {/* même image, haut du ciel seulement, qui glisse lentement */}
     <div
       className="prairie-ciel absolute inset-0"
       style={{
-        backgroundImage: `url(${IMAGE})`,
+        backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         WebkitMaskImage: "linear-gradient(to bottom, #000 0%, #000 18%, transparent 34%)",
