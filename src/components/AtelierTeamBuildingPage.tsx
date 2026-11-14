@@ -31,6 +31,8 @@ export interface AtelierTeamBuildingConfig {
   slug: string;
   /** En-tête « prairie illustrée » de la page d'accueil, puis le collage dans une section « Le principe ». */
   prairie?: boolean;
+  /** Illustration d'en-tête propre à la page (avec `prairie`). */
+  heroImage?: string;
   seo: { title: string; description: string; keywords: string };
   schema: { serviceType: string; name: string; description: string };
   breadcrumbName: string;
@@ -187,7 +189,7 @@ const AtelierTeamBuildingPage = ({ c }: { c: AtelierTeamBuildingConfig }) => {
           <section ref={heroRef} className="min-h-[82vh] flex items-center justify-center relative overflow-hidden pt-24 pb-28">
             <div className="absolute inset-0 bg-foreground">
               <div className="absolute inset-0 opacity-80">
-                <HeroPrairie />
+                <HeroPrairie image={c.heroImage} />
               </div>
               <div
                 className="absolute inset-0"

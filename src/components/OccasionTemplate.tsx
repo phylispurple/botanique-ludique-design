@@ -7,6 +7,7 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 import AnimatedSection from "@/components/AnimatedSection";
 import WaveDivider from "@/components/WaveDivider";
 import TraitDessine from "@/components/TraitDessine";
+import HeroPrairie from "@/components/HeroPrairie";
 import { galet, galetPhoto, PASTILLE } from "@/lib/organic";
 import { Heart, Sparkles, ArrowRight, ChevronDown, Smile, Gift, LucideIcon } from "lucide-react";
 
@@ -26,6 +27,8 @@ export interface OccasionTemplateData {
   faqs: { q: string; a: string }[];
   /** Jusqu'à 3 photos pour le collage du haut de page (facultatif). */
   photos?: { src: string; alt: string }[];
+  /** Illustration d'en-tête : active l'en-tête « prairie » de l'accueil avec cette image. */
+  heroImage?: string;
 }
 
 const BTN_A = { borderRadius: "28px 14px 26px 12px / 14px 26px 12px 28px" };
@@ -47,6 +50,102 @@ const OccasionTemplate = ({ data }: { data: OccasionTemplateData }) => {
 
       <main>
         {/* ===== HERO ===== */}
+        {data.heroImage ? (
+          <>
+            {/* En-tête : illustration dans le style de la prairie de l'accueil */}
+            <section className="min-h-[82vh] flex items-center justify-center relative overflow-hidden pt-24 pb-28">
+              <div className="absolute inset-0 bg-foreground">
+                <div className="absolute inset-0 opacity-80">
+                  <HeroPrairie image={data.heroImage} />
+                </div>
+                <div
+                  className="absolute inset-0"
+                  style={{ background: "radial-gradient(ellipse 55% 45% at 50% 55%, rgba(20,22,20,0.6), transparent 75%)" }}
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-b from-foreground/20 to-foreground/55" />
+              <div className="relative z-10 text-center px-6 max-w-[900px]">
+                <AnimatedSection>
+                  <p className="font-mono-brand text-[11px] md:text-[13px] uppercase tracking-[3px] text-olive-light mb-5">{data.eyebrow}</p>
+                  <h1 className="font-display text-[clamp(2.2rem,6vw,4.6rem)] uppercase leading-[0.9] tracking-[-2px] text-primary-foreground mb-6">
+                    {data.title}
+                  </h1>
+                </AnimatedSection>
+                <AnimatedSection delay={150}>
+                  <p className="font-editorial italic text-xl md:text-[26px] leading-snug text-primary-foreground max-w-[720px] mx-auto mb-10">{data.pitch}</p>
+                </AnimatedSection>
+                <AnimatedSection delay={300}>
+                  <div className="flex flex-wrap gap-6 justify-center">
+                    <Link
+                      to={contact}
+                      className="btn-brutal inline-flex items-center gap-2 bg-accent text-foreground border-accent -rotate-2 hover:rotate-0 hover:bg-primary-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--accent))] px-7 py-3"
+                      style={BTN_A}
+                    >
+                      Réserver ou demander un devis <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link
+                      to="/workshops"
+                      className="btn-brutal inline-flex items-center gap-2 bg-[hsl(var(--green))] text-[hsl(var(--cream))] border-[hsl(var(--olive-light))] rotate-1 hover:rotate-0 hover:bg-[hsl(var(--cream))] hover:text-foreground hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[6px_6px_0_hsl(var(--green))] px-7 py-3"
+                      style={BTN_B}
+                    >
+                      Voir les ateliers
+                    </Link>
+                  </div>
+                </AnimatedSection>
+              </div>
+              <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="absolute -bottom-1 left-0 w-full h-[68px] md:h-[100px]" aria-hidden="true">
+                <path d="M0,120 C240,40 480,20 720,50 C960,80 1200,30 1440,120 L1440,120 L0,120 Z" fill="hsl(var(--cream))" />
+              </svg>
+            </section>
+
+            {/* En pratique : collage de photos + infos */}
+            <section className="px-6 py-20 md:py-24">
+              <div className={`max-w-6xl mx-auto grid gap-14 lg:gap-16 items-center ${photos.length ? "lg:grid-cols-[1fr_1.1fr]" : ""}`}>
+                {photos.length > 0 && (
+                  <AnimatedSection delay={150} className="relative h-[400px] sm:h-[470px] max-w-[520px] w-full mx-auto">
+                    {photos[0] && (
+                      <img src={photos[0].src} alt={photos[0].alt} className="absolute right-0 top-0 w-[60%] h-[76%] object-cover border-brutal shadow-brutal rotate-2" style={galetPhoto(1)} />
+                    )}
+                    {photos[1] && (
+                      <img
+                        src={photos[1].src}
+                        alt={photos[1].alt}
+                        className="absolute left-0 bottom-0 w-[60%] h-[52%] object-cover border-brutal shadow-brutal -rotate-2"
+                        style={galetPhoto(0)}
+                        loading="lazy"
+                      />
+                    )}
+                    {photos[2] && (
+                      <img
+                        src={photos[2].src}
+                        alt={photos[2].alt}
+                        className="absolute left-[4%] top-[4%] w-[36%] aspect-square object-cover border-brutal -rotate-3"
+                        style={{ borderRadius: "58% 42% 52% 48% / 46% 56% 44% 54%" }}
+                        loading="lazy"
+                      />
+                    )}
+                  </AnimatedSection>
+                )}
+                <AnimatedSection direction="right" delay={150}>
+                  <span className="section-label block mb-4">En pratique</span>
+                  <h2 className="font-display text-[clamp(2rem,4.2vw,3.2rem)] uppercase leading-[0.92] tracking-[-2px] mb-4">
+                    Nous venons<br /><span className="md:ml-14 text-primary">chez vous</span>
+                  </h2>
+                  <TraitDessine className="-mt-1 mb-8 md:ml-14" />
+                  <ul className="space-y-5 max-w-[520px]">
+                    {data.practical.map((p) => (
+                      <li key={p.label} className="md:border-l-[3px] md:border-primary md:pl-6">
+                        <p className="font-mono-brand text-[10px] uppercase tracking-[2px] text-foreground/55 mb-1">{p.label}</p>
+                        <p className="font-display uppercase text-lg tracking-[-0.5px]">{p.value}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </AnimatedSection>
+              </div>
+            </section>
+          </>
+        ) : (
+          <>
         <section className="relative px-6 pt-28 pb-16 md:pt-36 md:pb-20">
           <div
             className="absolute -left-32 top-20 w-[460px] h-[460px] bg-[hsl(var(--olive-light))]/30 pointer-events-none"
@@ -119,6 +218,8 @@ const OccasionTemplate = ({ data }: { data: OccasionTemplateData }) => {
             )}
           </div>
         </section>
+          </>
+        )}
 
         {/* ===== POURQUOI ===== */}
         <WaveDivider from="hsl(36,33%,93%)" to="hsl(36,25%,88%)" />

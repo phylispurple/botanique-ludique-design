@@ -14,6 +14,8 @@ import wardianCase from "@/assets/blog-terrarium-wardian-case.jpg";
 
 const CONFIG: AtelierTeamBuildingConfig = {
   slug: "/atelier-terrarium-team-building",
+  prairie: true,
+  heroImage: "/images/hero-terrarium.webp",
   seo: {
     title: "Atelier Terrarium Team Building Paris | Créatif & Naturel",
     description:
@@ -40,9 +42,9 @@ const CONFIG: AtelierTeamBuildingConfig = {
   },
   garanties: ["Devis gratuit, réponse sous 48 h", "Tout le matériel fourni", "Un terrarium par participant", "Partout en Île-de-France"],
   infos: [
-    { icon: Users, label: "12 à 40 participants", desc: "Par session · plus en rotation" },
-    { icon: Clock, label: "1h30 à 2h30", desc: "Selon le format choisi" },
-    { icon: MapPin, label: "Dans vos locaux", desc: "Partout en Île-de-France" },
+    { icon: Users, label: "12 à 40 participants", desc: "Par session. Au-delà, nous organisons plusieurs sessions en rotation dans la journée." },
+    { icon: Clock, label: "1h30 à 2h30", desc: "Selon le format choisi, avec une médiation ethnobotanique à chaque fois." },
+    { icon: MapPin, label: "Partout en Île-de-France", desc: "Dans vos locaux, ou en extérieur dans un parc ou un jardin selon la saison." },
   ],
   galerie: {
     ligne1: "Les mains",

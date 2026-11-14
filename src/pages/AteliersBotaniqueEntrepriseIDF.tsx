@@ -175,7 +175,7 @@ const AteliersBotaniqueEntrepriseIDF = () => {
       <section className="min-h-[82vh] flex items-center justify-center relative overflow-hidden pt-24 pb-28">
         <div className="absolute inset-0 bg-foreground">
           <div className="absolute inset-0 opacity-80">
-            <HeroPrairie />
+            <HeroPrairie image="/images/hero-entreprises.webp" />
           </div>
           <div
             className="absolute inset-0"

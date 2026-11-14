@@ -12,6 +12,8 @@ import imgTshirts from "@/assets/gallery-teinture-tshirts-table.webp";
 
 const CONFIG: AtelierTeamBuildingConfig = {
   slug: "/atelier-teinture-vegetale-team-building",
+  prairie: true,
+  heroImage: "/images/hero-teinture.webp",
   seo: {
     title: "Atelier Teinture Végétale Team Building Paris & IDF",
     description:
@@ -38,9 +40,9 @@ const CONFIG: AtelierTeamBuildingConfig = {
   },
   garanties: ["Devis gratuit, réponse sous 48 h", "Tout le matériel fourni", "Une création par participant", "Partout en Île-de-France"],
   infos: [
-    { icon: Users, label: "12 à 40 participants", desc: "Par session · plus en rotation" },
-    { icon: Clock, label: "2h à 2h30", desc: "Selon le format choisi" },
-    { icon: MapPin, label: "Dans vos locaux", desc: "Partout en Île-de-France" },
+    { icon: Users, label: "12 à 40 participants", desc: "Par session. Au-delà, nous organisons plusieurs sessions en rotation dans la journée." },
+    { icon: Clock, label: "2h à 2h30", desc: "Selon le format choisi, avec une médiation ethnobotanique à chaque fois." },
+    { icon: MapPin, label: "Partout en Île-de-France", desc: "Dans vos locaux, ou en extérieur dans un parc ou un jardin selon la saison." },
   ],
   galerie: {
     ligne1: "Des couleurs",

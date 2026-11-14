@@ -7,6 +7,7 @@ import imgMousse from "@/assets/gallery-terrarium-enfants-mousse.jpg";
 const AtelierAnniversaireEnfantParis = () => (
   <OccasionTemplate data={{
     slug: "atelier-anniversaire-enfant-nature-paris",
+    heroImage: "/images/hero-anniversaire-enfant.webp",
     icon: Sparkles,
     eyebrow: "Anniversaire enfant nature",
     title: "Atelier anniversaire enfant nature à Paris",

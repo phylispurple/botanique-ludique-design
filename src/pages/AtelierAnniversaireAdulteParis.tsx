@@ -7,6 +7,7 @@ import imgCouronne from "@/assets/gallery-flower-crown.webp";
 const AtelierAnniversaireAdulteParis = () => (
   <OccasionTemplate data={{
     slug: "atelier-anniversaire-adulte-nature-paris",
+    heroImage: "/images/hero-anniversaire-adulte.webp",
     icon: Heart,
     eyebrow: "Anniversaire adulte nature",
     title: "Atelier anniversaire adulte à Paris",

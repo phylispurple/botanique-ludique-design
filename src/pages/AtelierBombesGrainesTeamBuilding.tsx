@@ -10,6 +10,7 @@ import imgGraines from "@/assets/graines-melange-melliferes.webp";
 const CONFIG: AtelierTeamBuildingConfig = {
   slug: "/atelier-bombes-a-graines-team-building",
   prairie: true,
+  heroImage: "/images/hero-bombes-graines.webp",
   seo: {
     title: "Atelier Bombes à Graines Team Building Paris & IDF",
     description:
